@@ -33,6 +33,36 @@ Top-level index of all project documentation. Add a link here whenever a new mod
 - [05-ui-ux/fixed-deposit/overview.md](05-ui-ux/fixed-deposit/overview.md)
 - [05-ui-ux/fixed-deposit/new-fd-account-screen.md](05-ui-ux/fixed-deposit/new-fd-account-screen.md) — नवीन खाते (4 tabs)
 - [05-ui-ux/fixed-deposit/fd-transaction-screen.md](05-ui-ux/fixed-deposit/fd-transaction-screen.md) — व्यवहार (5 tabs)
+- [05-ui-ux/fixed-deposit/fd-account-register-screen.md](05-ui-ux/fixed-deposit/fd-account-register-screen.md) — खाते रजिस्टर
+- [05-ui-ux/fixed-deposit/fd-manual-interest-calculation-screen.md](05-ui-ux/fixed-deposit/fd-manual-interest-calculation-screen.md) — मॅन्युअल व्याज आकारणी
+- [05-ui-ux/fixed-deposit/account-renewal-list-screen.md](05-ui-ux/fixed-deposit/account-renewal-list-screen.md) — खाते नूतनीकरण यादी
+- [05-ui-ux/fixed-deposit/deposit-loan-installment-payment-screen.md](05-ui-ux/fixed-deposit/deposit-loan-installment-payment-screen.md) — ठेव कर्ज हप्ता पेमेंट (from MP4)
+- [05-ui-ux/fixed-deposit/fd-interest-multiplier-screen.md](05-ui-ux/fixed-deposit/fd-interest-multiplier-screen.md) — व्याज गुणक (from MP4)
+
+## 05 — UI/UX — Loan (Operational)
+- [05-ui-ux/loan/overview.md](05-ui-ux/loan/overview.md)
+- [05-ui-ux/loan/new-loan-screen.md](05-ui-ux/loan/new-loan-screen.md) — नवीन कर्ज (6 tabs, from MP4)
+- [05-ui-ux/loan/new-deposit-loan-screen.md](05-ui-ux/loan/new-deposit-loan-screen.md) — नवीन ठेव कर्ज (3 tabs, from MP4)
+
+## 05 — UI/UX — Daily (Operational)
+- [05-ui-ux/daily/overview.md](05-ui-ux/daily/overview.md)
+- [05-ui-ux/daily/new-daily-account-screen.md](05-ui-ux/daily/new-daily-account-screen.md) — नवीन खाते (from MP4)
+- [05-ui-ux/daily/new-agent-screen.md](05-ui-ux/daily/new-agent-screen.md) — नवीन एजंट (from MP4)
+- [05-ui-ux/daily/daily-transaction-screen.md](05-ui-ux/daily/daily-transaction-screen.md) — व्यवहार (6 tabs)
+- [05-ui-ux/daily/account-register-screen.md](05-ui-ux/daily/account-register-screen.md) — खाते रजिस्टर
+- [05-ui-ux/daily/agent-collection-screen.md](05-ui-ux/daily/agent-collection-screen.md) — एजंट कलेक्शन
+- [05-ui-ux/daily/agent-collection-list-screen.md](05-ui-ux/daily/agent-collection-list-screen.md) — एजंट कलेक्शन यादी
+- [05-ui-ux/daily/agent-to-agent-transfer-screen.md](05-ui-ux/daily/agent-to-agent-transfer-screen.md) — एजंट ते एजंट ट्रान्सफर
+- [05-ui-ux/daily/interest-multiplier-screen.md](05-ui-ux/daily/interest-multiplier-screen.md) — व्याज गुणक
+
+## 05 — UI/UX — Recurring (Operational)
+- [05-ui-ux/recurring/overview.md](05-ui-ux/recurring/overview.md)
+- [05-ui-ux/recurring/new-recurring-account-screen.md](05-ui-ux/recurring/new-recurring-account-screen.md) — नवीन खाते (from MP4)
+- [05-ui-ux/recurring/credit-transaction-screen.md](05-ui-ux/recurring/credit-transaction-screen.md) — जमा व्यवहार (from MP4)
+- [05-ui-ux/recurring/account-register-screen.md](05-ui-ux/recurring/account-register-screen.md) — खाते रजिस्टर
+- [05-ui-ux/recurring/manual-interest-assessment-screen.md](05-ui-ux/recurring/manual-interest-assessment-screen.md) — मॅन्युअल व्याज आकारणी
+- [05-ui-ux/recurring/manual-interest-provision-screen.md](05-ui-ux/recurring/manual-interest-provision-screen.md) — मॅन्युअल व्याज तरतूद
+- [05-ui-ux/recurring/interest-multiplier-screen.md](05-ui-ux/recurring/interest-multiplier-screen.md) — व्याज गुणक
 
 ## 05 — UI/UX — Accounting (Operational)
 - [05-ui-ux/accounting/overview.md](05-ui-ux/accounting/overview.md)
@@ -75,4 +105,4 @@ Top-level index of all project documentation. Add a link here whenever a new mod
 - [05-ui-ux/settings/loan/loan-interest-rate-change-screen.md](05-ui-ux/settings/loan/loan-interest-rate-change-screen.md) — व्याज दरात बदल
 
 ## Status
-Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, accounting, settings). Backend business modules have not been started yet.
+Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). Backend business modules have not been started yet.

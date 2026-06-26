@@ -10,6 +10,11 @@ Index of operational UI screens under **मुदत ठेव (Fixed Deposit)**
 | :--- | :--- | :--- |
 | नवीन खाते | New Account | [new-fd-account-screen.md](new-fd-account-screen.md) |
 | व्यवहार | Transaction | [fd-transaction-screen.md](fd-transaction-screen.md) |
+| खाते रजिस्टर | Account Register | [fd-account-register-screen.md](fd-account-register-screen.md) |
+| मॅन्युअल व्याज आकारणी | Manual Interest Calculation | [fd-manual-interest-calculation-screen.md](fd-manual-interest-calculation-screen.md) |
+| खाते नूतनीकरण यादी | Account Renewal List | [account-renewal-list-screen.md](account-renewal-list-screen.md) |
+| ठेव कर्ज हप्ता पेमेंट | Deposit Loan Installment Payment | [deposit-loan-installment-payment-screen.md](deposit-loan-installment-payment-screen.md) |
+| व्याज गुणक | Interest Multiplier | [fd-interest-multiplier-screen.md](fd-interest-multiplier-screen.md) |
 
 ## Screenshot Location
 
