@@ -1,0 +1,138 @@
+# Screen Spec — Savings New Scheme (बचत > नवीन योजना)
+
+## Purpose
+
+UI specification for creating a new **Savings (बचत)** scheme. Intended for AI agents implementing this screen.
+
+## Scope
+
+Single screen with **3 tabs**. Multiple screenshots cover different tabs.
+
+## Screen Identification
+
+| Property | Marathi | English |
+| :--- | :--- | :--- |
+| Screen Name | नवीन योजना | New Scheme |
+| Breadcrumb | डॅशबोर्ड > सेटिंग्ज > बचत > नवीन योजना | Dashboard > Settings > Savings > New Scheme |
+| Parent Module | बचत | Savings |
+| Related Screens | [daily-new-scheme-screen.md](daily-new-scheme-screen.md), [fixed-deposit-new-scheme-screen.md](fixed-deposit-new-scheme-screen.md), [recurring-new-scheme-screen.md](recurring-new-scheme-screen.md) | — |
+
+## Tabs
+
+| # | Marathi Tab | English Tab |
+| :---: | :--- | :--- |
+| 1 | सेव्हिंग योजना | Saving Scheme |
+| 2 | व्याज पोस्टिंग | Interest Posting |
+| 3 | चार्जेस | Charges |
+
+## Reference Screenshots
+
+| Screenshot File | Tab / Section |
+| :--- | :--- |
+| `screenshots/settings/बचत_नवीन_योजना.png` | Tab 1 — Saving Scheme |
+| `screenshots/settings/बचत_नवीन_योजना_1.png` | Tab 2 — Interest Posting (input row only) |
+| `screenshots/settings/डॅशबोर्ड-सेटिंग्ज-बचत-नवीन योजना-2.png` | Tab 3 — Charges |
+
+---
+
+## Tab 1: सेव्हिंग योजना (Saving Scheme)
+
+### Fields
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | जीएल हेड क्र. | GL Head No. | Textbox | Yes | Shown value: `163` |
+| 2 | योजनेचे नाव | Scheme Name | Textbox | Yes | — |
+| 3 | योजनेचे प्रकार | Scheme Type | Dropdown | Yes | See values below |
+| 4 | व्याज दर (द.सा.द.शे.) | Interest Rate (p.a. %) | Textbox | Yes | — |
+| 5 | फक्त सदस्यांना परवानगी द्या | Allow Only Members | Checkbox | No | Default unchecked |
+
+### Scheme Type Dropdown Values
+
+| Marathi | English |
+| :--- | :--- |
+| निवडा | Select (placeholder) |
+| कायम ठेव | Permanent Deposit |
+| सेव्हिंग | Saving |
+| करंट | Current |
+| लवचिक ठेव | Flexible Deposit |
+
+### Section: व्याज आकारणी (Interest Calculation)
+
+| # | Marathi Label | English Label | Type | Required | Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | दिवसात | In Days | Radio Button | Yes | Default selected |
+| 2 | महिन्यात | In Months | Radio Button | No | — |
+| 3 | महिन्याची सुरुवात | Start of Month | Dropdown | Yes | Disabled when "In Days" selected. Placeholder: `निवडा`. **TODO:** Values when enabled |
+
+### Links
+
+| Marathi | English | Type |
+| :--- | :--- | :--- |
+| प्रगत सेटिंग्स | Advanced Settings | Hyperlink |
+
+**TODO:** Capture Advanced Settings sub-screen fields — no screenshot available.
+
+### Navigation
+
+| Marathi | English | Type |
+| :--- | :--- | :--- |
+| पुढे | Next | Button |
+
+---
+
+## Tab 2: व्याज पोस्टिंग (Interest Posting)
+
+### Input Row
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | व्याज पोस्टिंग दिवस | Interest Posting Day | Dropdown | Yes | Placeholder: `निवडा`. **TODO:** Dropdown values not visible |
+| 2 | व्याज पोस्टिंग महिना | Interest Posting Month | Dropdown | Yes | Placeholder: `निवडा`. **TODO:** Dropdown values not visible |
+| — | + टाका | + Add | Button | — | — |
+
+**TODO:** Confirm grid columns and Remove button — not fully visible in `बचत_नवीन_योजना_1.png`. Pattern matches [daily-new-scheme-screen.md](daily-new-scheme-screen.md) Tab 3 and [fixed-deposit-new-scheme-screen.md](fixed-deposit-new-scheme-screen.md) Tab 4.
+
+---
+
+## Tab 3: चार्जेस (Charges)
+
+### Fields
+
+| # | Marathi Label | English Label | Type | Required | Dropdown Values |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | चार्जेस | Charges | Dropdown | No | See table below |
+
+#### Charges Dropdown Values
+
+| Marathi | English |
+| :--- | :--- |
+| निवडा | Select (placeholder) |
+| कर्जदार कल्याण निधी | Borrower Welfare Fund |
+| पिग्मी कमिशन | Pigmy Commission |
+| प्रोसेसिंग फी | Processing Fee |
+| ब वर्ग सभासद फी | Class B Member Fee |
+| स्टेशनरी फी | Stationery Fee |
+
+### Grid Columns
+
+| Marathi | English |
+| :--- | :--- |
+| अ.क्र. | Sr. No. |
+| चार्जेस | Charges |
+
+### Actions
+
+| Marathi | English | Type |
+| :--- | :--- | :--- |
+| काढा | Remove | Button |
+
+---
+
+## Related Documents
+
+- [overview.md](overview.md)
+- [daily-new-scheme-screen.md](daily-new-scheme-screen.md)
+- [fixed-deposit-new-scheme-screen.md](fixed-deposit-new-scheme-screen.md)
+- [recurring-new-scheme-screen.md](recurring-new-scheme-screen.md)
+- [changelog.md](changelog.md)

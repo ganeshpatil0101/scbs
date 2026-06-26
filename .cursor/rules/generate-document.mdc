@@ -1,0 +1,106 @@
+---
+description: Generate, update, validate, and maintain modular project documentation for Core Banking Software — requirements, business rules, use cases, architecture, API contracts, database design, and acceptance tests. Apply this rule whenever the user asks to create/update documentation, requirements, business rules, use cases, architecture docs, API docs, database docs, or acceptance tests for a banking module, or invokes "/generate-document".
+globs:
+  - "docs/**/*.md"
+  - "**/AI_INDEX.md"
+  - "**/00-project-overview/**"
+  - "**/01-architecture/**"
+alwaysApply: false
+---
+
+# Documentation Generation Rule (Core Banking Software)
+
+You are generating modular, AI-consumable documentation for a Core Banking Software project. This documentation will later be read by AI coding agents (including yourself, in a future session) to generate production code — so it must be precise, structured, and unambiguous.
+
+## Non-Negotiable Principles
+
+- **Modular, never monolithic.** One document = one responsibility. Never write a single "complete system" doc.
+- **No vague language** in business rules or requirements: never use "usually", "often", "sometimes", "generally".
+- **Markdown only**, unless explicitly asked for PDF/DOCX/HTML.
+- **No invention.** Never invent business rules, APIs, entities, or glossary terms. If something is missing, insert a `TODO:` marker and ask the user, rather than guessing.
+- **No code in this step.** Do not generate implementation code while producing documentation — requirements/use-cases must exist first.
+
+## Workflow — Follow In Order
+
+1. Read `AI_INDEX.md` at the repo root. If missing, create it as a linked index of all modules.
+2. Read `00-project-overview/{vision.md, business-goals.md, glossary.md, system-boundaries.md}`. Create stubs for any that are missing on a new project.
+3. Read `01-architecture/{architecture-overview.md, domain-driven-design.md, security-architecture.md, technology-stack.md}`.
+4. Identify the affected business domain (Customer Management, Accounts, Transactions, Loans, Payments, FD, etc.) from the user's request. Only open files relevant to that domain — don't load unrelated modules into context.
+5. Generate/update the required files for that module (see structure below).
+6. Validate every cross-link resolves to an existing or just-created file.
+7. Append an entry to the module's `changelog.md`.
+
+## Required Module Structure
+
+```text
+module-name/
+  overview.md
+  business-rules.md
+  use-cases.md
+  workflows.md
+  api-contracts/
+    <one file per endpoint>.md
+  database/
+    <one file per entity>.md
+  sequence-diagrams.md
+  acceptance-tests.md
+  changelog.md
+```
+
+## Size Limits
+
+- Preferred: 200–500 lines per file
+- Hard max: 700 lines — split into `-part2.md` and cross-link if exceeded
+
+## ID Conventions
+
+- Business rules: `BR-001`, `BR-002`, ... — sequential, never reused (deprecate, don't delete/renumber)
+- Use cases: `UC-001`, ...
+- Acceptance tests: `AT-001`, ...
+
+## Use Case Template (`UC-NNN`)
+
+Must include, in order: Actors, Preconditions, Main Flow, Alternative Flow, Exception Flow, Post Conditions, Referenced Business Rules (linked).
+
+## Acceptance Test Template (`AT-NNN`)
+
+Given / When / Then / And — must reference the `UC-NNN`/`BR-NNN` it verifies.
+
+## API Contract File (one per endpoint)
+
+Sections: Endpoint, Method, Request, Response, Validation Rules (→ `BR-NNN`), Error Codes, Dependencies, Acceptance Criteria (→ `AT-NNN`).
+
+## Database Entity File (one per entity)
+
+Sections: Entity, Purpose, Fields, Constraints, Relationships, Indexes, Referenced Rules (`BR-NNN`).
+
+## Architecture Docs
+
+Must cover Services, Security, Deployment, Scalability. No implementation code.
+
+## Cross-Linking
+
+Every file ends with:
+
+```markdown
+## Related Documents
+- ../relative/path/to/related-doc.md
+```
+
+## Before You Finish — Self-Check
+
+- [ ] Folder/file layout matches the Required Module Structure
+- [ ] Filenames are kebab-case
+- [ ] All `## Related Documents` links resolve to real files
+- [ ] IDs are sequential with no duplicates or gaps
+- [ ] Every use case has all 7 required sections
+- [ ] Every business rule has ≥1 acceptance test
+- [ ] `changelog.md` updated
+
+If any box fails, fix it before telling the user the task is done.
+
+## Notes for Cursor
+
+- This rule applies automatically when editing files under `docs/`, `AI_INDEX.md`, `00-project-overview/`, or `01-architecture/` (see `globs` above). You can also invoke it explicitly with `@generate-document` in chat.
+- When the user types `/generate-document <module/action>`, treat that as an explicit trigger for this full workflow regardless of which file is currently open.
+- Prefer multiple small file edits over one large diff — it keeps each document within the size limit and makes review easier in Cursor's diff view.
