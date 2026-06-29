@@ -3,8 +3,9 @@
 Top-level index of all project documentation. Add a link here whenever a new module or document is created.
 
 ## 00 — Project Overview
-- [00-project-overview/vision.md](00-project-overview/vision.md) — TODO: not yet authored
-- [00-project-overview/business-goals.md](00-project-overview/business-goals.md) — TODO: not yet authored
+- [00-project-overview/vision.md](00-project-overview/vision.md) — Problem statement, vision, target market, competitive positioning
+- [00-project-overview/business-goals.md](00-project-overview/business-goals.md) — Numbered, measurable business goals (BG-001 to BG-008)
+- [00-project-overview/changelog.md] - ChangeLog
 - [00-project-overview/glossary.md](00-project-overview/glossary.md) — TODO: not yet authored
 - [00-project-overview/system-boundaries.md](00-project-overview/system-boundaries.md) — TODO: not yet authored
 
@@ -105,4 +106,4 @@ Top-level index of all project documentation. Add a link here whenever a new mod
 - [05-ui-ux/settings/loan/loan-interest-rate-change-screen.md](05-ui-ux/settings/loan/loan-interest-rate-change-screen.md) — व्याज दरात बदल
 
 ## Status
-Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). Backend business modules have not been started yet.
+Project Overview now has vision.md and business-goals.md authored (problem statement, target market, business model, success metrics, competitive context). glossary.md and system-boundaries.md remain TODO. Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). Backend business modules have not been started yet.

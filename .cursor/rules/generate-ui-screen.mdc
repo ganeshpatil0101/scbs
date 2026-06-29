@@ -1,0 +1,180 @@
+---
+description: Generate, update, and validate Angular UI screens for the Core Banking Software platform from the 05-ui-ux/ screen specifications (Customer, Membership, Savings, Fixed Deposit, Loan, Daily, Recurring, Accounting, Settings). Use this skill whenever the user asks to build, implement, scaffold, or update a screen/component from a screen spec — even if they just say "/generate-ui-screen", "build the new customer screen", "implement the savings transaction tab", or "create the loan scheme wizard". Always use this skill instead of writing a freeform component when the request is implementing a screen for this banking system.
+globs:
+  - "documentation/**/05-ui-ux/**"
+  - "src/app/**/*.ts"
+  - "src/app/**/*.html"
+  - "src/app/**/*.scss"
+alwaysApply: false
+---
+
+# UI Screen Generation Skill (Core Banking Software — Angular)
+
+Turns a `05-ui-ux/**/*.md` screen spec into production-quality, responsive Angular code that reuses existing components/services wherever they exist, and clearly marks anything the spec itself doesn't yet define.
+
+## Standing Architectural Decisions
+
+These are fixed for this project (confirmed with the user). Do not re-litigate them per screen:
+
+| Decision | Value |
+|---|---|
+| Component model | **Standalone components** (Angular, no NgModules) |
+| Forms | **Reactive Forms** (`FormGroup`/`FormBuilder`), never template-driven |
+| Cross-tab / wizard state | **NgRx** — one feature state per wizard screen (see State Pattern below) |
+| Local-only UI state (tab index, expanded panels, loading flags) | Component `signal()`s — do not put trivial UI state in NgRx |
+| UI library | Angular Material |
+| i18n | `ngx-translate` — no hardcoded user-facing strings, ever |
+| Unresolved spec gaps (`TODO` dropdowns/tabs) | **Scaffold, don't block** — see TODO Scaffold Pattern below |
+
+## Core Principles
+
+- **Spec is the source of truth.** Every field, tab, grid column, and action must trace back to a row in the screen's `.md` file. Don't invent fields, validations, or business logic not in the spec or explicit user instruction.
+- **Reuse before creating.** Before writing any component, search the existing codebase (`src/app/shared/`, `src/app/components/`) for something that already does the job. Only create a new shared component when no existing one fits — and when created, place it under `shared/` so the *next* screen can reuse it too.
+- **Responsive and accessible by default**, not as an afterthought (see Responsive & Accessibility Standards).
+- **No invented master data.** Dropdown options not listed in the spec are master data, not UI decisions — never guess values; scaffold a service call instead.
+- **Bilingual by construction.** Every screen ships both `mr` and `en` translation keys, since every spec field has both labels already.
+
+## Execution Workflow (always follow in order)
+
+1. **Read `AI_INDEX.md`**, then the target screen's spec file, its `overview.md`, and its `changelog.md`.
+2. **Check `09-ai-context/`** (coding-standards.md, naming-conventions.md, folder-structure.md). If these don't exist yet for this project, fall back to the conventions in this skill and flag to the user that `09-ai-context/` should eventually be authored via the `generate-document` skill — don't silently invent a second standard.
+3. **Search for reusable components/services first**: shared data grid, customer/account-holder search-and-select, nominee grid, address block, KYC document grid, permission directive, master-data dropdown service. If found, use them. If not found and the spec implies a pattern that repeats elsewhere (e.g., grid columns "निवडा/अ.क्र./..." pattern, or a "खातेधारक शोधा + निवडा" search-select pattern), build it once as a shared component — see Reusable Component Catalog.
+4. **Map the spec to an Angular artifact tree** (see Component Breakdown Patterns) before writing code.
+5. **Generate the NgRx slice** for the screen if it's a multi-tab wizard (see State Pattern).
+6. **Generate Reactive Forms**, one `FormGroup` per tab, with validators derived from the spec's `Required` column (see Form & Validation Mapping).
+7. **Wire role-based rendering** using the permission directive (see Role-Based Rendering).
+8. **Scaffold any `TODO` items** per the TODO Scaffold Pattern — never block the whole screen on one unresolved dropdown or uncaptured tab.
+9. **Implement responsively** per the breakpoint table.
+10. **Add both `mr` and `en` i18n keys** for every label in the spec.
+11. **Run the Pre-Completion Checklist** before reporting done.
+
+## Component Breakdown Patterns
+
+Pick the pattern that matches the spec's shape — don't default to one giant component.
+
+| Spec shape | Pattern |
+|---|---|
+| Single form (e.g., New Employee, Share Rules) | One container component: form + actions + (optional) results grid |
+| Multi-tab wizard (e.g., New Loan — 6 tabs) | One container (stepper/tab shell, NgRx-connected) + one presentational component per tab, each with its own `FormGroup` registered into the parent's `FormGroup` (or NgRx-held form value) |
+| Search + results grid (e.g., Customer List, Account Register) | One filter-bar component + the **shared data grid** component — never a bespoke table |
+| Transaction screen (Account Info / Instrument / Transfer / Ledger / KYC tabs) | Same wizard pattern as above; **Ledger** and **KYC Information** tabs are themselves reusable across Savings/FD/Daily/Recurring — build once, parameterize by account-type |
+| Calculator screens (Interest Multiplier variants) | One component: input form + computed read-only output block + optional breakdown grid; pure calculation logic goes in an injectable service, not the component, so Daily/FD/Recurring multiplier screens can share the formula service where formulas match |
+
+## State Pattern (NgRx, per wizard screen)
+
+```text
+state/<screen-name>/
+  <screen-name>.actions.ts   // loadTab, saveTabDraft, submitScreen, screen API CRUD
+  <screen-name>.reducer.ts   // { tabs: Record<tabId, formValue>, activeTabId, status, errors }
+  <screen-name>.selectors.ts
+  <screen-name>.effects.ts   // master-data loads, submit API call
+```
+
+- One NgRx feature state per screen, not one global form state — avoids cross-screen coupling.
+- Tab-local UI state (which accordion is open, which grid row is hovered) stays in the tab component as `signal()`s, not in the store.
+- Grid pagination/sort/filter state for the shared data grid stays in the grid component, parameterized by inputs — don't centralize that in NgRx either.
+
+## Form & Validation Mapping
+
+| Spec column | Reactive Forms mapping |
+|---|---|
+| `Required: Yes` | `Validators.required` |
+| `Type: Textbox` + numeric label (e.g., "रक्कम", "दर", "%") | `Validators.pattern` for numeric, plus `min(0)` unless spec says otherwise |
+| `Type: Dropdown` with listed values | Typed enum/const array; bind via shared master-data select component |
+| `Type: Dropdown` with `TODO` values | Scaffold per TODO pattern below — field still renders, options come from a placeholder service |
+| `Type: Checkbox` enabling other fields ("Disabled until X checked") | `valueChanges` subscription that calls `enable()`/`disable()` on the dependent controls — implement as a small reusable `FormGroup` helper, not duplicated per screen |
+| `Read-only` | Render as disabled control or plain text, never an editable field styled as disabled |
+
+## TODO Scaffold Pattern (for unresolved spec gaps)
+
+When a spec field is `TODO` (missing dropdown values) or a whole tab is `TODO`:
+
+1. **Render the field/tab** with its known properties (label, type, required-ness).
+2. **Back dropdowns with a placeholder service method**, e.g. `masterDataService.getStatusOptions(): Observable<Option[]>` — implement it now returning a hardcoded single-item stub, so the call site never needs to change later, only the service implementation does.
+3. **Mark it in code** with a single-line comment referencing the spec gap:
+   ```ts
+   // TODO(spec-gap): status dropdown values not captured in new-user-screen.md — see master data API once 03-api-contracts/ exists
+   ```
+4. **For an entire `TODO` tab**, still create the tab shell (label, route/step, empty state) so navigation/stepper counts match the spec, with a visible "Coming soon" state instead of a broken or missing tab.
+5. **Never invent plausible-looking values** (e.g., don't guess Status = Active/Inactive/Closed unless the spec or another screen's already-captured list confirms it — cross-check sibling screens first, since some dropdowns repeat across specs, e.g. the Charges dropdown is identical on every New Scheme screen).
+
+## Role-Based Rendering
+
+The User Role screen (`settings/master/user-role-screen.md`) defines three levels per form: **All Rights / View Only / No Rights**. Apply this consistently:
+
+| Permission level | Rendering rule |
+|---|---|
+| All Rights | Full form/grid, all actions enabled |
+| View Only | All fields disabled/read-only, action buttons (Save/Add/Remove/Post) hidden — not just disabled |
+| No Rights | Route guard prevents navigation to the screen entirely; don't render a disabled shell |
+
+Implement as a single `*appHasPermission="'formCode'"` structural directive + a `PermissionService`, reused across every screen — don't hand-roll per-screen role checks.
+
+## Reusable Component Catalog
+
+Build these once under `shared/components/`, reuse everywhere — many screens repeat the same grid/section shape:
+
+| Component | Used by (examples) | Notes |
+|---|---|---|
+| `app-data-grid` | Customer List, all Account Register screens, all schemes' rate grids | Server-side pagination/sort/filter, matches the backend contract noted in the architecture doc |
+| `app-account-holder-search` | Every transaction screen's "खातेधारक शोधा/निवडा" pair | Debounced search + select |
+| `app-nominee-form` + `app-nominee-grid` | FD, Daily, Recurring, Savings new-account Nominee tabs | Identical field set across all four products |
+| `app-ledger-tab` | Savings/FD/Daily/Recurring Transaction screens' Ledger tab | Identical columns across all four |
+| `app-kyc-info-tab` | Recurring Credit Transaction, Savings/FD Transaction KYC tabs | — |
+| `app-rate-duration-grid` | Every New Scheme screen's duration/interest-rate input row + grid | Add/remove row pattern repeats 5+ times |
+| `app-charges-select` | Every New Scheme screen's Charges tab | Dropdown values are identical across Daily/Savings/FD/Recurring/Loan schemes |
+| `app-denomination-grid` | Note Exchange, Rokhapal | — |
+| `app-master-select` | Any `TODO`-value dropdown | Wraps the placeholder master-data service so swapping in real APIs later is a one-line change |
+
+Before adding a new entry to this table, search for it first — this list will be incomplete until the codebase exists; treat it as a starting point, not a final inventory.
+
+## Responsive & Accessibility Standards
+
+| Breakpoint | Target | Layout rule |
+|---|---|---|
+| `< 600px` (mobile) | Phones | Single column form; data grids collapse to a card list (one record per card), not a horizontally-scrolling table; tab bar becomes a `mat-select` step picker instead of inline tabs |
+| `600–959px` (tablet) | Tablets | Two-column form sections; grids scroll horizontally with sticky first column |
+| `≥ 960px` (desktop) | Desktop | Full multi-column layout as implied by the spec's field grouping |
+
+Use Angular CDK `BreakpointObserver` (`Breakpoints.Handset/Tablet/Web`) — don't hand-roll media queries per component.
+
+Non-negotiable on every screen:
+- Visible keyboard focus on all interactive elements (already a stated project requirement).
+- Every form field has a programmatically associated label (`mat-label`, not placeholder-only).
+- Error messages announced via `aria-live` on submit failure.
+- Sticky action bar (Save/Reset/Next/Back) on mobile so primary actions don't scroll out of reach on long forms.
+- Dark/light theme tokens (already a stated project requirement) — never hardcode colors; use Material theme variables.
+
+## Pre-Completion Checklist
+
+- [ ] Every spec field/column has a corresponding form control or grid column — none silently dropped
+- [ ] Every `TODO` in the spec is scaffolded per the pattern above, not skipped or guessed
+- [ ] Reusable components checked for and used before any new component was created
+- [ ] Reactive Forms used throughout; no template-driven forms
+- [ ] NgRx slice exists for multi-tab wizard screens; trivial UI state stayed in signals
+- [ ] Role-based rendering wired via the shared directive
+- [ ] Both `mr` and `en` translation keys added for every label
+- [ ] Responsive at all three breakpoints, including grid→card collapse
+- [ ] Keyboard focus and `aria-label`/`mat-label` present on all controls
+- [ ] Screen's local `changelog.md` updated (if one exists for that module)
+
+If any item fails, fix it before reporting the task complete.
+
+## Open Items to Flag Back to the User
+
+These are project-level gaps, not per-screen problems — raise them once, don't re-ask per screen:
+- `09-ai-context/` (coding-standards, naming-conventions, folder-structure) doesn't exist yet — this skill's defaults are filling that gap for now.
+- `03-api-contracts/` doesn't exist — all master-data and submit calls are scaffolded against placeholder service methods until real contracts exist.
+- Several screens have entire `TODO` tabs (FD New Account tabs 3–4, Daily New Account tabs 3–4, Shares Transfer tab 3) — these will render as stubs until re-captured from the source app.
+
+## Related Documents
+
+- [generate-document.mdc](generate-document.mdc)
+- [documentation/AI_INDEX.md](../../documentation/AI_INDEX.md)
+
+## Notes for Cursor
+
+- This rule applies automatically when editing files under `documentation/**/05-ui-ux/` or `src/app/` (see `globs` above). You can also invoke it explicitly with `@generate-ui-screen` in chat.
+- When the user types `/generate-ui-screen <screen-name>`, treat that as an explicit trigger for this full workflow regardless of which file is currently open.
+- Before generating code, always read the target screen spec in `documentation/05-ui-ux/` plus its module `overview.md` and `changelog.md`.
+- Prefer reusing shared components from `src/app/shared/` over creating screen-local duplicates — build shared pieces once when a pattern repeats across specs.
