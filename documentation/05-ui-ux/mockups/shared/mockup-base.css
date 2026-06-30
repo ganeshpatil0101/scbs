@@ -2,7 +2,7 @@
  * CBS UI Mockup — Shared styles (plain CSS)
  *
  * Load as a regular stylesheet (works with file://):
- *   <link rel="stylesheet" href="../../../_shared/mockup-base.css">
+ *   <link rel="stylesheet" href="../../../shared/mockup-base.css">
  *
  * Use Tailwind CDN only for layout utilities in HTML class attributes.
  * Do NOT use @apply or @import inside type="text/tailwindcss" — browser build rejects them.

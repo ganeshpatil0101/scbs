@@ -15,7 +15,7 @@ Turns a `05-ui-ux/**/*-screen.md` spec into a **layout-only** HTML prototype for
 | Decision | Value |
 |---|---|
 | Styling | **Tailwind CSS v4** via CDN: `<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>` |
-| Shared theme | [`mockup-base.css`](../../documentation/05-ui-ux/mockups/_shared/mockup-base.css) — plain CSS linked via `<link rel="stylesheet">` (component classes, form controls, tokens) |
+| Shared theme | [`mockup-base.css`](../../documentation/05-ui-ux/mockups/shared/mockup-base.css) — plain CSS linked via `<link rel="stylesheet">` (component classes, form controls, tokens) |
 | Tailwind in HTML | Layout utilities only (`max-w-4xl`, `grid`, `flex`, `bg-gray-100`, etc.) via CDN class scanning |
 | Mockup language | **Marathi only** — no English labels, no language toggle in mockups |
 | Angular i18n | English added during `@generate-ui-screen` via `ngx-translate` (spec has both labels) |
@@ -62,7 +62,7 @@ Optional `styles.css` only when screen-specific Tailwind overrides cannot live i
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<link rel="stylesheet" href="../../../_shared/mockup-base.css">
+<link rel="stylesheet" href="../../../shared/mockup-base.css">
 ```
 
 **Tailwind browser build limitations (file:// mockups):**

@@ -16,7 +16,7 @@ Top-level index of all project documentation. Add a link here whenever a new mod
 
 Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mockup`. Tailwind CSS v4 (CDN), Marathi labels, centered responsive layout. Shareable in any browser; after approval, use `@generate-ui-screen` for Angular + full i18n.
 
-- [05-ui-ux/mockups/_shared/mockup-base.css](05-ui-ux/mockups/_shared/mockup-base.css) — Shared Tailwind `@theme` tokens and component classes
+- [05-ui-ux/mockups/shared/mockup-base.css](05-ui-ux/mockups/shared/mockup-base.css) — Shared Tailwind `@theme` tokens and component classes
 - [05-ui-ux/mockups/settings/master/new-user-screen/](05-ui-ux/mockups/settings/master/new-user-screen/) — नवीन युजर (Draft)
 
 ## 05 — UI/UX — Customer
