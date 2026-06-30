@@ -119,6 +119,17 @@ Additional values below scroll: `TODO`.
 
 ---
 
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/settings/accounting/new-gl-head-screen/index.html](../../mockups/settings/accounting/new-gl-head-screen/index.html) |
+| Review guide | [mockups/settings/accounting/new-gl-head-screen/README.md](../../mockups/settings/accounting/new-gl-head-screen/README.md) |
+| Stack | Tailwind CSS v4 (CDN), Marathi labels only |
+| Status | Draft — pending bank user review |
+
+---
+
 ## Related Documents
 
 - [overview.md](overview.md)

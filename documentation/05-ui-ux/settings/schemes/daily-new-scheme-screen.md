@@ -241,6 +241,17 @@ Single screen with **5 tabs**. All tabs belong to one wizard screen; screenshots
 
 ---
 
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/settings/schemes/daily-new-scheme-screen/index.html](../../mockups/settings/schemes/daily-new-scheme-screen/index.html) |
+| Review guide | [mockups/settings/schemes/daily-new-scheme-screen/README.md](../../mockups/settings/schemes/daily-new-scheme-screen/README.md) |
+| Stack | Tailwind CSS v4 (CDN), Marathi labels only |
+| Status | Draft — pending bank user review |
+
+---
+
 ## Related Documents
 
 - [overview.md](overview.md)

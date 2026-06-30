@@ -401,6 +401,19 @@ Single wizard screen with **6 tabs**. Video covers all tabs; some dropdowns were
 | `व्याज दर अंतिम दिनांका पूर्वी` unchecked | Rate textbox disabled |
 | `कर्ज प्रक्रिया शुल्क आवश्यक` unchecked | Processing fee timing radios inactive |
 
+---
+
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/settings/schemes/loan-new-scheme-screen/index.html](../../mockups/settings/schemes/loan-new-scheme-screen/index.html) |
+| Review guide | [mockups/settings/schemes/loan-new-scheme-screen/README.md](../../mockups/settings/schemes/loan-new-scheme-screen/README.md) |
+| Stack | Tailwind CSS v4 (CDN), Marathi labels only |
+| Status | Draft — pending bank user review |
+
+---
+
 ## Related Documents
 
 - [overview.md](overview.md)

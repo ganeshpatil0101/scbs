@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>नवीन योजना (बचत) — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../../_shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <h1 class="text-2xl font-bold text-gray-900">नवीन योजना</h1>
+      <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; सेटिंग्ज &gt; बचत &gt; नवीन योजना</p>
+    </header>
+
+    <nav class="flex border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="स्क्रीन टॅब">
+      <button type="button" id="tab-1" class="mockup-tab mockup-tab-active" role="tab" aria-selected="true" data-tab="1">सेव्हिंग योजना</button>
+      <button type="button" id="tab-2" class="mockup-tab" role="tab" aria-selected="false" data-tab="2">व्याज पोस्टिंग</button>
+      <button type="button" id="tab-3" class="mockup-tab" role="tab" aria-selected="false" data-tab="3">चार्जेस</button>
+    </nav>
+
+    <!-- Tab 1 -->
+    <div id="tab-panel-1" role="tabpanel">
+      <section class="mockup-section">
+        <div class="mockup-field-grid mockup-field-grid--2">
+          <div data-spec-field="1">
+            <label class="mockup-label" for="gl-head">जीएल हेड क्र. <span class="mockup-required">*</span></label>
+            <input type="text" id="gl-head" value="163">
+          </div>
+          <div data-spec-field="2">
+            <label class="mockup-label" for="scheme-name">योजनेचे नाव <span class="mockup-required">*</span></label>
+            <input type="text" id="scheme-name">
+          </div>
+          <div data-spec-field="3">
+            <label class="mockup-label" for="scheme-type">योजनेचे प्रकार <span class="mockup-required">*</span></label>
+            <select id="scheme-type">
+              <option value="">निवडा</option>
+              <option value="permanent">कायम ठेव</option>
+              <option value="saving">सेव्हिंग</option>
+              <option value="current">करंट</option>
+              <option value="flexible">लवचिक ठेव</option>
+            </select>
+          </div>
+          <div data-spec-field="4">
+            <label class="mockup-label" for="interest-rate">व्याज दर (द.सा.द.शे.) <span class="mockup-required">*</span></label>
+            <input type="text" id="interest-rate">
+          </div>
+          <div class="sm:col-span-2" data-spec-field="5">
+            <label class="inline-flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="members-only">
+              <span class="text-sm">फक्त सदस्यांना परवानगी द्या</span>
+            </label>
+          </div>
+        </div>
+      </section>
+      <section class="mockup-section" aria-labelledby="sec-interest-calc">
+        <h2 class="mockup-section-title" id="sec-interest-calc">व्याज आकारणी</h2>
+        <fieldset class="border-0 p-0 m-0 mb-4">
+          <div class="flex flex-wrap gap-6 mb-4">
+            <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="6">
+              <input type="radio" name="calcPeriod" value="days" checked>
+              <span>दिवसात</span>
+            </label>
+            <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="7">
+              <input type="radio" name="calcPeriod" value="months">
+              <span>महिन्यात</span>
+            </label>
+          </div>
+          <div data-spec-field="8">
+            <label class="mockup-label mockup-label-muted" for="month-start">
+              महिन्याची सुरुवात <span class="mockup-required">*</span>
+              <span class="mockup-badge-todo">TODO</span>
+            </label>
+            <select id="month-start" disabled>
+              <option value="">निवडा</option>
+              <option disabled>[TODO — master data pending]</option>
+            </select>
+          </div>
+        </fieldset>
+        <p class="text-sm">
+          <a href="#" class="text-blue-700 underline" data-spec-field="link-advanced">प्रगत सेटिंग्स</a>
+          <span class="mockup-badge-todo">TODO</span>
+        </p>
+      </section>
+    </div>
+
+    <!-- Tab 2 -->
+    <div id="tab-panel-2" class="mockup-hidden" role="tabpanel" hidden>
+      <section class="mockup-section">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+          <div data-spec-field="1">
+            <label class="mockup-label" for="post-day">
+              व्याज पोस्टिंग दिवस <span class="mockup-required">*</span>
+              <span class="mockup-badge-todo">TODO</span>
+            </label>
+            <select id="post-day">
+              <option value="">निवडा</option>
+              <option disabled>[TODO — values not captured]</option>
+            </select>
+          </div>
+          <div data-spec-field="2">
+            <label class="mockup-label" for="post-month">
+              व्याज पोस्टिंग महिना <span class="mockup-required">*</span>
+              <span class="mockup-badge-todo">TODO</span>
+            </label>
+            <select id="post-month">
+              <option value="">निवडा</option>
+              <option disabled>[TODO — values not captured]</option>
+            </select>
+          </div>
+          <button type="button" class="mockup-btn mockup-btn-add">+ टाका</button>
+        </div>
+        <div class="overflow-x-auto mt-4">
+          <table class="mockup-table" aria-label="पोस्टिंग दिनांक यादी">
+            <thead>
+              <tr>
+                <th>निवडा</th>
+                <th>अ. क्र.</th>
+                <th>पोस्टिंग दिनांक</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" aria-label="पंक्ती 1"></td>
+                <td>1</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab 3 -->
+    <div id="tab-panel-3" class="mockup-hidden" role="tabpanel" hidden>
+      <section class="mockup-section">
+        <div class="max-w-md mb-4" data-spec-field="1">
+          <label class="mockup-label" for="charges">चार्जेस</label>
+          <select id="charges">
+            <option value="">निवडा</option>
+            <option value="bwf">कर्जदार कल्याण निधी</option>
+            <option value="pigmy">पिग्मी कमिशन</option>
+            <option value="processing">प्रोसेसिंग फी</option>
+            <option value="class-b">ब वर्ग सभासद फी</option>
+            <option value="stationery">स्टेशनरी फी</option>
+          </select>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="mockup-table" aria-label="चार्जेस यादी">
+            <thead>
+              <tr><th>अ.क्र.</th><th>चार्जेस</th><th>कृती</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>प्रोसेसिंग फी</td>
+                <td><button type="button" class="btn-link">काढा</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-reset">पूर्ववत</button>
+      <button type="button" class="mockup-btn mockup-btn-secondary mockup-hidden" id="btn-back">मागे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary" id="btn-next">पुढे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary mockup-hidden" id="btn-save">पूर्ण</button>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var totalTabs = 3, current = 1;
+      var tabs = document.querySelectorAll('[role="tab"]');
+      var panels = [1, 2, 3].map(function (n) { return document.getElementById('tab-panel-' + n); });
+      var btnBack = document.getElementById('btn-back');
+      var btnNext = document.getElementById('btn-next');
+      var btnSave = document.getElementById('btn-save');
+      function switchTab(n) {
+        current = n;
+        tabs.forEach(function (tab) {
+          var active = Number(tab.getAttribute('data-tab')) === n;
+          tab.classList.toggle('mockup-tab-active', active);
+          tab.setAttribute('aria-selected', active);
+        });
+        panels.forEach(function (panel, i) {
+          var active = i + 1 === n;
+          panel.classList.toggle('mockup-hidden', !active);
+          panel.hidden = !active;
+        });
+        btnBack.classList.toggle('mockup-hidden', n === 1);
+        btnNext.classList.toggle('mockup-hidden', n === totalTabs);
+        btnSave.classList.toggle('mockup-hidden', n !== totalTabs);
+      }
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () { switchTab(Number(this.getAttribute('data-tab'))); });
+      });
+      btnNext.addEventListener('click', function () { if (current < totalTabs) switchTab(current + 1); });
+      btnBack.addEventListener('click', function () { if (current > 1) switchTab(current - 1); });
+      switchTab(1);
+    })();
+  </script>
+</body>
+</html>

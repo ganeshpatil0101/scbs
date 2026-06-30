@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>युजर रोल — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../../_shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <!-- Preview banner — full width -->
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- Header -->
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <h1 class="text-2xl font-bold text-gray-900">युजर रोल</h1>
+      <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; सेटिंग्ज &gt; मास्टर &gt; युजर रोल</p>
+    </header>
+
+    <!-- Role name -->
+    <section class="mockup-section" aria-labelledby="section-role-name">
+      <h2 class="mockup-section-title" id="section-role-name">युजर रोल</h2>
+      <div class="max-w-md">
+        <div data-spec-field="1">
+          <label class="mockup-label" for="field-role-name">
+            युजर रोल <span class="mockup-required">*</span>
+          </label>
+          <input type="text" id="field-role-name" placeholder="उदा. कॅशियर">
+        </div>
+      </div>
+    </section>
+
+    <!-- Permission grid -->
+    <section class="mockup-section mockup-section-full" aria-labelledby="section-permissions">
+      <h2 class="mockup-section-title" id="section-permissions">
+        परवानगी मॅट्रिक्स
+        <span class="mockup-badge-todo">TODO</span>
+        <span class="text-sm font-normal text-gray-500 ml-1">— पूर्ण फॉर्म यादी प्रलंबित</span>
+      </h2>
+
+      <div class="overflow-x-auto max-h-[28rem] overflow-y-auto border border-gray-200 rounded">
+        <table class="mockup-table" aria-label="परवानगी मॅट्रिक्स">
+          <thead class="sticky top-0 z-10">
+            <tr>
+              <th data-spec-grid-col="1">अ.क्र.</th>
+              <th data-spec-grid-col="2">मेनु</th>
+              <th data-spec-grid-col="3">फॉर्मचे नाव</th>
+              <th data-spec-grid-col="4" class="text-center whitespace-nowrap">
+                <label class="inline-flex flex-col items-center gap-1 cursor-pointer font-normal">
+                  <span>सर्व अधिकार</span>
+                  <input type="checkbox" aria-label="सर्व अधिकार — सर्व निवडा">
+                </label>
+              </th>
+              <th data-spec-grid-col="5" class="text-center whitespace-nowrap">
+                <label class="inline-flex flex-col items-center gap-1 cursor-pointer font-normal">
+                  <span>फक्त बघण्यासाठी</span>
+                  <input type="checkbox" aria-label="फक्त बघण्यासाठी — सर्व निवडा">
+                </label>
+              </th>
+              <th data-spec-grid-col="6" class="text-center whitespace-nowrap">
+                <label class="inline-flex flex-col items-center gap-1 cursor-pointer font-normal">
+                  <span>अधिकार नाही</span>
+                  <input type="checkbox" aria-label="अधिकार नाही — सर्व निवडा">
+                </label>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>अकाउंटींग</td>
+              <td>अंदाज पत्रक</td>
+              <td class="text-center"><input type="checkbox" aria-label="अंदाज पत्रक — सर्व अधिकार"></td>
+              <td class="text-center"><input type="checkbox" aria-label="अंदाज पत्रक — फक्त बघण्यासाठी"></td>
+              <td class="text-center"><input type="checkbox" aria-label="अंदाज पत्रक — अधिकार नाही"></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>अकाउंटींग</td>
+              <td>अंदाज पत्रक अहवाल</td>
+              <td class="text-center"><input type="checkbox" aria-label="अंदाज पत्रक अहवाल — सर्व अधिकार"></td>
+              <td class="text-center"><input type="checkbox" aria-label="अंदाज पत्रक अहवाल — फक्त बघण्यासाठी"></td>
+              <td class="text-center"><input type="checkbox" aria-label="अंदाज पत्रक अहवाल — अधिकार नाही"></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>अकाउंटींग</td>
+              <td>अनुक्रम बदल</td>
+              <td class="text-center"><input type="checkbox" aria-label="अनुक्रम बदल — सर्व अधिकार"></td>
+              <td class="text-center"><input type="checkbox" aria-label="अनुक्रम बदल — फक्त बघण्यासाठी"></td>
+              <td class="text-center"><input type="checkbox" aria-label="अनुक्रम बदल — अधिकार नाही"></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>अकाउंटींग</td>
+              <td>अहवाल एमआयएस</td>
+              <td class="text-center"><input type="checkbox" aria-label="अहवाल एमआयएस — सर्व अधिकार"></td>
+              <td class="text-center"><input type="checkbox" aria-label="अहवाल एमआयएस — फक्त बघण्यासाठी"></td>
+              <td class="text-center"><input type="checkbox" aria-label="अहवाल एमआयएस — अधिकार नाही"></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>अकाउंटींग</td>
+              <td>एकाधिक मुदत ठेव खाते बंद</td>
+              <td class="text-center"><input type="checkbox" aria-label="एकाधिक मुदत ठेव खाते बंद — सर्व अधिकार"></td>
+              <td class="text-center"><input type="checkbox" aria-label="एकाधिक मुदत ठेव खाते बंद — फक्त बघण्यासाठी"></td>
+              <td class="text-center"><input type="checkbox" aria-label="एकाधिक मुदत ठेव खाते बंद — अधिकार नाही"></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>अकाउंटींग</td>
+              <td>कॅश ट्रान्सफर स्क्रोल</td>
+              <td class="text-center"><input type="checkbox" aria-label="कॅश ट्रान्सफर स्क्रोल — सर्व अधिकार"></td>
+              <td class="text-center"><input type="checkbox" aria-label="कॅश ट्रान्सफर स्क्रोल — फक्त बघण्यासाठी"></td>
+              <td class="text-center"><input type="checkbox" aria-label="कॅश ट्रान्सफर स्क्रोल — अधिकार नाही"></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>अकाउंटींग</td>
+              <td>कोणतेही व्यवहार</td>
+              <td class="text-center"><input type="checkbox" aria-label="कोणतेही व्यवहार — सर्व अधिकार"></td>
+              <td class="text-center"><input type="checkbox" aria-label="कोणतेही व्यवहार — फक्त बघण्यासाठी"></td>
+              <td class="text-center"><input type="checkbox" aria-label="कोणतेही व्यवहार — अधिकार नाही"></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>अकाउंटींग</td>
+              <td>खाते यादी (जी एल हेड)</td>
+              <td class="text-center"><input type="checkbox" aria-label="खाते यादी (जी एल हेड) — सर्व अधिकार"></td>
+              <td class="text-center"><input type="checkbox" aria-label="खाते यादी (जी एल हेड) — फक्त बघण्यासाठी"></td>
+              <td class="text-center"><input type="checkbox" aria-label="खाते यादी (जी एल हेड) — अधिकार नाही"></td>
+            </tr>
+            <tr>
+              <td colspan="6" class="text-center text-gray-400 italic py-3">
+                … इतर मेनू व फॉर्म [TODO — master data pending] …
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <!-- Sticky action bar -->
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-reset">रीसेट</button>
+      <button type="button" class="mockup-btn mockup-btn-primary" id="btn-save">जतन करा</button>
+    </div>
+  </footer>
+
+</body>
+</html>

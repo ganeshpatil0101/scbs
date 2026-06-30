@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>नवीन जी. एल. हेड — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../../_shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <h1 class="text-2xl font-bold text-gray-900">नवीन जी. एल. हेड</h1>
+      <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; सेटिंग &gt; लेखा &gt; नवीन जी. एल. हेड</p>
+    </header>
+
+    <div class="mockup-section-columns">
+
+      <!-- Primary fields -->
+      <section class="mockup-section" aria-label="मुख्य फील्ड">
+        <div class="mockup-field-grid mockup-field-grid--2">
+          <div class="sm:col-span-2" data-spec-field="1">
+            <label class="mockup-label" for="field-account-group">
+              खाते गट <span class="mockup-required">*</span>
+            </label>
+            <select id="field-account-group">
+              <option value="">निवडा</option>
+              <option value="other-allowance">इतर भत्ता</option>
+              <option value="other-receivables">इतर येणी व तरतूदी</option>
+              <option value="loan">कर्ज</option>
+              <option value="interest-loan">कर्जावरील व्याज</option>
+              <option value="investment">गुंतवणूक</option>
+              <option value="interest-investment">गुंतवणुकीवरील व्याज</option>
+              <option value="current-loss">चालू तोटा</option>
+              <option value="current-profit">चालू नफा</option>
+              <option value="deposits">ठेवी</option>
+              <option value="interest-deposits">ठेवीवरील व्याज</option>
+              <option value="deposit-payable">डिपॉझिट देणे</option>
+              <option value="deposit-receivable">डिपॉझिट येणे</option>
+              <option value="provision-expense">तरतूद खर्च</option>
+              <option value="loss">तोटा</option>
+              <option value="interest-payable">देणे व्याज</option>
+              <option value="profit">नफा</option>
+              <option value="salary-deduction">पगार कपात</option>
+              <option value="salary-income">पगार मिळकत</option>
+              <option value="direct-expense">प्रत्यक्ष खर्च</option>
+              <option value="project-expense">प्रोजेक्ट खर्च</option>
+              <option value="project-income">प्रोजेक्ट जमा</option>
+              <option value="fund-transfer">फंड ट्रान्सफर</option>
+              <option value="paid-bank-interest">बँक इंटरेस्ट म्हणून दिले</option>
+              <option value="bank-loan">बँक कर्ज</option>
+              <option value="bank-interest-received">बँकेचे व्याज मिळाले</option>
+              <option value="bank-overdraft">बँक ओव्हरड्राफ्ट</option>
+              <option value="asset">मालमत्ता</option>
+              <option value="interest-receivable">येणे व्याज</option>
+              <option value="reserve-funds">राखीव व इतर निधी</option>
+              <option value="cash-bank">रोख व बँकेतील शिल्लक</option>
+              <option value="dividend">लाभांश</option>
+              <option value="share-capital">वसूल भाग भांडवल</option>
+              <option value="admin-expense">व्यवस्थापकीय खर्च</option>
+              <option value="branch-investment">शाखा गुंतवणूक</option>
+              <option value="branch-liabilities">शाखा देणी</option>
+              <option disabled>[TODO — scroll below not captured]</option>
+            </select>
+          </div>
+          <div data-spec-field="2">
+            <label class="mockup-label" for="field-account-type">
+              खाते प्रकार <span class="mockup-required">*</span>
+              <span class="mockup-badge-todo">TODO</span>
+            </label>
+            <select id="field-account-type">
+              <option value="other" selected>इतर</option>
+              <option disabled>[TODO — master data pending]</option>
+            </select>
+          </div>
+          <div data-spec-field="3">
+            <label class="mockup-label" for="field-gl-head-no">
+              जी. एल. हेड क्र. <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="field-gl-head-no" value="163" readonly title="स्वयं-निर्मित">
+          </div>
+          <div data-spec-field="4">
+            <label class="mockup-label" for="field-gl-head-name">
+              जी. एल. हेडचे नाव <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="field-gl-head-name">
+          </div>
+          <div data-spec-field="5">
+            <label class="mockup-label" for="field-short-name">संक्षिप्त नाव</label>
+            <input type="text" id="field-short-name">
+          </div>
+          <div data-spec-field="6">
+            <label class="mockup-label" for="field-unicode-name">युनिकोड नाव</label>
+            <input type="text" id="field-unicode-name">
+          </div>
+          <div data-spec-field="7">
+            <label class="mockup-label" for="field-status">
+              स्थिती <span class="mockup-required">*</span>
+              <span class="mockup-badge-todo">TODO</span>
+            </label>
+            <select id="field-status">
+              <option value="active" selected>चालू</option>
+              <option disabled>[TODO — master data pending]</option>
+            </select>
+          </div>
+          <div data-spec-field="8">
+            <label class="mockup-label" for="field-start-date">
+              प्रारंभ दिनांक <span class="mockup-required">*</span>
+            </label>
+            <input type="date" id="field-start-date" value="2025-06-30">
+          </div>
+        </div>
+      </section>
+
+      <!-- Primary Group -->
+      <section class="mockup-section" aria-labelledby="section-primary-group">
+        <h2 class="mockup-section-title" id="section-primary-group">प्राथमिक गट</h2>
+
+        <div class="mb-6">
+          <h3 class="text-sm font-semibold text-gray-700 mb-2">शिल्लक प्रकार</h3>
+          <fieldset class="border-0 p-0 m-0" aria-label="शिल्लक प्रकार">
+            <div class="flex flex-wrap gap-6">
+              <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="9">
+                <input type="radio" name="balanceType" value="credit">
+                <span>जमा</span>
+              </label>
+              <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="10">
+                <input type="radio" name="balanceType" value="debit">
+                <span>नावे</span>
+              </label>
+              <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="11">
+                <input type="radio" name="balanceType" value="other" checked>
+                <span>इतर</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="text-sm font-semibold text-gray-700 mb-2">खाते श्रेणी</h3>
+          <fieldset class="border-0 p-0 m-0 mb-3" aria-label="खाते श्रेणी">
+            <div class="flex flex-wrap gap-6">
+              <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="12">
+                <input type="radio" name="accountCategory" value="general" checked>
+                <span>सामान्य खाते</span>
+              </label>
+              <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="13">
+                <input type="radio" name="accountCategory" value="branch">
+                <span>शाखा खाते</span>
+              </label>
+              <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="14">
+                <input type="radio" name="accountCategory" value="member">
+                <span>सभासदाप्रमाणे खाते</span>
+              </label>
+            </div>
+          </fieldset>
+          <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="15">
+            <input type="checkbox" id="field-contra">
+            <span class="text-sm">कॉन्ट्रा</span>
+          </label>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold text-gray-700 mb-2">संघटना / शाखा</h3>
+          <div class="mockup-field-grid">
+            <div data-spec-field="16">
+              <label class="mockup-label mockup-label-muted" for="field-organization">संघटना</label>
+              <select id="field-organization" disabled title="सभासदाप्रमाणे खाते निवडल्यावर वाचनीय">
+                <option value="">—</option>
+                <option value="society1">सोसायटी नाव</option>
+              </select>
+            </div>
+            <div data-spec-field="17">
+              <label class="mockup-label" for="field-branch">शाखा</label>
+              <input type="text" id="field-branch">
+            </div>
+            <div data-spec-field="18">
+              <label class="mockup-label" for="field-select-branch">
+                शाखा निवडा
+                <span class="mockup-badge-todo">TODO</span>
+              </label>
+              <select id="field-select-branch">
+                <option value="" selected>शाखा निवडा</option>
+                <option disabled>[TODO — master data pending]</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-reset">पूर्ववत</button>
+      <button type="button" class="mockup-btn mockup-btn-primary" id="btn-save">पूर्ण</button>
+    </div>
+  </footer>
+
+</body>
+</html>
