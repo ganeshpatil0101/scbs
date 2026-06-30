@@ -32,7 +32,7 @@ UI specification for configuring share (equity) rules per branch. Intended for A
 | 6 | अधिकृत शेअर्स भांडवली (रु.) | Authorized Share Capital (Rs.) | Textbox | Yes | e.g. `2000000` |
 | 7 | गेल्या वर्षी अधिकृत शेअर्सची भांडवली (रु.) | Last Year Authorized Share Capital (Rs.) | Textbox | Yes | e.g. `2000000` |
 | 8 | नियम बदलण्याची तारीख | Rule Change Date | Date | Yes | — |
-| 9 | मर्यादा हस्तांतरण केल्यानंतर शेअर्स रक्कम | Share Amount After Limit Transfer | Dropdown | No | `TODO` |
+| 9 | मर्यादा हस्तांतरण केल्यानंतर शेअर्स रक्कम | Share Amount After Limit Transfer | Dropdown | No |  |
 
 ## Actions
 

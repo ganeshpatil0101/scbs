@@ -54,8 +54,6 @@ Each row maps one form to one of three permission levels. Header checkboxes allo
 | 7 | कोणतेही व्यवहार | Any Transactions |
 | 8 | खाते यादी (जी एल हेड) | Account List (GL Head) |
 
-Full form list per menu: `TODO` (scroll not captured).
-
 ---
 
 ## Mockup

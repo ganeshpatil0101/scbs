@@ -28,12 +28,12 @@ UI specification for creating a new GL (General Ledger) group. Intended for AI a
 | 2 | ताळेबंद | Balance Sheet | Radio | No | — |
 | 3 | उत्पन्न | Income | Radio | No | Default selected. Mutually exclusive with खर्च |
 | 4 | खर्च | Expense | Radio | No | — |
-| 5 | गट प्रकार निवडा | Select Group Type | Dropdown | Yes | Default: `इतर` (Other). Full list: `TODO` |
+| 5 | गट प्रकार निवडा | Select Group Type | Dropdown | Yes | Default: `इतर` (Other). |
 | 6 | गटाचे नाव | Group Name | Textbox | Yes | — |
 | 7 | गटाचे नाव (युनिकोड) | Group Name (Unicode) | Textbox | No | — |
 
 ## Actions
-
+ - After selecting ताळेबंद (Balance Sheet) Radio button (Income & Expense Radio buttons are getting hidden ) & visible येणे (Receiviable) & देणे (Payable) Radio Buttons
 | Button | Marathi | English |
 | :--- | :--- | :--- |
 | Save | पूर्ण | Complete |

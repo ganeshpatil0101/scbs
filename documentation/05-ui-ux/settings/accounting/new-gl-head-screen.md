@@ -27,12 +27,12 @@ Extracted frames: `screenshots/settings/new-gl-head-frames/`.
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | खाते गट | Account Group | Dropdown | Yes | See [Account Group Values](#account-group-values) below |
-| 2 | खाते प्रकार | Account Type | Dropdown | Yes | Default: `इतर` (Other). Other values: `TODO` |
+| 2 | खाते प्रकार | Account Type | Dropdown | Yes | Default: `इतर` (Other). |
 | 3 | जी. एल. हेड क्र. | GL Head No. | Textbox | Yes | Auto-generated (e.g. `163`) |
 | 4 | जी. एल. हेडचे नाव | GL Head Name | Textbox | Yes | — |
 | 5 | संक्षिप्त नाव | Short Name | Textbox | No | — |
 | 6 | युनिकोड नाव | Unicode Name | Textbox | No | — |
-| 7 | स्थिती | Status | Dropdown | Yes | Default: `चालू` (Active). Other values: `TODO` |
+| 7 | स्थिती | Status | Dropdown | Yes | Default: `चालू` (Active), `बंद` (Inactive), `स्थगित` (Stop)  |
 | 8 | प्रारंभ दिनांक | Start Date | Date | Yes | System date |
 
 ---
@@ -62,7 +62,7 @@ Extracted frames: `screenshots/settings/new-gl-head-frames/`.
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 16 | संघटना | Organization | Dropdown | No | Society name; read-only when member account selected |
 | 17 | शाखा | Branch | Textbox | No | — |
-| 18 | शाखा निवडा | Select Branch | Dropdown | No | Default: `शाखा निवडा`. Values: `TODO` |
+| 18 | शाखा निवडा | Select Branch | Dropdown | No | Default: `शाखा निवडा`. Values: `शाखा 1` |
 
 ## Actions
 
@@ -114,8 +114,8 @@ Captured from video frames `f_000`–`f_010` (scrollable list; combined):
 | व्यवस्थापकीय खर्च | Administrative Expense |
 | शाखा गुंतवणूक | Branch Investment |
 | शाखा देणी | Branch Liabilities |
-
-Additional values below scroll: `TODO`.
+| शाखा येणे | Branch Receiviable |
+| सर्वसाधारण खर्च | Overall Expenses |
 
 ---
 

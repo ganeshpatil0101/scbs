@@ -60,9 +60,9 @@ Single screen with **5 tabs**. All tabs belong to one wizard screen; screenshots
 | 12 | दैनिक | Daily | Radio Button | No | व्याज मोजणी group |
 | 13 | पाक्षिक | Fortnightly | Radio Button | No | व्याज मोजणी group |
 | 14 | मासिक | Monthly | Radio Button | No | व्याज मोजणी group; default selected |
-| 15 | गणना दिवस (महिन्याच्या शेवटी 31 दिवस सेट करा) | Calculation Day (set 31 at month end) | Dropdown | Yes | Shown value: `31`. **TODO:** Capture full day list (1–31) |
+| 15 | गणना दिवस (महिन्याच्या शेवटी 31 दिवस सेट करा) | Calculation Day (set 31 at month end) | Dropdown | Yes | Shown value: `31`. Capture full day list (1–31) |
 | 16 | तपशील | Details | Textbox | No | — |
-| 17 | स्थिती | Status | Dropdown | Yes | Shown value: `चालू` (Active). **TODO:** Capture other status values |
+| 17 | स्थिती | Status | Dropdown | Yes | Shown value: `चालू` (Active), `बंद`, `स्थगित`, `कालबाह्य` |
 | 18 | किमान शिल्लक (रु.) | Minimum Balance (Rs.) | Textbox | No | Currency |
 | 19 | गुणक | Multiplier | Textbox | No | — |
 | 20 | एका आठवड्यात एकूण नावे व्यवहार संख्या (कमाल संख्या) | Total Debit Transaction Count per Week (Max) | Textbox | No | — |
@@ -89,7 +89,7 @@ Single screen with **5 tabs**. All tabs belong to one wizard screen; screenshots
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | कालावधी | Duration | Textbox | Yes | — |
-| 2 | कालावधी प्रकार | Duration Type | Dropdown | Yes | Shown: `महिने` (Months). **TODO:** Capture other types (Days, Years, etc.) |
+| 2 | कालावधी प्रकार | Duration Type | Dropdown | Yes | Shown: `महिने` (Months). Capture other types (Days, Years, etc.) |
 | 3 | व्याज दर (द.सा.द.शे.) | Interest Rate (p.a. %) | Textbox | Yes | Percentage |
 | — | + टाका | + Add | Button | — | Adds row to grid |
 
@@ -120,8 +120,8 @@ Single screen with **5 tabs**. All tabs belong to one wizard screen; screenshots
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | व्याज पोस्टिंग दिवस | Interest Posting Day | Dropdown | Yes | **TODO:** Dropdown values not visible in screenshot |
-| 2 | व्याज पोस्टिंग महिना | Interest Posting Month | Dropdown | Yes | **TODO:** Dropdown values not visible in screenshot |
+| 1 | व्याज पोस्टिंग दिवस | Interest Posting Day | Dropdown | Yes | List of month date like (1,2,3,...31)  |
+| 2 | व्याज पोस्टिंग महिना | Interest Posting Month | Dropdown | Yes | List of month name like (January, Feb... December) |
 | — | + टाका | + Add | Button | — | — |
 
 ### Grid Columns
@@ -152,7 +152,7 @@ Single screen with **5 tabs**. All tabs belong to one wizard screen; screenshots
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | कालावधी | Duration | Textbox | No | — |
-| 2 | कालावधी प्रकार | Duration Type | Dropdown | No | Shown: `महिने` (Months). **TODO:** Other values |
+| 2 | कालावधी प्रकार | Duration Type | Dropdown | No | Shown: `महिने` (Months). |
 | 3 | व्याज दर (द.सा.द.शे.) | Interest Rate (p.a. %) | Textbox | No | — |
 | — | + टाका | + Add | Button | — | — |
 
@@ -181,7 +181,7 @@ Single screen with **5 tabs**. All tabs belong to one wizard screen; screenshots
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | कालावधी | Duration | Textbox | No | — |
-| 2 | कालावधी प्रकार | Duration Type | Dropdown | No | Placeholder: `निवडा` (Select). **TODO:** Values |
+| 2 | कालावधी प्रकार | Duration Type | Dropdown | No | Placeholder: `निवडा` (Select). Options are Days & Months |
 | 3 | व्याज दर (द.सा.द.शे.) | Interest Rate (p.a. %) | Textbox | No | — |
 | — | + टाका | + Add | Button | — | — |
 
@@ -200,7 +200,7 @@ Single screen with **5 tabs**. All tabs belong to one wizard screen; screenshots
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | व्याज दर (द.सा.द.शे.) | Interest Rate (p.a. %) | Textbox | No | Appears disabled in screenshot |
 | 2 | मुदती नंतरचा लॉकिंग कालावधी | Locking Period After Maturity | Textbox | No | Appears disabled |
-| 3 | कालावधी प्रकार | Duration Type | Dropdown | No | Placeholder: `निवडा`. **TODO:** Values. Appears disabled |
+| 3 | कालावधी प्रकार | Duration Type | Dropdown | No | Placeholder: `निवडा`. Days, Months, Years Values. Appears disabled |
 
 ---
 
@@ -237,7 +237,7 @@ Single screen with **5 tabs**. All tabs belong to one wizard screen; screenshots
 | काढा | Remove | Button |
 | Save (floppy icon) | Save | Button |
 
-**TODO:** Confirm whether selecting a charge auto-adds to grid or requires a separate Add action.
+Confirm whether selecting a charge requires a separate Add action.
 
 ---
 

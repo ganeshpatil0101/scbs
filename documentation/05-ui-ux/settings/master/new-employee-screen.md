@@ -28,7 +28,7 @@ UI specification for registering a new employee or director. Intended for AI age
 | 2 | कर्मचारी | Employee | Radio | No | Employee type |
 | 3 | ग्राहक क्रमांक | Customer Number | Textbox | Yes | — |
 | 4 | ग्राहकाचे नाव | Customer Name | Textbox | Yes | — |
-| 5 | हुद्दा | Designation | Dropdown | Yes | `निवडा` (Select), `मुख्य कार्यकारी अधिकारी` (CEO), `अध्यक्ष` (Chairman), `उपाध्यक्ष` (Vice Chairman), `संचालक` (Director). Additional values may exist: `TODO` |
+| 5 | हुद्दा | Designation | Dropdown | Yes | `निवडा` (Select), `मुख्य कार्यकारी अधिकारी` (CEO), `अध्यक्ष` (Chairman), `उपाध्यक्ष` (Vice Chairman), `संचालक` (Director) |
 | 6 | हे कर्मचारी सध्या सेवेमध्ये आहे काय? | Is Employee Currently in Service? | Radio | No | `होय` (Yes) / `नाही` (No). Default: `होय` |
 
 ## Actions

@@ -40,13 +40,13 @@ UI specification for creating a system user. Two-tab form. Intended for AI agent
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 3 | नाव (ग्राहक क्रमांक/नाव) | Name | Dropdown | Yes | Default: `निवडा`. Values: `TODO` |
+| 3 | नाव (ग्राहक क्रमांक/नाव) | Name | Dropdown | Yes | Default: `निवडा`. populate all customer list |
 | 4 | हुद्दा | Designation | Textbox | No | — |
 | 5 | लॉगीन नाव | Login Name | Textbox | Yes | — |
 | 6 | पासवर्ड | Password | Textbox | Yes | Masked |
 | 7 | पडताळणी पासवर्ड | Confirm Password | Textbox | Yes | Masked |
-| 8 | स्थिती | Status | Dropdown | Yes | Default: `सक्रिय` (Active). Other values: `TODO` |
-| 9 | युजरचा प्रकार | User Type | Dropdown | Yes | Default: `सोसायटी` (Society). Other values: `TODO` |
+| 8 | स्थिती | Status | Dropdown | Yes | Default: `सक्रिय` (Active). Other values: `सक्रिय,निष्क्रिय,स्थगित,सिस्टीम स्थगित,` |
+| 9 | युजरचा प्रकार | User Type | Dropdown | Yes | Default: `सोसायटी` (Society). |
 | 11 | सुपर युजर | Super User | Checkbox | No | — |
 
 ### Section: सेटिंग (Settings)
