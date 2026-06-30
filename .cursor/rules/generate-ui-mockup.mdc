@@ -1,0 +1,164 @@
+---
+description: Generate shareable HTML layout mockups for Core Banking Software UI screens from 05-ui-ux/ screen specifications. Use when the user asks to create UX mockups, HTML prototypes, layout previews, or invokes "/generate-ui-mockup". Produces Marathi-only static prototypes (Tailwind CSS) for bank-user review before Angular implementation via generate-ui-screen.
+globs:
+  - "documentation/**/05-ui-ux/**"
+  - "documentation/**/05-ui-ux/mockups/**"
+alwaysApply: false
+---
+
+# UI Mockup Generation Skill (Core Banking Software — HTML + Tailwind)
+
+Turns a `05-ui-ux/**/*-screen.md` spec into a **layout-only** HTML prototype for bank-user review. Mockups are shareable without Angular, Cursor, or a dev environment. After approval, `@generate-ui-screen` converts the approved HTML structure into production Angular code with full i18n (`mr` + `en`).
+
+## Standing Decisions
+
+| Decision | Value |
+|---|---|
+| Styling | **Tailwind CSS v4** via CDN: `<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>` |
+| Shared theme | [`mockup-base.css`](../../documentation/05-ui-ux/mockups/_shared/mockup-base.css) — plain CSS linked via `<link rel="stylesheet">` (component classes, form controls, tokens) |
+| Tailwind in HTML | Layout utilities only (`max-w-4xl`, `grid`, `flex`, `bg-gray-100`, etc.) via CDN class scanning |
+| Mockup language | **Marathi only** — no English labels, no language toggle in mockups |
+| Angular i18n | English added during `@generate-ui-screen` via `ngx-translate` (spec has both labels) |
+| Interactivity | **Layout-only** — tab switching only; no form validation or API calls |
+| Deliverable format | Static `index.html` + `README.md` in repo (no separate `styles.css` unless screen-specific overrides needed) |
+| Master data gaps (`TODO`) | Show placeholder with `[TODO]` badge — never invent values |
+| Layout | **Centered container** `max-w-7xl mx-auto` on gray page background |
+| Section layout | On `≥1024px`, pair related sections side-by-side via `.mockup-section-columns` (e.g. Basic Info left, Settings right); full-width sections for grids/tables |
+
+## Core Principles
+
+- **Spec is the source of truth.** Every field, tab, section, grid column, and action must trace to a row in the screen's `.md` file.
+- **Simplicity first.** Layout optimized for cooperative bank staff (Clerk/Cashier) — clear grouping, visible required markers, generous spacing, no clutter.
+- **Traceability.** Every form control gets `data-spec-field="<row#>"` matching the spec table's `#` column.
+- **No invented master data.** Dropdown options marked `TODO` render as disabled options with a visible badge.
+- **Marathi labels only in mockups.** Use the Marathi column from the spec. English labels are deferred to Angular i18n generation.
+
+## Execution Workflow (always follow in order)
+
+1. **Read [`AI_INDEX.md`](../../documentation/AI_INDEX.md)**, then the target `*-screen.md`, its module `overview.md`, and `changelog.md`.
+2. **Resolve output path** from spec location:
+   - Spec: `documentation/05-ui-ux/<module>/.../<screen-name>.md`
+   - Mockup: `documentation/05-ui-ux/mockups/<module>/.../<screen-name>/`
+3. **Check reference screenshots** listed in the spec. If missing from repo, note in `README.md` — proceed spec-driven.
+4. **Read sibling specs** when a tab defers to another screen.
+5. **Generate mockup files** (see Output Structure below).
+6. **Link mockup from spec** — ensure `## Mockup` section exists on the screen spec.
+7. **Update module `changelog.md`** with mockup entry.
+8. **Run Pre-Completion Checklist** before reporting done.
+
+## Output Structure
+
+```text
+documentation/05-ui-ux/mockups/<module>/<screen-name>/
+  index.html      # Tailwind HTML, Marathi labels, data-spec-field attributes
+  README.md       # open instructions, review checklist, approval status
+```
+
+Optional `styles.css` only when screen-specific Tailwind overrides cannot live in `index.html`.
+
+### index.html template (head)
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="../../../_shared/mockup-base.css">
+```
+
+**Tailwind browser build limitations (file:// mockups):**
+- Do **not** use `@import` inside `<style type="text/tailwindcss">`
+- Do **not** use `@apply` in custom CSS — use plain CSS in `mockup-base.css` instead
+- Tailwind CDN is for **HTML utility classes only**; shared components use `.mockup-*` classes from `mockup-base.css`
+
+### index.html requirements
+
+- `<html lang="mr">` — Marathi only, no language toggle
+- Content in `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`
+- Header: screen title + breadcrumb (Marathi) from spec **Screen Identification** table
+- Tab bar from spec **Tabs** table — use `.mockup-tab` / `.mockup-tab-active`
+- Sections from spec `### Section:` headings — use `.mockup-section` / `.mockup-section-title`
+- **Side-by-side sections** on desktop: wrap paired sections in `.mockup-section-columns` (2 equal columns at `≥1024px`); keep grids/tables in `.mockup-section-full`
+- Fields inside side-by-side sections: `.mockup-field-grid` (1 col) or `.mockup-field-grid--2` (2 cols within each half)
+- Required fields: `<span class="mockup-required">*</span>` when spec `Required: Yes`
+- Grids: `.mockup-table` with horizontal scroll wrapper on mobile
+- Sticky footer: `fixed bottom-0` action bar aligned to same `max-w-4xl` container
+- Footer buttons (Marathi): रीसेट, मागे (tab 2+), पुढे (tab 1), जतन करा (last tab)
+- Minimal JS: tab switching only
+
+### Field type mapping
+
+| Spec Type | HTML element |
+|---|---|
+| Textbox | `<input type="text">` or `<input type="password">` when masked |
+| Dropdown | `<select>` — known default as selected option; `TODO` values as disabled `<option>` |
+| Radio | `<input type="radio">` group with `<fieldset>` |
+| Checkbox | `<input type="checkbox">` |
+| Date | `<input type="date">` |
+| Label (read-only) | `<span>` with muted styling |
+| Disabled until checkbox | `disabled` attribute + grayed label |
+
+### README.md template
+
+```markdown
+# Mockup — <Screen Name (Marathi)>
+
+| Property | Value |
+|---|---|
+| Spec | [link to spec] |
+| Status | **Draft** \| Approved |
+| Created | YYYY-MM-DD |
+| Language | Marathi only (English via ngx-translate in Angular phase) |
+
+## How to open
+
+Open `index.html` in any web browser. Requires internet for Tailwind CDN and Google Fonts.
+
+## Review checklist
+
+- [ ] All spec fields present with correct grouping
+- [ ] Marathi labels clear for non-technical bank staff
+- [ ] Required fields marked with *
+- [ ] Responsive on mobile (single column) and desktop (two columns, centered)
+- [ ] Grid columns match spec
+- [ ] Tab structure approved
+
+## Approval
+
+When approved, change Status to **Approved**. Then run `/generate-ui-screen <screen-name>`.
+```
+
+## UX Standards
+
+| Breakpoint | Layout |
+|---|---|
+| `< 640px` (mobile) | Single-column form; tabs scroll horizontally; tables scroll horizontally |
+| `≥ 1024px` (desktop) | `.mockup-section-columns` — related sections side-by-side; `max-w-7xl` container uses horizontal space |
+| Wide desktop | Modest gray margins outside container; org-rights / data grids stay full width |
+
+Non-negotiable:
+- Noto Sans Devanagari font for Marathi readability
+- Every control has an associated `<label>`
+- Visible keyboard focus styles
+- Sticky action bar so Save/Next never scrolls out of view
+- `TODO` items visibly marked, never filled with guessed data
+
+## Pre-Completion Checklist
+
+- [ ] Every spec field/column has HTML with `data-spec-field`
+- [ ] Marathi labels only — no duplicate EN spans or language toggle
+- [ ] Tailwind CDN loaded; `mockup-base.css` linked as regular stylesheet (plain CSS, no `@apply`)
+- [ ] Show/hide uses `.mockup-hidden` (not Tailwind `hidden`) for tab/button toggling
+- [ ] Centered `max-w-7xl` layout; side-by-side sections on desktop where form is long
+- [ ] Responsive grid and sticky action bar
+- [ ] `README.md` has review checklist and Status: Draft
+
+## Related Documents
+
+- [generate-ui-screen.mdc](generate-ui-screen.mdc) — Phase 2: approved mockup → Angular + i18n
+- [documentation/AI_INDEX.md](../../documentation/AI_INDEX.md)
+
+## Notes for Cursor
+
+- Invoke with `@generate-ui-mockup` or `/generate-ui-mockup <screen-name>`.
+- Do **not** use Cursor Canvas or GenerateImage for bank-review mockups.
+- Mockups need internet once (Tailwind CDN + fonts); can be hosted on static hosting for offline CDN caching.

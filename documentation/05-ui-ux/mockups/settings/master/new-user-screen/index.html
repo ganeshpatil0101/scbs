@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>नवीन युजर — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../../_shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <!-- Preview banner — full width -->
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <!-- Wider content — uses horizontal space, sections side-by-side on desktop -->
+  <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- Header -->
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <h1 class="text-2xl font-bold text-gray-900">नवीन युजर</h1>
+      <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; सेटिंग्ज &gt; मास्टर &gt; नवीन युजर</p>
+    </header>
+
+    <!-- Tabs -->
+    <nav class="flex border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="स्क्रीन टॅब">
+      <button type="button" id="tab-1" class="mockup-tab mockup-tab-active" role="tab" aria-selected="true" aria-controls="tab-panel-1" data-tab="1">
+        युजरची माहिती
+      </button>
+      <button type="button" id="tab-2" class="mockup-tab" role="tab" aria-selected="false" aria-controls="tab-panel-2" data-tab="2">
+        युजर रोल
+      </button>
+    </nav>
+
+    <!-- Tab 1 -->
+    <div id="tab-panel-1" role="tabpanel" aria-labelledby="tab-1">
+
+      <!-- User Type — compact full-width strip -->
+      <!-- <section class="mockup-section mockup-section-compact" aria-labelledby="section-user-type">
+        <h2 class="mockup-section-title" id="section-user-type">युजर प्रकार</h2>
+        <fieldset class="border-0 p-0 m-0" data-spec-field="1-2">
+          <div class="flex flex-wrap gap-6">
+            <label class="inline-flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="userTypeRadio" value="director" checked data-spec-field="1">
+              <span>संचालक</span>
+            </label>
+            <label class="inline-flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="userTypeRadio" value="staff" data-spec-field="2">
+              <span>कर्मचारी</span>
+            </label>
+          </div>
+        </fieldset>
+      </section> -->
+
+      <!-- Left: Basic Info | Right: Settings -->
+      <div class="mockup-section-columns">
+
+        <!-- Basic Information -->
+        <section class="mockup-section" aria-labelledby="section-basic-info">
+          <h2 class="mockup-section-title" id="section-basic-info">मूलभूत माहिती</h2>
+          <div class="mockup-field-grid mockup-field-grid--2">
+            <div data-spec-field="3">
+              <label class="mockup-label" for="field-name">
+                ग्राहक क्रमांक/नाव <span class="mockup-required">*</span>
+                <span class="mockup-badge-todo">TODO</span>
+              </label>
+              <select id="field-name">
+                <option value="">निवडा</option>
+                <option disabled>[TODO — master data pending]</option>
+              </select>
+            </div>
+            <div data-spec-field="4">
+              <label class="mockup-label" for="field-designation">हुद्दा</label>
+              <input type="text" id="field-designation">
+            </div>
+            <div data-spec-field="5">
+              <label class="mockup-label" for="field-login-name">
+                लॉगीन नाव <span class="mockup-required">*</span>
+              </label>
+              <input type="text" id="field-login-name">
+            </div>
+            <div data-spec-field="6">
+              <label class="mockup-label" for="field-password">
+                पासवर्ड <span class="mockup-required">*</span>
+              </label>
+              <input type="password" id="field-password">
+            </div>
+            <div data-spec-field="7">
+              <label class="mockup-label" for="field-confirm-password">
+                पडताळणी पासवर्ड <span class="mockup-required">*</span>
+              </label>
+              <input type="password" id="field-confirm-password">
+            </div>
+            <div data-spec-field="8">
+              <label class="mockup-label" for="field-status">
+                स्थिती <span class="mockup-required">*</span>
+                <span class="mockup-badge-todo">TODO</span>
+              </label>
+              <select id="field-status">
+                <option value="active" selected>सक्रिय</option>
+                <option disabled>[TODO — master data pending]</option>
+              </select>
+            </div>
+            <div data-spec-field="9">
+              <label class="mockup-label" for="field-user-type-dd">
+                युजरचा प्रकार <span class="mockup-required">*</span>
+                <span class="mockup-badge-todo">TODO</span>
+              </label>
+              <select id="field-user-type-dd">
+                <option value="society" selected>सोसायटी</option>
+                <option disabled>[TODO — master data pending]</option>
+              </select>
+            </div>
+            <div class="flex items-end pb-1" data-spec-field="11">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="field-super-user">
+                <span class="text-sm">सुपर युजर</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Settings -->
+        <section class="mockup-section" aria-labelledby="section-settings">
+          <h2 class="mockup-section-title" id="section-settings">सेटिंग</h2>
+          <div class="mockup-field-grid mockup-field-grid--2">
+            <div data-spec-field="14">
+              <label class="mockup-label" for="field-voucher-limit">रोख भरणा व्हाउचर मर्यादा</label>
+              <input type="text" id="field-voucher-limit">
+            </div>
+            <div data-spec-field="15">
+              <label class="mockup-label" for="field-voucher-passing-limit">रोख भरणा व्हाउचर पासिंग मर्यादा</label>
+              <input type="text" id="field-voucher-passing-limit">
+            </div>
+            <div data-spec-field="16">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="field-intra-branch">
+                <span class="text-sm">शाखा अंतर्गत व्यवहार</span>
+              </label>
+            </div>
+            <div ></div>
+            <div data-spec-field="17">
+              <label class="mockup-label mockup-label-muted" for="field-receipt-limit">शाखा अंतर्गत पावती मर्यादा</label>
+              <input type="text" id="field-receipt-limit" disabled title="शाखा अंतर्गत व्यवहार निवडल्यावर सक्षम">
+            </div>
+            <div data-spec-field="18">
+              <label class="mockup-label mockup-label-muted" for="field-payable-limit">शाखा अंतर्गत देय मर्यादा</label>
+              <input type="text" id="field-payable-limit" disabled title="शाखा अंतर्गत व्यवहार निवडल्यावर सक्षम">
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Organization User Rights — full width -->
+      <section class="mockup-section mockup-section-full" aria-labelledby="section-org-rights">
+        <h2 class="mockup-section-title" id="section-org-rights">संघटना युजर अधिकार</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+          <div data-spec-field="19">
+            <label class="mockup-label" for="field-organization">
+              संघटना <span class="mockup-required">*</span>
+            </label>
+            <select id="field-organization">
+              <option value="">निवडा</option>
+              <option value="society1">सोसायटी नाव</option>
+            </select>
+          </div>
+          <div data-spec-field="20">
+            <label class="mockup-label" for="field-branch">
+              शाखा <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="field-branch" value="1">
+          </div>
+          <div data-spec-field="21">
+            <label class="mockup-label" for="field-select-branch">
+              शाखा निवडा <span class="mockup-required">*</span>
+            </label>
+            <select id="field-select-branch">
+              <option value="">निवडा</option>
+              <option value="kotoli" selected>कोतोली मुख्य कार्यालय</option>
+            </select>
+          </div>
+          <button type="button" class="mockup-btn mockup-btn-add w-full sm:w-auto">+ टाका</button>
+        </div>
+
+        <div class="overflow-x-auto mt-4">
+          <table class="mockup-table" aria-label="संघटना अधिकार यादी">
+            <thead>
+              <tr>
+                <th>निवडा</th>
+                <th>अ.क्र.</th>
+                <th>संघटना</th>
+                <th>शाखा नाव</th>
+                <th>कृती</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" aria-label="पंक्ती 1 निवडा"></td>
+                <td>1</td>
+                <td>सोसायटी नाव</td>
+                <td>कोतोली मुख्य कार्यालय</td>
+                <td>
+                  <button type="button" class="btn-link">काढा</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab 2 -->
+    <div id="tab-panel-2" class="mockup-hidden" role="tabpanel" aria-labelledby="tab-2" hidden>
+
+      <div class="mockup-info-note">
+        या टॅबमध्ये युजर रोल नियुक्ती दर्शवली जाते — युजर रोल स्क्रीनशी समान परवानगी मॅट्रिक्स पॅटर्न. हा मॉकअप सरलीकृत प्लेसहोल्डर आहे.
+      </div>
+
+      <section class="mockup-section" aria-labelledby="section-role-name">
+        <h2 class="mockup-section-title" id="section-role-name">युजर रोल</h2>
+        <div class="max-w-md">
+          <label class="mockup-label" for="field-role-name">
+            युजर रोल <span class="mockup-required">*</span>
+          </label>
+          <input type="text" id="field-role-name">
+        </div>
+      </section>
+
+      <section class="mockup-section" aria-labelledby="section-permissions">
+        <h2 class="mockup-section-title" id="section-permissions">परवानगी मॅट्रिक्स</h2>
+        <div class="overflow-x-auto max-h-72 overflow-y-auto">
+          <table class="mockup-table" aria-label="परवानगी मॅट्रिक्स">
+            <thead>
+              <tr>
+                <th>अ.क्र.</th>
+                <th>मेनु</th>
+                <th>फॉर्मचे नाव</th>
+                <th>सर्व अधिकार</th>
+                <th>फक्त बघण्यासाठी</th>
+                <th>अधिकार नाही</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>अकाउंटींग</td>
+                <td>जमा</td>
+                <td><input type="checkbox" aria-label="सर्व अधिकार"></td>
+                <td><input type="checkbox" aria-label="फक्त बघण्यासाठी"></td>
+                <td><input type="checkbox" aria-label="अधिकार नाही"></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>अकाउंटींग</td>
+                <td>नावे</td>
+                <td><input type="checkbox" aria-label="सर्व अधिकार"></td>
+                <td><input type="checkbox" aria-label="फक्त बघण्यासाठी"></td>
+                <td><input type="checkbox" aria-label="अधिकार नाही"></td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-center text-gray-400 italic py-3">
+                  … पूर्ण मॅट्रिक्स युजर रोल स्क्रीनवर उपलब्ध …
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Sticky action bar -->
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-reset">रीसेट</button>
+      <button type="button" class="mockup-btn mockup-btn-secondary mockup-hidden" id="btn-back">मागे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary" id="btn-next">पुढे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary mockup-hidden" id="btn-save">जतन करा</button>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('[role="tab"]');
+      var panels = [document.getElementById('tab-panel-1'), document.getElementById('tab-panel-2')];
+      var btnNext = document.getElementById('btn-next');
+      var btnBack = document.getElementById('btn-back');
+      var btnSave = document.getElementById('btn-save');
+
+      function switchTab(tabNum) {
+        tabs.forEach(function (tab) {
+          var isActive = Number(tab.getAttribute('data-tab')) === tabNum;
+          tab.classList.toggle('mockup-tab-active', isActive);
+          tab.setAttribute('aria-selected', isActive);
+        });
+        panels.forEach(function (panel, i) {
+          var isActive = i + 1 === tabNum;
+          panel.classList.toggle('mockup-hidden', !isActive);
+          panel.hidden = !isActive;
+        });
+        btnNext.classList.toggle('mockup-hidden', tabNum === 2);
+        btnBack.classList.toggle('mockup-hidden', tabNum === 1);
+        btnSave.classList.toggle('mockup-hidden', tabNum === 1);
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          switchTab(Number(this.getAttribute('data-tab')));
+        });
+      });
+
+      btnNext.addEventListener('click', function () { switchTab(2); });
+      btnBack.addEventListener('click', function () { switchTab(1); });
+    })();
+  </script>
+</body>
+</html>

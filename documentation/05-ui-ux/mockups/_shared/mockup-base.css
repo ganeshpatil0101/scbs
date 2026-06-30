@@ -1,0 +1,315 @@
+/**
+ * CBS UI Mockup — Shared styles (plain CSS)
+ *
+ * Load as a regular stylesheet (works with file://):
+ *   <link rel="stylesheet" href="../../../_shared/mockup-base.css">
+ *
+ * Use Tailwind CDN only for layout utilities in HTML class attributes.
+ * Do NOT use @apply or @import inside type="text/tailwindcss" — browser build rejects them.
+ */
+
+:root {
+  --font-sans: "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #1565c0;
+  --color-primary-dark: #0d47a1;
+  --color-primary-light: #e3f2fd;
+  --color-border: #e5e7eb;
+  --color-border-input: #d1d5db;
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+  --color-text-disabled: #9ca3af;
+  --radius: 4px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Form controls */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border-input);
+  background: #fff;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text);
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+  border-color: var(--color-primary);
+}
+
+input:disabled,
+select:disabled {
+  cursor: not-allowed;
+  background: #f9fafb;
+  color: var(--color-text-disabled);
+  border-color: var(--color-border);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--color-primary);
+}
+
+/* Sections */
+.mockup-section {
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mockup-section-compact {
+  padding: 0.75rem 1rem;
+}
+
+.mockup-section-compact .mockup-section-title {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.375rem;
+}
+
+/* Side-by-side section columns on desktop — reduces vertical scroll */
+.mockup-section-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .mockup-section-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.mockup-section-columns > .mockup-section,
+.mockup-section-columns > .mockup-section-stack {
+  margin-bottom: 0;
+}
+
+.mockup-section-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mockup-field-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .mockup-field-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Full-width section inside wide layout */
+.mockup-section-full {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .mockup-section {
+    padding: 1.5rem;
+  }
+}
+
+.mockup-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+  margin: 0 0 1rem;
+}
+
+.mockup-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.mockup-label-muted {
+  color: var(--color-text-disabled);
+}
+
+.mockup-required {
+  color: #dc2626;
+  margin-left: 2px;
+}
+
+.mockup-badge-todo {
+  margin-left: 4px;
+  display: inline-block;
+  border-radius: 2px;
+  padding: 0 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #c2410c;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  vertical-align: middle;
+}
+
+/* Tabs */
+.mockup-tab {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  font-family: inherit;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+
+@media (min-width: 640px) {
+  .mockup-tab {
+    font-size: 1rem;
+  }
+}
+
+.mockup-tab:hover {
+  color: var(--color-primary);
+  background: rgba(227, 242, 253, 0.5);
+}
+
+.mockup-tab-active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  font-weight: 600;
+}
+
+.mockup-tab:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+/* Buttons */
+.mockup-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  min-height: 2.5rem;
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.mockup-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.mockup-btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.mockup-btn-primary:hover {
+  background: var(--color-primary-dark);
+}
+
+.mockup-btn-secondary {
+  background: #fff;
+  color: #374151;
+  border-color: var(--color-border-input);
+}
+
+.mockup-btn-secondary:hover {
+  background: #f9fafb;
+}
+
+.mockup-btn-add {
+  background: #15803d;
+  color: #fff;
+}
+
+.mockup-btn-add:hover {
+  background: #166534;
+}
+
+/* Tables */
+.mockup-table {
+  width: 100%;
+  font-size: 0.875rem;
+  border-collapse: collapse;
+}
+
+.mockup-table th {
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+}
+
+.mockup-table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+}
+
+.mockup-table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.mockup-table .btn-link {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-family: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.mockup-table .btn-link:hover {
+  text-decoration: none;
+}
+
+/* Info note */
+.mockup-info-note {
+  border-radius: var(--radius);
+  border-left: 4px solid var(--color-primary);
+  background: rgba(227, 242, 253, 0.4);
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+/* Utility helpers used alongside Tailwind layout classes */
+.mockup-hidden {
+  display: none !important;
+}

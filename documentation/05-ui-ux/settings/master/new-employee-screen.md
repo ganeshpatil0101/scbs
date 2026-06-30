@@ -1,4 +1,4 @@
-# Screen Spec — New Employee (सेटिंग्ज > मास्टर > नवीन कर्मचारी)
+# Screen Spec — New Employee (सेटिंग्ज > मास्टर > नवीन कर्मचारी) - (Not required in first phase skip now)
 
 ## Purpose
 

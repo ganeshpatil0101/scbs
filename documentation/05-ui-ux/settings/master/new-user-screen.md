@@ -29,7 +29,7 @@ UI specification for creating a system user. Two-tab form. Intended for AI agent
 
 ## Tab 1: युजरची माहिती (User Information)
 
-### User Type
+### User Type - (Not required now skip)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
@@ -40,17 +40,14 @@ UI specification for creating a system user. Two-tab form. Intended for AI agent
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 3 | नाव | Name | Dropdown | Yes | Default: `निवडा`. Values: `TODO` |
+| 3 | नाव (ग्राहक क्रमांक/नाव) | Name | Dropdown | Yes | Default: `निवडा`. Values: `TODO` |
 | 4 | हुद्दा | Designation | Textbox | No | — |
 | 5 | लॉगीन नाव | Login Name | Textbox | Yes | — |
 | 6 | पासवर्ड | Password | Textbox | Yes | Masked |
 | 7 | पडताळणी पासवर्ड | Confirm Password | Textbox | Yes | Masked |
 | 8 | स्थिती | Status | Dropdown | Yes | Default: `सक्रिय` (Active). Other values: `TODO` |
 | 9 | युजरचा प्रकार | User Type | Dropdown | Yes | Default: `सोसायटी` (Society). Other values: `TODO` |
-| 10 | व्ही.पी.एन. प्रकार | VPN Type | Dropdown | Yes | Default: `शाखेप्रमाणे` (As per Branch). Other values: `TODO` |
 | 11 | सुपर युजर | Super User | Checkbox | No | — |
-| 12 | बायपास बायोमेट्रिक पडताळणी | Bypass Biometric Verification | Checkbox | No | — |
-| 13 | संघटना अंतर्गत | Within Organization | Checkbox | No | — |
 
 ### Section: सेटिंग (Settings)
 
@@ -83,6 +80,17 @@ Columns: निवडा, अ.क्र., संघटना, शाखा न�
 ## Tab 2: युजर रोल (User Role)
 
 See [user-role-screen.md](user-role-screen.md) — role assignment uses the same permission matrix pattern.
+
+---
+
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/settings/master/new-user-screen/index.html](../../mockups/settings/master/new-user-screen/index.html) |
+| Review guide | [mockups/settings/master/new-user-screen/README.md](../../mockups/settings/master/new-user-screen/README.md) |
+| Stack | Tailwind CSS v4 (CDN), Marathi labels only |
+| Status | Draft — pending bank user review |
 
 ---
 

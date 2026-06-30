@@ -37,16 +37,39 @@ These are fixed for this project (confirmed with the user). Do not re-litigate t
 ## Execution Workflow (always follow in order)
 
 1. **Read `AI_INDEX.md`**, then the target screen's spec file, its `overview.md`, and its `changelog.md`.
-2. **Check `09-ai-context/`** (coding-standards.md, naming-conventions.md, folder-structure.md). If these don't exist yet for this project, fall back to the conventions in this skill and flag to the user that `09-ai-context/` should eventually be authored via the `generate-document` skill — don't silently invent a second standard.
-3. **Search for reusable components/services first**: shared data grid, customer/account-holder search-and-select, nominee grid, address block, KYC document grid, permission directive, master-data dropdown service. If found, use them. If not found and the spec implies a pattern that repeats elsewhere (e.g., grid columns "निवडा/अ.क्र./..." pattern, or a "खातेधारक शोधा + निवडा" search-select pattern), build it once as a shared component — see Reusable Component Catalog.
-4. **Map the spec to an Angular artifact tree** (see Component Breakdown Patterns) before writing code.
-5. **Generate the NgRx slice** for the screen if it's a multi-tab wizard (see State Pattern).
-6. **Generate Reactive Forms**, one `FormGroup` per tab, with validators derived from the spec's `Required` column (see Form & Validation Mapping).
-7. **Wire role-based rendering** using the permission directive (see Role-Based Rendering).
-8. **Scaffold any `TODO` items** per the TODO Scaffold Pattern — never block the whole screen on one unresolved dropdown or uncaptured tab.
-9. **Implement responsively** per the breakpoint table.
-10. **Add both `mr` and `en` i18n keys** for every label in the spec.
-11. **Run the Pre-Completion Checklist** before reporting done.
+2. **Check for an approved HTML mockup** (see Approved Mockup → Angular Bridge below). Path: `documentation/05-ui-ux/mockups/<module>/<screen-name>/index.html` with `README.md` Status = **Approved**. If present, use its DOM structure as the template skeleton. If mockup exists but Status is Draft, warn the user and proceed from spec only unless they confirm.
+3. **Check `09-ai-context/`** (coding-standards.md, naming-conventions.md, folder-structure.md). If these don't exist yet for this project, fall back to the conventions in this skill and flag to the user that `09-ai-context/` should eventually be authored via the `generate-document` skill — don't silently invent a second standard.
+4. **Search for reusable components/services first**: shared data grid, customer/account-holder search-and-select, nominee grid, address block, KYC document grid, permission directive, master-data dropdown service. If found, use them. If not found and the spec implies a pattern that repeats elsewhere (e.g., grid columns "निवडा/अ.क्र./..." pattern, or a "खातेधारक शोधा + निवडा" search-select pattern), build it once as a shared component — see Reusable Component Catalog.
+5. **Map the spec to an Angular artifact tree** (see Component Breakdown Patterns) before writing code.
+6. **Generate the NgRx slice** for the screen if it's a multi-tab wizard (see State Pattern).
+7. **Generate Reactive Forms**, one `FormGroup` per tab, with validators derived from the spec's `Required` column (see Form & Validation Mapping).
+8. **Wire role-based rendering** using the permission directive (see Role-Based Rendering).
+9. **Scaffold any `TODO` items** per the TODO Scaffold Pattern — never block the whole screen on one unresolved dropdown or uncaptured tab.
+10. **Implement responsively** per the breakpoint table.
+11. **Add both `mr` and `en` i18n keys** for every label in the spec.
+12. **Run the Pre-Completion Checklist** before reporting done.
+
+## Approved Mockup → Angular Bridge
+
+When Phase 1 mockups exist (generated via `@generate-ui-mockup`):
+
+| Mockup path pattern | Example |
+|---|---|
+| Spec | `documentation/05-ui-ux/settings/master/new-user-screen.md` |
+| Mockup | `documentation/05-ui-ux/mockups/settings/master/new-user-screen/index.html` |
+
+**When to use:** Only when mockup `README.md` has `Status: **Approved**`. Otherwise generate layout from spec directly and suggest running `/generate-ui-mockup` first for bank review.
+
+**Conversion rules:**
+
+1. **DOM → components:** Each `.tab-panel` becomes a tab presentational component; each `.form-section` maps to a logical sub-section in that component's template.
+2. **Traceability:** Preserve `data-spec-field="<row#>"` as HTML comments or `data-spec-field` attributes on Angular host elements — maps back to spec table rows for review.
+3. **CSS → SCSS:** Translate `mockup-base.css` layout patterns to Angular Material (`mat-tab-group`, `mat-form-field`, `mat-table`) while preserving approved spacing and grouping from the mockup.
+4. **Labels → i18n:** Mockups use Marathi labels only. During Angular generation, add both `mr` and `en` keys from the spec's English column via `ngx-translate` — never hardcode strings in templates.
+5. **Layout-only JS → Angular logic:** Tab switching becomes `mat-tab-group` or NgRx `activeTabId`; language toggle becomes `TranslateService`; disabled-until-checkbox fields become Reactive Forms `enable()`/`disable()` via `valueChanges`.
+6. **Grids:** `.data-grid` tables become `app-data-grid` or `mat-table` with the same column order as the approved mockup.
+
+If mockup and spec disagree, **spec wins** for field presence/required-ness; **mockup wins** for layout/grouping when approved.
 
 ## Component Breakdown Patterns
 
@@ -157,6 +180,7 @@ Non-negotiable on every screen:
 - [ ] Responsive at all three breakpoints, including grid→card collapse
 - [ ] Keyboard focus and `aria-label`/`mat-label` present on all controls
 - [ ] Screen's local `changelog.md` updated (if one exists for that module)
+- [ ] If an approved mockup existed, Angular template structure matches mockup sections/tabs; `data-spec-field` traceability preserved
 
 If any item fails, fix it before reporting the task complete.
 
@@ -169,6 +193,7 @@ These are project-level gaps, not per-screen problems — raise them once, don't
 
 ## Related Documents
 
+- [generate-ui-mockup.mdc](generate-ui-mockup.mdc) — Phase 1: spec → HTML/CSS mockup for bank review
 - [generate-document.mdc](generate-document.mdc)
 - [documentation/AI_INDEX.md](../../documentation/AI_INDEX.md)
 
