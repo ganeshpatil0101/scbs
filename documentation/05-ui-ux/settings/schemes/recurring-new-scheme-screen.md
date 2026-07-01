@@ -65,7 +65,7 @@ Single screen with **7 tabs**. Screenshots 2.2 and 5.2 are scroll continuations 
 | 12 | वार्षिक | Yearly | Radio Button | No | — |
 | 13 | विना पोस्टींग कंम्पाउंडींग | Compounding Without Posting | Checkbox | No | — |
 | 14 | तपशील | Details | Textbox | No | — |
-| 15 | स्थिती | Status | Dropdown | Yes | Shown: `चालू` (Active). **TODO:** Other values |
+| 15 | स्थिती | Status | Dropdown | Yes | Shown: `चालू` (Active).`बंद` (Inactive), `स्थगित` (Stop) |
 | 16 | मॅच्युरीटीसाठी लॉकिंग कालावधी | Locking Period for Maturity | Checkbox | No | — |
 
 ### Navigation
@@ -153,7 +153,7 @@ Single screen with **7 tabs**. Screenshots 2.2 and 5.2 are scroll continuations 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | व्याज पोस्टिंग दिवस | Interest Posting Day | Dropdown | Yes | `निवडा`, `28`, `29`, `30`, `31` |
-| 2 | व्याज पोस्टिंग महिना | Interest Posting Month | Dropdown | Yes | Placeholder: `निवडा`. **TODO:** Month values |
+| 2 | व्याज पोस्टिंग महिना | Interest Posting Month | Dropdown | Yes | Placeholder: `निवडा`. values (January,Feb..,December) |
 | — | + टाका | + Add | Button | — | — |
 
 ### Grid Columns
@@ -162,8 +162,6 @@ Single screen with **7 tabs**. Screenshots 2.2 and 5.2 are scroll continuations 
 | :--- | :--- |
 | अ.क्र. | Sr. No. |
 | पोस्टिंग दिनांक | Posting Date |
-
-**TODO:** Confirm Select column and Remove button — not visible in screenshot.
 
 ---
 
@@ -201,7 +199,7 @@ Single screen with **7 tabs**. Screenshots 2.2 and 5.2 are scroll continuations 
 | # | Marathi Label | English Label | Type | Values / Notes |
 | :---: | :--- | :--- | :--- | :--- |
 | 1 | कालावधी | Duration | Textbox | — |
-| 2 | कालावधी प्रकार | Duration Type | Dropdown | Shown: `महिने` (Months). **TODO:** Other values |
+| 2 | कालावधी प्रकार | Duration Type | Dropdown | Shown: `महिने` (Months). numbers from 1 to 12  |
 | 3 | व्याज दर (द.सा.द.शे.) | Interest Rate (p.a. %) | Textbox | — |
 | — | + टाका | + Add | Button | — |
 
@@ -229,7 +227,7 @@ Single screen with **7 tabs**. Screenshots 2.2 and 5.2 are scroll continuations 
 | # | Marathi Label | English Label | Type | Values / Notes |
 | :---: | :--- | :--- | :--- | :--- |
 | 1 | कालावधी | Duration | Textbox | — |
-| 2 | कालावधी प्रकार | Duration Type | Dropdown | Shown: `महिने`. **TODO:** Other values |
+| 2 | कालावधी प्रकार | Duration Type | Dropdown | Shown: `महिने`. Other values like 1,2,3,...12 |
 | 3 | व्याज दर (द.सा.द.शे.) | Interest Rate (p.a. %) | Textbox | — |
 | — | + टाका | + Add | Button | — |
 
@@ -248,7 +246,7 @@ Single screen with **7 tabs**. Screenshots 2.2 and 5.2 are scroll continuations 
 | :---: | :--- | :--- | :--- | :--- |
 | 1 | व्याज दर (द.सा.द.शे.) | Interest Rate (p.a. %) | Textbox | — |
 | 2 | मुदती नंतरचा लॉकिंग कालावधी | Locking Period After Maturity | Textbox | — |
-| 3 | कालावधी प्रकार | Duration Type | Dropdown | Placeholder: `निवडा`. **TODO:** Values |
+| 3 | कालावधी प्रकार | Duration Type | Dropdown | Placeholder: `निवडा`. Values are (days,months) |
 | 4 | परिपक्व खाते अपुरा शिल्लक व्याज दर | Matured Account Insufficient Balance Interest Rate | Checkbox | — |
 | 5 | व्याज दर (द.सा.द.शे.) | Interest Rate (p.a. %) | Textbox | Associated with checkbox above |
 
@@ -284,9 +282,7 @@ Single screen with **7 tabs**. Screenshots 2.2 and 5.2 are scroll continuations 
 | Marathi | English |
 | :--- | :--- |
 | अ.क्र. | Sr. No. |
-| चार्जेस | Charges |
-
-**TODO:** Confirm whether amount/percentage fields appear after selecting a charge.
+| चार्जेस | Charges values(`निवडा`, `कर्जदार कल्याण निधी `,`पिग्मी कमिशन `,`प्रोसेसिंग फी`,`ब वर्ग सभासद फी`,`स्टेशनरी फी `) |
 
 ---
 
@@ -315,8 +311,7 @@ Single screen with **7 tabs**. Screenshots 2.2 and 5.2 are scroll continuations 
 | रिबेट रक्कम | Rebate Amount |
 | प्रकार | Type |
 
-**TODO:** Confirm Remove button and final Save action for this tab.
-
+There should be edit & delete button for grid
 ---
 
 ## Mockup

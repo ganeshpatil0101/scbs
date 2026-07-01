@@ -51,13 +51,13 @@ Single screen with **6 tabs**. Screenshots 2.2, 5.2, and 5.3 are scroll continua
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | जीएल हेड क्र. | GL Head No. | Textbox | Yes | Shown: `163` |
-| 2 | योजनेचे प्रकार | Scheme Type | Dropdown | Yes | Placeholder: `निवडा`. **TODO:** Values |
+| 2 | योजनेचे प्रकार | Scheme Type | Dropdown | Yes | Placeholder: `निवडा`. मुदत ठेव,दाम दुप्पट,कॅश सर्टिफिकेट,पेन्शन,ठेव कर्ज, Values |
 | 3 | गुणक | Multiplier | Textbox | Yes | — |
 | 4 | योजनेचे नाव | Scheme Name | Textbox | Yes | — |
 | 5 | तपशील | Details | Textbox | No | — |
 | 6 | पावती क्र. सिरीजची सुरूवात | Receipt No. Series Start | Textbox | Yes | — |
 | 7 | पावती क्र. सिरीज नंबर | Receipt No. Series Number | Textbox | Yes | — |
-| 8 | स्थिती | Status | Dropdown | Yes | Shown: `चालू` (Active). **TODO:** Other values |
+| 8 | स्थिती | Status | Dropdown | Yes | Shown: `चालू` (Active) .`बंद` (Inactive), `स्थगित` (Stop) |
 | 9 | ओपन एंडेड | Open Ended | Radio Button | No | Default selected |
 | 10 | क्लोज एंडेड | Close Ended | Radio Button | No | — |
 | 11 | फक्त सदस्यांना परवानगी द्या | Allow Only Members | Checkbox | No | — |
@@ -113,7 +113,7 @@ Single screen with **6 tabs**. Screenshots 2.2, 5.2, and 5.3 are scroll continua
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | डिस्काउंटेड | Discounted | Checkbox | No | — |
 | 2 | कालावधी | Duration | Textbox | Yes | — |
-| 3 | कालावधी प्रकार | Duration Type | Dropdown | Yes | Placeholder: `निवडा`. **TODO:** Values |
+| 3 | कालावधी प्रकार | Duration Type | Dropdown | Yes | Placeholder: `निवडा`. Values are Days/Months |
 | 4 | मुदत रक्कम | Maturity Amount | Textbox | Yes | — |
 | 5 | व्याज दर (द.सा.द.शे.) | Interest Rate (p.a. %) | Textbox | Yes | — |
 | — | + टाका | + Add | Button | — | — |
@@ -173,7 +173,7 @@ Single screen with **6 tabs**. Screenshots 2.2, 5.2, and 5.3 are scroll continua
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | खाते प्रकार | Account Type | Dropdown | Yes | See values below |
 | 2 | कालावधी | Duration | Textbox | Yes | — |
-| 3 | कालावधी प्रकार | Duration Type | Dropdown | Yes | Placeholder: `निवडा`. **TODO:** Days/Months/Years |
+| 3 | कालावधी प्रकार | Duration Type | Dropdown | Yes | Placeholder: `निवडा`. values are Days/Months/Years |
 | 4 | व्याज दर (द.सा.द.शे.) | Interest Rate (p.a. %) | Textbox | Yes | — |
 
 ### Account Type Dropdown Values
@@ -209,8 +209,8 @@ Single screen with **6 tabs**. Screenshots 2.2, 5.2, and 5.3 are scroll continua
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | व्याज पोस्टिंग दिवस | Interest Posting Day | Dropdown | Yes | **TODO:** Values not visible |
-| 2 | व्याज पोस्टिंग महिना | Interest Posting Month | Dropdown | Yes | **TODO:** Values not visible |
+| 1 | व्याज पोस्टिंग दिवस | Interest Posting Day | Dropdown | Yes | values(1,2,...31) |
+| 2 | व्याज पोस्टिंग महिना | Interest Posting Month | Dropdown | Yes |  Values(January, Feb.....December) |
 | — | + टाका | + Add | Button | — | — |
 
 ### Grid Columns
@@ -263,7 +263,7 @@ Single screen with **6 tabs**. Screenshots 2.2, 5.2, and 5.3 are scroll continua
 | # | Marathi Label | English Label | Type | Values / Notes |
 | :---: | :--- | :--- | :--- | :--- |
 | 1 | कालावधी | Duration | Textbox | — |
-| 2 | कालावधी प्रकार | Duration Type | Dropdown | Placeholder: `निवडा`. **TODO:** Values |
+| 2 | कालावधी प्रकार | Duration Type | Dropdown | Placeholder: `निवडा`. Values Days/Months|
 | 3 | व्याज दर (द.सा.द.शे.) | Interest Rate (p.a. %) | Textbox | — |
 | — | + टाका | + Add | Button | — |
 

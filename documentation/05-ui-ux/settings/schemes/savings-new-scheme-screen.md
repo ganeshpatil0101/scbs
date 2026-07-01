@@ -63,15 +63,7 @@ Single screen with **3 tabs**. Multiple screenshots cover different tabs.
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | दिवसात | In Days | Radio Button | Yes | Default selected |
 | 2 | महिन्यात | In Months | Radio Button | No | — |
-| 3 | महिन्याची सुरुवात | Start of Month | Dropdown | Yes | Disabled when "In Days" selected. Placeholder: `निवडा`. **TODO:** Values when enabled |
-
-### Links
-
-| Marathi | English | Type |
-| :--- | :--- | :--- |
-| प्रगत सेटिंग्स | Advanced Settings | Hyperlink |
-
-**TODO:** Capture Advanced Settings sub-screen fields — no screenshot available.
+| 3 | महिन्याची सुरुवात | Start of Month | Dropdown | Yes | Disabled when "In Days" selected. Placeholder: `निवडा`.values(1,2,....31) Values when enabled |
 
 ### Navigation
 
@@ -87,11 +79,10 @@ Single screen with **3 tabs**. Multiple screenshots cover different tabs.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | व्याज पोस्टिंग दिवस | Interest Posting Day | Dropdown | Yes | Placeholder: `निवडा`. **TODO:** Dropdown values not visible |
-| 2 | व्याज पोस्टिंग महिना | Interest Posting Month | Dropdown | Yes | Placeholder: `निवडा`. **TODO:** Dropdown values not visible |
+| 1 | व्याज पोस्टिंग दिवस | Interest Posting Day | Dropdown | Yes | Placeholder: `निवडा`. values(1,2,...31) |
+| 2 | व्याज पोस्टिंग महिना | Interest Posting Month | Dropdown | Yes | Placeholder: `निवडा`. values(January,Feb....December) |
 | — | + टाका | + Add | Button | — | — |
 
-**TODO:** Confirm grid columns and Remove button — not fully visible in `बचत_नवीन_योजना_1.png`. Pattern matches [daily-new-scheme-screen.md](daily-new-scheme-screen.md) Tab 3 and [fixed-deposit-new-scheme-screen.md](fixed-deposit-new-scheme-screen.md) Tab 4.
 
 ---
 

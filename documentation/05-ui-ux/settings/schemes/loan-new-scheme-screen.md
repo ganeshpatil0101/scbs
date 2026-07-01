@@ -4,10 +4,6 @@
 
 UI specification for creating a new **Loan (कर्ज)** scheme. Extracted from video walkthrough. Intended for AI agents implementing this screen.
 
-## Scope
-
-Single wizard screen with **6 tabs**. Video covers all tabs; some dropdowns were not opened in the recording (marked `TODO`).
-
 ## Screen Identification
 
 | Property | Marathi | English |
@@ -57,7 +53,7 @@ Single wizard screen with **6 tabs**. Video covers all tabs; some dropdowns were
 | 1 | कर्ज प्रकार | Loan Type | Dropdown | Yes | See table below |
 | 2 | ज.ले. हेड क्र. | G.L. Head No. | Textbox | Yes | Shown: `163` |
 | 3 | योजना नाव | Scheme Name | Textbox | Yes | — |
-| 4 | स्थिती | Status | Dropdown | Yes | Shown: `चालू` (Active). **TODO:** Capture other status values (e.g. inactive/closed) |
+| 4 | स्थिती | Status | Dropdown | Yes | Shown: `चालू` (Active).`बंद` (Inactive), `स्थगित` (Stop)   Capture other status values (e.g. inactive/closed) |
 | 5 | फक्त सदस्यांना परवानगी द्या | Allow Only Members | Checkbox | No | — |
 | 6 | पोस्टिंग | Posting | Radio Button | No | Installment Type group; default selected |
 | 7 | इ.एम.आय. | EMI | Radio Button | No | Installment Type |
@@ -76,12 +72,12 @@ Single wizard screen with **6 tabs**. Video covers all tabs; some dropdowns were
 | 20 | त्याच योजनेत (कर्ज नूतनीकरण)% | Same Scheme (Loan Renewal) % | Textbox | No | Section: मागील कर्जाची शिल्लक ज्यापेक्षा कमी हवी |
 | 21 | कोणत्याही योजनेमध्ये (नवीन कर्ज) % | Any Scheme (New Loan) % | Textbox | No | — |
 | 22 | ठेव खाते अनिवार्य असावे | Deposit Account Mandatory | Checkbox | No | Enables deposit GL fields when checked |
-| 23 | ठेव ज.ले. हेड निवडा | Select Deposit G.L. Head | Dropdown | No | Disabled until deposit mandatory checked. **TODO:** Capture GL head list |
+| 23 | ठेव ज.ले. हेड निवडा | Select Deposit G.L. Head | Dropdown | No | Disabled until deposit mandatory checked. GL head list Dynamically|
 | 24 | किमान ठेव खाते कालावधी (महिने) | Minimum Deposit Account Duration (Months) | Textbox | No | Disabled until deposit mandatory checked |
 | 25 | पोस्टिंग हप्ते प्रकारासाठी, कर्ज अखेर दिनांक नंतर जमा व्यवहारावर व्याज पोस्टिंग | Post Interest on Credit After Loan End (Posting Installment Type) | Checkbox | No | — |
 | 26 | पोस्टिंग सह | With Posting | Radio Button | No | Account closing interest; default |
 | 27 | पोस्टिंग शिवाय | Without Posting | Radio Button | No | Account closing interest |
-| 28 | मासिक बिलिंग सायकल दिवस निवडा (क्रेडिट कार्ड) | Monthly Billing Cycle Day (Credit Card) | Dropdown | Yes | Disabled unless Credit Card loan type. **TODO:** Capture day values (likely 1–31) |
+| 28 | मासिक बिलिंग सायकल दिवस निवडा (क्रेडिट कार्ड) | Monthly Billing Cycle Day (Credit Card) | Dropdown | Yes | Disabled unless Credit Card loan type. values (1,2,.....31) Capture day values (likely 1–31) |
 | 29 | कर्ज अर्ज प्रणाली लागू | Loan Application System Applicable | Checkbox | No | — |
 
 ### Loan Type Dropdown Values
@@ -138,7 +134,7 @@ Single wizard screen with **6 tabs**. Video covers all tabs; some dropdowns were
 | 5 | अंतिम तारखेनुसार दंड व्याज दर | Penalty Rate as per End Date | Checkbox | No | Enables field below when checked |
 | 6 | अंतिम तारखेपूर्वी दंडात्मक व्याज दर (% द.सा.द.शे.) | Penal Rate Before End Date (% p.a.) | Textbox | No | Disabled until checkbox checked |
 | 7 | दंड व्याज दर (% द.सा.द.शे.) | Penalty Interest Rate (% p.a.) | Textbox | No | Hint: enter annualized rate (e.g. 24 for 2% monthly) |
-| 8 | Category | Category | Dropdown | No | **TODO:** Capture dropdown values (benefit/category list not opened in video) |
+| 8 | Category | Category | Dropdown | No | Field Not required for now |
 | — | + टाका | + Add | Button | — | — |
 
 ### Grid Columns
@@ -306,7 +302,7 @@ Single wizard screen with **6 tabs**. Video covers all tabs; some dropdowns were
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | ठेव ज.ले. हेड | Deposit G.L. Head | Dropdown | No | **TODO:** Capture GL head list (not opened in video) |
+| 1 | ठेव ज.ले. हेड | Deposit G.L. Head | Dropdown | No | Capture GL head list should fetch dynamically, for examples `Pigmy`, `FD`, `Saving`, `Loan`, etc |
 | 2 | कर्ज मर्यादा (%) | Loan Limit (%) | Textbox | No | Percentage |
 | 3 | ठेव रक्कमेवर | On Deposit Amount | Radio Button | No | Loan against group: ज्यावर कर्ज |
 | 4 | शिल्लकेवर (सरेंडर मूल्य) | On Balance (Surrender Value) | Radio Button | No | — |
@@ -349,7 +345,6 @@ Single wizard screen with **6 tabs**. Video covers all tabs; some dropdowns were
 | ब वर्ग सभासद फी | Class B Member Fee |
 | स्टेशनरी फी | Stationery Fee |
 
-**TODO:** Capture Fee (`शुल्क`) dropdown values when शुल्क radio is selected — not shown in video.
 
 ### Grid Columns
 
