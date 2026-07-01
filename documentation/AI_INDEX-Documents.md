@@ -170,6 +170,18 @@ module-name/
 
 ---
 
+# UI Field Type Standards
+
+Screen specs under `05-ui-ux/` use a standard **Autocomplete** field type for Branch, GL Head, and Account Holder lookup.
+
+| Spec Type | Use for | Reference |
+| :--- | :--- | :--- |
+| `Autocomplete` | Single control: user types ID or name, presses Enter, field shows `id — name` | [05-ui-ux/shared/entity-autocomplete-pattern.md](05-ui-ux/shared/entity-autocomplete-pattern.md) |
+
+**Rule:** Do not author legacy ID + select (or ID + search + select) pairs for Branch, GL, or Account Holder in new or updated screen specs. Merge into one Autocomplete row per entity.
+
+---
+
 # Overview Document Template
 
 Each module must contain:

@@ -62,41 +62,40 @@ UI specification for opening a new loan account. Six-tab wizard.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 10 | एजंट शाखा क्र. | Agent Branch No. | Textbox | No | e.g. `1` |
-| 11 | एजंट शाखा निवडा | Select Agent Branch | Dropdown | No | e.g. कोतोली मुख्य कार्यालय |
-| 12 | एजंट कोड | Agent Code | Textbox | No | — |
-| 13 | एजंट नाव शोध | Search Agent Name | Textbox | No | — |
-| 14 | खाते क्र. | Account No. | Textbox | No | Auto-generated |
-| 15 | व्याज दर स्लॅब (कालावधी - रक्कम - व्याज दर) | Interest Rate Slab | Dropdown | Yes | Values: `TODO` |
-| 16 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | — |
-| 17 | वास्तविक कर्ज रक्कम (रु.) | Actual Loan Amount (Rs.) | Textbox | Yes | — |
-| 18 | कर्ज रक्कम (रु.) | Loan Amount (Rs.) | Textbox | Yes | — |
-| 19 | अनुदानाची कर्ज रक्कम (रु.) | Subsidy Loan Amount (Rs.) | Textbox | No | — |
-| 20 | व्याज दर (द.सा.द.शे.) | Interest Rate (% p.a.) | Textbox | Yes | — |
-| 21 | चालू दिनांक | Current Date | Date | Yes | System date |
-| 22 | पहिला हप्ता दिनांक | First Installment Date | Date | No | — |
-| 23 | एकूण हप्ते | Total Installments | Textbox | No | Read-only / calculated |
-| 24 | परतीची दिनांक | Return Date | Date | No | — |
-| 25 | हप्ता रक्कम (रु.) | Installment Amount (Rs.) | Textbox | Yes | — |
-| 26 | दंडात्मक व्याज दर (द.सा.द.शे.) | Penalty Interest Rate (% p.a.) | Textbox | Yes | — |
-| 27 | रिबेट | Rebate | Textbox | No | — |
-| 28 | विशेष सूचना | Special Instructions | Textbox | No | — |
-| 29 | बँकेचे बचत खाते क्रमांक | Bank Savings Account No. | Textbox | No | — |
-| 30 | आय.एफ.एस.सी. कोड | IFSC Code | Textbox | No | — |
-| 31 | बँकेचे नाव | Bank Name | Textbox | No | — |
-| 32 | निधी हस्तांतरण मर्यादा | Fund Transfer Limit | Textbox | No | — |
+| 10 | एजंट शाखा निवडा | Select Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 11 | एजंट कोड | Agent Code | Textbox | No | — |
+| 12 | एजंट नाव शोध | Search Agent Name | Textbox | No | — |
+| 13 | खाते क्र. | Account No. | Textbox | No | Auto-generated |
+| 14 | व्याज दर स्लॅब (कालावधी - रक्कम - व्याज दर) | Interest Rate Slab | Dropdown | Yes | Values: `TODO` |
+| 15 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | — |
+| 16 | वास्तविक कर्ज रक्कम (रु.) | Actual Loan Amount (Rs.) | Textbox | Yes | — |
+| 17 | कर्ज रक्कम (रु.) | Loan Amount (Rs.) | Textbox | Yes | — |
+| 18 | अनुदानाची कर्ज रक्कम (रु.) | Subsidy Loan Amount (Rs.) | Textbox | No | — |
+| 19 | व्याज दर (द.सा.द.शे.) | Interest Rate (% p.a.) | Textbox | Yes | — |
+| 20 | चालू दिनांक | Current Date | Date | Yes | System date |
+| 21 | पहिला हप्ता दिनांक | First Installment Date | Date | No | — |
+| 22 | एकूण हप्ते | Total Installments | Textbox | No | Read-only / calculated |
+| 23 | परतीची दिनांक | Return Date | Date | No | — |
+| 24 | हप्ता रक्कम (रु.) | Installment Amount (Rs.) | Textbox | Yes | — |
+| 25 | दंडात्मक व्याज दर (द.सा.द.शे.) | Penalty Interest Rate (% p.a.) | Textbox | Yes | — |
+| 26 | रिबेट | Rebate | Textbox | No | — |
+| 27 | विशेष सूचना | Special Instructions | Textbox | No | — |
+| 28 | बँकेचे बचत खाते क्रमांक | Bank Savings Account No. | Textbox | No | — |
+| 29 | आय.एफ.एस.सी. कोड | IFSC Code | Textbox | No | — |
+| 30 | बँकेचे नाव | Bank Name | Textbox | No | — |
+| 31 | निधी हस्तांतरण मर्यादा | Fund Transfer Limit | Textbox | No | — |
 
 ### Section: विमा (Insurance)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 33 | विमा | Insurance | Checkbox | No | Enables fields below when checked |
-| 34 | पॉलिसी नंबर | Policy Number | Textbox | No | — |
-| 35 | विमा रक्कम (रु.) | Insurance Amount (Rs.) | Textbox | No | — |
-| 36 | प्रीमियम रक्कम (रु.) | Premium Amount (Rs.) | Textbox | No | — |
-| 37 | दिनांक (पासून) | Date (From) | Date | No | — |
-| 38 | दिनांक (पर्यंत) | Date (To) | Date | No | — |
-| 39 | तपशील | Details | Textbox | No | — |
+| 32 | विमा | Insurance | Checkbox | No | Enables fields below when checked |
+| 33 | पॉलिसी नंबर | Policy Number | Textbox | No | — |
+| 34 | विमा रक्कम (रु.) | Insurance Amount (Rs.) | Textbox | No | — |
+| 35 | प्रीमियम रक्कम (रु.) | Premium Amount (Rs.) | Textbox | No | — |
+| 36 | दिनांक (पासून) | Date (From) | Date | No | — |
+| 37 | दिनांक (पर्यंत) | Date (To) | Date | No | — |
+| 38 | तपशील | Details | Textbox | No | — |
 
 **Action:** `पुढे` (Next).
 
@@ -255,12 +254,10 @@ Same columns and actions as above section.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | जी.एल. क्र. | G.L. No. | Textbox | No | — |
-| 2 | जी.एल. निवडा | Select G.L. | Dropdown | No | Values: `TODO` |
-| 3 | खाते क्र. | Account No. | Textbox | No | — |
-| 4 | खाते नाव निवडा | Select Account Name | Dropdown | No | Values: `TODO` |
-| 5 | वारंवारता | Frequency | Dropdown | No | Values: `TODO` |
-| 6 | दिवस / तारीख निवडा | Select Day / Date | Dropdown | No | e.g. `31` |
+| 1 | जी.एल. निवडा | Select GL | Autocomplete | No | Sample: `42 — Loan`. Enter resolves by ID or name; shows display name |
+| 2 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 3 | वारंवारता | Frequency | Dropdown | No | Values: `TODO` |
+| 4 | दिवस / तारीख निवडा | Select Day / Date | Dropdown | No | e.g. `31` |
 
 **Note:** टीप: महिना अंतिम तारीख (month-end date applies when day exceeds month length).
 

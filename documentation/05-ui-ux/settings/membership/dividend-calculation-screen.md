@@ -26,12 +26,11 @@ UI specification for calculating member dividends. Intended for AI agents implem
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | सभासद | Member | Radio | No | Default selected |
 | 2 | नाममात्र सभासद | Nominal Member | Radio | No | — |
-| 3 | शाखा कोड | Branch Code | Textbox | No | Read-only; e.g. `1` |
-| 4 | शाखा निवडा | Select Branch | Dropdown | No | e.g. कोतोली मुख्य कार्यालय. - List of branch should populate dynamically |
-| 5 | वर्ष | Year | Dropdown | Yes | Default: `निवडा`. Values: `2026,2027,2028` |
-| 6 | नावे | Account Head (Debit) | Dropdown | Yes | Default: `मा.वर्षाचा शिल्लक नफा` (Last Year's Balance Profit). |
-| 7 | शेकडा (%) | Percentage | Textbox | No | — |
-| 8 | + प्रगत शोध | Advanced Search | Link | No | Expands filters |
+| 3 | शाखा निवडा | Select Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 4 | वर्ष | Year | Dropdown | Yes | Default: `निवडा`. Values: `2026,2027,2028` |
+| 5 | नावे | Account Head (Debit) | Dropdown | Yes | Default: `मा.वर्षाचा शिल्लक नफा` (Last Year's Balance Profit). |
+| 6 | शेकडा (%) | Percentage | Textbox | No | — |
+| 7 | + प्रगत शोध | Advanced Search | Link | No | Expands filters |
 
 **Action:** `लाभांश गणना` (Calculate Dividend) — blue button.
 

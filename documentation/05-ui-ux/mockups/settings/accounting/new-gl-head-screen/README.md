@@ -22,11 +22,12 @@ Open [`index.html`](index.html) in any web browser. Requires internet for Tailwi
 
 ## Review checklist
 
-- [ ] All 18 spec fields present with correct grouping
+- [ ] All 17 spec fields present with correct grouping
+- [ ] Branch field uses single Autocomplete with sample values (`1 — Branch 1`, etc.)
 - [ ] Required fields marked with `*`
 - [ ] Account Group dropdown values match spec capture list
 - [ ] Primary Group subsections: शिल्लक प्रकार, खाते श्रेणी, संघटना/शाखा
-- [ ] TODO badges on unresolved dropdowns (खाते प्रकार, स्थिती, शाखा निवडा)
+- [ ] TODO badges on unresolved dropdowns (खाते प्रकार, स्थिती)
 - [ ] Marathi labels clear for accounting staff
 - [ ] Responsive layout approved on mobile and desktop
 

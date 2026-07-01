@@ -39,7 +39,7 @@ These are fixed for this project (confirmed with the user). Do not re-litigate t
 1. **Read `AI_INDEX.md`**, then the target screen's spec file, its `overview.md`, and its `changelog.md`.
 2. **Check for an approved HTML mockup** (see Approved Mockup → Angular Bridge below). Path: `documentation/05-ui-ux/mockups/<module>/<screen-name>/index.html` with `README.md` Status = **Approved**. If present, use its DOM structure as the template skeleton. If mockup exists but Status is Draft, warn the user and proceed from spec only unless they confirm.
 3. **Check `09-ai-context/`** (coding-standards.md, naming-conventions.md, folder-structure.md). If these don't exist yet for this project, fall back to the conventions in this skill and flag to the user that `09-ai-context/` should eventually be authored via the `generate-document` skill — don't silently invent a second standard.
-4. **Search for reusable components/services first**: shared data grid, customer/account-holder search-and-select, nominee grid, address block, KYC document grid, permission directive, master-data dropdown service. If found, use them. If not found and the spec implies a pattern that repeats elsewhere (e.g., grid columns "निवडा/अ.क्र./..." pattern, or a "खातेधारक शोधा + निवडा" search-select pattern), build it once as a shared component — see Reusable Component Catalog.
+4. **Search for reusable components/services first**: shared data grid, entity autocomplete (branch/GL/account), nominee grid, address block, KYC document grid, permission directive, master-data dropdown service. If found, use them. If not found and the spec implies a pattern that repeats elsewhere (e.g., grid columns "निवडा/अ.क्र./..." pattern, or Branch/GL/Account `Autocomplete` fields), build it once as a shared component — see Reusable Component Catalog.
 5. **Map the spec to an Angular artifact tree** (see Component Breakdown Patterns) before writing code.
 6. **Generate the NgRx slice** for the screen if it's a multi-tab wizard (see State Pattern).
 7. **Generate Reactive Forms**, one `FormGroup` per tab, with validators derived from the spec's `Required` column (see Form & Validation Mapping).
@@ -105,6 +105,7 @@ state/<screen-name>/
 | `Type: Textbox` + numeric label (e.g., "रक्कम", "दर", "%") | `Validators.pattern` for numeric, plus `min(0)` unless spec says otherwise |
 | `Type: Dropdown` with listed values | Typed enum/const array; bind via shared master-data select component |
 | `Type: Dropdown` with `TODO` values | Scaffold per TODO pattern below — field still renders, options come from a placeholder service |
+| `Type: Autocomplete` | `app-entity-autocomplete` with `entityType` (`branch` \| `gl` \| `account`); debounced filter; Enter resolves; Material `mat-autocomplete`; see [entity-autocomplete-pattern.md](../../documentation/05-ui-ux/shared/entity-autocomplete-pattern.md) |
 | `Type: Checkbox` enabling other fields ("Disabled until X checked") | `valueChanges` subscription that calls `enable()`/`disable()` on the dependent controls — implement as a small reusable `FormGroup` helper, not duplicated per screen |
 | `Read-only` | Render as disabled control or plain text, never an editable field styled as disabled |
 
@@ -140,7 +141,7 @@ Build these once under `shared/components/`, reuse everywhere — many screens r
 | Component | Used by (examples) | Notes |
 |---|---|---|
 | `app-data-grid` | Customer List, all Account Register screens, all schemes' rate grids | Server-side pagination/sort/filter, matches the backend contract noted in the architecture doc |
-| `app-account-holder-search` | Every transaction screen's "खातेधारक शोधा/निवडा" pair | Debounced search + select |
+| `app-entity-autocomplete` | Branch, GL, Account Holder lookup on transaction and accounting screens | Parameterized by `entityType`: `branch` \| `gl` \| `account`; replaces legacy ID + search + select triples |
 | `app-nominee-form` + `app-nominee-grid` | FD, Daily, Recurring, Savings new-account Nominee tabs | Identical field set across all four products |
 | `app-ledger-tab` | Savings/FD/Daily/Recurring Transaction screens' Ledger tab | Identical columns across all four |
 | `app-kyc-info-tab` | Recurring Credit Transaction, Savings/FD Transaction KYC tabs | — |
@@ -195,6 +196,7 @@ These are project-level gaps, not per-screen problems — raise them once, don't
 
 - [generate-ui-mockup.mdc](generate-ui-mockup.mdc) — Phase 1: spec → HTML/CSS mockup for bank review
 - [generate-document.mdc](generate-document.mdc)
+- [documentation/05-ui-ux/shared/entity-autocomplete-pattern.md](../../documentation/05-ui-ux/shared/entity-autocomplete-pattern.md) — Autocomplete field standard
 - [documentation/AI_INDEX.md](../../documentation/AI_INDEX.md)
 
 ## Notes for Cursor

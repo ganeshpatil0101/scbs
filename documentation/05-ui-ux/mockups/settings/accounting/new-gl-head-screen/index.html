@@ -179,17 +179,16 @@
               </select>
             </div>
             <div data-spec-field="17">
-              <label class="mockup-label" for="field-branch">शाखा</label>
-              <input type="text" id="field-branch">
-            </div>
-            <div data-spec-field="18">
               <label class="mockup-label" for="field-select-branch">
                 शाखा निवडा
               </label>
-              <select id="field-select-branch">
-                <option value="" selected>शाखा निवडा</option>
-                <option value="branch-1">शाखा 1</option>
-              </select>
+              <input type="text" id="field-select-branch" class="mockup-autocomplete" list="branch-options" placeholder="ID किंवा नाव टाइप करा, Enter दाबा">
+              <datalist id="branch-options">
+                <option value="1 — Branch 1"></option>
+                <option value="2 — Branch 2"></option>
+                <option value="3 — Branch 3"></option>
+              </datalist>
+              <!-- <p class="mockup-autocomplete-hint">ID किंवा नाव टाइप करा; Enter दाबल्यावर नाव दिसेल</p> -->
             </div>
           </div>
         </div>

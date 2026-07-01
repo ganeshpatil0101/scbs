@@ -19,6 +19,7 @@ You are generating modular, AI-consumable documentation for a Core Banking Softw
 - **Markdown only**, unless explicitly asked for PDF/DOCX/HTML.
 - **No invention.** Never invent business rules, APIs, entities, or glossary terms. If something is missing, insert a `TODO:` marker and ask the user, rather than guessing.
 - **No code in this step.** Do not generate implementation code while producing documentation — requirements/use-cases must exist first.
+- **Entity lookup fields.** Branch, GL Head, and Account Holder lookups use a single `Autocomplete` field per entity — see [documentation/05-ui-ux/shared/entity-autocomplete-pattern.md](../../documentation/05-ui-ux/shared/entity-autocomplete-pattern.md). Never document legacy ID + select (or search + select) pairs.
 
 ## Workflow — Follow In Order
 

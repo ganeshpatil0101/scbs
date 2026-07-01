@@ -12,6 +12,9 @@ Top-level index of all project documentation. Add a link here whenever a new mod
 ## 01 — Architecture
 - [01-architecture/architecture-overview.md](01-architecture/architecture-overview.md) — Infra architecture, multi-tenancy decision, request flow, cost efficiency
 
+## 05 — UI/UX — Shared Patterns
+- [05-ui-ux/shared/entity-autocomplete-pattern.md](05-ui-ux/shared/entity-autocomplete-pattern.md) — Branch / GL / Account Holder Autocomplete standard
+
 ## 05 — UI/UX — Mockups (HTML prototypes for bank review)
 
 Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mockup`. Tailwind CSS v4 (CDN), Marathi labels, centered responsive layout. Shareable in any browser; after approval, use `@generate-ui-screen` for Angular + full i18n.

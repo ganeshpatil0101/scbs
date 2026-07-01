@@ -56,11 +56,10 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 10 | एजंट शाखा क्र. | Agent Branch No. | Textbox | No | e.g. `1` |
-| 11 | एजंट शाखा निवडा | Select Agent Branch | Dropdown | No | e.g. कोतोली मुख्य कार्यालय |
-| 12 | एजंट क्रमांक | Agent Number | Textbox | No | — |
-| 13 | एजंट नाव शोध | Search Agent Name | Textbox | No | — |
-| 14 | खाते क्र. | Account No. | Textbox | No | Read-only |
+| 10 | एजंट शाखा निवडा | Select Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 11 | एजंट क्रमांक | Agent Number | Textbox | No | — |
+| 12 | एजंट नाव शोध | Search Agent Name | Textbox | No | — |
+| 13 | खाते क्र. | Account No. | Textbox | No | Read-only |
 
 **Actions:** `ठेवी दाखवा` (Show Deposits), `इतर ठेवी दाखवा` (Show Other Deposits).
 
@@ -74,8 +73,8 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 15 | सरेंडर मूल्य तरतुदी सहित | Surrender Value with Provision | Checkbox | No | — |
-| 16 | सरेंडर मूल्य वर्तमान व्याजासहित | Surrender Value with Current Interest | Checkbox | No | — |
+| 14 | सरेंडर मूल्य तरतुदी सहित | Surrender Value with Provision | Checkbox | No | — |
+| 15 | सरेंडर मूल्य वर्तमान व्याजासहित | Surrender Value with Current Interest | Checkbox | No | — |
 
 **Action:** `सरेंडर रक्कम गणना करा` (Calculate Surrender Amount).
 
@@ -83,10 +82,10 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 
 | # | Marathi Label | English Label |
 | :---: | :--- | :--- |
-| 17 | जुन्या कर्जावरील शिल्लक | Balance on Old Loan |
-| 18 | निवडलेल्या ठेवींची एकूण बाकी | Total Balance of Selected Deposits |
-| 19 | निवडलेल्या ठेवींची एकूण ठेव रक्कम | Total Deposit Amount of Selected |
-| 20 | सरासरी ठेव व्याज दर (% पीए) | Average Deposit Interest Rate (% p.a.) |
+| 16 | जुन्या कर्जावरील शिल्लक | Balance on Old Loan |
+| 17 | निवडलेल्या ठेवींची एकूण बाकी | Total Balance of Selected Deposits |
+| 18 | निवडलेल्या ठेवींची एकूण ठेव रक्कम | Total Deposit Amount of Selected |
+| 19 | सरासरी ठेव व्याज दर (% पीए) | Average Deposit Interest Rate (% p.a.) |
 
 ---
 
@@ -141,12 +140,10 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | जि.एल.क्र. | G.L. No. | Textbox | No | — |
-| 2 | जि.एल निवडा | Select G.L. | Dropdown | No | Values: `TODO` |
-| 3 | खाते क्र. | Account No. | Textbox | No | — |
-| 4 | खाते नाव निवडा | Select Account Name | Dropdown | No | Values: `TODO` |
-| 5 | वारंवारता | Frequency | Dropdown | No | Values: `TODO` |
-| 6 | दिवस / तारीख निवडा | Select Day / Date | Dropdown | No | e.g. `31` |
+| 1 | जी.एल. निवडा | Select GL | Autocomplete | No | Sample: `42 — Loan`. Enter resolves by ID or name; shows display name |
+| 2 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 3 | वारंवारता | Frequency | Dropdown | No | Values: `TODO` |
+| 4 | दिवस / तारीख निवडा | Select Day / Date | Dropdown | No | e.g. `31` |
 
 **Note:** टीप: महिना अंतिम तारीख.
 

@@ -46,57 +46,47 @@ UI specification for registering a new daily-collection agent. Two-tab wizard.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 7 | शाखा कोड | Branch Code | Textbox | Yes | e.g. `1` |
-| 8 | शाखा निवडा | Select Branch | Dropdown | Yes | e.g. कोतोली मुख्य कार्यालय |
-| 9 | जी एल क्रमांक | GL Number | Textbox | No | — |
-| 10 | खाते निवडा | Select Account | Dropdown | Yes | Values: `TODO` |
-| 11 | खाते क्रमांक | Account Number | Textbox | Yes | — |
-| 12 | खातेधारक निवडा | Select Account Holder | Dropdown | Yes | Values: `TODO` |
+| 7 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 8 | जी.एल. निवडा | Select GL | Autocomplete | No | Sample: `38 — Saving`. Enter resolves by ID or name; shows display name |
+| 9 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
 
 ### सुरक्षा ठेव (Security Deposit)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 13 | सुरक्षा ठेव | Security Deposit | Checkbox | No | Enables fields 14–21 |
-| 14 | शाखा कोड | Branch Code | Textbox | Yes* | e.g. `1` |
-| 15 | शाखा निवडा | Select Branch | Dropdown | Yes* | — |
-| 16 | जी एल क्रमांक | GL Number | Textbox | No | — |
-| 17 | खाते निवडा | Select Account | Dropdown | No | Values: `TODO` |
-| 18 | खाते क्रमांक | Account Number | Textbox | No | — |
-| 19 | खातेधारक निवडा | Select Account Holder | Dropdown | No | Values: `TODO` |
-| 20 | मर्यादा | Limit | Textbox | No | — |
-| 21 | कपात (%) | Deduction (%) | Textbox | No | — |
+| 10 | सुरक्षा ठेव | Security Deposit | Checkbox | No | Enables fields 11–16 |
+| 11 | शाखा निवडा | Select Branch | Autocomplete | Yes* | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 12 | जी.एल. निवडा | Select GL | Autocomplete | No | Sample: `38 — Saving`. Enter resolves by ID or name; shows display name |
+| 13 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 14 | मर्यादा | Limit | Textbox | No | — |
+| 15 | कपात (%) | Deduction (%) | Textbox | No | — |
 
 ### मशीन कपात (Machine Deduction)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 22 | मशीन कपात | Machine Deduction | Checkbox | No | Enables fields below |
-| 23 | जी एल क्रमांक | GL Number | Textbox | No | — |
-| 24 | खाते निवडा | Select Account | Dropdown | No | Values: `TODO` |
-| 25 | खाते क्रमांक | Account Number | Textbox | No | — |
-| 26 | खातेधारक निवडा | Select Account Holder | Dropdown | No | Values: `TODO` |
-| 27 | मर्यादा | Limit | Textbox | No | — |
-| 28 | कपात | Deduction | Textbox | No | — |
-| 29 | रु. / टक्के | Rs. / Percentage | Radio | No | — |
+| 16 | मशीन कपात | Machine Deduction | Checkbox | No | Enables fields below |
+| 17 | जी.एल. निवडा | Select GL | Autocomplete | No | Sample: `38 — Saving`. Enter resolves by ID or name; shows display name |
+| 18 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 19 | मर्यादा | Limit | Textbox | No | — |
+| 20 | कपात | Deduction | Textbox | No | — |
+| 21 | रु. / टक्के | Rs. / Percentage | Radio | No | — |
 
 ### टीडीएस (TDS)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 30 | होय / नाही | Yes / No | Radio | No | TDS applicable |
-| 31 | कारण निवडा | Select Reason | Dropdown | No | e.g. `सभासद`. Other values: `TODO` |
+| 22 | होय / नाही | Yes / No | Radio | No | TDS applicable |
+| 23 | कारण निवडा | Select Reason | Dropdown | No | e.g. `सभासद`. Other values: `TODO` |
 
 ### भविष्य निर्वाह निधी (Provident Fund)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 32 | भविष्य निर्वाह निधी | Provident Fund | Checkbox | No | Enables PF fields |
-| 33 | जी एल क्रमांक | GL Number | Textbox | No | — |
-| 34 | खाते निवडा | Select Account | Dropdown | No | Values: `TODO` |
-| 35 | खाते क्रमांक | Account Number | Textbox | No | — |
-| 36 | खातेधारक निवडा | Select Account Holder | Dropdown | No | Values: `TODO` |
-| 37 | कपात (%) | Deduction (%) | Textbox | No | — |
+| 24 | भविष्य निर्वाह निधी | Provident Fund | Checkbox | No | Enables PF fields |
+| 25 | जी.एल. निवडा | Select GL | Autocomplete | No | Sample: `38 — Saving`. Enter resolves by ID or name; shows display name |
+| 26 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 27 | कपात (%) | Deduction (%) | Textbox | No | — |
 
 **Action:** `पुढे` (Next).
 

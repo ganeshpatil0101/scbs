@@ -168,19 +168,16 @@
             </select>
           </div>
           <div data-spec-field="20">
-            <label class="mockup-label" for="field-branch">
-              शाखा <span class="mockup-required">*</span>
-            </label>
-            <input type="text" id="field-branch" value="1">
-          </div>
-          <div data-spec-field="21">
             <label class="mockup-label" for="field-select-branch">
               शाखा निवडा <span class="mockup-required">*</span>
             </label>
-            <select id="field-select-branch">
-              <option value="">निवडा</option>
-              <option value="kotoli" selected>कोतोली मुख्य कार्यालय</option>
-            </select>
+            <input type="text" id="field-select-branch" class="mockup-autocomplete" list="branch-options" value="1 — Branch 1" placeholder="ID किंवा नाव टाइप करा, Enter दाबा">
+            <datalist id="branch-options">
+              <option value="1 — Branch 1"></option>
+              <option value="2 — Branch 2"></option>
+              <option value="3 — Branch 3"></option>
+            </datalist>
+            <!-- <p class="mockup-autocomplete-hint">ID किंवा नाव टाइप करा; Enter दाबल्यावर नाव दिसेल</p> -->
           </div>
           <button type="button" class="mockup-btn mockup-btn-add w-full sm:w-auto">+ टाका</button>
         </div>
@@ -201,7 +198,7 @@
                 <td><input type="checkbox" aria-label="पंक्ती 1 निवडा"></td>
                 <td>1</td>
                 <td>सोसायटी नाव</td>
-                <td>कोतोली मुख्य कार्यालय</td>
+                <td>Branch 1</td>
                 <td>
                   <button type="button" class="btn-link">काढा</button>
                 </td>

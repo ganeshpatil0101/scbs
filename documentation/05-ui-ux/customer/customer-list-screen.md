@@ -25,7 +25,7 @@ UI specification for searching and listing customers. Intended for AI agents imp
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | संस्थेचे नाव | Organization Name | Dropdown | Yes | e.g. श्रद्धा नागरी सहकारी पतसंस्था मर्यादित- कोतोली |
-| 2 | शाखा कोड | Branch Code | Textbox | No | e.g. `1` |
+| 2 | शाखा निवडा | Select Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
 | 3 | शाखा | Branch | Dropdown | No | e.g. कोतोली मुख्य कार्यालय |
 | 4 | ग्राहकाचे नाव | Customer Name | Textbox | No | — |
 | 5 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | — |

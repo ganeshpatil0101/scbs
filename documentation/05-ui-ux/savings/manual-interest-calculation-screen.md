@@ -24,15 +24,14 @@ UI specification for manually calculating and posting savings interest.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | शाखा कोड | Branch Code | Dropdown | No | e.g. `1` |
-| 2 | शाखेचे नाव | Branch Name | Dropdown | No | e.g. कोतोली मुख्य कार्यालय |
-| 3 | खाते क्र. | Account No. | Textbox | No | e.g. `55` |
-| 4 | खाते | Account | Dropdown | No | e.g. `सेव्हिंग ठेव` (Saving Deposit) |
-| 5 | पोस्टिंग दिनांक निवडा | Select Posting Date | Dropdown | No | e.g. `31.03.2026` |
-| 6 | पोस्टिंग दिनांक | Posting Date | Date | No | e.g. `31.03.2026` |
-| 7 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | — |
-| 8 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | — |
-| 9 | ॲडव्हान्स शोध | Advanced Search | Link | No | — |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 2 | खाते क्र. | Account No. | Textbox | No | e.g. `55` |
+| 3 | खाते | Account | Dropdown | No | e.g. `सेव्हिंग ठेव` (Saving Deposit) |
+| 4 | पोस्टिंग दिनांक निवडा | Select Posting Date | Dropdown | No | e.g. `31.03.2026` |
+| 5 | पोस्टिंग दिनांक | Posting Date | Date | No | e.g. `31.03.2026` |
+| 6 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | — |
+| 7 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | — |
+| 8 | ॲडव्हान्स शोध | Advanced Search | Link | No | — |
 
 **Action:** `व्याज गणना करा` (Calculate Interest) — blue button.
 

@@ -24,7 +24,7 @@ UI specification for viewing fixed deposit account renewal history.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | शाखा कोड | Branch Code | Textbox | No | e.g. `1` |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
 | 2 | शाखेचे नाव | Branch Name | Dropdown | No | e.g. कोतोली मुख्य कार्यालय |
 | 3 | योजना | Scheme | Dropdown | No | e.g. `सर्व` |
 | 4 | खातेधारक | Account Holder | Textbox | No | — |

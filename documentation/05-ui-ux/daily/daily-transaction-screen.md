@@ -47,34 +47,30 @@ UI specification for daily (pigmy) account transactions. Six-tab workflow.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 4 | शाखा कोड | Branch Code | Textbox | Yes | e.g. `1` |
-| 5 | शाखा निवडा | Select Branch | Dropdown | Yes | e.g. कोतोली मुख्य कार्यालय |
-| 6 | जी.एल. हेड | GL Head | Textbox | Yes | e.g. `38` |
-| 7 | जी.एल. निवडा | Select GL | Dropdown | Yes | e.g. `पिग्मी ठेव` |
-| 8 | खाते क्रमांक | Account Number | Textbox | Yes | — |
-| 9 | खातेधारक शोधा | Search Account Holder | Textbox | Yes | — |
-| 10 | खातेधारक निवडा | Select Account Holder | Dropdown | Yes | Values: `TODO` |
-| 11 | खातेवही शिल्लक | Ledger Balance | Textbox | No | Read-only |
-| 12 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
-| 13 | व्यवहार रक्कम (रु.) | Transaction Amount (Rs.) | Textbox | Yes | — |
-| 14 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
-| 15 | व्यवहारानंतरची शिल्लक | Balance After Transaction | Textbox | No | Read-only |
-| 16 | परतीची दिनांक | Return Date | Textbox | No | Read-only |
-| 17 | व्यवहार तपशील | Transaction Details | Textbox | No | — |
-| 18 | विशेष सूचना | Special Instructions | Textbox | No | Read-only |
-| 19 | पॅनकार्ड - आधार क्र. | PAN - Aadhaar No. | Textbox | No | Read-only |
-| 20 | स्पॉट कमिशन | Spot Commission | Textbox | No | Read-only |
-| 21 | तरतूद | Provision | Textbox | No | Read-only |
-| 22 | व्याज | Interest | Textbox | No | Read-only |
-| 23 | एकूण | Total | Textbox | No | Read-only |
-| 24 | कमिशन कपात | Commission Deduction | Textbox | No | — |
-| 25 | टीडीएस (रु.) | TDS (Rs.) | Textbox | No | Read-only |
-| 26 | एकूण टीडीएस देणे (रु.) | Total TDS Payable | Textbox | No | Read-only |
-| 27 | शेवटची नावे दिनांक | Last Debit Date | Textbox | No | Read-only |
-| 28 | एकूण दिवस | Total Days | Textbox | No | Read-only |
-| 29 | खुली रक्कम | Open Amount | Textbox | No | Read-only |
-| 30 | स्पॉट कमिशन रेट | Spot Commission Rate | Textbox | No | Read-only |
-| 31 | सदस्य क्र. | Member No. | Textbox | No | Read-only |
+| 4 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 5 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `38 — Pigmy`. Enter resolves by ID or name; shows display name |
+| 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 7 | खातेवही शिल्लक | Ledger Balance | Textbox | No | Read-only |
+| 8 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
+| 9 | व्यवहार रक्कम (रु.) | Transaction Amount (Rs.) | Textbox | Yes | — |
+| 10 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
+| 11 | व्यवहारानंतरची शिल्लक | Balance After Transaction | Textbox | No | Read-only |
+| 12 | परतीची दिनांक | Return Date | Textbox | No | Read-only |
+| 13 | व्यवहार तपशील | Transaction Details | Textbox | No | — |
+| 14 | विशेष सूचना | Special Instructions | Textbox | No | Read-only |
+| 15 | पॅनकार्ड - आधार क्र. | PAN - Aadhaar No. | Textbox | No | Read-only |
+| 16 | स्पॉट कमिशन | Spot Commission | Textbox | No | Read-only |
+| 17 | तरतूद | Provision | Textbox | No | Read-only |
+| 18 | व्याज | Interest | Textbox | No | Read-only |
+| 19 | एकूण | Total | Textbox | No | Read-only |
+| 20 | कमिशन कपात | Commission Deduction | Textbox | No | — |
+| 21 | टीडीएस (रु.) | TDS (Rs.) | Textbox | No | Read-only |
+| 22 | एकूण टीडीएस देणे (रु.) | Total TDS Payable | Textbox | No | Read-only |
+| 23 | शेवटची नावे दिनांक | Last Debit Date | Textbox | No | Read-only |
+| 24 | एकूण दिवस | Total Days | Textbox | No | Read-only |
+| 25 | खुली रक्कम | Open Amount | Textbox | No | Read-only |
+| 26 | स्पॉट कमिशन रेट | Spot Commission Rate | Textbox | No | Read-only |
+| 27 | सदस्य क्र. | Member No. | Textbox | No | Read-only |
 
 **Links:** `कर्ज खाते माहिती`, `केवायसी माहिती`.
 

@@ -24,14 +24,12 @@ UI specification for manually assessing and posting recurring deposit interest.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | शाखा कोड | Branch Code | Textbox | Yes | e.g. `1` |
-| 2 | शाखा निवडा | Select Branch | Dropdown | Yes | e.g. कोतोली मुख्य कार्यालय |
-| 3 | जी. एल. हेड | G.L. Head | Textbox | Yes | — |
-| 4 | जी. एल. हेड निवडा | Select G.L. Head | Dropdown | Yes | Values: `TODO` |
-| 5 | व्याज दिनांक निवडा | Select Interest Date | Dropdown | Yes | Values: `TODO` |
-| 6 | ब्याज पोस्टींग दिनांक | Interest Posting Date | Date | Yes | — |
-| 7 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | — |
-| 8 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | — |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 2 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `91 — FD` (Recurring). Enter resolves by ID or name; shows display name |
+| 3 | व्याज दिनांक निवडा | Select Interest Date | Dropdown | Yes | Values: `TODO` |
+| 4 | ब्याज पोस्टींग दिनांक | Interest Posting Date | Date | Yes | — |
+| 5 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | — |
+| 6 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | — |
 
 **Link:** `प्रगत शोध` (Advanced Search).
 

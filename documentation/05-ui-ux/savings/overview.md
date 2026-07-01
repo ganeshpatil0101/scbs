@@ -4,6 +4,8 @@
 
 Index of operational UI screens under **बचत (Savings)**.
 
+Branch, GL, and Account Holder lookups use a single **Autocomplete** field — see [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
+
 ## Screens
 
 | Screen (Marathi) | Screen (English) | Document |
@@ -21,5 +23,6 @@ screenshots/bachat/
 ## Related Documents
 
 - [changelog.md](changelog.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)
 - [../settings/schemes/savings-new-scheme-screen.md](../settings/schemes/savings-new-scheme-screen.md)
 - [../../AI_INDEX.md](../../AI_INDEX.md)

@@ -25,7 +25,7 @@ UI specification for opening a new "other" account for an existing customer. Cus
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | संघटना | Organization | Dropdown | Yes | Society name |
-| 2 | शाखा कोड | Branch Code | Textbox | No | Read-only; e.g. `1` |
+| 2 | शाखा निवडा | Select Branch | Autocomplete | No | Read-only context; sample: `1 — Branch 1`. Enter resolves by ID or name; shows display name |
 | 3 | शाखा | Branch | Dropdown | No | e.g. कोतोली मुख्य कार्यालय |
 | 4 | ग्राहकाचे नाव | Customer Name | Textbox | No | — |
 | 5 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | — |

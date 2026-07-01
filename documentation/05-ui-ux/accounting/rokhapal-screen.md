@@ -29,20 +29,17 @@ Extracted frames: `screenshots/lekha/rokhapal-frames/`.
 | 1 | व्यवहार प्रकार | Transaction Type | Radio | No | `नावे` (Debit) / `जमा` (Credit). Default: `जमा` |
 | 2 | व्हाउचर क्र. | Voucher No. | Textbox | No | — |
 | 3 | अपूर्ण स्क्रोल निवडा | Select Incomplete Scroll | Dropdown | No | `TODO` |
-| 4 | शाखा क्र. | Branch No. | Textbox | Yes | e.g. `1` |
-| 5 | शाखा निवडा | Select Branch | Dropdown | Yes | — |
-| 6 | जि.एल.क्र. | GL No. | Textbox | Yes | — |
-| 7 | जि.एल.निवडा | Select GL | Dropdown | No | `TODO` |
-| 8 | खाते क्र. | Account No. | Textbox | Yes | — |
-| 9 | खातेदार निवडा | Select Account Holder | Dropdown | Yes | `TODO` |
-| 10 | शिल्लक | Balance | Textbox | No | Read-only |
-| 11 | पॅनकार्ड - आधार क्र. | PAN - Aadhaar No. | Textbox | No | — |
-| 12 | रक्कम (रु.) | Amount (Rs.) | Textbox | Yes | — |
-| 13 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
-| 14 | दंडाची रक्कम (रु.) | Penalty Amount (Rs.) | Textbox | No | — |
-| 15 | विशेष सुचना | Special Instructions | Textbox | No | — |
-| 16 | रोखपाल तपशिल | Cashier Details | Textbox | No | — |
-| 17 | स्क्रोल | Scroll | Textbox | No | e.g. `20` |
+| 4 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 5 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `38 — Saving`, `91 — FD`, `42 — Loan`. Enter resolves by ID or name; shows display name |
+| 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 7 | शिल्लक | Balance | Textbox | No | Read-only |
+| 8 | पॅनकार्ड - आधार क्र. | PAN - Aadhaar No. | Textbox | No | — |
+| 9 | रक्कम (रु.) | Amount (Rs.) | Textbox | Yes | — |
+| 10 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
+| 11 | दंडाची रक्कम (रु.) | Penalty Amount (Rs.) | Textbox | No | — |
+| 12 | विशेष सुचना | Special Instructions | Textbox | No | — |
+| 13 | रोखपाल तपशिल | Cashier Details | Textbox | No | — |
+| 14 | स्क्रोल | Scroll | Textbox | No | e.g. `20` |
 
 ## Section: नोटांचा तपशिल (Denomination Details)
 
@@ -52,7 +49,7 @@ Section header visible; denomination grid fields: `TODO` (not captured in openin
 
 | # | Marathi Label | English Label | Type | Values / Notes |
 | :---: | :--- | :--- | :--- | :--- |
-| 18 | Filter | Last / Debit / All / Credit transactions | Radio | `शेवटचा व्यवहार`, `नावे व्यवहार`, `सर्व व्यवहार`, `जमा व्यवहार` |
+| 15 | Filter | Last / Debit / All / Credit transactions | Radio | `शेवटचा व्यवहार`, `नावे व्यवहार`, `सर्व व्यवहार`, `जमा व्यवहार` |
 
 **Action:** `दाखवा` (Show). **Footer:** `पूर्ण`, `पुनर्वत`.
 
@@ -62,3 +59,4 @@ Section header visible; denomination grid fields: `TODO` (not captured in openin
 
 - [overview.md](overview.md)
 - [note-exchange-screen.md](note-exchange-screen.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

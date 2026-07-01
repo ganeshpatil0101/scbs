@@ -24,13 +24,12 @@ UI specification for viewing and exporting historical agent collection records.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | शाखा कोड | Branch Code | Textbox | Yes | e.g. `1` |
-| 2 | शाखा निवडा | Select Branch | Dropdown | Yes | e.g. कोतोली मुख्य कार्यालय |
-| 3 | एजंट क्रमांक | Agent Number | Textbox | Yes | — |
-| 4 | शोध एजंट नाव | Search Agent Name | Textbox | Yes | — |
-| 5 | योजना निवडा | Select Scheme | Dropdown | No | Values: `TODO` |
-| 6 | व्यवहार दिनांक पासून | Transaction Date From | Date | No | — |
-| 7 | व्यवहार दिनांक पर्यंत | Transaction Date To | Date | No | — |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 2 | एजंट क्रमांक | Agent Number | Textbox | Yes | — |
+| 3 | शोध एजंट नाव | Search Agent Name | Textbox | Yes | — |
+| 4 | योजना निवडा | Select Scheme | Dropdown | No | Values: `TODO` |
+| 5 | व्यवहार दिनांक पासून | Transaction Date From | Date | No | — |
+| 6 | व्यवहार दिनांक पर्यंत | Transaction Date To | Date | No | — |
 
 **Action:** `दाखवा` (Show).
 

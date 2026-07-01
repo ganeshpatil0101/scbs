@@ -4,6 +4,8 @@
 
 Index of operational UI screens under **कर्ज (Loan)**.
 
+Branch and Account Holder lookups use a single **Autocomplete** field — see [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
+
 ## Screens
 
 | Screen (Marathi) | Screen (English) | Document |

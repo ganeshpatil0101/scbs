@@ -26,16 +26,12 @@ Extracted frames: `screenshots/lekha/multi-gl-frames/`.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | शाखा कोड | Branch Code | Textbox | No | Read-only |
-| 2 | शाखा निवडा | Select Branch | Dropdown | No | — |
-| 3 | जी.एल. हेड शोधा | Search GL Head | Textbox | No | — |
-| 4 | जी.एल. हेड नं. | GL Head No. | Textbox | No | — |
-| 5 | खाते धारक शोधा | Search Account Holder | Textbox | No | — |
-| 6 | खाते क्र. | Account No. | Textbox | No | — |
-| 7 | खाते धारक निवडा | Select Account Holder | Dropdown | No | `TODO` |
-| 8 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
-| 9 | लेजर शिल्लक | Ledger Balance | Label | No | — |
-| 10 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 2 | जी.एल. निवडा | Select GL | Autocomplete | No | Sample: `38 — Saving`, `91 — FD`, `42 — Loan`. Enter resolves by ID or name; shows display name |
+| 3 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 4 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
+| 5 | लेजर शिल्लक | Ledger Balance | Label | No | — |
+| 6 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
 
 **Utility buttons:** `खाते माहिती`, `खात्याचा हिशोब`, `पासबुक`, `चौकशी`.
 
@@ -43,8 +39,8 @@ Extracted frames: `screenshots/lekha/multi-gl-frames/`.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 11 | व्यवहार प्रकार | Transaction Type | Radio | No | `नावे` (Debit) / `जमा` (Credit) |
-| 12 | रक्कम रु. | Amount (Rs.) | Textbox | Yes | — |
+| 7 | व्यवहार प्रकार | Transaction Type | Radio | No | `नावे` (Debit) / `जमा` (Credit) |
+| 8 | रक्कम रु. | Amount (Rs.) | Textbox | Yes | — |
 
 **Action:** `+ भरा` (Fill/Add).
 
@@ -65,3 +61,4 @@ Columns: निवडा, अनु. क्र, जी.एल. हेड, खा
 - [overview.md](overview.md)
 - [jama-screen.md](jama-screen.md)
 - [nave-screen.md](nave-screen.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

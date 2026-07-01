@@ -58,11 +58,9 @@ Extracted frames: `screenshots/sabhsadatv/new-membership-3-frames/`.
 | 13 | वार्षिक अहवाल | Annual Report | Dropdown | No | Default: `पोस्ट` (Post). Other values: `TODO` |
 | 14 | शेअर मर्यादा | Share Limit | Textbox | Yes | e.g. `1000000` |
 | 15 | विशेष सूचना | Special Instructions | Textarea | No | — |
-| 16 | जी.एल.हेड | G.L. Head | Textbox | No | — |
-| 17 | जी.एल.हेड निवडा | Select G.L. Head | Dropdown | No | `TODO` |
-| 18 | खाते क्रमांक | Account Number | Textbox | No | — |
-| 19 | खातेधारक निवडा | Select Account Holder | Textbox/Search | No | — |
-| 20 | संचालक नातेवाईक | Director Relative | Checkbox | No | — |
+| 16 | जी.एल. निवडा | Select GL | Autocomplete | No | Sample: `38 — Saving`, `91 — FD`, `42 — Loan`. Enter resolves by ID or name; shows display name |
+| 17 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 18 | संचालक नातेवाईक | Director Relative | Checkbox | No | — |
 
 ---
 

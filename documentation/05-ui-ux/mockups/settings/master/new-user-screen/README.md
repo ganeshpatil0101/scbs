@@ -5,7 +5,7 @@
 | Spec | [new-user-screen.md](../../../../settings/master/new-user-screen.md) |
 | Status | **Draft** |
 | Created | 2025-06-30 |
-| Updated | 2025-06-30 — Tailwind CSS v4, Marathi-only, centered responsive layout |
+| Updated | 2026-07-01 — Branch field consolidated to Autocomplete with sample values |
 | Language | Marathi only (English added via `ngx-translate` in Angular phase) |
 
 ## How to open
@@ -26,6 +26,7 @@ To share with bank reviewers: zip this folder and send via email, or host on sta
 - [ ] All Tab 1 spec fields present and grouped correctly (User Type → Basic Info → Settings → Organization Rights)
 - [ ] Marathi labels clear for non-technical bank staff
 - [ ] Required fields marked with `*`
+- [ ] Branch field uses single Autocomplete control (not legacy शाखा + शाखा निवडा pair)
 - [ ] Rights grid columns match spec (निवडा, अ.क्र., संघटना, शाखा नाव) with काढा action
 - [ ] Conditional fields (intra-branch limits) shown disabled — placement approved
 - [ ] Responsive layout approved on mobile and desktop

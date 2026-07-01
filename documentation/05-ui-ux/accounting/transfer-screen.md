@@ -32,16 +32,12 @@ Extracted frames: `screenshots/lekha/transfer-frames/`.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 2 | शाखा कोड | Branch Code | Textbox | Yes | Read-only |
-| 3 | शाखा निवडा | Select Branch | Dropdown | Yes | — |
-| 4 | जी.एल.हेड.क्र. | GL Head No. | Textbox | Yes | — |
-| 5 | जी.एल.निवडा | Select GL | Textbox | No | — |
-| 6 | खाते क्र. | Account No. | Textbox | Yes | — |
-| 7 | खातेधारक शोधा | Search Account Holder | Textbox | Yes | — |
-| 8 | खातेधारक निवडा | Select Account Holder | Dropdown | Yes | `TODO` |
-| 9 | शिल्लक | Balance | Textbox | No | Read-only |
-| 10 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
-| 11 | व्यवहार रक्कम (रू.) | Transaction Amount (Rs.) | Textbox | Yes | — |
+| 2 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 3 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `38 — Saving`, `91 — FD`, `42 — Loan`. Enter resolves by ID or name; shows display name |
+| 4 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 5 | शिल्लक | Balance | Textbox | No | Read-only |
+| 6 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
+| 7 | व्यवहार रक्कम (रू.) | Transaction Amount (Rs.) | Textbox | Yes | — |
 
 **Action:** `नावे ₹` — add debit row.
 
@@ -58,3 +54,4 @@ Columns: निवडा, अनु. क्र, जी.एल., खाते क
 - [overview.md](overview.md)
 - [jama-screen.md](jama-screen.md)
 - [nave-screen.md](nave-screen.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

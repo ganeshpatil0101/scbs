@@ -61,8 +61,7 @@ Extracted frames: `screenshots/settings/new-gl-head-frames/`.
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 16 | संघटना | Organization | Dropdown | No | Society name; read-only when member account selected |
-| 17 | शाखा | Branch | Textbox | No | — |
-| 18 | शाखा निवडा | Select Branch | Dropdown | No | Default: `शाखा निवडा`. Values: `शाखा 1` |
+| 17 | शाखा निवडा | Select Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
 
 ## Actions
 

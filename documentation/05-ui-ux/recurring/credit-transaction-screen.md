@@ -38,30 +38,26 @@ UI specification for recurring deposit credit (installment) transactions. Five-t
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | चलन क्रमांक | Challan Number | Textbox | No | Read-only; e.g. `42` |
 | 2 | रोख / ट्रान्सफर | Cash / Transfer | Radio | Yes | — |
-| 3 | शाखा कोड | Branch Code | Textbox | Yes | e.g. `1` |
-| 4 | शाखा निवडा | Select Branch | Dropdown | Yes | e.g. कोतोली मुख्य कार्यालय |
-| 5 | जी.एल. हेड | GL Head | Textbox | Yes | e.g. `91` |
-| 6 | जी.एल. निवडा | Select GL | Dropdown | Yes | e.g. `रिकरिंग ठेव` |
-| 7 | खाते क्रमांक | Account Number | Textbox | Yes | — |
-| 8 | खातेधारक शोधा | Search Account Holder | Textbox | Yes | — |
-| 9 | खातेधारक निवडा | Select Account Holder | Dropdown | Yes | Values: `TODO` |
-| 10 | खातेवही शिल्लक | Ledger Balance | Textbox | No | Read-only |
-| 11 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
-| 12 | व्यवहार रक्कम (रु.) | Transaction Amount (Rs.) | Textbox | No | — |
-| 13 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
-| 14 | एकूण दंड | Total Penalty | Textbox | No | Read-only |
-| 15 | व्यवहारानंतरची शिल्लक (रु.) | Balance After Transaction | Textbox | No | Read-only |
-| 16 | सदस्य क्र. | Member No. | Textbox | No | Read-only |
-| 17 | व्यवहार तपशील | Transaction Details | Textbox | No | — |
-| 18 | पॅन | PAN | Textbox | No | Read-only |
-| 19 | विशेष सूचना | Special Instructions | Textbox | No | Read-only |
-| 20 | सवलत (रु.) | Discount (Rs.) | Textbox | No | — |
-| 21 | परतीची दिनांक | Return Date | Textbox | No | Read-only |
-| 22 | परतीची रक्कम | Return Amount | Textbox | No | Read-only |
-| 23 | स्पॉट कमिशन (रु.) | Spot Commission | Textbox | No | Read-only |
-| 24 | स्पॉट कमिशन रेट | Spot Commission Rate | Textbox | No | Read-only |
-| 25 | थकीत हप्ते | Overdue Installments | Textbox | No | Read-only |
-| 26 | देय हप्ता दिनांक | Due Installment Date | Textbox | No | Read-only |
+| 3 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 4 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `91 — FD` (Recurring). Enter resolves by ID or name; shows display name |
+| 5 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 6 | खातेवही शिल्लक | Ledger Balance | Textbox | No | Read-only |
+| 7 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
+| 8 | व्यवहार रक्कम (रु.) | Transaction Amount (Rs.) | Textbox | No | — |
+| 9 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
+| 10 | एकूण दंड | Total Penalty | Textbox | No | Read-only |
+| 11 | व्यवहारानंतरची शिल्लक (रु.) | Balance After Transaction | Textbox | No | Read-only |
+| 12 | सदस्य क्र. | Member No. | Textbox | No | Read-only |
+| 13 | व्यवहार तपशील | Transaction Details | Textbox | No | — |
+| 14 | पॅन | PAN | Textbox | No | Read-only |
+| 15 | विशेष सूचना | Special Instructions | Textbox | No | Read-only |
+| 16 | सवलत (रु.) | Discount (Rs.) | Textbox | No | — |
+| 17 | परतीची दिनांक | Return Date | Textbox | No | Read-only |
+| 18 | परतीची रक्कम | Return Amount | Textbox | No | Read-only |
+| 19 | स्पॉट कमिशन (रु.) | Spot Commission | Textbox | No | Read-only |
+| 20 | स्पॉट कमिशन रेट | Spot Commission Rate | Textbox | No | Read-only |
+| 21 | थकीत हप्ते | Overdue Installments | Textbox | No | Read-only |
+| 22 | देय हप्ता दिनांक | Due Installment Date | Textbox | No | Read-only |
 
 **Link:** `कर्ज खाते माहिती`. **KYC preview:** `फोटो / सही दाखवा`.
 

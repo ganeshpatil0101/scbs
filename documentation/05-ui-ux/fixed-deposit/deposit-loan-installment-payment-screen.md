@@ -37,13 +37,11 @@ UI specification for processing installment payments on loans against deposits.
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | रोख / ट्रान्सफर | Cash / Transfer | Radio | Yes | — |
-| 2 | जी.एल.क्र. | G.L. No. | Textbox | Yes | — |
-| 3 | जी.एल.निवडा | Select G.L. | Dropdown | Yes | Values: `TODO` |
-| 4 | खाते क्रमांक | Account Number | Textbox | No | — |
-| 5 | खातेधारक निवडा | Select Account Holder | Dropdown | No | Values: `TODO` |
-| 6 | ग्राहक क्र. | Customer No. | Textbox | No | — |
-| 7 | ग्राहक निवडा | Select Customer | Dropdown | No | Values: `TODO` |
-| 8 | दिनांक | Date | Date | Yes | System date |
+| 2 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `42 — Loan`. Enter resolves by ID or name; shows display name |
+| 3 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 4 | ग्राहक क्र. | Customer No. | Textbox | No | — |
+| 5 | ग्राहक निवडा | Select Customer | Dropdown | No | Values: `TODO` |
+| 6 | दिनांक | Date | Date | Yes | System date |
 
 **Note:** कृपया खाते क्रमांक किंवा ग्राहक क्रमांक प्रविष्ट करा.
 

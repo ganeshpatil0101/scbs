@@ -54,39 +54,37 @@ UI specification for opening a new fixed deposit account. Four-tab wizard.
 | 10 | क्लोज / ओपन एंडेड | Closed / Open Ended | Textbox | No | Read-only; e.g. `क्लोज एंडेड` |
 | 11 | व्याज प्रकार | Interest Type | Textbox | No | e.g. `साधे व्याज` |
 | 12 | कम्पाउंडिंग | Compounding | Textbox | No | — |
-| 13 | एजंट शाखा क्र. | Agent Branch No. | Textbox | No | Read-only |
-| 14 | एजंट शाखा निवडा | Select Agent Branch | Dropdown | No | — |
-| 15 | एजंट क्रमांक | Agent Number | Textbox | No | — |
-| 16 | शोध एजंट नाव | Search Agent Name | Textbox | No | — |
-| 17 | विक्री एजंट शाखा क्र. | Sales Agent Branch No. | Textbox | No | Read-only |
-| 18 | विक्री एजंट शाखा निवडा | Select Sales Agent Branch | Dropdown | No | — |
-| 19 | विक्री एजंट क्रमांक | Sales Agent Number | Textbox | No | — |
-| 20 | विक्री एजंटचे नाव शोधा | Search Sales Agent Name | Textbox | No | — |
-| 21 | खाते क्र. | Account No. | Textbox | No | Auto-generated |
-| 22 | खाते प्रकार | Account Type | Dropdown | Yes | e.g. `सामान्य खाते` (Normal Account). Other values: `TODO` |
-| 23 | व्याज दर स्लॅब | Interest Rate Slab | Dropdown | Yes | Default: `निवडा`. Values: `TODO` |
-| 24 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | — |
-| 25 | कालावधी (दिवस) | Duration (Days) | Textbox | Yes | — |
-| 26 | चालू दिनांक | Current Date | Date | Yes | — |
-| 27 | मुदत ठेव रक्कम (रु.) | FD Amount (Rs.) | Textbox | Yes | — |
-| 28 | व्याज दर | Interest Rate | Textbox | Yes | — |
-| 29 | व्याज चालू दिनांक | Interest Start Date | Date | Yes | — |
-| 30 | मुदतपूर्ती रक्कम (रु.) | Maturity Amount (Rs.) | Textbox | No | Read-only / calculated |
-| 31 | पावती प्रीफिक्स | Receipt Prefix | Textbox | Yes | — |
-| 32 | पावती क्रमांक | Receipt Number | Textbox | Yes | — |
-| 33 | परतीची दिनांक | Return Date | Date | No | Read-only |
-| 34 | पावती तारीख | Receipt Date | Date | No | Read-only |
-| 35 | स्थिती | Status | Dropdown | Yes | Default: `चालू`. Other values: `TODO` |
-| 36 | आय.एफ.एस.सी. कोड | IFSC Code | Textbox | No | — |
-| 37 | बँकेचे नाव | Bank Name | Textbox | No | Read-only from IFSC |
-| 38 | बँकेचे बचत खाते क्रमांक | Bank Savings Account No. | Textbox | No | — |
+| 13 | एजंट शाखा निवडा | Select Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 14 | एजंट क्रमांक | Agent Number | Textbox | No | — |
+| 15 | शोध एजंट नाव | Search Agent Name | Textbox | No | — |
+| 16 | विक्री एजंट शाखा निवडा | Select Sales Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 17 | विक्री एजंट क्रमांक | Sales Agent Number | Textbox | No | — |
+| 18 | विक्री एजंटचे नाव शोधा | Search Sales Agent Name | Textbox | No | — |
+| 19 | खाते क्र. | Account No. | Textbox | No | Auto-generated |
+| 20 | खाते प्रकार | Account Type | Dropdown | Yes | e.g. `सामान्य खाते` (Normal Account). Other values: `TODO` |
+| 21 | व्याज दर स्लॅब | Interest Rate Slab | Dropdown | Yes | Default: `निवडा`. Values: `TODO` |
+| 22 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | — |
+| 23 | कालावधी (दिवस) | Duration (Days) | Textbox | Yes | — |
+| 24 | चालू दिनांक | Current Date | Date | Yes | — |
+| 25 | मुदत ठेव रक्कम (रु.) | FD Amount (Rs.) | Textbox | Yes | — |
+| 26 | व्याज दर | Interest Rate | Textbox | Yes | — |
+| 27 | व्याज चालू दिनांक | Interest Start Date | Date | Yes | — |
+| 28 | मुदतपूर्ती रक्कम (रु.) | Maturity Amount (Rs.) | Textbox | No | Read-only / calculated |
+| 29 | पावती प्रीफिक्स | Receipt Prefix | Textbox | Yes | — |
+| 30 | पावती क्रमांक | Receipt Number | Textbox | Yes | — |
+| 31 | परतीची दिनांक | Return Date | Date | No | Read-only |
+| 32 | पावती तारीख | Receipt Date | Date | No | Read-only |
+| 33 | स्थिती | Status | Dropdown | Yes | Default: `चालू`. Other values: `TODO` |
+| 34 | आय.एफ.एस.सी. कोड | IFSC Code | Textbox | No | — |
+| 35 | बँकेचे नाव | Bank Name | Textbox | No | Read-only from IFSC |
+| 36 | बँकेचे बचत खाते क्रमांक | Bank Savings Account No. | Textbox | No | — |
 
 ### Section: अनेक मुदत ठेव (Multiple FD)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 39 | वास्तविक एफडी रक्कम | Actual FD Amount | Textbox | No | — |
-| 40 | गुणक | Multiplier | Textbox | No | Default: `1` |
+| 37 | वास्तविक एफडी रक्कम | Actual FD Amount | Textbox | No | — |
+| 38 | गुणक | Multiplier | Textbox | No | Default: `1` |
 
 **Action:** `+ टाका` (Add).
 

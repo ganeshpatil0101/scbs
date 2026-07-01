@@ -34,18 +34,17 @@ UI specification for recording daily agent collections against member accounts.
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | चलन क्रमांक | Challan Number | Textbox | No | Read-only; e.g. `42` |
 | 2 | रोख / ट्रान्सफर | Cash / Transfer | Radio | Yes | — |
-| 3 | शाखा कोड | Branch Code | Textbox | No | e.g. `1` |
-| 4 | शाखा निवडा | Select Branch | Dropdown | No | e.g. कोतोली मुख्य कार्यालय |
-| 5 | प्रतिनिधी क्र. | Representative No. | Textbox | Yes | — |
-| 6 | शोध एजंट नाव | Search Agent Name | Textbox | Yes | — |
-| 7 | कलेक्शन रक्कम (रु.) | Collection Amount (Rs.) | Textbox | Yes | — |
-| 8 | एक दिवसीय / अनेक दिवस | One Day / Multiple Days | Radio | Yes | — |
-| 9 | कलेक्शन दिनांक (पासून) | Collection Date (From) | Date | Yes | — |
-| 10 | योजना निवडा | Select Scheme | Dropdown | No | Values: `TODO` |
-| 11 | खाते क्रमांक (पासून) | Account No. (From) | Textbox | No | — |
-| 12 | खाते क्रमांक (पर्यंत) | Account No. (To) | Textbox | No | — |
-| 13 | मार्क पावती क्रमांक | Mark Receipt Number | Checkbox | No | — |
-| 14 | खाते क्रमांक नुसार / लेजर फोलिओ क्रमांक नुसार | By Account No. / By L.F. No. | Radio | No | — |
+| 3 | शाखा निवडा | Select Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 4 | प्रतिनिधी क्र. | Representative No. | Textbox | Yes | — |
+| 5 | शोध एजंट नाव | Search Agent Name | Textbox | Yes | — |
+| 6 | कलेक्शन रक्कम (रु.) | Collection Amount (Rs.) | Textbox | Yes | — |
+| 7 | एक दिवसीय / अनेक दिवस | One Day / Multiple Days | Radio | Yes | — |
+| 8 | कलेक्शन दिनांक (पासून) | Collection Date (From) | Date | Yes | — |
+| 9 | योजना निवडा | Select Scheme | Dropdown | No | Values: `TODO` |
+| 10 | खाते क्रमांक (पासून) | Account No. (From) | Textbox | No | — |
+| 11 | खाते क्रमांक (पर्यंत) | Account No. (To) | Textbox | No | — |
+| 12 | मार्क पावती क्रमांक | Mark Receipt Number | Checkbox | No | — |
+| 13 | खाते क्रमांक नुसार / लेजर फोलिओ क्रमांक नुसार | By Account No. / By L.F. No. | Radio | No | — |
 
 **Action:** `बघा` (View) — loads collection grid.
 

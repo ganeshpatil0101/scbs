@@ -47,27 +47,23 @@ UI specification for fixed deposit account transactions. Five-tab workflow (same
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 4 | शाखा कोड | Branch Code | Textbox | Yes | Read-only |
-| 5 | शाखा निवडा | Select Branch | Dropdown | Yes | — |
-| 6 | जी एल हेड | GL Head | Textbox | Yes | Read-only |
-| 7 | जी.एल.निवडा | Select GL | Textbox | No | e.g. `मुदत ठेव` |
-| 8 | खाते क्रमांक | Account Number | Textbox | Yes | — |
-| 9 | खातेधारक शोधा | Search Account Holder | Textbox | Yes | — |
-| 10 | खातेधारक निवडा | Select Account Holder | Dropdown | Yes | — |
-| 11 | अंतिम पोस्ट दिनांक | Last Post Date | Textbox | No | Read-only |
-| 12 | पॅनकार्ड क्र. | PAN Card No. | Textbox | No | Read-only |
-| 13 | व्याज दिनांक | Interest Date | Date | No | — |
-| 14 | शिल्लक व्याज | Balance Interest | Textbox | No | Read-only |
-| 15 | व्यवहार रक्कम (रुपये मध्ये) | Transaction Amount (Rs.) | Textbox | Yes | — |
-| 16 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
-| 17 | लेजर शिल्लक (जमा) | Ledger Balance (Credit) | Textbox | No | Read-only |
-| 18 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
-| 19 | व्यवहारानंतरची शिल्लक | Balance After Transaction | Textbox | No | Read-only |
-| 20 | व्यवहार तपशील | Transaction Details | Textbox | No | — |
-| 21 | विशेष सूचना | Special Instructions | Textbox | No | — |
-| 22 | स्पॉट कमिशन (रु.) | Spot Commission (Rs.) | Textbox | No | Read-only |
-| 23 | स्पॉट कमिशन रेट | Spot Commission Rate | Textbox | No | Read-only |
-| 24 | सदस्य क्र. | Member No. | Textbox | No | Read-only |
+| 4 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 5 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `91 — FD`. Enter resolves by ID or name; shows display name |
+| 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 7 | अंतिम पोस्ट दिनांक | Last Post Date | Textbox | No | Read-only |
+| 8 | पॅनकार्ड क्र. | PAN Card No. | Textbox | No | Read-only |
+| 9 | व्याज दिनांक | Interest Date | Date | No | — |
+| 10 | शिल्लक व्याज | Balance Interest | Textbox | No | Read-only |
+| 11 | व्यवहार रक्कम (रुपये मध्ये) | Transaction Amount (Rs.) | Textbox | Yes | — |
+| 12 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
+| 13 | लेजर शिल्लक (जमा) | Ledger Balance (Credit) | Textbox | No | Read-only |
+| 14 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
+| 15 | व्यवहारानंतरची शिल्लक | Balance After Transaction | Textbox | No | Read-only |
+| 16 | व्यवहार तपशील | Transaction Details | Textbox | No | — |
+| 17 | विशेष सूचना | Special Instructions | Textbox | No | — |
+| 18 | स्पॉट कमिशन (रु.) | Spot Commission (Rs.) | Textbox | No | Read-only |
+| 19 | स्पॉट कमिशन रेट | Spot Commission Rate | Textbox | No | Read-only |
+| 20 | सदस्य क्र. | Member No. | Textbox | No | Read-only |
 
 **Link:** `कर्ज खाते माहिती`. **KYC:** `फोटो / सही दाखवा`. **Action:** `पुढे`.
 
@@ -101,3 +97,4 @@ Tabs 2, 5: `TODO` — not captured in screenshots.
 - [overview.md](overview.md)
 - [new-fd-account-screen.md](new-fd-account-screen.md)
 - [../savings/savings-transaction-screen.md](../savings/savings-transaction-screen.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

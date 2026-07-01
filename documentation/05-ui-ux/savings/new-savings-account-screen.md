@@ -48,31 +48,29 @@ UI specification for opening a new savings account. Four-tab wizard.
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 8 | योजना निवडा | Select Scheme | Dropdown | Yes | Default: `योजना निवडा`. Values: `TODO` |
-| 9 | एजंट शाखा क्र. | Agent Branch No. | Textbox | No | e.g. `1` |
-| 10 | एजंट शाखा निवडा | Select Agent Branch | Dropdown | No | e.g. कोतोली मुख्य कार्यालय |
-| 11 | एजंट क्रमांक | Agent Number | Textbox | No | — |
-| 12 | एजंट नाव शोध | Search Agent Name | Textbox | No | — |
-| 13 | खाते क्र. | Account No. | Textbox | No | Auto-generated (e.g. `113`) |
-| 14 | विक्री एजंट शाखा क्र. | Sales Agent Branch No. | Textbox | No | e.g. `1` |
-| 15 | विक्री एजंट शाखा निवडा | Select Sales Agent Branch | Dropdown | No | e.g. कोतोली मुख्य कार्यालय |
-| 16 | विक्री एजंट क्रमांक | Sales Agent Number | Textbox | No | — |
-| 17 | विक्री एजंटचे नाव शोधा | Search Sales Agent Name | Textbox | No | — |
+| 9 | एजंट शाखा निवडा | Select Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 10 | एजंट क्रमांक | Agent Number | Textbox | No | — |
+| 11 | एजंट नाव शोध | Search Agent Name | Textbox | No | — |
+| 12 | खाते क्र. | Account No. | Textbox | No | Auto-generated (e.g. `113`) |
+| 13 | विक्री एजंट शाखा निवडा | Select Sales Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 14 | विक्री एजंट क्रमांक | Sales Agent Number | Textbox | No | — |
+| 15 | विक्री एजंटचे नाव शोधा | Search Sales Agent Name | Textbox | No | — |
 
 ### Section: खाते तपशील (Account Details)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 18 | व्याज दर (% पी ए) | Interest Rate (% p.a.) | Textbox | Yes | e.g. `4.00` |
-| 19 | चालू दिनांक | Current Date | Date | Yes | System date |
-| 20 | विशेष सूचना | Special Instructions | Textbox | No | — |
-| 21 | नावे मर्यादा | Debit Limit | Textbox | No | — |
-| 22 | किमान शिल्लक | Minimum Balance | Textbox | Yes | e.g. `0.00` |
-| 23 | स्थिती निवडा | Select Status | Dropdown | No | Default: `चालू` (Active). Other values: `TODO` |
-| 24 | खाते श्रेणी निवडा | Select Account Category | Dropdown | No | Default: `नियमित` (Regular). Other values: `TODO` |
-| 25 | निधी हस्तांतरण मर्यादा | Fund Transfer Limit | Textbox | No | e.g. `0` |
-| 26 | आयएफएससी कोड | IFSC Code | Textbox | No | — |
-| 27 | बँक नाव | Bank Name | Textbox | No | — |
-| 28 | बँक बचत खाते नं | Bank Savings Account No. | Textbox | No | — |
+| 16 | व्याज दर (% पी ए) | Interest Rate (% p.a.) | Textbox | Yes | e.g. `4.00` |
+| 17 | चालू दिनांक | Current Date | Date | Yes | System date |
+| 18 | विशेष सूचना | Special Instructions | Textbox | No | — |
+| 19 | नावे मर्यादा | Debit Limit | Textbox | No | — |
+| 20 | किमान शिल्लक | Minimum Balance | Textbox | Yes | e.g. `0.00` |
+| 21 | स्थिती निवडा | Select Status | Dropdown | No | Default: `चालू` (Active). Other values: `TODO` |
+| 22 | खाते श्रेणी निवडा | Select Account Category | Dropdown | No | Default: `नियमित` (Regular). Other values: `TODO` |
+| 23 | निधी हस्तांतरण मर्यादा | Fund Transfer Limit | Textbox | No | e.g. `0` |
+| 24 | आयएफएससी कोड | IFSC Code | Textbox | No | — |
+| 25 | बँक नाव | Bank Name | Textbox | No | — |
+| 26 | बँक बचत खाते नं | Bank Savings Account No. | Textbox | No | — |
 
 Tabs 2–4: `TODO` — no screenshots captured.
 
@@ -83,3 +81,4 @@ Tabs 2–4: `TODO` — no screenshots captured.
 - [overview.md](overview.md)
 - [../settings/schemes/savings-new-scheme-screen.md](../settings/schemes/savings-new-scheme-screen.md)
 - [../customer/new-customer-screen.md](../customer/new-customer-screen.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

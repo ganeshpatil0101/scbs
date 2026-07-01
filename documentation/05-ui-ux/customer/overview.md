@@ -4,6 +4,8 @@
 
 Index of UI screen specifications under **ग्राहक (Customer)**. Each linked document is self-contained for AI agents generating frontend screens.
 
+Branch lookups use a single **Autocomplete** field — see [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
+
 ## Screens
 
 | Screen (Marathi) | Screen (English) | Document |

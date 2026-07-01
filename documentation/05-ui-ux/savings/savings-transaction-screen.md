@@ -47,26 +47,22 @@ UI specification for savings account transactions (cash/transfer, credit/debit).
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 4 | शाखा कोड | Branch Code | Textbox | Yes | Read-only |
-| 5 | शाखा निवडा | Select Branch | Dropdown | Yes | — |
-| 6 | जी.एल. हेड | GL Head | Textbox | Yes | Read-only |
-| 7 | जी.एल. निवडा | Select GL | Dropdown | Yes | e.g. `सेव्हिंग ठेव` |
-| 8 | खाते क्रमांक | Account Number | Textbox | Yes | — |
-| 9 | खातेधारक शोधा | Search Account Holder | Textbox | Yes | — |
-| 10 | खातेधारक निवडा | Select Account Holder | Dropdown | Yes | `TODO` |
-| 11 | व्यवहार रक्कम (रु.) | Transaction Amount (Rs.) | Textbox | Yes | — |
-| 12 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
-| 13 | टीडीएस (रु.) | TDS (Rs.) | Textbox | No | Read-only |
-| 14 | एकूण टीडीएस येणे (रु.) | Total TDS Receivable | Textbox | No | Read-only |
-| 15 | लेजर शिल्लक (जमा) | Ledger Balance (Credit) | Textbox | No | Read-only |
-| 16 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
-| 17 | व्यवहारानंतरची शिल्लक | Balance After Transaction | Textbox | No | Read-only |
-| 18 | पॅन - आधार क्रमांक | PAN - Aadhaar No. | Textbox | No | Read-only |
-| 19 | खाते चालवण्याची सूचना | Account Operating Instructions | Textbox | No | e.g. `स्वतः` |
-| 20 | सदस्य क्र. | Member No. | Textbox | No | Read-only |
-| 21 | विशेष सूचना | Special Instructions | Textbox | No | — |
-| 22 | आंतर शाखेचा शुल्क | Inter-branch Charges | Textbox | No | — |
-| 23 | व्यवहार तपशील | Transaction Details | Textbox | No | — |
+| 4 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 5 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `38 — Saving`. Enter resolves by ID or name; shows display name |
+| 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 7 | व्यवहार रक्कम (रु.) | Transaction Amount (Rs.) | Textbox | Yes | — |
+| 8 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
+| 9 | टीडीएस (रु.) | TDS (Rs.) | Textbox | No | Read-only |
+| 10 | एकूण टीडीएस येणे (रु.) | Total TDS Receivable | Textbox | No | Read-only |
+| 11 | लेजर शिल्लक (जमा) | Ledger Balance (Credit) | Textbox | No | Read-only |
+| 12 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
+| 13 | व्यवहारानंतरची शिल्लक | Balance After Transaction | Textbox | No | Read-only |
+| 14 | पॅन - आधार क्रमांक | PAN - Aadhaar No. | Textbox | No | Read-only |
+| 15 | खाते चालवण्याची सूचना | Account Operating Instructions | Textbox | No | e.g. `स्वतः` |
+| 16 | सदस्य क्र. | Member No. | Textbox | No | Read-only |
+| 17 | विशेष सूचना | Special Instructions | Textbox | No | — |
+| 18 | आंतर शाखेचा शुल्क | Inter-branch Charges | Textbox | No | — |
+| 19 | व्यवहार तपशील | Transaction Details | Textbox | No | — |
 
 **Link:** `कर्ज खाते माहिती` (Loan Account Information).
 
@@ -100,17 +96,13 @@ UI specification for savings account transactions (cash/transfer, credit/debit).
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | शाखा कोड | Branch Code | Textbox | Yes | Read-only |
-| 2 | शाखा निवडा | Select Branch | Dropdown | Yes | — |
-| 3 | जी.एल.हेड.क्र. | GL Head No. | Textbox | Yes | — |
-| 4 | जी.एल.निवडा | Select GL | Textbox | No | — |
-| 5 | खाते क्र. | Account No. | Textbox | Yes | — |
-| 6 | खातेधारक शोधा | Search Account Holder | Textbox | Yes | — |
-| 7 | खातेधारक निवडा | Select Account Holder | Dropdown | Yes | — |
-| 8 | शिल्लक(जमा) | Balance (Credit) | Textbox | No | Read-only |
-| 9 | जमा / नावे | Credit / Debit | Radio | No | — |
-| 10 | व्यवहार रक्कम (रु) | Transaction Amount (Rs.) | Textbox | Yes | — |
-| 11 | एकूण व्यवहार रक्कम (रु) | Total Transaction Amount | Textbox | No | Read-only |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 2 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `38 — Saving`. Enter resolves by ID or name; shows display name |
+| 3 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 4 | शिल्लक(जमा) | Balance (Credit) | Textbox | No | Read-only |
+| 5 | जमा / नावे | Credit / Debit | Radio | No | — |
+| 6 | व्यवहार रक्कम (रु) | Transaction Amount (Rs.) | Textbox | Yes | — |
+| 7 | एकूण व्यवहार रक्कम (रु) | Total Transaction Amount | Textbox | No | Read-only |
 
 **Action:** `+ टाका` (Add). **Grid columns:** निवडा, अनु क्र, जी.एल.हेड, खाते क्र., नाव, शिल्लक, व्यवहार रक्कम.
 
@@ -144,3 +136,4 @@ UI specification for savings account transactions (cash/transfer, credit/debit).
 - [overview.md](overview.md)
 - [new-savings-account-screen.md](new-savings-account-screen.md)
 - [../accounting/jama-screen.md](../accounting/jama-screen.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

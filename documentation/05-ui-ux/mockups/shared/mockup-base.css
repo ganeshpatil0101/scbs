@@ -309,6 +309,17 @@ input[type="checkbox"] {
   margin-bottom: 1rem;
 }
 
+/* Autocomplete (Branch / GL / Account Holder) */
+.mockup-autocomplete {
+  font-family: inherit;
+}
+
+.mockup-autocomplete-hint {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
 /* Utility helpers used alongside Tailwind layout classes */
 .mockup-hidden {
   display: none !important;

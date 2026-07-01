@@ -24,14 +24,13 @@ UI specification for manually calculating and posting fixed deposit interest.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | शाखा कोड | Branch Code | Textbox | Yes | e.g. `1` |
-| 2 | शाखा निवडा | Select Branch | Dropdown | Yes | e.g. कोतोली मुख्य कार्यालय |
-| 3 | जी.एल. हेड निवडा | Select G.L. Head | Dropdown | Yes | Values: `TODO` |
-| 4 | व्याज दिनांक निवडा | Select Interest Date | Dropdown | Yes | Values: `TODO` |
-| 5 | व्याज पोस्ट दिनांक | Interest Post Date | Date | No | — |
-| 6 | खाते क्र. पासून | Account No. From | Textbox | No | — |
-| 7 | खाते क्र. पर्यंत | Account No. To | Textbox | No | — |
-| 8 | स्थिती | Status | Dropdown | No | e.g. `सर्व` |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 2 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `91 — FD`. Enter resolves by ID or name; shows display name |
+| 3 | व्याज दिनांक निवडा | Select Interest Date | Dropdown | Yes | Values: `TODO` |
+| 4 | व्याज पोस्ट दिनांक | Interest Post Date | Date | No | — |
+| 5 | खाते क्र. पासून | Account No. From | Textbox | No | — |
+| 6 | खाते क्र. पर्यंत | Account No. To | Textbox | No | — |
+| 7 | स्थिती | Status | Dropdown | No | e.g. `सर्व` |
 
 **Link:** `अॅडव्हान्स शोध` (Advance Search).
 

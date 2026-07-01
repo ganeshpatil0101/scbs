@@ -95,6 +95,7 @@ Optional `styles.css` only when screen-specific Tailwind overrides cannot live i
 | Checkbox | `<input type="checkbox">` |
 | Date | `<input type="date">` |
 | Label (read-only) | `<span>` with muted styling |
+| Autocomplete | `<input type="text" class="mockup-autocomplete" list="…">` + matching `<datalist>` with sample `id — name` options from [entity-autocomplete-pattern.md](../../documentation/05-ui-ux/shared/entity-autocomplete-pattern.md); one control per Branch/GL/Account lookup |
 | Disabled until checkbox | `disabled` attribute + grayed label |
 
 ### README.md template
@@ -144,6 +145,7 @@ Non-negotiable:
 
 ## Pre-Completion Checklist
 
+- [ ] Branch/GL/Account lookup fields use single Autocomplete control (not legacy ID + select pairs)
 - [ ] Every spec field/column has HTML with `data-spec-field`
 - [ ] Marathi labels only — no duplicate EN spans or language toggle
 - [ ] Tailwind CDN loaded; `mockup-base.css` linked as regular stylesheet (plain CSS, no `@apply`)
@@ -155,6 +157,7 @@ Non-negotiable:
 ## Related Documents
 
 - [generate-ui-screen.mdc](generate-ui-screen.mdc) — Phase 2: approved mockup → Angular + i18n
+- [documentation/05-ui-ux/shared/entity-autocomplete-pattern.md](../../documentation/05-ui-ux/shared/entity-autocomplete-pattern.md) — Autocomplete field standard
 - [documentation/AI_INDEX.md](../../documentation/AI_INDEX.md)
 
 ## Notes for Cursor

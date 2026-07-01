@@ -64,8 +64,7 @@ UI specification for creating a system user. Two-tab form. Intended for AI agent
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 19 | संघटना | Organization | Dropdown | Yes | Society name |
-| 20 | शाखा | Branch | Textbox | Yes | e.g. `1` |
-| 21 | शाखा निवडा | Select Branch | Dropdown | Yes | e.g. कोतोली मुख्य कार्यालय |
+| 20 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
 
 **Action:** `+ टाका` (Add) — add row to rights grid.
 

@@ -50,40 +50,38 @@ UI specification for opening a new daily (pigmy) deposit account. Four-tab wizar
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 8 | योजना निवडा | Select Scheme | Dropdown | Yes | Values: `TODO` |
-| 9 | एजंट शाखा क्र. | Agent Branch No. | Textbox | No | e.g. `1` |
-| 10 | एजंट शाखा निवडा | Select Agent Branch | Dropdown | Yes | e.g. कोतोली मुख्य कार्यालय |
-| 11 | एजंट क्रमांक | Agent Number | Textbox | Yes | — |
-| 12 | शोध एजंट नाव | Search Agent Name | Textbox | No | — |
-| 13 | खाते क्र. | Account No. | Textbox | No | Auto-generated |
-| 14 | विक्री एजंट शाखा क्र. | Sales Agent Branch No. | Textbox | No | e.g. `1` |
-| 15 | विक्री एजंट शाखा निवडा | Select Sales Agent Branch | Dropdown | No | Values: `TODO` |
-| 16 | विक्री एजंट क्रमांक | Sales Agent Number | Textbox | No | — |
-| 17 | विक्री एजंटचे नाव शोधा | Search Sales Agent Name | Textbox | No | — |
+| 9 | एजंट शाखा निवडा | Select Agent Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 10 | एजंट क्रमांक | Agent Number | Textbox | Yes | — |
+| 11 | शोध एजंट नाव | Search Agent Name | Textbox | No | — |
+| 12 | खाते क्र. | Account No. | Textbox | No | Auto-generated |
+| 13 | विक्री एजंट शाखा निवडा | Select Sales Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 14 | विक्री एजंट क्रमांक | Sales Agent Number | Textbox | No | — |
+| 15 | विक्री एजंटचे नाव शोधा | Search Sales Agent Name | Textbox | No | — |
 
 ### खाते तपशील (Account Details)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 18 | कालावधी निवडा | Select Duration | Dropdown | Yes | Values: `TODO` |
-| 19 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | — |
-| 20 | कालावधी (दिवस) | Duration (Days) | Textbox | Yes | — |
-| 21 | व्याज दर (% पीए) | Interest Rate (% p.a.) | Textbox | Yes | — |
-| 22 | कमिशन दर | Commission Rate | Textbox | Yes | — |
-| 23 | व्याज प्रकार | Interest Type | Dropdown | No | Values: `TODO` |
-| 24 | परिणामगणन | Compounding | Dropdown | No | Values: `TODO` |
-| 25 | चालू दिनांक | Current Date | Date | Yes | System date |
-| 26 | मुदतपूर्ती दिनांक | Maturity Date | Date | No | — |
-| 27 | दैनिक ठेव रक्कम | Daily Deposit Amount | Textbox | Yes | — |
-| 28 | मुदतपूर्ती रक्कम | Maturity Amount | Textbox | No | — |
-| 29 | विशेष सूचना | Special Instructions | Textbox | No | — |
-| 30 | कलेक्शन रक्कम मर्यादा | Collection Amount Limit | Textbox | No | — |
-| 31 | नावे मर्यादा | Debit Limit | Textbox | No | — |
-| 32 | स्थिती निवडा | Select Status | Dropdown | No | e.g. `चालू`. Other values: `TODO` |
-| 33 | कर्जासाठी पिग्मी खाते | Pigmy Account for Loan | Checkbox | No | — |
-| 34 | आयएफएससी कोड | IFSC Code | Textbox | No | — |
-| 35 | बँक नाव | Bank Name | Textbox | No | — |
-| 36 | बँक बचत खाते नं | Bank Savings Account No. | Textbox | No | — |
-| 37 | किमान शिल्लक | Minimum Balance | Textbox | No | — |
+| 16 | कालावधी निवडा | Select Duration | Dropdown | Yes | Values: `TODO` |
+| 17 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | — |
+| 18 | कालावधी (दिवस) | Duration (Days) | Textbox | Yes | — |
+| 19 | व्याज दर (% पीए) | Interest Rate (% p.a.) | Textbox | Yes | — |
+| 20 | कमिशन दर | Commission Rate | Textbox | Yes | — |
+| 21 | व्याज प्रकार | Interest Type | Dropdown | No | Values: `TODO` |
+| 22 | परिणामगणन | Compounding | Dropdown | No | Values: `TODO` |
+| 23 | चालू दिनांक | Current Date | Date | Yes | System date |
+| 24 | मुदतपूर्ती दिनांक | Maturity Date | Date | No | — |
+| 25 | दैनिक ठेव रक्कम | Daily Deposit Amount | Textbox | Yes | — |
+| 26 | मुदतपूर्ती रक्कम | Maturity Amount | Textbox | No | — |
+| 27 | विशेष सूचना | Special Instructions | Textbox | No | — |
+| 28 | कलेक्शन रक्कम मर्यादा | Collection Amount Limit | Textbox | No | — |
+| 29 | नावे मर्यादा | Debit Limit | Textbox | No | — |
+| 30 | स्थिती निवडा | Select Status | Dropdown | No | e.g. `चालू`. Other values: `TODO` |
+| 31 | कर्जासाठी पिग्मी खाते | Pigmy Account for Loan | Checkbox | No | — |
+| 32 | आयएफएससी कोड | IFSC Code | Textbox | No | — |
+| 33 | बँक नाव | Bank Name | Textbox | No | — |
+| 34 | बँक बचत खाते नं | Bank Savings Account No. | Textbox | No | — |
+| 35 | किमान शिल्लक | Minimum Balance | Textbox | No | — |
 
 **Action:** `पुढे` (Next).
 
