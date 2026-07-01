@@ -49,7 +49,7 @@
             </div>
             <div data-spec-field="2"><label class="mockup-label">ज.ले. हेड क्र. <span class="mockup-required">*</span></label><input type="text" value="163"></div>
             <div data-spec-field="3"><label class="mockup-label">योजना नाव <span class="mockup-required">*</span></label><input type="text"></div>
-            <div data-spec-field="4"><label class="mockup-label">स्थिती <span class="mockup-required">*</span><span class="mockup-badge-todo">TODO</span></label><select><option selected>चालू</option></select></div>
+            <div data-spec-field="4"><label class="mockup-label">स्थिती <span class="mockup-required">*</span></label><select><option selected>चालू</option><option>बंद</option><option>स्थगित</option></select></div>
             <div class="sm:col-span-2" data-spec-field="5"><label class="inline-flex items-center gap-2 cursor-pointer"><input type="checkbox"><span class="text-sm">फक्त सदस्यांना परवानगी द्या</span></label></div>
           </div>
           <p class="text-sm font-medium mt-4 mb-2">हप्ता प्रकार</p>
@@ -67,7 +67,7 @@
           </div>
           <div data-spec-field="13">
             <label class="mockup-label">पहिला हप्ता दिनांक प्रकार</label>
-            <select><option>निवडा</option><option>पुढील महिन्याचा खाते चालू दिवस</option><option>पुढील महिन्याचा पहिला दिवस</option><option>खाते चालू दिवस</option><option>कर्ज दिनांक ०१ ते १५…</option></select>
+            <select><option value="">निवडा</option><option>पुढील महिन्याचा खाते चालू दिवस</option><option>पुढील महिन्याचा पहिला दिवस</option><option>खाते चालू दिवस</option><option>कर्ज दिनांक ०१ ते १५ असेल तर पुढील महिन्याची १ दिनांक अन्यथा कर्ज दिनांक १६ ते महिना अखेर असेल तर १ महिना सोडून पुढील महिन्याची १ दिनांक</option></select>
           </div>
         </section>
         <section class="mockup-section">
@@ -96,7 +96,7 @@
             <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="26"><input type="radio" name="closeInt" checked><span>पोस्टिंग सह</span></label>
             <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="27"><input type="radio" name="closeInt"><span>पोस्टिंग शिवाय</span></label>
           </div>
-          <div data-spec-field="28"><label class="mockup-label mockup-label-muted">मासिक बिलिंग सायकल दिवस निवडा (क्रेडिट कार्ड) <span class="mockup-required">*</span><span class="mockup-badge-todo">TODO</span></label><select disabled><option>निवडा</option></select></div>
+          <div data-spec-field="28"><label class="mockup-label mockup-label-muted">मासिक बिलिंग सायकल दिवस निवडा (क्रेडिट कार्ड) <span class="mockup-required">*</span></label><select disabled><option value="">निवडा</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option></select></div>
           <label class="inline-flex items-center gap-2 cursor-pointer mt-3" data-spec-field="29"><input type="checkbox"><span class="text-sm">कर्ज अर्ज प्रणाली लागू</span></label>
         </section>
       </div>
@@ -163,7 +163,7 @@
     <div id="tab-panel-3" class="mockup-hidden" role="tabpanel" hidden>
       <section class="mockup-section mb-4">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end mb-4">
-          <div data-spec-field="1"><label class="mockup-label">व्याज पोस्टिंग दिवस <span class="mockup-required">*</span></label><select><option>निवडा</option><option>1</option><option>15</option><option>31</option></select></div>
+          <div data-spec-field="1"><label class="mockup-label">व्याज पोस्टिंग दिवस <span class="mockup-required">*</span></label><select><option value="">निवडा</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option></select></div>
           <div data-spec-field="2"><label class="mockup-label">व्याज पोस्टिंग महिना <span class="mockup-required">*</span></label>
             <select><option>निवडा</option><option>जानेवारी</option><option>फेब्रुवारी</option><option>मार्च</option><option>एप्रिल</option><option>मे</option><option>जून</option><option>जुलै</option><option>ऑगस्ट</option><option>सप्टेंबर</option><option>ऑक्टोबर</option><option>नोव्हेंबर</option><option>डिसेंबर</option></select>
           </div>
@@ -237,7 +237,6 @@
         <div class="max-w-md mb-4">
           <label class="mockup-label">कपात / शुल्क</label>
           <select><option value="">निवडा</option><option>कर्जदार कल्याण निधी</option><option>पिग्मी कमिशन</option><option>प्रोसेसिंग फी</option><option>ब वर्ग सभासद फी</option><option>स्टेशनरी फी</option></select>
-          <span class="mockup-badge-todo">TODO</span> <span class="text-xs text-gray-500">— शुल्क dropdown not captured</span>
         </div>
         <div class="overflow-x-auto mb-6">
           <table class="mockup-table">

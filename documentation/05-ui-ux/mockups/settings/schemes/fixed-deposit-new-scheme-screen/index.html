@@ -37,13 +37,13 @@
         <section class="mockup-section">
           <div class="mockup-field-grid mockup-field-grid--2">
             <div data-spec-field="1"><label class="mockup-label">जीएल हेड क्र. <span class="mockup-required">*</span></label><input type="text" value="163"></div>
-            <div data-spec-field="2"><label class="mockup-label">योजनेचे प्रकार <span class="mockup-required">*</span><span class="mockup-badge-todo">TODO</span></label><select><option>निवडा</option></select></div>
+            <div data-spec-field="2"><label class="mockup-label">योजनेचे प्रकार <span class="mockup-required">*</span></label><select><option value="">निवडा</option><option>मुदत ठेव</option><option>दाम दुप्पट</option><option>कॅश सर्टिफिकेट</option><option>पेन्शन</option><option>ठेव कर्ज</option></select></div>
             <div data-spec-field="3"><label class="mockup-label">गुणक <span class="mockup-required">*</span></label><input type="text"></div>
             <div data-spec-field="4"><label class="mockup-label">योजनेचे नाव <span class="mockup-required">*</span></label><input type="text"></div>
             <div data-spec-field="5"><label class="mockup-label">तपशील</label><input type="text"></div>
             <div data-spec-field="6"><label class="mockup-label">पावती क्र. सिरीजची सुरूवात <span class="mockup-required">*</span></label><input type="text"></div>
             <div data-spec-field="7"><label class="mockup-label">पावती क्र. सिरीज नंबर <span class="mockup-required">*</span></label><input type="text"></div>
-            <div data-spec-field="8"><label class="mockup-label">स्थिती <span class="mockup-required">*</span><span class="mockup-badge-todo">TODO</span></label><select><option selected>चालू</option></select></div>
+            <div data-spec-field="8"><label class="mockup-label">स्थिती <span class="mockup-required">*</span></label><select><option selected>चालू</option><option>बंद</option><option>स्थगित</option></select></div>
             <div class="sm:col-span-2">
               <div class="flex flex-wrap gap-6 mb-2">
                 <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="9"><input type="radio" name="oc" checked><span>ओपन एंडेड</span></label>
@@ -94,7 +94,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 items-end mb-4">
           <label class="inline-flex items-center gap-2 cursor-pointer pb-2" data-spec-field="1"><input type="checkbox"><span class="text-sm">डिस्काउंटेड</span></label>
           <div data-spec-field="2"><label class="mockup-label">कालावधी <span class="mockup-required">*</span></label><input type="text"></div>
-          <div data-spec-field="3"><label class="mockup-label">कालावधी प्रकार <span class="mockup-required">*</span><span class="mockup-badge-todo">TODO</span></label><select><option>निवडा</option></select></div>
+          <div data-spec-field="3"><label class="mockup-label">कालावधी प्रकार <span class="mockup-required">*</span></label><select><option value="">निवडा</option><option>दिवस</option><option>महिने</option></select></div>
           <div data-spec-field="4"><label class="mockup-label">मुदत रक्कम <span class="mockup-required">*</span></label><input type="text"></div>
           <div data-spec-field="5"><label class="mockup-label">व्याज दर (द.सा.द.शे.) <span class="mockup-required">*</span></label><input type="text"></div>
           <button type="button" class="mockup-btn mockup-btn-add">+ टाका</button>
@@ -127,7 +127,7 @@
             <select><option>निवडा</option><option>सामान्य खाते</option><option>ज्येष्ठ नागरिक खाते</option><option>महिला</option><option>विधवा</option><option>अपंग</option><option>दुसरी संस्था</option><option>नोकर</option><option>स्वातंत्र्यसैनिक</option><option>अति ज्येष्ठ नागरिक</option></select>
           </div>
           <div data-spec-field="2"><label class="mockup-label">कालावधी <span class="mockup-required">*</span></label><input type="text"></div>
-          <div data-spec-field="3"><label class="mockup-label">कालावधी प्रकार <span class="mockup-required">*</span><span class="mockup-badge-todo">TODO</span></label><select><option>निवडा</option></select></div>
+          <div data-spec-field="3"><label class="mockup-label">कालावधी प्रकार <span class="mockup-required">*</span></label><select><option value="">निवडा</option><option>दिवस</option><option>महिने</option><option>वर्षे</option></select></div>
           <div data-spec-field="4"><label class="mockup-label">व्याज दर (द.सा.द.शे.) <span class="mockup-required">*</span></label><input type="text"></div>
           <button type="button" class="mockup-btn mockup-btn-add">+ टाका</button>
         </div>
@@ -142,8 +142,8 @@
     <div id="tab-panel-4" class="mockup-hidden" role="tabpanel" hidden>
       <section class="mockup-section">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end mb-4">
-          <div data-spec-field="1"><label class="mockup-label">व्याज पोस्टिंग दिवस <span class="mockup-required">*</span><span class="mockup-badge-todo">TODO</span></label><select><option>निवडा</option></select></div>
-          <div data-spec-field="2"><label class="mockup-label">व्याज पोस्टिंग महिना <span class="mockup-required">*</span><span class="mockup-badge-todo">TODO</span></label><select><option>निवडा</option></select></div>
+          <div data-spec-field="1"><label class="mockup-label">व्याज पोस्टिंग दिवस <span class="mockup-required">*</span></label><select><option value="">निवडा</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option></select></div>
+          <div data-spec-field="2"><label class="mockup-label">व्याज पोस्टिंग महिना <span class="mockup-required">*</span></label><select><option value="">निवडा</option><option>जानेवारी</option><option>फेब्रुवारी</option><option>मार्च</option><option>एप्रिल</option><option>मे</option><option>जून</option><option>जुलै</option><option>ऑगस्ट</option><option>सप्टेंबर</option><option>ऑक्टोबर</option><option>नोव्हेंबर</option><option>डिसेंबर</option></select></div>
           <button type="button" class="mockup-btn mockup-btn-add">+ टाका</button>
         </div>
         <div class="overflow-x-auto"><table class="mockup-table"><thead><tr><th>निवडा</th><th>अ.क्र.</th><th>पोस्टिंग दिनांक</th><th>कृती</th></tr></thead><tbody><tr><td><input type="checkbox"></td><td>1</td><td>—</td><td><button type="button" class="btn-link">काढा</button></td></tr></tbody></table></div>
@@ -174,7 +174,7 @@
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end mb-4">
           <div><label class="mockup-label">कालावधी</label><input type="text"></div>
-          <div><label class="mockup-label">कालावधी प्रकार<span class="mockup-badge-todo">TODO</span></label><select><option>निवडा</option></select></div>
+          <div><label class="mockup-label">कालावधी प्रकार</label><select><option value="">निवडा</option><option>दिवस</option><option>महिने</option></select></div>
           <div><label class="mockup-label">व्याज दर (द.सा.द.शे.)</label><input type="text"></div>
           <button type="button" class="mockup-btn mockup-btn-add">+ टाका</button>
         </div>
