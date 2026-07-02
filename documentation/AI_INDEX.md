@@ -10,7 +10,7 @@ Top-level index of all project documentation. Add a link here whenever a new mod
 - [00-project-overview/system-boundaries.md](00-project-overview/system-boundaries.md) — TODO: not yet authored
 
 ## 01 — Architecture
-- [01-architecture/architecture-overview.md](01-architecture/architecture-overview.md) — Infra architecture, multi-tenancy decision, request flow, cost efficiency
+- [01-architecture/architecture-overview.md](01-architecture/architecture-overview.md) — Infra architecture (AWS `ap-south-1`), multi-tenancy decision, request flow, cost efficiency
 
 ## 05 — UI/UX — Shared Patterns
 - [05-ui-ux/shared/entity-autocomplete-pattern.md](05-ui-ux/shared/entity-autocomplete-pattern.md) — Branch / GL / Account Holder Autocomplete standard

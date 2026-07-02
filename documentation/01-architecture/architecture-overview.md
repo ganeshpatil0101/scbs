@@ -6,9 +6,9 @@ Status: Draft for discussion. Covers multi-tenancy approach, request flow, AWS s
 
 This document describes the infrastructure architecture for the multi-tenant core banking SaaS platform: how tenants (cooperative banks) are isolated at the database layer, how API requests are routed to the correct tenant database, which AWS services back each layer, and the cost trade-offs behind each environment decision.
 
-It does not cover business domain logic (Accounts, Loans, Transactions modules) — those will get their own module documentation once domain requirements are defined.
+Deployment target: **AWS `ap-south-1` (Mumbai)** — selected over the earlier OCI (`ap-mumbai-1`) option (see DEC-006).
 
-> **Open item:** an earlier architecture decision recorded OCI (`ap-mumbai-1`) as the deployment target. This document evaluates an AWS-based deployment for cost/service comparison. The cloud provider choice is **not yet finalized** — treat the AWS service mapping and costs below as one option under evaluation, not a committed decision, until confirmed.
+It does not cover business domain logic (Accounts, Loans, Transactions modules) — those will get their own module documentation once domain requirements are defined.
 
 
 
@@ -58,12 +58,24 @@ It does not cover business domain logic (Accounts, Loans, Transactions modules) 
 - **Decision:** Run dev/QA on a free-tier-leaning profile for the first 12 months:
   - **RDS:** `db.t3.micro` / `db.t4g.micro`, Single-AZ, 20 GB storage (free-tier covered). Two PostgreSQL databases (`bank_abc`, `bank_xyz`) on the one micro instance.
   - **API compute:** one EC2 `t3.micro` (750 hrs/mo free) hosting the NestJS container, instead of Fargate (Fargate is **not** free-tier eligible).
-  - **NAT Gateway:** **removed** in dev/QA — place the single API node in a public subnet with a tightly scoped security group, and use the free S3 gateway PC endpoint for SV3 access.
+  - **NAT Gateway:** **removed** in dev/QA — place the single API node in a public subnet with a tightly scoped security group, and use the free S3 gateway PC endpoint for S3 access.
   - **WAF:** dropped (prod-only go-live control).
   - **KMS:** keep encryption-at-rest using the free **AWS-managed key** (`aws/rds`, `aws/s3`); **no** dedicated customer-managed key (CMK).
   - **Secrets:** use **SSM Parameter Store SecureString** (free) instead of Secrets Manager in dev/QA.
 - **Rationale:** The NAT Gateway (~$50/mo, survives the DEC-003 nightly stop) is the single largest non-free cost — eliminating it matters more than the RDS free tier itself. Combined with the swaps above, recurring dev/QA cost drops to roughly **$0–15/mo** for the first 12 months (only storage/data-transfer overages).
 - **Trade-off accepted:** This profile **diverges from Production** (EC2 vs. Fargate, no NAT, no WAF, Parameter Store vs. Secrets Manager) and the micro instance has ~1 GB RAM / ~80–110 `max_connections`. It is suitable for functional QA and migration rehearsal, **not** for performance/load testing or validating the production security posture. Free tier expires after 12 months — revisit then.
+
+
+
+### DEC-006: Cloud provider and region
+
+- **Context:** An earlier architecture draft recorded OCI (`ap-mumbai-1`) as the deployment target. AWS (`ap-south-1`, Mumbai) was evaluated as an alternative for service fit and cost.
+- **Options considered:**
+  1. Oracle Cloud Infrastructure — `ap-mumbai-1` (Mumbai).
+  2. Amazon Web Services — `ap-south-1` (Mumbai).
+- **Decision:** Option 2 — **AWS `ap-south-1` (Mumbai)**.
+- **Rationale:** The service mapping in this document (RDS PostgreSQL, ECS Fargate, ALB, CloudFront, WAF, Secrets Manager, etc.) maps directly to AWS managed services; cost estimates (Section 9) and the dev/QA free-tier profile (DEC-005) are validated against AWS pricing. A single-provider stack reduces operational complexity for a small team.
+- **Trade-off accepted:** Vendor lock-in to AWS APIs and billing; mitigated by keeping application code cloud-agnostic (containers, standard PostgreSQL, S3-compatible object storage patterns).
 
 
 
@@ -166,6 +178,7 @@ sequenceDiagram
 
 | Aspect          | Dev/QA                                                                  | Production                                 |
 | --------------- | ----------------------------------------------------------------------- | ------------------------------------------ |
+| AWS region      | `ap-south-1` (Mumbai)                                                   | `ap-south-1` (Mumbai)                      |
 | RDS Multi-AZ    | No (Single-AZ, `t3/t4g.micro` free-tier per DEC-005)                    | Yes                                        |
 | API compute     | 1 × EC2 `t3.micro` (free-tier, DEC-005)                                 | ECS Fargate, 2 nodes (minimum, for HA)     |
 | NAT Gateway     | None — public subnet + S3 gateway endpoint (DEC-005)                    | Yes (2 AZ)                                 |
@@ -189,7 +202,7 @@ sequenceDiagram
 
 ## 9. Cost efficiency
 
-Estimates below are **directional, on-demand, ap-south-1 (Mumbai) list-price approximations** as of mid-2026 — confirm exact figures with the [AWS Pricing Calculator](https://calculator.aws/) before budgeting. All figures USD/month unless noted.
+Estimates below are **directional, on-demand, `ap-south-1` (Mumbai) list-price approximations** as of mid-2026 — confirm exact figures with the [AWS Pricing Calculator](https://calculator.aws/) before budgeting. All figures USD/month unless noted.
 
 ### 9.1 Dev/QA
 
@@ -236,5 +249,5 @@ A 1-year Reserved Instance/Savings Plan commitment should only be made after 2�
 
 ## Related Documents
 
-- ../AI_INDEX.md
-
+- [../AI_INDEX.md](../AI_INDEX.md)
+- [../cbs-project-execution-plan.md](../cbs-project-execution-plan.md)

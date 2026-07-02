@@ -35,7 +35,7 @@ Expand from 1 tenant to **5–10 tenants** within Years 2–3, continuing to foc
 
 Pricing model: **per-branch SaaS subscription + minimal AMC + separately priced on-demand/custom functionality.**
 
-This must structurally undercut the incumbent vendor model of *(high per-branch fee + AMC + one-time license, all three stacked)*. Infrastructure cost per tenant (see `architecture-overview.md` Section 9) must be tracked against per-branch subscription pricing to confirm margin viability — **TODO: target margin/price point not yet defined; needs explicit pricing decision before BG-003 can be marked measurable.**
+This must structurally undercut the incumbent vendor model of *(high per-branch fee + AMC + one-time license, all three stacked)*. Infrastructure cost per tenant (see `01-architecture/architecture-overview.md` Section 9) must be tracked against per-branch subscription pricing to confirm margin viability — **TODO: target margin/price point not yet defined; needs explicit pricing decision before BG-003 can be marked measurable.**
 
 ### BG-004 — UX Simplicity for Low-Tech-Literacy Staff
 
