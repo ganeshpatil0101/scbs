@@ -40,7 +40,7 @@ UI specification for processing installment payments on loans against deposits.
 | 2 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `42 — Loan`. Enter resolves by ID or name; shows display name |
 | 3 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
 | 4 | ग्राहक क्र. | Customer No. | Textbox | No | — |
-| 5 | ग्राहक निवडा | Select Customer | Dropdown | No | Values: `TODO` |
+| 5 | ग्राहक निवडा | Select Customer | Dropdown | No | Loaded dynamically by customer number lookup; default `निवडा` |
 | 6 | दिनांक | Date | Date | Yes | System date |
 
 **Note:** कृपया खाते क्रमांक किंवा ग्राहक क्रमांक प्रविष्ट करा.

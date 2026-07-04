@@ -32,7 +32,7 @@ UI specification for opening a new "other" account for an existing customer. Cus
 | 6 | ग्राहक क्र. (पर्यंत) | Customer No. (To) | Textbox | No | — |
 | 7 | स्थिती | Status | Dropdown | No | `सर्व` (All), `चालू` (Active), `स्थगित` (Suspended), `मृत` (Deceased), `निलंबित` (Suspended/Barred), `निवृत्त` (Retired), `वैद्यकीय` (Medical), `काढला` (Removed) |
 | 8 | ॲडव्हान्स शोध | Advanced Search | Link | No | Expands extra filters |
-| 9 | ग्राहकानुसार खाते | Account by Customer | Dropdown | Yes | Default: `निवडा` (Select). Values: `TODO` |
+| 9 | ग्राहकानुसार खाते | Account by Customer | Dropdown | Yes | Default: `निवडा` (Select). Values: `ब वर्ग देणे लाभांश` (Class B Dividend Payable), `अनामत खाते` (Deposit Account), `प्रवेश फी` (Entrance Fee), `नोकर पगार खर्च` (Staff Salary Expense) |
 
 **Action:** `दाखवा` (Show) — search customers matching filters.
 

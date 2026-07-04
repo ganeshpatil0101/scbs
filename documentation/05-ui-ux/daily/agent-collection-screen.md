@@ -40,7 +40,7 @@ UI specification for recording daily agent collections against member accounts.
 | 6 | कलेक्शन रक्कम (रु.) | Collection Amount (Rs.) | Textbox | Yes | — |
 | 7 | एक दिवसीय / अनेक दिवस | One Day / Multiple Days | Radio | Yes | — |
 | 8 | कलेक्शन दिनांक (पासून) | Collection Date (From) | Date | Yes | — |
-| 9 | योजना निवडा | Select Scheme | Dropdown | No | Values: `TODO` |
+| 9 | योजना निवडा | Select Scheme | Dropdown | No | Loaded dynamically from Daily schemes (Settings > नवीन योजना). Sample: `डेली १`, `डेली २`, `पिग्मी ठेव` |
 | 10 | खाते क्रमांक (पासून) | Account No. (From) | Textbox | No | — |
 | 11 | खाते क्रमांक (पर्यंत) | Account No. (To) | Textbox | No | — |
 | 12 | मार्क पावती क्रमांक | Mark Receipt Number | Checkbox | No | — |

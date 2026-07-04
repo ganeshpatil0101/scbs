@@ -30,7 +30,7 @@ Extracted frames: `screenshots/grahak_khatedar/other-account-reg-frames/`.
 | 2 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
 | 3 | शाखा | Branch | Dropdown | No | e.g. कोतोली मुख्य कार्यालय |
 | 4 | ग्राहकानुसार खाते | Account by Customer | Dropdown | Yes | `ब वर्ग देणे लाभांश` (Class B Dividend Payable), `अनामत खाते` (Deposit Account), `प्रवेश फी` (Entrance Fee), `नोकर पगार खर्च` (Staff Salary Expense) |
-| 5 | स्थिती | Status | Dropdown | Yes | Default: `चालू` (Active). Other values: `TODO` |
+| 5 | स्थिती | Status | Dropdown | Yes | Default: `चालू` (Active). Values: `चालू` (Active), `बंद` (Closed), `स्थगित` (Suspended) |
 | 6 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | — |
 | 7 | ग्राहक क्र. (पर्यंत) | Customer No. (To) | Textbox | No | — |
 

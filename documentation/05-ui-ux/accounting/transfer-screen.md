@@ -41,11 +41,26 @@ Extracted frames: `screenshots/lekha/transfer-frames/`.
 
 **Action:** `नावे ₹` — add debit row.
 
+## Section: जमा खाते (Credit Account)
+
+Mirrors debit-side entry pattern. After debit row is added, credit account is entered here.
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 8 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 9 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `38 — Saving`, `91 — FD`, `42 — Loan`. Enter resolves by ID or name; shows display name |
+| 10 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
+| 11 | शिल्लक | Balance | Textbox | No | Read-only |
+| 12 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
+| 13 | व्यवहार रक्कम (रू.) | Transaction Amount (Rs.) | Textbox | Yes | — |
+
+**Action:** `जमा ₹` — add credit row.
+
 ## Transfer Grid
 
 Columns: निवडा, अनु. क्र, जी.एल., खाते क्रमांक, खाते धारकाचे नाव, शिल्लक, व्यवहार रक्कम.
 
-**Actions:** `काढा`, `वर`. Credit-side entry: `TODO` (not shown in opening frame).
+**Actions:** `काढा`, `वर`.
 
 ---
 

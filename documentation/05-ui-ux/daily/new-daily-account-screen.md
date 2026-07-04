@@ -49,7 +49,7 @@ UI specification for opening a new daily (pigmy) deposit account. Four-tab wizar
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 8 | योजना निवडा | Select Scheme | Dropdown | Yes | Values: `TODO` |
+| 8 | योजना निवडा | Select Scheme | Dropdown | Yes | Loaded dynamically from Daily schemes (Settings > नवीन योजना). Sample: `डेली १`, `डेली २`, `पिग्मी ठेव` |
 | 9 | एजंट शाखा निवडा | Select Agent Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
 | 10 | एजंट क्रमांक | Agent Number | Textbox | Yes | — |
 | 11 | शोध एजंट नाव | Search Agent Name | Textbox | No | — |
@@ -62,13 +62,13 @@ UI specification for opening a new daily (pigmy) deposit account. Four-tab wizar
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 16 | कालावधी निवडा | Select Duration | Dropdown | Yes | Values: `TODO` |
-| 17 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | — |
-| 18 | कालावधी (दिवस) | Duration (Days) | Textbox | Yes | — |
-| 19 | व्याज दर (% पीए) | Interest Rate (% p.a.) | Textbox | Yes | — |
+| 16 | कालावधी निवडा | Select Duration | Dropdown | Yes | Loaded from selected scheme's duration grid (Settings > Daily New Scheme > कालावधी tab) |
+| 17 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | Auto-filled from selected duration |
+| 18 | कालावधी (दिवस) | Duration (Days) | Textbox | Yes | Auto-filled from selected duration |
+| 19 | व्याज दर (% पीए) | Interest Rate (% p.a.) | Textbox | Yes | Auto-filled from selected duration |
 | 20 | कमिशन दर | Commission Rate | Textbox | Yes | — |
-| 21 | व्याज प्रकार | Interest Type | Dropdown | No | Values: `TODO` |
-| 22 | परिणामगणन | Compounding | Dropdown | No | Values: `TODO` |
+| 21 | व्याज प्रकार | Interest Type | Dropdown | No | `सरळ व्याज` (Simple Interest), `चक्रवाढ व्याज` (Compound Interest) — same as Daily New Scheme |
+| 22 | परिणामगणन | Compounding | Dropdown | No | `दैनिक` (Daily), `पाक्षिक` (Fortnightly), `मासिक` (Monthly), `तिमाही` (Quarterly), `सहामाही` (Half-yearly), `वार्षिक` (Yearly) — same as Daily New Scheme |
 | 23 | चालू दिनांक | Current Date | Date | Yes | System date |
 | 24 | मुदतपूर्ती दिनांक | Maturity Date | Date | No | — |
 | 25 | दैनिक ठेव रक्कम | Daily Deposit Amount | Textbox | Yes | — |
@@ -76,7 +76,7 @@ UI specification for opening a new daily (pigmy) deposit account. Four-tab wizar
 | 27 | विशेष सूचना | Special Instructions | Textbox | No | — |
 | 28 | कलेक्शन रक्कम मर्यादा | Collection Amount Limit | Textbox | No | — |
 | 29 | नावे मर्यादा | Debit Limit | Textbox | No | — |
-| 30 | स्थिती निवडा | Select Status | Dropdown | No | e.g. `चालू`. Other values: `TODO` |
+| 30 | स्थिती निवडा | Select Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended) |
 | 31 | कर्जासाठी पिग्मी खाते | Pigmy Account for Loan | Checkbox | No | — |
 | 32 | आयएफएससी कोड | IFSC Code | Textbox | No | — |
 | 33 | बँक नाव | Bank Name | Textbox | No | — |
@@ -85,7 +85,7 @@ UI specification for opening a new daily (pigmy) deposit account. Four-tab wizar
 
 **Action:** `पुढे` (Next).
 
-Tabs 3–4: `TODO` — not captured in video.
+Tabs 3–4: deferred — not yet documented.
 
 ---
 
@@ -95,13 +95,13 @@ Tabs 3–4: `TODO` — not captured in video.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | श्री / सौ | Title | Dropdown | Yes | Values: `TODO` |
+| 1 | श्री / सौ | Title | Dropdown | Yes | Same as [New Customer salutation](../customer/new-customer-screen.md): `श्री.`, `सौ.`, `श्रीमती`, `कुमारी.`, `चि.`, `मेसर्स`, blank |
 | 2 | नाव(आडनाव -पहिले नाव-मधले नाव) | Name | Textbox | Yes | — |
 | 3 | जन्म दिनांक | Date of Birth | Date | No | — |
 | 4 | नामांकन करताना वय | Age at Nomination | Textbox | No | — |
 | 5 | नामांकन दिनांक | Nomination Date | Date | No | System date |
-| 6 | व्यवसाय | Occupation | Dropdown | No | Values: `TODO` |
-| 7 | नाते | Relation | Dropdown | Yes | Values: `TODO` |
+| 6 | व्यवसाय | Occupation | Dropdown | No | Same as [New Customer occupation](../customer/new-customer-screen.md) |
+| 7 | नाते | Relation | Dropdown | Yes | Same as [Membership nominee relation](../membership/new-membership-screen.md): `मुलगा`, `पुतण्या`, `मुली`, `मुलगा - पती`, `पति व मुलगा`, `वरील प्रमाणे`, `बायको`, `मैत्रीण`, `केअरटेकर`, `लहान भाऊ`, `स्वतः`, `पत्नी`, `पती` |
 | 8 | टक्केवारी | Percentage | Textbox | No | — |
 
 ### संपर्क माहिती
@@ -112,19 +112,22 @@ Tabs 3–4: `TODO` — not captured in video.
 | 10 | मोबाईल | Mobile | Textbox | No | — |
 | 11 | ई - मेल आय.डी. | Email ID | Textbox | No | — |
 
-### पत्ता माहिती
+### पत्ता माहिती (Address)
+
+Google Maps Places Autocomplete — same pattern as [New Customer Tab 2](../customer/new-customer-screen.md#google-maps-address-capture). No geographic master dropdowns.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 12 | पत्ता / इमारत / फ्लॅट / घर नं. | Address | Textbox | Yes | — |
-| 13 | रस्ता | Road | Textbox | No | — |
-| 14 | लँडमार्क | Landmark | Textbox | No | — |
-| 15 | ठिकाण | Location | Dropdown | Yes | e.g. `एन / ए` |
-| 16 | राज्य | State | Dropdown | Yes | Values: `TODO` |
-| 17 | जिल्हा | District | Dropdown | No | Values: `TODO` |
-| 18 | तालुका | Taluka | Dropdown | No | Values: `TODO` |
-| 19 | शहर | City | Dropdown | No | Values: `TODO` |
-| 20 | पिन कोड | Pin Code | Textbox | No | — |
+| 12 | पत्ता शोधा | Search Address | Google Maps Autocomplete | Yes | Populates fields 13–20 |
+| 13 | पत्ता / इमारत / फ्लॅट / घर नं. | Address | Textbox | Yes | Auto-populated from Google Maps; editable |
+| 14 | रस्ता | Road | Textbox | No | Auto-populated from Google Maps; editable |
+| 15 | लँडमार्क | Landmark | Textbox | No | Manual entry |
+| 16 | ठिकाण | Location | Textbox | Yes | Auto-populated from Google Maps; editable |
+| 17 | राज्य | State | Textbox | Yes | Auto-populated from Google Maps; editable |
+| 18 | जिल्हा | District | Textbox | No | Auto-populated from Google Maps; editable |
+| 19 | तालुका | Taluka | Textbox | No | Auto-populated from Google Maps; editable |
+| 20 | शहर | City | Textbox | No | Auto-populated from Google Maps; editable |
+| 21 | पिन कोड | Pin Code | Textbox | No | Auto-populated from Google Maps; editable |
 
 **Actions:** `टाका` (Add), `निवड करा`, `काढा`.
 

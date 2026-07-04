@@ -26,7 +26,7 @@ UI specification for manually calculating and posting fixed deposit interest.
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
 | 2 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `91 — FD`. Enter resolves by ID or name; shows display name |
-| 3 | व्याज दिनांक निवडा | Select Interest Date | Dropdown | Yes | Values: `TODO` |
+| 3 | व्याज दिनांक निवडा | Select Interest Date | Dropdown | Yes | Shows last financial year-end date only (e.g. `31.03.2026`). System-provided; not a multi-value master list |
 | 4 | व्याज पोस्ट दिनांक | Interest Post Date | Date | No | — |
 | 5 | खाते क्र. पासून | Account No. From | Textbox | No | — |
 | 6 | खाते क्र. पर्यंत | Account No. To | Textbox | No | — |

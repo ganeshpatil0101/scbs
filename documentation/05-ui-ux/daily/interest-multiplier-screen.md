@@ -26,7 +26,7 @@ UI specification for calculating daily (pigmy) deposit interest and maturity amo
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | योजना निवडा | Select Scheme | Dropdown | Yes | e.g. `पिग्मी ठेव`. Other values: `TODO` |
+| 1 | योजना निवडा | Select Scheme | Dropdown | Yes | Loaded dynamically from Daily schemes (Settings > नवीन योजना). Sample: `डेली १`, `डेली २`, `पिग्मी ठेव` |
 | 2 | सरळ / चक्रवाढ | Simple / Compound | Radio | No | — |
 | 3 | मासिक / तिमाही / सहामाही / वार्षिक | Monthly / Quarterly / Half-yearly / Yearly | Radio | No | When compound selected |
 | 4 | ठेव रक्कम (रु.) | Deposit Amount (Rs.) | Textbox | Yes | — |

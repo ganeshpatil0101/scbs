@@ -30,7 +30,7 @@ UI specification for searching and listing customers. Intended for AI agents imp
 | 4 | ग्राहकाचे नाव | Customer Name | Textbox | No | — |
 | 5 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | — |
 | 6 | ग्राहक क्र. (पर्यंत) | Customer No. (To) | Textbox | No | — |
-| 7 | स्थिती | Status | Dropdown | No | Default: `चालू` (Active). Other values: `TODO` |
+| 7 | स्थिती | Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended), `मृत` (Deceased), `निलंबित` (Barred), `निवृत्त` (Retired), `वैद्यकीय` (Medical), `काढला` (Removed) |
 | 8 | मास्टर्स पासिंग | Masters Passing | Dropdown | No | `सर्व` (All), `पास` (Pass), `पास नसलेले` (Not Passed), `रद्द` (Cancelled) |
 
 **Links:** `अॅडव्हान्स शोध` (Advance Search) — expands additional filters (not shown in screenshot).

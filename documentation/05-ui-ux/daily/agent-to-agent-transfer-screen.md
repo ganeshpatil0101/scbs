@@ -24,8 +24,8 @@ UI specification for transferring daily accounts from one agent to another.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | एजंट क्र. (कडून) | Agent No. (From) | Textbox + Dropdown | Yes | Values: `TODO` |
-| 2 | एजंट क्र. (कडे) | Agent No. (To) | Textbox + Dropdown | Yes | Values: `TODO` |
+| 1 | एजंट क्र. (कडून) | Agent No. (From) | Textbox + Dropdown | Yes | Agent number entry with name dropdown; loaded from registered Daily agents |
+| 2 | एजंट क्र. (कडे) | Agent No. (To) | Textbox + Dropdown | Yes | Agent number entry with name dropdown; loaded from registered Daily agents |
 | 3 | सर्व निवडा | Select All | Checkbox | No | — |
 
 ---

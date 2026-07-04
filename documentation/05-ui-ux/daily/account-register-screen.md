@@ -27,9 +27,9 @@ UI specification for searching and listing daily deposit accounts.
 | 1 | संघटना | Organization | Dropdown | No | e.g. श्रद्धा नागरी सहकारी पतसंस्था |
 | 2 | शाखा निवडा | Select Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
 | 3 | शाखेचे नाव | Branch Name | Dropdown | No | e.g. कोतोली मुख्य कार्यालय |
-| 4 | योजना निवडा | Select Scheme | Dropdown | No | e.g. `डेली २` |
+| 4 | योजना निवडा | Select Scheme | Dropdown | No | Loaded dynamically from Daily schemes (Settings > नवीन योजना). Sample: `डेली १`, `डेली २`, `पिग्मी ठेव` |
 | 5 | एजंट क्रमांक | Agent Number | Textbox | No | — |
-| 6 | एजंट निवडा | Select Agent | Dropdown | No | Values: `TODO` |
+| 6 | एजंट निवडा | Select Agent | Dropdown | No | Loaded dynamically from registered Daily agents for selected branch |
 | 7 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | — |
 | 8 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | — |
 | 9 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | — |

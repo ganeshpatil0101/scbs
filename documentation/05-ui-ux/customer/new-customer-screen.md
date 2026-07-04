@@ -49,20 +49,18 @@ Extracted frames: `screenshots/grahak_khatedar/new-customer-1-frames/`, `new-cus
 | 4 | ग्राहक क्र. | Customer No. | Textbox | Yes | Auto-generated; read-only (e.g. `661`) |
 | 5 | शाखा क्रमांक | Branch Number | Textbox | Yes | Read-only (e.g. `1`) |
 | 6 | शाखा | Branch | Dropdown | Yes | Read-only; e.g. कोतोली मुख्य कार्यालय |
-| 7 | श्री. / सौ. | Salutation | Dropdown | No | Default: `श्री.` (Mr.). Other values: `TODO` |
+| 7 | श्री. / सौ. | Salutation | Dropdown | No | Default: `श्री.`. Values: `श्री.`, `सौ.`, `श्रीमती`, `कुमारी.`, `चि.`, `मेसर्स`, blank |
 | 8 | नाव (आडनाव - पहिले नाव - मधले नाव) | Name (Surname - First - Middle) | Textbox | Yes | — |
-| 9 | लिंग | Gender | Dropdown | No | Default: `पुरुष` (Male). Read-only when salutation set. Other values: `TODO` |
-| 10 | जन्म दिनांक | Date of Birth | Date | Yes | — |
-| 11 | वय (वर्षे) | Age (Years) | Label | No | Auto-calculated from DOB |
-| 12 | वय (महिने) | Age (Months) | Label | No | Read-only |
-| 13 | व्यवसाय | Occupation | Dropdown | No | Default: `एन/ए` (N/A). Has `+` add button. Master list: `TODO` |
-| 14 | ग्राहक झाल्याची दिनांक | Customer Since Date | Date | No | Read-only; system date |
+| 9 | जन्म दिनांक | Date of Birth | Date | Yes | — |
+| 10 | वय (वर्षे) | Age (Years) | Label | No | Auto-calculated from DOB |
+| 11 | वय (महिने) | Age (Months) | Label | No | Read-only |
+| 12 | व्यवसाय | Occupation | Dropdown | No | Default: `एन/ए` (N/A). Has `+` add button. Values: `एन/ए`, `पेन्शनर(निवृत्त)`, `गृहिणी`, `नोकर`, `शेती`, `व्यवसाय`, `शिक्षण`, `शिक्षक`, `डॉक्टर`, `इतर` |
+| 13 | ग्राहक झाल्याची दिनांक | Customer Since Date | Date | No | Read-only; system date |
 
 ### Section: इतर तपशील (Other Details)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 15 | वैवाहिक स्थिती | Marital Status | Dropdown | No | Default: `निवडा`. Values: `TODO` |
 | 27 | शिक्षण | Education | Textbox | No | — |
 | 31 | देहावसान तारीख | Date of Death | Date | No | Disabled unless status warrants |
 | 37 | वडिलांचे नाव | Father's Name | Textbox | No | — |
@@ -82,24 +80,46 @@ Extracted frames: `screenshots/grahak_khatedar/new-customer-1-frames/`, `new-cus
 
 ## Tab 2: पत्ता (Address)
 
+### Google Maps Address Capture
+
+Geographic address fields are **not** master-data dropdowns. Use a single **Google Maps Places Autocomplete** component (Google Maps JavaScript API / Places API) as the primary address input.
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | पत्ता शोधा | Search Address | Google Maps Autocomplete | Yes | Google Places Autocomplete; user selects a place from suggestions |
+
+**On place selection**, parse `address_components` and `formatted_address` to populate fields 3–11 below. No CBS master lists for location, state, district, taluka, or city.
+
+| Google `address_component` type | Maps to field |
+| :--- | :--- |
+| `street_number`, `premise`, `subpremise`, `route` | पत्ता / इमारत / फ्लॅट / घर नं., रस्ता |
+| `sublocality`, `locality`, `neighborhood` | ठिकाण |
+| `administrative_area_level_3` (or nearest match) | तालुका |
+| `administrative_area_level_2` | जिल्हा |
+| `locality` / `administrative_area_level_2` | शहर |
+| `administrative_area_level_1` | राज्य |
+| `postal_code` | पिन कोड |
+
+Fields remain editable after auto-fill so the user can correct parsed values. `+` add buttons on geographic fields are **not** used.
+
 ### Section: पत्त्याची माहिती (Address Information)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | पत्त्याचा प्रकार | Address Type | Dropdown | Yes | `कायमचा` (Permanent), `कॉन्टॅक्ट` (Contact), `इतर` (Other) |
-| 2 | पत्ता / इमारत / फ्लॅट / घर नं. | Address / Building / Flat / House No. | Textbox | Yes | — |
-| 3 | रस्ता | Road | Textbox | No | — |
-| 4 | लँडमार्क | Landmark | Textbox | No | — |
-| 5 | ठिकाण | Location | Dropdown | Yes | Default: `एन/ए` or `निवडा`. Has `+` button. Values: `TODO` |
-| 6 | राज्य | State | Dropdown | Yes | Default: `निवडा`. Has `+` button. Values: `TODO` |
-| 7 | जिल्हा | District | Dropdown | Yes | Default: `निवडा`. Has `+` button. Values: `TODO` |
-| 8 | तालुका | Taluka | Dropdown | Yes | Default: `निवडा`. Has `+` button. Values: `TODO` |
-| 9 | शहर | City | Dropdown | Yes | Default: `निवडा`. Has `+` button. Values: `TODO` |
-| 10 | पिन कोड | Pin Code | Textbox | No | — |
-| 11 | मोबाईल क्रमांक | Mobile Number | Textbox | Yes | — |
-| 12 | दूरध्वनी क्रमांक | Telephone Number | Textbox | No | — |
-| 13 | ई - मेल | E-mail | Textbox | No | — |
-| 14 | संपर्क व कायमचा पत्ते सारखेच आहेत | Contact Same as Permanent | Checkbox | No | — |
+| 2 | पत्त्याचा प्रकार | Address Type | Dropdown | Yes | `कायमचा` (Permanent), `कॉन्टॅक्ट` (Contact), `इतर` (Other) |
+| 3 | पत्ता / इमारत / फ्लॅट / घर नं. | Address / Building / Flat / House No. | Textbox | Yes | Auto-populated from Google Maps; editable |
+| 4 | रस्ता | Road | Textbox | No | Auto-populated from Google Maps; editable |
+| 5 | लँडमार्क | Landmark | Textbox | No | Manual entry |
+| 6 | ठिकाण | Location | Textbox | Yes | Auto-populated from Google Maps; editable |
+| 7 | राज्य | State | Textbox | Yes | Auto-populated from Google Maps; editable |
+| 8 | जिल्हा | District | Textbox | Yes | Auto-populated from Google Maps; editable |
+| 9 | तालुका | Taluka | Textbox | Yes | Auto-populated from Google Maps; editable |
+| 10 | शहर | City | Textbox | Yes | Auto-populated from Google Maps; editable |
+| 11 | पिन कोड | Pin Code | Textbox | No | Auto-populated from Google Maps; editable |
+| 12 | मोबाईल क्रमांक | Mobile Number | Textbox | Yes | Manual entry |
+| 13 | दूरध्वनी क्रमांक | Telephone Number | Textbox | No | Manual entry |
+| 14 | ई - मेल | E-mail | Textbox | No | Manual entry |
+| 15 | संपर्क व कायमचा पत्ते सारखेच आहेत | Contact Same as Permanent | Checkbox | No | — |
 
 **Actions:** `टाका +` (Add) — add row to address grid. `क्लिअर` (Clear), `तपशील` (Details), `काढा` (Remove).
 

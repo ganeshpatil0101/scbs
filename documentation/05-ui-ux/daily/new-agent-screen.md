@@ -37,7 +37,7 @@ UI specification for registering a new daily-collection agent. Two-tab wizard.
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | ग्राहक क्र. | Customer No. | Textbox | Yes | — |
 | 2 | ग्राहक नाव | Customer Name | Textbox | No | — |
-| 3 | स्थिती | Status | Dropdown | Yes | e.g. `चालू`. Other values: `TODO` |
+| 3 | स्थिती | Status | Dropdown | Yes | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended) |
 | 4 | मेघदूत एजंट कोड | Meghdoot Agent Code | Textbox | No | — |
 | 5 | मोबाईल क्रमांक | Mobile Number | Textbox | No | — |
 | 6 | रुजू दिनांक | Joining Date | Date | Yes | System date |
@@ -77,7 +77,7 @@ UI specification for registering a new daily-collection agent. Two-tab wizard.
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 22 | होय / नाही | Yes / No | Radio | No | TDS applicable |
-| 23 | कारण निवडा | Select Reason | Dropdown | No | e.g. `सभासद`. Other values: `TODO` |
+| 23 | कारण निवडा | Select Reason | Dropdown | No | Shown when TDS = `नाही`. Values: `सभासद` (Member), `फॉर्म १५ डीआय`, `फॉर्म १५ एच`, `फॉर्म १५ जी` |
 
 ### भविष्य निर्वाह निधी (Provident Fund)
 
@@ -96,7 +96,7 @@ UI specification for registering a new daily-collection agent. Two-tab wizard.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | योजना निवडा | Select Scheme | Dropdown | Yes | Values: `TODO` |
+| 1 | योजना निवडा | Select Scheme | Dropdown | Yes | Loaded dynamically from Daily schemes (Settings > नवीन योजना). Sample: `डेली १`, `डेली २`, `पिग्मी ठेव` |
 | 2 | कमिशन (%) | Commission (%) | Textbox | Yes | — |
 | 3 | कमिशन (कर्ज खाते) (%) | Commission (Loan Account) (%) | Textbox | No | — |
 | 4 | विक्री कमिशन (%) | Sales Commission (%) | Textbox | No | — |

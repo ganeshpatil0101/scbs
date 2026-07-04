@@ -48,7 +48,15 @@ Extracted frames: `screenshots/lekha/multi-gl-frames/`.
 
 Columns: निवडा, अनु. क्र, जी.एल. हेड, खाते क्रमांक, खातेधारक, शिल्लक, नावे, जमा.
 
-**Footer fields:** `एकूण नावे`, `एकूण जमा`, `फरक रक्कम`, `व्यवहार मोड` (dropdown, required), `व्हाउचर तपशील` (textarea).
+**Footer fields:**
+
+| Marathi Label | English Label | Type | Required | Values / Notes |
+| :--- | :--- | :--- | :---: | :--- |
+| एकूण नावे | Total Debit | Label | — | Read-only |
+| एकूण जमा | Total Credit | Label | — | Read-only |
+| फरक रक्कम | Difference Amount | Label | — | Read-only |
+| व्यवहार मोड | Transaction Mode | Dropdown | Yes | `रोख` (Cash), `चेक` (Cheque) — v1: receipt/issue recording only, no live clearing |
+| व्हाउचर तपशील | Voucher Details | Textarea | No | — |
 
 **Links:** `केवायसी माहिती खात्याचा तपशील`, `व्यवहार तपशील`, `लेजर`.
 
