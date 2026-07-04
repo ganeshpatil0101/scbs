@@ -12,6 +12,7 @@ Branch and Account Holder lookups use a single **Autocomplete** field — see [.
 | :--- | :--- | :--- |
 | नवीन कर्ज | New Loan | [new-loan-screen.md](new-loan-screen.md) |
 | नवीन ठेव कर्ज | New Deposit Loan | [new-deposit-loan-screen.md](new-deposit-loan-screen.md) |
+| कर्ज माहिती | Loan Information | [loan-information-screen.md](loan-information-screen.md) |
 
 ## Screenshot Location
 

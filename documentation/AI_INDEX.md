@@ -32,7 +32,11 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 ## 05 — UI/UX — Membership
 - [05-ui-ux/membership/overview.md](05-ui-ux/membership/overview.md) — Index of Membership screens
 - [05-ui-ux/membership/new-membership-screen.md](05-ui-ux/membership/new-membership-screen.md) — नवीन सभासदत्व (3 tabs, from PNG + MP4)
-- [05-ui-ux/membership/shares-transfer-screen.md](05-ui-ux/membership/shares-transfer-screen.md) — शेअर्स ट्रान्सफर (3 tabs, from MP4)
+- [05-ui-ux/membership/member-register-screen.md](05-ui-ux/membership/member-register-screen.md) — सभासद रजिस्टर (from PNG `02_07`)
+- [05-ui-ux/membership/membership-transaction-screen.md](05-ui-ux/membership/membership-transaction-screen.md) — सभासदत्व व्यवहार (7 tabs, from PNG `02_07`)
+- [05-ui-ux/membership/dividend-transaction-screen.md](05-ui-ux/membership/dividend-transaction-screen.md) — लाभांश व्यवहार (6 tabs, from PNG `02_07`)
+- [05-ui-ux/membership/shares-transfer-screen.md](05-ui-ux/membership/shares-transfer-screen.md) — शेअर्स ट्रान्सफर (3 tabs, from MP4 + PNG `02_07`)
+- [05-ui-ux/membership/shares-transfer-list-screen.md](05-ui-ux/membership/shares-transfer-list-screen.md) — शेअर्स ट्रान्सफर यादी (from PNG `02_07`)
 
 ## 05 — UI/UX — Savings (Operational)
 - [05-ui-ux/savings/overview.md](05-ui-ux/savings/overview.md)
@@ -54,6 +58,7 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/loan/overview.md](05-ui-ux/loan/overview.md)
 - [05-ui-ux/loan/new-loan-screen.md](05-ui-ux/loan/new-loan-screen.md) — नवीन कर्ज (6 tabs, from MP4)
 - [05-ui-ux/loan/new-deposit-loan-screen.md](05-ui-ux/loan/new-deposit-loan-screen.md) — नवीन ठेव कर्ज (3 tabs, from MP4)
+- [05-ui-ux/loan/loan-information-screen.md](05-ui-ux/loan/loan-information-screen.md) — कर्ज माहिती (3 tabs, from PNG `02_07`)
 
 ## 05 — UI/UX — Daily (Operational)
 - [05-ui-ux/daily/overview.md](05-ui-ux/daily/overview.md)
