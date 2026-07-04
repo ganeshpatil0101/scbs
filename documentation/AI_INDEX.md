@@ -6,8 +6,8 @@ Top-level index of all project documentation. Add a link here whenever a new mod
 - [00-project-overview/vision.md](00-project-overview/vision.md) — Problem statement, vision, target market, competitive positioning
 - [00-project-overview/business-goals.md](00-project-overview/business-goals.md) — Numbered, measurable business goals (BG-001 to BG-008)
 - [00-project-overview/changelog.md] - ChangeLog
-- [00-project-overview/glossary.md](00-project-overview/glossary.md) — TODO: not yet authored
-- [00-project-overview/system-boundaries.md](00-project-overview/system-boundaries.md) — TODO: not yet authored
+- [00-project-overview/glossary.md](00-project-overview/glossary.md) — Platform, commercial, accounting, membership, and product term definitions
+- [00-project-overview/system-boundaries.md](00-project-overview/system-boundaries.md) — In-scope / out-of-scope / deferred features for v1 and future phases
 
 ## 01 — Architecture
 - [01-architecture/architecture-overview.md](01-architecture/architecture-overview.md) — Infra architecture (AWS `ap-south-1`), multi-tenancy decision, request flow, cost efficiency
@@ -121,4 +121,4 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/settings/loan/loan-interest-rate-change-screen.md](05-ui-ux/settings/loan/loan-interest-rate-change-screen.md) — व्याज दरात बदल
 
 ## Status
-Project Overview now has vision.md and business-goals.md authored (problem statement, target market, business model, success metrics, competitive context). glossary.md and system-boundaries.md remain TODO. Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). Backend business modules have not been started yet.
+Project Overview is complete: vision.md, business-goals.md, glossary.md, and system-boundaries.md. Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). Backend business modules have not been started yet.

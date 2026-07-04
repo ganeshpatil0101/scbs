@@ -29,8 +29,8 @@ This plan is sequenced so **nothing gets built on an undocumented assumption** �
 **Goal:** Every artifact needed to generate code without further clarification exists. No code is written in this phase.
 
 ### 1.1 Close Project-Overview Gaps
-- [ ] Author `00-project-overview/glossary.md` — define *tenant, AMC, GL Head, scheme, member vs nominal member, DP (drawing power)*, etc. (referenced but undefined in `vision.md`, `business-goals.md`)
-- [ ] Author `00-project-overview/system-boundaries.md` — what's in/out of scope (e.g., no SMS/WhatsApp gateway build, no payment gateway integration in v1?)
+- [x] Author `00-project-overview/glossary.md` — define *tenant, AMC, GL Head, scheme, member vs nominal member, DP (drawing power)*, etc. (referenced but undefined in `vision.md`, `business-goals.md`)
+- [x] Author `00-project-overview/system-boundaries.md` — what's in/out of scope (e.g., no SMS/WhatsApp gateway build, no payment gateway integration in v1?)
 
 ### 1.2 Finalize Architecture
 - [x] **Cloud provider decided**: AWS `ap-south-1` (Mumbai) — recorded as DEC-006 in `01-architecture/architecture-overview.md` (supersedes earlier OCI `ap-mumbai-1` draft)

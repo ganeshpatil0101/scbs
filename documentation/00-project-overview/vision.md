@@ -61,12 +61,12 @@ These principles should be treated as design constraints across all UI/UX and mo
 
 ## Dependencies
 
-- [glossary.md](glossary.md) — **TODO: not yet authored.** Vision terms used loosely above (e.g., "tenant", "AMC") should be formally defined there once authored, and this document updated to link to those definitions instead of using inline language.
+- [glossary.md](glossary.md) — formal definitions for terms used above (e.g., tenant, AMC).
 - [../01-architecture/architecture-overview.md](../01-architecture/architecture-overview.md) — multi-tenancy and cost-efficiency decisions that this vision depends on for cost-discipline feasibility.
 
 ## Related Documents
 
 - [business-goals.md](business-goals.md)
-- [system-boundaries.md](system-boundaries.md) — TODO: not yet authored
+- [system-boundaries.md](system-boundaries.md)
 - [../01-architecture/architecture-overview.md](../01-architecture/architecture-overview.md)
 - [../AI_INDEX.md](../AI_INDEX.md)

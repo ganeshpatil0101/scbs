@@ -80,6 +80,6 @@ This project is **not** justified or driven by an RBI or other regulatory compli
 ## Related Documents
 
 - [vision.md](vision.md)
-- [glossary.md](glossary.md) — TODO: not yet authored
+- [glossary.md](glossary.md)
 - [../01-architecture/architecture-overview.md](../01-architecture/architecture-overview.md)
 - [../AI_INDEX.md](../AI_INDEX.md)
