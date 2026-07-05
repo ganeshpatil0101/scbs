@@ -101,6 +101,16 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/recurring/manual-interest-provision-screen.md](05-ui-ux/recurring/manual-interest-provision-screen.md) — मॅन्युअल व्याज तरतूद
 - [05-ui-ux/recurring/interest-multiplier-screen.md](05-ui-ux/recurring/interest-multiplier-screen.md) — व्याज गुणक
 
+## 05 — UI/UX — Reports
+- [05-ui-ux/reports/overview.md](05-ui-ux/reports/overview.md) — Index of daily-use operational and statutory reports
+- [05-ui-ux/reports/balance-sheet-report.md](05-ui-ux/reports/balance-sheet-report.md) — ताळेबंद (2 pages, from PNG `Reports/`)
+- [05-ui-ux/reports/daybook-report.md](05-ui-ux/reports/daybook-report.md) — रोज किर्द (3 pages, from PNG `Reports/`)
+- [05-ui-ux/reports/gl-wise-report.md](05-ui-ux/reports/gl-wise-report.md) — जनरल लेजर (screen + print, from PNG `Reports/`)
+- [05-ui-ux/reports/loan-statement-report.md](05-ui-ux/reports/loan-statement-report.md) — कर्ज खाते उतार (from PNG `Reports/`)
+- [05-ui-ux/reports/profit-loss-statement-report.md](05-ui-ux/reports/profit-loss-statement-report.md) — नफा-तोटा पत्रक (2 pages, from PNG `Reports/`)
+- [05-ui-ux/reports/purvani-report.md](05-ui-ux/reports/purvani-report.md) — पुरवणी (screen + print, from PNG `Reports/`)
+- [05-ui-ux/reports/trial-balance-report.md](05-ui-ux/reports/trial-balance-report.md) — तेरीज पत्रक (3 pages, from PNG `Reports/`)
+
 ## 05 — UI/UX — Accounting (Operational)
 - [05-ui-ux/accounting/overview.md](05-ui-ux/accounting/overview.md)
 - [05-ui-ux/accounting/jama-screen.md](05-ui-ux/accounting/jama-screen.md) — जमा (from MP4)
@@ -145,4 +155,4 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/settings/loan/loan-interest-rate-change-screen.md](05-ui-ux/settings/loan/loan-interest-rate-change-screen.md) — व्याज दरात बदल
 
 ## Status
-Project Overview is complete: vision.md, business-goals.md, glossary.md, and system-boundaries.md. Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). Backend business modules have not been started yet.
+Project Overview is complete: vision.md, business-goals.md, glossary.md, and system-boundaries.md. Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). Report specs added from `screenshots/Reports/` (balance sheet, daybook, GL wise, loan statement, P&L, purvani, trial balance). Backend business modules have not been started yet.
