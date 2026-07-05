@@ -42,6 +42,7 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/savings/overview.md](05-ui-ux/savings/overview.md)
 - [05-ui-ux/savings/new-savings-account-screen.md](05-ui-ux/savings/new-savings-account-screen.md) — नवीन खाते (4 tabs)
 - [05-ui-ux/savings/savings-transaction-screen.md](05-ui-ux/savings/savings-transaction-screen.md) — व्यवहार (5 tabs)
+- [05-ui-ux/savings/account-register-screen.md](05-ui-ux/savings/account-register-screen.md) — खाते रजिस्टर (from PNG `05-07`)
 - [05-ui-ux/savings/manual-interest-calculation-screen.md](05-ui-ux/savings/manual-interest-calculation-screen.md) — मॅन्युअल व्याज आकारणी
 
 ## 05 — UI/UX — Fixed Deposit (Operational)
@@ -59,6 +60,26 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/loan/new-loan-screen.md](05-ui-ux/loan/new-loan-screen.md) — नवीन कर्ज (6 tabs, from MP4)
 - [05-ui-ux/loan/new-deposit-loan-screen.md](05-ui-ux/loan/new-deposit-loan-screen.md) — नवीन ठेव कर्ज (3 tabs, from MP4)
 - [05-ui-ux/loan/loan-information-screen.md](05-ui-ux/loan/loan-information-screen.md) — कर्ज माहिती (3 tabs, from PNG `02_07`)
+- [05-ui-ux/loan/loan-account-register-screen.md](05-ui-ux/loan/loan-account-register-screen.md) — खाते रजिस्टर (from PNG `05-07`)
+- [05-ui-ux/loan/loan-credit-transaction-screen.md](05-ui-ux/loan/loan-credit-transaction-screen.md) — जमा व्यवहार (7 tabs, from PNG `05-07`)
+- [05-ui-ux/loan/loan-debit-transaction-screen.md](05-ui-ux/loan/loan-debit-transaction-screen.md) — नावे व्यवहार (7 tabs, from PNG `05-07`)
+- [05-ui-ux/loan/loan-scheduled-interest-assessment-screen.md](05-ui-ux/loan/loan-scheduled-interest-assessment-screen.md) — शेड्युल व्याज > आवर्ती (from PNG `05-07`)
+- [05-ui-ux/loan/loan-manual-interest-provision-screen.md](05-ui-ux/loan/loan-manual-interest-provision-screen.md) — मॅन्युअल व्याज > तरतूद (from PNG `05-07`)
+
+## 05 — UI/UX — Bank (Operational)
+- [05-ui-ux/bank/overview.md](05-ui-ux/bank/overview.md)
+- [05-ui-ux/bank/bank-register-screen.md](05-ui-ux/bank/bank-register-screen.md) — बँक रजिस्टर (from PNG `05-07`)
+- [05-ui-ux/bank/new-bank-screen.md](05-ui-ux/bank/new-bank-screen.md) — नवीन बँक (from PNG `05-07`)
+- [05-ui-ux/bank/check-register-screen.md](05-ui-ux/bank/check-register-screen.md) — चेक रजिस्टर (from PNG `05-07`)
+
+## 05 — UI/UX — Investment (Operational)
+- [05-ui-ux/investment/overview.md](05-ui-ux/investment/overview.md)
+- [05-ui-ux/investment/bank-deposit-new-account-screen.md](05-ui-ux/investment/bank-deposit-new-account-screen.md) — बँक ठेव > नवीन खाते (from PNG `05-07`)
+- [05-ui-ux/investment/bank-deposit-transaction-screen.md](05-ui-ux/investment/bank-deposit-transaction-screen.md) — बँक ठेव > व्यवहार (4 tabs, from PNG `05-07`)
+- [05-ui-ux/investment/bank-deposit-new-bank-screen.md](05-ui-ux/investment/bank-deposit-new-bank-screen.md) — बँक ठेव > नवीन बँक (from PNG `05-07`)
+- [05-ui-ux/investment/bank-deposit-bank-list-screen.md](05-ui-ux/investment/bank-deposit-bank-list-screen.md) — बँक ठेव > बँक यादी (from PNG `05-07`)
+- [05-ui-ux/investment/bank-deposit-interest-assessment-screen.md](05-ui-ux/investment/bank-deposit-interest-assessment-screen.md) — बँक ठेव > व्याज आकारणी (from PNG `05-07`)
+- [05-ui-ux/investment/bank-deposit-interest-provision-screen.md](05-ui-ux/investment/bank-deposit-interest-provision-screen.md) — बँक ठेव > व्याज तरतूद (from PNG `05-07`)
 
 ## 05 — UI/UX — Daily (Operational)
 - [05-ui-ux/daily/overview.md](05-ui-ux/daily/overview.md)
@@ -88,6 +109,9 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/accounting/rokhapal-screen.md](05-ui-ux/accounting/rokhapal-screen.md) — रोखपाल (from MP4)
 - [05-ui-ux/accounting/multi-gl-transaction-screen.md](05-ui-ux/accounting/multi-gl-transaction-screen.md) — एकाधिक जीएल व्यवहार (from MP4)
 - [05-ui-ux/accounting/note-exchange-screen.md](05-ui-ux/accounting/note-exchange-screen.md) — नोटांची अदलाबदल
+- [05-ui-ux/accounting/contra-screen.md](05-ui-ux/accounting/contra-screen.md) — कॉन्ट्रा (2 tabs, from PNG `05-07`)
+- [05-ui-ux/accounting/transaction-passing-screen.md](05-ui-ux/accounting/transaction-passing-screen.md) — व्यवहार पासिंग (from PNG `05-07`)
+- [05-ui-ux/accounting/transaction-verification-screen.md](05-ui-ux/accounting/transaction-verification-screen.md) — व्यवहार तपासणी (from PNG `05-07`)
 
 ## 05 — UI/UX — Settings
 - [05-ui-ux/settings/overview.md](05-ui-ux/settings/overview.md) — Settings UI index

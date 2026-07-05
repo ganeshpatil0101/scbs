@@ -13,6 +13,11 @@ Branch and Account Holder lookups use a single **Autocomplete** field — see [.
 | नवीन कर्ज | New Loan | [new-loan-screen.md](new-loan-screen.md) |
 | नवीन ठेव कर्ज | New Deposit Loan | [new-deposit-loan-screen.md](new-deposit-loan-screen.md) |
 | कर्ज माहिती | Loan Information | [loan-information-screen.md](loan-information-screen.md) |
+| खाते रजिस्टर | Account Register | [loan-account-register-screen.md](loan-account-register-screen.md) |
+| जमा व्यवहार | Credit Transaction | [loan-credit-transaction-screen.md](loan-credit-transaction-screen.md) |
+| नावे व्यवहार | Debit Transaction | [loan-debit-transaction-screen.md](loan-debit-transaction-screen.md) |
+| शेड्युल व्याज > आवर्ती | Scheduled Interest > Recurring | [loan-scheduled-interest-assessment-screen.md](loan-scheduled-interest-assessment-screen.md) |
+| मॅन्युअल व्याज > तरतूद | Manual Interest > Provision | [loan-manual-interest-provision-screen.md](loan-manual-interest-provision-screen.md) |
 
 ## Screenshot Location
 

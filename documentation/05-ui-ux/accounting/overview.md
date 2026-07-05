@@ -13,9 +13,12 @@ Branch, GL, and Account Holder lookups use a single **Autocomplete** field — s
 | जमा | Credit / Receipt | [jama-screen.md](jama-screen.md) |
 | नावे | Debit / Payment | [nave-screen.md](nave-screen.md) |
 | ट्रान्सफर | Transfer | [transfer-screen.md](transfer-screen.md) |
+| कॉन्ट्रा | Contra | [contra-screen.md](contra-screen.md) |
 | रोखपाल | Cashier | [rokhapal-screen.md](rokhapal-screen.md) |
 | एकाधिक जीएल व्यवहार | Multiple GL Transaction | [multi-gl-transaction-screen.md](multi-gl-transaction-screen.md) |
 | नोटांची अदलाबदल | Note Exchange | [note-exchange-screen.md](note-exchange-screen.md) |
+| व्यवहार पासिंग | Transaction Passing | [transaction-passing-screen.md](transaction-passing-screen.md) |
+| व्यवहार तपासणी | Transaction Verification | [transaction-verification-screen.md](transaction-verification-screen.md) |
 
 ## Screenshot Location
 

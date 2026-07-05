@@ -8,3 +8,4 @@
 | 1.2.1 | 2026-07-04 | Nave: Tab 1 cash/bank dropdown; Tab 2 Cheque Information (mirrors Jama Tab 2) + cross-tab behavior | User review of pending TODOs | AI Agent |
 | 1.2.2 | 2026-07-04 | Rokhapal: denomination grid, incomplete-scroll dropdown, transaction history grid + cash summary | User screenshots + video frames | AI Agent |
 | 1.2.3 | 2026-07-04 | Transfer: credit-side (जमा खाते) section; Multi-GL: व्यवहार मोड dropdown values | User review of pending TODOs | AI Agent |
+| 1.3.0 | 2026-07-05 | Contra, Transaction Passing, Transaction Verification screen specs | New screenshots `05-07` in `screenshots/lekha/` | AI Agent |

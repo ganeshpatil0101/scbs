@@ -12,6 +12,7 @@ Branch, GL, and Account Holder lookups use a single **Autocomplete** field — s
 | :--- | :--- | :--- |
 | नवीन खाते | New Account | [new-savings-account-screen.md](new-savings-account-screen.md) |
 | व्यवहार | Transaction | [savings-transaction-screen.md](savings-transaction-screen.md) |
+| खाते रजिस्टर | Account Register | [account-register-screen.md](account-register-screen.md) |
 | मॅन्युअल व्याज आकारणी | Manual Interest Calculation | [manual-interest-calculation-screen.md](manual-interest-calculation-screen.md) |
 
 ## Screenshot Location
