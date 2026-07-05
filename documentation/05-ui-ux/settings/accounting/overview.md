@@ -4,23 +4,22 @@
 
 Index of **लेखा (Accounting)** settings screens.
 
-Branch lookups use a single **Autocomplete** field — see [../../shared/entity-autocomplete-pattern.md](../../shared/entity-autocomplete-pattern.md).
-
-## Screens
+## Current Screens
 
 | Screen (Marathi) | Screen (English) | Document |
 | :--- | :--- | :--- |
-| नवीन जी.एल ग्रुप | New GL Group | [new-gl-group-screen.md](new-gl-group-screen.md) |
-| नवीन जी. एल. हेड | New GL Head | [new-gl-head-screen.md](new-gl-head-screen.md) |
+| जी.एल. खाते सेटअप | GL Account Setup | [gl-account-setup-screen.md](gl-account-setup-screen.md) |
 
-## Screenshot Location
+## Superseded (reference only)
 
-```text
-screenshots/settings/
-```
+| Screen | Superseded by |
+| :--- | :--- |
+| नवीन जी.एल ग्रुप (New GL Group) | [gl-account-setup-screen.md](gl-account-setup-screen.md) |
+| नवीन जी. एल. हेड (New GL Head) | [gl-account-setup-screen.md](gl-account-setup-screen.md) |
 
 ## Related Documents
 
 - [changelog.md](changelog.md)
-- [../master/overview.md](../master/overview.md)
+- [../ux-optimization.md](../ux-optimization.md)
+- [../../shared/entity-autocomplete-pattern.md](../../shared/entity-autocomplete-pattern.md)
 - [../../../AI_INDEX.md](../../../AI_INDEX.md)

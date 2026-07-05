@@ -2,47 +2,40 @@
 
 ## Purpose
 
-Index of UI screen specifications for **नवीन योजना (New Scheme)** creation under **सेटिंग्ज (Settings)**. Each linked document is self-contained for AI agents generating frontend screens.
+Index of **नवीन योजना (New Scheme)** creation under **सेटिंग्ज (Settings)**.
 
-## Scope
+**Unified screen (2026-07-05):** One wizard with Scheme Type selector replaces five product-specific screens.
 
-Covers four deposit-product scheme types accessible from the top navigation:
+## Current Screen
 
-| Module (Marathi) | Module (English) | Screen Document |
+| Screen (Marathi) | Screen (English) | Document |
 | :--- | :--- | :--- |
-| डेली | Daily | [daily-new-scheme-screen.md](daily-new-scheme-screen.md) |
-| बचत | Savings | [savings-new-scheme-screen.md](savings-new-scheme-screen.md) |
-| मुदत ठेव | Fixed Deposit | [fixed-deposit-new-scheme-screen.md](fixed-deposit-new-scheme-screen.md) |
-| रिकरिंग | Recurring | [recurring-new-scheme-screen.md](recurring-new-scheme-screen.md) |
-| कर्ज | Loan | [loan-new-scheme-screen.md](loan-new-scheme-screen.md) |
+| नवीन योजना | New Scheme (unified) | [new-scheme-screen.md](new-scheme-screen.md) |
 
-## Common Navigation Pattern
+Scheme types: बचत (Savings), डेली (Daily), मुदत ठेव (FD), रिकरिंग (Recurring), कर्ज (Loan).
 
-All four screens share:
+## Superseded (reference only)
 
-- **Breadcrumb root:** `डॅशबोर्ड > सेटिंग्ज > <Product> > नवीन योजना`
-- **English breadcrumb:** `Dashboard > Settings > <Product> > New Scheme`
-- **Required-field legend:** `(*) आवश्यक फील्ड दर्शविते` — fields marked `*` are mandatory
-- **Tabbed wizard layout** with `मागे (Back)` / `पुढे (Next)` navigation on most tabs
-- **Charges tab** shares the same dropdown values across all four products (see each screen doc)
+| Module | Superseded spec |
+| :--- | :--- |
+| डेली | [daily-new-scheme-screen.md](daily-new-scheme-screen.md) |
+| बचत | [savings-new-scheme-screen.md](savings-new-scheme-screen.md) |
+| मुदत ठेव | [fixed-deposit-new-scheme-screen.md](fixed-deposit-new-scheme-screen.md) |
+| रिकरिंग | [recurring-new-scheme-screen.md](recurring-new-scheme-screen.md) |
+| कर्ज | [loan-new-scheme-screen.md](loan-new-scheme-screen.md) |
 
-## Screenshot Location
+## Shared Components
 
-All reference screenshots live under:
+- `app-interest-posting-grid` — Interest Posting tab (all types)
+- `app-rate-duration-grid` — Duration & Rates tab
+- `app-rate-slab-editor` — Account Closing penalty/commission slabs
+- `app-charges-select` — Charges tab (identical dropdown values)
 
-```text
-screenshots/settings/
-```
-
-Filename pattern: `डॅशबोर्ड-सेटिंग्ज-<Product>-नवीन योजना-<TabOrSection>.png`
-
-## Dependencies
-
-- Top navigation modules: सेटिंग्ज, बचत, मुदत ठेव, डेली, रिकरिंग (visible in screenshots)
-- GL Head master data (जीएल हेड क्र.) — source not shown in screenshots
+See [../../shared/ui-simplification-patterns.md](../../shared/ui-simplification-patterns.md).
 
 ## Related Documents
 
+- [../ux-optimization.md](../ux-optimization.md)
 - [../overview.md](../overview.md)
-- [../../AI_INDEX.md](../../AI_INDEX.md)
 - [changelog.md](changelog.md)
+- [../../AI_INDEX.md](../../AI_INDEX.md)

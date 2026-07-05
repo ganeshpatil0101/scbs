@@ -29,14 +29,17 @@ Turns a `05-ui-ux/**/*-screen.md` spec into a **layout-only** HTML prototype for
 
 - **Spec is the source of truth.** Every field, tab, section, grid column, and action must trace to a row in the screen's `.md` file.
 - **Simplicity first.** Layout optimized for cooperative bank staff (Clerk/Cashier) — clear grouping, visible required markers, generous spacing, no clutter.
+- **UI simplification patterns.** Before authoring or updating specs/mockups, read [ui-simplification-patterns.md](../../documentation/05-ui-ux/shared/ui-simplification-patterns.md). Use **प्रगत सेटिंग्ज (Advanced Settings)** for technical fields; render auto-generated values as read-only; hide conditional fields until their parent is set (do not show disabled controls).
+- **Current specs only.** Mockups target **non-superseded** screen specs. If a spec has a Superseded banner, use the linked replacement spec. Check `<domain>/ux-optimization.md` when present.
 - **Traceability.** Every form control gets `data-spec-field="<row#>"` matching the spec table's `#` column.
 - **No invented master data.** Dropdown options marked `TODO` render as disabled options with a visible badge.
 - **Marathi labels only in mockups.** Use the Marathi column from the spec. English labels are deferred to Angular i18n generation.
 
 ## Execution Workflow (always follow in order)
 
-1. **Read [`AI_INDEX.md`](../../documentation/AI_INDEX.md)**, then the target `*-screen.md`, its module `overview.md`, and `changelog.md`.
-2. **Resolve output path** from spec location:
+1. **Read [`AI_INDEX.md`](../../documentation/AI_INDEX.md)**, then the target `*-screen.md`, its module `overview.md`, `changelog.md`, and [ui-simplification-patterns.md](../../documentation/05-ui-ux/shared/ui-simplification-patterns.md) if the domain has been optimized.
+2. **Skip superseded specs.** If the spec starts with `Superseded`, locate the replacement from `overview.md` or `ux-optimization.md` and mockup that file instead.
+3. **Resolve output path** from spec location:
    - Spec: `documentation/05-ui-ux/<module>/.../<screen-name>.md`
    - Mockup: `documentation/05-ui-ux/mockups/<module>/.../<screen-name>/`
 3. **Check reference screenshots** listed in the spec. If missing from repo, note in `README.md` — proceed spec-driven.
@@ -145,6 +148,7 @@ Non-negotiable:
 
 ## Pre-Completion Checklist
 
+- [ ] Advanced Settings section collapsed by default when spec defines `प्रगत सेटिंग्ज`
 - [ ] Branch/GL/Account lookup fields use single Autocomplete control (not legacy ID + select pairs)
 - [ ] Every spec field/column has HTML with `data-spec-field`
 - [ ] Marathi labels only — no duplicate EN spans or language toggle
@@ -156,7 +160,9 @@ Non-negotiable:
 
 ## Related Documents
 
+- [optimize-ui-ux.mdc](optimize-ui-ux.mdc) — Domain UX review and consolidation
 - [generate-ui-screen.mdc](generate-ui-screen.mdc) — Phase 2: approved mockup → Angular + i18n
+- [documentation/05-ui-ux/shared/ui-simplification-patterns.md](../../documentation/05-ui-ux/shared/ui-simplification-patterns.md)
 - [documentation/05-ui-ux/shared/entity-autocomplete-pattern.md](../../documentation/05-ui-ux/shared/entity-autocomplete-pattern.md) — Autocomplete field standard
 - [documentation/AI_INDEX.md](../../documentation/AI_INDEX.md)
 

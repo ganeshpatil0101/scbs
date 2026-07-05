@@ -1,5 +1,7 @@
 # Screen Spec — Dividend Calculation (सेटिंग्ज > सभासदत्व > लाभांश आकारणी)
 
+> **Superseded (2026-07-05):** Consolidated into [membership-configuration-screen.md](membership-configuration-screen.md). Retained for field reference only.
+
 ## Purpose
 
 UI specification for calculating member dividends. Intended for AI agents implementing this screen.

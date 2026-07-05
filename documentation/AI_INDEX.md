@@ -14,6 +14,7 @@ Top-level index of all project documentation. Add a link here whenever a new mod
 
 ## 05 — UI/UX — Shared Patterns
 - [05-ui-ux/shared/entity-autocomplete-pattern.md](05-ui-ux/shared/entity-autocomplete-pattern.md) — Branch / GL / Account Holder Autocomplete standard
+- [05-ui-ux/shared/ui-simplification-patterns.md](05-ui-ux/shared/ui-simplification-patterns.md) — UX simplification patterns for non-technical bank staff
 
 ## 05 — UI/UX — Mockups (HTML prototypes for bank review)
 
@@ -124,35 +125,38 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/accounting/transaction-verification-screen.md](05-ui-ux/accounting/transaction-verification-screen.md) — व्यवहार तपासणी (from PNG `05-07`)
 
 ## 05 — UI/UX — Settings
-- [05-ui-ux/settings/overview.md](05-ui-ux/settings/overview.md) — Settings UI index
 
-### Settings — Schemes
-- [05-ui-ux/settings/schemes/overview.md](05-ui-ux/settings/schemes/overview.md) — New Scheme screens (Daily, Savings, FD, Recurring, Loan)
-- [05-ui-ux/settings/schemes/daily-new-scheme-screen.md](05-ui-ux/settings/schemes/daily-new-scheme-screen.md) — डेली > नवीन योजना (5 tabs)
-- [05-ui-ux/settings/schemes/savings-new-scheme-screen.md](05-ui-ux/settings/schemes/savings-new-scheme-screen.md) — बचत > नवीन योजना (3 tabs)
-- [05-ui-ux/settings/schemes/fixed-deposit-new-scheme-screen.md](05-ui-ux/settings/schemes/fixed-deposit-new-scheme-screen.md) — मुदत ठेव > नवीन योजना (6 tabs)
-- [05-ui-ux/settings/schemes/recurring-new-scheme-screen.md](05-ui-ux/settings/schemes/recurring-new-scheme-screen.md) — रिकरिंग > नवीन योजना (7 tabs)
-- [05-ui-ux/settings/schemes/loan-new-scheme-screen.md](05-ui-ux/settings/schemes/loan-new-scheme-screen.md) — कर्ज > नवीन योजना (6 tabs, from video)
+**UX optimized (2026-07-05):** 13 screens → 6. Audit: [05-ui-ux/settings/ux-optimization.md](05-ui-ux/settings/ux-optimization.md)
+
+- [05-ui-ux/settings/overview.md](05-ui-ux/settings/overview.md) — Settings UI index (current screens)
+- [05-ui-ux/settings/ux-optimization.md](05-ui-ux/settings/ux-optimization.md) — UX audit and action checklist
+- [05-ui-ux/settings/changelog.md](05-ui-ux/settings/changelog.md)
 
 ### Settings — Master
 - [05-ui-ux/settings/master/overview.md](05-ui-ux/settings/master/overview.md)
-- [05-ui-ux/settings/master/new-employee-screen.md](05-ui-ux/settings/master/new-employee-screen.md) — नवीन कर्मचारी
-- [05-ui-ux/settings/master/new-user-screen.md](05-ui-ux/settings/master/new-user-screen.md) — नवीन युजर
+- [05-ui-ux/settings/master/staff-system-access-screen.md](05-ui-ux/settings/master/staff-system-access-screen.md) — कर्मचारी व सिस्टम प्रवेश (consolidated)
 - [05-ui-ux/settings/master/user-role-screen.md](05-ui-ux/settings/master/user-role-screen.md) — युजर रोल
+- ~~new-employee-screen.md~~ → superseded by staff-system-access-screen.md
+- ~~new-user-screen.md~~ → superseded by staff-system-access-screen.md
 
 ### Settings — Accounting
 - [05-ui-ux/settings/accounting/overview.md](05-ui-ux/settings/accounting/overview.md)
-- [05-ui-ux/settings/accounting/new-gl-group-screen.md](05-ui-ux/settings/accounting/new-gl-group-screen.md) — नवीन जी.एल ग्रुप
-- [05-ui-ux/settings/accounting/new-gl-head-screen.md](05-ui-ux/settings/accounting/new-gl-head-screen.md) — नवीन जी. एल. हेड (from MP4)
+- [05-ui-ux/settings/accounting/gl-account-setup-screen.md](05-ui-ux/settings/accounting/gl-account-setup-screen.md) — जी.एल. खाते सेटअप (consolidated)
+- ~~new-gl-group-screen.md~~ / ~~new-gl-head-screen.md~~ → superseded by gl-account-setup-screen.md
 
 ### Settings — Membership
 - [05-ui-ux/settings/membership/overview.md](05-ui-ux/settings/membership/overview.md)
-- [05-ui-ux/settings/membership/dividend-calculation-screen.md](05-ui-ux/settings/membership/dividend-calculation-screen.md) — लाभांश आकारणी
-- [05-ui-ux/settings/membership/share-rules-screen.md](05-ui-ux/settings/membership/share-rules-screen.md) — शेअर्स नियम
+- [05-ui-ux/settings/membership/membership-configuration-screen.md](05-ui-ux/settings/membership/membership-configuration-screen.md) — सभासदत्व सेटिंग्ज (consolidated)
+- ~~share-rules-screen.md~~ / ~~dividend-calculation-screen.md~~ → superseded by membership-configuration-screen.md
+
+### Settings — Schemes
+- [05-ui-ux/settings/schemes/overview.md](05-ui-ux/settings/schemes/overview.md)
+- [05-ui-ux/settings/schemes/new-scheme-screen.md](05-ui-ux/settings/schemes/new-scheme-screen.md) — नवीन योजना (unified; all product types)
+- ~~daily/savings/fd/recurring/loan-new-scheme-screen.md~~ → superseded by new-scheme-screen.md
 
 ### Settings — Loan
 - [05-ui-ux/settings/loan/overview.md](05-ui-ux/settings/loan/overview.md)
-- [05-ui-ux/settings/loan/loan-interest-rate-change-screen.md](05-ui-ux/settings/loan/loan-interest-rate-change-screen.md) — व्याज दरात बदल
+- [05-ui-ux/settings/loan/loan-interest-rate-change-screen.md](05-ui-ux/settings/loan/loan-interest-rate-change-screen.md) — व्याज दरात बदल (simplified)
 
 ## Status
-Project Overview is complete: vision.md, business-goals.md, glossary.md, and system-boundaries.md. Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). Report specs added from `screenshots/Reports/` (balance sheet, daybook, GL wise, loan statement, P&L, purvani, trial balance). Backend business modules have not been started yet.
+Project Overview is complete: vision.md, business-goals.md, glossary.md, and system-boundaries.md. Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). **Settings module UX-optimized (2026-07-05):** 6 consolidated screens per [05-ui-ux/settings/ux-optimization.md](05-ui-ux/settings/ux-optimization.md). Report specs added from `screenshots/Reports/`. Reusable UX skill: `.cursor/skills/optimize-ui-ux/`. Backend business modules have not been started yet.

@@ -4,24 +4,23 @@
 
 Index of **मास्टर (Master)** settings screens under **सेटिंग्ज (Settings)**.
 
-Branch lookups use a single **Autocomplete** field — see [../../shared/entity-autocomplete-pattern.md](../../shared/entity-autocomplete-pattern.md).
-
-## Screens
+## Current Screens
 
 | Screen (Marathi) | Screen (English) | Document |
 | :--- | :--- | :--- |
-| नवीन कर्मचारी | New Employee | [new-employee-screen.md](new-employee-screen.md) |
-| नवीन युजर | New User | [new-user-screen.md](new-user-screen.md) |
+| कर्मचारी व सिस्टम प्रवेश | Staff & System Access | [staff-system-access-screen.md](staff-system-access-screen.md) |
 | युजर रोल | User Role | [user-role-screen.md](user-role-screen.md) |
 
-## Screenshot Location
+## Superseded (reference only)
 
-```text
-screenshots/settings/
-```
+| Screen | Superseded by |
+| :--- | :--- |
+| नवीन कर्मचारी (New Employee) | [staff-system-access-screen.md](staff-system-access-screen.md) |
+| नवीन युजर (New User) | [staff-system-access-screen.md](staff-system-access-screen.md) |
 
 ## Related Documents
 
 - [changelog.md](changelog.md)
-- [../schemes/overview.md](../schemes/overview.md)
+- [../ux-optimization.md](../ux-optimization.md)
+- [../../shared/entity-autocomplete-pattern.md](../../shared/entity-autocomplete-pattern.md)
 - [../../../AI_INDEX.md](../../../AI_INDEX.md)

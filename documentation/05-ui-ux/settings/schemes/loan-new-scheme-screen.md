@@ -1,5 +1,7 @@
 # Screen Spec — Loan New Scheme (कर्ज > नवीन योजना)
 
+> **Superseded (2026-07-05):** Consolidated into [new-scheme-screen.md](new-scheme-screen.md) (Scheme Type = कर्ज). Retained for field reference only.
+
 ## Purpose
 
 UI specification for creating a new **Loan (कर्ज)** scheme. Extracted from video walkthrough. Intended for AI agents implementing this screen.

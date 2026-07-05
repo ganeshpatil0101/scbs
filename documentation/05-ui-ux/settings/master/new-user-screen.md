@@ -1,5 +1,7 @@
 # Screen Spec — New User (सेटिंग्ज > मास्टर > नवीन युजर)
 
+> **Superseded (2026-07-05):** Consolidated into [staff-system-access-screen.md](staff-system-access-screen.md). Retained for field reference only.
+
 ## Purpose
 
 UI specification for creating a system user. Two-tab form. Intended for AI agents implementing this screen.

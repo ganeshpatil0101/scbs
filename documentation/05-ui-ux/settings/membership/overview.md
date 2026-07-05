@@ -4,23 +4,22 @@
 
 Index of **सभासदत्व (Membership)** configuration screens under **सेटिंग्ज (Settings)**.
 
-Branch lookups use a single **Autocomplete** field — see [../../shared/entity-autocomplete-pattern.md](../../shared/entity-autocomplete-pattern.md).
-
-## Screens
+## Current Screens
 
 | Screen (Marathi) | Screen (English) | Document |
 | :--- | :--- | :--- |
-| लाभांश आकारणी | Dividend Calculation | [dividend-calculation-screen.md](dividend-calculation-screen.md) |
-| शेअर्स नियम | Share Rules | [share-rules-screen.md](share-rules-screen.md) |
+| सभासदत्व सेटिंग्ज | Membership Configuration | [membership-configuration-screen.md](membership-configuration-screen.md) |
 
-## Screenshot Location
+## Superseded (reference only)
 
-```text
-screenshots/settings/
-```
+| Screen | Superseded by |
+| :--- | :--- |
+| शेअर्स नियम (Share Rules) | [membership-configuration-screen.md](membership-configuration-screen.md) |
+| लाभांश आकारणी (Dividend Calculation) | [membership-configuration-screen.md](membership-configuration-screen.md) |
 
 ## Related Documents
 
 - [changelog.md](changelog.md)
+- [../ux-optimization.md](../ux-optimization.md)
 - [../../membership/overview.md](../../membership/overview.md)
 - [../../../AI_INDEX.md](../../../AI_INDEX.md)

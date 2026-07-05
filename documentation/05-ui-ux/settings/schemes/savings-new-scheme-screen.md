@@ -1,5 +1,7 @@
 # Screen Spec — Savings New Scheme (बचत > नवीन योजना)
 
+> **Superseded (2026-07-05):** Consolidated into [new-scheme-screen.md](new-scheme-screen.md) (Scheme Type = बचत). Retained for field reference only.
+
 ## Purpose
 
 UI specification for creating a new **Savings (बचत)** scheme. Intended for AI agents implementing this screen.

@@ -2,9 +2,9 @@
 
 ## Purpose
 
-Index of **कर्ज (Loan)** settings screens (excluding New Scheme — see [schemes/overview.md](../schemes/overview.md)).
+Index of **कर्ज (Loan)** settings screens (scheme creation is under [schemes/new-scheme-screen.md](../schemes/new-scheme-screen.md)).
 
-## Screens
+## Current Screens
 
 | Screen (Marathi) | Screen (English) | Document |
 | :--- | :--- | :--- |
@@ -13,5 +13,6 @@ Index of **कर्ज (Loan)** settings screens (excluding New Scheme — see 
 ## Related Documents
 
 - [changelog.md](changelog.md)
-- [../schemes/loan-new-scheme-screen.md](../schemes/loan-new-scheme-screen.md)
+- [../ux-optimization.md](../ux-optimization.md)
+- [../schemes/new-scheme-screen.md](../schemes/new-scheme-screen.md)
 - [../../../AI_INDEX.md](../../../AI_INDEX.md)

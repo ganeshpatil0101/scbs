@@ -20,6 +20,7 @@ You are generating modular, AI-consumable documentation for a Core Banking Softw
 - **No invention.** Never invent business rules, APIs, entities, or glossary terms. If something is missing, insert a `TODO:` marker and ask the user, rather than guessing.
 - **No code in this step.** Do not generate implementation code while producing documentation — requirements/use-cases must exist first.
 - **Entity lookup fields.** Branch, GL Head, and Account Holder lookups use a single `Autocomplete` field per entity — see [documentation/05-ui-ux/shared/entity-autocomplete-pattern.md](../../documentation/05-ui-ux/shared/entity-autocomplete-pattern.md). Never document legacy ID + select (or search + select) pairs.
+- **UI screen specs follow simplification patterns.** When authoring or updating `05-ui-ux/**/*-screen.md`, apply [documentation/05-ui-ux/shared/ui-simplification-patterns.md](../../documentation/05-ui-ux/shared/ui-simplification-patterns.md). Run `@optimize-ui-ux` before major spec additions to a domain folder.
 
 ## Workflow — Follow In Order
 
@@ -96,6 +97,7 @@ Every file ends with:
 - [ ] IDs are sequential with no duplicates or gaps
 - [ ] Every use case has all 7 required sections
 - [ ] Every business rule has ≥1 acceptance test
+- [ ] UI screen specs (if touched) follow ui-simplification-patterns.md
 - [ ] `changelog.md` updated
 
 If any box fails, fix it before telling the user the task is done.

@@ -1,5 +1,7 @@
 # Screen Spec — New GL Head (सेटिंग > लेखा > नवीन जी. एल. हेड)
 
+> **Superseded (2026-07-05):** Consolidated into [gl-account-setup-screen.md](gl-account-setup-screen.md). Retained for field reference only.
+
 ## Purpose
 
 UI specification for creating a new GL (General Ledger) head. Intended for AI agents implementing this screen.

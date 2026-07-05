@@ -1,4 +1,6 @@
-# Screen Spec — New Employee (सेटिंग्ज > मास्टर > नवीन कर्मचारी) - (Not required in first phase skip now)
+# Screen Spec — New Employee (सेटिंग्ज > मास्टर > नवीन कर्मचारी)
+
+> **Superseded (2026-07-05):** Consolidated into [staff-system-access-screen.md](staff-system-access-screen.md). Retained for field reference only.
 
 ## Purpose
 

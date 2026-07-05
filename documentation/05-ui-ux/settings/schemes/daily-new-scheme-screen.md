@@ -1,5 +1,7 @@
 # Screen Spec — Daily New Scheme (डेली > नवीन योजना)
 
+> **Superseded (2026-07-05):** Consolidated into [new-scheme-screen.md](new-scheme-screen.md) (Scheme Type = डेली). Retained for field reference only.
+
 ## Purpose
 
 UI specification for creating a new **Daily (डेली)** deposit scheme. Intended for AI agents implementing this screen.

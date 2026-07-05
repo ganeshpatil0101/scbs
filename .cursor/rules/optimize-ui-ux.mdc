@@ -1,0 +1,16 @@
+---
+description: Review and simplify CBS UI/UX screen specs for non-technical bank staff. Consolidate screens, remove redundant fields, apply ui-simplification-patterns. Use when optimizing a 05-ui-ux domain or invoking "/optimize-ui-ux".
+globs:
+  - "documentation/**/05-ui-ux/**"
+alwaysApply: false
+---
+
+# Optimize UI/UX Rule
+
+Delegates to the project skill: [.cursor/skills/optimize-ui-ux/SKILL.md](../skills/optimize-ui-ux/SKILL.md)
+
+When this rule applies, read and follow that skill in full.
+
+**Canonical patterns:** [documentation/05-ui-ux/shared/ui-simplification-patterns.md](../../documentation/05-ui-ux/shared/ui-simplification-patterns.md)
+
+**Reference audit:** [documentation/05-ui-ux/settings/ux-optimization.md](../../documentation/05-ui-ux/settings/ux-optimization.md)

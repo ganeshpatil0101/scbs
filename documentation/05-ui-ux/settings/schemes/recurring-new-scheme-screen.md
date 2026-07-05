@@ -1,5 +1,7 @@
 # Screen Spec — Recurring New Scheme (रिकरिंग > नवीन योजना)
 
+> **Superseded (2026-07-05):** Consolidated into [new-scheme-screen.md](new-scheme-screen.md) (Scheme Type = रिकरिंग). Retained for field reference only.
+
 ## Purpose
 
 UI specification for creating a new **Recurring (रिकरिंग)** deposit scheme. Intended for AI agents implementing this screen.

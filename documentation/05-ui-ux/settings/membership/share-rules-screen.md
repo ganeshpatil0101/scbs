@@ -1,5 +1,7 @@
 # Screen Spec — Share Rules (सेटिंग्ज > सभासदत्व > शेअर्स नियम)
 
+> **Superseded (2026-07-05):** Consolidated into [membership-configuration-screen.md](membership-configuration-screen.md). Retained for field reference only.
+
 ## Purpose
 
 UI specification for configuring share (equity) rules per branch. Intended for AI agents implementing this screen.

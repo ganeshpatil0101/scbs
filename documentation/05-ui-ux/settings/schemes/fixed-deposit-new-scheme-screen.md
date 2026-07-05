@@ -1,5 +1,7 @@
 # Screen Spec — Fixed Deposit New Scheme (मुदत ठेव > नवीन योजना)
 
+> **Superseded (2026-07-05):** Consolidated into [new-scheme-screen.md](new-scheme-screen.md) (Scheme Type = मुदत ठेव). Retained for field reference only.
+
 ## Purpose
 
 UI specification for creating a new **Fixed Deposit / Term Deposit (मुदत ठेव)** scheme. Intended for AI agents implementing this screen.
