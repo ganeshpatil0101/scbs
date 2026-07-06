@@ -21,7 +21,15 @@ Top-level index of all project documentation. Add a link here whenever a new mod
 Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mockup`. Tailwind CSS v4 (CDN), Marathi labels, centered responsive layout. Shareable in any browser; after approval, use `@generate-ui-screen` for Angular + full i18n.
 
 - [05-ui-ux/mockups/shared/mockup-base.css](05-ui-ux/mockups/shared/mockup-base.css) — Shared Tailwind `@theme` tokens and component classes
-- [05-ui-ux/mockups/settings/master/new-user-screen/](05-ui-ux/mockups/settings/master/new-user-screen/) — नवीन युजर (Draft)
+
+**Settings mockups (2026-07-05 UX consolidation — 6 screens):**
+
+- [05-ui-ux/mockups/settings/master/staff-system-access-screen/](05-ui-ux/mockups/settings/master/staff-system-access-screen/) — कर्मचारी व सिस्टम प्रवेश (Draft)
+- [05-ui-ux/mockups/settings/master/user-role-screen/](05-ui-ux/mockups/settings/master/user-role-screen/) — युजर रोल (Draft)
+- [05-ui-ux/mockups/settings/accounting/gl-account-setup-screen/](05-ui-ux/mockups/settings/accounting/gl-account-setup-screen/) — जी.एल. खाते सेटअप (Draft)
+- [05-ui-ux/mockups/settings/membership/membership-configuration-screen/](05-ui-ux/mockups/settings/membership/membership-configuration-screen/) — सभासदत्व सेटिंग्ज (Draft)
+- [05-ui-ux/mockups/settings/schemes/new-scheme-screen/](05-ui-ux/mockups/settings/schemes/new-scheme-screen/) — नवीन योजना unified (Draft)
+- [05-ui-ux/mockups/settings/loan/loan-interest-rate-change-screen/](05-ui-ux/mockups/settings/loan/loan-interest-rate-change-screen/) — व्याज दरात बदल (Draft)
 
 ## 05 — UI/UX — Customer
 - [05-ui-ux/customer/overview.md](05-ui-ux/customer/overview.md) — Index of Customer screens

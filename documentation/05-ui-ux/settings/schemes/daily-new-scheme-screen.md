@@ -245,10 +245,11 @@ Confirm whether selecting a charge requires a separate Add action.
 
 ## Mockup
 
+> **Superseded mockup.** Use [new-scheme-screen mockup](../../mockups/settings/schemes/new-scheme-screen/index.html) (Scheme Type = डेली) instead.
+
 | Property | Value |
 | :--- | :--- |
-| HTML mockup | [mockups/settings/schemes/daily-new-scheme-screen/index.html](../../mockups/settings/schemes/daily-new-scheme-screen/index.html) |
-| Review guide | [mockups/settings/schemes/daily-new-scheme-screen/README.md](../../mockups/settings/schemes/daily-new-scheme-screen/README.md) |
+| HTML mockup | ~~mockups/settings/schemes/daily-new-scheme-screen/~~ → [new-scheme-screen](../../mockups/settings/schemes/new-scheme-screen/index.html) |
 | Stack | Tailwind CSS v4 (CDN), Marathi labels only |
 | Status | Draft — pending bank user review |
 

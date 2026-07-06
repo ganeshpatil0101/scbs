@@ -83,13 +83,17 @@ Display: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Accoun
 4. **Renumber** — after merging rows, renumber the `#` column sequentially in that table.
 5. **Standalone filters** — a lone `शाखा कोड` on list/register screens with no paired select becomes a single `Autocomplete` (type change only, label may stay `शाखा कोड` / Branch Code).
 
+## New Scheme — GL binding
+
+On [new-scheme-screen.md](../settings/schemes/new-scheme-screen.md), field **जी.एल. निवडा (Select GL)** binds each product scheme to a GL Head from master. Use `entityType: gl`; options from GL master API (not hardcoded). Daily schemes: validate resolved GL Head number ≤ 99.
+
 ## Exclusions (do not consolidate)
 
 - Auto-generated read-only `खाते क्र.` on new-account screens
+- Auto-generated read-only `जी. एल. हेड क्र.` on [GL Account Setup](../settings/accounting/gl-account-setup-screen.md) Tab 2 (creation flow only)
 - Range filters: `खाते क्र. (पासून)` / `(पर्यंत)`
 - `सभासद खाते क्र.`, `बँकेचे बचत खाते क्रमांक`
 - Grid column definitions
-- Scheme setup `जीएल हेड क्र.` on New Scheme screens (creation field, not lookup)
 - `ग्राहक क्र.` + `ग्राहक निवडा` pairs (separate pattern; not in scope)
 
 ## Implementation Notes (Angular / mockup)
@@ -101,3 +105,4 @@ Display: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Accoun
 
 - [../../AI_INDEX.md](../../AI_INDEX.md)
 - [../accounting/overview.md](../accounting/overview.md)
+- [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)

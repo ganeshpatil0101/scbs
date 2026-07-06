@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>व्याज दरात बदल — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <h1 class="text-2xl font-bold text-gray-900">व्याज दरात बदल</h1>
+      <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; सेटिंग्ज &gt; कर्ज &gt; व्याज दरात बदल</p>
+    </header>
+
+    <section class="mockup-section" aria-labelledby="section-rate-change">
+      <h2 class="mockup-section-title" id="section-rate-change">व्याज दर बदल</h2>
+      <div class="mockup-field-grid mockup-field-grid--2">
+        <div data-spec-field="1">
+          <label class="mockup-label" for="field-scheme">
+            योजना <span class="mockup-required">*</span>
+            <span class="mockup-badge-todo">TODO</span>
+          </label>
+          <select id="field-scheme">
+            <option value="">निवडा</option>
+            <option disabled>[TODO — loan scheme list pending]</option>
+          </select>
+        </div>
+        <div data-spec-field="2">
+          <label class="mockup-label" for="field-change-date">
+            बदल दिनांक <span class="mockup-required">*</span>
+          </label>
+          <input type="date" id="field-change-date" value="2026-07-05">
+        </div>
+        <div class="sm:col-span-2">
+          <fieldset class="border-0 p-0 m-0" aria-label="दर लागू करण्याचा प्रकार">
+            <div class="flex flex-wrap gap-6">
+              <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="3">
+                <input type="radio" name="applyRate" value="all" checked>
+                <span>सर्व खात्यांना नवीन दर लागू करावा</span>
+              </label>
+              <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="4">
+                <input type="radio" name="applyRate" value="new">
+                <span>फक्त नवीन खात्यांना नवीन दर लागू करावा</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
+    <details class="mockup-section">
+      <summary class="mockup-section-title cursor-pointer select-none" style="border-bottom:none;margin-bottom:0">मागील व्याजदर</summary>
+      <div class="overflow-x-auto mt-4 pt-4 border-t border-gray-200">
+        <table class="mockup-table" aria-label="मागील व्याजदर यादी">
+          <thead>
+            <tr>
+              <th data-spec-grid-col="1">अ.क्र.</th>
+              <th data-spec-grid-col="2">योजना क्र.</th>
+              <th data-spec-grid-col="3">योजना</th>
+              <th data-spec-grid-col="4">कालावधी</th>
+              <th data-spec-grid-col="5">बदल दिनांक</th>
+              <th data-spec-grid-col="6">पूर्वीचा व्याज दर (द.सा.द.शे.)</th>
+              <th data-spec-grid-col="7">पूर्वीचा दंड व्याजदर (द.सा.द.शे.)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>12</td>
+              <td>सोने तारण कर्ज</td>
+              <td>12 महिने</td>
+              <td>01/01/2026</td>
+              <td>12.00</td>
+              <td>18.00</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>15</td>
+              <td>व्यक्तिगत कर्ज</td>
+              <td>36 महिने</td>
+              <td>15/03/2025</td>
+              <td>10.50</td>
+              <td>15.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-export">निर्यात</button>
+      <button type="button" class="mockup-btn mockup-btn-primary" id="btn-save">जतन करा</button>
+    </div>
+  </footer>
+
+</body>
+</html>

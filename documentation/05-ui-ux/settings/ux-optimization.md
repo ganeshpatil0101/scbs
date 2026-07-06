@@ -29,7 +29,7 @@ Audit date: 2026-07-05. Reference implementation for `@optimize-ui-ux` on other 
 
 - [x] Remove Director/Staff radio from New User (was already marked skip)
 - [x] Remove Category dropdown from Loan Scheme Tab 2
-- [x] GL Head No. → read-only on all scheme screens
+- [x] GL Head on New Scheme → Autocomplete from GL master (scheme binds to GL; replaces legacy textbox / incorrect read-only)
 - [x] Customer No. + Name → single Customer Autocomplete on Staff screen
 - [x] Merge New Employee + New User → Staff & System Access
 - [x] Document shared Interest Posting component

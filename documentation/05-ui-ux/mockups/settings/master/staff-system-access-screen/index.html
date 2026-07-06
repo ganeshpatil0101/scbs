@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>कर्मचारी व सिस्टम प्रवेश — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <h1 class="text-2xl font-bold text-gray-900">कर्मचारी व सिस्टम प्रवेश</h1>
+      <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; सेटिंग्ज &gt; मास्टर &gt; कर्मचारी व सिस्टम प्रवेश</p>
+    </header>
+
+    <nav class="flex border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="स्क्रीन टॅब">
+      <button type="button" id="tab-1" class="mockup-tab mockup-tab-active" role="tab" aria-selected="true" aria-controls="tab-panel-1" data-tab="1">कर्मचारी माहिती</button>
+      <button type="button" id="tab-2" class="mockup-tab" role="tab" aria-selected="false" aria-controls="tab-panel-2" data-tab="2">लॉगीन व पासवर्ड</button>
+      <button type="button" id="tab-3" class="mockup-tab" role="tab" aria-selected="false" aria-controls="tab-panel-3" data-tab="3">शाखा अधिकार</button>
+      <button type="button" id="tab-4" class="mockup-tab" role="tab" aria-selected="false" aria-controls="tab-panel-4" data-tab="4">युजर रोल</button>
+    </nav>
+
+    <!-- Tab 1: Employee Details -->
+    <div id="tab-panel-1" role="tabpanel" aria-labelledby="tab-1">
+      <section class="mockup-section" aria-labelledby="section-employee">
+        <h2 class="mockup-section-title" id="section-employee">कर्मचारी माहिती</h2>
+        <div class="mockup-field-grid mockup-field-grid--2">
+          <div data-spec-field="1">
+            <label class="mockup-label" for="field-customer">
+              ग्राहक <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="field-customer" class="mockup-autocomplete" list="customer-options" placeholder="ID किंवा नाव टाइप करा">
+            <datalist id="customer-options">
+              <option value="101 — राम पाटील"></option>
+              <option value="102 — सीता देशमुख"></option>
+            </datalist>
+          </div>
+          <div data-spec-field="2">
+            <label class="mockup-label" for="field-designation">
+              हुद्दा <span class="mockup-required">*</span>
+            </label>
+            <select id="field-designation">
+              <option value="">निवडा</option>
+              <option>मुख्य कार्यकारी अधिकारी</option>
+              <option>अध्यक्ष</option>
+              <option>उपाध्यक्ष</option>
+              <option selected>संचालक</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <fieldset class="border-0 p-0 m-0" aria-label="कर्मचारी प्रकार">
+              <div class="flex flex-wrap gap-6">
+                <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="3">
+                  <input type="radio" name="employeeType" value="director" checked>
+                  <span>संचालक</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="4">
+                  <input type="radio" name="employeeType" value="employee">
+                  <span>कर्मचारी</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab 2: Login & Password -->
+    <div id="tab-panel-2" class="mockup-hidden" role="tabpanel" aria-labelledby="tab-2" hidden>
+      <div class="mockup-section-columns">
+        <section class="mockup-section" aria-labelledby="section-login">
+          <h2 class="mockup-section-title" id="section-login">लॉगीन व पासवर्ड</h2>
+          <div class="mockup-field-grid">
+            <div data-spec-field="5">
+              <label class="mockup-label" for="field-login-name">
+                लॉगीन नाव <span class="mockup-required">*</span>
+              </label>
+              <input type="text" id="field-login-name">
+            </div>
+            <div data-spec-field="6">
+              <label class="mockup-label" for="field-password">
+                पासवर्ड <span class="mockup-required">*</span>
+              </label>
+              <input type="password" id="field-password">
+            </div>
+            <div data-spec-field="7">
+              <label class="mockup-label" for="field-confirm-password">
+                पडताळणी पासवर्ड <span class="mockup-required">*</span>
+              </label>
+              <input type="password" id="field-confirm-password">
+            </div>
+            <div data-spec-field="8">
+              <label class="mockup-label" for="field-status">
+                स्थिती <span class="mockup-required">*</span>
+              </label>
+              <select id="field-status">
+                <option value="active" selected>सक्रिय</option>
+                <option value="inactive">निष्क्रिय</option>
+                <option value="suspended">स्थगित</option>
+                <option value="system-suspended">सिस्टीम स्थगित</option>
+              </select>
+            </div>
+            <div data-spec-field="9">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="field-super-user">
+                <span class="text-sm">सुपर युजर</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <details class="mockup-section">
+          <summary class="mockup-section-title cursor-pointer select-none" style="border-bottom:none;margin-bottom:0">प्रगत सेटिंग्ज</summary>
+          <div class="mockup-field-grid mt-4 pt-4 border-t border-gray-200">
+            <div data-spec-field="10">
+              <label class="mockup-label" for="field-voucher-limit">रोख भरणा व्हाउचर मर्यादा</label>
+              <input type="text" id="field-voucher-limit">
+            </div>
+            <div data-spec-field="11">
+              <label class="mockup-label" for="field-voucher-passing-limit">रोख भरणा व्हाउचर पासिंग मर्यादा</label>
+              <input type="text" id="field-voucher-passing-limit">
+            </div>
+            <div class="sm:col-span-2" data-spec-field="12">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="field-intra-branch">
+                <span class="text-sm">शाखा अंतर्गत व्यवहार</span>
+              </label>
+            </div>
+            <div id="intra-branch-fields" class="mockup-hidden sm:col-span-2">
+              <div class="mockup-field-grid mockup-field-grid--2">
+                <div data-spec-field="13">
+                  <label class="mockup-label" for="field-receipt-limit">शाखा अंतर्गत पावती मर्यादा</label>
+                  <input type="text" id="field-receipt-limit">
+                </div>
+                <div data-spec-field="14">
+                  <label class="mockup-label" for="field-payable-limit">शाखा अंतर्गत देय मर्यादा</label>
+                  <input type="text" id="field-payable-limit">
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- Tab 3: Branch Rights -->
+    <div id="tab-panel-3" class="mockup-hidden" role="tabpanel" aria-labelledby="tab-3" hidden>
+      <section class="mockup-section mockup-section-full" aria-labelledby="section-branch-rights">
+        <h2 class="mockup-section-title" id="section-branch-rights">शाखा अधिकार</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+          <div data-spec-field="15">
+            <label class="mockup-label" for="field-organization">
+              संघटना <span class="mockup-required">*</span>
+            </label>
+            <select id="field-organization">
+              <option value="">निवडा</option>
+              <option value="society1" selected>सोसायटी नाव</option>
+            </select>
+          </div>
+          <div data-spec-field="16">
+            <label class="mockup-label" for="field-select-branch">
+              शाखा निवडा <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="field-select-branch" class="mockup-autocomplete" list="branch-options" value="1 — Branch 1" placeholder="ID किंवा नाव टाइप करा">
+            <datalist id="branch-options">
+              <option value="1 — Branch 1"></option>
+              <option value="2 — Branch 2"></option>
+            </datalist>
+          </div>
+          <button type="button" class="mockup-btn mockup-btn-add w-full sm:w-auto">+ टाका</button>
+        </div>
+        <div class="overflow-x-auto mt-4">
+          <table class="mockup-table" aria-label="शाखा अधिकार यादी">
+            <thead>
+              <tr>
+                <th>निवडा</th>
+                <th>अ.क्र.</th>
+                <th>संघटना</th>
+                <th>शाखा नाव</th>
+                <th>कृती</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" aria-label="पंक्ती 1 निवडा"></td>
+                <td>1</td>
+                <td>सोसायटी नाव</td>
+                <td>Branch 1</td>
+                <td><button type="button" class="btn-link">काढा</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab 4: User Role -->
+    <div id="tab-panel-4" class="mockup-hidden" role="tabpanel" aria-labelledby="tab-4" hidden>
+      <div class="mockup-info-note">
+        या टॅबमध्ये [युजर रोल](../../master/user-role-screen/index.html) स्क्रीनशी समान परवानगी मॅट्रिक्स दर्शवली जाते.
+      </div>
+      <section class="mockup-section" aria-labelledby="section-role-name">
+        <h2 class="mockup-section-title" id="section-role-name">युजर रोल</h2>
+        <div class="max-w-md" data-spec-field="role-1">
+          <label class="mockup-label" for="field-role-name">
+            युजर रोल <span class="mockup-required">*</span>
+          </label>
+          <input type="text" id="field-role-name" placeholder="उदा. कॅशियर">
+        </div>
+      </section>
+      <section class="mockup-section mockup-section-full" aria-labelledby="section-permissions">
+        <h2 class="mockup-section-title" id="section-permissions">परवानगी मॅट्रिक्स</h2>
+        <div class="overflow-x-auto max-h-72 overflow-y-auto border border-gray-200 rounded">
+          <table class="mockup-table" aria-label="परवानगी मॅट्रिक्स">
+            <thead class="sticky top-0 z-10">
+              <tr>
+                <th>अ.क्र.</th>
+                <th>मेनु</th>
+                <th>फॉर्मचे नाव</th>
+                <th class="text-center">सर्व अधिकार</th>
+                <th class="text-center">फक्त बघण्यासाठी</th>
+                <th class="text-center">अधिकार नाही</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>अकाउंटींग</td>
+                <td>जमा</td>
+                <td class="text-center"><input type="checkbox" aria-label="जमा — सर्व अधिकार"></td>
+                <td class="text-center"><input type="checkbox" aria-label="जमा — फक्त बघण्यासाठी"></td>
+                <td class="text-center"><input type="checkbox" aria-label="जमा — अधिकार नाही"></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>अकाउंटींग</td>
+                <td>नावे</td>
+                <td class="text-center"><input type="checkbox" aria-label="नावे — सर्व अधिकार"></td>
+                <td class="text-center"><input type="checkbox" aria-label="नावे — फक्त बघण्यासाठी"></td>
+                <td class="text-center"><input type="checkbox" aria-label="नावे — अधिकार नाही"></td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-center text-gray-400 italic py-3">… पूर्ण मॅट्रिक्स [TODO — master data pending] …</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-reset">रीसेट</button>
+      <button type="button" class="mockup-btn mockup-btn-secondary mockup-hidden" id="btn-back">मागे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary" id="btn-next">पुढे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary mockup-hidden" id="btn-save">जतन करा</button>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var totalTabs = 4;
+      var current = 1;
+      var tabs = document.querySelectorAll('[role="tab"]');
+      var panels = [1, 2, 3, 4].map(function (n) { return document.getElementById('tab-panel-' + n); });
+      var btnNext = document.getElementById('btn-next');
+      var btnBack = document.getElementById('btn-back');
+      var btnSave = document.getElementById('btn-save');
+      var intraCheckbox = document.getElementById('field-intra-branch');
+      var intraFields = document.getElementById('intra-branch-fields');
+
+      function switchTab(tabNum) {
+        current = tabNum;
+        tabs.forEach(function (tab) {
+          var isActive = Number(tab.getAttribute('data-tab')) === tabNum;
+          tab.classList.toggle('mockup-tab-active', isActive);
+          tab.setAttribute('aria-selected', isActive);
+        });
+        panels.forEach(function (panel, i) {
+          var isActive = i + 1 === tabNum;
+          panel.classList.toggle('mockup-hidden', !isActive);
+          panel.hidden = !isActive;
+        });
+        btnNext.classList.toggle('mockup-hidden', tabNum === totalTabs);
+        btnBack.classList.toggle('mockup-hidden', tabNum === 1);
+        btnSave.classList.toggle('mockup-hidden', tabNum !== totalTabs);
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          switchTab(Number(this.getAttribute('data-tab')));
+        });
+      });
+
+      btnNext.addEventListener('click', function () {
+        if (current < totalTabs) switchTab(current + 1);
+      });
+      btnBack.addEventListener('click', function () {
+        if (current > 1) switchTab(current - 1);
+      });
+
+      if (intraCheckbox && intraFields) {
+        intraCheckbox.addEventListener('change', function () {
+          intraFields.classList.toggle('mockup-hidden', !this.checked);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

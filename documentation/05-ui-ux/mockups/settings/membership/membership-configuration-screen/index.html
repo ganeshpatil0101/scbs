@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>सभासदत्व सेटिंग्ज — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <h1 class="text-2xl font-bold text-gray-900">सभासदत्व सेटिंग्ज</h1>
+      <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; सेटिंग्ज &gt; सभासदत्व &gt; सभासदत्व सेटिंग्ज</p>
+    </header>
+
+    <!-- Shared filter -->
+    <section class="mockup-section mockup-section-compact mb-4" aria-labelledby="section-member-filter">
+      <h2 class="mockup-section-title" id="section-member-filter">सभासद प्रकार</h2>
+      <fieldset class="border-0 p-0 m-0">
+        <div class="flex flex-wrap gap-6">
+          <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="1">
+            <input type="radio" name="memberType" value="member" checked>
+            <span>सभासद</span>
+          </label>
+          <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="2">
+            <input type="radio" name="memberType" value="nominal">
+            <span>नाममात्र सभासद</span>
+          </label>
+        </div>
+      </fieldset>
+    </section>
+
+    <nav class="flex border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="स्क्रीन टॅब">
+      <button type="button" id="tab-1" class="mockup-tab mockup-tab-active" role="tab" aria-selected="true" data-tab="1">शेअर्स नियम</button>
+      <button type="button" id="tab-2" class="mockup-tab" role="tab" aria-selected="false" data-tab="2">लाभांश आकारणी</button>
+    </nav>
+
+    <!-- Tab 1: Share Rules -->
+    <div id="tab-panel-1" role="tabpanel" aria-labelledby="tab-1">
+      <section class="mockup-section" aria-labelledby="section-share-rules">
+        <h2 class="mockup-section-title" id="section-share-rules">शेअर्स नियम</h2>
+        <div class="mockup-field-grid mockup-field-grid--2">
+          <div data-spec-field="3">
+            <label class="mockup-label" for="field-face-value">
+              दर्शनी मूल्य <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="field-face-value" value="100">
+          </div>
+          <div data-spec-field="4">
+            <label class="mockup-label" for="field-series">
+              भाग मालिका <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="field-series" value="A">
+          </div>
+          <div data-spec-field="5">
+            <label class="mockup-label" for="field-max-share">
+              सदस्यानुसार कमाल भाग रक्कम मर्यादा(रु.) <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="field-max-share" value="1000000">
+          </div>
+          <div data-spec-field="6">
+            <label class="mockup-label" for="field-auth-capital">
+              अधिकृत शेअर्स भांडवली (रु.) <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="field-auth-capital" value="2000000">
+          </div>
+          <div data-spec-field="7">
+            <label class="mockup-label" for="field-prev-capital">
+              मागील वर्षाची अधिकृत भांडवली (रु.) <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="field-prev-capital" value="1800000">
+          </div>
+          <div data-spec-field="8">
+            <label class="mockup-label" for="field-rule-date">
+              नियम बदलण्याची तारीख <span class="mockup-required">*</span>
+            </label>
+            <input type="date" id="field-rule-date" value="2026-07-05">
+          </div>
+        </div>
+      </section>
+
+      <section class="mockup-section mockup-section-full" aria-labelledby="section-rules-grid">
+        <h2 class="mockup-section-title" id="section-rules-grid">नियम यादी</h2>
+        <div class="overflow-x-auto">
+          <table class="mockup-table" aria-label="शेअर्स नियम यादी">
+            <thead>
+              <tr>
+                <th>निवडा</th>
+                <th>अनु. क्र</th>
+                <th>मालिका</th>
+                <th>दर्शनी मूल्य</th>
+                <th>मर्यादा</th>
+                <th>अधिकृत वाटा भांडवल</th>
+                <th>बदलेली तारीख</th>
+                <th>शाखा</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" aria-label="पंक्ती 1"></td>
+                <td>1</td>
+                <td>A</td>
+                <td>100</td>
+                <td>10,00,000</td>
+                <td>20,00,000</td>
+                <td>01/04/2026</td>
+                <td>मुख्य</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab 2: Dividend Calculation -->
+    <div id="tab-panel-2" class="mockup-hidden" role="tabpanel" aria-labelledby="tab-2" hidden>
+      <section class="mockup-section" aria-labelledby="section-div-filter">
+        <h2 class="mockup-section-title" id="section-div-filter">लाभांश गणना फिल्टर</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+          <div data-spec-field="9">
+            <label class="mockup-label" for="field-branch">शाखा निवडा</label>
+            <input type="text" id="field-branch" class="mockup-autocomplete" list="branch-options" placeholder="ID किंवा नाव">
+            <datalist id="branch-options">
+              <option value="1 — Branch 1"></option>
+              <option value="2 — Branch 2"></option>
+            </datalist>
+          </div>
+          <div data-spec-field="10">
+            <label class="mockup-label" for="field-year">
+              वर्ष <span class="mockup-required">*</span>
+            </label>
+            <select id="field-year">
+              <option value="2026" selected>2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+            </select>
+          </div>
+          <div data-spec-field="11">
+            <label class="mockup-label" for="field-debit-head">
+              नावे <span class="mockup-required">*</span>
+            </label>
+            <select id="field-debit-head">
+              <option value="profit" selected>मा.वर्षाचा शिल्लक नफा</option>
+            </select>
+          </div>
+          <div data-spec-field="12">
+            <label class="mockup-label" for="field-percent">शेकडा (%)</label>
+            <input type="text" id="field-percent" placeholder="उदा. 15">
+          </div>
+          <button type="button" class="mockup-btn mockup-btn-primary w-full sm:w-auto">लाभांश गणना</button>
+        </div>
+      </section>
+
+      <section class="mockup-section" aria-labelledby="section-readonly-hints">
+        <h2 class="mockup-section-title" id="section-readonly-hints">सिस्टम सेटिंग्ज (फक्त वाचनीय)</h2>
+        <ul class="text-sm text-gray-600 space-y-1 list-disc list-inside">
+          <li>लाभांश गणना कालावधी</li>
+          <li>प्रो रेटा बंद शेअर खाते नियम</li>
+          <li>लाभांश रक्कम राऊंड अप</li>
+        </ul>
+      </section>
+
+      <section class="mockup-section mockup-section-full" aria-labelledby="section-results">
+        <h2 class="mockup-section-title" id="section-results">लाभांश निकाल</h2>
+        <div class="overflow-x-auto">
+          <table class="mockup-table" aria-label="लाभांश निकाल यादी">
+            <thead>
+              <tr>
+                <th>निवडा</th>
+                <th>अनु. क्र</th>
+                <th>ग्राहक क्र.</th>
+                <th>सभासद क्र.</th>
+                <th>नाव</th>
+                <th>भांडवल</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" aria-label="पंक्ती 1"></td>
+                <td>1</td>
+                <td>101</td>
+                <td>M-001</td>
+                <td>राम पाटील</td>
+                <td>50,000</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" aria-label="पंक्ती 2"></td>
+                <td>2</td>
+                <td>102</td>
+                <td>M-002</td>
+                <td>सीता देशमुख</td>
+                <td>75,000</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="font-semibold bg-gray-50">
+                <td colspan="5" class="text-right">एकूण भांडवल / एकूण लाभांश</td>
+                <td>1,25,000 / 18,750</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-reset">पूर्ववत</button>
+      <button type="button" class="mockup-btn mockup-btn-secondary mockup-hidden" id="btn-back">मागे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary" id="btn-next">पुढे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary mockup-hidden" id="btn-save">पूर्ण</button>
+      <button type="button" class="mockup-btn mockup-btn-secondary mockup-hidden" id="btn-remove">काढा</button>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var current = 1;
+      var tabs = document.querySelectorAll('[role="tab"]');
+      var panels = [document.getElementById('tab-panel-1'), document.getElementById('tab-panel-2')];
+      var btnNext = document.getElementById('btn-next');
+      var btnBack = document.getElementById('btn-back');
+      var btnSave = document.getElementById('btn-save');
+      var btnRemove = document.getElementById('btn-remove');
+
+      function switchTab(tabNum) {
+        current = tabNum;
+        tabs.forEach(function (tab) {
+          var isActive = Number(tab.getAttribute('data-tab')) === tabNum;
+          tab.classList.toggle('mockup-tab-active', isActive);
+          tab.setAttribute('aria-selected', isActive);
+        });
+        panels.forEach(function (panel, i) {
+          var isActive = i + 1 === tabNum;
+          panel.classList.toggle('mockup-hidden', !isActive);
+          panel.hidden = !isActive;
+        });
+        btnNext.classList.toggle('mockup-hidden', tabNum === 2);
+        btnBack.classList.toggle('mockup-hidden', tabNum === 1);
+        btnSave.classList.toggle('mockup-hidden', tabNum !== 1);
+        btnRemove.classList.toggle('mockup-hidden', tabNum !== 1);
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          switchTab(Number(this.getAttribute('data-tab')));
+        });
+      });
+      btnNext.addEventListener('click', function () { switchTab(2); });
+      btnBack.addEventListener('click', function () { switchTab(1); });
+    })();
+  </script>
+</body>
+</html>

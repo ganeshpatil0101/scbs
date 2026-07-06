@@ -102,6 +102,17 @@ Former **New GL Head** fields (simplified default view).
 
 ---
 
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/settings/accounting/gl-account-setup-screen/index.html](../../mockups/settings/accounting/gl-account-setup-screen/index.html) |
+| Review guide | [mockups/settings/accounting/gl-account-setup-screen/README.md](../../mockups/settings/accounting/gl-account-setup-screen/README.md) |
+| Stack | Tailwind CSS v4 (CDN), Marathi labels only |
+| Status | Draft — pending bank user review |
+
+---
+
 ## Related Documents
 
 - [overview.md](overview.md)

@@ -45,10 +45,11 @@ UI specification for creating a new GL (General Ledger) group. Intended for AI a
 
 ## Mockup
 
+> **Superseded mockup.** Use [gl-account-setup-screen mockup](../../mockups/settings/accounting/gl-account-setup-screen/index.html) instead.
+
 | Property | Value |
 | :--- | :--- |
-| HTML mockup | [mockups/settings/accounting/new-gl-group-screen/index.html](../../mockups/settings/accounting/new-gl-group-screen/index.html) |
-| Review guide | [mockups/settings/accounting/new-gl-group-screen/README.md](../../mockups/settings/accounting/new-gl-group-screen/README.md) |
+| HTML mockup | ~~mockups/settings/accounting/new-gl-group-screen/~~ → [gl-account-setup-screen](../../mockups/settings/accounting/gl-account-setup-screen/index.html) |
 | Stack | Tailwind CSS v4 (CDN), Marathi labels only |
 | Status | Draft — pending bank user review |
 

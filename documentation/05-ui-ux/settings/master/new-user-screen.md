@@ -86,10 +86,11 @@ See [user-role-screen.md](user-role-screen.md) — role assignment uses the same
 
 ## Mockup
 
+> **Superseded mockup.** Use [staff-system-access-screen mockup](../../mockups/settings/master/staff-system-access-screen/index.html) instead.
+
 | Property | Value |
 | :--- | :--- |
-| HTML mockup | [mockups/settings/master/new-user-screen/index.html](../../mockups/settings/master/new-user-screen/index.html) |
-| Review guide | [mockups/settings/master/new-user-screen/README.md](../../mockups/settings/master/new-user-screen/README.md) |
+| HTML mockup | ~~mockups/settings/master/new-user-screen/~~ → [staff-system-access-screen](../../mockups/settings/master/staff-system-access-screen/index.html) |
 | Stack | Tailwind CSS v4 (CDN), Marathi labels only |
 | Status | Draft — pending bank user review |
 

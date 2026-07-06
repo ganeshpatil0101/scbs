@@ -22,7 +22,7 @@ Use these labels in optimization audits and spec changelogs:
 | Action | When to apply | Spec notation |
 | :--- | :--- | :--- |
 | **Remove** | Field marked skip/not required, no values defined, or duplicate of another control | Omit from spec; note in changelog with reason |
-| **Auto-fill** | GL Head No., User Type = Society, default Status | `Type: Label (read-only)` or omit with default in Notes |
+| **Auto-fill** | GL Head No. on GL Account Setup (creation only), User Type = Society, default Status | `Type: Label (read-only)` or omit with default in Notes. **Schemes:** GL Head is an Autocomplete lookup from master — not auto-generated |
 | **Simplify** | Two fields that should be one; confusing conditional disable | Merge or redesign; document new control |
 | **Hide Advanced** | Unicode names, receipt series, OIR, DP formula, moratorium rules | Move to `### Section: प्रगत सेटिंग्ज` with `Visible: When expanded` |
 | **Consolidate** | Entire screen merged into another | Mark old spec **Superseded**; link to new spec |

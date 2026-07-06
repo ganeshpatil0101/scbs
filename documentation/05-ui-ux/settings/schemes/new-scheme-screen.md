@@ -40,9 +40,11 @@ Changing Scheme Type resets wizard to Tab 1 and shows the tab set from the matri
 
 ### Common fields (all scheme types)
 
+Each scheme **binds to one GL Head** from the GL master (created via [GL Account Setup](../accounting/gl-account-setup-screen.md)). The lookup is a single Autocomplete — not auto-generated.
+
 | # | Marathi Label | English Label | Type | Required | Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 2 | जीएल हेड क्र. | GL Head No. | Label | — | **Read-only**, auto-generated |
+| 2 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Single control: ID + name. Options loaded dynamically from **GL master** ([entity-autocomplete-pattern.md](../../shared/entity-autocomplete-pattern.md)). Enter resolves by ID or name; displays `id — name`. Replaces legacy `जीएल हेड क्र.` textbox. **Daily (डेली):** only GL Heads with number ≤ 99 are eligible (validation on resolve). |
 | 3 | योजनेचे नाव | Scheme Name | Textbox | Yes | — |
 | 4 | स्थिती | Status | Dropdown | Yes | `चालू`, `बंद`, `स्थगित` (+ `कालबाह्य` for Daily) |
 | 5 | फक्त सदस्यांना परवानगी द्या | Allow Only Members | Checkbox | No | All types |
@@ -146,6 +148,7 @@ Collapsed by default. Fields moved from default view per [ux-optimization.md](..
 
 | Component | Document |
 | :--- | :--- |
+| GL Head lookup | [../../shared/entity-autocomplete-pattern.md](../../shared/entity-autocomplete-pattern.md) — `app-entity-autocomplete` with `entityType: gl` |
 | UI simplification patterns | [../../shared/ui-simplification-patterns.md](../../shared/ui-simplification-patterns.md) |
 | Full field lists per legacy type | Superseded specs linked at top of this document |
 
@@ -157,6 +160,17 @@ Collapsed by default. Fields moved from default view per [ux-optimization.md](..
 | Reset | पूर्ववत / रीसेट | Reset |
 | Back | मागे | Back |
 | Next | पुढे | Next |
+
+---
+
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/settings/schemes/new-scheme-screen/index.html](../../mockups/settings/schemes/new-scheme-screen/index.html) |
+| Review guide | [mockups/settings/schemes/new-scheme-screen/README.md](../../mockups/settings/schemes/new-scheme-screen/README.md) |
+| Stack | Tailwind CSS v4 (CDN), Marathi labels only |
+| Status | Draft — pending bank user review |
 
 ---
 

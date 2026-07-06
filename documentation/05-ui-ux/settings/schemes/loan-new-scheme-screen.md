@@ -402,10 +402,11 @@ UI specification for creating a new **Loan (कर्ज)** scheme. Extracted fr
 
 ## Mockup
 
+> **Superseded mockup.** Use [new-scheme-screen mockup](../../mockups/settings/schemes/new-scheme-screen/index.html) (Scheme Type = कर्ज) instead.
+
 | Property | Value |
 | :--- | :--- |
-| HTML mockup | [mockups/settings/schemes/loan-new-scheme-screen/index.html](../../mockups/settings/schemes/loan-new-scheme-screen/index.html) |
-| Review guide | [mockups/settings/schemes/loan-new-scheme-screen/README.md](../../mockups/settings/schemes/loan-new-scheme-screen/README.md) |
+| HTML mockup | ~~mockups/settings/schemes/loan-new-scheme-screen/~~ → [new-scheme-screen](../../mockups/settings/schemes/new-scheme-screen/index.html) |
 | Stack | Tailwind CSS v4 (CDN), Marathi labels only |
 | Status | Draft — pending bank user review |
 

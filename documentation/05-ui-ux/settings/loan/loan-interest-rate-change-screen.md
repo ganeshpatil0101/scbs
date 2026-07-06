@@ -53,6 +53,17 @@ Collapsible history log. Former Tab 2 content.
 
 ---
 
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/settings/loan/loan-interest-rate-change-screen/index.html](../../mockups/settings/loan/loan-interest-rate-change-screen/index.html) |
+| Review guide | [mockups/settings/loan/loan-interest-rate-change-screen/README.md](../../mockups/settings/loan/loan-interest-rate-change-screen/README.md) |
+| Stack | Tailwind CSS v4 (CDN), Marathi labels only |
+| Status | Draft — pending bank user review |
+
+---
+
 ## Related Documents
 
 - [overview.md](overview.md)

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>जी.एल. खाते सेटअप — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <h1 class="text-2xl font-bold text-gray-900">जी.एल. खाते सेटअप</h1>
+      <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; सेटिंग्ज &gt; लेखा &gt; जी.एल. खाते सेटअप</p>
+    </header>
+
+    <nav class="flex border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="स्क्रीन टॅब">
+      <button type="button" id="tab-1" class="mockup-tab mockup-tab-active" role="tab" aria-selected="true" data-tab="1">खाते गट</button>
+      <button type="button" id="tab-2" class="mockup-tab" role="tab" aria-selected="false" data-tab="2">जी.एल. हेड</button>
+    </nav>
+
+    <!-- Tab 1: Account Group -->
+    <div id="tab-panel-1" role="tabpanel" aria-labelledby="tab-1">
+      <section class="mockup-section" aria-labelledby="section-group">
+        <h2 class="mockup-section-title" id="section-group">खाते गट</h2>
+
+        <fieldset class="border-0 p-0 m-0 mb-4" aria-label="गट श्रेणी">
+          <p class="text-sm font-medium text-gray-700 mb-2">गट प्रकार</p>
+          <div class="flex flex-wrap gap-6 mb-4">
+            <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="1">
+              <input type="radio" name="groupCategory" value="pnl" id="radio-pnl" checked>
+              <span>नफा तोटा</span>
+            </label>
+            <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="2">
+              <input type="radio" name="groupCategory" value="bs" id="radio-bs">
+              <span>ताळेबंद</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="border-0 p-0 m-0 mb-4" id="pnl-subtypes" aria-label="नफा तोटा उपप्रकार">
+          <div class="flex flex-wrap gap-6">
+            <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="3">
+              <input type="radio" name="pnlType" value="income" checked>
+              <span>उत्पन्न</span>
+            </label>
+            <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="4">
+              <input type="radio" name="pnlType" value="expense">
+              <span>खर्च</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="border-0 p-0 m-0 mb-4 mockup-hidden" id="bs-subtypes" aria-label="ताळेबंद उपप्रकार" hidden>
+          <div class="flex flex-wrap gap-6">
+            <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="5">
+              <input type="radio" name="bsType" value="receivable">
+              <span>येणे</span>
+            </label>
+            <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="6">
+              <input type="radio" name="bsType" value="payable">
+              <span>देणे</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="mockup-field-grid mockup-field-grid--2">
+          <div data-spec-field="7">
+            <label class="mockup-label" for="field-group-type">
+              गट प्रकार निवडा <span class="mockup-required">*</span>
+            </label>
+            <select id="field-group-type">
+              <option value="other" selected>इतर</option>
+            </select>
+          </div>
+          <div data-spec-field="8">
+            <label class="mockup-label" for="field-group-name">
+              गटाचे नाव <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="field-group-name" placeholder="उदा. व्याज उत्पन्न">
+          </div>
+        </div>
+      </section>
+
+      <details class="mockup-section">
+        <summary class="mockup-section-title cursor-pointer select-none" style="border-bottom:none;margin-bottom:0">प्रगत सेटिंग्ज</summary>
+        <div class="mt-4 pt-4 border-t border-gray-200 max-w-md" data-spec-field="9">
+          <label class="mockup-label" for="field-group-unicode">गटाचे नाव (युनिकोड)</label>
+          <input type="text" id="field-group-unicode">
+        </div>
+      </details>
+    </div>
+
+    <!-- Tab 2: GL Head -->
+    <div id="tab-panel-2" class="mockup-hidden" role="tabpanel" aria-labelledby="tab-2" hidden>
+      <div class="mockup-section-columns">
+        <section class="mockup-section" aria-labelledby="section-gl-basic">
+          <h2 class="mockup-section-title" id="section-gl-basic">जी.एल. हेड — मूलभूत</h2>
+          <div class="mockup-field-grid">
+            <div data-spec-field="10">
+              <span class="mockup-label">खाते गट</span>
+              <p class="text-sm text-gray-600 bg-gray-50 border border-gray-200 rounded px-3 py-2" id="readonly-group-name">— Tab 1 मधील गटाचे नाव —</p>
+            </div>
+            <div data-spec-field="11">
+              <label class="mockup-label" for="field-account-type">
+                खाते प्रकार <span class="mockup-required">*</span>
+              </label>
+              <select id="field-account-type">
+                <option value="other" selected>इतर</option>
+              </select>
+            </div>
+            <div data-spec-field="12">
+              <span class="mockup-label">जी. एल. हेड क्र.</span>
+              <p class="text-sm text-gray-600 bg-gray-50 border border-gray-200 rounded px-3 py-2">163 <span class="text-xs text-gray-400">(स्वयं-निर्मित)</span></p>
+            </div>
+            <div data-spec-field="13">
+              <label class="mockup-label" for="field-gl-name">
+                जी. एल. हेडचे नाव <span class="mockup-required">*</span>
+              </label>
+              <input type="text" id="field-gl-name">
+            </div>
+            <div data-spec-field="14">
+              <label class="mockup-label" for="field-status">
+                स्थिती <span class="mockup-required">*</span>
+              </label>
+              <select id="field-status">
+                <option value="active" selected>चालू</option>
+                <option value="closed">बंद</option>
+                <option value="suspended">स्थगित</option>
+              </select>
+            </div>
+            <div data-spec-field="15">
+              <label class="mockup-label" for="field-start-date">
+                प्रारंभ दिनांक <span class="mockup-required">*</span>
+              </label>
+              <input type="date" id="field-start-date" value="2026-07-05">
+            </div>
+          </div>
+        </section>
+
+        <div class="mockup-section-stack">
+          <section class="mockup-section" aria-labelledby="section-balance-type">
+            <h2 class="mockup-section-title" id="section-balance-type">शिल्लक प्रकार</h2>
+            <fieldset class="border-0 p-0 m-0">
+              <div class="flex flex-wrap gap-6">
+                <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="16">
+                  <input type="radio" name="balanceType" value="credit" checked>
+                  <span>जमा</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="17">
+                  <input type="radio" name="balanceType" value="debit">
+                  <span>नावे</span>
+                </label>
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="mockup-section" aria-labelledby="section-account-category">
+            <h2 class="mockup-section-title" id="section-account-category">खाते वर्ग</h2>
+            <fieldset class="border-0 p-0 m-0 mb-4">
+              <div class="flex flex-wrap gap-6">
+                <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="18">
+                  <input type="radio" name="accountCategory" value="general" id="radio-general" checked>
+                  <span>सामान्य खाते</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="19">
+                  <input type="radio" name="accountCategory" value="branch" id="radio-branch">
+                  <span>शाखा खाते</span>
+                </label>
+              </div>
+            </fieldset>
+            <div id="branch-account-fields" class="mockup-hidden mockup-field-grid">
+              <div data-spec-field="20">
+                <label class="mockup-label" for="field-org">संघटना</label>
+                <select id="field-org">
+                  <option value="">निवडा</option>
+                  <option>सोसायटी नाव</option>
+                </select>
+              </div>
+              <div data-spec-field="21">
+                <label class="mockup-label" for="field-branch">शाखा निवडा</label>
+                <input type="text" id="field-branch" class="mockup-autocomplete" list="branch-list" placeholder="ID किंवा नाव">
+                <datalist id="branch-list">
+                  <option value="1 — Branch 1"></option>
+                  <option value="2 — Branch 2"></option>
+                </datalist>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <details class="mockup-section">
+        <summary class="mockup-section-title cursor-pointer select-none" style="border-bottom:none;margin-bottom:0">प्रगत सेटिंग्ज</summary>
+        <div class="mockup-field-grid mockup-field-grid--2 mt-4 pt-4 border-t border-gray-200">
+          <div data-spec-field="22">
+            <label class="mockup-label" for="field-short-name">संक्षिप्त नाव</label>
+            <input type="text" id="field-short-name">
+          </div>
+          <div data-spec-field="23">
+            <label class="mockup-label" for="field-unicode-name">युनिकोड नाव</label>
+            <input type="text" id="field-unicode-name">
+          </div>
+          <div data-spec-field="24">
+            <label class="inline-flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="memberLike" value="yes">
+              <span class="text-sm">सभासदाप्रमाणे खाते</span>
+            </label>
+          </div>
+          <div data-spec-field="25">
+            <label class="inline-flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="field-contra">
+              <span class="text-sm">कॉन्ट्रा</span>
+            </label>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-reset">पूर्ववत</button>
+      <button type="button" class="mockup-btn mockup-btn-secondary mockup-hidden" id="btn-back">मागे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary" id="btn-next">पुढे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary mockup-hidden" id="btn-save">पूर्ण</button>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var current = 1;
+      var tabs = document.querySelectorAll('[role="tab"]');
+      var panels = [document.getElementById('tab-panel-1'), document.getElementById('tab-panel-2')];
+      var btnNext = document.getElementById('btn-next');
+      var btnBack = document.getElementById('btn-back');
+      var btnSave = document.getElementById('btn-save');
+      var radioPnl = document.getElementById('radio-pnl');
+      var radioBs = document.getElementById('radio-bs');
+      var pnlSubtypes = document.getElementById('pnl-subtypes');
+      var bsSubtypes = document.getElementById('bs-subtypes');
+      var radioGeneral = document.getElementById('radio-general');
+      var radioBranch = document.getElementById('radio-branch');
+      var branchFields = document.getElementById('branch-account-fields');
+      var groupNameInput = document.getElementById('field-group-name');
+      var readonlyGroup = document.getElementById('readonly-group-name');
+
+      function switchTab(tabNum) {
+        current = tabNum;
+        tabs.forEach(function (tab) {
+          var isActive = Number(tab.getAttribute('data-tab')) === tabNum;
+          tab.classList.toggle('mockup-tab-active', isActive);
+          tab.setAttribute('aria-selected', isActive);
+        });
+        panels.forEach(function (panel, i) {
+          var isActive = i + 1 === tabNum;
+          panel.classList.toggle('mockup-hidden', !isActive);
+          panel.hidden = !isActive;
+        });
+        btnNext.classList.toggle('mockup-hidden', tabNum === 2);
+        btnBack.classList.toggle('mockup-hidden', tabNum === 1);
+        btnSave.classList.toggle('mockup-hidden', tabNum !== 2);
+        if (tabNum === 2 && groupNameInput && readonlyGroup) {
+          readonlyGroup.textContent = groupNameInput.value || '— Tab 1 मधील गटाचे नाव —';
+        }
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          switchTab(Number(this.getAttribute('data-tab')));
+        });
+      });
+      btnNext.addEventListener('click', function () { switchTab(2); });
+      btnBack.addEventListener('click', function () { switchTab(1); });
+
+      function updateGroupCategory() {
+        var isBs = radioBs.checked;
+        pnlSubtypes.classList.toggle('mockup-hidden', isBs);
+        bsSubtypes.classList.toggle('mockup-hidden', !isBs);
+        bsSubtypes.hidden = !isBs;
+      }
+      radioPnl.addEventListener('change', updateGroupCategory);
+      radioBs.addEventListener('change', updateGroupCategory);
+
+      function updateAccountCategory() {
+        var showBranch = radioBranch.checked;
+        branchFields.classList.toggle('mockup-hidden', !showBranch);
+      }
+      radioGeneral.addEventListener('change', updateAccountCategory);
+      radioBranch.addEventListener('change', updateAccountCategory);
+    })();
+  </script>
+</body>
+</html>

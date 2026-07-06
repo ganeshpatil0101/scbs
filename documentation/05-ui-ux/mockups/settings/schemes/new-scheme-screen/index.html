@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>नवीन योजना — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <h1 class="text-2xl font-bold text-gray-900">नवीन योजना</h1>
+      <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; सेटिंग्ज &gt; योजना &gt; नवीन योजना</p>
+    </header>
+
+    <!-- Scheme Type Selector -->
+    <section class="mockup-section mockup-section-compact mb-4" aria-labelledby="section-scheme-type">
+      <h2 class="mockup-section-title" id="section-scheme-type">योजना प्रकार</h2>
+      <div class="max-w-md" data-spec-field="1">
+        <label class="mockup-label" for="field-scheme-type">
+          योजना प्रकार <span class="mockup-required">*</span>
+        </label>
+        <select id="field-scheme-type">
+          <option value="savings" selected>बचत</option>
+          <option value="daily">डेली</option>
+          <option value="fd">मुदत ठेव</option>
+          <option value="recurring">रिकरिंग</option>
+          <option value="loan">कर्ज</option>
+        </select>
+      </div>
+    </section>
+
+    <nav class="flex border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="स्क्रीन टॅब" id="tab-bar"></nav>
+
+    <!-- Tab: Scheme Info -->
+    <div id="panel-info" class="tab-panel" role="tabpanel">
+      <section class="mockup-section">
+        <div class="mockup-field-grid mockup-field-grid--2">
+          <div data-spec-field="2">
+            <label class="mockup-label" for="field-gl-head">
+              जी.एल. निवडा <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="field-gl-head" class="mockup-autocomplete" list="gl-options" placeholder="ID किंवा नाव टाइप करा, Enter दाबा">
+            <datalist id="gl-options">
+              <option value="38 — Saving"></option>
+              <option value="91 — FD"></option>
+              <option value="42 — Loan"></option>
+              <option value="38 — Pigmy"></option>
+            </datalist>
+            <p class="mockup-autocomplete-hint">GL मास्टरमधून गतिमान लोड — योजना GL हेडशी बांधली जाते</p>
+          </div>
+          <div data-spec-field="3">
+            <label class="mockup-label" for="field-scheme-name">
+              योजनेचे नाव <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="field-scheme-name">
+          </div>
+          <div data-spec-field="4">
+            <label class="mockup-label" for="field-status">
+              स्थिती <span class="mockup-required">*</span>
+            </label>
+            <select id="field-status">
+              <option value="active" selected>चालू</option>
+              <option value="closed">बंद</option>
+              <option value="suspended">स्थगित</option>
+              <option value="expired" class="type-daily-only mockup-hidden">कालबाह्य</option>
+            </select>
+          </div>
+          <div data-spec-field="5">
+            <label class="inline-flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="field-members-only">
+              <span class="text-sm">फक्त सदस्यांना परवानगी द्या</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Savings-specific -->
+      <section class="mockup-section type-savings-only" aria-labelledby="sec-savings">
+        <h2 class="mockup-section-title" id="sec-savings">बचत — व्याज सेटिंग्ज</h2>
+        <div class="mockup-field-grid mockup-field-grid--2">
+          <div>
+            <label class="mockup-label" for="field-savings-subtype">योजनेचे प्रकार</label>
+            <select id="field-savings-subtype">
+              <option value="">निवडा</option>
+              <option>सेव्हिंग</option>
+              <option>करंट</option>
+            </select>
+          </div>
+          <div>
+            <label class="mockup-label" for="field-interest-rate">व्याज दर (द.सा.द.शे.)</label>
+            <input type="text" id="field-interest-rate">
+          </div>
+        </div>
+        <fieldset class="border-0 p-0 m-0 mt-4">
+          <div class="flex flex-wrap gap-6">
+            <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="calcPeriod" checked><span>दिवसात</span></label>
+            <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="calcPeriod"><span>महिन्यात</span></label>
+          </div>
+        </fieldset>
+      </section>
+
+      <!-- Loan-specific (hidden by default) -->
+      <section class="mockup-section type-loan-only mockup-hidden" aria-labelledby="sec-loan-info" hidden>
+        <h2 class="mockup-section-title" id="sec-loan-info">कर्ज — मूलभूत</h2>
+        <div class="mockup-field-grid mockup-field-grid--2">
+          <div>
+            <label class="mockup-label" for="field-loan-type">कर्ज प्रकार</label>
+            <select id="field-loan-type">
+              <option value="">निवडा</option>
+              <option>व्यक्तिगत</option>
+              <option>क्रेडिट कार्ड</option>
+            </select>
+          </div>
+          <div>
+            <label class="mockup-label" for="field-installment-type">हप्ता प्रकार</label>
+            <select id="field-installment-type"><option value="">निवडा</option></select>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab: Duration & Rates -->
+    <div id="panel-duration" class="tab-panel mockup-hidden" role="tabpanel" hidden>
+      <section class="mockup-section">
+        <h2 class="mockup-section-title">कालावधी व दर</h2>
+        <p class="text-sm text-gray-500 mb-4">सामायिक घटक: <code>app-rate-duration-grid</code></p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-end mb-4">
+          <div>
+            <label class="mockup-label" for="field-duration">कालावधी</label>
+            <input type="text" id="field-duration">
+          </div>
+          <div>
+            <label class="mockup-label" for="field-duration-type">कालावधी प्रकार</label>
+            <select id="field-duration-type"><option>महिने</option><option>दिवस</option></select>
+          </div>
+          <div>
+            <label class="mockup-label" for="field-rate">व्याज दर</label>
+            <input type="text" id="field-rate">
+          </div>
+          <button type="button" class="mockup-btn mockup-btn-add">+ टाका</button>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="mockup-table" aria-label="कालावधी व दर यादी">
+            <thead><tr><th>निवडा</th><th>अ.क्र.</th><th>कालावधी</th><th>दर</th></tr></thead>
+            <tbody><tr><td><input type="checkbox"></td><td>1</td><td>12 महिने</td><td>12.00%</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab: Interest Posting -->
+    <div id="panel-posting" class="tab-panel mockup-hidden" role="tabpanel" hidden>
+      <section class="mockup-section">
+        <h2 class="mockup-section-title">व्याज पोस्टिंग</h2>
+        <p class="text-sm text-gray-500 mb-4">सामायिक घटक: <code>app-interest-posting-grid</code></p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+          <div>
+            <label class="mockup-label" for="field-post-day">व्याज पोस्टिंग दिवस</label>
+            <select id="field-post-day"><option value="">निवडा</option><option>31</option></select>
+          </div>
+          <div>
+            <label class="mockup-label" for="field-post-month">व्याज पोस्टिंग महिना</label>
+            <select id="field-post-month"><option value="">निवडा</option><option>मार्च</option></select>
+          </div>
+          <button type="button" class="mockup-btn mockup-btn-add">+ टाका</button>
+        </div>
+        <div class="overflow-x-auto mt-4">
+          <table class="mockup-table" aria-label="पोस्टिंग दिनांक">
+            <thead><tr><th>निवडा</th><th>अ.क्र.</th><th>पोस्टिंग दिनांक</th></tr></thead>
+            <tbody><tr><td><input type="checkbox"></td><td>1</td><td>31 मार्च</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab: Account Closing -->
+    <div id="panel-closing" class="tab-panel mockup-hidden" role="tabpanel" hidden>
+      <section class="mockup-section">
+        <h2 class="mockup-section-title">खाते बंद</h2>
+        <p class="text-sm text-gray-500 mb-4">सामायिक घटक: <code>app-rate-slab-editor</code></p>
+        <div class="mockup-info-note">परिपक्वता पूर्व दंड व पूर्व-परिपक्वता कमिशन दर — स्लॅब ग्रिड</div>
+        <div class="overflow-x-auto">
+          <table class="mockup-table" aria-label="दंड स्लॅब">
+            <thead><tr><th>निवडा</th><th>अ.क्र.</th><th>कालावधी</th><th>दर</th></tr></thead>
+            <tbody><tr><td colspan="4" class="text-center text-gray-400 italic py-3">— स्लॅब जोडण्यासाठी + टाका —</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab: Charges -->
+    <div id="panel-charges" class="tab-panel mockup-hidden" role="tabpanel" hidden>
+      <section class="mockup-section">
+        <h2 class="mockup-section-title">चार्जेस</h2>
+        <p class="text-sm text-gray-500 mb-4">सामायिक घटक: <code>app-charges-select</code></p>
+        <div class="max-w-md mb-4">
+          <label class="mockup-label" for="field-charges">चार्जेस</label>
+          <select id="field-charges">
+            <option value="">निवडा</option>
+            <option>कर्जदार कल्याण निधी</option>
+            <option>पिग्मी कमिशन</option>
+            <option>प्रोसेसिंग फी</option>
+            <option>ब वर्ग सभासद फी</option>
+            <option>स्टेशनरी फी</option>
+          </select>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="mockup-table" aria-label="चार्जेस यादी">
+            <thead><tr><th>अ.क्र.</th><th>चार्जेस</th><th>कृती</th></tr></thead>
+            <tbody><tr><td>1</td><td>प्रोसेसिंग फी</td><td><button type="button" class="btn-link">काढा</button></td></tr></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab: Loan Specific -->
+    <div id="panel-loan-specific" class="tab-panel mockup-hidden" role="tabpanel" hidden>
+      <div class="mockup-section-columns">
+        <section class="mockup-section">
+          <h2 class="mockup-section-title">जामीनदार</h2>
+          <div class="mockup-field-grid">
+            <div><label class="mockup-label">जामीनदार आवश्यक</label><input type="checkbox"></div>
+            <div><label class="mockup-label">किमान जामीनदार</label><input type="text"></div>
+          </div>
+        </section>
+        <section class="mockup-section">
+          <h2 class="mockup-section-title">सोने/ठेव तारण</h2>
+          <div class="mockup-field-grid">
+            <div><label class="mockup-label">तारण प्रकार</label><select><option value="">निवडा</option></select></div>
+            <div><label class="mockup-label">LTV (%)</label><input type="text"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Tab: Advanced -->
+    <div id="panel-advanced" class="tab-panel mockup-hidden" role="tabpanel" hidden>
+      <details class="mockup-section" open>
+        <summary class="mockup-section-title cursor-pointer select-none" style="border-bottom:none;margin-bottom:0">प्रगत सेटिंग्ज</summary>
+        <div class="mockup-info-note mt-4">
+          FD: तपशील, पावती क्र. मालिका, Broken Period 360/365, Auto Renewal.<br>
+          Recurring: Agent Interest Rate, Salary Payment.<br>
+          Loan: Moratorium, Post-interest-after-end, Loan Application System.
+        </div>
+        <div class="mockup-field-grid mockup-field-grid--2 mt-4 pt-4 border-t border-gray-200">
+          <div><label class="mockup-label">तपशील</label><input type="text"></div>
+          <div><label class="mockup-label">पावती क्र. मालिका</label><input type="text"></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-reset">पूर्ववत</button>
+      <button type="button" class="mockup-btn mockup-btn-secondary mockup-hidden" id="btn-back">मागे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary" id="btn-next">पुढे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary mockup-hidden" id="btn-save">पूर्ण</button>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var tabMatrix = {
+        savings: ['info', 'posting', 'charges'],
+        daily: ['info', 'duration', 'posting', 'closing', 'charges'],
+        fd: ['info', 'duration', 'posting', 'closing', 'charges', 'advanced'],
+        recurring: ['info', 'duration', 'posting', 'closing', 'charges', 'advanced'],
+        loan: ['info', 'duration', 'posting', 'charges', 'loan-specific', 'advanced']
+      };
+      var tabLabels = {
+        info: 'योजना माहिती',
+        duration: 'कालावधी व दर',
+        posting: 'व्याज पोस्टिंग',
+        closing: 'खाते बंद',
+        charges: 'चार्जेस',
+        'loan-specific': 'कर्ज विशेष',
+        advanced: 'प्रगत'
+      };
+
+      var schemeSelect = document.getElementById('field-scheme-type');
+      var tabBar = document.getElementById('tab-bar');
+      var btnNext = document.getElementById('btn-next');
+      var btnBack = document.getElementById('btn-back');
+      var btnSave = document.getElementById('btn-save');
+      var activeTabs = [];
+      var currentIndex = 0;
+
+      function updateTypeSections(type) {
+        document.querySelectorAll('.type-savings-only').forEach(function (el) {
+          el.classList.toggle('mockup-hidden', type !== 'savings');
+        });
+        document.querySelectorAll('.type-loan-only').forEach(function (el) {
+          var show = type === 'loan';
+          el.classList.toggle('mockup-hidden', !show);
+          el.hidden = !show;
+        });
+        document.querySelectorAll('.type-daily-only').forEach(function (el) {
+          el.classList.toggle('mockup-hidden', type !== 'daily');
+        });
+        updateGlSuggestions(type);
+      }
+
+      function updateGlSuggestions(type) {
+        var glField = document.getElementById('field-gl-head');
+        var glList = document.getElementById('gl-options');
+        if (!glField || !glList) return;
+        var samples = {
+          savings: [{ v: '38 — Saving' }],
+          daily: [{ v: '38 — Pigmy' }, { v: '50 — Daily Scheme' }],
+          fd: [{ v: '91 — FD' }],
+          recurring: [{ v: '38 — Saving' }],
+          loan: [{ v: '42 — Loan' }]
+        };
+        var opts = samples[type] || samples.savings;
+        glList.innerHTML = '';
+        opts.forEach(function (o) {
+          var opt = document.createElement('option');
+          opt.value = o.v;
+          glList.appendChild(opt);
+        });
+        glField.value = opts[0].v;
+      }
+
+      function buildTabs(type) {
+        activeTabs = tabMatrix[type] || tabMatrix.savings;
+        currentIndex = 0;
+        tabBar.innerHTML = '';
+        activeTabs.forEach(function (key, idx) {
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'mockup-tab' + (idx === 0 ? ' mockup-tab-active' : '');
+          btn.setAttribute('role', 'tab');
+          btn.setAttribute('data-tab-key', key);
+          btn.setAttribute('data-tab-index', String(idx));
+          btn.setAttribute('aria-selected', idx === 0 ? 'true' : 'false');
+          btn.textContent = tabLabels[key];
+          btn.addEventListener('click', function () { showTab(Number(this.getAttribute('data-tab-index'))); });
+          tabBar.appendChild(btn);
+        });
+        document.querySelectorAll('.tab-panel').forEach(function (panel) {
+          panel.classList.add('mockup-hidden');
+          panel.hidden = true;
+        });
+        showTab(0);
+        updateTypeSections(type);
+      }
+
+      function showTab(index) {
+        currentIndex = index;
+        var key = activeTabs[index];
+        tabBar.querySelectorAll('.mockup-tab').forEach(function (tab, i) {
+          var isActive = i === index;
+          tab.classList.toggle('mockup-tab-active', isActive);
+          tab.setAttribute('aria-selected', isActive);
+        });
+        document.querySelectorAll('.tab-panel').forEach(function (panel) {
+          panel.classList.add('mockup-hidden');
+          panel.hidden = true;
+        });
+        var panel = document.getElementById('panel-' + key);
+        if (panel) {
+          panel.classList.remove('mockup-hidden');
+          panel.hidden = false;
+        }
+        var isLast = index === activeTabs.length - 1;
+        btnNext.classList.toggle('mockup-hidden', isLast);
+        btnBack.classList.toggle('mockup-hidden', index === 0);
+        btnSave.classList.toggle('mockup-hidden', !isLast);
+      }
+
+      schemeSelect.addEventListener('change', function () {
+        buildTabs(this.value);
+      });
+
+      btnNext.addEventListener('click', function () {
+        if (currentIndex < activeTabs.length - 1) showTab(currentIndex + 1);
+      });
+      btnBack.addEventListener('click', function () {
+        if (currentIndex > 0) showTab(currentIndex - 1);
+      });
+
+      buildTabs(schemeSelect.value);
+    })();
+  </script>
+</body>
+</html>
