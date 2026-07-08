@@ -101,7 +101,8 @@ Filter → Grid (list) → Processing panel (Update when rows selected).
 
 ### Low priority
 
-- [ ] Resolve `TODO` dropdown values (Account Type, Status, Bank Method) before mockup
+- [x] Resolve Account Type and Status dropdown values in spec and mockup (2026-07-08)
+- [x] Resolve Bank Method dropdown values in spec and mockup (2026-07-08)
 - [ ] Generate HTML mockup for bank-management-screen
 
 ---

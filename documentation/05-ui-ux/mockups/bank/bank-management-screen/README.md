@@ -23,7 +23,8 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 - [ ] Tab 2: Primary filters + अतिरिक्त शोध पर्याय toggle
 - [ ] Tab 2: Additional search collapsed by default
 - [ ] Tab 2: Cheque processing panel visible only when row(s) selected
-- [ ] Tab 2: TODO dropdowns marked with badge
+- [ ] Tab 1: Account Type and Status dropdown values match spec
+- [ ] Tab 2: Bank Method dropdown values match spec
 - [ ] Marathi labels clear for non-technical bank staff
 - [ ] Required fields marked with *
 - [ ] Responsive on mobile (single column) and desktop (two columns where applicable)

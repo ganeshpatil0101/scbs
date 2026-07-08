@@ -50,8 +50,8 @@ Single operational screen for society bank accounts and cheque processing. Each 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | शाखा निवडा | Select Branch | Autocomplete | No | Enter resolves by ID or name; e.g. `1 — Branch 1` |
-| 2 | खाते प्रकार | Account Type | Dropdown | No | Default: `सर्व` (All) |
-| 3 | स्थिती निवडा | Select Status | Dropdown | No | Default: `चालू` (Active) |
+| 2 | खाते प्रकार | Account Type | Dropdown | No | Default: `सर्व`. Values: `सर्व`, `1` सेव्हिंग खाते, `2` करंट खाते, `3` कॅश क्रेडिट / ओ.डी, `4` संस्था |
+| 3 | स्थिती निवडा | Select Status | Dropdown | No | Default: `सर्व`. Values: `सर्व`, `2` स्थगित, `4` बंद |
 
 **Actions:** `दाखवा` (Show), `+ नवीन` (New — switches Panel C to Create mode).
 
@@ -84,9 +84,9 @@ Visible when Create or Update mode active.
 | 6 | बँक खाते क्र. | Bank Account No. | Textbox | Yes | — |
 | 7 | शाखा | Branch | Textbox | Yes | External bank branch |
 | 8 | पत्ता | Address | Textbox | Yes | — |
-| 9 | खाते प्रकार | Account Type | Dropdown | Yes | `TODO` — master values |
+| 9 | खाते प्रकार | Account Type | Dropdown | Yes | `1` सेव्हिंग खाते, `2` करंट खाते, `3` कॅश क्रेडिट / ओ.डी, `4` संस्था |
 | 10 | खाते चालू दिनांक | Account Opening Date | Date | Yes | Default: today on Create |
-| 11 | स्थिती | Status | Label / Dropdown | — | Create: read-only `चालू`. Update: editable Dropdown (`TODO`) |
+| 11 | स्थिती | Status | Label / Dropdown | — | Create: read-only `चालू` (active). Update: `2` स्थगित, `4` बंद |
 | 12 | आय.एफ.एस.सी. कोड | IFSC Code | Textbox | No | — |
 
 ### Section: प्रगत सेटिंग्ज (Advanced Settings)
@@ -136,7 +136,7 @@ Visible when Create or Update mode active.
 | 25 | चेक क्र. (पासून) | Cheque No. From | Textbox | No | — |
 | 26 | मंजुरी दिनांक (पासून) | Approval Date From | Date | No | — |
 | 27 | मंजुरी दिनांक (पर्यंत) | Approval Date To | Date | No | — |
-| 28 | बँक पद्धत | Bank Method | Dropdown | No | `TODO` |
+| 28 | बँक पद्धत | Bank Method | Dropdown | No | `` (empty), `1` न ई फ टि, `2` आर टि जि एस, `2` न ई फ टि/आर टि जि एस |
 
 ### Section: Results Grid (List)
 

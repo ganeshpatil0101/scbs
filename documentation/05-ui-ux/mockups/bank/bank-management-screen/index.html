@@ -54,16 +54,19 @@
           <div data-spec-field="2">
             <label class="mockup-label" for="tab1-account-type-filter">खाते प्रकार</label>
             <select id="tab1-account-type-filter">
-              <option selected>सर्व</option>
-              <option>चालू खाते</option>
-              <option>बचत खाते</option>
+              <option value="" selected>सर्व</option>
+              <option value="1">सेव्हिंग खाते</option>
+              <option value="2">करंट खाते</option>
+              <option value="3">कॅश क्रेडिट / ओ.डी</option>
+              <option value="4">संस्था</option>
             </select>
           </div>
           <div data-spec-field="3">
             <label class="mockup-label" for="tab1-status-filter">स्थिती निवडा</label>
             <select id="tab1-status-filter">
-              <option selected>चालू</option>
-              <option>बंद</option>
+              <option value="" selected>सर्व</option>
+              <option value="2">स्थगित</option>
+              <option value="4">बंद</option>
             </select>
           </div>
           <div class="flex flex-wrap gap-2">
@@ -105,7 +108,7 @@
                 <td>कोतोली</td>
                 <td>12345678901</td>
                 <td>2024-04-01</td>
-                <td>चालू खाते</td>
+                <td>करंट खाते</td>
                 <td>₹ 12,45,000.00</td>
                 <td>
                   <button type="button" class="text-blue-700 underline text-sm bg-transparent border-0 cursor-pointer tab1-detail-btn">तपशील</button>
@@ -120,7 +123,7 @@
                 <td>सातारा</td>
                 <td>98765432100</td>
                 <td>2023-11-15</td>
-                <td>चालू खाते</td>
+                <td>सेव्हिंग खाते</td>
                 <td>₹ 8,20,500.00</td>
                 <td>
                   <button type="button" class="text-blue-700 underline text-sm bg-transparent border-0 cursor-pointer tab1-detail-btn">तपशील</button>
@@ -175,10 +178,13 @@
               <div data-spec-field="9">
                 <label class="mockup-label" for="tab1-account-type">
                   खाते प्रकार <span class="mockup-required">*</span>
-                  <span class="mockup-badge-todo">TODO</span>
                 </label>
-                <select id="tab1-account-type" disabled>
-                  <option>— मास्टर डेटा प्रलंबित —</option>
+                <select id="tab1-account-type">
+                  <option value="">निवडा</option>
+                  <option value="1">सेव्हिंग खाते</option>
+                  <option value="2">करंट खाते</option>
+                  <option value="3">कॅश क्रेडिट / ओ.डी</option>
+                  <option value="4">संस्था</option>
                 </select>
               </div>
               <div data-spec-field="10">
@@ -190,8 +196,9 @@
               <div data-spec-field="11">
                 <label class="mockup-label">स्थिती</label>
                 <span id="tab1-status-readonly" class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700">चालू</span>
-                <select id="tab1-status-edit" class="mockup-hidden" disabled>
-                  <option>— मास्टर डेटा प्रलंबित —</option>
+                <select id="tab1-status-edit" class="mockup-hidden">
+                  <option value="2">स्थगित</option>
+                  <option value="4">बंद</option>
                 </select>
               </div>
               <div data-spec-field="12">
@@ -343,12 +350,12 @@
             <input type="date" id="tab2-approval-to">
           </div>
           <div data-spec-field="28">
-            <label class="mockup-label" for="tab2-bank-method">
-              बँक पद्धत
-              <span class="mockup-badge-todo">TODO</span>
-            </label>
-            <select id="tab2-bank-method" disabled>
-              <option>— मास्टर डेटा प्रलंबित —</option>
+            <label class="mockup-label" for="tab2-bank-method">बँक पद्धत</label>
+            <select id="tab2-bank-method">
+              <option value=""></option>
+              <option value="1">न ई फ टि</option>
+              <option value="2">आर टि जि एस</option>
+              <option value="2">न ई फ टि/आर टि जि एस</option>
             </select>
           </div>
         </div>
@@ -506,6 +513,7 @@
           tab1StatusEdit.classList.add('mockup-hidden');
           document.getElementById('tab1-bank-name').value = '';
           document.getElementById('tab1-account-no').value = '';
+          document.getElementById('tab1-account-type').value = '';
         } else {
           tab1StatusReadonly.classList.add('mockup-hidden');
           tab1StatusEdit.classList.remove('mockup-hidden');
@@ -513,6 +521,8 @@
           document.getElementById('tab1-bank-name').value = 'बँक ऑफ इंडिया';
           document.getElementById('tab1-account-no').value = '12345678901';
           document.getElementById('tab1-branch').value = 'कोतोली';
+          document.getElementById('tab1-account-type').value = '2';
+          tab1StatusEdit.value = '2';
         }
       }
 
