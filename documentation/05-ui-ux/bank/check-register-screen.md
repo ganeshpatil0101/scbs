@@ -1,5 +1,7 @@
 # Screen Spec — Cheque Register (बँक > चेक रजिस्टर)
 
+> **Superseded (2026-07-07):** Consolidated into [bank-management-screen.md](bank-management-screen.md) — Tab 2 **चेक रजिस्टर**. Retained for field reference only.
+
 ## Purpose
 
 UI specification for searching, listing, and processing cheques (cleared, uncleared, returned).
@@ -72,6 +74,8 @@ UI specification for searching, listing, and processing cheques (cleared, unclea
 
 ## Related Documents
 
+- [bank-management-screen.md](bank-management-screen.md) — current spec
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [../accounting/jama-screen.md](../accounting/jama-screen.md)
 - [../accounting/nave-screen.md](../accounting/nave-screen.md)

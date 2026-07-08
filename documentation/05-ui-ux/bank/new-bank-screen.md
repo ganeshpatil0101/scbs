@@ -1,5 +1,7 @@
 # Screen Spec — New Bank (बँक > नवीन बँक)
 
+> **Superseded (2026-07-07):** Consolidated into [bank-management-screen.md](bank-management-screen.md) — Tab 1 **बँक खाते** (Create / Update panel). Retained for field reference only.
+
 ## Purpose
 
 UI specification for registering a new society bank account (GL-linked external bank account).
@@ -43,5 +45,6 @@ UI specification for registering a new society bank account (GL-linked external 
 
 ## Related Documents
 
+- [bank-management-screen.md](bank-management-screen.md) — current spec
 - [overview.md](overview.md)
-- [bank-register-screen.md](bank-register-screen.md)
+- [ux-optimization.md](ux-optimization.md)

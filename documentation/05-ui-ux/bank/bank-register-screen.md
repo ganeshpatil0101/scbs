@@ -1,5 +1,7 @@
 # Screen Spec — Bank Register (बँक > बँक रजिस्टर)
 
+> **Superseded (2026-07-07):** Consolidated into [bank-management-screen.md](bank-management-screen.md) — Tab 1 **बँक खाते**. Retained for field reference only.
+
 ## Purpose
 
 UI specification for searching and listing society bank accounts (current accounts held at external banks).
@@ -54,5 +56,6 @@ UI specification for searching and listing society bank accounts (current accoun
 
 ## Related Documents
 
+- [bank-management-screen.md](bank-management-screen.md) — current spec
 - [overview.md](overview.md)
-- [new-bank-screen.md](new-bank-screen.md)
+- [ux-optimization.md](ux-optimization.md)

@@ -22,6 +22,10 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 
 - [05-ui-ux/mockups/shared/mockup-base.css](05-ui-ux/mockups/shared/mockup-base.css) — Shared Tailwind `@theme` tokens and component classes
 
+**Bank mockups (2026-07-08 UX consolidation — 1 screen):**
+
+- [05-ui-ux/mockups/bank/bank-management-screen/](05-ui-ux/mockups/bank/bank-management-screen/) — बँक व्यवस्थापन (Draft)
+
 **Settings mockups (2026-07-05 UX consolidation — 6 screens):**
 
 - [05-ui-ux/mockups/settings/master/staff-system-access-screen/](05-ui-ux/mockups/settings/master/staff-system-access-screen/) — कर्मचारी व सिस्टम प्रवेश (Draft)
@@ -76,10 +80,13 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/loan/loan-manual-interest-provision-screen.md](05-ui-ux/loan/loan-manual-interest-provision-screen.md) — मॅन्युअल व्याज > तरतूद (from PNG `05-07`)
 
 ## 05 — UI/UX — Bank (Operational)
+
+**UX optimized (2026-07-07):** 3 screens → 1. Audit: [05-ui-ux/bank/ux-optimization.md](05-ui-ux/bank/ux-optimization.md)
+
 - [05-ui-ux/bank/overview.md](05-ui-ux/bank/overview.md)
-- [05-ui-ux/bank/bank-register-screen.md](05-ui-ux/bank/bank-register-screen.md) — बँक रजिस्टर (from PNG `05-07`)
-- [05-ui-ux/bank/new-bank-screen.md](05-ui-ux/bank/new-bank-screen.md) — नवीन बँक (from PNG `05-07`)
-- [05-ui-ux/bank/check-register-screen.md](05-ui-ux/bank/check-register-screen.md) — चेक रजिस्टर (from PNG `05-07`)
+- [05-ui-ux/bank/ux-optimization.md](05-ui-ux/bank/ux-optimization.md) — UX audit and action checklist
+- [05-ui-ux/bank/bank-management-screen.md](05-ui-ux/bank/bank-management-screen.md) — बँक व्यवस्थापन (consolidated; 2 tabs)
+- ~~bank-register-screen.md~~ / ~~new-bank-screen.md~~ / ~~check-register-screen.md~~ → superseded by bank-management-screen.md
 
 ## 05 — UI/UX — Investment (Operational)
 - [05-ui-ux/investment/overview.md](05-ui-ux/investment/overview.md)
