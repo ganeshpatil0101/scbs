@@ -1,5 +1,7 @@
 # Screen Spec — Other Account Registration (ग्राहक > इतर खाते नोंदणी)
 
+> **Superseded (2026-07-09):** Consolidated into [other-account-management-screen.md](other-account-management-screen.md) — Tab 2 **नोंदणी यादी**. Retained for field reference only.
+
 ## Purpose
 
 UI specification for bulk registration of "other" accounts (dividend, deposit, fee accounts) for customers. Intended for AI agents implementing this screen.
@@ -68,5 +70,6 @@ Visible when registering accounts (video frame ~7.5 s):
 ## Related Documents
 
 - [overview.md](overview.md)
+- [other-account-management-screen.md](other-account-management-screen.md)
 - [new-other-account-screen.md](new-other-account-screen.md)
-- [../settings/membership/dividend-calculation-screen.md](../settings/membership/dividend-calculation-screen.md)
+- [../settings/membership/membership-configuration-screen.md](../settings/membership/membership-configuration-screen.md)

@@ -12,6 +12,8 @@ UI specification for searching and listing customers. Intended for AI agents imp
 | Breadcrumb | डॅशबोर्ड > ग्राहक > ग्राहक यादी | Dashboard > Customer > Customer List |
 | Parent Module | ग्राहक | Customer |
 
+**Auto-fill (header):** `संस्था` (Organization) — read-only `Label` from tenant session; not repeated in filter bar.
+
 ## Reference Screenshots
 
 | Screenshot File | Section |
@@ -22,24 +24,33 @@ UI specification for searching and listing customers. Intended for AI agents imp
 
 ## Filter Section
 
+### Section: प्राथमिक शोध (Primary Search)
+
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | संस्थेचे नाव | Organization Name | Dropdown | Yes | e.g. श्रद्धा नागरी सहकारी पतसंस्था मर्यादित- कोतोली |
-| 2 | शाखा निवडा | Select Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
-| 3 | शाखा | Branch | Dropdown | No | e.g. कोतोली मुख्य कार्यालय |
-| 4 | ग्राहकाचे नाव | Customer Name | Textbox | No | — |
-| 5 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | — |
-| 6 | ग्राहक क्र. (पर्यंत) | Customer No. (To) | Textbox | No | — |
-| 7 | स्थिती | Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended), `मृत` (Deceased), `निलंबित` (Barred), `निवृत्त` (Retired), `वैद्यकीय` (Medical), `काढला` (Removed) |
-| 8 | मास्टर्स पासिंग | Masters Passing | Dropdown | No | `सर्व` (All), `पास` (Pass), `पास नसलेले` (Not Passed), `रद्द` (Cancelled) |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | No | Enter resolves by ID or name; e.g. `1 — Branch 1`. Replaces legacy Branch Autocomplete + Branch Dropdown pair |
+| 2 | ग्राहकाचे नाव | Customer Name | Textbox | No | — |
+| 3 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | Range filter |
+| 4 | ग्राहक क्र. (पर्यंत) | Customer No. (To) | Textbox | No | Range filter |
+| 5 | स्थिती | Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended), `मृत` (Deceased), `निलंबित` (Barred), `निवृत्त` (Retired), `वैद्यकीय` (Medical), `काढला` (Removed) |
 
-**Links:** `अॅडव्हान्स शोध` (Advance Search) — expands additional filters (not shown in screenshot).
+**Link:** `अॅडव्हान्स शोध` (Advance Search) — expands additional filters.
 
 **Action:** `दाखवा` (Show) — blue button with search icon; runs filter query.
+
+### Section: अॅडव्हान्स शोध (Advance Search)
+
+> Collapsed by default. Visible when Advance Search link expanded.
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 6 | मास्टर्स पासिंग | Masters Passing | Dropdown | No | `सर्व` (All), `पास` (Pass), `पास नसलेले` (Not Passed), `रद्द` (Cancelled) |
 
 ---
 
 ## Results Grid
+
+### Default columns
 
 | # | Marathi Column | English Column |
 | :---: | :--- | :--- |
@@ -52,6 +63,13 @@ UI specification for searching and listing customers. Intended for AI agents imp
 | 7 | तालुका | Taluka |
 | 8 | शहर | City |
 | 9 | मोबाइल क्रमांक | Mobile Number |
+
+### Additional columns (Details / Export / column picker)
+
+> Not shown in the default grid. Available via `तपशील` (Details), `निर्यात करा` (Export), or optional column picker.
+
+| # | Marathi Column | English Column |
+| :---: | :--- | :--- |
 | 10 | लेजर फोलिओ क्रमांक | Ledger Folio Number |
 | 11 | शाखा क्रमांक | Branch Number |
 | 12 | कर्मचारी कोड | Employee Code |
@@ -71,10 +89,23 @@ UI specification for searching and listing customers. Intended for AI agents imp
 
 ---
 
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/customer/customer-list-screen/index.html](../mockups/customer/customer-list-screen/index.html) |
+| Review guide | [mockups/customer/customer-list-screen/README.md](../mockups/customer/customer-list-screen/README.md) |
+| Stack | Tailwind CSS v4 (CDN), Marathi labels only |
+| Status | Draft — pending bank user review |
+
+---
+
 ## Related Documents
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [new-customer-screen.md](new-customer-screen.md)
-- [new-other-account-screen.md](new-other-account-screen.md)
-- [other-account-registration-screen.md](other-account-registration-screen.md)
+- [other-account-management-screen.md](other-account-management-screen.md)
+- [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)
 - [../membership/new-membership-screen.md](../membership/new-membership-screen.md)

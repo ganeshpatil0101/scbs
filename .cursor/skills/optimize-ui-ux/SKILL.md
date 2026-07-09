@@ -89,7 +89,7 @@ Read and apply [documentation/05-ui-ux/shared/ui-simplification-patterns.md](../
 | Domain | Path | Notes |
 | :--- | :--- | :--- |
 | Settings | `05-ui-ux/settings/` | **Done** — reference implementation |
-| Customer | `05-ui-ux/customer/` | Candidate: merge related registration flows |
+| Customer | `05-ui-ux/customer/` | **Done (2026-07-09)** — Other Account Management; Autocomplete; Advanced |
 | Reports | `05-ui-ux/reports/` | Candidate: shared filter patterns |
 | Loan (operational) | `05-ui-ux/loan/` | Candidate: transaction screen tab overlap |
 | Savings / FD / Daily / Recurring | operational folders | Candidate: shared account-opening tabs |

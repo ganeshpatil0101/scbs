@@ -12,11 +12,13 @@ UI specification for registering a new customer. Three-tab wizard. Intended for 
 | Breadcrumb | डॅशबोर्ड > ग्राहक > नवीन ग्राहक | Dashboard > Customer > New Customer |
 | Parent Module | ग्राहक | Customer |
 
+**Auto-fill (header):** `संस्था` (Organization) — read-only `Label` from tenant session.
+
 ## Tabs
 
 | # | Marathi Tab | English Tab |
 | :---: | :--- | :--- |
-| 1 | सभासद तपशील | Member Details |
+| 1 | ग्राहक तपशील | Customer Details |
 | 2 | पत्ता | Address |
 | 3 | केवायसी कागदपत्रे | KYC Documents |
 
@@ -24,7 +26,7 @@ UI specification for registering a new customer. Three-tab wizard. Intended for 
 
 | File | Tab / Section |
 | :--- | :--- |
-| `screenshots/grahak_khatedar/डॅशबोर्ड-ग्राहक-नवीन ग्राहक-1.mp4` | Tab 1 — Member Details (scroll + dropdowns) |
+| `screenshots/grahak_khatedar/डॅशबोर्ड-ग्राहक-नवीन ग्राहक-1.mp4` | Tab 1 — Customer Details (scroll + dropdowns) |
 | `screenshots/grahak_khatedar/डॅशबोर्ड-ग्राहक-नवीन ग्राहक-2.mp4` | Tab 2 — Address |
 | `screenshots/grahak_khatedar/डॅशबोर्ड-ग्राहक-नवीन ग्राहक-3.png` | Tab 3 — KYC Documents |
 
@@ -32,7 +34,7 @@ Extracted frames: `screenshots/grahak_khatedar/new-customer-1-frames/`, `new-cus
 
 ---
 
-## Tab 1: सभासद तपशील (Member Details)
+## Tab 1: ग्राहक तपशील (Customer Details)
 
 ### Top Field
 
@@ -40,41 +42,52 @@ Extracted frames: `screenshots/grahak_khatedar/new-customer-1-frames/`, `new-cus
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | ग्राहक प्रकार | Customer Type | Dropdown | No | `वैयक्तिक` (Individual), `मालमत्ता फर्म` (Proprietorship Firm), `एसजी` (Self Help Group), `दुसरी संस्था` (Other Institution) |
 
-### Section: सभासद माहिती (Member Information)
+### Section: ग्राहक माहिती (Customer Information)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 2 | पॅन | PAN | Textbox | No | With `ई-पडताळणी` (e-Verification) button |
-| 3 | आधार क्र. | Aadhaar No. | Textbox | No | With `ई-पडताळणी` button |
-| 4 | ग्राहक क्र. | Customer No. | Textbox | Yes | Auto-generated; read-only (e.g. `661`) |
-| 5 | शाखा क्रमांक | Branch Number | Textbox | Yes | Read-only (e.g. `1`) |
-| 6 | शाखा | Branch | Dropdown | Yes | Read-only; e.g. कोतोली मुख्य कार्यालय |
-| 7 | श्री. / सौ. | Salutation | Dropdown | No | Default: `श्री.`. Values: `श्री.`, `सौ.`, `श्रीमती`, `कुमारी.`, `चि.`, `मेसर्स`, blank |
-| 8 | नाव (आडनाव - पहिले नाव - मधले नाव) | Name (Surname - First - Middle) | Textbox | Yes | — |
-| 9 | जन्म दिनांक | Date of Birth | Date | Yes | — |
-| 10 | वय (वर्षे) | Age (Years) | Label | No | Auto-calculated from DOB |
-| 11 | वय (महिने) | Age (Months) | Label | No | Read-only |
-| 12 | व्यवसाय | Occupation | Dropdown | No | Default: `एन/ए` (N/A). Has `+` add button. Values: `एन/ए`, `पेन्शनर(निवृत्त)`, `गृहिणी`, `नोकर`, `शेती`, `व्यवसाय`, `शिक्षण`, `शिक्षक`, `डॉक्टर`, `इतर` |
-| 13 | ग्राहक झाल्याची दिनांक | Customer Since Date | Date | No | Read-only; system date |
+| 2 | पॅन | PAN | Textbox | No | Phase 1: textbox only. `ई-पडताळणी` deferred to a later phase |
+| 3 | आधार क्र. | Aadhaar No. | Textbox | No | Phase 1: textbox only. `ई-पडताळणी` deferred to a later phase |
+| 4 | ग्राहक क्र. | Customer No. | Label | Yes | Auto-generated; read-only (e.g. `661`) |
+| 5 | शाखा निवडा | Select Branch | Autocomplete | Yes | Editable; admin may pick another branch. Enter resolves by ID or name; e.g. `1 — Branch 1`. Default: logged-in branch |
+| 6 | श्री. / सौ. | Salutation | Dropdown | No | Default: `श्री.`. Values: `श्री.`, `सौ.`, `श्रीमती`, `कुमारी.`, `चि.`, `मेसर्स`, blank. **Layout:** same row as Name (#7) |
+| 7 | नाव (आडनाव - पहिले नाव - मधले नाव) | Name (Surname - First - Middle) | Textbox | Yes | Same row as Salutation (#6) |
+| 8 | जन्म दिनांक | Date of Birth | Date | Yes | — |
+| 9 | वय (वर्षे) | Age (Years) | Label | No | Auto-calculated from DOB |
+| 10 | वय (महिने) | Age (Months) | Label | No | Read-only |
+| 11 | व्यवसाय | Occupation | Dropdown | No | Default: `एन/ए` (N/A). Has `+` add button. Values: `एन/ए`, `पेन्शनर(निवृत्त)`, `गृहिणी`, `नोकर`, `शेती`, `व्यवसाय`, `शिक्षण`, `शिक्षक`, `डॉक्टर`, `इतर` |
+| 12 | ग्राहक झाल्याची दिनांक | Customer Since Date | Label | No | Auto-fill; system date |
+| 13 | स्थिती | Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद`, `स्थगित`, `मृत`, `निलंबित`, `निवृत्त`, `वैद्यकीय`, `काढला` |
+| 14 | देहावसान तारीख | Date of Death | Date | No | **Visible only when Status = `मृत`**. Hidden otherwise |
 
-### Section: इतर तपशील (Other Details)
+### Section: प्रगत सेटिंग्ज (Advanced Settings)
+
+> Collapsed by default. Visible to users with accounting/admin role or when expanded manually.
+
+| # | Marathi Label | English Label | Type | Required | Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 15 | शिक्षण | Education | Textbox | No | — |
+| 16 | वडिलांचे नाव | Father's Name | Textbox | No | — |
+| 17 | आईचे नाव | Mother's Name | Textbox | No | — |
+| 18 | जोडीदाराचे नाव | Spouse's Name | Textbox | No | — |
+| 19 | एसएमएस अलर्ट सक्रिय करा | Activate SMS Alert | Checkbox | No | — |
+| 20 | व्हॉट्सॲप अलर्ट सक्रिय करा | Activate WhatsApp Alert | Checkbox | No | — |
+| 21 | ईमेल अलर्ट सक्रिय करा | Activate Email Alert | Checkbox | No | — |
+| 22 | वारसदार टाका | Add Nominee | Checkbox | No | When checked, show **वारसदार माहिती** form below (fields 23–29) |
+
+### Section: वारसदार माहिती (Nominee Information)
+
+> **Visible only when** `वारसदार टाका` (#22) is checked. Hidden otherwise. Compact subset for New Customer; full nominee grids remain on product account-opening screens (`app-nominee-form` pattern).
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 27 | शिक्षण | Education | Textbox | No | — |
-| 31 | देहावसान तारीख | Date of Death | Date | No | Disabled unless status warrants |
-| 37 | वडिलांचे नाव | Father's Name | Textbox | No | — |
-| 38 | आईचे नाव | Mother's Name | Textbox | No | — |
-| 39 | जोडीदाराचे नाव | Spouse's Name | Textbox | No | — |
-
-### Section: ॲडव्हान्स सेवा (Advance Services)
-
-| # | Marathi Label | English Label | Type | Required | Values / Notes |
-| :---: | :--- | :--- | :--- | :---: | :--- |
-| 50 | एसएमएस अलर्ट सक्रिय करा | Activate SMS Alert | Checkbox | No | — |
-| 51 | व्हॉट्सॲप अलर्ट सक्रिय करा | Activate WhatsApp Alert | Checkbox | No | — |
-| 52 | ईमेल अलर्ट सक्रिय करा | Activate Email Alert | Checkbox | No | — |
-| 55 | वारसदार टाका | Add Nominee | Checkbox | No | — |
+| 23 | श्री. / सौ. | Salutation | Dropdown | Yes | Same values as customer salutation (#6). Same row as Name (#24) |
+| 24 | नाव (आडनाव - पहिले नाव - मधले नाव) | Name (Surname - First - Middle) | Textbox | Yes | Same row as Salutation (#23) |
+| 25 | जन्म दिनांक | Date of Birth | Date | No | — |
+| 26 | नाते | Relation | Dropdown | Yes | `मुलगा`, `मुली`, `पत्नी`, `पती`, `पुतण्या`, `लहान भाऊ`, `बायको`, `मैत्रीण`, `केअरटेकर`, `स्वतः`, `वरील प्रमाणे` — same list as [new-membership-screen.md](../membership/new-membership-screen.md) Tab 3 |
+| 27 | मोबाईल क्रमांक | Mobile Number | Textbox | No | — |
+| 28 | वारसदार टक्केवारी | Nominee Percentage | Textbox | No | — |
+| 29 | पत्ता | Address | Textbox | No | Single-line address for phase 1 |
 
 ---
 
@@ -131,37 +144,57 @@ Fields remain editable after auto-fill so the user can correct parsed values. `+
 
 ## Tab 3: केवायसी कागदपत्रे (KYC Documents)
 
-### Document Grid
+### Pattern: Document cards (Option A)
 
-| # | Marathi Column | English Column | Type |
-| :---: | :--- | :--- | :--- |
-| 1 | निवडा | Select | Checkbox |
-| 2 | अनु. क्र | Sr. No. | Label |
-| 3 | कागदपत्र नाव | Document Name | Label |
-| 4 | बंधनकारक आहे का? | Is Mandatory? | Label (`होय`/`नाही`) |
-| 5 | दस्तावेज क्रमांक | Document Number | Textbox |
-| 6 | स्थिती | Status | Label (e.g. `उपलब्ध नाही`) |
-| 7 | पहा | View | Button |
+One **card per document** — upload on the card itself. No results grid, no row checkboxes, no shared footer file picker.
 
-**Pre-loaded document rows:**
+**Layout:** 2-column card grid on desktop (`≥640px`); single column on mobile.
 
-| Sr. | Document (Marathi) | Document (English) | Mandatory |
-| :---: | :--- | :--- | :---: |
-| 1 | फोटो | Photo | Yes |
-| 2 | सही | Signature | Yes |
-| 3 | पत्ता पुरावा | Address Proof | Yes |
-| 4 | ओळख पुरावा | Identity Proof | Yes |
-| 5 | Original Aadhar Photo | Original Aadhar Photo | No |
-| 6 | मूळ आधार फोटो | Original Aadhar Photo (Marathi) | No |
+### Card contents (each document)
 
-**Upload:** `Choose File` + `अपलोड` (Upload) button. `काढा` (Remove) for selected rows.
+| Element | Marathi | Behaviour |
+| :--- | :--- | :--- |
+| Title | Document name | e.g. `फोटो` |
+| Mandatory badge | `आवश्यक` / `पर्यायी` | Red-tint for required; muted for optional |
+| Document number | `दस्तावेज क्रमांक` | **Only** on Address Proof and Identity Proof. Hidden on Photo, Signature, Original Aadhaar Photo |
+| File control | `फाईल निवडा` | Native file input on the card |
+| Status | `अपलोड करा` / `अपलोड झाले` + file name | Updates after file selected (layout mockup may simulate) |
+| View | `पहा` | Enabled only when a file is present; otherwise hidden/disabled |
+| Remove | `काढा` | Clears file for that card only |
 
-**Footer actions:** `पूर्ण` (Complete/Save), `पूर्ववत` (Reset).
+### Documents
+
+| # | Marathi | English | Mandatory | Document number field |
+| :---: | :--- | :--- | :---: | :--- |
+| 1 | फोटो | Photo | Yes | No |
+| 2 | सही | Signature | Yes | No |
+| 3 | पत्ता पुरावा | Address Proof | Yes | Yes |
+| 4 | ओळख पुरावा | Identity Proof | Yes | Yes |
+| 5 | मूळ आधार फोटो | Original Aadhaar Photo | No | No |
+
+**Progress hint (optional UI):** e.g. `आवश्यक: 0/4 पूर्ण` — count of mandatory cards with a file.
+
+**Screen footer:** `पूर्ण` (Complete/Save), `पूर्ववत` / `रीसेट` (Reset) — same wizard footer as other tabs.
+
+---
+
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/customer/new-customer-screen/index.html](../mockups/customer/new-customer-screen/index.html) |
+| Review guide | [mockups/customer/new-customer-screen/README.md](../mockups/customer/new-customer-screen/README.md) |
+| Stack | Tailwind CSS v4 (CDN), Marathi labels only |
+| Status | Draft — pending bank user review |
 
 ---
 
 ## Related Documents
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [customer-list-screen.md](customer-list-screen.md)
+- [other-account-management-screen.md](other-account-management-screen.md)
+- [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)
 - [../membership/new-membership-screen.md](../membership/new-membership-screen.md)

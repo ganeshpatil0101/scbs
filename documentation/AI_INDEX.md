@@ -13,7 +13,7 @@ Top-level index of all project documentation. Add a link here whenever a new mod
 - [01-architecture/architecture-overview.md](01-architecture/architecture-overview.md) — Infra architecture (AWS `ap-south-1`), multi-tenancy decision, request flow, cost efficiency
 
 ## 05 — UI/UX — Shared Patterns
-- [05-ui-ux/shared/entity-autocomplete-pattern.md](05-ui-ux/shared/entity-autocomplete-pattern.md) — Branch / GL / Account Holder Autocomplete standard
+- [05-ui-ux/shared/entity-autocomplete-pattern.md](05-ui-ux/shared/entity-autocomplete-pattern.md) — Branch / GL / Account Holder / Customer Autocomplete standard
 - [05-ui-ux/shared/ui-simplification-patterns.md](05-ui-ux/shared/ui-simplification-patterns.md) — UX simplification patterns for non-technical bank staff
 
 ## 05 — UI/UX — Mockups (HTML prototypes for bank review)
@@ -26,6 +26,12 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 
 - [05-ui-ux/mockups/bank/bank-management-screen/](05-ui-ux/mockups/bank/bank-management-screen/) — बँक व्यवस्थापन (Draft)
 
+**Customer mockups (2026-07-09 UX consolidation — 3 screens):**
+
+- [05-ui-ux/mockups/customer/customer-list-screen/](05-ui-ux/mockups/customer/customer-list-screen/) — ग्राहक यादी (Draft)
+- [05-ui-ux/mockups/customer/new-customer-screen/](05-ui-ux/mockups/customer/new-customer-screen/) — नवीन ग्राहक (Draft)
+- [05-ui-ux/mockups/customer/other-account-management-screen/](05-ui-ux/mockups/customer/other-account-management-screen/) — इतर खाते व्यवस्थापन (Draft)
+
 **Settings mockups (2026-07-05 UX consolidation — 6 screens):**
 
 - [05-ui-ux/mockups/settings/master/staff-system-access-screen/](05-ui-ux/mockups/settings/master/staff-system-access-screen/) — कर्मचारी व सिस्टम प्रवेश (Draft)
@@ -36,11 +42,15 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/mockups/settings/loan/loan-interest-rate-change-screen/](05-ui-ux/mockups/settings/loan/loan-interest-rate-change-screen/) — व्याज दरात बदल (Draft)
 
 ## 05 — UI/UX — Customer
-- [05-ui-ux/customer/overview.md](05-ui-ux/customer/overview.md) — Index of Customer screens
+
+**UX optimized (2026-07-09):** 4 screens → 3. Audit: [05-ui-ux/customer/ux-optimization.md](05-ui-ux/customer/ux-optimization.md)
+
+- [05-ui-ux/customer/overview.md](05-ui-ux/customer/overview.md) — Index of Customer screens (current)
+- [05-ui-ux/customer/ux-optimization.md](05-ui-ux/customer/ux-optimization.md) — UX audit and action checklist
 - [05-ui-ux/customer/customer-list-screen.md](05-ui-ux/customer/customer-list-screen.md) — ग्राहक यादी
-- [05-ui-ux/customer/new-customer-screen.md](05-ui-ux/customer/new-customer-screen.md) — नवीन ग्राहक (3 tabs, from PNG + MP4)
-- [05-ui-ux/customer/new-other-account-screen.md](05-ui-ux/customer/new-other-account-screen.md) — नवीन इतर खाते
-- [05-ui-ux/customer/other-account-registration-screen.md](05-ui-ux/customer/other-account-registration-screen.md) — इतर खाते नोंदणी (from MP4)
+- [05-ui-ux/customer/new-customer-screen.md](05-ui-ux/customer/new-customer-screen.md) — नवीन ग्राहक (3 tabs)
+- [05-ui-ux/customer/other-account-management-screen.md](05-ui-ux/customer/other-account-management-screen.md) — इतर खाते व्यवस्थापन (2 tabs)
+- ~~new-other-account-screen.md~~ / ~~other-account-registration-screen.md~~ → superseded by other-account-management-screen.md
 
 ## 05 — UI/UX — Membership
 - [05-ui-ux/membership/overview.md](05-ui-ux/membership/overview.md) — Index of Membership screens

@@ -1,5 +1,7 @@
 # Screen Spec — New Other Account (ग्राहक > नवीन इतर खाते)
 
+> **Superseded (2026-07-09):** Consolidated into [other-account-management-screen.md](other-account-management-screen.md) — Tab 1 **नवीन खाते**. Retained for field reference only.
+
 ## Purpose
 
 UI specification for opening a new "other" account for an existing customer. Customer search precedes account-type selection.
@@ -51,5 +53,6 @@ Same column set as [customer-list-screen.md](customer-list-screen.md) minus cons
 ## Related Documents
 
 - [overview.md](overview.md)
+- [other-account-management-screen.md](other-account-management-screen.md)
 - [customer-list-screen.md](customer-list-screen.md)
 - [other-account-registration-screen.md](other-account-registration-screen.md)

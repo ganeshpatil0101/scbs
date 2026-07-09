@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Define the standard UI field type for selecting Branch, GL Head, and Account Holder across all CBS screens. Replaces legacy dual/triple fields (ID textbox + search + select dropdown) with a single **Autocomplete** control.
+Define the standard UI field type for selecting Branch, GL Head, Account Holder, and Customer across all CBS screens. Replaces legacy dual/triple fields (ID textbox + search + select dropdown) with a single **Autocomplete** control.
 
 ## Scope
 
-Applies to every screen spec under `documentation/05-ui-ux/` where the user must look up a branch, GL head, or account holder by ID or name.
+Applies to every screen spec under `documentation/05-ui-ux/` where the user must look up a branch, GL head, account holder, or **customer** by ID or name.
 
 ## Field Type: Autocomplete
 
@@ -37,6 +37,7 @@ Applies to every screen spec under `documentation/05-ui-ux/` where the user must
 | Sales Agent Branch | विक्री एजंट शाखा निवडा | Select Sales Agent Branch | `विक्री एजंट शाखा क्र.`, `विक्री एजंट शाखा निवडा` |
 | GL | जी.एल. निवडा | Select GL | `जि.एल.क्र.`, `जी.एल.हेड.क्र.`, `जी.एल. हेड`, `जी.एल. हेड शोधा`, `जी.एल.निवडा` |
 | Account Holder | खातेधारक निवडा | Select Account Holder | `खाते क्र.`, `खातेधारक शोधा`, `खातेदार निवडा`, `खाते धारक निवडा` |
+| Customer | ग्राहक निवडा | Select Customer | `ग्राहक क्र.`, `ग्राहकाचे नाव`, `ग्राहक निवडा` (paired ID + name / select) |
 
 ## Reference Sample Values (documentation and mockups only)
 
@@ -75,6 +76,16 @@ Use the product-appropriate sample on each screen (e.g. Pigmy on Daily transacti
 
 Display: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`
 
+### Customer
+
+| ID | Name |
+| :---: | :--- |
+| 661 | Customer 1 |
+| 662 | Customer 2 |
+| 663 | Customer 3 |
+
+Display: `661 — Customer 1`, `662 — Customer 2`, `663 — Customer 3`
+
 ## Spec Authoring Rules
 
 1. **One row per entity** — never document separate ID, search, and select rows for the same lookup.
@@ -91,15 +102,15 @@ On [new-scheme-screen.md](../settings/schemes/new-scheme-screen.md), field **ज
 
 - Auto-generated read-only `खाते क्र.` on new-account screens
 - Auto-generated read-only `जी. एल. हेड क्र.` on [GL Account Setup](../settings/accounting/gl-account-setup-screen.md) Tab 2 (creation flow only)
-- Range filters: `खाते क्र. (पासून)` / `(पर्यंत)`
+- Range filters: `खाते क्र. (पासून)` / `(पर्यंत)`, `ग्राहक क्र. (पासून)` / `(पर्यंत)` on list/bulk screens
 - `सभासद खाते क्र.`, `बँकेचे बचत खाते क्रमांक`
 - Grid column definitions
-- `ग्राहक क्र.` + `ग्राहक निवडा` pairs (separate pattern; not in scope)
+- Auto-generated read-only `ग्राहक क्र.` on New Customer (not a lookup)
 
 ## Implementation Notes (Angular / mockup)
 
 - **Mockup:** `<input type="text" list="…">` with `<datalist>` options; class `.mockup-autocomplete`
-- **Angular:** shared `app-entity-autocomplete` with `entityType`: `branch` | `gl` | `account`; Material `mat-autocomplete`; debounced filter; Enter resolves selection
+- **Angular:** shared `app-entity-autocomplete` with `entityType`: `branch` | `gl` | `account` | `customer`; Material `mat-autocomplete`; debounced filter; Enter resolves selection
 
 ## Related Documents
 

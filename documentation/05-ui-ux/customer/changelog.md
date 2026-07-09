@@ -7,3 +7,7 @@
 | 1.2.0 | 2026-07-04 | New Customer Tab 1: salutation + occupation dropdown values; removed Gender and Marital Status fields | User review of pending TODOs | AI Agent |
 | 1.2.1 | 2026-07-04 | New Customer Tab 2: Google Maps Places Autocomplete replaces geographic master dropdowns | User decision — no location masters | AI Agent |
 | 1.2.2 | 2026-07-04 | Customer List + New Other Account + Other Account Registration: resolved Status and Account-by-Customer dropdown values | User review of pending TODOs | AI Agent |
+| 2.0.0 | 2026-07-09 | UX optimization: 4→3 screens; Other Account Management (2 tabs); Org auto-fill; Branch/Customer Autocomplete; New Customer Advanced + conditional Date of Death; slim Customer List grid; Customer entity in autocomplete pattern | `@optimize-ui-ux` customer — user decisions applied | AI Agent |
+| 2.1.0 | 2026-07-09 | HTML mockups (Draft) for Customer List, New Customer, Other Account Management | `@generate-ui-mockup` — bank review prototypes | AI Agent |
+| 2.1.1 | 2026-07-09 | New Customer: remove PAN/Aadhaar e-Verify (phase 1); salutation+name one row; flat field grid; conditional nominee form when वारसदार टाका checked | Bank mockup review feedback | AI Agent |
+| 2.1.2 | 2026-07-10 | New Customer Tab 3 KYC: replace document grid with per-document cards (Option A); doc number only on address/ID proof; optional Aadhaar photo card | Bank UX review — simpler KYC upload | AI Agent |
