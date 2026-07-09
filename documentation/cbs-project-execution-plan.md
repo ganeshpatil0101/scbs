@@ -16,7 +16,7 @@
 | `02-business-domains/` (business rules, use cases) | ❌ Not started |
 | `03-api-contracts/` | ❌ Empty |
 | `04-database-design/` | ❌ Not started |
-| `05-ui-ux/` screen specs | 🟡 ~40 screens documented, many `TODO` dropdown values / missing tabs |
+| `05-ui-ux/` screen specs | 🟡 ~40 screens documented; **1.4 priority items mostly done** — scheme dropdowns closed, Shares Transfer Tab 3 + FD Tab 4 + Loan Scheme Category/Fee captured; **remaining:** User Role full form matrix, 25 screen specs with `TODO` tabs/dropdowns (see §1.4) |
 | Interactive mockups | 🟡 New Customer Tab 1–2 built (React), Tab 3 KYC pending |
 | Skill files | ✅ `generate-document`, `generate-ui-screen` complete |
 | Backend / Frontend code | ❌ Not started (pre-code stage) |
@@ -47,10 +47,28 @@ This plan is sequenced so **nothing gets built on an undocumented assumption** �
 > This unblocks consistent code generation in Phase 2 — currently `generate-ui-screen` skill has no coding-standards doc to point to.
 
 ### 1.4 Complete UI/UX Specs (close TODOs)
-Priority order — screens with the most `TODO` dropdown values / missing tabs first:
-- [ ] Fill dropdown value lists flagged `TODO` across scheme screens (Daily/Savings/FD/Recurring/Loan New Scheme — duration type, status values, month/day pickers)
-- [ ] Complete missing tabs: FD New Account (Tabs 3–4), Daily Transaction (Tabs 3, 4, 6), Deposit Loan Installment Payment (Tabs 2–6), Shares Transfer (Tab 3), New Loan Scheme (Category dropdown, Fee dropdown)
-- [ ] Capture User Role screen's full form list per menu (currently only Accounting sample rows captured)
+**Status:** 🟡 **Mostly complete** — all three original priority bullets addressed in part; **not ready to close** until User Role matrix and uncaptured tabs below are resolved.
+
+**Original priority items (2026-07 audit):**
+- [x] Fill dropdown value lists flagged `TODO` across scheme screens (Daily/Savings/FD/Recurring/Loan New Scheme — duration type, status values, month/day pickers) — **done**; unified [new-scheme-screen.md](05-ui-ux/settings/schemes/new-scheme-screen.md) has zero `TODO` markers
+- [x] Complete missing tabs where originally flagged:
+  - [x] FD New Account Tab 4 (Other) — captured in [new-fd-account-screen.md](05-ui-ux/fixed-deposit/new-fd-account-screen.md)
+  - [x] Shares Transfer Tab 3 (Transfer) — captured in [shares-transfer-screen.md](05-ui-ux/membership/shares-transfer-screen.md) v1.3.0
+  - [x] New Loan Scheme Category + Fee dropdowns — captured in [loan-new-scheme-screen.md](05-ui-ux/settings/schemes/loan-new-scheme-screen.md)
+  - [ ] FD New Account Tab 3 (Joint Holder) — **deferred v1** (tab shell only; not captured from source app)
+  - [ ] Daily Transaction Tabs 3, 4, 6 (Instrument Details, Transfer, KYC) — [daily-transaction-screen.md](05-ui-ux/daily/daily-transaction-screen.md)
+  - [ ] Deposit Loan Installment Payment Tabs 2–6 — [deposit-loan-installment-payment-screen.md](05-ui-ux/fixed-deposit/deposit-loan-installment-payment-screen.md)
+- [ ] Capture User Role screen's full form list per menu — [user-role-screen.md](05-ui-ux/settings/master/user-role-screen.md) still shows only 8 Accounting sample rows (partial grid)
+
+**Remaining `TODO` gaps in screen specs (25 files, ~60 markers as of 2026-07-08):**
+
+| Category | Screens still flagged |
+|---|---|
+| Uncaptured tabs | Savings New Account (Tabs 2–4), Recurring New Account (Tabs 3–4), Recurring Credit Transaction (Tabs 2–4), FD Transaction (Tabs 2, 5), Daily Agent Collection (Tabs 2–3), Deposit Loan Installment (Tabs 2–6), Daily Transaction (Tabs 3–4, 6), Membership/Dividend Transaction (KYC tabs), Loan Information (tab), New Deposit Loan (section) |
+| Master-data dropdowns | Bank select, cheque type, scheme/status lists on transaction and new-account screens (dynamic master data — scaffold at build time per `generate-ui-screen` skill) |
+| Deferred / low priority | Transaction Passing advanced filters; interest-date pickers on manual/scheduled assessment screens |
+
+> **Note:** Remaining dropdown `TODO`s are largely **dynamic master data** (scheme lists, bank lists, status enums loaded from APIs) — acceptable to scaffold during Phase 2/3 implementation. Uncaptured **tabs** and the **User Role permission matrix** are the blockers for closing 1.4.
 
 ### 1.5 Interactive Mockups (Tiered Workflow: Spec → Prototype → Cursor)
 - [ ] Finish **New Customer** screen Tab 3 (KYC Documents) — in progress
