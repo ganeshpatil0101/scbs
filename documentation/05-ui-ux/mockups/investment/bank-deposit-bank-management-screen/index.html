@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>बँक ठेव बँक व्यवस्थापन — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <div>
+        <h1 class="text-2xl font-bold text-gray-900">बँक ठेव बँक व्यवस्थापन</h1>
+        <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; गुंतवणूक &gt; बँक ठेव &gt; बँक ठेव बँक व्यवस्थापन</p>
+      </div>
+    </header>
+
+    <nav class="flex border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="स्क्रीन टॅब">
+      <button type="button" id="tab-1" class="mockup-tab mockup-tab-active" role="tab" aria-selected="true" aria-controls="tab-panel-1" data-tab="1">बँक यादी</button>
+      <button type="button" id="tab-2" class="mockup-tab" role="tab" aria-selected="false" aria-controls="tab-panel-2" data-tab="2">नवीन / संपादन बँक</button>
+    </nav>
+
+    <!-- Tab 1: Bank List -->
+    <div id="tab-panel-1" role="tabpanel" aria-labelledby="tab-1">
+
+      <section class="mockup-section mockup-section-compact" aria-labelledby="section-tab1-search">
+        <h2 class="mockup-section-title" id="section-tab1-search">प्राथमिक शोध</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-end">
+          <div data-spec-field="1">
+            <label class="mockup-label" for="tab1-bank-filter">बँक निवडा</label>
+            <input type="text" id="tab1-bank-filter" class="mockup-autocomplete" list="bank-filter-options" placeholder="ID किंवा नाव टाइप करा">
+            <datalist id="bank-filter-options">
+              <option value="167 — Bank Name"></option>
+              <option value="134 — State Bank Deposit"></option>
+              <option value="201 — District Coop Bank"></option>
+            </datalist>
+            <p class="mockup-autocomplete-hint">Enter दाबल्यास ID किंवा नावाने शोध</p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button type="button" class="mockup-btn mockup-btn-primary">दाखवा</button>
+            <button type="button" class="mockup-btn mockup-btn-add" id="btn-tab1-new">+ नवीन</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="mockup-section mockup-section-full" aria-labelledby="section-tab1-grid">
+        <h2 class="mockup-section-title" id="section-tab1-grid">बँक यादी</h2>
+        <div class="overflow-x-auto">
+          <table class="mockup-table" aria-label="बँक यादी">
+            <thead>
+              <tr>
+                <th data-spec-field="g1">निवडा</th>
+                <th data-spec-field="g2">अनु. क्र.</th>
+                <th data-spec-field="g3">खाते क्र.</th>
+                <th data-spec-field="g4">बँक नाव</th>
+                <th>कृती</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tab1-data-row cursor-pointer hover:bg-blue-50" data-row="1">
+                <td><input type="radio" name="tab1-row-select" aria-label="पंक्ती 1 निवडा"></td>
+                <td>1</td>
+                <td>167</td>
+                <td>स्टेट बँक ऑफ इंडिया</td>
+                <td><button type="button" class="text-blue-700 underline text-sm bg-transparent border-0 cursor-pointer tab1-detail-btn">तपशील</button></td>
+              </tr>
+              <tr class="tab1-data-row cursor-pointer hover:bg-blue-50" data-row="2">
+                <td><input type="radio" name="tab1-row-select" aria-label="पंक्ती 2 निवडा"></td>
+                <td>2</td>
+                <td>134</td>
+                <td>जिल्हा सहकारी बँक</td>
+                <td><button type="button" class="text-blue-700 underline text-sm bg-transparent border-0 cursor-pointer tab1-detail-btn">तपशील</button></td>
+              </tr>
+              <tr class="tab1-data-row cursor-pointer hover:bg-blue-50" data-row="3">
+                <td><input type="radio" name="tab1-row-select" aria-label="पंक्ती 3 निवडा"></td>
+                <td>3</td>
+                <td>201</td>
+                <td>पोस्ट ऑफिस ठेव</td>
+                <td><button type="button" class="text-blue-700 underline text-sm bg-transparent border-0 cursor-pointer tab1-detail-btn">तपशील</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="mockup-info-note">
+        पंक्ती निवडा किंवा <strong>तपशील</strong> दाबा — टॅब २ वर संपादन उघडेल. <strong>+ नवीन</strong> दाबल्यास रिकामे फॉर्म उघडेल.
+      </div>
+    </div>
+
+    <!-- Tab 2: New / Edit Bank -->
+    <div id="tab-panel-2" class="mockup-hidden" role="tabpanel" aria-labelledby="tab-2" hidden>
+
+      <div id="tab2-placeholder" class="mockup-info-note">
+        फॉर्म उघडण्यासाठी टॅब १ वरून <strong>+ नवीन</strong> किंवा पंक्ती निवडा / <strong>तपशील</strong> वापरा.
+      </div>
+
+      <section id="tab2-form-panel" class="mockup-hidden mockup-section" aria-labelledby="section-tab2-form">
+        <h2 class="mockup-section-title" id="section-tab2-form">नवीन / संपादन बँक</h2>
+        <div class="mockup-section-columns">
+          <div class="mockup-section-stack">
+            <div class="mockup-field-grid mockup-field-grid--2">
+              <div data-spec-field="2">
+                <label class="mockup-label">जीएल हेड क्र.</label>
+                <span id="tab2-gl-head" class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">— (जतनानंतर)</span>
+              </div>
+              <div data-spec-field="3">
+                <label class="mockup-label" for="tab2-bank-name">
+                  बँकेचे नाव <span class="mockup-required">*</span>
+                </label>
+                <input type="text" id="tab2-bank-name">
+              </div>
+              <div class="sm:col-span-2" data-spec-field="4">
+                <label class="mockup-label" for="tab2-details">तपशील</label>
+                <input type="text" id="tab2-details">
+              </div>
+              <div class="sm:col-span-2" data-spec-field="5">
+                <label class="mockup-label" for="tab2-bank-type">बँक प्रकार</label>
+                <select id="tab2-bank-type">
+                  <option value="">निवडा</option>
+                  <option value="other">इतर</option>
+                  <option value="scb">शेड्यूल्ड कमर्शियल बँक ठेव</option>
+                  <option value="po">पोस्ट ऑफिस ठेव</option>
+                  <option value="rbi">आर.बी.आय.</option>
+                  <option value="scb-state">राज्य सहकारी बँक</option>
+                  <option value="dcb">जिल्हा सहकारी बँक</option>
+                  <option value="nat">राष्ट्रीयकृत बँक</option>
+                  <option value="pcb">प्रायव्हेट सहकारी बँक</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-info-note mb-0">
+            हे गुंतवणूक जीएल बँक मास्टर आहेत. ऑपरेशनल बँक खाती <strong>बँक &gt; बँक व्यवस्थापन</strong> अंतर्गत राहतात.
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-200">
+          <button type="button" class="mockup-btn mockup-btn-primary" id="btn-tab2-save">जतन करा</button>
+          <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-tab2-cancel">रद्द करा</button>
+          <button type="button" class="mockup-btn mockup-btn-secondary mockup-hidden" id="btn-tab2-reset">पुन्हा टाका</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-reset">रीसेट</button>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var currentTab = 1;
+      var tabs = document.querySelectorAll('[role="tab"]');
+      var panel1 = document.getElementById('tab-panel-1');
+      var panel2 = document.getElementById('tab-panel-2');
+      var formPanel = document.getElementById('tab2-form-panel');
+      var placeholder = document.getElementById('tab2-placeholder');
+      var btnReset = document.getElementById('btn-tab2-reset');
+      var glHead = document.getElementById('tab2-gl-head');
+
+      function switchTab(tabNum) {
+        currentTab = tabNum;
+        tabs.forEach(function (tab) {
+          var isActive = Number(tab.getAttribute('data-tab')) === tabNum;
+          tab.classList.toggle('mockup-tab-active', isActive);
+          tab.setAttribute('aria-selected', isActive);
+        });
+        panel1.classList.toggle('mockup-hidden', tabNum !== 1);
+        panel1.hidden = tabNum !== 1;
+        panel2.classList.toggle('mockup-hidden', tabNum !== 2);
+        panel2.hidden = tabNum !== 2;
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          switchTab(Number(this.getAttribute('data-tab')));
+        });
+      });
+
+      function showForm(mode) {
+        switchTab(2);
+        formPanel.classList.remove('mockup-hidden');
+        placeholder.classList.add('mockup-hidden');
+        if (mode === 'create') {
+          glHead.textContent = '— (जतनानंतर)';
+          document.getElementById('tab2-bank-name').value = '';
+          document.getElementById('tab2-details').value = '';
+          document.getElementById('tab2-bank-type').value = '';
+          btnReset.classList.remove('mockup-hidden');
+        } else {
+          glHead.textContent = '167';
+          document.getElementById('tab2-bank-name').value = 'स्टेट बँक ऑफ इंडिया';
+          document.getElementById('tab2-details').value = 'गुंतवणूक ठेव मास्टर';
+          document.getElementById('tab2-bank-type').value = 'nat';
+          btnReset.classList.add('mockup-hidden');
+        }
+      }
+
+      function hideForm() {
+        formPanel.classList.add('mockup-hidden');
+        placeholder.classList.remove('mockup-hidden');
+        switchTab(1);
+      }
+
+      document.getElementById('btn-tab1-new').addEventListener('click', function () { showForm('create'); });
+      document.getElementById('btn-tab2-cancel').addEventListener('click', hideForm);
+
+      document.querySelectorAll('.tab1-detail-btn').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          showForm('update');
+        });
+      });
+
+      document.querySelectorAll('.tab1-data-row').forEach(function (row) {
+        row.addEventListener('click', function () {
+          var radio = this.querySelector('input[type="radio"]');
+          if (radio) radio.checked = true;
+          showForm('update');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

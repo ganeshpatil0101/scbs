@@ -26,18 +26,18 @@ UI specification for calculating FD interest rates or duration for various depos
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | योजना निवडा | Select Scheme | Dropdown | Yes | `निवडा`, `दाम दुप्पट ठेव (कर्जातील)`, `दामदुप्पट`, `पेन्शन ठेव`, `मुदत ठेव` |
-| 2 | मुदत ठेव / दाम दुप्पट / कॅश सर्टिफिकेट | FD / Double Money / Cash Certificate | Radio | No | — |
-| 3 | साधा / कम्पाउंडींग | Simple / Compounding | Radio | No | — |
-| 4 | मासिक / तिमाही / सहामाही / वार्षिक | Compounding Frequency | Radio | No | — |
-| 5 | कालावधी दिवसामध्ये / महिन्यामध्ये | Duration in Days / Months | Radio | No | — |
-| 6 | व्याज दर / कालावधी | Calculate Interest Rate / Duration | Radio | No | — |
-| 7 | कालावधी (महिना) | Duration (Months) | Textbox | No | e.g. `96` |
-| 8 | कालावधी (दिवस) | Duration (Days) | Textbox | No | — |
+| 1 | योजना निवडा | Select Scheme | Dropdown | Yes | Loaded dynamically from FD schemes (Settings > नवीन योजना). Sample: `दाम दुप्पट ठेव (कर्जातील)`, `दामदुप्पट`, `पेन्शन ठेव`, `मुदत ठेव` |
+| 2 | मुदत ठेव / दाम दुप्पट / कॅश सर्टिफिकेट | FD / Double Money / Cash Certificate | Radio | No | Visible when scheme selected; hidden until field 1 set |
+| 3 | साधा / कम्पाउंडींग | Simple / Compounding | Radio | No | Visible when scheme selected |
+| 4 | मासिक / तिमाही / सहामाही / वार्षिक | Compounding Frequency | Radio | No | Visible only when field 3 = Compounding |
+| 5 | कालावधी दिवसामध्ये / महिन्यामध्ये | Duration in Days / Months | Radio | No | Visible when scheme selected |
+| 6 | व्याज दर / कालावधी | Calculate Interest Rate / Duration | Radio | No | Visible when scheme selected |
+| 7 | कालावधी (महिना) | Duration (Months) | Textbox | No | Visible when field 5 = Months. e.g. `96` |
+| 8 | कालावधी (दिवस) | Duration (Days) | Textbox | No | Visible when field 5 = Days |
 
 **Actions:** `गणना करा` (Calculate), `पूर्वत` (Reset).
 
-### Output Sections
+### Output Sections (read-only Labels)
 
 | # | Marathi Label | English Label |
 | :---: | :--- | :--- |
@@ -46,8 +46,10 @@ UI specification for calculating FD interest rates or duration for various depos
 
 ---
 
-## Cross-Links
+## Related Documents
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [new-fd-account-screen.md](new-fd-account-screen.md)
 - [../daily/interest-multiplier-screen.md](../daily/interest-multiplier-screen.md)
+- [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)

@@ -1,5 +1,7 @@
 # Screen Spec — Account Renewal List (मुदत ठेव > खाते नूतनीकरण यादी)
 
+> **Superseded (2026-07-11):** Merged into [fd-account-management-screen.md](fd-account-management-screen.md) — Tab 2 (नूतनीकरण यादी). Retained for field archaeology.
+
 ## Purpose
 
 UI specification for viewing fixed deposit account renewal history.

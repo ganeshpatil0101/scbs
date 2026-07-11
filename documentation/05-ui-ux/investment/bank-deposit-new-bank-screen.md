@@ -1,5 +1,7 @@
 # Screen Spec — Bank Deposit New Bank (गुंतवणूक > बँक ठेव > नवीन बँक)
 
+> **Superseded (2026-07-11):** Merged into [bank-deposit-bank-management-screen.md](bank-deposit-bank-management-screen.md) — Tab 2 (नवीन / संपादन बँक). Retained for field archaeology.
+
 ## Purpose
 
 UI specification for registering a new investment bank (G.L. head master for bank deposits). Distinct from operational **बँक > नवीन बँक** — see [../bank/new-bank-screen.md](../bank/new-bank-screen.md).

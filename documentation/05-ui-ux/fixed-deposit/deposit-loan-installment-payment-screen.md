@@ -2,7 +2,7 @@
 
 ## Purpose
 
-UI specification for processing installment payments on loans against deposits.
+UI specification for processing installment payments on loans against deposits. Loan opening is on [New Deposit Loan](../loan/new-deposit-loan-screen.md) (Loan module); this screen handles installment payment under the FD/Deposit menu.
 
 ## Screen Identification
 
@@ -38,12 +38,11 @@ UI specification for processing installment payments on loans against deposits.
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | रोख / ट्रान्सफर | Cash / Transfer | Radio | Yes | — |
 | 2 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `42 — Loan`. Enter resolves by ID or name; shows display name |
-| 3 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
-| 4 | ग्राहक क्र. | Customer No. | Textbox | No | — |
-| 5 | ग्राहक निवडा | Select Customer | Dropdown | No | Loaded dynamically by customer number lookup; default `निवडा` |
-| 6 | दिनांक | Date | Date | Yes | System date |
+| 3 | ग्राहक निवडा | Select Customer | Autocomplete | No | Replaces `ग्राहक क्र.` + `ग्राहक निवडा` dropdown. Enter resolves by customer no. or name. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
+| 4 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Alternative lookup when customer not used. Sample: `101 — Account Holder 1`. Enter resolves by ID or name |
+| 5 | दिनांक | Date | Label (read-only) | Yes | System date |
 
-**Note:** कृपया खाते क्रमांक किंवा ग्राहक क्रमांक प्रविष्ट करा.
+**Note:** कृपया खाते क्रमांक किंवा ग्राहक क्रमांक प्रविष्ट करा — use field 3 (Customer) or field 4 (Account Holder); not both required.
 
 **Action:** `व्याज गणना करा` (Calculate Interest).
 
@@ -76,11 +75,33 @@ UI specification for processing installment payments on loans against deposits.
 
 **Footer:** `पुढे`, `पूर्ण`, `पूर्वत`.
 
-Tabs 2–6: `TODO` — not captured in video.
+---
+
+## Tab 2: इतर कपात (Other Deductions)
+
+`TODO` — not captured in video.
+
+## Tab 3: कर्ज माहिती (Loan Information)
+
+`TODO` — not captured in video. Defer to [New Deposit Loan Tab 2](../loan/new-deposit-loan-screen.md) when captured.
+
+## Tab 4: साहित्य तपशील / तारण तपशील (Collateral Details)
+
+`TODO` — not captured in video.
+
+## Tab 5: ट्रान्सफर (Transfer)
+
+`TODO` — not captured in video. Same pattern as [savings-transaction-screen.md](../savings/savings-transaction-screen.md) Tab 3 when captured.
+
+## Tab 6: केवायसी माहिती (KYC Information)
+
+`TODO` — not captured in video. Uses shared component `app-kyc-info-tab` when captured.
 
 ---
 
-## Cross-Links
+## Related Documents
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [../loan/new-deposit-loan-screen.md](../loan/new-deposit-loan-screen.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

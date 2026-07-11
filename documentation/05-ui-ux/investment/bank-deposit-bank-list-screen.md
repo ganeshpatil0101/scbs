@@ -1,5 +1,7 @@
 # Screen Spec — Bank Deposit Bank List (गुंतवणूक > बँक ठेव > बँक यादी)
 
+> **Superseded (2026-07-11):** Merged into [bank-deposit-bank-management-screen.md](bank-deposit-bank-management-screen.md) — Tab 1 (बँक यादी). Retained for field archaeology.
+
 ## Purpose
 
 UI specification for listing investment bank G.L. heads registered under bank deposits.

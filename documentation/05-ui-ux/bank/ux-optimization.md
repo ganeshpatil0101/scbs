@@ -35,7 +35,7 @@ Three legacy menu entries merged into **बँक व्यवस्थापन
 
 ## Cross-Domain Note
 
-[../investment/bank-deposit-new-bank-screen.md](../investment/bank-deposit-new-bank-screen.md) registers investment GL bank *masters*; operational bank accounts remain under **बँक > बँक व्यवस्थापन**. **Do not merge** — different modules.
+[../investment/bank-deposit-bank-management-screen.md](../investment/bank-deposit-bank-management-screen.md) registers investment GL bank *masters*; operational bank accounts remain under **बँक > बँक व्यवस्थापन**. **Do not merge** — different modules.
 
 ---
 

@@ -37,55 +37,56 @@ UI specification for opening a new daily (pigmy) deposit account. Four-tab wizar
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | ग्राहक क्र. | Customer No. | Textbox | Yes | — |
-| 2 | ग्राहक नाव | Customer Name | Textbox | Yes | — |
-| 3 | सभासद क्रमांक | Member Number | Textbox | No | Read-only |
-| 4 | वय (वर्षे) | Age (Years) | Textbox | No | Read-only |
-| 5 | सभासद शाखा नाव | Member Branch Name | Textbox | No | Read-only |
-| 6 | सभासद प्रकार | Member Type | Textbox | No | Read-only |
-| 7 | विशेष सूचना | Special Instructions | Textbox | No | Read-only |
+| 1 | ग्राहक निवडा | Select Customer | Autocomplete | Yes | Replaces `ग्राहक क्र.` + `ग्राहक नाव`. Enter resolves by customer no. or name; e.g. `661 — Customer 1`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
+
+**Customer summary (read-only Labels after resolve):** सभासद क्रमांक, वय (वर्षे), सभासद शाखा नाव, सभासद प्रकार, विशेष सूचना.
 
 ### खात्याची माहिती (Account / Agent)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 8 | योजना निवडा | Select Scheme | Dropdown | Yes | Loaded dynamically from Daily schemes (Settings > नवीन योजना). Sample: `डेली १`, `डेली २`, `पिग्मी ठेव` |
-| 9 | एजंट शाखा निवडा | Select Agent Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
-| 10 | एजंट क्रमांक | Agent Number | Textbox | Yes | — |
-| 11 | शोध एजंट नाव | Search Agent Name | Textbox | No | — |
-| 12 | खाते क्र. | Account No. | Textbox | No | Auto-generated |
-| 13 | विक्री एजंट शाखा निवडा | Select Sales Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
-| 14 | विक्री एजंट क्रमांक | Sales Agent Number | Textbox | No | — |
-| 15 | विक्री एजंटचे नाव शोधा | Search Sales Agent Name | Textbox | No | — |
+| 2 | योजना निवडा | Select Scheme | Dropdown | Yes | Loaded dynamically from Daily schemes (Settings > नवीन योजना). Sample: `डेली १`, `डेली २`, `पिग्मी ठेव` |
+| 3 | एजंट शाखा निवडा | Select Agent Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 4 | एजंट निवडा | Select Agent | Autocomplete | Yes | Replaces `एजंट क्रमांक` + `शोध एजंट नाव`. Sample: `1 — Agent 1`. Enter resolves by ID or name |
+| 5 | खाते क्र. | Account No. | Label (read-only) | No | Auto-generated on save |
 
 ### खाते तपशील (Account Details)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 16 | कालावधी निवडा | Select Duration | Dropdown | Yes | Loaded from selected scheme's duration grid (Settings > Daily New Scheme > कालावधी tab) |
-| 17 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | Auto-filled from selected duration |
-| 18 | कालावधी (दिवस) | Duration (Days) | Textbox | Yes | Auto-filled from selected duration |
-| 19 | व्याज दर (% पीए) | Interest Rate (% p.a.) | Textbox | Yes | Auto-filled from selected duration |
-| 20 | कमिशन दर | Commission Rate | Textbox | Yes | — |
-| 21 | व्याज प्रकार | Interest Type | Dropdown | No | `सरळ व्याज` (Simple Interest), `चक्रवाढ व्याज` (Compound Interest) — same as Daily New Scheme |
-| 22 | परिणामगणन | Compounding | Dropdown | No | `दैनिक` (Daily), `पाक्षिक` (Fortnightly), `मासिक` (Monthly), `तिमाही` (Quarterly), `सहामाही` (Half-yearly), `वार्षिक` (Yearly) — same as Daily New Scheme |
-| 23 | चालू दिनांक | Current Date | Date | Yes | System date |
-| 24 | मुदतपूर्ती दिनांक | Maturity Date | Date | No | — |
-| 25 | दैनिक ठेव रक्कम | Daily Deposit Amount | Textbox | Yes | — |
-| 26 | मुदतपूर्ती रक्कम | Maturity Amount | Textbox | No | — |
-| 27 | विशेष सूचना | Special Instructions | Textbox | No | — |
-| 28 | कलेक्शन रक्कम मर्यादा | Collection Amount Limit | Textbox | No | — |
-| 29 | नावे मर्यादा | Debit Limit | Textbox | No | — |
-| 30 | स्थिती निवडा | Select Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended) |
-| 31 | कर्जासाठी पिग्मी खाते | Pigmy Account for Loan | Checkbox | No | — |
-| 32 | आयएफएससी कोड | IFSC Code | Textbox | No | — |
-| 33 | बँक नाव | Bank Name | Textbox | No | — |
-| 34 | बँक बचत खाते नं | Bank Savings Account No. | Textbox | No | — |
-| 35 | किमान शिल्लक | Minimum Balance | Textbox | No | — |
+| 6 | कालावधी निवडा | Select Duration | Dropdown | Yes | Loaded from selected scheme's duration grid (Settings > नवीन योजना > कालावधी tab) |
+| 7 | कालावधी (महिने) | Duration (Months) | Label (read-only) | Yes | Auto-filled from selected duration |
+| 8 | कालावधी (दिवस) | Duration (Days) | Label (read-only) | Yes | Auto-filled from selected duration |
+| 9 | व्याज दर (% पीए) | Interest Rate (% p.a.) | Label (read-only) | Yes | Auto-filled from selected duration |
+| 10 | कमिशन दर | Commission Rate | Textbox | Yes | — |
+| 11 | चालू दिनांक | Current Date | Label (read-only) | Yes | System date |
+| 12 | मुदतपूर्ती दिनांक | Maturity Date | Date | No | — |
+| 13 | दैनिक ठेव रक्कम | Daily Deposit Amount | Textbox | Yes | — |
+| 14 | मुदतपूर्ती रक्कम | Maturity Amount | Textbox | No | — |
+| 15 | विशेष सूचना | Special Instructions | Textbox | No | — |
+| 16 | स्थिती निवडा | Select Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended) |
+| 17 | कर्जासाठी पिग्मी खाते | Pigmy Account for Loan | Checkbox | No | — |
+
+### Section: प्रगत सेटिंग्ज (Advanced Settings)
+
+> Collapsed by default. Visible to users with accounting/admin role or when expanded manually.
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 18 | विक्री एजंट शाखा निवडा | Select Sales Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`. Enter resolves by ID or name |
+| 19 | विक्री एजंट निवडा | Select Sales Agent | Autocomplete | No | Replaces `विक्री एजंट क्रमांक` + `विक्री एजंटचे नाव शोधा`. Sample: `1 — Agent 1` |
+| 20 | व्याज प्रकार | Interest Type | Dropdown | No | Default from scheme. `सरळ व्याज` (Simple Interest), `चक्रवाढ व्याज` (Compound Interest) |
+| 21 | परिणामगणन | Compounding | Dropdown | No | Default from scheme. `दैनिक`, `पाक्षिक`, `मासिक`, `तिमाही`, `सहामाही`, `वार्षिक` |
+| 22 | कलेक्शन रक्कम मर्यादा | Collection Amount Limit | Textbox | No | — |
+| 23 | नावे मर्यादा | Debit Limit | Textbox | No | — |
+| 24 | किमान शिल्लक | Minimum Balance | Textbox | No | — |
+| 25 | आयएफएससी कोड | IFSC Code | Textbox | No | — |
+| 26 | बँक नाव | Bank Name | Textbox | No | — |
+| 27 | बँक बचत खाते नं | Bank Savings Account No. | Textbox | No | — |
 
 **Action:** `पुढे` (Next).
 
-Tabs 3–4: deferred — not yet documented.
+Tabs 3–4: `TODO` — not captured. Deferred until screenshots/MP4 available.
 
 ---
 
@@ -140,4 +141,6 @@ Google Maps Places Autocomplete — same pattern as [New Customer Tab 2](../cust
 ## Cross-Links
 
 - [overview.md](overview.md)
-- [../settings/schemes/daily-new-scheme-screen.md](../settings/schemes/daily-new-scheme-screen.md)
+- [ux-optimization.md](ux-optimization.md)
+- [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

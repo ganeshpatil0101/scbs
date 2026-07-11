@@ -1,5 +1,7 @@
 # Screen Spec — Bank Deposit Interest Assessment (गुंतवणूक > बँक ठेव > व्याज आकारणी)
 
+> **Superseded (2026-07-11):** Merged into [bank-deposit-interest-management-screen.md](bank-deposit-interest-management-screen.md) — Tab 2 (व्याज आकारणी). Retained for field archaeology.
+
 ## Purpose
 
 UI specification for calculating and posting interest on bank deposit accounts.

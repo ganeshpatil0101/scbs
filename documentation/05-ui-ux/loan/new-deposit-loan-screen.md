@@ -156,3 +156,4 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 - [overview.md](overview.md)
 - [new-loan-screen.md](new-loan-screen.md)
 - [../fixed-deposit/new-fd-account-screen.md](../fixed-deposit/new-fd-account-screen.md)
+- [../fixed-deposit/deposit-loan-installment-payment-screen.md](../fixed-deposit/deposit-loan-installment-payment-screen.md) — installment payment (FD menu)

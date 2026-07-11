@@ -24,8 +24,8 @@ UI specification for transferring daily accounts from one agent to another.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | एजंट क्र. (कडून) | Agent No. (From) | Textbox + Dropdown | Yes | Agent number entry with name dropdown; loaded from registered Daily agents |
-| 2 | एजंट क्र. (कडे) | Agent No. (To) | Textbox + Dropdown | Yes | Agent number entry with name dropdown; loaded from registered Daily agents |
+| 1 | एजंट निवडा (कडून) | Select Agent (From) | Autocomplete | Yes | Replaces `एजंट क्र. (कडून)` textbox + dropdown. Sample: `1 — Agent 1`. Enter resolves by ID or name. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
+| 2 | एजंट निवडा (कडे) | Select Agent (To) | Autocomplete | Yes | Replaces `एजंट क्र. (कडे)` textbox + dropdown. Sample: `2 — Agent 2` |
 | 3 | सर्व निवडा | Select All | Checkbox | No | — |
 
 ---
@@ -48,4 +48,7 @@ UI specification for transferring daily accounts from one agent to another.
 ## Cross-Links
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [new-agent-screen.md](new-agent-screen.md)
+- [agent-collection-management-screen.md](agent-collection-management-screen.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

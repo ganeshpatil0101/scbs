@@ -4,9 +4,11 @@
 
 Index of operational UI screens under **डेली (Daily / Pigmy)**.
 
-Branch, GL, and Account Holder lookups use a single **Autocomplete** field — see [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
+Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocomplete** field — see [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
 
-## Screens
+**UX optimized (2026-07-11):** 8 screens → 7. Audit: [ux-optimization.md](ux-optimization.md).
+
+## Current Screens
 
 | Screen (Marathi) | Screen (English) | Document |
 | :--- | :--- | :--- |
@@ -14,10 +16,16 @@ Branch, GL, and Account Holder lookups use a single **Autocomplete** field — s
 | नवीन एजंट | New Agent | [new-agent-screen.md](new-agent-screen.md) |
 | व्यवहार | Transaction | [daily-transaction-screen.md](daily-transaction-screen.md) |
 | खाते रजिस्टर | Account Register | [account-register-screen.md](account-register-screen.md) |
-| एजंट कलेक्शन | Agent Collection | [agent-collection-screen.md](agent-collection-screen.md) |
-| एजंट कलेक्शन यादी | Agent Collection List | [agent-collection-list-screen.md](agent-collection-list-screen.md) |
+| एजंट कलेक्शन व्यवस्थापन | Agent Collection Management | [agent-collection-management-screen.md](agent-collection-management-screen.md) |
 | एजंट कडून एजंट कडे खाते ट्रान्सफर | Agent to Agent Account Transfer | [agent-to-agent-transfer-screen.md](agent-to-agent-transfer-screen.md) |
 | व्याज गुणक | Interest Multiplier | [interest-multiplier-screen.md](interest-multiplier-screen.md) |
+
+## Superseded Screens (reference only)
+
+| Screen (Marathi) | Screen (English) | Superseded by |
+| :--- | :--- | :--- |
+| एजंट कलेक्शन | Agent Collection | [agent-collection-management-screen.md](agent-collection-management-screen.md) — Tab 1 |
+| एजंट कलेक्शन यादी | Agent Collection List | [agent-collection-management-screen.md](agent-collection-management-screen.md) — Tab 2 |
 
 ## Screenshot Location
 
@@ -27,6 +35,8 @@ screenshots/डेली/
 
 ## Related Documents
 
+- [ux-optimization.md](ux-optimization.md)
 - [changelog.md](changelog.md)
-- [../settings/schemes/daily-new-scheme-screen.md](../settings/schemes/daily-new-scheme-screen.md)
+- [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)
+- [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)
 - [../../AI_INDEX.md](../../AI_INDEX.md)

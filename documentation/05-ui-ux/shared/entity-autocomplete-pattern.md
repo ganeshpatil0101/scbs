@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Define the standard UI field type for selecting Branch, GL Head, Account Holder, and Customer across all CBS screens. Replaces legacy dual/triple fields (ID textbox + search + select dropdown) with a single **Autocomplete** control.
+Define the standard UI field type for selecting Branch, GL Head, Account Holder, Customer, and Agent across all CBS screens. Replaces legacy dual/triple fields (ID textbox + search + select dropdown) with a single **Autocomplete** control.
 
 ## Scope
 
-Applies to every screen spec under `documentation/05-ui-ux/` where the user must look up a branch, GL head, account holder, or **customer** by ID or name.
+Applies to every screen spec under `documentation/05-ui-ux/` where the user must look up a branch, GL head, account holder, **customer**, or **agent** by ID or name.
 
 ## Field Type: Autocomplete
 
@@ -38,6 +38,8 @@ Applies to every screen spec under `documentation/05-ui-ux/` where the user must
 | GL | जी.एल. निवडा | Select GL | `जि.एल.क्र.`, `जी.एल.हेड.क्र.`, `जी.एल. हेड`, `जी.एल. हेड शोधा`, `जी.एल.निवडा` |
 | Account Holder | खातेधारक निवडा | Select Account Holder | `खाते क्र.`, `खातेधारक शोधा`, `खातेदार निवडा`, `खाते धारक निवडा` |
 | Customer | ग्राहक निवडा | Select Customer | `ग्राहक क्र.`, `ग्राहकाचे नाव`, `ग्राहक निवडा` (paired ID + name / select) |
+| Agent | एजंट निवडा | Select Agent | `एजंट क्रमांक`, `शोध एजंट नाव`, `एजंट निवडा`, `प्रतिनिधी क्र.` (paired ID + name / select) |
+| Sales Agent | विक्री एजंट निवडा | Select Sales Agent | `विक्री एजंट क्रमांक`, `विक्री एजंटचे नाव शोधा` (paired with Sales Agent Branch) |
 
 ## Reference Sample Values (documentation and mockups only)
 
@@ -86,6 +88,18 @@ Display: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Accoun
 
 Display: `661 — Customer 1`, `662 — Customer 2`, `663 — Customer 3`
 
+### Agent
+
+| ID | Name |
+| :---: | :--- |
+| 1 | Agent 1 |
+| 2 | Agent 2 |
+| 3 | Agent 3 |
+
+Display: `1 — Agent 1`, `2 — Agent 2`, `3 — Agent 3`
+
+Loaded from registered Daily agents for the selected branch. On Agent-to-Agent Transfer, use two separate Agent Autocomplete fields (From / To).
+
 ## Spec Authoring Rules
 
 1. **One row per entity** — never document separate ID, search, and select rows for the same lookup.
@@ -110,7 +124,7 @@ On [new-scheme-screen.md](../settings/schemes/new-scheme-screen.md), field **ज
 ## Implementation Notes (Angular / mockup)
 
 - **Mockup:** `<input type="text" list="…">` with `<datalist>` options; class `.mockup-autocomplete`
-- **Angular:** shared `app-entity-autocomplete` with `entityType`: `branch` | `gl` | `account` | `customer`; Material `mat-autocomplete`; debounced filter; Enter resolves selection
+- **Angular:** shared `app-entity-autocomplete` with `entityType`: `branch` | `gl` | `account` | `customer` | `agent`; Material `mat-autocomplete`; debounced filter; Enter resolves selection
 
 ## Related Documents
 

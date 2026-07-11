@@ -39,38 +39,50 @@ UI specification for daily (pigmy) account transactions. Six-tab workflow.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | चलन क्रमांक | Challan Number | Textbox | No | Read-only; e.g. `42` |
+| 1 | चलन क्रमांक | Challan Number | Label (read-only) | No | Auto-generated; e.g. `42` |
 | 2 | नावे / जमा | Debit / Credit | Radio | Yes | — |
 | 3 | रोख / ट्रान्सफर | Cash / Transfer | Radio | Yes | — |
 
-### Account Fields
+### Account Lookup
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 4 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
 | 5 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `38 — Pigmy`. Enter resolves by ID or name; shows display name |
 | 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
-| 7 | खातेवही शिल्लक | Ledger Balance | Textbox | No | Read-only |
-| 8 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
-| 9 | व्यवहार रक्कम (रु.) | Transaction Amount (Rs.) | Textbox | Yes | — |
-| 10 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
-| 11 | व्यवहारानंतरची शिल्लक | Balance After Transaction | Textbox | No | Read-only |
-| 12 | परतीची दिनांक | Return Date | Textbox | No | Read-only |
-| 13 | व्यवहार तपशील | Transaction Details | Textbox | No | — |
-| 14 | विशेष सूचना | Special Instructions | Textbox | No | Read-only |
-| 15 | पॅनकार्ड - आधार क्र. | PAN - Aadhaar No. | Textbox | No | Read-only |
-| 16 | स्पॉट कमिशन | Spot Commission | Textbox | No | Read-only |
-| 17 | तरतूद | Provision | Textbox | No | Read-only |
-| 18 | व्याज | Interest | Textbox | No | Read-only |
-| 19 | एकूण | Total | Textbox | No | Read-only |
-| 20 | कमिशन कपात | Commission Deduction | Textbox | No | — |
-| 21 | टीडीएस (रु.) | TDS (Rs.) | Textbox | No | Read-only |
-| 22 | एकूण टीडीएस देणे (रु.) | Total TDS Payable | Textbox | No | Read-only |
-| 23 | शेवटची नावे दिनांक | Last Debit Date | Textbox | No | Read-only |
-| 24 | एकूण दिवस | Total Days | Textbox | No | Read-only |
-| 25 | खुली रक्कम | Open Amount | Textbox | No | Read-only |
-| 26 | स्पॉट कमिशन रेट | Spot Commission Rate | Textbox | No | Read-only |
-| 27 | सदस्य क्र. | Member No. | Textbox | No | Read-only |
+
+### Editable Transaction Fields
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 7 | व्यवहार रक्कम (रु.) | Transaction Amount (Rs.) | Textbox | Yes | — |
+| 8 | व्यवहार तपशील | Transaction Details | Textbox | No | — |
+| 9 | कमिशन कपात | Commission Deduction | Textbox | No | — |
+
+### Account Summary Panel (computed read-only Labels)
+
+Displayed after account resolve. Replaces individual editable textboxes for calculated values.
+
+| # | Marathi Label | English Label |
+| :---: | :--- | :--- |
+| 10 | खातेवही शिल्लक | Ledger Balance |
+| 11 | न वटलेली शिल्लक | Uncleared Balance |
+| 12 | अक्षरी रक्कम | Amount in Words |
+| 13 | व्यवहारानंतरची शिल्लक | Balance After Transaction |
+| 14 | परतीची दिनांक | Return Date |
+| 15 | विशेष सूचना | Special Instructions |
+| 16 | पॅनकार्ड - आधार क्र. | PAN - Aadhaar No. |
+| 17 | स्पॉट कमिशन | Spot Commission |
+| 18 | तरतूद | Provision |
+| 19 | व्याज | Interest |
+| 20 | एकूण | Total |
+| 21 | टीडीएस (रु.) | TDS (Rs.) |
+| 22 | एकूण टीडीएस देणे (रु.) | Total TDS Payable |
+| 23 | शेवटची नावे दिनांक | Last Debit Date |
+| 24 | एकूण दिवस | Total Days |
+| 25 | खुली रक्कम | Open Amount |
+| 26 | स्पॉट कमिशन रेट | Spot Commission Rate |
+| 27 | सदस्य क्र. | Member No. |
 
 **Links:** `कर्ज खाते माहिती`, `केवायसी माहिती`.
 
@@ -115,11 +127,13 @@ UI specification for daily (pigmy) account transactions. Six-tab workflow.
 
 Same search and similar columns (through एकूण). **Action:** `निर्यात करा`.
 
-Tabs 3–4, 6: `TODO` — not captured.
+Tabs 3, 4, 6: `TODO` — not captured.
 
 ---
 
 ## Tab 5: खातेवही (Ledger)
+
+Uses shared component `app-ledger-tab` — same 15-column ledger grid as Savings/FD/Recurring transaction screens.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
@@ -155,4 +169,6 @@ Tabs 3–4, 6: `TODO` — not captured.
 ## Cross-Links
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [../savings/savings-transaction-screen.md](../savings/savings-transaction-screen.md)
+- [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)

@@ -34,27 +34,43 @@ UI specification for bank deposit account transactions (debit/credit, cash/trans
 
 ## Tab 1: खात्याची माहिती (Account Information)
 
+### Transaction Header
+
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | चलन क्रमांक | Challan Number | Textbox | No | Read-only |
+| 1 | चलन क्रमांक | Challan Number | Label (read-only) | No | Auto-generated |
 | 2 | नावे / जमा | Debit / Credit | Radio | Yes | — |
-| 3 | रोख / ट्रान्सफर | Cash / Transfer | Radio | Yes | — |
-| 4 | शाखा कोड | Branch Code | Textbox | Yes | e.g. `1` |
-| 5 | शाखा निवडा | Select Branch | Dropdown | Yes | e.g. `कोतोली मुख्य कार्यालय` |
-| 6 | जी.एल. हेड | G.L. Head | Textbox | Yes | e.g. `134` |
-| 7 | जी.एल. निवडा | Select G.L. | Dropdown | Yes | — |
-| 8 | खाते क्रमांक | Account Number | Textbox | Yes | — |
-| 9 | खातेधारक निवडा | Select Account Holder | Dropdown | Yes | Investment bank account |
-| 10 | मागील पोस्ट दिनांक | Last Post Date | Textbox | No | Read-only |
-| 11 | व्याज रक्कम (रु.) | Interest Amount (Rs.) | Textbox | No | Read-only |
-| 12 | व्याज दिनांक | Interest Date | Date | No | — |
-| 13 | मुद्दल रक्कम (रु.) | Principal Amount (Rs.) | Textbox | No | Read-only |
-| 14 | लेजर शिल्लक (नावे) | Ledger Balance (Debit) | Textbox | No | Read-only |
-| 15 | शिल्लक व्याज (रु.) | Balance Interest (Rs.) | Textbox | No | Read-only |
-| 16 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
-| 17 | व्यवहार रक्कम (रु.) | Transaction Amount (Rs.) | Textbox | Yes | — |
-| 18 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
-| 19 | व्यवहार तपशील | Transaction Details | Textbox | No | — |
+| 3 | रोख / ट्रान्सफर | Cash / Transfer | Radio | Yes | Drives Tab 2 and Tab 3 visibility |
+
+### Account Lookup
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 4 | शाखा निवडा | Select Branch | Autocomplete | Yes | Enter resolves by ID or name; e.g. `1 — कोतोली मुख्य कार्यालय`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
+| 5 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Investment bank deposit GL scope. Enter resolves by ID or name |
+| 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Replaces `खाते क्रमांक` + dropdown. Enter resolves by account no. or name |
+
+### Editable Transaction Fields
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 7 | व्याज दिनांक | Interest Date | Date | No | — |
+| 8 | व्यवहार रक्कम (रु.) | Transaction Amount (Rs.) | Textbox | Yes | — |
+| 9 | व्यवहार तपशील | Transaction Details | Textbox | No | — |
+
+### Account Summary Panel (computed read-only Labels)
+
+Displayed after account resolve. Replaces individual editable textboxes for calculated values.
+
+| # | Marathi Label | English Label |
+| :---: | :--- | :--- |
+| 10 | मागील पोस्ट दिनांक | Last Post Date |
+| 11 | व्याज रक्कम (रु.) | Interest Amount (Rs.) |
+| 12 | मुद्दल रक्कम (रु.) | Principal Amount (Rs.) |
+| 13 | लेजर शिल्लक (नावे) | Ledger Balance (Debit) |
+| 14 | शिल्लक व्याज (रु.) | Balance Interest (Rs.) |
+| 15 | न वटलेली शिल्लक | Uncleared Balance |
+| 16 | अक्षरी रक्कम | Amount in Words |
 
 **Link:** `दस्तऐवज पहा` (View Document).
 
@@ -64,18 +80,20 @@ UI specification for bank deposit account transactions (debit/credit, cash/trans
 
 ## Tab 2: चेक तपशील (Cheque Details)
 
+> **Visible:** When **रोख / ट्रान्सफर** = Transfer and cheque instrument required.
+
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | धनादेश प्रकार निवडा | Select Cheque Type | Dropdown | No | e.g. `स्लिप` (Slip) |
 | 2 | चेक रक्कम (रु.) | Cheque Amount (Rs.) | Textbox | No | — |
-| 3 | रक्कम अक्षरी | Amount in Words | Textbox | No | Read-only |
+| 3 | रक्कम अक्षरी | Amount in Words | Label (read-only) | No | Auto-filled from cheque amount |
 | 4 | चेक दिनांक | Cheque Date | Date | Yes | — |
 | 5 | चेक क्र. | Cheque No. | Textbox | Yes | — |
 | 6 | नाव | Name | Textbox | Yes | — |
-| 7 | बँक निवडा | Select Bank | Dropdown | Yes | `TODO` |
-| 8 | बँक शाखा | Bank Branch | Textbox | No | — |
-| 9 | ड्रॉन ऑन बँक | Drawn on Bank | Textbox | No | — |
-| 10 | ड्रॉन ऑन ब्रांच | Drawn on Branch | Textbox | No | — |
+| 7 | बँक निवडा | Select Bank | Autocomplete | Yes | Values: `TODO` — scaffold from master data service |
+| 8 | बँक शाखा | Bank Branch | Textbox | No | External bank branch |
+
+**Removed:** Redundant `ड्रॉन ऑन बँक` / `ड्रॉन ऑन ब्रांच` — covered by Bank Autocomplete + branch textbox.
 
 **Navigation:** `मागे`, `पुढे`.
 
@@ -83,18 +101,16 @@ UI specification for bank deposit account transactions (debit/credit, cash/trans
 
 ## Tab 3: ट्रान्सफर (Transfer)
 
+> **Visible:** When **रोख / ट्रान्सफर** = Transfer.
+
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | शाखा कोड | Branch Code | Textbox | Yes | — |
-| 2 | शाखा निवडा | Select Branch | Dropdown | Yes | — |
-| 3 | जी.एल.हेड.क्र. | G.L. Head No. | Textbox | Yes | — |
-| 4 | जी.एल.निवडा | Select G.L. | Dropdown | No | — |
-| 5 | खाते क्र. | Account No. | Textbox | Yes | — |
-| 6 | खातेधारक शोधा | Search Account Holder | Textbox | Yes | — |
-| 7 | खातेधारक निवडा | Select Account Holder | Dropdown | Yes | — |
-| 8 | शिल्लक | Balance | Textbox | No | Read-only |
-| 9 | व्यवहार रक्कम (रु) | Transaction Amount (Rs.) | Textbox | Yes | — |
-| 10 | एकूण व्यवहार रक्कम (रु) | Total Transaction Amount (Rs.) | Textbox | No | Read-only |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | Yes | Enter resolves by ID or name |
+| 2 | जी.एल. निवडा | Select GL | Autocomplete | No | Enter resolves by ID or name |
+| 3 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Replaces `खाते क्र.` + `खातेधारक शोधा` + `खातेधारक निवडा` |
+| 4 | शिल्लक | Balance | Label (read-only) | No | After account resolve |
+| 5 | व्यवहार रक्कम (रु) | Transaction Amount (Rs.) | Textbox | Yes | — |
+| 6 | एकूण व्यवहार रक्कम (रु) | Total Transaction Amount (Rs.) | Label (read-only) | No | Sum of grid rows |
 
 **Action:** `+टाका`. **Grid columns:** निवडा, अनु क्र, जी.एल.हेड, खाते क्र., नाव, शिल्लक, व्यवहार रक्कम.
 
@@ -105,6 +121,8 @@ UI specification for bank deposit account transactions (debit/credit, cash/trans
 ---
 
 ## Tab 4: खातेवही (Ledger)
+
+> Uses shared component **`app-ledger-tab`** — same columns and actions as FD/Savings transaction ledger tabs.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
@@ -123,8 +141,15 @@ UI specification for bank deposit account transactions (debit/credit, cash/trans
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/investment/bank-deposit-transaction-screen/) — Marathi layout for bank review
+
 ## Related Documents
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [bank-deposit-new-account-screen.md](bank-deposit-new-account-screen.md)
-- [../savings/savings-transaction-screen.md](../savings/savings-transaction-screen.md)
+- [../fixed-deposit/fd-transaction-screen.md](../fixed-deposit/fd-transaction-screen.md)
+- [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

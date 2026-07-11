@@ -1,5 +1,7 @@
 # Screen Spec — FD Account Register (मुदत ठेव > खाते रजिस्टर)
 
+> **Superseded (2026-07-11):** Merged into [fd-account-management-screen.md](fd-account-management-screen.md) — Tab 1 (खाते रजिस्टर). Retained for field archaeology.
+
 ## Purpose
 
 UI specification for searching and listing fixed deposit accounts.

@@ -30,8 +30,8 @@ UI specification for calculating daily (pigmy) deposit interest and maturity amo
 | 2 | सरळ / चक्रवाढ | Simple / Compound | Radio | No | — |
 | 3 | मासिक / तिमाही / सहामाही / वार्षिक | Monthly / Quarterly / Half-yearly / Yearly | Radio | No | When compound selected |
 | 4 | ठेव रक्कम (रु.) | Deposit Amount (Rs.) | Textbox | Yes | — |
-| 5 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | Default: `12` |
-| 6 | व्याज दर (% पी.ए) | Interest Rate (% p.a.) | Textbox | Yes | Default: `6` |
+| 5 | कालावधी (महिने) | Duration (Months) | Label (read-only) | Yes | Auto-filled from selected scheme; default `12` |
+| 6 | व्याज दर (% पी.ए) | Interest Rate (% p.a.) | Label (read-only) | Yes | Auto-filled from selected scheme; default `6` |
 
 **Formulas displayed:**
 - मासिक संग्रह = ठेव रक्कम × 365/12
@@ -66,4 +66,5 @@ UI specification for calculating daily (pigmy) deposit interest and maturity amo
 ## Cross-Links
 
 - [overview.md](overview.md)
-- [../settings/schemes/daily-new-scheme-screen.md](../settings/schemes/daily-new-scheme-screen.md)
+- [ux-optimization.md](ux-optimization.md)
+- [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)

@@ -1,5 +1,7 @@
 # Screen Spec — Agent Collection (डेली > एजंट > एजंट कलेक्शन)
 
+> **Superseded (2026-07-11):** Merged into [agent-collection-management-screen.md](agent-collection-management-screen.md) — Tab 1 (नवीन कलेक्शन). Retained for field archaeology.
+
 ## Purpose
 
 UI specification for recording daily agent collections against member accounts.
@@ -82,4 +84,4 @@ Tabs 2–3: `TODO` — not captured.
 
 - [overview.md](overview.md)
 - [new-agent-screen.md](new-agent-screen.md)
-- [agent-collection-list-screen.md](agent-collection-list-screen.md)
+- [agent-collection-management-screen.md](agent-collection-management-screen.md)

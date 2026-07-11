@@ -1,5 +1,7 @@
 # Screen Spec — Bank Deposit Interest Provision (गुंतवणूक > बँक ठेव > व्याज तरतूद)
 
+> **Superseded (2026-07-11):** Merged into [bank-deposit-interest-management-screen.md](bank-deposit-interest-management-screen.md) — Tab 1 (व्याज तरतूद). Retained for field archaeology.
+
 ## Purpose
 
 UI specification for calculating and posting interest provisions on bank deposit accounts.

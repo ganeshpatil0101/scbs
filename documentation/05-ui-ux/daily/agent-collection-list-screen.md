@@ -1,5 +1,7 @@
 # Screen Spec — Agent Collection List (डेली > एजंट > एजंट कलेक्शन यादी)
 
+> **Superseded (2026-07-11):** Merged into [agent-collection-management-screen.md](agent-collection-management-screen.md) — Tab 2 (कलेक्शन यादी). Retained for field archaeology.
+
 ## Purpose
 
 UI specification for viewing and exporting historical agent collection records.
@@ -56,4 +58,4 @@ UI specification for viewing and exporting historical agent collection records.
 ## Cross-Links
 
 - [overview.md](overview.md)
-- [agent-collection-screen.md](agent-collection-screen.md)
+- [agent-collection-management-screen.md](agent-collection-management-screen.md)
