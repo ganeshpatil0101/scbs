@@ -12,6 +12,10 @@ UI specification for searching and listing loan accounts.
 | Breadcrumb | डॅशबोर्ड > कर्ज > खाते रजिस्टर | Dashboard > Loan > Account Register |
 | Parent Module | कर्ज | Loan |
 
+**Auto-fill (header):** `संस्था` (Organization) — read-only `Label` from tenant session; not repeated in filter bar.
+
+**Navigation:** Sidebar `तपशील` opens [loan-information-screen.md](loan-information-screen.md) with selected account pre-filled.
+
 ## Reference Screenshots
 
 | File | Section |
@@ -24,18 +28,20 @@ UI specification for searching and listing loan accounts.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | संघटना | Organization | Dropdown | No | Society name |
-| 2 | शाखा कोड | Branch Code | Textbox | No | e.g. `1` |
-| 3 | शाखेचे नाव | Branch Name | Dropdown | No | e.g. `कोतोली मुख्य कार्यालय` |
-| 4 | जी.एल. निवडा | Select G.L. | Dropdown | No | e.g. `जामिनकी कर्ज` (Surety Loan) |
-| 5 | मिती निवडा | Select Status | Dropdown | No | e.g. `चालू` (Active) |
-| 6 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | — |
-| 7 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | — |
-| 8 | खातेदाराचे नाव | Account Holder Name | Textbox | No | — |
-| 9 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | — |
-| 10 | ग्राहक क्र. (पर्यंत) | Customer No. (To) | Textbox | No | — |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | No | e.g. `1 — कोतोली मुख्य कार्यालय`. Replaces Branch Code + Branch Name pair |
+| 2 | जी.एल. निवडा | Select G.L. | Autocomplete | No | e.g. `61 — जामिनकी कर्ज` (Surety Loan) |
+| 3 | मिती निवडा | Select Status | Dropdown | No | e.g. `चालू` (Active) |
+| 4 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | Range filter |
+| 5 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | Range filter |
+| 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Replaces free-text `खातेदाराचे नाव` |
+| 7 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | Range filter — excluded from autocomplete per entity-autocomplete-pattern |
+| 8 | ग्राहक क्र. (पर्यंत) | Customer No. (To) | Textbox | No | Range filter |
 
-**Link:** `अतिरिक्त शोध पर्याय`. **Action:** `दाखवा`.
+**Removed:** `संघटना` (Organization) — session header.
+
+**Link:** `अतिरिक्त शोध पर्याय` — `TODO — not captured`.
+
+**Action:** `दाखवा`.
 
 **Filter checkbox:** `परतीची दिनांक संपून गेलेली खाते` (Accounts whose return date has expired).
 
@@ -79,8 +85,14 @@ UI specification for searching and listing loan accounts.
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/loan/loan-account-register-screen/) — Marathi layout for bank review
+
 ## Related Documents
 
 - [overview.md](overview.md)
-- [new-loan-screen.md](new-loan-screen.md)
+- [ux-optimization.md](ux-optimization.md)
 - [loan-information-screen.md](loan-information-screen.md)
+- [new-loan-screen.md](new-loan-screen.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

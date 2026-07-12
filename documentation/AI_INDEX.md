@@ -39,6 +39,15 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/mockups/investment/bank-deposit-transaction-screen/](05-ui-ux/mockups/investment/bank-deposit-transaction-screen/) — व्यवहार (Draft)
 - [05-ui-ux/mockups/investment/bank-deposit-interest-management-screen/](05-ui-ux/mockups/investment/bank-deposit-interest-management-screen/) — व्याज व्यवस्थापन (Draft)
 
+**Loan mockups (2026-07-12 UX consolidation — 6 screens):**
+
+- [05-ui-ux/mockups/loan/new-loan-screen/](05-ui-ux/mockups/loan/new-loan-screen/) — नवीन कर्ज (Draft)
+- [05-ui-ux/mockups/loan/new-deposit-loan-screen/](05-ui-ux/mockups/loan/new-deposit-loan-screen/) — नवीन ठेव कर्ज (Draft)
+- [05-ui-ux/mockups/loan/loan-information-screen/](05-ui-ux/mockups/loan/loan-information-screen/) — कर्ज माहिती (Draft)
+- [05-ui-ux/mockups/loan/loan-account-register-screen/](05-ui-ux/mockups/loan/loan-account-register-screen/) — खाते रजिस्टर (Draft)
+- [05-ui-ux/mockups/loan/loan-transaction-screen/](05-ui-ux/mockups/loan/loan-transaction-screen/) — कर्ज व्यवहार (Draft)
+- [05-ui-ux/mockups/loan/loan-interest-management-screen/](05-ui-ux/mockups/loan/loan-interest-management-screen/) — व्याज व्यवस्थापन (Draft)
+
 **Settings mockups (2026-07-05 UX consolidation — 6 screens):**
 
 - [05-ui-ux/mockups/settings/master/staff-system-access-screen/](05-ui-ux/mockups/settings/master/staff-system-access-screen/) — कर्मचारी व सिस्टम प्रवेश (Draft)
@@ -90,15 +99,19 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - ~~fd-account-register-screen.md~~ / ~~account-renewal-list-screen.md~~ → superseded by fd-account-management-screen.md
 
 ## 05 — UI/UX — Loan (Operational)
-- [05-ui-ux/loan/overview.md](05-ui-ux/loan/overview.md)
-- [05-ui-ux/loan/new-loan-screen.md](05-ui-ux/loan/new-loan-screen.md) — नवीन कर्ज (6 tabs, from MP4)
-- [05-ui-ux/loan/new-deposit-loan-screen.md](05-ui-ux/loan/new-deposit-loan-screen.md) — नवीन ठेव कर्ज (3 tabs, from MP4)
-- [05-ui-ux/loan/loan-information-screen.md](05-ui-ux/loan/loan-information-screen.md) — कर्ज माहिती (3 tabs, from PNG `02_07`)
-- [05-ui-ux/loan/loan-account-register-screen.md](05-ui-ux/loan/loan-account-register-screen.md) — खाते रजिस्टर (from PNG `05-07`)
-- [05-ui-ux/loan/loan-credit-transaction-screen.md](05-ui-ux/loan/loan-credit-transaction-screen.md) — जमा व्यवहार (7 tabs, from PNG `05-07`)
-- [05-ui-ux/loan/loan-debit-transaction-screen.md](05-ui-ux/loan/loan-debit-transaction-screen.md) — नावे व्यवहार (7 tabs, from PNG `05-07`)
-- [05-ui-ux/loan/loan-scheduled-interest-assessment-screen.md](05-ui-ux/loan/loan-scheduled-interest-assessment-screen.md) — शेड्युल व्याज > आवर्ती (from PNG `05-07`)
-- [05-ui-ux/loan/loan-manual-interest-provision-screen.md](05-ui-ux/loan/loan-manual-interest-provision-screen.md) — मॅन्युअल व्याज > तरतूद (from PNG `05-07`)
+
+**UX optimized (2026-07-12):** 8 screens → 6. Audit: [05-ui-ux/loan/ux-optimization.md](05-ui-ux/loan/ux-optimization.md)
+
+- [05-ui-ux/loan/overview.md](05-ui-ux/loan/overview.md) — Index of Loan screens (current + superseded)
+- [05-ui-ux/loan/ux-optimization.md](05-ui-ux/loan/ux-optimization.md) — UX audit and action checklist
+- [05-ui-ux/loan/new-loan-screen.md](05-ui-ux/loan/new-loan-screen.md) — नवीन कर्ज (6 tabs)
+- [05-ui-ux/loan/new-deposit-loan-screen.md](05-ui-ux/loan/new-deposit-loan-screen.md) — नवीन ठेव कर्ज (3 tabs)
+- [05-ui-ux/loan/loan-information-screen.md](05-ui-ux/loan/loan-information-screen.md) — कर्ज माहिती (3 tabs)
+- [05-ui-ux/loan/loan-account-register-screen.md](05-ui-ux/loan/loan-account-register-screen.md) — खाते रजिस्टर
+- [05-ui-ux/loan/loan-transaction-screen.md](05-ui-ux/loan/loan-transaction-screen.md) — कर्ज व्यवहार (consolidated; Credit/Debit mode)
+- [05-ui-ux/loan/loan-interest-management-screen.md](05-ui-ux/loan/loan-interest-management-screen.md) — व्याज व्यवस्थापन (consolidated; 2 tabs)
+- ~~loan-credit-transaction-screen.md~~ / ~~loan-debit-transaction-screen.md~~ → superseded by loan-transaction-screen.md
+- ~~loan-scheduled-interest-assessment-screen.md~~ / ~~loan-manual-interest-provision-screen.md~~ → superseded by loan-interest-management-screen.md
 
 ## 05 — UI/UX — Bank (Operational)
 

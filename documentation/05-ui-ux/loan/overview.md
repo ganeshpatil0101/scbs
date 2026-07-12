@@ -4,9 +4,11 @@
 
 Index of operational UI screens under **कर्ज (Loan)**.
 
-Branch and Account Holder lookups use a single **Autocomplete** field — see [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
+Branch, Customer, Agent, and Account Holder lookups use a single **Autocomplete** field — see [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
 
-## Screens
+**UX optimized (2026-07-12):** 8 screens → 6. Audit: [ux-optimization.md](ux-optimization.md)
+
+## Current Screens
 
 | Screen (Marathi) | Screen (English) | Document |
 | :--- | :--- | :--- |
@@ -15,10 +17,17 @@ Branch and Account Holder lookups use a single **Autocomplete** field — see [.
 | ठेव कर्ज हप्ता पेमेंट | Deposit Loan Installment Payment | [../fixed-deposit/deposit-loan-installment-payment-screen.md](../fixed-deposit/deposit-loan-installment-payment-screen.md) |
 | कर्ज माहिती | Loan Information | [loan-information-screen.md](loan-information-screen.md) |
 | खाते रजिस्टर | Account Register | [loan-account-register-screen.md](loan-account-register-screen.md) |
-| जमा व्यवहार | Credit Transaction | [loan-credit-transaction-screen.md](loan-credit-transaction-screen.md) |
-| नावे व्यवहार | Debit Transaction | [loan-debit-transaction-screen.md](loan-debit-transaction-screen.md) |
-| शेड्युल व्याज > आवर्ती | Scheduled Interest > Recurring | [loan-scheduled-interest-assessment-screen.md](loan-scheduled-interest-assessment-screen.md) |
-| मॅन्युअल व्याज > तरतूद | Manual Interest > Provision | [loan-manual-interest-provision-screen.md](loan-manual-interest-provision-screen.md) |
+| कर्ज व्यवहार | Loan Transaction | [loan-transaction-screen.md](loan-transaction-screen.md) |
+| व्याज व्यवस्थापन | Interest Management | [loan-interest-management-screen.md](loan-interest-management-screen.md) |
+
+## Superseded Screens (reference only)
+
+| Screen (Marathi) | Screen (English) | Superseded by |
+| :--- | :--- | :--- |
+| जमा व्यवहार | Credit Transaction | [loan-transaction-screen.md](loan-transaction-screen.md) — Credit mode |
+| नावे व्यवहार | Debit Transaction | [loan-transaction-screen.md](loan-transaction-screen.md) — Debit mode |
+| शेड्युल व्याज > आवर्ती | Scheduled Interest > Recurring | [loan-interest-management-screen.md](loan-interest-management-screen.md) — Tab 2 |
+| मॅन्युअल व्याज > तरतूद | Manual Interest > Provision | [loan-interest-management-screen.md](loan-interest-management-screen.md) — Tab 1 |
 
 ## Screenshot Location
 
@@ -28,6 +37,7 @@ screenshots/कर्ज/
 
 ## Related Documents
 
+- [ux-optimization.md](ux-optimization.md)
 - [changelog.md](changelog.md)
 - [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)
 - [../settings/loan/loan-interest-rate-change-screen.md](../settings/loan/loan-interest-rate-change-screen.md)

@@ -1,5 +1,7 @@
 # Screen Spec — Loan Credit Transaction (कर्ज > जमा व्यवहार)
 
+> **Superseded (2026-07-12):** Consolidated into [loan-transaction-screen.md](loan-transaction-screen.md) — Credit mode. Retained for field reference only.
+
 ## Purpose
 
 UI specification for loan repayment (credit) transactions — installment allocation, other credits, transfer, ledger, and guarantor view.

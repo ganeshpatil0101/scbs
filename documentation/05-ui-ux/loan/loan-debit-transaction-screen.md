@@ -1,5 +1,7 @@
 # Screen Spec — Loan Debit Transaction (कर्ज > नावे व्यवहार)
 
+> **Superseded (2026-07-12):** Consolidated into [loan-transaction-screen.md](loan-transaction-screen.md) — Debit mode. Retained for field reference only.
+
 ## Purpose
 
 UI specification for loan disbursement (debit) transactions — deductions, cheque/transfer, repayment schedule, and ledger.

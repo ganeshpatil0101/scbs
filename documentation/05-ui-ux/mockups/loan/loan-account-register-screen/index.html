@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>खाते रजिस्टर — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 class="text-2xl font-bold text-gray-900">खाते रजिस्टर</h1>
+          <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; कर्ज &gt; खाते रजिस्टर</p>
+        </div>
+        <div class="text-sm" data-spec-field="org">
+          <span class="text-gray-500">संस्था:</span>
+          <span class="font-medium text-gray-800 ml-1">श्रद्धा नागरी सहकारी पतसंस्था मर्यादित — कोतोली</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="mockup-section mockup-section-compact" aria-labelledby="section-primary-search">
+      <h2 class="mockup-section-title" id="section-primary-search">प्राथमिक शोध</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-end">
+        <div data-spec-field="1">
+          <label class="mockup-label" for="filter-branch">शाखा निवडा</label>
+          <input type="text" id="filter-branch" class="mockup-autocomplete" list="branch-options" placeholder="ID किंवा नाव टाइप करा">
+          <datalist id="branch-options">
+            <option value="1 — कोतोली मुख्य कार्यालय"></option>
+            <option value="2 — शाखा 2"></option>
+            <option value="3 — शाखा 3"></option>
+          </datalist>
+        </div>
+        <div data-spec-field="2">
+          <label class="mockup-label" for="filter-gl">जी.एल. निवडा</label>
+          <input type="text" id="filter-gl" class="mockup-autocomplete" list="gl-options" placeholder="ID किंवा नाव टाइप करा">
+          <datalist id="gl-options">
+            <option value="61 — जामिनकी कर्ज"></option>
+            <option value="62 — सोने तारण कर्ज"></option>
+            <option value="63 — गहाण कर्ज"></option>
+          </datalist>
+        </div>
+        <div data-spec-field="3">
+          <label class="mockup-label" for="filter-status">मिती निवडा</label>
+          <select id="filter-status">
+            <option value="active" selected>चालू</option>
+            <option value="closed">बंद</option>
+            <option value="suspended">स्थगित</option>
+          </select>
+        </div>
+        <div data-spec-field="4">
+          <label class="mockup-label" for="acct-from">खाते क्र. (पासून)</label>
+          <input type="text" id="acct-from">
+        </div>
+        <div data-spec-field="5">
+          <label class="mockup-label" for="acct-to">खाते क्र. (पर्यंत)</label>
+          <input type="text" id="acct-to">
+        </div>
+        <div data-spec-field="6">
+          <label class="mockup-label" for="filter-holder">खातेधारक निवडा</label>
+          <input type="text" id="filter-holder" class="mockup-autocomplete" list="holder-options" placeholder="ग्राहक क्र. किंवा नाव">
+          <datalist id="holder-options">
+            <option value="661 — पाटील राम गणेश"></option>
+            <option value="662 — देशमुख सीता अनिल"></option>
+            <option value="663 — जाधव सुरेश विजय"></option>
+          </datalist>
+        </div>
+        <div data-spec-field="7">
+          <label class="mockup-label" for="cust-from">ग्राहक क्र. (पासून)</label>
+          <input type="text" id="cust-from">
+        </div>
+        <div data-spec-field="8">
+          <label class="mockup-label" for="cust-to">ग्राहक क्र. (पर्यंत)</label>
+          <input type="text" id="cust-to">
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" class="mockup-btn mockup-btn-primary">दाखवा</button>
+        </div>
+      </div>
+      <div class="mt-4 pt-3 border-t border-gray-100 flex flex-wrap items-center gap-4">
+        <label class="inline-flex items-center gap-2 cursor-pointer text-sm" data-spec-field="f1">
+          <input type="checkbox" id="filter-expired">
+          <span>परतीची दिनांक संपून गेलेली खाते</span>
+        </label>
+        <button type="button" class="text-blue-700 text-sm underline bg-transparent border-0 cursor-pointer" data-spec-field="link1">
+          अतिरिक्त शोध पर्याय <span class="mockup-badge-todo">TODO</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="mockup-section mockup-section-full" aria-labelledby="section-results">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <h2 class="mockup-section-title mb-0 border-0 pb-0" id="section-results">निकाल यादी</h2>
+        <div class="flex flex-wrap gap-2 text-sm" aria-label="साइडबार कृती">
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0" data-action="detail">तपशील</button>
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0" data-action="export">निर्यात</button>
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0" data-action="remove">काढा</button>
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0" data-action="statement">खाते उतारा</button>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="mockup-table" aria-label="कर्ज खाते रजिस्टर">
+          <thead>
+            <tr>
+              <th data-spec-field="g1">निवडा</th>
+              <th data-spec-field="g2">अनुक्रमांक</th>
+              <th data-spec-field="g3">शाखेचे नाव</th>
+              <th data-spec-field="g4">खाते क्रमांक</th>
+              <th data-spec-field="g5">नाव(ग्राहक क्र.)</th>
+              <th data-spec-field="g6">चालू दिनांक</th>
+              <th data-spec-field="g7">कर्ज रक्कम</th>
+              <th data-spec-field="g8">व्याज दर</th>
+              <th data-spec-field="g9">तरतूद</th>
+              <th data-spec-field="g10">आलेले व्याज</th>
+              <th data-spec-field="g11">शिल्लक</th>
+              <th data-spec-field="g12">स्थिती</th>
+              <th data-spec-field="g13">चालू व्याज</th>
+              <th data-spec-field="g14">एल.एफ.क्र.</th>
+              <th data-spec-field="g15">एनपीए स्थिती</th>
+              <th data-spec-field="g16">एनईएफटी / आरटीजीएस खाते क्र.</th>
+              <th data-spec-field="g17">परतीची दिनांक संपून गेलेली</th>
+              <th data-spec-field="g18">परतीची दिनांक</th>
+              <th data-spec-field="g19">व्याज फरक</th>
+              <th data-spec-field="g20">दंड व्याज दर</th>
+              <th data-spec-field="g21">निधी हस्तांतरण मर्यादा</th>
+              <th data-spec-field="g22">खाते बंद दिनांक</th>
+              <th data-spec-field="g23">ग्राहक कर्ज जोखीम मर्यादा</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" aria-label="पंक्ती 1 निवडा"></td>
+              <td>1</td>
+              <td>कोतोली मुख्य कार्यालय</td>
+              <td>LN-1001</td>
+              <td>पाटील राम गणेश (661)</td>
+              <td>2024-04-01</td>
+              <td>2,00,000.00</td>
+              <td>12.00%</td>
+              <td>4,500.00</td>
+              <td>18,200.00</td>
+              <td>1,45,000.00</td>
+              <td>चालू</td>
+              <td>1,200.00</td>
+              <td>SF-4521</td>
+              <td>स्टँडर्ड</td>
+              <td>123456789012</td>
+              <td>नाही</td>
+              <td>2029-04-01</td>
+              <td>0.00</td>
+              <td>18.00%</td>
+              <td>50,000.00</td>
+              <td>—</td>
+              <td>5,00,000.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" aria-label="पंक्ती 2 निवडा"></td>
+              <td>2</td>
+              <td>कोतोली मुख्य कार्यालय</td>
+              <td>LN-1002</td>
+              <td>देशमुख सीता अनिल (662)</td>
+              <td>2023-08-15</td>
+              <td>1,50,000.00</td>
+              <td>11.50%</td>
+              <td>3,200.00</td>
+              <td>12,800.00</td>
+              <td>98,500.00</td>
+              <td>चालू</td>
+              <td>950.00</td>
+              <td>SF-4522</td>
+              <td>स्टँडर्ड</td>
+              <td>—</td>
+              <td>होय</td>
+              <td>2026-08-15</td>
+              <td>150.00</td>
+              <td>18.00%</td>
+              <td>25,000.00</td>
+              <td>—</td>
+              <td>3,00,000.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="flex flex-wrap items-center justify-between gap-3 mt-3 text-sm text-gray-600">
+        <span>एकूण नोंदी: 2</span>
+        <div class="flex items-center gap-2">
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-2 min-h-0" disabled aria-label="मागील पृष्ठ">‹</button>
+          <span>पृष्ठ 1 / 1</span>
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-2 min-h-0" disabled aria-label="पुढील पृष्ठ">›</button>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-3 mt-4 pt-3 border-t border-gray-100">
+        <div data-spec-field="report">
+          <label class="mockup-label" for="report-list">रिपोर्ट यादी</label>
+          <select id="report-list" class="max-w-xs">
+            <option value="schedule" selected>Loan Schedule</option>
+            <option value="" disabled>इतर अहवाल [TODO]</option>
+          </select>
+        </div>
+        <button type="button" class="mockup-btn mockup-btn-secondary">प्रिंट</button>
+      </div>
+    </section>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary">पूर्वत</button>
+      <button type="button" class="mockup-btn mockup-btn-secondary">नूतनीकरण</button>
+      <button type="button" class="mockup-btn mockup-btn-primary">खाते बंद</button>
+    </div>
+  </footer>
+
+</body>
+</html>

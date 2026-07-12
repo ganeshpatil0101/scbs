@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>कर्ज माहिती — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 class="text-2xl font-bold text-gray-900">कर्ज माहिती</h1>
+          <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; कर्ज &gt; कर्ज माहिती</p>
+        </div>
+        <div class="text-sm" data-spec-field="org">
+          <span class="text-gray-500">संस्था:</span>
+          <span class="font-medium text-gray-800 ml-1">श्रद्धा नागरी सहकारी पतसंस्था मर्यादित — कोतोली</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="flex border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="स्क्रीन टॅब">
+      <button type="button" id="tab-1" class="mockup-tab mockup-tab-active" role="tab" aria-selected="true" aria-controls="tab-panel-1" data-tab="1">खाते सारांश</button>
+      <button type="button" id="tab-2" class="mockup-tab" role="tab" aria-selected="false" aria-controls="tab-panel-2" data-tab="2">ग्राहक माहिती</button>
+      <button type="button" id="tab-3" class="mockup-tab" role="tab" aria-selected="false" aria-controls="tab-panel-3" data-tab="3">खातेवही</button>
+    </nav>
+
+    <!-- Tab 1: Account Summary -->
+    <div id="tab-panel-1" role="tabpanel" aria-labelledby="tab-1">
+
+      <section class="mockup-section mockup-section-compact" aria-labelledby="section-account-select">
+        <h2 class="mockup-section-title" id="section-account-select">खाते निवड</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-end">
+          <div data-spec-field="1">
+            <label class="mockup-label" for="branch">
+              शाखा निवडा <span class="mockup-required">*</span>
+            </label>
+            <input type="text" id="branch" class="mockup-autocomplete" list="branch-options" value="1 — कोतोली मुख्य कार्यालय" placeholder="ID किंवा नाव">
+            <datalist id="branch-options">
+              <option value="1 — कोतोली मुख्य कार्यालय"></option>
+              <option value="2 — शाखा 2"></option>
+            </datalist>
+          </div>
+          <div data-spec-field="2">
+            <label class="mockup-label" for="scheme">योजना निवडा</label>
+            <select id="scheme">
+              <option value="surety" selected>जामीनकी कर्ज</option>
+              <option value="gold">सोने तारण कर्ज</option>
+              <option value="mortgage">गहाण कर्ज</option>
+            </select>
+          </div>
+          <div data-spec-field="3">
+            <label class="mockup-label" for="holder">खातेधारक निवडा</label>
+            <input type="text" id="holder" class="mockup-autocomplete" list="holder-options" value="661 — पाटील राम गणेश" placeholder="ग्राहक क्र. किंवा नाव">
+            <datalist id="holder-options">
+              <option value="661 — पाटील राम गणेश"></option>
+              <option value="662 — देशमुख सीता अनिल"></option>
+            </datalist>
+          </div>
+          <div data-spec-field="4">
+            <label class="mockup-label" for="account-no">खाते क्रमांक</label>
+            <input type="text" id="account-no" value="LN-1001">
+          </div>
+          <div data-spec-field="5">
+            <label class="mockup-label">योजना प्रकार</label>
+            <span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">साधा हप्ता (व्याज सहित)</span>
+          </div>
+        </div>
+
+        <details class="mt-4 pt-3 border-t border-gray-100">
+          <summary class="mockup-section-title cursor-pointer select-none" style="border-bottom:none;margin-bottom:0">प्रगत सेटिंग्ज</summary>
+          <div class="mt-3 mockup-field-grid mockup-field-grid--2">
+            <div data-spec-field="6">
+              <label class="mockup-label" for="from-date">दिनांकापासून</label>
+              <input type="date" id="from-date">
+            </div>
+          </div>
+        </details>
+
+        <div class="flex flex-wrap gap-2 mt-4 pt-3 border-t border-gray-100">
+          <button type="button" class="mockup-btn mockup-btn-primary">दाखवा</button>
+          <button type="button" class="mockup-btn mockup-btn-secondary">खाते तपशील</button>
+        </div>
+      </section>
+
+      <div class="mockup-section-columns">
+        <section class="mockup-section" aria-labelledby="section-summary">
+          <h2 class="mockup-section-title" id="section-summary">खाते माहिती</h2>
+          <div class="mockup-field-grid mockup-field-grid--2">
+            <div data-spec-field="7"><label class="mockup-label">कर्ज रक्कम</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">2,00,000.00</span></div>
+            <div data-spec-field="8"><label class="mockup-label">व्याज दर</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">12.00%</span></div>
+            <div data-spec-field="9"><label class="mockup-label">चालू दिनांक</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">01-04-2024</span></div>
+            <div data-spec-field="10"><label class="mockup-label">कालावधी (महिने)</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">60</span></div>
+            <div data-spec-field="11"><label class="mockup-label">परतावा दिनांक</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">01-04-2029</span></div>
+            <div data-spec-field="12"><label class="mockup-label">पहिला हप्ता दिनांक</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">01-05-2024</span></div>
+            <div data-spec-field="13"><label class="mockup-label">हप्त्याची रक्कम</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">4,450.00</span></div>
+            <div data-spec-field="14"><label class="mockup-label">एस. एफ. क्रमांक</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">SF-4521</span></div>
+            <div data-spec-field="15"><label class="mockup-label">स्थिती</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">चालू</span></div>
+            <div data-spec-field="16"><label class="mockup-label">अखेरचा जमा हप्ता</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">01-06-2026</span></div>
+            <div data-spec-field="17"><label class="mockup-label">मुद्दल शिल्लक(नावे)</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">1,45,000.00</span></div>
+            <div data-spec-field="18"><label class="mockup-label">ग्राहक कर्ज जोखिम मर्यादा</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">5,00,000.00</span></div>
+          </div>
+        </section>
+
+        <div class="mockup-section-stack">
+          <section class="mockup-section" aria-labelledby="section-upcoming">
+            <h2 class="mockup-section-title" id="section-upcoming">आगामी शिल्लक</h2>
+            <div class="mockup-field-grid mockup-field-grid--2">
+              <div data-spec-field="19"><label class="mockup-label">मुद्दल</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">3,800.00</span></div>
+              <div data-spec-field="20"><label class="mockup-label">व्याज</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">650.00</span></div>
+            </div>
+          </section>
+          <section class="mockup-section" aria-labelledby="section-closing-interest">
+            <h2 class="mockup-section-title" id="section-closing-interest">खाते बंद व्याज</h2>
+            <div class="mockup-field-grid mockup-field-grid--2">
+              <div data-spec-field="21"><label class="mockup-label">व्याज</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">1,450.00</span></div>
+              <div data-spec-field="22"><label class="mockup-label">दंड व्याज</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">50.00</span></div>
+              <div data-spec-field="23"><label class="mockup-label">थकीत व्याज येणे(जमा)</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">0.00</span></div>
+              <div data-spec-field="24"><label class="mockup-label">थकीत दंड व्याज येणे(जमा)</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">0.00</span></div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section class="mockup-section mockup-section-full" aria-labelledby="section-arrears">
+        <h2 class="mockup-section-title" id="section-arrears">थकबाकी / वसुली</h2>
+        <div class="mockup-field-grid mockup-field-grid--2 lg:grid-cols-3">
+          <div data-spec-field="25"><label class="mockup-label">मुद्दल शिल्लक(नावे)</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">1,45,000.00</span></div>
+          <div data-spec-field="26"><label class="mockup-label">थकीत दिनांक</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">—</span></div>
+          <div data-spec-field="27"><label class="mockup-label">पासून थकीत</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">—</span></div>
+          <div data-spec-field="28"><label class="mockup-label">अपेक्षित हप्ते</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">26</span></div>
+          <div data-spec-field="29"><label class="mockup-label">आलेले हप्ते</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">26</span></div>
+          <div data-spec-field="30"><label class="mockup-label">थकीत हप्ते</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">0</span></div>
+          <div data-spec-field="31"><label class="mockup-label">पोस्ट केलेले व्याज</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">18,200.00</span></div>
+          <div data-spec-field="32"><label class="mockup-label">आलेले व्याज</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">17,500.00</span></div>
+          <div data-spec-field="33"><label class="mockup-label">एकूण वसुली</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">1,15,700.00</span></div>
+          <div data-spec-field="34"><label class="mockup-label">थकीत रक्कम</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">0.00</span></div>
+          <div data-spec-field="35"><label class="mockup-label">थकीत व्याज</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">0.00</span></div>
+          <div data-spec-field="36"><label class="mockup-label">थकीत दंड व्याज</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">0.00</span></div>
+          <div data-spec-field="37"><label class="mockup-label">आगाऊ हप्ते</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">0</span></div>
+          <div data-spec-field="38"><label class="mockup-label">आगाऊ वसुली</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">0.00</span></div>
+          <div data-spec-field="39"><label class="mockup-label">येणे मुद्दल(नावे)</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">0.00</span></div>
+          <div data-spec-field="40"><label class="mockup-label">एन.पी.ए. स्थिती</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">स्टँडर्ड</span></div>
+          <div data-spec-field="41"><label class="mockup-label">आऊट ऑफ एनपीए अमाऊंट</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">0.00</span></div>
+          <div data-spec-field="42"><label class="mockup-label">एकूण थकबाकी</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">0.00</span></div>
+          <div data-spec-field="43"><label class="mockup-label">खाते बंद रक्कम</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">1,46,500.00</span></div>
+          <div data-spec-field="44"><label class="mockup-label">वितरणासाठी उपलब्ध कर्ज रक्कम</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">55,000.00</span></div>
+        </div>
+      </section>
+
+      <section class="mockup-section mockup-section-full" aria-labelledby="section-change-history">
+        <h2 class="mockup-section-title" id="section-change-history">बदल इतिहास</h2>
+        <div class="overflow-x-auto">
+          <table class="mockup-table" aria-label="बदल इतिहास">
+            <thead>
+              <tr>
+                <th data-spec-field="h1">अनु. क्र.</th>
+                <th data-spec-field="h2">बदल तारीख</th>
+                <th data-spec-field="h3">तपशील</th>
+                <th data-spec-field="h4">बदल कर्ता</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>15-03-2024</td>
+                <td>कर्ज मंजुरी — रक्कम 2,00,000.00</td>
+                <td>admin</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mockup-section mockup-section-compact" aria-labelledby="section-today-recovery">
+        <h2 class="mockup-section-title" id="section-today-recovery">आजची वसुली</h2>
+        <div data-spec-field="45">
+          <label class="mockup-label">आजची एकूण वसुली</label>
+          <span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full max-w-xs">4,450.00</span>
+        </div>
+        <div class="flex flex-wrap gap-3 mt-3 text-sm">
+          <button type="button" class="text-blue-700 underline bg-transparent border-0 cursor-pointer">कर्ज मागणी अर्ज माहिती</button>
+          <button type="button" class="text-blue-700 underline bg-transparent border-0 cursor-pointer">आजची वसुली यादी</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab 2: Customer Information (TODO stub) -->
+    <div id="tab-panel-2" class="mockup-hidden" role="tabpanel" aria-labelledby="tab-2" hidden>
+      <section class="mockup-section" aria-labelledby="section-customer-todo">
+        <h2 class="mockup-section-title" id="section-customer-todo">ग्राहक माहिती</h2>
+        <div class="mockup-info-note">
+          हा टॅब स्पेकमध्ये <span class="mockup-badge-todo">TODO</span> म्हणून चिन्हांकित आहे — स्क्रीनशॉट कॅप्चर नंतर पूर्ण केला जाईल.
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab 3: Ledger -->
+    <div id="tab-panel-3" class="mockup-hidden" role="tabpanel" aria-labelledby="tab-3" hidden>
+
+      <section class="mockup-section mockup-section-compact" aria-labelledby="section-ledger-filter">
+        <h2 class="mockup-section-title" id="section-ledger-filter">दिनांक फिल्टर</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+          <div data-spec-field="t3-1">
+            <label class="mockup-label" for="ledger-from">
+              या दिनांकापासून <span class="mockup-required">*</span>
+            </label>
+            <input type="date" id="ledger-from" value="2024-04-01">
+          </div>
+          <div data-spec-field="t3-2">
+            <label class="mockup-label" for="ledger-to">
+              या दिनांकापर्यंत <span class="mockup-required">*</span>
+            </label>
+            <input type="date" id="ledger-to" value="2026-07-12">
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button type="button" class="mockup-btn mockup-btn-primary">दाखवा</button>
+            <button type="button" class="mockup-btn mockup-btn-secondary">स्टेटमेंट प्रिंट</button>
+            <button type="button" class="mockup-btn mockup-btn-secondary">पासबुक</button>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 mt-3" data-spec-field="opening-balance">
+          <span class="font-medium">ओपनिंग बॅलन्स:</span> 2,00,000.00 (नावे)
+        </p>
+      </section>
+
+      <section class="mockup-section mockup-section-full" aria-labelledby="section-ledger-grid">
+        <h2 class="mockup-section-title" id="section-ledger-grid">खातेवही</h2>
+        <div class="overflow-x-auto">
+          <table class="mockup-table text-xs" aria-label="कर्ज खातेवही">
+            <thead>
+              <tr>
+                <th data-spec-field="lg1">निवडा</th>
+                <th data-spec-field="lg2">अनु. क्र.</th>
+                <th data-spec-field="lg3">दिनांक</th>
+                <th data-spec-field="lg4">चलन क्र.</th>
+                <th data-spec-field="lg5">सूचना प्रकार</th>
+                <th data-spec-field="lg6">सूचना क्र.</th>
+                <th data-spec-field="lg7">एकूण जमा</th>
+                <th data-spec-field="lg8">मुद्दल (नावे)</th>
+                <th data-spec-field="lg9">मुद्दल (जमा)</th>
+                <th data-spec-field="lg10">व्याज (नावे)</th>
+                <th data-spec-field="lg11">व्याज (जमा)</th>
+                <th data-spec-field="lg12">दंड व्याज (नावे/जमा)</th>
+                <th data-spec-field="lg13">रिबेट (नावे/जमा)</th>
+                <th data-spec-field="lg14">इतर शुल्क (नावे)</th>
+                <th data-spec-field="lg15">इतर शुल्क (जमा)</th>
+                <th data-spec-field="lg16">शिल्लक</th>
+                <th data-spec-field="lg17">तपशील</th>
+                <th data-spec-field="lg18">व्यवहार</th>
+                <th data-spec-field="lg19">वापरकर्ता</th>
+                <th data-spec-field="lg20">वेळ</th>
+                <th data-spec-field="lg21">सत्र</th>
+                <th data-spec-field="lg22">पासिंग युजर</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" aria-label="पंक्ती 1"></td>
+                <td>1</td>
+                <td>01-04-2024</td>
+                <td>1001</td>
+                <td>कर्ज वितरण</td>
+                <td>—</td>
+                <td>0.00</td>
+                <td>2,00,000.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>2,00,000.00</td>
+                <td>कर्ज वितरण</td>
+                <td>LN-DISB</td>
+                <td>admin</td>
+                <td>10:30</td>
+                <td>AM</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" aria-label="पंक्ती 2"></td>
+                <td>2</td>
+                <td>01-05-2024</td>
+                <td>1002</td>
+                <td>हप्ता जमा</td>
+                <td>—</td>
+                <td>4,450.00</td>
+                <td>0.00</td>
+                <td>3,800.00</td>
+                <td>0.00</td>
+                <td>650.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>1,96,200.00</td>
+                <td>हप्ता</td>
+                <td>LN-RCPT</td>
+                <td>teller1</td>
+                <td>14:15</td>
+                <td>PM</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="bg-gray-50 font-medium text-sm">
+                <td colspan="7" class="text-right">एकूण</td>
+                <td data-spec-field="total-debit">2,00,000.00</td>
+                <td data-spec-field="total-credit">3,800.00</td>
+                <td colspan="14"></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2" id="footer-actions">
+      <!-- Tab 1 actions (default) -->
+      <div id="footer-tab1" class="flex flex-wrap justify-end gap-2 w-full">
+        <button type="button" class="mockup-btn mockup-btn-secondary">देय नोट प्रिंट</button>
+        <button type="button" class="mockup-btn mockup-btn-secondary">पूर्ववत</button>
+        <button type="button" class="mockup-btn mockup-btn-primary">पुढे</button>
+      </div>
+      <!-- Tab 2 actions (minimal) -->
+      <div id="footer-tab2" class="mockup-hidden flex flex-wrap justify-end gap-2 w-full">
+        <button type="button" class="mockup-btn mockup-btn-secondary">मागे</button>
+      </div>
+      <!-- Tab 3 actions -->
+      <div id="footer-tab3" class="mockup-hidden flex flex-wrap justify-end gap-2 w-full">
+        <span class="self-center text-sm text-gray-600 mr-auto">एकूण नावे: 2,00,000.00 | एकूण जमा: 4,450.00</span>
+        <button type="button" class="mockup-btn mockup-btn-secondary">निर्यात करा</button>
+        <button type="button" class="mockup-btn mockup-btn-secondary">देय नोट प्रिंट</button>
+        <button type="button" class="mockup-btn mockup-btn-secondary">पूर्ववत</button>
+        <button type="button" class="mockup-btn mockup-btn-secondary">चलन प्रिंट</button>
+        <button type="button" class="mockup-btn mockup-btn-secondary">ड्राफ्ट प्रिंट</button>
+        <button type="button" class="mockup-btn mockup-btn-secondary">मागे</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('[role="tab"]');
+      var panels = [
+        document.getElementById('tab-panel-1'),
+        document.getElementById('tab-panel-2'),
+        document.getElementById('tab-panel-3')
+      ];
+      var footers = [
+        document.getElementById('footer-tab1'),
+        document.getElementById('footer-tab2'),
+        document.getElementById('footer-tab3')
+      ];
+
+      function switchTab(tabNum) {
+        tabs.forEach(function (tab) {
+          var isActive = Number(tab.getAttribute('data-tab')) === tabNum;
+          tab.classList.toggle('mockup-tab-active', isActive);
+          tab.setAttribute('aria-selected', isActive);
+        });
+        panels.forEach(function (panel, i) {
+          var show = i + 1 === tabNum;
+          panel.classList.toggle('mockup-hidden', !show);
+          panel.hidden = !show;
+        });
+        footers.forEach(function (footer, i) {
+          footer.classList.toggle('mockup-hidden', i + 1 !== tabNum);
+        });
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          switchTab(Number(this.getAttribute('data-tab')));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

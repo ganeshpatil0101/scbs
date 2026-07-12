@@ -12,6 +12,8 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 | Breadcrumb | डॅशबोर्ड > कर्ज > नवीन ठेव कर्ज | Dashboard > Loan > New Deposit Loan |
 | Parent Module | कर्ज | Loan |
 
+**Auto-fill (header):** `संस्था` (Organization) — read-only `Label` from tenant session.
+
 ## Tabs
 
 | # | Marathi Tab | English Tab |
@@ -38,28 +40,26 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | योजना निवडा | Select Scheme | Dropdown | Yes | Values: `TODO` |
-| 2 | योजना प्रकार | Scheme Type | Textbox | No | Read-only |
+| 2 | योजना प्रकार | Scheme Type | Label | No | Auto-fill from selected scheme |
 
 ### ग्राहक माहिती (Customer Information)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 3 | ग्राहक क्र. | Customer No. | Textbox | Yes | — |
-| 4 | सभासदाचे नाव | Member Name | Textbox | No | Read-only |
-| 5 | सभासद क्रमांक | Member Number | Textbox | No | Read-only |
-| 6 | वय (वर्षे) | Age (Years) | Textbox | No | Read-only |
-| 7 | सभासद प्रकार | Member Type | Textbox | No | Read-only |
-| 8 | ग्राहक शाखा | Customer Branch | Textbox | No | Read-only |
-| 9 | विशेष सूचना | Special Instructions | Textbox | No | Read-only |
+| 3 | ग्राहक निवडा | Select Customer | Autocomplete | Yes | Replaces Customer No. + Member Name pair. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
+| 4 | सभासद क्रमांक | Member Number | Label | No | Auto-fill when customer selected |
+| 5 | वय (वर्षे) | Age (Years) | Label | No | Auto-fill when customer selected |
+| 6 | सभासद प्रकार | Member Type | Label | No | Auto-fill when customer selected |
+| 7 | ग्राहक शाखा | Customer Branch | Label | No | Auto-fill when customer selected |
+| 8 | विशेष सूचना | Special Instructions | Label | No | Read-only from customer master |
 
 ### खाते माहिती (Account Information)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 10 | एजंट शाखा निवडा | Select Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
-| 11 | एजंट क्रमांक | Agent Number | Textbox | No | — |
-| 12 | एजंट नाव शोध | Search Agent Name | Textbox | No | — |
-| 13 | खाते क्र. | Account No. | Textbox | No | Read-only |
+| 9 | एजंट शाखा निवडा | Select Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3` |
+| 10 | एजंट निवडा | Select Agent | Autocomplete | No | Replaces Agent Number + Search Agent Name |
+| 11 | खाते क्र. | Account No. | Label | No | Auto-generated |
 
 **Actions:** `ठेवी दाखवा` (Show Deposits), `इतर ठेवी दाखवा` (Show Other Deposits).
 
@@ -94,21 +94,16 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | स्थिती निवडा | Select Status | Dropdown | Yes | e.g. `चालू`. Other values: `TODO` |
-| 2 | चालू दिनांक | Current Date | Date | Yes | — |
+| 2 | चालू दिनांक | Current Date | Label | Yes | System date |
 | 3 | कर्ज रक्कम (रु.) | Loan Amount (Rs.) | Textbox | Yes | — |
 | 4 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | — |
-| 5 | सरासरी ठेव तारण कर्ज व्याज दर (% पीए) | Avg. Deposit Collateral Loan Rate | Textbox | Yes | — |
+| 5 | सरासरी ठेव तारण कर्ज व्याज दर (% पीए) | Avg. Deposit Collateral Loan Rate | Label | Yes | Auto-fill from deposit selection |
 | 6 | हप्ता रक्कम (रु.) | Installment Amount (Rs.) | Textbox | Yes | — |
-| 7 | एकूण हप्ते | Total Installments | Textbox | No | — |
+| 7 | एकूण हप्ते | Total Installments | Label | No | Calculated from duration |
 | 8 | शेवटची दिनांक | Last Date | Date | No | — |
 | 9 | दंड व्याज दर | Penalty Interest Rate | Textbox | Yes | — |
-| 10 | रिबेट | Rebate | Textbox | No | — |
-| 11 | विशेष सूचना | Special Instructions | Textbox | No | — |
-| 12 | एल. एफ. क्रमांक | L.F. Number | Textbox | No | — |
-| 13 | कर्ज मागणीचे कारण निवडा | Select Reason for Loan Request | Dropdown | Yes | Values: `TODO` |
-| 14 | बँकेचे बचत खाते क्रमांक | Bank Savings Account No. | Textbox | No | — |
-| 15 | आय.एफ.एस.सी. कोड | IFSC Code | Textbox | No | — |
-| 16 | बँकेचे नाव | Bank Name | Textbox | No | — |
+| 10 | विशेष सूचना | Special Instructions | Textbox | No | — |
+| 11 | कर्ज मागणीचे कारण निवडा | Select Reason for Loan Request | Dropdown | Yes | Values: `TODO` |
 
 ### मंजुरी (Approval)
 
@@ -122,9 +117,8 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 20 | ग्राहक क्र. | Customer No. | Textbox | No | — |
-| 21 | सभासदाचे नाव | Member Name | Textbox | No | — |
-| 22 | टाका + | Add | Button | — | — |
+| 20 | ग्राहक निवडा | Select Customer | Autocomplete | No | Replaces Customer No. + Member Name pair |
+| 21 | टाका + | Add | Button | — | — |
 
 **Co-applicant grid columns:** निवडा, अनु. क्र., ग्राहक क्र., नाव, पत्ता, जिल्हा, तालुका, शहर, ठिकाण, पिन कोड, दूरध्वनी क्रमांक, मोबाईल क्रमांक.
 
@@ -133,6 +127,18 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 ### वारसदार (Nominee)
 
 `TODO` — section header visible; fields not captured in video.
+
+### Section: प्रगत सेटिंग्ज (Advanced Settings)
+
+> Collapsed by default.
+
+| # | Marathi Label | English Label | Type | Required | Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 22 | रिबेट | Rebate | Textbox | No | — |
+| 23 | एल. एफ. क्रमांक | L.F. Number | Textbox | No | — |
+| 24 | बँकेचे बचत खाते क्रमांक | Bank Savings Account No. | Textbox | No | Payout details |
+| 25 | आय.एफ.एस.सी. कोड | IFSC Code | Textbox | No | — |
+| 26 | बँकेचे नाव | Bank Name | Textbox | No | — |
 
 ---
 
@@ -147,13 +153,19 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 
 **Note:** टीप: महिना अंतिम तारीख.
 
-**Footer actions:** `पूर्ण`, `पूर्वत`, `मागे`.
+**Footer actions:** `पूर्ण`, `पूर्ववत`, `मागे`.
 
 ---
+
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/loan/new-deposit-loan-screen/) — Marathi 3-tab wizard for bank review
 
 ## Cross-Links
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [new-loan-screen.md](new-loan-screen.md)
 - [../fixed-deposit/new-fd-account-screen.md](../fixed-deposit/new-fd-account-screen.md)
 - [../fixed-deposit/deposit-loan-installment-payment-screen.md](../fixed-deposit/deposit-loan-installment-payment-screen.md) — installment payment (FD menu)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

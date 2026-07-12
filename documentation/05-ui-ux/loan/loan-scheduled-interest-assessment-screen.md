@@ -1,5 +1,7 @@
 # Screen Spec — Loan Scheduled Interest Assessment (कर्ज > शेड्युल व्याज > आवर्ती)
 
+> **Superseded (2026-07-12):** Consolidated into [loan-interest-management-screen.md](loan-interest-management-screen.md) — Tab 2 **व्याज आकारणी**. Retained for field reference only.
+
 ## Purpose
 
 UI specification for calculating and posting scheduled (recurring) loan interest, including penalty interest and provision.

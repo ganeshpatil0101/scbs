@@ -12,11 +12,15 @@ UI specification for viewing loan account details, recovery/arrears summary, and
 | Breadcrumb | डॅशबोर्ड > कर्ज > कर्ज माहिती | Dashboard > Loan > Loan Information |
 | Parent Module | कर्ज | Loan |
 
+**Auto-fill (header):** `संस्था` (Organization) — read-only `Label` from tenant session; not repeated in filter bar.
+
+**Navigation:** Register `तपशील` action opens this screen with account pre-filled from [loan-account-register-screen.md](loan-account-register-screen.md).
+
 ## Tabs
 
 | # | Marathi Tab | English Tab |
 | :---: | :--- | :--- |
-| 1 | कर्ज माहिती | Loan Information |
+| 1 | खाते सारांश | Account Summary |
 | 2 | ग्राहक माहिती | Customer Information |
 | 3 | खातेवही | Ledger |
 
@@ -29,80 +33,87 @@ UI specification for viewing loan account details, recovery/arrears summary, and
 
 ---
 
-## Tab 1: कर्ज माहिती (Loan Information)
+## Tab 1: खाते सारांश (Account Summary)
 
 ### Account Selection
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | संस्था निवडा | Select Organization | Dropdown | No | e.g. श्रद्धा नागरी सहकारी पतसंस्था मर्यादित, कोतोली |
-| 2 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — कोतोली मुख्य कार्यालय` |
-| 3 | योजना निवडा | Select Scheme | Dropdown | No | e.g. `जामीनकी कर्ज` |
-| 4 | ग्राहक क्रमांक | Customer Number | Textbox | No | — |
-| 5 | खाते क्रमांक | Account Number | Textbox | No | — |
-| 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Enter resolves by ID or name |
-| 7 | दिनांकापासून | From Date | Date | No | — |
-| 8 | योजना प्रकार | Scheme Type | Label | — | Read-only; e.g. `साधा हप्ता (व्याज सहित)` |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — कोतोली मुख्य कार्यालय` |
+| 2 | योजना निवडा | Select Scheme | Dropdown | No | e.g. `जामीनकी कर्ज` |
+| 3 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Primary lookup — resolves account when selected |
+| 4 | खाते क्रमांक | Account Number | Textbox | No | Optional; auto-fills when Account Holder selected |
+| 5 | योजना प्रकार | Scheme Type | Label | — | Read-only; e.g. `साधा हप्ता (व्याज सहित)` |
+
+### Section: प्रगत सेटिंग्ज (Advanced Settings)
+
+> Collapsed by default.
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 6 | दिनांकापासून | From Date | Date | No | Optional date range for inquiry |
+
+**Removed:** `संस्था निवडा` (Organization) — session header. `ग्राहक क्रमांक` (Customer Number) — redundant when Account Holder resolves.
 
 **Actions:** `दाखवा`, `खाते तपशील`.
 
-### Section: खाते माहिती (Account Information)
+### Section: Account Summary Panel (खाते माहिती)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 9 | कर्ज रक्कम | Loan Amount | Label | — | Read-only |
-| 10 | व्याज दर | Interest Rate | Label | — | Read-only |
-| 11 | चालू दिनांक | Opening Date | Label | — | Read-only |
-| 12 | कालावधी (महिने) | Duration (Months) | Label | — | Read-only |
-| 13 | परतावा दिनांक | Repayment Date | Label | — | Read-only |
-| 14 | पहिला हप्ता दिनांक | First Installment Date | Label | — | Read-only |
-| 15 | हप्त्याची रक्कम | Installment Amount | Label | — | Read-only |
-| 16 | एस. एफ. क्रमांक | S.F. Number | Label | — | Read-only |
-| 17 | स्थिती | Status | Label | — | Read-only; e.g. `चालू` |
-| 18 | अखेरचा जमा हप्ता | Last Credit Installment | Label | — | Read-only |
-| 19 | मुद्दल शिल्लक(नावे) | Principal Balance (Debit) | Label | — | Read-only |
-| 20 | ग्राहक कर्ज जोखिम मर्यादा | Customer Loan Risk Limit | Label | — | Read-only |
+| 7 | कर्ज रक्कम | Loan Amount | Label | — | Read-only |
+| 8 | व्याज दर | Interest Rate | Label | — | Read-only |
+| 9 | चालू दिनांक | Opening Date | Label | — | Read-only |
+| 10 | कालावधी (महिने) | Duration (Months) | Label | — | Read-only |
+| 11 | परतावा दिनांक | Repayment Date | Label | — | Read-only |
+| 12 | पहिला हप्ता दिनांक | First Installment Date | Label | — | Read-only |
+| 13 | हप्त्याची रक्कम | Installment Amount | Label | — | Read-only |
+| 14 | एस. एफ. क्रमांक | S.F. Number | Label | — | Read-only |
+| 15 | स्थिती | Status | Label | — | Read-only; e.g. `चालू` |
+| 16 | अखेरचा जमा हप्ता | Last Credit Installment | Label | — | Read-only |
+| 17 | मुद्दल शिल्लक(नावे) | Principal Balance (Debit) | Label | — | Read-only |
+| 18 | ग्राहक कर्ज जोखिम मर्यादा | Customer Loan Risk Limit | Label | — | Read-only |
 
-### Section: आगामी शिल्लक (Upcoming Balance)
-
-| # | Marathi Label | English Label | Type | Required | Values / Notes |
-| :---: | :--- | :--- | :--- | :---: | :--- |
-| 21 | मुद्दल | Principal | Label | — | Read-only |
-| 22 | व्याज | Interest | Label | — | Read-only |
-
-### Section: खाते बंद व्याज (Account Closing Interest)
+### Section: Upcoming Balance Panel (आगामी शिल्लक)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 23 | व्याज | Interest | Label | — | Read-only |
-| 24 | दंड व्याज | Penalty Interest | Label | — | Read-only |
-| 25 | थकीत व्याज येणे(जमा) | Overdue Interest Receivable (Credit) | Label | — | Read-only |
-| 26 | थकीत दंड व्याज येणे(जमा) | Overdue Penalty Interest Receivable (Credit) | Label | — | Read-only |
+| 19 | मुद्दल | Principal | Label | — | Read-only |
+| 20 | व्याज | Interest | Label | — | Read-only |
 
-### Section: थकबाकी / वसुली (Arrears / Recovery)
+### Section: Account Closing Interest Panel (खाते बंद व्याज)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 27 | मुद्दल शिल्लक(नावे) | Principal Balance (Debit) | Label | — | Read-only |
-| 28 | थकीत दिनांक | Overdue Date | Label | — | Read-only |
-| 29 | पासून थकीत | Overdue Since | Label | — | Read-only |
-| 30 | अपेक्षित हप्ते | Expected Installments | Label | — | Read-only |
-| 31 | आलेले हप्ते | Received Installments | Label | — | Read-only |
-| 32 | थकीत हप्ते | Overdue Installments | Label | — | Read-only |
-| 33 | पोस्ट केलेले व्याज | Posted Interest | Label | — | Read-only |
-| 34 | आलेले व्याज | Received Interest | Label | — | Read-only |
-| 35 | एकूण वसुली | Total Recovery | Label | — | Read-only |
-| 36 | थकीत रक्कम | Overdue Amount | Label | — | Read-only |
-| 37 | थकीत व्याज | Overdue Interest | Label | — | Read-only |
-| 38 | थकीत दंड व्याज | Overdue Penalty Interest | Label | — | Read-only |
-| 39 | आगाऊ हप्ते | Advance Installments | Label | — | Read-only |
-| 40 | आगाऊ वसुली | Advance Recovery | Label | — | Read-only |
-| 41 | येणे मुद्दल(नावे) | Receivable Principal (Debit) | Label | — | Read-only |
-| 42 | एन.पी.ए. स्थिती | NPA Status | Label | — | Read-only |
-| 43 | आऊट ऑफ एनपीए अमाऊंट | Out of NPA Amount | Label | — | Read-only |
-| 44 | एकूण थकबाकी | Total Arrears | Label | — | Read-only |
-| 45 | खाते बंद रक्कम | Account Closing Amount | Label | — | Read-only |
-| 46 | वितरणासाठी उपलब्ध कर्ज रक्कम | Loan Amount Available for Disbursement | Label | — | Read-only |
+| 21 | व्याज | Interest | Label | — | Read-only |
+| 22 | दंड व्याज | Penalty Interest | Label | — | Read-only |
+| 23 | थकीत व्याज येणे(जमा) | Overdue Interest Receivable (Credit) | Label | — | Read-only |
+| 24 | थकीत दंड व्याज येणे(जमा) | Overdue Penalty Interest Receivable (Credit) | Label | — | Read-only |
+
+### Section: Arrears / Recovery Panel (थकबाकी / वसुली)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 25 | मुद्दल शिल्लक(नावे) | Principal Balance (Debit) | Label | — | Read-only |
+| 26 | थकीत दिनांक | Overdue Date | Label | — | Read-only |
+| 27 | पासून थकीत | Overdue Since | Label | — | Read-only |
+| 28 | अपेक्षित हप्ते | Expected Installments | Label | — | Read-only |
+| 29 | आलेले हप्ते | Received Installments | Label | — | Read-only |
+| 30 | थकीत हप्ते | Overdue Installments | Label | — | Read-only |
+| 31 | पोस्ट केलेले व्याज | Posted Interest | Label | — | Read-only |
+| 32 | आलेले व्याज | Received Interest | Label | — | Read-only |
+| 33 | एकूण वसुली | Total Recovery | Label | — | Read-only |
+| 34 | थकीत रक्कम | Overdue Amount | Label | — | Read-only |
+| 35 | थकीत व्याज | Overdue Interest | Label | — | Read-only |
+| 36 | थकीत दंड व्याज | Overdue Penalty Interest | Label | — | Read-only |
+| 37 | आगाऊ हप्ते | Advance Installments | Label | — | Read-only |
+| 38 | आगाऊ वसुली | Advance Recovery | Label | — | Read-only |
+| 39 | येणे मुद्दल(नावे) | Receivable Principal (Debit) | Label | — | Read-only |
+| 40 | एन.पी.ए. स्थिती | NPA Status | Label | — | Read-only |
+| 41 | आऊट ऑफ एनपीए अमाऊंट | Out of NPA Amount | Label | — | Read-only |
+| 42 | एकूण थकबाकी | Total Arrears | Label | — | Read-only |
+| 43 | खाते बंद रक्कम | Account Closing Amount | Label | — | Read-only |
+| 44 | वितरणासाठी उपलब्ध कर्ज रक्कम | Loan Amount Available for Disbursement | Label | — | Read-only |
 
 ### Change History Grid
 
@@ -117,7 +128,7 @@ UI specification for viewing loan account details, recovery/arrears summary, and
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 47 | आजची एकूण वसुली | Today's Total Recovery | Textbox | No | Read-only |
+| 45 | आजची एकूण वसुली | Today's Total Recovery | Label | No | Read-only |
 
 **Links:** `कर्ज मागणी अर्ज माहिती`, `आजची वसुली यादी`.
 
@@ -150,9 +161,15 @@ UI specification for viewing loan account details, recovery/arrears summary, and
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/loan/loan-information-screen/) — Marathi layout for bank review
+
 ## Related Documents
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
+- [loan-account-register-screen.md](loan-account-register-screen.md)
 - [new-loan-screen.md](new-loan-screen.md)
 - [new-deposit-loan-screen.md](new-deposit-loan-screen.md)
 - [../savings/savings-transaction-screen.md](../savings/savings-transaction-screen.md)

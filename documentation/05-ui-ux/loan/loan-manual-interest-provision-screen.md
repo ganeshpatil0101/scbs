@@ -1,5 +1,7 @@
 # Screen Spec — Loan Manual Interest Provision (कर्ज > मॅन्युअल व्याज > तरतूद)
 
+> **Superseded (2026-07-12):** Consolidated into [loan-interest-management-screen.md](loan-interest-management-screen.md) — Tab 1 **व्याज तरतूद**. Retained for field reference only.
+
 ## Purpose
 
 UI specification for calculating and posting interest provisions on loan accounts (including penalty provision).

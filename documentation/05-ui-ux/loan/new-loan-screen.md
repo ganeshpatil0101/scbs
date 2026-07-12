@@ -12,6 +12,8 @@ UI specification for opening a new loan account. Six-tab wizard.
 | Breadcrumb | डॅशबोर्ड > कर्ज > नवीन कर्ज | Dashboard > Loan > New Loan |
 | Parent Module | कर्ज | Loan |
 
+**Auto-fill (header):** `संस्था` (Organization) — read-only `Label` from tenant session.
+
 ## Tabs
 
 | # | Marathi Tab | English Tab |
@@ -44,58 +46,61 @@ UI specification for opening a new loan account. Six-tab wizard.
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | योजना निवडा | Select Scheme | Dropdown | Yes | Default: `योजना निवडा`. Values: `TODO` |
-| 2 | योजना प्रकार | Scheme Type | Textbox | No | Read-only |
+| 2 | योजना प्रकार | Scheme Type | Label | No | Auto-fill from selected scheme |
 
 ### Section: ग्राहक माहिती (Customer Information)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 3 | ग्राहक क्र. | Customer No. | Textbox | Yes | — |
-| 4 | ग्राहक नाव | Customer Name | Textbox | No | Read-only |
-| 5 | सभासद खाते क्र. | Member Account No. | Textbox | No | Read-only |
-| 6 | वय(वर्ष) | Age (Years) | Textbox | No | Read-only |
-| 7 | सभासदत्व प्रकार | Membership Type | Textbox | No | Read-only |
-| 8 | ग्राहक शाखा | Customer Branch | Textbox | No | Read-only |
-| 9 | विशेष सूचना | Special Instructions | Textbox | No | Read-only |
+| 3 | ग्राहक निवडा | Select Customer | Autocomplete | Yes | Replaces Customer No. + Name pair. Enter resolves by ID or name. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
+| 4 | सभासद खाते क्र. | Member Account No. | Label | No | Auto-fill when customer selected |
+| 5 | वय(वर्ष) | Age (Years) | Label | No | Auto-fill when customer selected |
+| 6 | सभासदत्व प्रकार | Membership Type | Label | No | Auto-fill when customer selected |
+| 7 | ग्राहक शाखा | Customer Branch | Label | No | Auto-fill when customer selected |
+| 8 | विशेष सूचना | Special Instructions | Label | No | Read-only from customer master |
 
 ### Section: खाते माहिती (Account Information)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 10 | एजंट शाखा निवडा | Select Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
-| 11 | एजंट कोड | Agent Code | Textbox | No | — |
-| 12 | एजंट नाव शोध | Search Agent Name | Textbox | No | — |
-| 13 | खाते क्र. | Account No. | Textbox | No | Auto-generated |
-| 14 | व्याज दर स्लॅब (कालावधी - रक्कम - व्याज दर) | Interest Rate Slab | Dropdown | Yes | Values: `TODO` |
-| 15 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | — |
-| 16 | वास्तविक कर्ज रक्कम (रु.) | Actual Loan Amount (Rs.) | Textbox | Yes | — |
-| 17 | कर्ज रक्कम (रु.) | Loan Amount (Rs.) | Textbox | Yes | — |
-| 18 | अनुदानाची कर्ज रक्कम (रु.) | Subsidy Loan Amount (Rs.) | Textbox | No | — |
-| 19 | व्याज दर (द.सा.द.शे.) | Interest Rate (% p.a.) | Textbox | Yes | — |
-| 20 | चालू दिनांक | Current Date | Date | Yes | System date |
-| 21 | पहिला हप्ता दिनांक | First Installment Date | Date | No | — |
-| 22 | एकूण हप्ते | Total Installments | Textbox | No | Read-only / calculated |
-| 23 | परतीची दिनांक | Return Date | Date | No | — |
-| 24 | हप्ता रक्कम (रु.) | Installment Amount (Rs.) | Textbox | Yes | — |
-| 25 | दंडात्मक व्याज दर (द.सा.द.शे.) | Penalty Interest Rate (% p.a.) | Textbox | Yes | — |
-| 26 | रिबेट | Rebate | Textbox | No | — |
-| 27 | विशेष सूचना | Special Instructions | Textbox | No | — |
-| 28 | बँकेचे बचत खाते क्रमांक | Bank Savings Account No. | Textbox | No | — |
-| 29 | आय.एफ.एस.सी. कोड | IFSC Code | Textbox | No | — |
-| 30 | बँकेचे नाव | Bank Name | Textbox | No | — |
-| 31 | निधी हस्तांतरण मर्यादा | Fund Transfer Limit | Textbox | No | — |
+| 9 | एजंट शाखा निवडा | Select Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name |
+| 10 | एजंट निवडा | Select Agent | Autocomplete | No | Replaces Agent Code + Search Agent Name. Enter resolves by ID or name |
+| 11 | खाते क्र. | Account No. | Label | No | Auto-generated |
+| 12 | व्याज दर स्लॅब (कालावधी - रक्कम - व्याज दर) | Interest Rate Slab | Dropdown | Yes | Values: `TODO` |
+| 13 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | — |
+| 14 | कर्ज रक्कम (रु.) | Loan Amount (Rs.) | Textbox | Yes | Primary loan amount field |
+| 15 | व्याज दर (द.सा.द.शे.) | Interest Rate (% p.a.) | Textbox | Yes | Auto-fill from slab; editable override |
+| 16 | चालू दिनांक | Current Date | Label | Yes | System date |
+| 17 | एकूण हप्ते | Total Installments | Label | No | Calculated from duration |
+| 18 | परतीची दिनांक | Return Date | Date | No | — |
+| 19 | हप्ता रक्कम (रु.) | Installment Amount (Rs.) | Textbox | Yes | Calculated from schedule; editable override |
+| 20 | दंडात्मक व्याज दर (द.सा.द.शे.) | Penalty Interest Rate (% p.a.) | Textbox | Yes | — |
+| 21 | विशेष सूचना | Special Instructions | Textbox | No | Account-level instructions |
 
 ### Section: विमा (Insurance)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 32 | विमा | Insurance | Checkbox | No | Enables fields below when checked |
-| 33 | पॉलिसी नंबर | Policy Number | Textbox | No | — |
-| 34 | विमा रक्कम (रु.) | Insurance Amount (Rs.) | Textbox | No | — |
-| 35 | प्रीमियम रक्कम (रु.) | Premium Amount (Rs.) | Textbox | No | — |
-| 36 | दिनांक (पासून) | Date (From) | Date | No | — |
-| 37 | दिनांक (पर्यंत) | Date (To) | Date | No | — |
-| 38 | तपशील | Details | Textbox | No | — |
+| 22 | विमा | Insurance | Checkbox | No | **Visible only when checked:** fields 23–28 below |
+| 23 | पॉलिसी नंबर | Policy Number | Textbox | No | — |
+| 24 | विमा रक्कम (रु.) | Insurance Amount (Rs.) | Textbox | No | — |
+| 25 | प्रीमियम रक्कम (रु.) | Premium Amount (Rs.) | Textbox | No | — |
+| 26 | दिनांक (पासून) | Date (From) | Date | No | — |
+| 27 | दिनांक (पर्यंत) | Date (To) | Date | No | — |
+| 28 | तपशील | Details | Textbox | No | — |
+
+### Section: प्रगत सेटिंग्ज (Advanced Settings)
+
+> Collapsed by default. Visible to users with accounting/admin role or when expanded manually.
+
+| # | Marathi Label | English Label | Type | Required | Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 29 | अनुदानाची कर्ज रक्कम (रु.) | Subsidy Loan Amount (Rs.) | Textbox | No | — |
+| 30 | रिबेट | Rebate | Textbox | No | — |
+| 31 | बँकेचे बचत खाते क्रमांक | Bank Savings Account No. | Textbox | No | Payout details |
+| 32 | आय.एफ.एस.सी. कोड | IFSC Code | Textbox | No | — |
+| 33 | बँकेचे नाव | Bank Name | Textbox | No | — |
+| 34 | निधी हस्तांतरण मर्यादा | Fund Transfer Limit | Textbox | No | — |
 
 **Action:** `पुढे` (Next).
 
@@ -173,9 +178,8 @@ UI specification for opening a new loan account. Six-tab wizard.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | ग्राहक क्र. | Customer No. | Textbox | No | — |
-| 2 | ग्राहक नाव | Customer Name | Textbox | No | — |
-| 3 | + भरा | Add | Button | — | — |
+| 1 | ग्राहक निवडा | Select Customer | Autocomplete | No | Replaces Customer No. + Name pair |
+| 2 | + भरा | Add | Button | — | — |
 
 Co-borrower grid uses same columns as guarantor grid.
 
@@ -188,28 +192,24 @@ Co-borrower grid uses same columns as guarantor grid.
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | स्थिती निवडा | Select Status | Dropdown | Yes | e.g. `चालू`. Other values: `TODO` |
-| 2 | दावा दाखल स्थिती | Claim Filed Status | Dropdown | No | Disabled unless applicable |
-| 3 | दावा दाखल कायदा | Claim Filed Law | Dropdown | No | Disabled unless applicable |
-| 4 | Advocate Name | Advocate Name | Textbox | No | — |
-| 5 | पालक कर्मचारी निवडा | Select Guardian Employee | Dropdown | Yes | Values: `TODO` |
-| 6 | मंजुरी अधिकारी क्र | Approval Officer No. | Textbox | Yes | — |
-| 7 | मंजूर अधिकारी/शिफारस संचालक निवडा | Select Approving Officer | Textbox | Yes | — |
-| 8 | ठराव क्र. | Resolution No. | Textbox | No | — |
-| 9 | बैठक दिनांक | Meeting Date | Date | No | — |
-| 10 | तपशील | Details | Textbox | No | — |
-| 11 | लेजर फोलिओ नं. | Ledger Folio No. | Textbox | No | — |
+| 2 | दावा दाखल स्थिती | Claim Filed Status | Dropdown | No | **Visible only when applicable** — not disabled mystery field |
+| 3 | दावा दाखल कायदा | Claim Filed Law | Dropdown | No | **Visible only when applicable** |
+| 4 | पालक कर्मचारी निवडा | Select Guardian Employee | Dropdown | Yes | Values: `TODO` |
+| 5 | मंजुरी अधिकारी क्र | Approval Officer No. | Textbox | Yes | — |
+| 6 | मंजूर अधिकारी/शिफारस संचालक निवडा | Select Approving Officer | Textbox | Yes | — |
+| 7 | तपशील | Details | Textbox | No | — |
 
 ### Section: तारण (Collateral)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 12 | तारण | Collateral | Checkbox | No | Enables fields below |
-| 13 | तारण प्रकार निवडा | Select Collateral Type | Dropdown | Yes* | Values: `TODO` |
-| 14 | मूल्यांकन (रु.) | Valuation (Rs.) | Textbox | Yes* | — |
-| 15 | मूल्यांकन दिनांक | Valuation Date | Date | Yes* | — |
-| 16 | मूल्यांकनकाराचे नाव | Valuator Name | Textbox | Yes* | — |
-| 17 | घसारा (%) | Depreciation (%) | Textbox | Yes* | — |
-| 18 | तारण तपशील | Collateral Details | Textarea | Yes* | — |
+| 8 | तारण | Collateral | Checkbox | No | **Visible only when checked:** fields 9–14 below |
+| 9 | तारण प्रकार निवडा | Select Collateral Type | Dropdown | Yes* | Values: `TODO` |
+| 10 | मूल्यांकन (रु.) | Valuation (Rs.) | Textbox | Yes* | — |
+| 11 | मूल्यांकन दिनांक | Valuation Date | Date | Yes* | — |
+| 12 | मूल्यांकनकाराचे नाव | Valuator Name | Textbox | Yes* | — |
+| 13 | घसारा (%) | Depreciation (%) | Textbox | Yes* | — |
+| 14 | तारण तपशील | Collateral Details | Textarea | Yes* | — |
 
 \*Required when तारण checkbox is checked.
 
@@ -217,13 +217,24 @@ Co-borrower grid uses same columns as guarantor grid.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 19 | तारणासाठी इतर ठेवी | Other Deposits for Collateral | Checkbox | No | — |
+| 15 | तारणासाठी इतर ठेवी | Other Deposits for Collateral | Checkbox | No | — |
 
 **Grid columns:** निवडा, खाते क्र., नाव, चालू दिनांक, शिल्लक, खाते बंद दिनांक.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 20 | कर्जाचे कारण निवडा | Select Loan Reason | Dropdown | Yes | Values: `TODO` |
+| 16 | कर्जाचे कारण निवडा | Select Loan Reason | Dropdown | Yes | Values: `TODO` |
+
+### Section: प्रगत सेटिंग्ज (Advanced Settings)
+
+> Collapsed by default.
+
+| # | Marathi Label | English Label | Type | Required | Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 17 | Advocate Name | Advocate Name | Textbox | No | — |
+| 18 | ठराव क्र. | Resolution No. | Textbox | No | — |
+| 19 | बैठक दिनांक | Meeting Date | Date | No | — |
+| 20 | लेजर फोलिओ नं. | Ledger Folio No. | Textbox | No | — |
 
 ---
 
@@ -265,8 +276,14 @@ Same columns and actions as above section.
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/loan/new-loan-screen/) — Marathi 6-tab wizard for bank review
+
 ## Cross-Links
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [new-deposit-loan-screen.md](new-deposit-loan-screen.md)
-- [../settings/schemes/loan-new-scheme-screen.md](../settings/schemes/loan-new-scheme-screen.md)
+- [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

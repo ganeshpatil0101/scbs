@@ -94,7 +94,7 @@ Read and apply [documentation/05-ui-ux/shared/ui-simplification-patterns.md](../
 | Fixed Deposit | `05-ui-ux/fixed-deposit/` | **Done (2026-07-11)** — Account Management; Customer/Agent Autocomplete; Advanced |
 | Investment | `05-ui-ux/investment/` | **Done (2026-07-11)** — Bank Management; Interest Management; Autocomplete; Advanced |
 | Reports | `05-ui-ux/reports/` | Candidate: shared filter patterns |
-| Loan (operational) | `05-ui-ux/loan/` | Candidate: transaction screen tab overlap |
+| Loan (operational) | `05-ui-ux/loan/` | **Done (2026-07-12)** — Loan Transaction; Interest Management; Autocomplete; Advanced |
 | Savings / FD / Recurring | operational folders | Candidate: shared account-opening tabs |
 
 ## Field Disposition Labels
