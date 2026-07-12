@@ -35,7 +35,7 @@ Use these labels in optimization audits and spec changelogs:
 | `app-rate-slab-editor` | Duration + Duration Type + Rate + Add → slab grid | FD, Daily, Recurring account-close tabs |
 | `app-charges-select` | Charges dropdown + grid (identical values) | All scheme types |
 | `app-benefits-checkboxes` | Senior Citizen / Female / Widow / Disabled / … checkboxes + benefit rate | FD, Recurring (one section per scheme, not two tabs) |
-| `app-entity-autocomplete` | Branch / GL / Account / Customer lookup | Master, Accounting, Membership, Transactions, Customer |
+| `app-entity-autocomplete` | Branch / GL / Account / Customer / Member lookup | Master, Accounting, Membership, Transactions, Customer |
 
 When a screen uses a shared component, the spec may reference the component instead of repeating every column — but **required-ness and visibility rules** must still be stated on the screen spec.
 

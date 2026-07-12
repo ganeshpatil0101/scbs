@@ -12,6 +12,10 @@ UI specification for searching and listing membership (share capital) accounts.
 | Breadcrumb | डॅशबोर्ड > सभासदत्व > सभासद रजिस्टर | Dashboard > Membership > Member Register |
 | Parent Module | सभासदत्व | Membership |
 
+**Auto-fill (header):** `संस्था` (Organization) — read-only `Label` from tenant session; not repeated in filter bar.
+
+**Navigation (open gap):** Sidebar `तपशील` — **no Member Information screen spec exists yet** (deferred per [ux-optimization.md](ux-optimization.md)). Action retained in UI; navigation target TBD.
+
 ## Reference Screenshots
 
 | File | Section |
@@ -24,15 +28,16 @@ UI specification for searching and listing membership (share capital) accounts.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | संस्था | Organization | Dropdown | No | e.g. श्रद्धा नागरी सहकारी पतसंस्था मर्यादित, कोतोली |
-| 2 | शाखा निवडा | Select Branch | Autocomplete | No | Sample: `1 — कोतोली मुख्य कार्यालय`. Enter resolves by ID or name |
-| 3 | सभासदत्व | Membership Type | Dropdown | No | e.g. `सभासद` (Member) |
-| 4 | शेअर क्रमांक (पासून) | Share Number (From) | Textbox | No | — |
-| 5 | शेअर क्रमांक (पर्यंत) | Share Number (To) | Textbox | No | — |
-| 6 | ग्राहकाचे नाव | Customer Name | Textbox | No | — |
-| 7 | स्थिती निवडा | Select Status | Dropdown | No | e.g. `चालू` (Active) |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | No | e.g. `1 — कोतोली मुख्य कार्यालय`. Enter resolves by ID or name |
+| 2 | सभासदत्व | Membership Type | Dropdown | No | e.g. `सभासद` (Member) |
+| 3 | शेअर क्रमांक (पासून) | Share Number (From) | Textbox | No | Range filter |
+| 4 | शेअर क्रमांक (पर्यंत) | Share Number (To) | Textbox | No | Range filter |
+| 5 | ग्राहक निवडा | Select Customer | Autocomplete | No | Enter resolves by customer no. or name. Replaces free-text Customer Name search |
+| 6 | स्थिती निवडा | Select Status | Dropdown | No | e.g. `चालू` (Active) |
 
-**Link:** `अॅडव्हान्स शोध` (Advanced Search).
+**Removed:** `संस्था` (Organization) — session header.
+
+**Link:** `अॅडव्हान्स शोध` (Advanced Search) — `TODO — fields not captured`.
 
 **Action:** `दाखवा` (Show).
 
@@ -50,16 +55,29 @@ UI specification for searching and listing membership (share capital) accounts.
 | 6 | सभासदत्व | Membership |
 | 7 | भाग भांडवल शिल्लक | Share Capital Balance |
 
-**Sidebar actions:** `तपशील`, `निर्यात`, `काढा`.
+**Sidebar actions:** `तपशील` (Details — navigation target TBD), `निर्यात`, `काढा`.
 
 **Footer action:** `पूर्ववत`.
+
+---
+
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| Path | [mockups/membership/member-register-screen/](../mockups/membership/member-register-screen/) |
+| Status | **Draft** |
+| Created | 2026-07-12 |
+
+Open `index.html` in a browser for layout review before Angular implementation.
 
 ---
 
 ## Related Documents
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [new-membership-screen.md](new-membership-screen.md)
 - [membership-transaction-screen.md](membership-transaction-screen.md)
-- [shares-transfer-list-screen.md](shares-transfer-list-screen.md)
+- [shares-transfer-management-screen.md](shares-transfer-management-screen.md)
 - [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

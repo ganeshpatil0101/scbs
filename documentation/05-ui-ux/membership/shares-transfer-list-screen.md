@@ -1,5 +1,7 @@
 # Screen Spec — Shares Transfer List (सभासदत्व > शेअर्स ट्रान्सफर यादी)
 
+> **Superseded (2026-07-12):** Consolidated into [shares-transfer-management-screen.md](shares-transfer-management-screen.md) — Tab 2 (Transfer List). Retained for field reference only.
+
 ## Purpose
 
 UI specification for searching and listing completed share transfer records.
@@ -74,5 +76,5 @@ UI specification for searching and listing completed share transfer records.
 ## Related Documents
 
 - [overview.md](overview.md)
-- [shares-transfer-screen.md](shares-transfer-screen.md)
+- [shares-transfer-management-screen.md](shares-transfer-management-screen.md)
 - [member-register-screen.md](member-register-screen.md)

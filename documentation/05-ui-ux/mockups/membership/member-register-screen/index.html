@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>सभासद रजिस्टर — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 class="text-2xl font-bold text-gray-900">सभासद रजिस्टर</h1>
+          <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; सभासदत्व &gt; सभासद रजिस्टर</p>
+        </div>
+        <div class="text-sm" data-spec-field="org">
+          <span class="text-gray-500">संस्था:</span>
+          <span class="font-medium text-gray-800 ml-1">श्रद्धा नागरी सहकारी पतसंस्था मर्यादित — कोतोली</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="mockup-section mockup-section-compact" aria-labelledby="section-primary-search">
+      <h2 class="mockup-section-title" id="section-primary-search">प्राथमिक शोध</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-end">
+        <div data-spec-field="1">
+          <label class="mockup-label" for="filter-branch">शाखा निवडा</label>
+          <input type="text" id="filter-branch" class="mockup-autocomplete" list="branch-options" placeholder="ID किंवा नाव टाइप करा">
+          <datalist id="branch-options">
+            <option value="1 — कोतोली मुख्य कार्यालय"></option>
+            <option value="2 — Branch 2"></option>
+            <option value="3 — Branch 3"></option>
+          </datalist>
+        </div>
+        <div data-spec-field="2">
+          <label class="mockup-label" for="filter-membership">सभासदत्व</label>
+          <select id="filter-membership">
+            <option value="member" selected>सभासद</option>
+            <option value="nominal">नाममात्र सभासद</option>
+          </select>
+        </div>
+        <div data-spec-field="3">
+          <label class="mockup-label" for="share-from">शेअर क्रमांक (पासून)</label>
+          <input type="text" id="share-from">
+        </div>
+        <div data-spec-field="4">
+          <label class="mockup-label" for="share-to">शेअर क्रमांक (पर्यंत)</label>
+          <input type="text" id="share-to">
+        </div>
+        <div data-spec-field="5">
+          <label class="mockup-label" for="filter-customer">ग्राहक निवडा</label>
+          <input type="text" id="filter-customer" class="mockup-autocomplete" list="customer-options" placeholder="ग्राहक क्र. किंवा नाव">
+          <datalist id="customer-options">
+            <option value="661 — Customer 1"></option>
+            <option value="662 — Customer 2"></option>
+            <option value="663 — Customer 3"></option>
+          </datalist>
+        </div>
+        <div data-spec-field="6">
+          <label class="mockup-label" for="filter-status">स्थिती निवडा</label>
+          <select id="filter-status">
+            <option value="active" selected>चालू</option>
+            <option value="closed">बंद</option>
+            <option value="suspended">स्थगित</option>
+          </select>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" class="mockup-btn mockup-btn-primary">दाखवा</button>
+        </div>
+      </div>
+      <div class="mt-4 pt-3 border-t border-gray-100">
+        <button type="button" class="text-blue-700 text-sm underline bg-transparent border-0 cursor-pointer" id="toggle-advance-search">अॅडव्हान्स शोध</button>
+        <span class="mockup-badge-todo ml-2">TODO</span>
+      </div>
+    </section>
+
+    <section id="advance-search-panel" class="mockup-hidden mockup-section mockup-section-compact" aria-labelledby="section-advance-search">
+      <h2 class="mockup-section-title" id="section-advance-search">अॅडव्हान्स शोध</h2>
+      <p class="text-sm text-gray-500">फील्ड स्पेकमध्ये कॅप्चर नाहीत — स्क्रीनशॉट नंतर जोडले जाईल.</p>
+    </section>
+
+    <section class="mockup-section mockup-section-full" aria-labelledby="section-results">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <h2 class="mockup-section-title mb-0 border-0 pb-0" id="section-results">सभासद यादी</h2>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0" title="सभासद माहिती स्क्रीन — अद्याप परिभाषित नाही">तपशील</button>
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">निर्यात</button>
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">काढा</button>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="mockup-table" aria-label="सभासद रजिस्टर">
+          <thead>
+            <tr>
+              <th data-spec-field="g1">निवडा</th>
+              <th data-spec-field="g2">अनु. क्र.</th>
+              <th data-spec-field="g3">सभासद क्रमांक</th>
+              <th data-spec-field="g4">ग्राहक क्रमांक</th>
+              <th data-spec-field="g5">सभासदाचे नाव</th>
+              <th data-spec-field="g6">सभासदत्व</th>
+              <th data-spec-field="g7">भाग भांडवल शिल्लक</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" aria-label="पंक्ती 1 निवडा"></td>
+              <td>1</td>
+              <td>208</td>
+              <td>661</td>
+              <td>पाटील राम गणेश</td>
+              <td>सभासद</td>
+              <td>50,000.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" aria-label="पंक्ती 2 निवडा"></td>
+              <td>2</td>
+              <td>209</td>
+              <td>662</td>
+              <td>देशमुख सीता अनिल</td>
+              <td>सभासद</td>
+              <td>25,000.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" aria-label="पंक्ती 3 निवडा"></td>
+              <td>3</td>
+              <td>210</td>
+              <td>663</td>
+              <td>जाधव सुरेश विजय</td>
+              <td>नाममात्र सभासद</td>
+              <td>10,000.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary">पूर्ववत</button>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('toggle-advance-search');
+      var panel = document.getElementById('advance-search-panel');
+      if (toggle && panel) {
+        toggle.addEventListener('click', function () {
+          panel.classList.toggle('mockup-hidden');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

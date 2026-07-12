@@ -69,13 +69,19 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - ~~new-other-account-screen.md~~ / ~~other-account-registration-screen.md~~ → superseded by other-account-management-screen.md
 
 ## 05 — UI/UX — Membership
-- [05-ui-ux/membership/overview.md](05-ui-ux/membership/overview.md) — Index of Membership screens
-- [05-ui-ux/membership/new-membership-screen.md](05-ui-ux/membership/new-membership-screen.md) — नवीन सभासदत्व (3 tabs, from PNG + MP4)
-- [05-ui-ux/membership/member-register-screen.md](05-ui-ux/membership/member-register-screen.md) — सभासद रजिस्टर (from PNG `02_07`)
-- [05-ui-ux/membership/membership-transaction-screen.md](05-ui-ux/membership/membership-transaction-screen.md) — सभासदत्व व्यवहार (7 tabs, from PNG `02_07`)
-- [05-ui-ux/membership/dividend-transaction-screen.md](05-ui-ux/membership/dividend-transaction-screen.md) — लाभांश व्यवहार (6 tabs, from PNG `02_07`)
-- [05-ui-ux/membership/shares-transfer-screen.md](05-ui-ux/membership/shares-transfer-screen.md) — शेअर्स ट्रान्सफर (3 tabs, from MP4 + PNG `02_07`)
-- [05-ui-ux/membership/shares-transfer-list-screen.md](05-ui-ux/membership/shares-transfer-list-screen.md) — शेअर्स ट्रान्सफर यादी (from PNG `02_07`)
+- [05-ui-ux/membership/overview.md](05-ui-ux/membership/overview.md) — Index of Membership screens (UX-optimized 2026-07-12)
+- [05-ui-ux/membership/ux-optimization.md](05-ui-ux/membership/ux-optimization.md) — Membership UX audit (6 → 5 screens)
+- [05-ui-ux/membership/new-membership-screen.md](05-ui-ux/membership/new-membership-screen.md) — नवीन सभासदत्व (3 tabs)
+- [05-ui-ux/membership/member-register-screen.md](05-ui-ux/membership/member-register-screen.md) — सभासद रजिस्टर
+- [05-ui-ux/membership/membership-transaction-screen.md](05-ui-ux/membership/membership-transaction-screen.md) — सभासदत्व व्यवहार (7 tabs; conditional)
+- [05-ui-ux/membership/dividend-transaction-screen.md](05-ui-ux/membership/dividend-transaction-screen.md) — लाभांश व्यवहार (6 tabs)
+- [05-ui-ux/membership/shares-transfer-management-screen.md](05-ui-ux/membership/shares-transfer-management-screen.md) — शेअर्स ट्रान्सफर व्यवस्थापन (2 tabs; consolidated)
+- ~~shares-transfer-screen.md~~ / ~~shares-transfer-list-screen.md~~ → superseded by shares-transfer-management-screen.md
+- [05-ui-ux/mockups/membership/new-membership-screen/](05-ui-ux/mockups/membership/new-membership-screen/) — नवीन सभासदत्व (Draft)
+- [05-ui-ux/mockups/membership/member-register-screen/](05-ui-ux/mockups/membership/member-register-screen/) — सभासद रजिस्टर (Draft)
+- [05-ui-ux/mockups/membership/membership-transaction-screen/](05-ui-ux/mockups/membership/membership-transaction-screen/) — सभासदत्व व्यवहार (Draft)
+- [05-ui-ux/mockups/membership/dividend-transaction-screen/](05-ui-ux/mockups/membership/dividend-transaction-screen/) — लाभांश व्यवहार (Draft)
+- [05-ui-ux/mockups/membership/shares-transfer-management-screen/](05-ui-ux/mockups/membership/shares-transfer-management-screen/) — शेअर्स ट्रान्सफर व्यवस्थापन (Draft)
 
 ## 05 — UI/UX — Savings (Operational)
 - [05-ui-ux/savings/overview.md](05-ui-ux/savings/overview.md)
@@ -216,4 +222,4 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/settings/loan/loan-interest-rate-change-screen.md](05-ui-ux/settings/loan/loan-interest-rate-change-screen.md) — व्याज दरात बदल (simplified)
 
 ## Status
-Project Overview is complete: vision.md, business-goals.md, glossary.md, and system-boundaries.md. Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). **Settings module UX-optimized (2026-07-05):** 6 consolidated screens per [05-ui-ux/settings/ux-optimization.md](05-ui-ux/settings/ux-optimization.md). **Customer module UX-optimized (2026-07-09):** 4 → 3 screens per [05-ui-ux/customer/ux-optimization.md](05-ui-ux/customer/ux-optimization.md). **Daily module UX-optimized (2026-07-11):** 8 → 7 screens per [05-ui-ux/daily/ux-optimization.md](05-ui-ux/daily/ux-optimization.md). **Fixed Deposit module UX-optimized (2026-07-11):** 7 → 6 screens per [05-ui-ux/fixed-deposit/ux-optimization.md](05-ui-ux/fixed-deposit/ux-optimization.md). Report specs added from `screenshots/Reports/`. Reusable UX skill: `.cursor/skills/optimize-ui-ux/`. Backend business modules have not been started yet.
+Project Overview is complete: vision.md, business-goals.md, glossary.md, and system-boundaries.md. Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). **Settings module UX-optimized (2026-07-05):** 6 consolidated screens per [05-ui-ux/settings/ux-optimization.md](05-ui-ux/settings/ux-optimization.md). **Customer module UX-optimized (2026-07-09):** 4 → 3 screens per [05-ui-ux/customer/ux-optimization.md](05-ui-ux/customer/ux-optimization.md). **Daily module UX-optimized (2026-07-11):** 8 → 7 screens per [05-ui-ux/daily/ux-optimization.md](05-ui-ux/daily/ux-optimization.md). **Fixed Deposit module UX-optimized (2026-07-11):** 7 → 6 screens per [05-ui-ux/fixed-deposit/ux-optimization.md](05-ui-ux/fixed-deposit/ux-optimization.md). **Loan module UX-optimized (2026-07-12):** 8 → 6 screens per [05-ui-ux/loan/ux-optimization.md](05-ui-ux/loan/ux-optimization.md). **Membership module UX-optimized (2026-07-12):** 6 → 5 screens per [05-ui-ux/membership/ux-optimization.md](05-ui-ux/membership/ux-optimization.md). Report specs added from `screenshots/Reports/`. Reusable UX skill: `.cursor/skills/optimize-ui-ux/`. Backend business modules have not been started yet.

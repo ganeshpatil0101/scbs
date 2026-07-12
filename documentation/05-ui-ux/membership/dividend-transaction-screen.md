@@ -14,14 +14,16 @@ UI specification for posting dividend payment transactions against member divide
 
 ## Tabs
 
-| # | Marathi Tab | English Tab |
-| :---: | :--- | :--- |
-| 1 | खात्याची माहिती | Account Information |
-| 2 | व्यवहार | Transaction |
-| 3 | चेक तपशील | Cheque Details |
-| 4 | ट्रान्सफर | Transfer |
-| 5 | खातेवही | Ledger |
-| 6 | केवायसी माहिती | KYC Information |
+| # | Marathi Tab | English Tab | Visibility |
+| :---: | :--- | :--- | :--- |
+| 1 | खात्याची माहिती | Account Information | Both |
+| 2 | व्यवहार | Transaction | Both |
+| 3 | चेक तपशील | Cheque Details | **Transfer mode only** |
+| 4 | ट्रान्सफर | Transfer | **Transfer mode only** |
+| 5 | खातेवही | Ledger | Both |
+| 6 | केवायसी माहिती | KYC Information | Both (scaffold) |
+
+**Mode selector (Tab 2):** Radio `नावे / जमा` (Debit / Credit) and `रोख / ट्रान्सफर` (Cash / Transfer) — required. Tab 3 and Tab 4 visible when mode = `ट्रान्सफर`.
 
 ## Reference Screenshots
 
@@ -48,8 +50,7 @@ UI specification for posting dividend payment transactions against member divide
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 3 | सभासद क्रमांक | Member Number | Textbox | Yes | — |
-| 4 | ग्राहकाचे नाव | Customer Name | Textbox | Yes | Read-only after lookup |
+| 3 | सभासद निवडा | Select Member | Autocomplete | Yes | Enter resolves by member no. or name; e.g. `208 — Member 1`. Replaces Member Number + Customer Name. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
 
 ### Dividend Warrant Grid
 
@@ -66,8 +67,8 @@ UI specification for posting dividend payment transactions against member divide
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 5 | एकूण लाभांश (रु.) | Total Dividend (Rs.) | Textbox | No | Read-only |
-| 6 | लाभांश देय (रु.) | Dividend Payable (Rs.) | Textbox | No | Read-only |
+| 4 | एकूण लाभांश (रु.) | Total Dividend (Rs.) | Label | No | Read-only |
+| 5 | लाभांश देय (रु.) | Dividend Payable (Rs.) | Label | No | Read-only |
 
 **KYC preview:** `फोटो / सही दाखवा` with photo, signature, ID proof, address proof placeholders.
 
@@ -81,23 +82,23 @@ UI specification for posting dividend payment transactions against member divide
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | चलन क्रमांक | Challan Number | Textbox | No | Read-only; e.g. `52` |
+| 1 | चलन क्रमांक | Challan Number | Label | No | Read-only; e.g. `52` |
 | 2 | नावे / जमा | Debit / Credit | Radio | Yes | — |
-| 3 | रोख / ट्रान्सफर | Cash / Transfer | Radio | Yes | — |
+| 3 | रोख / ट्रान्सफर | Cash / Transfer | Radio | Yes | Controls Tab 3 and Tab 4 visibility |
 
 ### Account Fields
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 4 | शाखा निवडा | Select Branch | Autocomplete | Yes | Sample: `1 — कोतोली मुख्य कार्यालय`. Enter resolves by ID or name |
-| 5 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Sample: `3 — देणे लाभांश`. Enter resolves by ID or name |
-| 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Enter resolves by ID or name; shows display name |
-| 7 | शिल्लक | Balance | Textbox | No | Read-only |
-| 8 | न वटलेली शिल्लक | Uncleared Balance | Textbox | No | Read-only |
+| 4 | शाखा निवडा | Select Branch | Autocomplete | Yes | e.g. `1 — कोतोली मुख्य कार्यालय` |
+| 5 | जी.एल. निवडा | Select GL | Autocomplete | Yes | e.g. `3 — देणे लाभांश` |
+| 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Enter resolves by ID or name |
+| 7 | शिल्लक | Balance | Label | No | Read-only |
+| 8 | न वटलेली शिल्लक | Uncleared Balance | Label | No | Read-only |
 | 9 | व्यवहार रक्कम (रु.) | Transaction Amount (Rs.) | Textbox | Yes | — |
-| 10 | पॅन | PAN | Textbox | No | Read-only |
-| 11 | आधार क्रमांक | Aadhaar Number | Textbox | No | Read-only |
-| 12 | अक्षरी रक्कम | Amount in Words | Textbox | No | Read-only |
+| 10 | पॅन | PAN | Label | No | Read-only |
+| 11 | आधार क्रमांक | Aadhaar Number | Label | No | Read-only |
+| 12 | अक्षरी रक्कम | Amount in Words | Label | No | Read-only |
 | 13 | व्यवहार तपशील | Transaction Details | Textbox | No | — |
 
 **Navigation:** `मागे`, `पुढे`, `पूर्ण`, `पूर्ववत`.
@@ -105,6 +106,8 @@ UI specification for posting dividend payment transactions against member divide
 ---
 
 ## Tab 3: चेक तपशील (Cheque Details)
+
+> **Shared component:** `app-cheque-tab`. Visible when Tab 2 mode = `ट्रान्सफर`.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
@@ -116,8 +119,8 @@ UI specification for posting dividend payment transactions against member divide
 | 6 | नाव | Name | Textbox | Yes | — |
 | 7 | बँक निवडा | Select Bank | Dropdown | Yes | Default: `निवडा`. Values: `TODO` |
 | 8 | बँक शाखा | Bank Branch | Textbox | No | — |
-| 9 | ड्रॉन ऑन बँक | Drawn on Bank | Textbox | No | Read-only |
-| 10 | ड्रॉन ऑन ब्रांच | Drawn on Branch | Textbox | No | Read-only |
+| 9 | ड्रॉन ऑन बँक | Drawn on Bank | Label | No | Read-only |
+| 10 | ड्रॉन ऑन ब्रांच | Drawn on Branch | Label | No | Read-only |
 | 11 | एनईएफटी/आरटीजीएस | NEFT/RTGS | Checkbox | No | — |
 
 **Navigation:** `मागे`, `पुढे`, `पूर्ण`, `पूर्ववत`.
@@ -126,14 +129,16 @@ UI specification for posting dividend payment transactions against member divide
 
 ## Tab 4: ट्रान्सफर (Transfer)
 
+> **Shared component:** `app-transfer-tab`. Visible when Tab 2 mode = `ट्रान्सफर`.
+
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | शाखा निवडा | Select Branch | Autocomplete | Yes | Enter resolves by ID or name |
 | 2 | जी.एल. निवडा | Select GL | Autocomplete | Yes | e.g. `1 — वसूल भाग भांडवल` |
 | 3 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | — |
-| 4 | शिल्लक(जमा) | Balance (Credit) | Textbox | No | Read-only |
+| 4 | शिल्लक(जमा) | Balance (Credit) | Label | No | Read-only |
 | 5 | व्यवहार रक्कम (रु) | Transaction Amount (Rs.) | Textbox | Yes | — |
-| 6 | एकूण व्यवहार रक्कम (रु) | Total Transaction Amount | Textbox | No | Read-only |
+| 6 | एकूण व्यवहार रक्कम (रु) | Total Transaction Amount | Label | No | Read-only |
 
 **Action:** `+ टाका` (Add).
 
@@ -146,6 +151,8 @@ UI specification for posting dividend payment transactions against member divide
 ---
 
 ## Tab 5: खातेवही (Ledger)
+
+> **Shared component:** `app-ledger-tab`. Same 15-column grid as Savings/FD/Daily transaction screens.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
@@ -164,14 +171,28 @@ UI specification for posting dividend payment transactions against member divide
 
 ## Tab 6: केवायसी माहिती (KYC Information)
 
-`TODO` — tab referenced in navigation; no dedicated screenshot in `02_07` set. Follow savings transaction KYC tab pattern.
+> **Shared component:** `app-kyc-info-tab`. `TODO` — tab referenced in navigation; no dedicated screenshot in `02_07` set. Follow [../savings/savings-transaction-screen.md](../savings/savings-transaction-screen.md) KYC tab pattern.
+
+---
+
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| Path | [mockups/membership/dividend-transaction-screen/](../mockups/membership/dividend-transaction-screen/) |
+| Status | **Draft** |
+| Created | 2026-07-12 |
+
+Open `index.html` in a browser for layout review before Angular implementation.
 
 ---
 
 ## Related Documents
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [member-register-screen.md](member-register-screen.md)
-- [../settings/membership/dividend-calculation-screen.md](../settings/membership/dividend-calculation-screen.md)
+- [../settings/membership/membership-configuration-screen.md](../settings/membership/membership-configuration-screen.md)
 - [../savings/savings-transaction-screen.md](../savings/savings-transaction-screen.md)
 - [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)
+- [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)

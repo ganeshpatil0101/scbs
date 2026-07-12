@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>शेअर्स ट्रान्सफर व्यवस्थापन — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 class="text-2xl font-bold text-gray-900">शेअर्स ट्रान्सफर व्यवस्थापन</h1>
+          <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; सभासदत्व &gt; शेअर्स ट्रान्सफर व्यवस्थापन</p>
+        </div>
+        <div class="text-sm" data-spec-field="org">
+          <span class="text-gray-500">संस्था:</span>
+          <span class="font-medium text-gray-800 ml-1">श्रद्धा नागरी सहकारी पतसंस्था मर्यादित — कोतोली</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="flex border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="स्क्रीन टॅब">
+      <button type="button" id="tab-1" class="mockup-tab mockup-tab-active" role="tab" aria-selected="true" aria-controls="tab-panel-1" data-tab="1">नवीन ट्रान्सफर</button>
+      <button type="button" id="tab-2" class="mockup-tab" role="tab" aria-selected="false" aria-controls="tab-panel-2" data-tab="2">ट्रान्सफर यादी</button>
+    </nav>
+
+    <!-- Tab 1: नवीन ट्रान्सफर -->
+    <div id="tab-panel-1" role="tabpanel" aria-labelledby="tab-1">
+
+      <nav class="flex border-b border-gray-300 mb-6 overflow-x-auto bg-white rounded-t-lg px-2" role="tablist" aria-label="नवीन ट्रान्सफर अंतर्गत टॅब">
+        <button type="button" id="inner-tab-1" class="mockup-tab mockup-tab-active text-sm py-2" role="tab" aria-selected="true" aria-controls="inner-panel-1" data-inner-tab="1">शेअर्स ट्रान्सफर</button>
+        <button type="button" id="inner-tab-2" class="mockup-tab text-sm py-2 mockup-hidden" role="tab" aria-selected="false" aria-controls="inner-panel-2" data-inner-tab="2">साहित्य तपशील</button>
+        <button type="button" id="inner-tab-3" class="mockup-tab text-sm py-2 mockup-hidden" role="tab" aria-selected="false" aria-controls="inner-panel-3" data-inner-tab="3">ट्रान्सफर</button>
+      </nav>
+
+      <!-- Inner Tab 1: शेअर्स ट्रान्सफर -->
+      <div id="inner-panel-1" role="tabpanel" aria-labelledby="inner-tab-1">
+
+        <div class="mockup-section-columns">
+          <section class="mockup-section" aria-labelledby="section-share-class">
+            <h2 class="mockup-section-title" id="section-share-class">शेअर वर्ग</h2>
+            <fieldset class="border-0 p-0 m-0">
+              <legend class="mockup-label">वर्ग निवडा</legend>
+              <div class="flex flex-wrap gap-4 mt-1">
+                <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="1">
+                  <input type="radio" name="share-class" value="a" checked id="class-a">
+                  <span class="text-sm">अ वर्ग</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="2">
+                  <input type="radio" name="share-class" value="b" id="class-b">
+                  <span class="text-sm">ब वर्ग</span>
+                </label>
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="mockup-section" aria-labelledby="section-transfer-details">
+            <h2 class="mockup-section-title" id="section-transfer-details">ट्रान्सफर तपशील</h2>
+            <div class="mockup-field-grid mockup-field-grid--2">
+              <div data-spec-field="3">
+                <label class="mockup-label" for="app-date">अर्ज दिनांक <span class="mockup-required">*</span></label>
+                <input type="date" id="app-date" value="2026-07-12">
+              </div>
+              <div data-spec-field="4">
+                <label class="mockup-label" for="resolution-no">ठराव क्र. <span class="mockup-required">*</span></label>
+                <input type="text" id="resolution-no">
+              </div>
+              <div data-spec-field="5">
+                <label class="mockup-label" for="resolution-date">ठराव दिनांक <span class="mockup-required">*</span></label>
+                <input type="date" id="resolution-date" value="2026-07-10">
+              </div>
+              <div data-spec-field="6">
+                <label class="mockup-label" for="transfer-date">ट्रान्सफर दिनांक <span class="mockup-required">*</span></label>
+                <input type="date" id="transfer-date" value="2026-07-12">
+              </div>
+              <div data-spec-field="7">
+                <label class="mockup-label" for="member-from">सभासद निवडा (पासून) <span class="mockup-required">*</span></label>
+                <input type="text" id="member-from" class="mockup-autocomplete" list="member-options" value="208 — Member 1" placeholder="सभासद क्र. किंवा नाव">
+                <datalist id="member-options">
+                  <option value="208 — Member 1"></option>
+                  <option value="209 — Member 2"></option>
+                  <option value="210 — Member 3"></option>
+                </datalist>
+              </div>
+              <div data-spec-field="8">
+                <label class="mockup-label" for="member-to">सभासद निवडा (पर्यंत) <span class="mockup-required">*</span></label>
+                <input type="text" id="member-to" class="mockup-autocomplete" list="member-options-to" value="209 — Member 2" placeholder="सभासद क्र. किंवा नाव">
+                <datalist id="member-options-to">
+                  <option value="208 — Member 1"></option>
+                  <option value="209 — Member 2"></option>
+                  <option value="210 — Member 3"></option>
+                </datalist>
+              </div>
+              <div data-spec-field="9">
+                <label class="mockup-label" for="remark">शेरा</label>
+                <input type="text" id="remark">
+              </div>
+              <div data-spec-field="10">
+                <label class="mockup-label" for="cert-from">प्रमाणपत्र क्र (पासुन)</label>
+                <input type="text" id="cert-from">
+              </div>
+              <div data-spec-field="11">
+                <label class="mockup-label" for="cert-to">प्रमाणपत्र क्र (पर्यंत)</label>
+                <input type="text" id="cert-to">
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-100">
+              <button type="button" class="mockup-btn mockup-btn-primary">दाखले दाखवा</button>
+            </div>
+          </section>
+        </div>
+
+        <section class="mockup-section mockup-section-full" aria-labelledby="section-cert-grid">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <h2 class="mockup-section-title mb-0 border-0 pb-0" id="section-cert-grid">प्रमाणपत्र निवड</h2>
+            <label class="inline-flex items-center gap-2 cursor-pointer text-sm">
+              <input type="checkbox" id="cert-select-all">
+              <span>सर्व निवडा</span>
+            </label>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="mockup-table" aria-label="प्रमाणपत्र निवड ग्रिड">
+              <thead>
+                <tr>
+                  <th data-spec-field="g1">निवडा</th>
+                  <th data-spec-field="g2">अ.क्र.</th>
+                  <th data-spec-field="g3">सर्टिफिकेट क्र.</th>
+                  <th data-spec-field="g4">शेअर्स क्र.</th>
+                  <th data-spec-field="g5">रक्कम</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" class="cert-row-check" checked aria-label="पंक्ती 1 निवडा"></td>
+                  <td>1</td>
+                  <td>CERT-1001</td>
+                  <td>1–50</td>
+                  <td>5,000.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="cert-row-check" aria-label="पंक्ती 2 निवडा"></td>
+                  <td>2</td>
+                  <td>CERT-1002</td>
+                  <td>51–100</td>
+                  <td>5,000.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="cert-row-check" aria-label="पंक्ती 3 निवडा"></td>
+                  <td>3</td>
+                  <td>CERT-1003</td>
+                  <td>101–150</td>
+                  <td>5,000.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="mockup-section" aria-labelledby="section-transfer-fee">
+          <h2 class="mockup-section-title" id="section-transfer-fee">ट्रान्सफर फी</h2>
+          <div class="mockup-field-grid mockup-field-grid--2">
+            <div data-spec-field="12">
+              <label class="mockup-label">एकूण शेअर रक्कम</label>
+              <span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">5,000.00</span>
+            </div>
+            <div data-spec-field="13">
+              <fieldset class="border-0 p-0 m-0">
+                <legend class="mockup-label">रोख / ट्रान्सफर</legend>
+                <div class="flex flex-wrap gap-4 mt-1">
+                  <label class="inline-flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="fee-payment-mode" value="cash" checked id="fee-cash">
+                    <span class="text-sm">रोख</span>
+                  </label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="fee-payment-mode" value="transfer" id="fee-transfer">
+                    <span class="text-sm">ट्रान्सफर</span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+            <div data-spec-field="14">
+              <label class="mockup-label" for="scroll-select">
+                स्क्रोल निवडा <span class="mockup-required">*</span>
+                <span class="mockup-badge-todo">TODO</span>
+              </label>
+              <select id="scroll-select">
+                <option value="" selected>निवडा</option>
+                <option value="" disabled>[TODO] — master data</option>
+              </select>
+            </div>
+            <div data-spec-field="15">
+              <label class="mockup-label" for="transfer-fee">ट्रान्सफर फी (रू.)</label>
+              <input type="text" id="transfer-fee" value="50.00">
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Inner Tab 2: साहित्य तपशील -->
+      <div id="inner-panel-2" class="mockup-hidden" role="tabpanel" aria-labelledby="inner-tab-2" hidden>
+        <section class="mockup-section" aria-labelledby="section-instrument">
+          <h2 class="mockup-section-title" id="section-instrument">साहित्य तपशील</h2>
+          <div class="mockup-field-grid mockup-field-grid--2">
+            <div data-spec-field="t2-1">
+              <label class="mockup-label" for="cheque-type">धनादेश प्रकार निवडा</label>
+              <select id="cheque-type">
+                <option value="slip" selected>स्लिप</option>
+                <option value="" disabled>[TODO] — master data</option>
+              </select>
+            </div>
+            <div data-spec-field="t2-2">
+              <label class="mockup-label" for="cheque-amount">चेक रक्कम (रु.)</label>
+              <input type="text" id="cheque-amount" value="50.00">
+            </div>
+            <div data-spec-field="t2-3">
+              <label class="mockup-label" for="amount-words">रक्कम अक्षरी</label>
+              <input type="text" id="amount-words" value="पन्नास रुपये">
+            </div>
+            <div data-spec-field="t2-4">
+              <label class="mockup-label" for="cheque-date">चेक दिनांक <span class="mockup-required">*</span></label>
+              <input type="date" id="cheque-date" value="2026-07-12">
+            </div>
+            <div data-spec-field="t2-5">
+              <label class="mockup-label" for="cheque-no">चेक क्र. <span class="mockup-required">*</span></label>
+              <input type="text" id="cheque-no">
+            </div>
+            <div data-spec-field="t2-6">
+              <label class="mockup-label" for="cheque-name">नाव <span class="mockup-required">*</span></label>
+              <input type="text" id="cheque-name">
+            </div>
+            <div data-spec-field="t2-7">
+              <label class="mockup-label" for="cheque-bank">
+                बँक निवडा <span class="mockup-required">*</span>
+                <span class="mockup-badge-todo">TODO</span>
+              </label>
+              <select id="cheque-bank">
+                <option value="" selected>निवडा</option>
+                <option value="" disabled>[TODO] — master data</option>
+              </select>
+            </div>
+            <div data-spec-field="t2-8">
+              <label class="mockup-label" for="bank-branch">बँक शाखा</label>
+              <input type="text" id="bank-branch">
+            </div>
+            <div data-spec-field="t2-9">
+              <label class="mockup-label">ड्रॉन ऑन बँक</label>
+              <span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">—</span>
+            </div>
+            <div data-spec-field="t2-10">
+              <label class="mockup-label">ड्रॉन ऑन ब्रांच</label>
+              <span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">—</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Inner Tab 3: ट्रान्सफर -->
+      <div id="inner-panel-3" class="mockup-hidden" role="tabpanel" aria-labelledby="inner-tab-3" hidden>
+        <section class="mockup-section" aria-labelledby="section-gl-transfer">
+          <h2 class="mockup-section-title" id="section-gl-transfer">ट्रान्सफर</h2>
+          <div class="mockup-field-grid mockup-field-grid--2">
+            <div data-spec-field="t3-1">
+              <label class="mockup-label" for="tr-branch">शाखा निवडा <span class="mockup-required">*</span></label>
+              <input type="text" id="tr-branch" class="mockup-autocomplete" list="branch-options" value="1 — कोतोली मुख्य कार्यालय" placeholder="ID किंवा नाव">
+              <datalist id="branch-options">
+                <option value="1 — कोतोली मुख्य कार्यालय"></option>
+                <option value="2 — Branch 2"></option>
+                <option value="3 — Branch 3"></option>
+              </datalist>
+            </div>
+            <div data-spec-field="t3-2">
+              <label class="mockup-label" for="tr-gl">जी.एल. निवडा <span class="mockup-required">*</span></label>
+              <input type="text" id="tr-gl" class="mockup-autocomplete" list="gl-options" value="1 — वसूल भाग भांडवल" placeholder="ID किंवा नाव">
+              <datalist id="gl-options">
+                <option value="1 — वसूल भाग भांडवल"></option>
+                <option value="38 — Saving"></option>
+              </datalist>
+            </div>
+            <div data-spec-field="t3-3">
+              <label class="mockup-label" for="tr-holder">खातेधारक निवडा <span class="mockup-required">*</span></label>
+              <input type="text" id="tr-holder" class="mockup-autocomplete" list="holder-options" placeholder="खाते क्र. किंवा नाव">
+              <datalist id="holder-options">
+                <option value="101 — Account Holder 1"></option>
+                <option value="102 — Account Holder 2"></option>
+                <option value="103 — Account Holder 3"></option>
+              </datalist>
+            </div>
+            <div data-spec-field="t3-4">
+              <label class="mockup-label">शिल्लक(जमा)</label>
+              <span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">25,000.00</span>
+            </div>
+            <div data-spec-field="t3-5">
+              <fieldset class="border-0 p-0 m-0">
+                <legend class="mockup-label">जमा / नावे</legend>
+                <div class="flex flex-wrap gap-4 mt-1">
+                  <label class="inline-flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="tr-dc" value="credit" checked>
+                    <span class="text-sm">जमा</span>
+                  </label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="tr-dc" value="debit">
+                    <span class="text-sm">नावे</span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+            <div data-spec-field="t3-6">
+              <label class="mockup-label" for="tr-amount">व्यवहार रक्कम (रु) <span class="mockup-required">*</span></label>
+              <input type="text" id="tr-amount" value="50.00">
+            </div>
+            <div data-spec-field="t3-7">
+              <label class="mockup-label">एकूण व्यवहार रक्कम (रु)</label>
+              <span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">50.00</span>
+            </div>
+          </div>
+          <div class="mt-4">
+            <button type="button" class="mockup-btn mockup-btn-add">+ टाका</button>
+          </div>
+        </section>
+
+        <section class="mockup-section mockup-section-full" aria-labelledby="section-tr-grid">
+          <div class="overflow-x-auto">
+            <table class="mockup-table" aria-label="ट्रान्सफर ग्रिड">
+              <thead>
+                <tr>
+                  <th data-spec-field="tg1">निवडा</th>
+                  <th data-spec-field="tg2">अनु क्र</th>
+                  <th data-spec-field="tg3">जी.एल.हेड</th>
+                  <th data-spec-field="tg4">खाते क्र.</th>
+                  <th data-spec-field="tg5">नाव</th>
+                  <th data-spec-field="tg6">शिल्लक</th>
+                  <th data-spec-field="tg7">व्यवहार रक्कम (रु)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" aria-label="पंक्ती 1 निवडा"></td>
+                  <td>1</td>
+                  <td>1 — वसूल भाग भांडवल</td>
+                  <td>101</td>
+                  <td>Account Holder 1</td>
+                  <td>25,000.00</td>
+                  <td>50.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">निश्चित करा</button>
+            <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">हटवा</button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Tab 2: ट्रान्सफर यादी -->
+    <div id="tab-panel-2" class="mockup-hidden" role="tabpanel" aria-labelledby="tab-2" hidden>
+
+      <section class="mockup-section mockup-section-compact" aria-labelledby="section-list-filters">
+        <h2 class="mockup-section-title" id="section-list-filters">शोध फिल्टर</h2>
+        <div class="mb-4">
+          <fieldset class="border-0 p-0 m-0 inline-flex flex-wrap gap-6">
+            <div data-spec-field="l1">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="radio" name="list-share-class" value="a" checked>
+                <span class="text-sm">अ वर्ग</span>
+              </label>
+            </div>
+            <div data-spec-field="l2">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="radio" name="list-share-class" value="b">
+                <span class="text-sm">ब वर्ग</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-end">
+          <div data-spec-field="l3">
+            <label class="mockup-label" for="list-member-from">सभासद क्र. (पासून)</label>
+            <input type="text" id="list-member-from">
+          </div>
+          <div data-spec-field="l4">
+            <label class="mockup-label" for="list-member-to">सभासद क्र. (पर्यंत)</label>
+            <input type="text" id="list-member-to">
+          </div>
+          <div data-spec-field="l5">
+            <label class="mockup-label" for="list-cert-from">प्रमाणपत्र क्र. (पासून)</label>
+            <input type="text" id="list-cert-from">
+          </div>
+          <div data-spec-field="l6">
+            <label class="mockup-label" for="list-cert-to">प्रमाणपत्र क्र. (पर्यंत)</label>
+            <input type="text" id="list-cert-to">
+          </div>
+          <div data-spec-field="l7">
+            <label class="mockup-label" for="list-date-from">ट्रान्सफर दिनांक (पासून)</label>
+            <input type="date" id="list-date-from">
+          </div>
+          <div data-spec-field="l8">
+            <label class="mockup-label" for="list-date-to">ट्रान्सफर दिनांक (पर्यंत)</label>
+            <input type="date" id="list-date-to">
+          </div>
+          <div>
+            <button type="button" class="mockup-btn mockup-btn-primary">दाखवा</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="mockup-section mockup-section-full" aria-labelledby="section-list-results">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <h2 class="mockup-section-title mb-0 border-0 pb-0" id="section-list-results">ट्रान्सफर यादी</h2>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">निर्यात</button>
+            <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">काढा</button>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="mockup-table" aria-label="ट्रान्सफर यादी">
+            <thead>
+              <tr>
+                <th data-spec-field="lg1">निवडा</th>
+                <th data-spec-field="lg2">अ.क्र.</th>
+                <th data-spec-field="lg3">ट्रान्सफर दिनांक</th>
+                <th data-spec-field="lg4">ट्रान्सफर सभासद 'पासून'</th>
+                <th data-spec-field="lg5">सभासद क्र. 'पासून'</th>
+                <th data-spec-field="lg6">एकूण शेअर्स</th>
+                <th data-spec-field="lg7">सर्टिफिकेट क्र.</th>
+                <th data-spec-field="lg8">शेअर्स रक्कम रू.</th>
+                <th data-spec-field="lg9">ट्रान्सफर सभासद 'पर्यंत'</th>
+                <th data-spec-field="lg10">सभासद क्र. 'पर्यंत'</th>
+                <th data-spec-field="lg11">ठराव क्र.</th>
+                <th data-spec-field="lg12">ठराव दिनांक</th>
+                <th data-spec-field="lg13">ट्रान्सफर फी रू.</th>
+                <th data-spec-field="lg14">शेरा</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="list-row-check" aria-label="पंक्ती 1 निवडा"></td>
+                <td>1</td>
+                <td>2026-07-01</td>
+                <td>Member 1</td>
+                <td>208</td>
+                <td>50</td>
+                <td>CERT-1001</td>
+                <td>5,000.00</td>
+                <td>Member 2</td>
+                <td>209</td>
+                <td>RES-42</td>
+                <td>2026-06-28</td>
+                <td>50.00</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="list-row-check" aria-label="पंक्ती 2 निवडा"></td>
+                <td>2</td>
+                <td>2026-06-15</td>
+                <td>Member 2</td>
+                <td>209</td>
+                <td>100</td>
+                <td>CERT-1002</td>
+                <td>10,000.00</td>
+                <td>Member 3</td>
+                <td>210</td>
+                <td>RES-38</td>
+                <td>2026-06-10</td>
+                <td>50.00</td>
+                <td>कुटुंबात हस्तांतरण</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="list-row-check" aria-label="पंक्ती 3 निवडा"></td>
+                <td>3</td>
+                <td>2026-05-20</td>
+                <td>Member 3</td>
+                <td>210</td>
+                <td>25</td>
+                <td>CERT-1003</td>
+                <td>2,500.00</td>
+                <td>Member 1</td>
+                <td>208</td>
+                <td>RES-31</td>
+                <td>2026-05-18</td>
+                <td>50.00</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="flex flex-wrap items-center justify-between gap-3 mt-4 pt-3 border-t border-gray-200 text-sm text-gray-600">
+          <span>एकूण नोंदी: <strong>3</strong></span>
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">पुढील &gt;&gt;</button>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-2">
+      <div id="footer-summary" class="text-sm text-gray-600 mockup-hidden">
+        व्यवहार रक्कम: <strong>50.00</strong>
+      </div>
+      <div class="flex flex-wrap justify-end gap-2 ml-auto">
+        <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-revert">पूर्ववत</button>
+        <button type="button" class="mockup-btn mockup-btn-secondary mockup-hidden" id="btn-back">मागे</button>
+        <button type="button" class="mockup-btn mockup-btn-primary" id="btn-next">पुढे</button>
+        <button type="button" class="mockup-btn mockup-btn-primary" id="btn-complete">पूर्ण</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var currentTab = 1;
+      var currentInnerTab = 1;
+      var isTransferMode = false;
+
+      var topTabs = document.querySelectorAll('[data-tab]');
+      var innerTabs = document.querySelectorAll('[data-inner-tab]');
+      var panel1 = document.getElementById('tab-panel-1');
+      var panel2 = document.getElementById('tab-panel-2');
+      var innerPanel1 = document.getElementById('inner-panel-1');
+      var innerPanel2 = document.getElementById('inner-panel-2');
+      var innerPanel3 = document.getElementById('inner-panel-3');
+      var innerTab2 = document.getElementById('inner-tab-2');
+      var innerTab3 = document.getElementById('inner-tab-3');
+      var btnBack = document.getElementById('btn-back');
+      var btnNext = document.getElementById('btn-next');
+      var btnComplete = document.getElementById('btn-complete');
+      var btnRevert = document.getElementById('btn-revert');
+      var footerSummary = document.getElementById('footer-summary');
+      var certSelectAll = document.getElementById('cert-select-all');
+
+      function switchTopTab(tabNum) {
+        currentTab = tabNum;
+        topTabs.forEach(function (tab) {
+          var isActive = Number(tab.getAttribute('data-tab')) === tabNum;
+          tab.classList.toggle('mockup-tab-active', isActive);
+          tab.setAttribute('aria-selected', isActive);
+        });
+        panel1.classList.toggle('mockup-hidden', tabNum !== 1);
+        panel1.hidden = tabNum !== 1;
+        panel2.classList.toggle('mockup-hidden', tabNum !== 2);
+        panel2.hidden = tabNum !== 2;
+        updateFooter();
+      }
+
+      function switchInnerTab(tabNum) {
+        if (!isTransferMode && tabNum > 1) return;
+        currentInnerTab = tabNum;
+        innerTabs.forEach(function (tab) {
+          var n = Number(tab.getAttribute('data-inner-tab'));
+          if (!isTransferMode && n > 1) return;
+          var isActive = n === tabNum;
+          tab.classList.toggle('mockup-tab-active', isActive);
+          tab.setAttribute('aria-selected', isActive);
+        });
+        innerPanel1.classList.toggle('mockup-hidden', tabNum !== 1);
+        innerPanel1.hidden = tabNum !== 1;
+        innerPanel2.classList.toggle('mockup-hidden', tabNum !== 2);
+        innerPanel2.hidden = tabNum !== 2;
+        innerPanel3.classList.toggle('mockup-hidden', tabNum !== 3);
+        innerPanel3.hidden = tabNum !== 3;
+        updateFooter();
+      }
+
+      function updateTransferMode() {
+        isTransferMode = document.getElementById('fee-transfer').checked;
+        innerTab2.classList.toggle('mockup-hidden', !isTransferMode);
+        innerTab3.classList.toggle('mockup-hidden', !isTransferMode);
+        if (!isTransferMode && currentInnerTab > 1) {
+          switchInnerTab(1);
+        }
+        updateFooter();
+      }
+
+      function updateFooter() {
+        var onTab1 = currentTab === 1;
+        var onTab2 = currentTab === 2;
+        btnNext.classList.toggle('mockup-hidden', !onTab1 || (currentInnerTab === 3) || (!isTransferMode && currentInnerTab === 1));
+        btnBack.classList.toggle('mockup-hidden', !onTab1 || currentInnerTab === 1);
+        btnComplete.classList.toggle('mockup-hidden', onTab2);
+        footerSummary.classList.toggle('mockup-hidden', !(onTab1 && currentInnerTab === 3));
+        btnRevert.classList.toggle('mockup-hidden', false);
+      }
+
+      topTabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          switchTopTab(Number(this.getAttribute('data-tab')));
+        });
+      });
+
+      innerTabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          switchInnerTab(Number(this.getAttribute('data-inner-tab')));
+        });
+      });
+
+      document.querySelectorAll('input[name="fee-payment-mode"]').forEach(function (radio) {
+        radio.addEventListener('change', updateTransferMode);
+      });
+
+      btnNext.addEventListener('click', function () {
+        if (currentInnerTab < (isTransferMode ? 3 : 1)) {
+          switchInnerTab(currentInnerTab + 1);
+        }
+      });
+
+      btnBack.addEventListener('click', function () {
+        if (currentInnerTab > 1) {
+          switchInnerTab(currentInnerTab - 1);
+        }
+      });
+
+      if (certSelectAll) {
+        certSelectAll.addEventListener('change', function () {
+          document.querySelectorAll('.cert-row-check').forEach(function (cb) {
+            cb.checked = certSelectAll.checked;
+          });
+        });
+      }
+
+      updateTransferMode();
+      updateFooter();
+    })();
+  </script>
+</body>
+</html>
