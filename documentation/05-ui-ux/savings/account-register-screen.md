@@ -12,6 +12,8 @@ UI specification for searching and listing savings deposit accounts.
 | Breadcrumb | डॅशबोर्ड > बचत > खाते रजिस्टर | Dashboard > Savings > Account Register |
 | Parent Module | बचत | Savings |
 
+**Auto-fill (header):** `संस्था` (Organization) — read-only `Label` from tenant session; not repeated in filter bar.
+
 ## Reference Screenshots
 
 | File | Section |
@@ -24,18 +26,20 @@ UI specification for searching and listing savings deposit accounts.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | संघटना | Organization | Dropdown | No | Society name |
-| 2 | शाखा कोड | Branch Code | Textbox | No | e.g. `1` |
-| 3 | शाखेचे नाव | Branch Name | Dropdown | No | e.g. `कोतोली मुख्य कार्यालय` |
-| 4 | योजना निवडा | Select Scheme | Dropdown | No | e.g. `सेव्हिंग ठेव` (Saving Deposit) |
-| 5 | स्थिती निवडा | Select Status | Dropdown | No | e.g. `चालू` (Active) |
-| 6 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | — |
-| 7 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | — |
-| 8 | खाते धारकाचे नाव | Account Holder Name | Textbox | No | — |
-| 9 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | — |
-| 10 | ग्राहक क्रमांक (पर्यंत) | Customer No. (To) | Textbox | No | — |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | No | Replaces `शाखा कोड` + `शाखेचे नाव`. Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 2 | योजना निवडा | Select Scheme | Dropdown | No | Loaded dynamically from Savings schemes (Settings > नवीन योजना). e.g. `सेव्हिंग ठेव` (Saving Deposit) |
+| 3 | स्थिती निवडा | Select Status | Dropdown | No | e.g. `चालू` (Active) |
+| 4 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | Range filter — not consolidated per entity-autocomplete exclusions |
+| 5 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | — |
+| 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Replaces free-text `खाते धारकाचे नाव`. Sample: `101 — Account Holder 1`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
+| 7 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | Range filter |
+| 8 | ग्राहक क्रमांक (पर्यंत) | Customer No. (To) | Textbox | No | — |
 
-**Link:** `अतिरिक्त शोध पर्याय`. **Action:** `दाखवा`.
+**Link:** `अतिरिक्त शोध पर्याय` — `TODO — not captured`.
+
+**Action:** `दाखवा`.
+
+**Sidebar `तपशील`:** Opens account detail in context — no separate Account Information screen spec (deferred; see [ux-optimization.md](ux-optimization.md)).
 
 ---
 
@@ -73,8 +77,14 @@ UI specification for searching and listing savings deposit accounts.
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/savings/account-register-screen/) — Marathi layout for bank review
+
 ## Related Documents
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [new-savings-account-screen.md](new-savings-account-screen.md)
-- [../fixed-deposit/fd-account-register-screen.md](../fixed-deposit/fd-account-register-screen.md)
+- [../fixed-deposit/fd-account-management-screen.md](../fixed-deposit/fd-account-management-screen.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

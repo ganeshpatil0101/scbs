@@ -2,7 +2,7 @@
 
 ## Purpose
 
-UI specification for manually calculating and posting savings interest.
+UI specification for manually calculating and posting savings interest. Single screen for calculate + post (no separate provision screen captured).
 
 ## Screen Identification
 
@@ -25,13 +25,14 @@ UI specification for manually calculating and posting savings interest.
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | शाखा निवडा | Select Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
-| 2 | खाते क्र. | Account No. | Textbox | No | e.g. `55` |
+| 2 | खाते क्र. | Account No. | Textbox | No | Single-account filter; e.g. `55` |
 | 3 | खाते | Account | Dropdown | No | e.g. `सेव्हिंग ठेव` (Saving Deposit) |
-| 4 | पोस्टिंग दिनांक निवडा | Select Posting Date | Dropdown | No | e.g. `31.03.2026` |
-| 5 | पोस्टिंग दिनांक | Posting Date | Date | No | e.g. `31.03.2026` |
-| 6 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | — |
+| 4 | व्याज दिनांक | Interest Date | Label (read-only) | Yes | Auto-filled: last financial year-end date only (e.g. `31.03.2026`). Replaces duplicate `पोस्टिंग दिनांक निवडा` dropdown + `पोस्टिंग दिनांक` date pair |
+| 5 | व्याज पोस्ट दिनांक | Interest Post Date | Date | No | Optional override for posting date |
+| 6 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | Range filter |
 | 7 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | — |
-| 8 | ॲडव्हान्स शोध | Advanced Search | Link | No | — |
+
+**Link:** `अॅडव्हान्स शोध` (Advanced Search) — `TODO — not captured`.
 
 **Action:** `व्याज गणना करा` (Calculate Interest) — blue button.
 
@@ -68,7 +69,14 @@ UI specification for manually calculating and posting savings interest.
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/savings/manual-interest-calculation-screen/) — Marathi layout for bank review
+
 ## Related Documents
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [savings-transaction-screen.md](savings-transaction-screen.md)
+- [../fixed-deposit/fd-manual-interest-calculation-screen.md](../fixed-deposit/fd-manual-interest-calculation-screen.md)
+- [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

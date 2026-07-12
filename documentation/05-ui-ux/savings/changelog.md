@@ -5,3 +5,5 @@
 | 1.0.0 | 2025-06-25 | New Savings Account, Transaction, Manual Interest Calculation screen specs | Generated from `screenshots/bachat/` | AI Agent |
 | 1.1.0 | 2026-07-01 | Consolidated Branch/GL/Account lookup fields into single Autocomplete per entity-autocomplete-pattern.md | Legacy dual-field UX replaced | AI Agent |
 | 1.2.0 | 2026-07-05 | Account Register screen spec | New screenshot `05-07` in `screenshots/bachat/` | AI Agent |
+| 1.3.0 | 2026-07-12 | UX optimization: Customer/Agent Autocomplete, session org header, Branch/Holder Autocomplete on Register, Transaction summary panel, Advanced Settings on New Account, Manual Interest Interest Date auto-fill; added ux-optimization.md | `@optimize-ui-ux` savings — 4→4 screens, field cleanup only per [ux-optimization.md](ux-optimization.md) | AI Agent |
+| 1.4.0 | 2026-07-12 | HTML mockups (Draft) for all 4 screens under `mockups/savings/` | `@generate-ui-mockup` savings module | AI Agent |
