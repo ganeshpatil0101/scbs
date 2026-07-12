@@ -1,5 +1,7 @@
 # Screen Spec — Recurring Manual Interest Assessment (रिकरिंग > मॅन्युअल व्याज > आकारणी)
 
+> **Superseded (2026-07-12):** Merged into [recurring-interest-management-screen.md](recurring-interest-management-screen.md) — Tab 2 (व्याज आकारणी). Retained for field archaeology.
+
 ## Purpose
 
 UI specification for manually assessing and posting recurring deposit interest.

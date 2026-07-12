@@ -96,7 +96,8 @@ Read and apply [documentation/05-ui-ux/shared/ui-simplification-patterns.md](../
 | Reports | `05-ui-ux/reports/` | Candidate: shared filter patterns |
 | Loan (operational) | `05-ui-ux/loan/` | **Done (2026-07-12)** — Loan Transaction; Interest Management; Autocomplete; Advanced |
 | Membership (operational) | `05-ui-ux/membership/` | **Done (2026-07-12)** — Shares Transfer Management; Customer/Member Autocomplete; Advanced |
-| Savings / FD / Recurring | operational folders | Candidate: shared account-opening tabs |
+| Recurring (operational) | `05-ui-ux/recurring/` | **Done (2026-07-12)** — Transaction; Interest Management; Customer/Agent Autocomplete; Advanced |
+| Savings / FD | operational folders | Candidate: shared account-opening tabs |
 
 ## Field Disposition Labels
 

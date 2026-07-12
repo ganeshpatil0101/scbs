@@ -158,12 +158,15 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 
 ## 05 — UI/UX — Recurring (Operational)
 - [05-ui-ux/recurring/overview.md](05-ui-ux/recurring/overview.md)
-- [05-ui-ux/recurring/new-recurring-account-screen.md](05-ui-ux/recurring/new-recurring-account-screen.md) — नवीन खाते (from MP4)
-- [05-ui-ux/recurring/credit-transaction-screen.md](05-ui-ux/recurring/credit-transaction-screen.md) — जमा व्यवहार (from MP4)
+- [05-ui-ux/recurring/ux-optimization.md](05-ui-ux/recurring/ux-optimization.md) — UX audit (6 → 5 screens)
+- [05-ui-ux/recurring/new-recurring-account-screen.md](05-ui-ux/recurring/new-recurring-account-screen.md) — नवीन खाते
+- [05-ui-ux/recurring/recurring-transaction-screen.md](05-ui-ux/recurring/recurring-transaction-screen.md) — व्यवहार (unified credit/debit)
 - [05-ui-ux/recurring/account-register-screen.md](05-ui-ux/recurring/account-register-screen.md) — खाते रजिस्टर
-- [05-ui-ux/recurring/manual-interest-assessment-screen.md](05-ui-ux/recurring/manual-interest-assessment-screen.md) — मॅन्युअल व्याज आकारणी
-- [05-ui-ux/recurring/manual-interest-provision-screen.md](05-ui-ux/recurring/manual-interest-provision-screen.md) — मॅन्युअल व्याज तरतूद
+- [05-ui-ux/recurring/recurring-interest-management-screen.md](05-ui-ux/recurring/recurring-interest-management-screen.md) — व्याज व्यवस्थापन
 - [05-ui-ux/recurring/interest-multiplier-screen.md](05-ui-ux/recurring/interest-multiplier-screen.md) — व्याज गुणक
+- ~~05-ui-ux/recurring/credit-transaction-screen.md~~ → superseded by recurring-transaction-screen.md
+- ~~05-ui-ux/recurring/manual-interest-assessment-screen.md~~ → superseded by recurring-interest-management-screen.md
+- ~~05-ui-ux/recurring/manual-interest-provision-screen.md~~ → superseded by recurring-interest-management-screen.md
 
 ## 05 — UI/UX — Reports
 - [05-ui-ux/reports/overview.md](05-ui-ux/reports/overview.md) — Index of daily-use operational and statutory reports
@@ -222,4 +225,4 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/settings/loan/loan-interest-rate-change-screen.md](05-ui-ux/settings/loan/loan-interest-rate-change-screen.md) — व्याज दरात बदल (simplified)
 
 ## Status
-Project Overview is complete: vision.md, business-goals.md, glossary.md, and system-boundaries.md. Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). **Settings module UX-optimized (2026-07-05):** 6 consolidated screens per [05-ui-ux/settings/ux-optimization.md](05-ui-ux/settings/ux-optimization.md). **Customer module UX-optimized (2026-07-09):** 4 → 3 screens per [05-ui-ux/customer/ux-optimization.md](05-ui-ux/customer/ux-optimization.md). **Daily module UX-optimized (2026-07-11):** 8 → 7 screens per [05-ui-ux/daily/ux-optimization.md](05-ui-ux/daily/ux-optimization.md). **Fixed Deposit module UX-optimized (2026-07-11):** 7 → 6 screens per [05-ui-ux/fixed-deposit/ux-optimization.md](05-ui-ux/fixed-deposit/ux-optimization.md). **Loan module UX-optimized (2026-07-12):** 8 → 6 screens per [05-ui-ux/loan/ux-optimization.md](05-ui-ux/loan/ux-optimization.md). **Membership module UX-optimized (2026-07-12):** 6 → 5 screens per [05-ui-ux/membership/ux-optimization.md](05-ui-ux/membership/ux-optimization.md). Report specs added from `screenshots/Reports/`. Reusable UX skill: `.cursor/skills/optimize-ui-ux/`. Backend business modules have not been started yet.
+Project Overview is complete: vision.md, business-goals.md, glossary.md, and system-boundaries.md. Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). **Settings module UX-optimized (2026-07-05):** 6 consolidated screens per [05-ui-ux/settings/ux-optimization.md](05-ui-ux/settings/ux-optimization.md). **Customer module UX-optimized (2026-07-09):** 4 → 3 screens per [05-ui-ux/customer/ux-optimization.md](05-ui-ux/customer/ux-optimization.md). **Daily module UX-optimized (2026-07-11):** 8 → 7 screens per [05-ui-ux/daily/ux-optimization.md](05-ui-ux/daily/ux-optimization.md). **Fixed Deposit module UX-optimized (2026-07-11):** 7 → 6 screens per [05-ui-ux/fixed-deposit/ux-optimization.md](05-ui-ux/fixed-deposit/ux-optimization.md). **Loan module UX-optimized (2026-07-12):** 8 → 6 screens per [05-ui-ux/loan/ux-optimization.md](05-ui-ux/loan/ux-optimization.md). **Membership module UX-optimized (2026-07-12):** 6 → 5 screens per [05-ui-ux/membership/ux-optimization.md](05-ui-ux/membership/ux-optimization.md). **Recurring module UX-optimized (2026-07-12):** 6 → 5 screens per [05-ui-ux/recurring/ux-optimization.md](05-ui-ux/recurring/ux-optimization.md). Report specs added from `screenshots/Reports/`. Reusable UX skill: `.cursor/skills/optimize-ui-ux/`. Backend business modules have not been started yet.

@@ -1,5 +1,7 @@
 # Screen Spec — Recurring Credit Transaction (रिकरिंग > जमा व्यवहार)
 
+> **Superseded (2026-07-12):** Merged into [recurring-transaction-screen.md](recurring-transaction-screen.md) — unified `व्यवहार` with `नावे / जमा` mode. Retained for field archaeology.
+
 ## Purpose
 
 UI specification for recurring deposit credit (installment) transactions. Five-tab workflow.

@@ -74,4 +74,4 @@ Fields 10 and 12 are editable in the grid.
 
 - [overview.md](overview.md)
 - [loan-manual-interest-provision-screen.md](loan-manual-interest-provision-screen.md)
-- [../recurring/manual-interest-assessment-screen.md](../recurring/manual-interest-assessment-screen.md)
+- [../recurring/recurring-interest-management-screen.md](../recurring/recurring-interest-management-screen.md)

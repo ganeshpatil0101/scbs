@@ -24,14 +24,14 @@ UI specification for calculating recurring deposit maturity amounts and interest
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | योजना निवडा | Select Scheme | Dropdown | Yes | e.g. `रिकरिंग ठेव` |
-| 2 | सरळ / चक्रव्याज | Simple / Compound | Radio | No | — |
-| 3 | मासिक / तिमाही / सहामाही / वार्षिक | Compounding Frequency | Radio | No | e.g. `वार्षिक` |
+| 1 | योजना निवडा | Select Scheme | Dropdown | Yes | Loaded dynamically from Recurring schemes (Settings > नवीन योजना). Sample: `रिकरिंग ठेव` |
+| 2 | सरळ / चक्रव्याज | Simple / Compound | Radio | No | Visible when scheme selected; hidden until field 1 set. Default from scheme |
+| 3 | मासिक / तिमाही / सहामाही / वार्षिक | Compounding Frequency | Radio | No | Visible only when field 2 = Compound. e.g. `वार्षिक` |
 | 4 | मासिक ठेव रक्कम (रु.) | Monthly Deposit Amount (Rs.) | Textbox | Yes | — |
-| 5 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | Default: `60` |
-| 6 | व्याज दर (% पीए) | Interest Rate (% p.a.) | Textbox | Yes | Default: `12.37` |
+| 5 | कालावधी (महिने) | Duration (Months) | Label (read-only) | Yes | Auto-filled from scheme; override allowed. Default: `60` |
+| 6 | व्याज दर (% पीए) | Interest Rate (% p.a.) | Label (read-only) | Yes | Auto-filled from scheme; override allowed. Default: `12.37` |
 
-### Output (Read-only)
+### Output (Read-only Labels)
 
 | # | Marathi Label | English Label |
 | :---: | :--- | :--- |
@@ -57,7 +57,14 @@ UI specification for calculating recurring deposit maturity amounts and interest
 
 ---
 
-## Cross-Links
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/recurring/interest-multiplier-screen/) — Marathi layout for bank review
+
+## Related Documents
 
 - [overview.md](overview.md)
+- [ux-optimization.md](ux-optimization.md)
 - [new-recurring-account-screen.md](new-recurring-account-screen.md)
+- [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)
+- [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)

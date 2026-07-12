@@ -1,5 +1,7 @@
 # Screen Spec — Recurring Manual Interest Provision (रिकरिंग > मॅन्युअल व्याज > तरतूद)
 
+> **Superseded (2026-07-12):** Merged into [recurring-interest-management-screen.md](recurring-interest-management-screen.md) — Tab 1 (व्याज तरतूद). Retained for field archaeology.
+
 ## Purpose
 
 UI specification for calculating and managing interest provisions on recurring accounts.
