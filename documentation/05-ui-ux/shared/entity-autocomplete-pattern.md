@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Define the standard UI field type for selecting Branch, GL Head, Account Holder, Customer, and Agent across all CBS screens. Replaces legacy dual/triple fields (ID textbox + search + select dropdown) with a single **Autocomplete** control.
+Define the standard UI field type for selecting Branch, GL Head, Account Holder, Customer, Member, and Agent across all CBS screens. Replaces legacy dual/triple fields (ID textbox + search + select dropdown) with a single **Autocomplete** control.
 
 ## Scope
 
-Applies to every screen spec under `documentation/05-ui-ux/` where the user must look up a branch, GL head, account holder, **customer**, or **agent** by ID or name.
+Applies to every screen spec under `documentation/05-ui-ux/` where the user must look up a branch, GL head, account holder, **customer**, **member**, or **agent** by ID or name.
 
 ## Field Type: Autocomplete
 
@@ -38,6 +38,7 @@ Applies to every screen spec under `documentation/05-ui-ux/` where the user must
 | GL | जी.एल. निवडा | Select GL | `जि.एल.क्र.`, `जी.एल.हेड.क्र.`, `जी.एल. हेड`, `जी.एल. हेड शोधा`, `जी.एल.निवडा` |
 | Account Holder | खातेधारक निवडा | Select Account Holder | `खाते क्र.`, `खातेधारक शोधा`, `खातेदार निवडा`, `खाते धारक निवडा` |
 | Customer | ग्राहक निवडा | Select Customer | `ग्राहक क्र.`, `ग्राहकाचे नाव`, `ग्राहक निवडा` (paired ID + name / select) |
+| Member | सभासद निवडा | Select Member | `सभासद क्र.`, `सभासद क्रमांक`, `सभासदचे नाव`, `सभासद नाव` (paired ID + name) |
 | Agent | एजंट निवडा | Select Agent | `एजंट क्रमांक`, `शोध एजंट नाव`, `एजंट निवडा`, `प्रतिनिधी क्र.` (paired ID + name / select) |
 | Sales Agent | विक्री एजंट निवडा | Select Sales Agent | `विक्री एजंट क्रमांक`, `विक्री एजंटचे नाव शोधा` (paired with Sales Agent Branch) |
 
@@ -88,6 +89,18 @@ Display: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Accoun
 
 Display: `661 — Customer 1`, `662 — Customer 2`, `663 — Customer 3`
 
+### Member
+
+| ID | Name |
+| :---: | :--- |
+| 208 | Member 1 |
+| 209 | Member 2 |
+| 210 | Member 3 |
+
+Display: `208 — Member 1`, `209 — Member 2`, `210 — Member 3`
+
+Loaded from membership accounts for the selected branch. Use two separate Member Autocomplete fields for From / To on Shares Transfer.
+
 ### Agent
 
 | ID | Name |
@@ -116,7 +129,7 @@ On [new-scheme-screen.md](../settings/schemes/new-scheme-screen.md), field **ज
 
 - Auto-generated read-only `खाते क्र.` on new-account screens
 - Auto-generated read-only `जी. एल. हेड क्र.` on [GL Account Setup](../settings/accounting/gl-account-setup-screen.md) Tab 2 (creation flow only)
-- Range filters: `खाते क्र. (पासून)` / `(पर्यंत)`, `ग्राहक क्र. (पासून)` / `(पर्यंत)` on list/bulk screens
+- Range filters: `खाते क्र. (पासून)` / `(पर्यंत)`, `ग्राहक क्र. (पासून)` / `(पर्यंत)`, `सभासद क्र. (पासून)` / `(पर्यंत)` on list/bulk screens
 - `सभासद खाते क्र.`, `बँकेचे बचत खाते क्रमांक`
 - Grid column definitions
 - Auto-generated read-only `ग्राहक क्र.` on New Customer (not a lookup)
@@ -124,7 +137,7 @@ On [new-scheme-screen.md](../settings/schemes/new-scheme-screen.md), field **ज
 ## Implementation Notes (Angular / mockup)
 
 - **Mockup:** `<input type="text" list="…">` with `<datalist>` options; class `.mockup-autocomplete`
-- **Angular:** shared `app-entity-autocomplete` with `entityType`: `branch` | `gl` | `account` | `customer` | `agent`; Material `mat-autocomplete`; debounced filter; Enter resolves selection
+- **Angular:** shared `app-entity-autocomplete` with `entityType`: `branch` | `gl` | `account` | `customer` | `member` | `agent`; Material `mat-autocomplete`; debounced filter; Enter resolves selection
 
 ## Related Documents
 
