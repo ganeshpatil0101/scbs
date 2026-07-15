@@ -78,6 +78,7 @@ Optional `styles.css` only when screen-specific Tailwind overrides cannot live i
 - `<html lang="mr">` — Marathi only, no language toggle
 - Content in `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`
 - Header: screen title + breadcrumb (Marathi) from spec **Screen Identification** table
+- **Module screen nav** (when the module has 2+ mockup screens): immediately after `</header>`, add a `.mockup-module-nav` bar linking sibling screens in the same `mockups/<module>/` folder only — no cross-module links. Current screen = `<span class="mockup-module-nav-link mockup-module-nav-current" aria-current="page">`; siblings = `<a href="…" class="mockup-module-nav-link">`. Use relative paths (`../<screen>/index.html`; for nested modules like `settings/*`, use `../../<subfolder>/<screen>/index.html`). Styles live in `mockup-base.css`.
 - Tab bar from spec **Tabs** table — use `.mockup-tab` / `.mockup-tab-active`
 - Sections from spec `### Section:` headings — use `.mockup-section` / `.mockup-section-title`
 - **Side-by-side sections** on desktop: wrap paired sections in `.mockup-section-columns` (2 equal columns at `≥1024px`); keep grids/tables in `.mockup-section-full`
@@ -148,6 +149,7 @@ Non-negotiable:
 
 ## Pre-Completion Checklist
 
+- [ ] Module screen nav (`.mockup-module-nav`) links all sibling screens in the same module when 2+ exist
 - [ ] Advanced Settings section collapsed by default when spec defines `प्रगत सेटिंग्ज`
 - [ ] Branch/GL/Account lookup fields use single Autocomplete control (not legacy ID + select pairs)
 - [ ] Every spec field/column has HTML with `data-spec-field`
