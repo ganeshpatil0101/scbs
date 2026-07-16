@@ -46,6 +46,10 @@ UI specification for calculating FD interest rates or duration for various depos
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/fixed-deposit/fd-interest-multiplier-screen/) — Marathi layout for bank review
+
 ## Related Documents
 
 - [overview.md](overview.md)

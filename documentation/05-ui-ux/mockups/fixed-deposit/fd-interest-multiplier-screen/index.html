@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>व्याज गुणक — मुदत ठेव — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <div>
+        <h1 class="text-2xl font-bold text-gray-900">व्याज गुणक</h1>
+        <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; मुदत ठेव &gt; व्याज गुणक</p>
+      </div>
+    </header>
+
+    <nav class="mockup-module-nav" aria-label="मॉड्यूलमधील स्क्रीन्स">
+      <span class="mockup-module-nav-label">या मॉड्यूलमधील स्क्रीन्स:</span>
+      <a href="../new-fd-account-screen/index.html" class="mockup-module-nav-link">नवीन खाते</a>
+      <a href="../fd-transaction-screen/index.html" class="mockup-module-nav-link">व्यवहार</a>
+      <a href="../fd-account-management-screen/index.html" class="mockup-module-nav-link">खाते व्यवस्थापन</a>
+      <a href="../fd-manual-interest-calculation-screen/index.html" class="mockup-module-nav-link">मॅन्युअल व्याज आकारणी</a>
+      <a href="../deposit-loan-installment-payment-screen/index.html" class="mockup-module-nav-link">ठेव कर्ज हप्ता पेमेंट</a>
+      <span class="mockup-module-nav-link mockup-module-nav-current" aria-current="page">व्याज गुणक</span>
+    </nav>
+
+    <div class="mockup-section-columns">
+      <section class="mockup-section" aria-labelledby="section-calculator">
+        <h2 class="mockup-section-title" id="section-calculator">गणक</h2>
+        <div class="mockup-field-grid">
+          <div data-spec-field="1">
+            <label class="mockup-label" for="scheme">योजना निवडा <span class="mockup-required">*</span></label>
+            <select id="scheme">
+              <option value="">निवडा</option>
+              <option value="double-loan" selected>दाम दुप्पट ठेव (कर्जातील)</option>
+              <option value="double">दामदुप्पट</option>
+              <option value="pension">पेन्शन ठेव</option>
+              <option value="fd">मुदत ठेव</option>
+            </select>
+          </div>
+          <div id="scheme-dependent" class="mockup-hidden mockup-field-grid">
+            <div data-spec-field="2">
+              <fieldset class="border-0 p-0 m-0">
+                <legend class="mockup-label">मुदत ठेव / दाम दुप्पट / कॅश सर्टिफिकेट</legend>
+                <div class="flex flex-wrap gap-4 mt-1">
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="product-type" value="fd" checked><span class="text-sm">मुदत ठेव</span></label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="product-type" value="double"><span class="text-sm">दाम दुप्पट</span></label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="product-type" value="cash-cert"><span class="text-sm">कॅश सर्टिफिकेट</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <div data-spec-field="3">
+              <fieldset class="border-0 p-0 m-0">
+                <legend class="mockup-label">साधा / कम्पाउंडींग</legend>
+                <div class="flex flex-wrap gap-4 mt-1">
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="interest-type" value="simple" checked><span class="text-sm">साधा</span></label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="interest-type" value="compound" id="compound-radio"><span class="text-sm">कम्पाउंडींग</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <div id="compound-freq" class="mockup-hidden" data-spec-field="4">
+              <fieldset class="border-0 p-0 m-0">
+                <legend class="mockup-label">मासिक / तिमाही / सहामाही / वार्षिक</legend>
+                <div class="flex flex-wrap gap-4 mt-1">
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="freq" value="monthly"><span class="text-sm">मासिक</span></label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="freq" value="quarterly"><span class="text-sm">तिमाही</span></label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="freq" value="half"><span class="text-sm">सहामाही</span></label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="freq" value="yearly" checked><span class="text-sm">वार्षिक</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <div data-spec-field="5">
+              <fieldset class="border-0 p-0 m-0">
+                <legend class="mockup-label">कालावधी दिवसामध्ये / महिन्यामध्ये</legend>
+                <div class="flex flex-wrap gap-4 mt-1">
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="duration-unit" value="months" checked id="duration-months-radio"><span class="text-sm">महिन्यामध्ये</span></label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="duration-unit" value="days" id="duration-days-radio"><span class="text-sm">दिवसामध्ये</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <div data-spec-field="6">
+              <fieldset class="border-0 p-0 m-0">
+                <legend class="mockup-label">व्याज दर / कालावधी</legend>
+                <div class="flex flex-wrap gap-4 mt-1">
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="calc-mode" value="rate" checked><span class="text-sm">व्याज दर</span></label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="calc-mode" value="duration"><span class="text-sm">कालावधी</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <div id="duration-months-wrap" data-spec-field="7">
+              <label class="mockup-label" for="duration-months">कालावधी (महिना)</label>
+              <input type="text" id="duration-months" value="96">
+            </div>
+            <div id="duration-days-wrap" class="mockup-hidden" data-spec-field="8">
+              <label class="mockup-label" for="duration-days">कालावधी (दिवस)</label>
+              <input type="text" id="duration-days">
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <button type="button" class="mockup-btn mockup-btn-primary">गणना करा</button>
+            <button type="button" class="mockup-btn mockup-btn-secondary">पूर्वत</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="mockup-section" aria-labelledby="section-output">
+        <h2 class="mockup-section-title" id="section-output">निकाल (वाचनीय)</h2>
+        <div class="mockup-field-grid">
+          <div data-spec-field="9">
+            <label class="mockup-label">व्याज दर</label>
+            <span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full font-semibold">7.25%</span>
+          </div>
+          <div data-spec-field="10">
+            <label class="mockup-label">दिनांक फरक</label>
+            <span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">2,920 दिवस</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var schemeSelect = document.getElementById('scheme');
+      var schemeDep = document.getElementById('scheme-dependent');
+      var compoundRadio = document.getElementById('compound-radio');
+      var freqBlock = document.getElementById('compound-freq');
+      var monthsRadio = document.getElementById('duration-months-radio');
+      var daysRadio = document.getElementById('duration-days-radio');
+      var monthsWrap = document.getElementById('duration-months-wrap');
+      var daysWrap = document.getElementById('duration-days-wrap');
+
+      function updateCompound() {
+        var isCompound = document.querySelector('input[name="interest-type"]:checked').value === 'compound';
+        freqBlock.classList.toggle('mockup-hidden', !isCompound);
+      }
+      function updateScheme() {
+        var hasScheme = !!schemeSelect.value;
+        schemeDep.classList.toggle('mockup-hidden', !hasScheme);
+        if (!hasScheme) freqBlock.classList.add('mockup-hidden');
+        else updateCompound();
+      }
+      function updateDuration() {
+        var isMonths = monthsRadio.checked;
+        monthsWrap.classList.toggle('mockup-hidden', !isMonths);
+        daysWrap.classList.toggle('mockup-hidden', isMonths);
+      }
+
+      document.querySelectorAll('input[name="interest-type"]').forEach(function (r) {
+        r.addEventListener('change', updateCompound);
+      });
+      schemeSelect.addEventListener('change', updateScheme);
+      monthsRadio.addEventListener('change', updateDuration);
+      daysRadio.addEventListener('change', updateDuration);
+      updateScheme();
+      updateDuration();
+    })();
+  </script>
+</body>
+</html>

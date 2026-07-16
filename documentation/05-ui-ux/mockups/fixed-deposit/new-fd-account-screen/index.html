@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>नवीन खाते — मुदत ठेव — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <div>
+        <h1 class="text-2xl font-bold text-gray-900">नवीन खाते</h1>
+        <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; मुदत ठेव &gt; नवीन खाते</p>
+      </div>
+    </header>
+
+    <nav class="mockup-module-nav" aria-label="मॉड्यूलमधील स्क्रीन्स">
+      <span class="mockup-module-nav-label">या मॉड्यूलमधील स्क्रीन्स:</span>
+      <span class="mockup-module-nav-link mockup-module-nav-current" aria-current="page">नवीन खाते</span>
+      <a href="../fd-transaction-screen/index.html" class="mockup-module-nav-link">व्यवहार</a>
+      <a href="../fd-account-management-screen/index.html" class="mockup-module-nav-link">खाते व्यवस्थापन</a>
+      <a href="../fd-manual-interest-calculation-screen/index.html" class="mockup-module-nav-link">मॅन्युअल व्याज आकारणी</a>
+      <a href="../deposit-loan-installment-payment-screen/index.html" class="mockup-module-nav-link">ठेव कर्ज हप्ता पेमेंट</a>
+      <a href="../fd-interest-multiplier-screen/index.html" class="mockup-module-nav-link">व्याज गुणक</a>
+    </nav>
+
+    <nav class="flex border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="स्क्रीन टॅब">
+      <button type="button" class="mockup-tab mockup-tab-active" role="tab" aria-selected="true" data-tab="1" data-panel="tab-panel-1">खात्याची माहिती</button>
+      <button type="button" class="mockup-tab" role="tab" aria-selected="false" data-tab="2" data-panel="tab-panel-2">वारसदार</button>
+      <button type="button" class="mockup-tab" role="tab" aria-selected="false" data-tab="3" data-panel="tab-panel-3">परिचयकर्ता / संयुक्त खाते धारक</button>
+      <button type="button" class="mockup-tab" role="tab" aria-selected="false" data-tab="4" data-panel="tab-panel-4">इतर</button>
+    </nav>
+
+    <div id="tab-panel-1" role="tabpanel">
+      <div class="mockup-section-columns">
+        <section class="mockup-section" aria-labelledby="section-holder">
+          <h2 class="mockup-section-title" id="section-holder">खाते धारकाची माहिती</h2>
+          <div class="mockup-field-grid">
+            <div data-spec-field="1">
+              <label class="mockup-label" for="customer">ग्राहक निवडा <span class="mockup-required">*</span></label>
+              <input type="text" id="customer" class="mockup-autocomplete" list="customer-options" placeholder="ग्राहक क्र. किंवा नाव">
+              <datalist id="customer-options">
+                <option value="661 — Customer 1"></option>
+                <option value="662 — Customer 2"></option>
+              </datalist>
+            </div>
+            <div class="mockup-field-grid mockup-field-grid--2 text-sm">
+              <div><label class="mockup-label mockup-label-muted">सभासद प्रकार</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-gray-700 w-full">सभासद</span></div>
+              <div><label class="mockup-label mockup-label-muted">सभासद खाते क्र.</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-gray-700 w-full">M-1001</span></div>
+              <div><label class="mockup-label mockup-label-muted">वय (व्यवहार दिनांक पर्यंतचे वर्ष)</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-gray-700 w-full">42</span></div>
+              <div><label class="mockup-label mockup-label-muted">ग्राहक शाखा</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-gray-700 w-full">कोतोली</span></div>
+              <div><label class="mockup-label mockup-label-muted">पॅन क्र.</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-gray-700 w-full">ABCDE1234F</span></div>
+              <div class="sm:col-span-2"><label class="mockup-label mockup-label-muted">विशेष सूचना</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-gray-700 w-full">—</span></div>
+            </div>
+          </div>
+        </section>
+        <section class="mockup-section" aria-labelledby="section-account">
+          <h2 class="mockup-section-title" id="section-account">खात्याची माहिती</h2>
+          <div class="mockup-field-grid">
+            <div data-spec-field="2">
+              <label class="mockup-label" for="scheme">योजना निवडा <span class="mockup-required">*</span></label>
+              <select id="scheme">
+                <option value="">निवडा</option>
+                <option value="fd" selected>मुदत ठेव</option>
+                <option value="double">दामदुप्पट</option>
+                <option value="double-loan">दाम दुप्पट ठेव (कर्जातील)</option>
+                <option value="pension">पेंशन ठेव</option>
+              </select>
+            </div>
+            <div data-spec-field="3"><label class="mockup-label">क्लोज / ओपन एंडेड</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">क्लोज एंडेड</span></div>
+            <div data-spec-field="4"><label class="mockup-label">व्याज प्रकार</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">साधे व्याज</span></div>
+            <div data-spec-field="5"><label class="mockup-label">कम्पाउंडिंग</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">—</span></div>
+            <div data-spec-field="6">
+              <label class="mockup-label" for="agent-branch">एजंट शाखा निवडा</label>
+              <input type="text" id="agent-branch" class="mockup-autocomplete" list="branch-options" placeholder="ID किंवा नाव">
+              <datalist id="branch-options"><option value="1 — Branch 1"><option value="2 — Branch 2"><option value="3 — Branch 3"></datalist>
+            </div>
+            <div data-spec-field="7">
+              <label class="mockup-label" for="agent">एजंट निवडा</label>
+              <input type="text" id="agent" class="mockup-autocomplete" list="agent-options" placeholder="ID किंवा नाव">
+              <datalist id="agent-options"><option value="1 — Agent 1"></datalist>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="mockup-section" aria-labelledby="section-details">
+        <h2 class="mockup-section-title" id="section-details">खाते तपशील</h2>
+        <div class="mockup-field-grid mockup-field-grid--2">
+          <div data-spec-field="8"><label class="mockup-label">खाते क्र.</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-500 w-full">— (जतनानंतर)</span></div>
+          <div data-spec-field="9">
+            <label class="mockup-label" for="account-type">खाते प्रकार <span class="mockup-required">*</span></label>
+            <select id="account-type">
+              <option value="general" selected>सामान्य खाते</option>
+              <option value="senior">ज्येष्ठ नागरिक खाते</option>
+              <option value="female">महिला</option>
+              <option value="widow">विधवा</option>
+              <option value="disabled">अपंग</option>
+              <option value="institution">दुसरी संस्था</option>
+              <option value="employee">नोकर</option>
+              <option value="freedom">स्वातंत्र्यसैनिक</option>
+              <option value="super-senior">अति ज्येष्ठ नागरिक</option>
+            </select>
+          </div>
+          <div data-spec-field="10">
+            <label class="mockup-label" for="rate-slab">व्याज दर स्लॅब <span class="mockup-required">*</span></label>
+            <select id="rate-slab"><option value="">निवडा</option><option value="12m-7">12 महिने — 7.00%</option></select>
+          </div>
+          <div data-spec-field="11"><label class="mockup-label">कालावधी (महिने) <span class="mockup-required">*</span></label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">12</span></div>
+          <div data-spec-field="12"><label class="mockup-label">कालावधी (दिवस) <span class="mockup-required">*</span></label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">0</span></div>
+          <div data-spec-field="13">
+            <label class="mockup-label" for="current-date">चालू दिनांक <span class="mockup-required">*</span></label>
+            <input type="date" id="current-date" value="2026-07-16">
+          </div>
+          <div data-spec-field="14">
+            <label class="mockup-label" for="fd-amount">मुदत ठेव रक्कम (रु.) <span class="mockup-required">*</span></label>
+            <input type="text" id="fd-amount" value="1,00,000.00">
+          </div>
+          <div data-spec-field="15"><label class="mockup-label">व्याज दर <span class="mockup-required">*</span></label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">7.00%</span></div>
+          <div data-spec-field="16">
+            <label class="mockup-label" for="interest-start">व्याज चालू दिनांक <span class="mockup-required">*</span></label>
+            <input type="date" id="interest-start" value="2026-07-16">
+          </div>
+          <div data-spec-field="17"><label class="mockup-label">मुदतपूर्ती रक्कम (रु.)</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">1,07,000.00</span></div>
+          <div data-spec-field="18"><label class="mockup-label">परतीची दिनांक</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">2027-07-16</span></div>
+          <div data-spec-field="19"><label class="mockup-label">पावती तारीख</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">2026-07-16</span></div>
+          <div data-spec-field="20">
+            <label class="mockup-label" for="status">स्थिती <span class="mockup-required">*</span></label>
+            <select id="status"><option value="active" selected>चालू</option><option value="closed">बंद</option><option value="suspended">स्थगित</option></select>
+          </div>
+          <div data-spec-field="21">
+            <label class="mockup-label" for="ifsc">आय.एफ.एस.सी. कोड</label>
+            <input type="text" id="ifsc">
+          </div>
+          <div data-spec-field="22"><label class="mockup-label">बँकेचे नाव</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">—</span></div>
+          <div data-spec-field="23">
+            <label class="mockup-label" for="bank-acct">बँकेचे बचत खाते क्रमांक</label>
+            <input type="text" id="bank-acct">
+          </div>
+        </div>
+      </section>
+
+      <details class="mockup-section">
+        <summary class="mockup-section-title cursor-pointer select-none" style="border-bottom:none;margin-bottom:0">प्रगत सेटिंग्ज</summary>
+        <div class="mockup-field-grid mockup-field-grid--2 mt-4 pt-4 border-t border-gray-200">
+          <div data-spec-field="24">
+            <label class="mockup-label" for="sales-branch">विक्री एजंट शाखा निवडा</label>
+            <input type="text" id="sales-branch" class="mockup-autocomplete" list="branch-options">
+          </div>
+          <div data-spec-field="25">
+            <label class="mockup-label" for="sales-agent">विक्री एजंट निवडा</label>
+            <input type="text" id="sales-agent" class="mockup-autocomplete" list="agent-options">
+          </div>
+          <div data-spec-field="26">
+            <label class="mockup-label" for="receipt-prefix">पावती प्रीफिक्स <span class="mockup-required">*</span></label>
+            <input type="text" id="receipt-prefix">
+          </div>
+          <div data-spec-field="27">
+            <label class="mockup-label" for="receipt-no">पावती क्रमांक <span class="mockup-required">*</span></label>
+            <input type="text" id="receipt-no">
+          </div>
+          <div data-spec-field="28">
+            <label class="mockup-label" for="actual-fd">वास्तविक एफडी रक्कम</label>
+            <input type="text" id="actual-fd">
+          </div>
+          <div data-spec-field="29">
+            <label class="mockup-label" for="multiplier">गुणक</label>
+            <input type="text" id="multiplier" value="1">
+          </div>
+        </div>
+        <button type="button" class="mockup-btn mockup-btn-add mt-4">+ टाका</button>
+      </details>
+    </div>
+
+    <div id="tab-panel-2" class="mockup-hidden" role="tabpanel" hidden>
+      <section class="mockup-section" aria-labelledby="section-nominee">
+        <h2 class="mockup-section-title" id="section-nominee">वारसदाराची माहिती</h2>
+        <div class="mockup-field-grid mockup-field-grid--2">
+          <div data-spec-field="t2-1">
+            <label class="mockup-label" for="nom-salutation">श्री / सौ <span class="mockup-required">*</span></label>
+            <select id="nom-salutation"><option value="shri" selected>श्री.</option><option value="sau">सौ.</option></select>
+          </div>
+          <div data-spec-field="t2-2">
+            <label class="mockup-label" for="nom-name">नाव (आडनाव - पहिले नाव - मधले नाव) <span class="mockup-required">*</span></label>
+            <input type="text" id="nom-name">
+          </div>
+          <div data-spec-field="t2-3">
+            <label class="mockup-label" for="nom-dob">जन्म दिनांक</label>
+            <input type="date" id="nom-dob">
+          </div>
+          <div data-spec-field="t2-4"><label class="mockup-label">नामांकन करताना वय</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">—</span></div>
+          <div data-spec-field="t2-5"><label class="mockup-label">नामांकन दिनांक</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">2026-07-16</span></div>
+          <div data-spec-field="t2-6">
+            <label class="mockup-label" for="nom-occupation">व्यवसाय</label>
+            <select id="nom-occupation"><option value="na" selected>एन/ए</option><option disabled>[TODO] — इतर</option></select>
+          </div>
+          <div data-spec-field="t2-7">
+            <label class="mockup-label" for="nom-relation">नाते <span class="mockup-required">*</span></label>
+            <select id="nom-relation"><option value="">निवडा</option><option value="spouse">पती/पत्नी</option><option disabled>[TODO] — इतर</option></select>
+          </div>
+          <div data-spec-field="t2-8">
+            <label class="mockup-label" for="nom-pct">टक्केवारी</label>
+            <input type="text" id="nom-pct">
+          </div>
+        </div>
+      </section>
+      <section class="mockup-section" aria-labelledby="section-contact">
+        <h2 class="mockup-section-title" id="section-contact">संपर्क माहिती</h2>
+        <div class="mockup-field-grid mockup-field-grid--2">
+          <div data-spec-field="t2-9"><label class="mockup-label" for="nom-tel">दूरध्वनी क्रमांक</label><input type="text" id="nom-tel"></div>
+          <div data-spec-field="t2-10"><label class="mockup-label" for="nom-mobile">मोबाईल</label><input type="text" id="nom-mobile"></div>
+          <div data-spec-field="t2-11"><label class="mockup-label" for="nom-email">ई - मेल आय.डी.</label><input type="text" id="nom-email"></div>
+        </div>
+      </section>
+      <section class="mockup-section" aria-labelledby="section-address">
+        <h2 class="mockup-section-title" id="section-address">पत्ता माहिती</h2>
+        <div class="mockup-field-grid mockup-field-grid--2">
+          <div class="sm:col-span-2" data-spec-field="t2-12">
+            <label class="mockup-label" for="nom-address-search">पत्ता शोधा <span class="mockup-required">*</span></label>
+            <input type="text" id="nom-address-search" placeholder="Google Maps Autocomplete">
+          </div>
+          <div data-spec-field="t2-13"><label class="mockup-label" for="nom-addr">पत्ता / इमारत / फ्लॅट / घर नं.</label><input type="text" id="nom-addr"></div>
+          <div data-spec-field="t2-14"><label class="mockup-label" for="nom-road">रस्ता</label><input type="text" id="nom-road"></div>
+          <div data-spec-field="t2-15"><label class="mockup-label" for="nom-landmark">लँडमार्क</label><input type="text" id="nom-landmark"></div>
+          <div data-spec-field="t2-16"><label class="mockup-label" for="nom-location">ठिकाण</label><input type="text" id="nom-location"></div>
+          <div data-spec-field="t2-17"><label class="mockup-label" for="nom-state">राज्य</label><input type="text" id="nom-state"></div>
+          <div data-spec-field="t2-18"><label class="mockup-label" for="nom-district">जिल्हा</label><input type="text" id="nom-district"></div>
+          <div data-spec-field="t2-19"><label class="mockup-label" for="nom-taluka">तालुका</label><input type="text" id="nom-taluka"></div>
+          <div data-spec-field="t2-20"><label class="mockup-label" for="nom-city">शहर</label><input type="text" id="nom-city"></div>
+          <div data-spec-field="t2-21"><label class="mockup-label" for="nom-pin">पिन कोड</label><input type="text" id="nom-pin"></div>
+        </div>
+        <button type="button" class="mockup-btn mockup-btn-add mt-4">टाका</button>
+      </section>
+      <section class="mockup-section mockup-section-full" aria-labelledby="section-nominee-grid">
+        <h2 class="mockup-section-title" id="section-nominee-grid">वारसदार यादी</h2>
+        <div class="overflow-x-auto">
+          <table class="mockup-table" aria-label="वारसदार ग्रिड">
+            <thead>
+              <tr>
+                <th>निवडा</th><th>अनु. क्र.</th><th>श्री/सौ</th><th>नाव</th><th>नामांकन करताना वय</th><th>जन्मदिनांक</th><th>पत्ता</th><th>जिल्हा</th><th>तालुका</th><th>शहर</th><th>ठिकाण</th><th>पिन कोड</th><th>व्यवसाय</th><th>दूरध्वनी</th><th>मोबाईल</th><th>नाते</th><th>टक्केवारी</th><th>नामांकन दिनांक</th>
+              </tr>
+            </thead>
+            <tbody><tr><td colspan="18" class="text-center text-gray-500">—</td></tr></tbody>
+          </table>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <button type="button" class="mockup-btn mockup-btn-primary">निश्चित करा</button>
+          <button type="button" class="mockup-btn mockup-btn-secondary">रद्द करा</button>
+        </div>
+      </section>
+    </div>
+
+    <div id="tab-panel-3" class="mockup-hidden" role="tabpanel" hidden>
+      <section class="mockup-section">
+        <h2 class="mockup-section-title">परिचयकर्ता / संयुक्त खाते धारक</h2>
+        <p class="text-sm text-gray-600"><span class="mockup-badge-todo">TODO</span> — v1 मध्ये कॅप्चर नाही. टॅब शेल फक्त नेव्हिगेशनसाठी.</p>
+      </section>
+    </div>
+
+    <div id="tab-panel-4" class="mockup-hidden" role="tabpanel" hidden>
+      <div class="mockup-section-columns">
+        <section class="mockup-section" aria-labelledby="section-general">
+          <h2 class="mockup-section-title" id="section-general">सामान्य</h2>
+          <div class="mockup-field-grid">
+            <div data-spec-field="t4-1"><label class="mockup-label" for="remarks">शेरा</label><input type="text" id="remarks"></div>
+            <div data-spec-field="t4-2">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="interest-reinvest">
+                <span class="text-sm">व्याज पुनर्निवेश</span>
+              </label>
+            </div>
+            <div id="si-reinvest-wrap" class="mockup-hidden" data-spec-field="t4-3">
+              <label class="mockup-label" for="si-reinvest">एस.आय. व्याज पुनर्गंतवणूक</label>
+              <select id="si-reinvest"><option value="monthly" selected>मासिक</option></select>
+            </div>
+          </div>
+        </section>
+        <section class="mockup-section" aria-labelledby="section-renewal">
+          <h2 class="mockup-section-title" id="section-renewal">नूतनीकरण</h2>
+          <div class="mockup-field-grid">
+            <div data-spec-field="t4-4">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="auto-renewal">
+                <span class="text-sm">ऑटो नूतनीकरण</span>
+              </label>
+            </div>
+            <div data-spec-field="t4-5">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="renewal">
+                <span class="text-sm">नूतनीकरण</span>
+              </label>
+            </div>
+            <div id="renewal-type-wrap" class="mockup-hidden">
+              <fieldset class="border-0 p-0 m-0">
+                <legend class="mockup-label">नूतनीकरण प्रकार</legend>
+                <div class="flex flex-wrap gap-4 mt-1">
+                  <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="t4-6"><input type="radio" name="renewal-type" value="both"><span class="text-sm">मुद्दल + व्याज</span></label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="t4-7"><input type="radio" name="renewal-type" value="principal" checked><span class="text-sm">फक्त मुद्दल</span></label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer" data-spec-field="t4-8"><input type="radio" name="renewal-type" value="interest"><span class="text-sm">केवळ व्याज</span></label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="mockup-section-columns">
+        <section id="interest-transfer-section" class="mockup-section mockup-hidden" aria-labelledby="section-interest-transfer">
+          <h2 class="mockup-section-title" id="section-interest-transfer">व्याज हस्तांतरण</h2>
+          <div class="mockup-field-grid">
+            <div data-spec-field="t4-9">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="interest-transfer">
+                <span class="text-sm">व्याज हस्तांतरण</span>
+              </label>
+            </div>
+            <div data-spec-field="t4-10">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="fund-transfer-bank">
+                <span class="text-sm">इतर बँकेत निधी हस्तांतरण</span>
+              </label>
+            </div>
+            <div id="it-fields" class="mockup-hidden mockup-field-grid">
+              <div data-spec-field="t4-11">
+                <label class="mockup-label" for="it-gl">जी.एल. निवडा</label>
+                <input type="text" id="it-gl" class="mockup-autocomplete" list="gl-options">
+                <datalist id="gl-options"><option value="91 — FD Interest"></datalist>
+              </div>
+              <div data-spec-field="t4-12">
+                <label class="mockup-label" for="it-holder">खातेधारक निवडा</label>
+                <input type="text" id="it-holder" class="mockup-autocomplete" list="holder-options">
+                <datalist id="holder-options"><option value="101 — Account Holder 1"></datalist>
+              </div>
+              <div data-spec-field="t4-13">
+                <label class="mockup-label" for="it-freq">वारंवारता निवडा</label>
+                <select id="it-freq"><option value="monthly" selected>महिन्यात</option></select>
+              </div>
+              <div data-spec-field="t4-14">
+                <label class="mockup-label" for="it-day">दिवस / तारीख निवडा</label>
+                <select id="it-day"><option value="28" selected>28</option></select>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="closing-section" class="mockup-section mockup-hidden" aria-labelledby="section-closing">
+          <h2 class="mockup-section-title" id="section-closing">खाते बंद करतेवेळी</h2>
+          <div class="mockup-field-grid">
+            <div data-spec-field="t4-15">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="at-closing">
+                <span class="text-sm">खाते बंद करतेवेळी</span>
+              </label>
+            </div>
+            <div id="closing-fields" class="mockup-hidden mockup-field-grid">
+              <div data-spec-field="t4-16">
+                <label class="mockup-label" for="close-gl">जी.एल. निवडा</label>
+                <input type="text" id="close-gl" class="mockup-autocomplete" list="gl-options">
+              </div>
+              <div data-spec-field="t4-17">
+                <label class="mockup-label" for="close-holder">खातेधारक निवडा</label>
+                <input type="text" id="close-holder" class="mockup-autocomplete" list="holder-options">
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <details class="mockup-section">
+        <summary class="mockup-section-title cursor-pointer select-none" style="border-bottom:none;margin-bottom:0">प्रगत सेटिंग्ज</summary>
+        <div class="mt-4 pt-4 border-t border-gray-200">
+          <div data-spec-field="t4-18">
+            <label class="mockup-label" for="lf-no">एल. एफ. क्रमांक</label>
+            <input type="text" id="lf-no">
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-reset">रीसेट</button>
+      <button type="button" class="mockup-btn mockup-btn-secondary mockup-hidden" id="btn-back">मागे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary" id="btn-next">पुढे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary mockup-hidden" id="btn-save">जतन करा</button>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var activeTab = 1;
+      var totalTabs = 4;
+      var tabs = document.querySelectorAll('[role="tab"]');
+      var panels = {};
+      tabs.forEach(function (t) { panels[t.getAttribute('data-tab')] = document.getElementById(t.getAttribute('data-panel')); });
+
+      function updateFooter() {
+        document.getElementById('btn-back').classList.toggle('mockup-hidden', activeTab === 1);
+        document.getElementById('btn-next').classList.toggle('mockup-hidden', activeTab >= totalTabs);
+        document.getElementById('btn-save').classList.toggle('mockup-hidden', activeTab !== totalTabs);
+      }
+
+      function switchTab(n) {
+        activeTab = n;
+        tabs.forEach(function (tab) {
+          var isActive = Number(tab.getAttribute('data-tab')) === n;
+          tab.classList.toggle('mockup-tab-active', isActive);
+          tab.setAttribute('aria-selected', isActive);
+        });
+        Object.keys(panels).forEach(function (k) {
+          var show = Number(k) === n;
+          panels[k].classList.toggle('mockup-hidden', !show);
+          panels[k].hidden = !show;
+        });
+        updateFooter();
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () { switchTab(Number(this.getAttribute('data-tab'))); });
+      });
+      document.getElementById('btn-next').addEventListener('click', function () { if (activeTab < totalTabs) switchTab(activeTab + 1); });
+      document.getElementById('btn-back').addEventListener('click', function () { if (activeTab > 1) switchTab(activeTab - 1); });
+      updateFooter();
+
+      document.getElementById('interest-reinvest').addEventListener('change', function () {
+        document.getElementById('si-reinvest-wrap').classList.toggle('mockup-hidden', !this.checked);
+      });
+      document.getElementById('auto-renewal').addEventListener('change', function () {
+        var renewal = document.getElementById('renewal');
+        if (this.checked) renewal.checked = false;
+        renewal.disabled = this.checked;
+        updateRenewalType();
+      });
+      document.getElementById('renewal').addEventListener('change', updateRenewalType);
+      function updateRenewalType() {
+        var auto = document.getElementById('auto-renewal').checked;
+        var renew = document.getElementById('renewal').checked && !auto;
+        document.getElementById('renewal-type-wrap').classList.toggle('mockup-hidden', !renew);
+      }
+      document.getElementById('interest-transfer').addEventListener('change', function () {
+        var on = this.checked;
+        document.getElementById('interest-transfer-section').classList.toggle('mockup-hidden', !on);
+        document.getElementById('it-fields').classList.toggle('mockup-hidden', !on);
+      });
+      document.getElementById('at-closing').addEventListener('change', function () {
+        var on = this.checked;
+        document.getElementById('closing-section').classList.toggle('mockup-hidden', !on);
+        document.getElementById('closing-fields').classList.toggle('mockup-hidden', !on);
+      });
+    })();
+  </script>
+</body>
+</html>

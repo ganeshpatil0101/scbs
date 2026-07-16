@@ -125,6 +125,10 @@ Single screen for searching fixed deposit accounts and viewing renewal history. 
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/fixed-deposit/fd-account-management-screen/) — Marathi layout for bank review
+
 ## Related Documents
 
 - [overview.md](overview.md)

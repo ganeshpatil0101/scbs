@@ -123,6 +123,10 @@ Uses shared component `app-ledger-tab` — same columns as savings ledger.
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/fixed-deposit/fd-transaction-screen/) — Marathi layout for bank review
+
 ## Related Documents
 
 - [overview.md](overview.md)

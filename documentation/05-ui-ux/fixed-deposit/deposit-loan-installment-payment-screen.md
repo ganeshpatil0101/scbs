@@ -99,6 +99,10 @@ UI specification for processing installment payments on loans against deposits. 
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/fixed-deposit/deposit-loan-installment-payment-screen/) — Marathi layout for bank review
+
 ## Related Documents
 
 - [overview.md](overview.md)

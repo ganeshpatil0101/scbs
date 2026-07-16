@@ -201,6 +201,10 @@ Visible when field 15 checked.
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/fixed-deposit/new-fd-account-screen/) — Marathi layout for bank review
+
 ## Related Documents
 
 - [overview.md](overview.md)

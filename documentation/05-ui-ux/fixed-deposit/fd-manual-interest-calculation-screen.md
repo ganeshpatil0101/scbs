@@ -64,6 +64,10 @@ UI specification for manually calculating and posting fixed deposit interest.
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/fixed-deposit/fd-manual-interest-calculation-screen/) — Marathi layout for bank review
+
 ## Related Documents
 
 - [overview.md](overview.md)

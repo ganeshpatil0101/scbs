@@ -48,6 +48,15 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/mockups/loan/loan-transaction-screen/](05-ui-ux/mockups/loan/loan-transaction-screen/) — कर्ज व्यवहार (Draft)
 - [05-ui-ux/mockups/loan/loan-interest-management-screen/](05-ui-ux/mockups/loan/loan-interest-management-screen/) — व्याज व्यवस्थापन (Draft)
 
+**Fixed Deposit mockups (2026-07-11 UX consolidation — 6 screens):**
+
+- [05-ui-ux/mockups/fixed-deposit/new-fd-account-screen/](05-ui-ux/mockups/fixed-deposit/new-fd-account-screen/) — नवीन खाते (Draft)
+- [05-ui-ux/mockups/fixed-deposit/fd-transaction-screen/](05-ui-ux/mockups/fixed-deposit/fd-transaction-screen/) — व्यवहार (Draft)
+- [05-ui-ux/mockups/fixed-deposit/fd-account-management-screen/](05-ui-ux/mockups/fixed-deposit/fd-account-management-screen/) — खाते व्यवस्थापन (Draft)
+- [05-ui-ux/mockups/fixed-deposit/fd-manual-interest-calculation-screen/](05-ui-ux/mockups/fixed-deposit/fd-manual-interest-calculation-screen/) — मॅन्युअल व्याज आकारणी (Draft)
+- [05-ui-ux/mockups/fixed-deposit/deposit-loan-installment-payment-screen/](05-ui-ux/mockups/fixed-deposit/deposit-loan-installment-payment-screen/) — ठेव कर्ज हप्ता पेमेंट (Draft)
+- [05-ui-ux/mockups/fixed-deposit/fd-interest-multiplier-screen/](05-ui-ux/mockups/fixed-deposit/fd-interest-multiplier-screen/) — व्याज गुणक (Draft)
+
 **Settings mockups (2026-07-05 UX consolidation — 6 screens):**
 
 - [05-ui-ux/mockups/settings/master/staff-system-access-screen/](05-ui-ux/mockups/settings/master/staff-system-access-screen/) — कर्मचारी व सिस्टम प्रवेश (Draft)

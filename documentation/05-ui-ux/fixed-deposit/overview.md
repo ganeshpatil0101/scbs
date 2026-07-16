@@ -28,6 +28,17 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 
 **UX optimized (2026-07-11):** 7 screens → 6. Audit: [ux-optimization.md](ux-optimization.md)
 
+## Mockups
+
+| Screen | Mockup |
+| :--- | :--- |
+| नवीन खाते | [new-fd-account-screen](../mockups/fixed-deposit/new-fd-account-screen/) — Draft |
+| व्यवहार | [fd-transaction-screen](../mockups/fixed-deposit/fd-transaction-screen/) — Draft |
+| खाते व्यवस्थापन | [fd-account-management-screen](../mockups/fixed-deposit/fd-account-management-screen/) — Draft |
+| मॅन्युअल व्याज आकारणी | [fd-manual-interest-calculation-screen](../mockups/fixed-deposit/fd-manual-interest-calculation-screen/) — Draft |
+| ठेव कर्ज हप्ता पेमेंट | [deposit-loan-installment-payment-screen](../mockups/fixed-deposit/deposit-loan-installment-payment-screen/) — Draft |
+| व्याज गुणक | [fd-interest-multiplier-screen](../mockups/fixed-deposit/fd-interest-multiplier-screen/) — Draft |
+
 ## Screenshot Location
 
 ```text
