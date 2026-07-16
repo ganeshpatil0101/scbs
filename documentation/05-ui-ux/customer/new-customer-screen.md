@@ -56,9 +56,11 @@ Extracted frames: `screenshots/grahak_khatedar/new-customer-1-frames/`, `new-cus
 | 9 | वय (वर्षे) | Age (Years) | Label | No | Auto-calculated from DOB |
 | 10 | वय (महिने) | Age (Months) | Label | No | Read-only |
 | 11 | व्यवसाय | Occupation | Dropdown | No | Default: `एन/ए` (N/A). Has `+` add button. Values: `एन/ए`, `पेन्शनर(निवृत्त)`, `गृहिणी`, `नोकर`, `शेती`, `व्यवसाय`, `शिक्षण`, `शिक्षक`, `डॉक्टर`, `इतर` |
-| 12 | ग्राहक झाल्याची दिनांक | Customer Since Date | Label | No | Auto-fill; system date |
-| 13 | स्थिती | Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद`, `स्थगित`, `मृत`, `निलंबित`, `निवृत्त`, `वैद्यकीय`, `काढला` |
-| 14 | देहावसान तारीख | Date of Death | Date | No | **Visible only when Status = `मृत`**. Hidden otherwise |
+| 12 | मोबाईल क्रमांक | Mobile Number | Textbox | Yes | Manual entry. Moved from Address tab — one mobile number per customer |
+| 13 | ई - मेल | E-mail | Textbox | No | Manual entry. Moved from Address tab — one e-mail per customer |
+| 14 | ग्राहक झाल्याची दिनांक | Customer Since Date | Label | No | Auto-fill; system date |
+| 15 | स्थिती | Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद`, `स्थगित`, `मृत`, `निलंबित`, `निवृत्त`, `वैद्यकीय`, `काढला` |
+| 16 | देहावसान तारीख | Date of Death | Date | No | **Visible only when Status = `मृत`**. Hidden otherwise |
 
 ### Section: प्रगत सेटिंग्ज (Advanced Settings)
 
@@ -66,28 +68,28 @@ Extracted frames: `screenshots/grahak_khatedar/new-customer-1-frames/`, `new-cus
 
 | # | Marathi Label | English Label | Type | Required | Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 15 | शिक्षण | Education | Textbox | No | — |
-| 16 | वडिलांचे नाव | Father's Name | Textbox | No | — |
-| 17 | आईचे नाव | Mother's Name | Textbox | No | — |
-| 18 | जोडीदाराचे नाव | Spouse's Name | Textbox | No | — |
-| 19 | एसएमएस अलर्ट सक्रिय करा | Activate SMS Alert | Checkbox | No | — |
-| 20 | व्हॉट्सॲप अलर्ट सक्रिय करा | Activate WhatsApp Alert | Checkbox | No | — |
-| 21 | ईमेल अलर्ट सक्रिय करा | Activate Email Alert | Checkbox | No | — |
-| 22 | वारसदार टाका | Add Nominee | Checkbox | No | When checked, show **वारसदार माहिती** form below (fields 23–29) |
+| 17 | शिक्षण | Education | Textbox | No | — |
+| 18 | वडिलांचे नाव | Father's Name | Textbox | No | — |
+| 19 | आईचे नाव | Mother's Name | Textbox | No | — |
+| 20 | जोडीदाराचे नाव | Spouse's Name | Textbox | No | — |
+| 21 | एसएमएस अलर्ट सक्रिय करा | Activate SMS Alert | Checkbox | No | — |
+| 22 | व्हॉट्सॲप अलर्ट सक्रिय करा | Activate WhatsApp Alert | Checkbox | No | — |
+| 23 | ईमेल अलर्ट सक्रिय करा | Activate Email Alert | Checkbox | No | — |
+| 24 | वारसदार टाका | Add Nominee | Checkbox | No | When checked, show **वारसदार माहिती** form below (fields 25–31) |
 
 ### Section: वारसदार माहिती (Nominee Information)
 
-> **Visible only when** `वारसदार टाका` (#22) is checked. Hidden otherwise. Compact subset for New Customer; full nominee grids remain on product account-opening screens (`app-nominee-form` pattern).
+> **Visible only when** `वारसदार टाका` (#24) is checked. Hidden otherwise. Compact subset for New Customer; full nominee grids remain on product account-opening screens (`app-nominee-form` pattern).
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 23 | श्री. / सौ. | Salutation | Dropdown | Yes | Same values as customer salutation (#6). Same row as Name (#24) |
-| 24 | नाव (आडनाव - पहिले नाव - मधले नाव) | Name (Surname - First - Middle) | Textbox | Yes | Same row as Salutation (#23) |
-| 25 | जन्म दिनांक | Date of Birth | Date | No | — |
-| 26 | नाते | Relation | Dropdown | Yes | `मुलगा`, `मुली`, `पत्नी`, `पती`, `पुतण्या`, `लहान भाऊ`, `बायको`, `मैत्रीण`, `केअरटेकर`, `स्वतः`, `वरील प्रमाणे` — same list as [new-membership-screen.md](../membership/new-membership-screen.md) Tab 3 |
-| 27 | मोबाईल क्रमांक | Mobile Number | Textbox | No | — |
-| 28 | वारसदार टक्केवारी | Nominee Percentage | Textbox | No | — |
-| 29 | पत्ता | Address | Textbox | No | Single-line address for phase 1 |
+| 25 | श्री. / सौ. | Salutation | Dropdown | Yes | Same values as customer salutation (#6). Same row as Name (#26) |
+| 26 | नाव (आडनाव - पहिले नाव - मधले नाव) | Name (Surname - First - Middle) | Textbox | Yes | Same row as Salutation (#25) |
+| 27 | जन्म दिनांक | Date of Birth | Date | No | — |
+| 28 | नाते | Relation | Dropdown | Yes | `मुलगा`, `मुली`, `पत्नी`, `पती`, `पुतण्या`, `लहान भाऊ`, `बायको`, `मैत्रीण`, `केअरटेकर`, `स्वतः`, `वरील प्रमाणे` — same list as [new-membership-screen.md](../membership/new-membership-screen.md) Tab 3 |
+| 29 | मोबाईल क्रमांक | Mobile Number | Textbox | No | — |
+| 30 | वारसदार टक्केवारी | Nominee Percentage | Textbox | No | — |
+| 31 | पत्ता | Address | Textbox | No | Single-line address for phase 1 |
 
 ---
 
@@ -129,16 +131,16 @@ Fields remain editable after auto-fill so the user can correct parsed values. `+
 | 9 | तालुका | Taluka | Textbox | Yes | Auto-populated from Google Maps; editable |
 | 10 | शहर | City | Textbox | Yes | Auto-populated from Google Maps; editable |
 | 11 | पिन कोड | Pin Code | Textbox | No | Auto-populated from Google Maps; editable |
-| 12 | मोबाईल क्रमांक | Mobile Number | Textbox | Yes | Manual entry |
-| 13 | दूरध्वनी क्रमांक | Telephone Number | Textbox | No | Manual entry |
-| 14 | ई - मेल | E-mail | Textbox | No | Manual entry |
-| 15 | संपर्क व कायमचा पत्ते सारखेच आहेत | Contact Same as Permanent | Checkbox | No | — |
+| 12 | दूरध्वनी क्रमांक | Telephone Number | Textbox | No | Manual entry |
+| 13 | संपर्क व कायमचा पत्ते सारखेच आहेत | Contact Same as Permanent | Checkbox | No | — |
+
+> मोबाईल क्रमांक (Mobile Number) and ई - मेल (E-mail) moved to Tab 1 → **ग्राहक माहिती** section (fields #12–13) — one mobile number and e-mail per customer, not per address.
 
 **Actions:** `टाका +` (Add) — add row to address grid. `क्लिअर` (Clear), `तपशील` (Details), `काढा` (Remove).
 
 ### Address Grid Columns
 
-निवडा, अनु. क्र, पत्त्याचा प्रकार, पत्ता, जिल्हा, ब्लॉक, शहर, ठिकाण, पिन कोड, दूरध्वनी क्रमांक, मोबाईल क्रमांक, ई - मेल.
+निवडा, अनु. क्र, पत्त्याचा प्रकार, पत्ता, जिल्हा, ब्लॉक, शहर, ठिकाण, पिन कोड, दूरध्वनी क्रमांक.
 
 ---
 

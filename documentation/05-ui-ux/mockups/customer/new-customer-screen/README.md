@@ -19,10 +19,11 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 - [ ] श्री. / सौ. + नाव on one row
 - [ ] Single 2-column field grid (no empty left column)
 - [ ] ग्राहक क्र. read-only Label; शाखा निवडा Autocomplete (editable)
+- [ ] मोबाईल क्रमांक (required) + ई - मेल in ग्राहक माहिती section (Tab 1) — not on Address tab
 - [ ] देहावसान तारीख hidden until स्थिती = मृत
 - [ ] प्रगत सेटिंग्ज collapsed by default
 - [ ] वारसदार टाका checked → वारसदार माहिती form visible (salutation, name, DOB, relation, mobile, %, address)
-- [ ] Tab 2: Google Maps address search + address form + grid
+- [ ] Tab 2: Google Maps address search + address form + grid (no mobile/e-mail fields — moved to Tab 1)
 - [ ] Tab 3: KYC as document cards (not grid) — upload on each card
 - [ ] Tab 3: दस्तावेज क्रमांक only on पत्ता पुरावा / ओळख पुरावा
 - [ ] Tab 3: मूळ आधार फोटो marked पर्यायी; progress `आवश्यक: n/4`
