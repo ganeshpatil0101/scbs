@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>नोटांची अदलाबदल — लेखा — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <div>
+        <h1 class="text-2xl font-bold text-gray-900">नोटांची अदलाबदल</h1>
+        <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; लेखा &gt; नोटांची अदलाबदल</p>
+      </div>
+    </header>
+
+    <nav class="mockup-module-nav" aria-label="मॉड्यूलमधील स्क्रीन्स">
+      <span class="mockup-module-nav-label">या मॉड्यूलमधील स्क्रीन्स:</span>
+      <a href="../jama-screen/index.html" class="mockup-module-nav-link">जमा</a>
+      <a href="../nave-screen/index.html" class="mockup-module-nav-link">नावे</a>
+      <a href="../transfer-screen/index.html" class="mockup-module-nav-link">ट्रान्सफर</a>
+      <a href="../rokhapal-screen/index.html" class="mockup-module-nav-link">रोखपाल</a>
+      <a href="../multi-gl-transaction-screen/index.html" class="mockup-module-nav-link">एकाधिक जीएल व्यवहार</a>
+      <span class="mockup-module-nav-link mockup-module-nav-current" aria-current="page">नोटांची अदलाबदल</span>
+      <a href="../contra-screen/index.html" class="mockup-module-nav-link">कॉन्ट्रा</a>
+      <a href="../transaction-passing-screen/index.html" class="mockup-module-nav-link">व्यवहार पासिंग</a>
+      <a href="../transaction-verification-screen/index.html" class="mockup-module-nav-link">व्यवहार तपासणी</a>
+    </nav>
+
+    <section class="mockup-section mockup-section-full" aria-labelledby="section-denomination">
+      <h2 class="mockup-section-title" id="section-denomination">नोटांचा तपशिल</h2>
+      <div class="overflow-x-auto">
+        <table class="mockup-table" aria-label="नोटांची अदलाबदल ग्रिड">
+          <thead>
+            <tr>
+              <th>मूल्य</th>
+              <th colspan="3">मध्ये (In)</th>
+              <th colspan="3">बाहेर (Out)</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th data-spec-field="1">उपलब्ध</th>
+              <th data-spec-field="2">नोटांची संख्या</th>
+              <th data-spec-field="3">रक्कम (रु.)</th>
+              <th data-spec-field="4">नोटांची संख्या</th>
+              <th data-spec-field="5">रक्कम (रु.)</th>
+              <th data-spec-field="6">शिल्लक</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2000</td><td>5</td><td><input type="text" value="2" aria-label="मध्ये 2000"></td><td>4,000.00</td><td><input type="text" value="1" aria-label="बाहेर 2000"></td><td>2,000.00</td><td>3</td></tr>
+            <tr><td>1000</td><td>10</td><td><input type="text" aria-label="मध्ये 1000"></td><td>0.00</td><td><input type="text" aria-label="बाहेर 1000"></td><td>0.00</td><td>10</td></tr>
+            <tr><td>500</td><td>20</td><td><input type="text" aria-label="मध्ये 500"></td><td>0.00</td><td><input type="text" aria-label="बाहेर 500"></td><td>0.00</td><td>20</td></tr>
+            <tr><td>200</td><td>15</td><td><input type="text" aria-label="मध्ये 200"></td><td>0.00</td><td><input type="text" aria-label="बाहेर 200"></td><td>0.00</td><td>15</td></tr>
+            <tr><td>100</td><td>50</td><td><input type="text" value="10" aria-label="मध्ये 100"></td><td>1,000.00</td><td><input type="text" value="10" aria-label="बाहेर 100"></td><td>1,000.00</td><td>50</td></tr>
+            <tr><td>50</td><td>30</td><td><input type="text" aria-label="मध्ये 50"></td><td>0.00</td><td><input type="text" aria-label="बाहेर 50"></td><td>0.00</td><td>30</td></tr>
+            <tr><td>20</td><td>40</td><td><input type="text" aria-label="मध्ये 20"></td><td>0.00</td><td><input type="text" aria-label="बाहेर 20"></td><td>0.00</td><td>40</td></tr>
+            <tr><td>10</td><td>60</td><td><input type="text" aria-label="मध्ये 10"></td><td>0.00</td><td><input type="text" aria-label="बाहेर 10"></td><td>0.00</td><td>60</td></tr>
+            <tr><td>5</td><td>20</td><td><input type="text" aria-label="मध्ये 5"></td><td>0.00</td><td><input type="text" aria-label="बाहेर 5"></td><td>0.00</td><td>20</td></tr>
+            <tr><td>2</td><td>10</td><td><input type="text" aria-label="मध्ये 2"></td><td>0.00</td><td><input type="text" aria-label="बाहेर 2"></td><td>0.00</td><td>10</td></tr>
+            <tr><td>1</td><td>25</td><td><input type="text" aria-label="मध्ये 1"></td><td>0.00</td><td><input type="text" aria-label="बाहेर 1"></td><td>0.00</td><td>25</td></tr>
+            <tr><td>नाणी</td><td>—</td><td><input type="text" aria-label="मध्ये नाणी"></td><td>0.00</td><td><input type="text" aria-label="बाहेर नाणी"></td><td>0.00</td><td>—</td></tr>
+            <tr class="font-semibold"><td>एकूण</td><td>—</td><td>12</td><td>5,000.00</td><td>11</td><td>3,000.00</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mockup-section mockup-section-compact" aria-labelledby="section-summary">
+      <h2 class="mockup-section-title" id="section-summary">सारांश</h2>
+      <div class="mockup-field-grid mockup-field-grid--2">
+        <div data-spec-field="summary-1"><label class="mockup-label mockup-label-muted">फरक</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-gray-700 w-full">0.00</span></div>
+        <div data-spec-field="summary-2"><label class="mockup-label" for="narration">Cashier's Narration</label><input type="text" id="narration"></div>
+      </div>
+      <button type="button" class="mockup-btn mockup-btn-primary mt-4">कर</button>
+    </section>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary">रीसेट</button>
+      <button type="button" class="mockup-btn mockup-btn-primary">जतन करा</button>
+    </div>
+  </footer>
+</body>
+</html>

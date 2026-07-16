@@ -67,6 +67,18 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/mockups/daily/agent-to-agent-transfer-screen/](05-ui-ux/mockups/daily/agent-to-agent-transfer-screen/) — एजंट ते एजंट ट्रान्सफर (Draft)
 - [05-ui-ux/mockups/daily/interest-multiplier-screen/](05-ui-ux/mockups/daily/interest-multiplier-screen/) — व्याज गुणक (Draft)
 
+**Accounting mockups (2026-07-16 — 9 screens):**
+
+- [05-ui-ux/mockups/accounting/jama-screen/](05-ui-ux/mockups/accounting/jama-screen/) — जमा (Draft)
+- [05-ui-ux/mockups/accounting/nave-screen/](05-ui-ux/mockups/accounting/nave-screen/) — नावे (Draft)
+- [05-ui-ux/mockups/accounting/transfer-screen/](05-ui-ux/mockups/accounting/transfer-screen/) — ट्रान्सफर (Draft)
+- [05-ui-ux/mockups/accounting/rokhapal-screen/](05-ui-ux/mockups/accounting/rokhapal-screen/) — रोखपाल (Draft)
+- [05-ui-ux/mockups/accounting/multi-gl-transaction-screen/](05-ui-ux/mockups/accounting/multi-gl-transaction-screen/) — एकाधिक जीएल व्यवहार (Draft)
+- [05-ui-ux/mockups/accounting/note-exchange-screen/](05-ui-ux/mockups/accounting/note-exchange-screen/) — नोटांची अदलाबदल (Draft)
+- [05-ui-ux/mockups/accounting/contra-screen/](05-ui-ux/mockups/accounting/contra-screen/) — कॉन्ट्रा (Draft)
+- [05-ui-ux/mockups/accounting/transaction-passing-screen/](05-ui-ux/mockups/accounting/transaction-passing-screen/) — व्यवहार पासिंग (Draft)
+- [05-ui-ux/mockups/accounting/transaction-verification-screen/](05-ui-ux/mockups/accounting/transaction-verification-screen/) — व्यवहार तपासणी (Draft)
+
 **Settings mockups (2026-07-05 UX consolidation — 6 screens):**
 
 - [05-ui-ux/mockups/settings/master/staff-system-access-screen/](05-ui-ux/mockups/settings/master/staff-system-access-screen/) — कर्मचारी व सिस्टम प्रवेश (Draft)

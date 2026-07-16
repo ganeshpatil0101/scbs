@@ -9,3 +9,4 @@
 | 1.2.2 | 2026-07-04 | Rokhapal: denomination grid, incomplete-scroll dropdown, transaction history grid + cash summary | User screenshots + video frames | AI Agent |
 | 1.2.3 | 2026-07-04 | Transfer: credit-side (जमा खाते) section; Multi-GL: व्यवहार मोड dropdown values | User review of pending TODOs | AI Agent |
 | 1.3.0 | 2026-07-05 | Contra, Transaction Passing, Transaction Verification screen specs | New screenshots `05-07` in `screenshots/lekha/` | AI Agent |
+| 1.4.0 | 2026-07-16 | HTML mockups for all 9 current accounting screens (jama, nave, transfer, rokhapal, multi-gl-transaction, note-exchange, contra, transaction-passing, transaction-verification) | Bank review via `@generate-ui-mockup`; cross-linked module nav | AI Agent |

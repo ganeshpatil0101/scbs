@@ -53,6 +53,14 @@ Rows for denominations: `2000`, `1000`, `500`, `200`, `100`, `50`, `20`, `10`, `
 
 ---
 
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/accounting/note-exchange-screen/index.html](../mockups/accounting/note-exchange-screen/index.html) |
+| Review guide | [mockups/accounting/note-exchange-screen/README.md](../mockups/accounting/note-exchange-screen/README.md) |
+| Status | Draft |
+
 ## Related Documents
 
 - [overview.md](overview.md)

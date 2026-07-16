@@ -81,6 +81,14 @@ UI specification for verifying and reviewing posted transactions — today's act
 
 ---
 
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/accounting/transaction-verification-screen/index.html](../mockups/accounting/transaction-verification-screen/index.html) |
+| Review guide | [mockups/accounting/transaction-verification-screen/README.md](../mockups/accounting/transaction-verification-screen/README.md) |
+| Status | Draft |
+
 ## Related Documents
 
 - [overview.md](overview.md)

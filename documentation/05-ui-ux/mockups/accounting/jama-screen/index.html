@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>जमा — लेखा — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <div>
+        <h1 class="text-2xl font-bold text-gray-900">जमा</h1>
+        <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; लेखा &gt; जमा</p>
+      </div>
+    </header>
+
+    <nav class="mockup-module-nav" aria-label="मॉड्यूलमधील स्क्रीन्स">
+      <span class="mockup-module-nav-label">या मॉड्यूलमधील स्क्रीन्स:</span>
+      <span class="mockup-module-nav-link mockup-module-nav-current" aria-current="page">जमा</span>
+      <a href="../nave-screen/index.html" class="mockup-module-nav-link">नावे</a>
+      <a href="../transfer-screen/index.html" class="mockup-module-nav-link">ट्रान्सफर</a>
+      <a href="../rokhapal-screen/index.html" class="mockup-module-nav-link">रोखपाल</a>
+      <a href="../multi-gl-transaction-screen/index.html" class="mockup-module-nav-link">एकाधिक जीएल व्यवहार</a>
+      <a href="../note-exchange-screen/index.html" class="mockup-module-nav-link">नोटांची अदलाबदल</a>
+      <a href="../contra-screen/index.html" class="mockup-module-nav-link">कॉन्ट्रा</a>
+      <a href="../transaction-passing-screen/index.html" class="mockup-module-nav-link">व्यवहार पासिंग</a>
+      <a href="../transaction-verification-screen/index.html" class="mockup-module-nav-link">व्यवहार तपासणी</a>
+    </nav>
+
+    <p class="mockup-info-note">कृपया या पृष्ठावर व्याज (ठेव\कर्ज) व्यवहार टाळा</p>
+
+    <nav class="flex border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="स्क्रीन टॅब">
+      <button type="button" class="mockup-tab mockup-tab-active" role="tab" aria-selected="true" data-tab="1" data-panel="tab-panel-1">पावती</button>
+      <button type="button" class="mockup-tab" role="tab" aria-selected="false" data-tab="2" data-panel="tab-panel-2">साहित्य तपशील</button>
+    </nav>
+
+    <div id="tab-panel-1" role="tabpanel">
+      <div class="mockup-section-columns">
+        <section class="mockup-section" aria-labelledby="section-general">
+          <h2 class="mockup-section-title" id="section-general">सामान्य</h2>
+          <div class="mockup-field-grid">
+            <div data-spec-field="1"><label class="mockup-label">चलन क्रमांक <span class="mockup-required">*</span></label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">42</span></div>
+            <div data-spec-field="2">
+              <fieldset class="border-0 p-0 m-0">
+                <legend class="mockup-label">रोख / बँक</legend>
+                <div class="flex flex-wrap gap-4 mt-1">
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="cash-bank" id="cash-bank-cash" value="cash" checked><span class="text-sm">रोख</span></label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="cash-bank" id="cash-bank-bank" value="bank"><span class="text-sm">बँक</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <div data-spec-field="3">
+              <label class="mockup-label" for="bank-cash-select">बँक / रोख रक्कम निवडा <span class="mockup-required">*</span></label>
+              <select id="bank-cash-select"><option value="cash" selected>रोख शिल्लक</option><option value="sbi">SBI</option><option value="hdfc">HDFC</option><option value="icici">ICICI</option><option value="bom">Bank of Maharashtra</option><option value="other">Other</option></select>
+            </div>
+            <div data-spec-field="4"><label class="mockup-label mockup-label-muted">शिल्लक (नावे)</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-gray-700 w-full">25,000.00</span></div>
+            <div data-spec-field="5"><label class="mockup-label" for="details">तपशील</label><textarea id="details" rows="2" class="w-full border border-gray-300 rounded px-3 py-2 text-sm"></textarea></div>
+            <div data-spec-field="6"><button type="button" class="text-blue-700 text-sm underline bg-transparent border-0 cursor-pointer">शुल्क गणना</button></div>
+          </div>
+        </section>
+        <section class="mockup-section" aria-labelledby="section-credit-account">
+          <h2 class="mockup-section-title" id="section-credit-account">जमा होणारे खाते</h2>
+          <div class="mockup-field-grid">
+            <div data-spec-field="7">
+              <label class="mockup-label" for="branch">शाखा निवडा <span class="mockup-required">*</span></label>
+              <input type="text" id="branch" class="mockup-autocomplete" list="branch-options" value="1 — Branch 1">
+              <datalist id="branch-options"><option value="1 — Branch 1"><option value="2 — Branch 2"><option value="3 — Branch 3"></datalist>
+            </div>
+            <div data-spec-field="8">
+              <label class="mockup-label" for="gl">जी.एल. निवडा <span class="mockup-required">*</span></label>
+              <input type="text" id="gl" class="mockup-autocomplete" list="gl-options" value="38 — Saving">
+              <datalist id="gl-options"><option value="38 — Saving"><option value="91 — FD"><option value="42 — Loan"></datalist>
+            </div>
+            <div data-spec-field="9">
+              <label class="mockup-label" for="holder">खातेधारक निवडा <span class="mockup-required">*</span></label>
+              <input type="text" id="holder" class="mockup-autocomplete" list="holder-options" value="101 — Account Holder 1">
+              <datalist id="holder-options"><option value="101 — Account Holder 1"><option value="102 — Account Holder 2"><option value="103 — Account Holder 3"></datalist>
+            </div>
+            <div data-spec-field="10"><label class="mockup-label mockup-label-muted">शिल्लक</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-gray-700 w-full">12,500.00</span></div>
+            <div data-spec-field="11"><label class="mockup-label mockup-label-muted">न वटलेली शिल्लक</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-gray-700 w-full">0.00</span></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="mockup-section mockup-section-full" aria-labelledby="section-txn">
+        <h2 class="mockup-section-title" id="section-txn">व्यवहार</h2>
+        <div class="mockup-field-grid mockup-field-grid--2 mb-4">
+          <div data-spec-field="12">
+            <fieldset class="border-0 p-0 m-0">
+              <legend class="mockup-label">जमा / नावे <span class="mockup-required">*</span></legend>
+              <div class="flex flex-wrap gap-4 mt-1">
+                <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="credit-debit" value="credit" checked><span class="text-sm">जमा</span></label>
+                <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="credit-debit" value="debit"><span class="text-sm">नावे</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div data-spec-field="13"><label class="mockup-label" for="txn-amount">व्यवहार रक्कम (रु.) <span class="mockup-required">*</span></label><input type="text" id="txn-amount" value="1,000.00"></div>
+        </div>
+        <button type="button" class="mockup-btn mockup-btn-add mb-4">जमा ₹</button>
+        <div class="overflow-x-auto">
+          <table class="mockup-table" aria-label="प्रविष्टी ग्रिड">
+            <thead>
+              <tr>
+                <th>निवडा</th><th>अनु. क्र</th><th>जी.एल. हेड</th><th>खाते क्रमांक</th><th>खातेधारक</th><th>शिल्लक</th><th>व्यवहार रक्कम</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" aria-label="पंक्ती 1 निवडा"></td>
+                <td>1</td><td>38 — Saving</td><td>101</td><td>Account Holder 1</td><td>12,500.00</td><td>1,000.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-4 text-sm text-gray-700">
+          <span>अक्षरी रक्कम: एक हजार रुपये</span>
+          <span>एकूण 1,000.00 जमा</span>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <button type="button" class="mockup-btn mockup-btn-secondary">हटवा</button>
+          <button type="button" class="mockup-btn mockup-btn-secondary">वर</button>
+        </div>
+      </section>
+    </div>
+
+    <div id="tab-panel-2" class="mockup-hidden" role="tabpanel" hidden>
+      <section class="mockup-section" aria-labelledby="section-instrument">
+        <h2 class="mockup-section-title" id="section-instrument">साहित्य तपशील</h2>
+        <p class="text-sm text-gray-600 mb-4">बँक निवडल्यावरच सक्षम — रोख निवडल्यास सर्व फील्ड अक्षम.</p>
+        <div class="mockup-field-grid mockup-field-grid--2">
+          <div data-spec-field="14">
+            <label class="mockup-label" for="cheque-type">धनादेश प्रकार निवडा</label>
+            <select id="cheque-type" class="instrument-field" disabled><option value="slip" selected>स्लिप</option></select>
+          </div>
+          <div data-spec-field="15"><label class="mockup-label mockup-label-muted">चेक रक्कम (रु.)</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-gray-700 w-full instrument-field-display">1,000.00</span></div>
+          <div data-spec-field="16"><label class="mockup-label mockup-label-muted">रक्कम अक्षरी</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-gray-700 w-full instrument-field-display">एक हजार रुपये</span></div>
+          <div data-spec-field="17"><label class="mockup-label" for="cheque-date">चेक दिनांक <span class="mockup-required">*</span></label><input type="date" id="cheque-date" class="instrument-field" disabled></div>
+          <div data-spec-field="18"><label class="mockup-label" for="cheque-no">चेक क्र. <span class="mockup-required">*</span></label><input type="text" id="cheque-no" class="instrument-field" disabled></div>
+          <div data-spec-field="19"><label class="mockup-label" for="name">नाव <span class="mockup-required">*</span></label><input type="text" id="name" class="instrument-field" disabled></div>
+          <div data-spec-field="20">
+            <label class="mockup-label" for="bank-select">बँक निवडा <span class="mockup-required">*</span></label>
+            <select id="bank-select" class="instrument-field" disabled><option value="sbi" selected>SBI</option><option value="hdfc">HDFC</option><option value="icici">ICICI</option><option value="bom">Bank of Maharashtra</option><option value="other">Other</option></select>
+          </div>
+          <div data-spec-field="21"><label class="mockup-label" for="bank-branch">बँक शाखा</label><input type="text" id="bank-branch" class="instrument-field" disabled></div>
+          <div data-spec-field="22"><label class="mockup-label" for="drawn-bank">ड्रॉन ऑन बँक</label><input type="text" id="drawn-bank" class="instrument-field" disabled></div>
+          <div data-spec-field="23"><label class="mockup-label" for="drawn-branch">ड्रॉन ऑन ब्रांच</label><input type="text" id="drawn-branch" class="instrument-field" disabled></div>
+          <div data-spec-field="24"><label class="mockup-label mockup-label-muted">अंतर्गत चेक नंबर</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-gray-700 w-full instrument-field-display">—</span></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary" id="btn-reset">रीसेट</button>
+      <button type="button" class="mockup-btn mockup-btn-secondary mockup-hidden" id="btn-back">मागे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary" id="btn-next">पुढे</button>
+      <button type="button" class="mockup-btn mockup-btn-primary mockup-hidden" id="btn-save">जतन करा</button>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var activeTab = 1;
+      var totalTabs = 2;
+      var tabs = document.querySelectorAll('[role="tab"]');
+      var panels = {};
+      tabs.forEach(function (t) { panels[t.getAttribute('data-tab')] = document.getElementById(t.getAttribute('data-panel')); });
+
+      function updateInstrumentFields() {
+        var isBank = document.getElementById('cash-bank-bank').checked;
+        document.querySelectorAll('.instrument-field').forEach(function (el) { el.disabled = !isBank; });
+      }
+
+      function updateFooter() {
+        document.getElementById('btn-back').classList.toggle('mockup-hidden', activeTab === 1);
+        document.getElementById('btn-next').classList.toggle('mockup-hidden', activeTab >= totalTabs);
+        document.getElementById('btn-save').classList.toggle('mockup-hidden', activeTab !== totalTabs);
+      }
+
+      function switchTab(n) {
+        activeTab = n;
+        tabs.forEach(function (tab) {
+          var isActive = Number(tab.getAttribute('data-tab')) === n;
+          tab.classList.toggle('mockup-tab-active', isActive);
+          tab.setAttribute('aria-selected', isActive);
+        });
+        Object.keys(panels).forEach(function (k) {
+          var show = Number(k) === n;
+          panels[k].classList.toggle('mockup-hidden', !show);
+          panels[k].hidden = !show;
+        });
+        updateFooter();
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () { switchTab(Number(this.getAttribute('data-tab'))); });
+      });
+      document.getElementById('btn-next').addEventListener('click', function () { if (activeTab < totalTabs) switchTab(activeTab + 1); });
+      document.getElementById('btn-back').addEventListener('click', function () { if (activeTab > 1) switchTab(activeTab - 1); });
+      document.querySelectorAll('input[name="cash-bank"]').forEach(function (r) {
+        r.addEventListener('change', updateInstrumentFields);
+      });
+      updateInstrumentFields();
+      updateFooter();
+    })();
+  </script>
+</body>
+</html>

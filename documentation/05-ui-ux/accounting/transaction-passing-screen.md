@@ -91,6 +91,14 @@ UI specification for reviewing and passing (authorizing) pending transactions. S
 
 ---
 
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/accounting/transaction-passing-screen/index.html](../mockups/accounting/transaction-passing-screen/index.html) |
+| Review guide | [mockups/accounting/transaction-passing-screen/README.md](../mockups/accounting/transaction-passing-screen/README.md) |
+| Status | Draft |
+
 ## Related Documents
 
 - [overview.md](overview.md)

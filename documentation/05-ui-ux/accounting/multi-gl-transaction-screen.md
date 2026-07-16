@@ -64,6 +64,14 @@ Columns: निवडा, अनु. क्र, जी.एल. हेड, खा
 
 ---
 
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/accounting/multi-gl-transaction-screen/index.html](../mockups/accounting/multi-gl-transaction-screen/index.html) |
+| Review guide | [mockups/accounting/multi-gl-transaction-screen/README.md](../mockups/accounting/multi-gl-transaction-screen/README.md) |
+| Status | Draft |
+
 ## Related Documents
 
 - [overview.md](overview.md)

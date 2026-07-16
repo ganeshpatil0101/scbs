@@ -104,6 +104,14 @@ Enabled only when Tab 1 field 2 = `बँक`. All fields disabled when Tab 1 fi
 
 ---
 
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/accounting/jama-screen/index.html](../mockups/accounting/jama-screen/index.html) |
+| Review guide | [mockups/accounting/jama-screen/README.md](../mockups/accounting/jama-screen/README.md) |
+| Status | Draft |
+
 ## Related Documents
 
 - [overview.md](overview.md)

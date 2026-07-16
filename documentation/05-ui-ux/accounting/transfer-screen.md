@@ -64,6 +64,14 @@ Columns: निवडा, अनु. क्र, जी.एल., खाते क
 
 ---
 
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/accounting/transfer-screen/index.html](../mockups/accounting/transfer-screen/index.html) |
+| Review guide | [mockups/accounting/transfer-screen/README.md](../mockups/accounting/transfer-screen/README.md) |
+| Status | Draft |
+
 ## Related Documents
 
 - [overview.md](overview.md)

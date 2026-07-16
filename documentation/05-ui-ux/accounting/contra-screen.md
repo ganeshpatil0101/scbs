@@ -83,6 +83,14 @@ UI specification for contra (cash/bank offset) transactions — multi-line debit
 
 ---
 
+## Mockup
+
+| Property | Value |
+| :--- | :--- |
+| HTML mockup | [mockups/accounting/contra-screen/index.html](../mockups/accounting/contra-screen/index.html) |
+| Review guide | [mockups/accounting/contra-screen/README.md](../mockups/accounting/contra-screen/README.md) |
+| Status | Draft |
+
 ## Related Documents
 
 - [overview.md](overview.md)
