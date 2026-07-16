@@ -109,6 +109,12 @@ Single screen for recording new daily agent collections and viewing historical c
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/daily/agent-collection-management-screen/) — Marathi layout for bank review
+
+---
+
 ## Cross-Links
 
 - [overview.md](overview.md)

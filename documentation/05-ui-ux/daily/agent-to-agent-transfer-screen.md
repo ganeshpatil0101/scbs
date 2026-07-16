@@ -45,6 +45,12 @@ UI specification for transferring daily accounts from one agent to another.
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/daily/agent-to-agent-transfer-screen/) — Marathi layout for bank review
+
+---
+
 ## Cross-Links
 
 - [overview.md](overview.md)

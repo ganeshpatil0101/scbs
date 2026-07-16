@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>एजंट ते एजंट ट्रान्सफर — डेली — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <div>
+        <h1 class="text-2xl font-bold text-gray-900">एजंट कडून एजंट कडे खाते ट्रान्सफर</h1>
+        <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; डेली &gt; एजंट &gt; एजंट कडून एजंट कडे खाते ट्रान्सफर</p>
+      </div>
+    </header>
+
+    <nav class="mockup-module-nav" aria-label="मॉड्यूलमधील स्क्रीन्स">
+      <span class="mockup-module-nav-label">या मॉड्यूलमधील स्क्रीन्स:</span>
+      <a href="../new-daily-account-screen/index.html" class="mockup-module-nav-link">नवीन खाते</a>
+      <a href="../new-agent-screen/index.html" class="mockup-module-nav-link">नवीन एजंट</a>
+      <a href="../daily-transaction-screen/index.html" class="mockup-module-nav-link">व्यवहार</a>
+      <a href="../account-register-screen/index.html" class="mockup-module-nav-link">खाते रजिस्टर</a>
+      <a href="../agent-collection-management-screen/index.html" class="mockup-module-nav-link">एजंट कलेक्शन व्यवस्थापन</a>
+      <span class="mockup-module-nav-link mockup-module-nav-current" aria-current="page">एजंट ते एजंट ट्रान्सफर</span>
+      <a href="../interest-multiplier-screen/index.html" class="mockup-module-nav-link">व्याज गुणक</a>
+    </nav>
+
+    <section class="mockup-section mockup-section-compact" aria-labelledby="section-transfer-form">
+      <h2 class="mockup-section-title" id="section-transfer-form">ट्रान्सफर फॉर्म</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-end">
+        <div data-spec-field="1">
+          <label class="mockup-label" for="agent-from">एजंट निवडा (कडून) <span class="mockup-required">*</span></label>
+          <input type="text" id="agent-from" class="mockup-autocomplete" list="agent-options" placeholder="ID किंवा नाव">
+          <datalist id="agent-options"><option value="1 — Agent 1"><option value="2 — Agent 2"><option value="3 — Agent 3"></datalist>
+        </div>
+        <div data-spec-field="2">
+          <label class="mockup-label" for="agent-to">एजंट निवडा (कडे) <span class="mockup-required">*</span></label>
+          <input type="text" id="agent-to" class="mockup-autocomplete" list="agent-options" placeholder="ID किंवा नाव">
+        </div>
+        <div data-spec-field="3">
+          <label class="inline-flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" id="select-all">
+            <span class="text-sm">सर्व निवडा</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="mockup-section mockup-section-full" aria-labelledby="section-results">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <h2 class="mockup-section-title mb-0 border-0 pb-0" id="section-results">खाते यादी</h2>
+        <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">निर्यात करा</button>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="mockup-table" aria-label="ट्रान्सफर ग्रिड">
+          <thead>
+            <tr><th>निवडा</th><th>अ. क्र.</th><th>खाते</th><th>खाते क्र.</th><th>नाव</th><th>शिल्लक</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" aria-label="निवडा"></td>
+              <td>1</td><td>डेली १</td><td>1001</td><td>पाटील राम</td><td>12,500.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" aria-label="निवडा"></td>
+              <td>2</td><td>डेली १</td><td>1002</td><td>देशमुख सीता</td><td>8,200.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary">रीसेट</button>
+      <button type="button" class="mockup-btn mockup-btn-primary">जतन करा</button>
+    </div>
+  </footer>
+</body>
+</html>

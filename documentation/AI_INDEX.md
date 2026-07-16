@@ -57,6 +57,16 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/mockups/fixed-deposit/deposit-loan-installment-payment-screen/](05-ui-ux/mockups/fixed-deposit/deposit-loan-installment-payment-screen/) — ठेव कर्ज हप्ता पेमेंट (Draft)
 - [05-ui-ux/mockups/fixed-deposit/fd-interest-multiplier-screen/](05-ui-ux/mockups/fixed-deposit/fd-interest-multiplier-screen/) — व्याज गुणक (Draft)
 
+**Daily mockups (2026-07-11 UX consolidation — 7 screens):**
+
+- [05-ui-ux/mockups/daily/new-daily-account-screen/](05-ui-ux/mockups/daily/new-daily-account-screen/) — नवीन खाते (Draft)
+- [05-ui-ux/mockups/daily/new-agent-screen/](05-ui-ux/mockups/daily/new-agent-screen/) — नवीन एजंट (Draft)
+- [05-ui-ux/mockups/daily/daily-transaction-screen/](05-ui-ux/mockups/daily/daily-transaction-screen/) — व्यवहार (Draft)
+- [05-ui-ux/mockups/daily/account-register-screen/](05-ui-ux/mockups/daily/account-register-screen/) — खाते रजिस्टर (Draft)
+- [05-ui-ux/mockups/daily/agent-collection-management-screen/](05-ui-ux/mockups/daily/agent-collection-management-screen/) — एजंट कलेक्शन व्यवस्थापन (Draft)
+- [05-ui-ux/mockups/daily/agent-to-agent-transfer-screen/](05-ui-ux/mockups/daily/agent-to-agent-transfer-screen/) — एजंट ते एजंट ट्रान्सफर (Draft)
+- [05-ui-ux/mockups/daily/interest-multiplier-screen/](05-ui-ux/mockups/daily/interest-multiplier-screen/) — व्याज गुणक (Draft)
+
 **Settings mockups (2026-07-05 UX consolidation — 6 screens):**
 
 - [05-ui-ux/mockups/settings/master/staff-system-access-screen/](05-ui-ux/mockups/settings/master/staff-system-access-screen/) — कर्मचारी व सिस्टम प्रवेश (Draft)

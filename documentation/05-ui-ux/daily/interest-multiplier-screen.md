@@ -63,6 +63,12 @@ UI specification for calculating daily (pigmy) deposit interest and maturity amo
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/daily/interest-multiplier-screen/) — Marathi layout for bank review
+
+---
+
 ## Cross-Links
 
 - [overview.md](overview.md)

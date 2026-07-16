@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>व्याज गुणक — डेली — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <div>
+        <h1 class="text-2xl font-bold text-gray-900">व्याज गुणक</h1>
+        <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; ठेवी &gt; व्याज गुणक</p>
+        <p class="text-xs text-gray-400 mt-1">(स्क्रीनशॉट: ठेवी breadcrumb; डेली/पिग्मी गणनेसाठी वापरले जाते)</p>
+      </div>
+    </header>
+
+    <nav class="mockup-module-nav" aria-label="मॉड्यूलमधील स्क्रीन्स">
+      <span class="mockup-module-nav-label">या मॉड्यूलमधील स्क्रीन्स:</span>
+      <a href="../new-daily-account-screen/index.html" class="mockup-module-nav-link">नवीन खाते</a>
+      <a href="../new-agent-screen/index.html" class="mockup-module-nav-link">नवीन एजंट</a>
+      <a href="../daily-transaction-screen/index.html" class="mockup-module-nav-link">व्यवहार</a>
+      <a href="../account-register-screen/index.html" class="mockup-module-nav-link">खाते रजिस्टर</a>
+      <a href="../agent-collection-management-screen/index.html" class="mockup-module-nav-link">एजंट कलेक्शन व्यवस्थापन</a>
+      <a href="../agent-to-agent-transfer-screen/index.html" class="mockup-module-nav-link">एजंट ते एजंट ट्रान्सफर</a>
+      <span class="mockup-module-nav-link mockup-module-nav-current" aria-current="page">व्याज गुणक</span>
+    </nav>
+
+    <div class="mockup-section-columns">
+      <section class="mockup-section" aria-labelledby="section-input">
+        <h2 class="mockup-section-title" id="section-input">इनपुट</h2>
+        <div class="mockup-field-grid">
+          <div data-spec-field="1">
+            <label class="mockup-label" for="scheme">योजना निवडा <span class="mockup-required">*</span></label>
+            <select id="scheme"><option value="">निवडा</option><option value="daily1" selected>डेली १</option><option value="daily2">डेली २</option><option value="pigmy">पिग्मी ठेव</option></select>
+          </div>
+          <div data-spec-field="2">
+            <fieldset class="border-0 p-0 m-0">
+              <legend class="mockup-label">सरळ / चक्रवाढ</legend>
+              <div class="flex flex-wrap gap-4 mt-1">
+                <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="interest-type" value="simple" checked id="simple-radio"><span class="text-sm">सरळ</span></label>
+                <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="interest-type" value="compound" id="compound-radio"><span class="text-sm">चक्रवाढ</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div id="compound-freq" class="mockup-hidden" data-spec-field="3">
+            <fieldset class="border-0 p-0 m-0">
+              <legend class="mockup-label">मासिक / तिमाही / सहामाही / वार्षिक</legend>
+              <div class="flex flex-wrap gap-4 mt-1">
+                <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="freq" value="monthly" checked><span class="text-sm">मासिक</span></label>
+                <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="freq" value="quarterly"><span class="text-sm">तिमाही</span></label>
+                <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="freq" value="half"><span class="text-sm">सहामाही</span></label>
+                <label class="inline-flex items-center gap-2 cursor-pointer"><input type="radio" name="freq" value="yearly"><span class="text-sm">वार्षिक</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div data-spec-field="4">
+            <label class="mockup-label" for="deposit-amount">ठेव रक्कम (रु.) <span class="mockup-required">*</span></label>
+            <input type="text" id="deposit-amount" value="100.00">
+          </div>
+          <div data-spec-field="5"><label class="mockup-label">कालावधी (महिने) <span class="mockup-required">*</span></label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">12</span></div>
+          <div data-spec-field="6"><label class="mockup-label">व्याज दर (% पी.ए) <span class="mockup-required">*</span></label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">6.00</span></div>
+          <div class="mockup-info-note text-xs">
+            मासिक संग्रह = ठेव रक्कम × 365/12<br>
+            एकूण रक्कम = मासिक संग्रह × कालावधी
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <button type="button" class="mockup-btn mockup-btn-primary">गणना करा</button>
+            <button type="button" class="mockup-btn mockup-btn-secondary">पुनर्रचना करा</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="mockup-section" aria-labelledby="section-output">
+        <h2 class="mockup-section-title" id="section-output">निकाल (वाचनीय)</h2>
+        <div class="mockup-field-grid">
+          <div data-spec-field="7"><label class="mockup-label">एकूण रक्कम (रु.)</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full font-semibold">36,500.00</span></div>
+          <div data-spec-field="8"><label class="mockup-label">व्याज रक्कम (रु.)</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">1,095.00</span></div>
+          <div data-spec-field="9"><label class="mockup-label">मुदतपूर्ती रक्कम</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">37,595.00</span></div>
+        </div>
+      </section>
+    </div>
+
+    <section class="mockup-section mockup-section-full mt-4" aria-labelledby="section-chart">
+      <h2 class="mockup-section-title" id="section-chart">दैनिक व्याज चार्ट</h2>
+      <div class="overflow-x-auto">
+        <table class="mockup-table" aria-label="दैनिक व्याज चार्ट ग्रिड">
+          <thead>
+            <tr><th>अ. क्र.</th><th>ठेव रक्कम</th><th>मासिक व्याज</th><th>दिलेले व्याज</th><th>मासिक शिल्लक</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>100.00</td><td>91.25</td><td>0.00</td><td>3,041.67</td></tr>
+            <tr><td>2</td><td>100.00</td><td>91.25</td><td>0.00</td><td>6,083.33</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <button type="button" class="mockup-btn mockup-btn-primary mt-4">निश्चित करा</button>
+    </section>
+  </div>
+
+  <script>
+    (function () {
+      function updateCompound() {
+        var isCompound = document.getElementById('compound-radio').checked;
+        document.getElementById('compound-freq').classList.toggle('mockup-hidden', !isCompound);
+      }
+      document.querySelectorAll('input[name="interest-type"]').forEach(function (r) {
+        r.addEventListener('change', updateCompound);
+      });
+      updateCompound();
+    })();
+  </script>
+</body>
+</html>

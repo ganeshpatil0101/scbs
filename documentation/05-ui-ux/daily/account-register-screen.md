@@ -70,6 +70,12 @@ UI specification for searching and listing daily deposit accounts.
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/daily/account-register-screen/) — Marathi layout for bank review
+
+---
+
 ## Cross-Links
 
 - [overview.md](overview.md)

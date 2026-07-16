@@ -113,7 +113,7 @@ Do not invent fields until screenshots/MP4 are available in repo.
 | Phase 1 — Audit | Complete |
 | Phase 2 — Plan | Complete |
 | Phase 3 — Apply to specs | **Complete (2026-07-11)** |
-| Phase 4 — Mockups | Pending |
+| Phase 4 — Mockups | **Complete (2026-07-16)** |
 
 ---
 

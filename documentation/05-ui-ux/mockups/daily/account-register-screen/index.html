@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>खाते रजिस्टर — डेली — CBS Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../shared/mockup-base.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
+
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <header class="mb-6 pb-4 border-b border-gray-200">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 class="text-2xl font-bold text-gray-900">खाते रजिस्टर</h1>
+          <p class="text-sm text-gray-500 mt-1">डॅशबोर्ड &gt; डेली &gt; खाते रजिस्टर</p>
+        </div>
+        <div class="text-sm">
+          <span class="text-gray-500">संस्था:</span>
+          <span class="font-medium text-gray-800 ml-1">श्रद्धा नागरी सहकारी पतसंस्था मर्यादित — कोतोली</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mockup-module-nav" aria-label="मॉड्यूलमधील स्क्रीन्स">
+      <span class="mockup-module-nav-label">या मॉड्यूलमधील स्क्रीन्स:</span>
+      <a href="../new-daily-account-screen/index.html" class="mockup-module-nav-link">नवीन खाते</a>
+      <a href="../new-agent-screen/index.html" class="mockup-module-nav-link">नवीन एजंट</a>
+      <a href="../daily-transaction-screen/index.html" class="mockup-module-nav-link">व्यवहार</a>
+      <span class="mockup-module-nav-link mockup-module-nav-current" aria-current="page">खाते रजिस्टर</span>
+      <a href="../agent-collection-management-screen/index.html" class="mockup-module-nav-link">एजंट कलेक्शन व्यवस्थापन</a>
+      <a href="../agent-to-agent-transfer-screen/index.html" class="mockup-module-nav-link">एजंट ते एजंट ट्रान्सफर</a>
+      <a href="../interest-multiplier-screen/index.html" class="mockup-module-nav-link">व्याज गुणक</a>
+    </nav>
+
+    <section class="mockup-section mockup-section-compact" aria-labelledby="section-primary-search">
+      <h2 class="mockup-section-title" id="section-primary-search">प्राथमिक शोध</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-end">
+        <div data-spec-field="1">
+          <label class="mockup-label" for="filter-branch">शाखा निवडा</label>
+          <input type="text" id="filter-branch" class="mockup-autocomplete" list="branch-options" placeholder="ID किंवा नाव">
+          <datalist id="branch-options"><option value="1 — Branch 1"><option value="2 — Branch 2"><option value="3 — Branch 3"></datalist>
+        </div>
+        <div data-spec-field="2">
+          <label class="mockup-label" for="filter-scheme">योजना निवडा</label>
+          <select id="filter-scheme"><option value="">सर्व</option><option value="daily1">डेली १</option><option value="daily2">डेली २</option><option value="pigmy">पिग्मी ठेव</option></select>
+        </div>
+        <div data-spec-field="3">
+          <label class="mockup-label" for="filter-agent">एजंट निवडा</label>
+          <input type="text" id="filter-agent" class="mockup-autocomplete" list="agent-options" placeholder="ID किंवा नाव">
+          <datalist id="agent-options"><option value="1 — Agent 1"><option value="2 — Agent 2"></datalist>
+        </div>
+        <div data-spec-field="4"><label class="mockup-label" for="acct-from">खाते क्र. (पासून)</label><input type="text" id="acct-from"></div>
+        <div data-spec-field="5"><label class="mockup-label" for="acct-to">खाते क्र. (पर्यंत)</label><input type="text" id="acct-to"></div>
+        <div data-spec-field="6"><label class="mockup-label" for="cust-from">ग्राहक क्र. (पासून)</label><input type="text" id="cust-from"></div>
+        <div data-spec-field="7"><label class="mockup-label" for="cust-to">ग्राहक क्र. (पर्यंत)</label><input type="text" id="cust-to"></div>
+        <div data-spec-field="8"><label class="mockup-label" for="holder">खातेधारक</label><input type="text" id="holder"></div>
+        <div data-spec-field="9">
+          <label class="mockup-label" for="filter-status">स्थिती निवडा</label>
+          <select id="filter-status"><option value="active" selected>चालू</option><option value="closed">बंद</option><option value="suspended">स्थगित</option></select>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" class="mockup-btn mockup-btn-primary">दाखवा</button>
+        </div>
+      </div>
+      <div class="mt-4 pt-3 border-t border-gray-100">
+        <button type="button" class="text-blue-700 text-sm underline bg-transparent border-0 cursor-pointer">अतिरिक्त शोध पर्याय</button>
+      </div>
+    </section>
+
+    <section class="mockup-section mockup-section-full" aria-labelledby="section-results">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <h2 class="mockup-section-title mb-0 border-0 pb-0" id="section-results">निकाल यादी</h2>
+        <div class="flex flex-wrap gap-2 text-sm" aria-label="साइडबार कृती">
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">तपशील</button>
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">निर्यात करा</button>
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">काढा</button>
+          <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">खाते उतारा</button>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 mb-3">गुलाबी — कर्ज असलेली खाती; फिकट निळा — मुदत संपलेली खाती</p>
+      <div class="overflow-x-auto">
+        <table class="mockup-table" aria-label="खाते रजिस्टर ग्रिड">
+          <thead>
+            <tr>
+              <th>निवडा</th><th>अनु. क्र.</th><th>शाखा</th><th>खाते क्र.</th><th>खाते</th><th>ग्राहक क्र.</th><th>खातेधारक</th><th>चालू दिनांक</th><th>व्याज दर</th><th>तरतूद</th><th>दिलेले व्याज</th><th>शिल्लक</th><th>पत. पत्र. क्रमांक</th><th>नावे मर्यादा</th><th>विनंती चॅनेल</th><th>खाते बंद दिनांक</th><th>मुदतपूर्ती दिनांक</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" aria-label="निवडा"></td>
+              <td>1</td><td>कोतोली</td><td>1001</td><td>डेली १</td><td>661</td><td>पाटील राम</td><td>2026-01-01</td><td>6.00</td><td>0.00</td><td>250.00</td><td>12,500.00</td><td>—</td><td>0.00</td><td>—</td><td>—</td><td>2027-01-01</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-end gap-2">
+      <button type="button" class="mockup-btn mockup-btn-secondary">रीसेट</button>
+    </div>
+  </footer>
+</body>
+</html>

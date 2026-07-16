@@ -140,6 +140,12 @@ UI specification for registering a new daily-collection agent. Two-tab wizard.
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/daily/new-agent-screen/) — Marathi layout for bank review
+
+---
+
 ## Cross-Links
 
 - [overview.md](overview.md)

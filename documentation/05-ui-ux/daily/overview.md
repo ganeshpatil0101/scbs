@@ -20,6 +20,18 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 | एजंट कडून एजंट कडे खाते ट्रान्सफर | Agent to Agent Account Transfer | [agent-to-agent-transfer-screen.md](agent-to-agent-transfer-screen.md) |
 | व्याज गुणक | Interest Multiplier | [interest-multiplier-screen.md](interest-multiplier-screen.md) |
 
+## Mockups
+
+| Screen | Mockup |
+| :--- | :--- |
+| नवीन खाते | [new-daily-account-screen](../mockups/daily/new-daily-account-screen/) — Draft |
+| नवीन एजंट | [new-agent-screen](../mockups/daily/new-agent-screen/) — Draft |
+| व्यवहार | [daily-transaction-screen](../mockups/daily/daily-transaction-screen/) — Draft |
+| खाते रजिस्टर | [account-register-screen](../mockups/daily/account-register-screen/) — Draft |
+| एजंट कलेक्शन व्यवस्थापन | [agent-collection-management-screen](../mockups/daily/agent-collection-management-screen/) — Draft |
+| एजंट कडून एजंट कडे खाते ट्रान्सफर | [agent-to-agent-transfer-screen](../mockups/daily/agent-to-agent-transfer-screen/) — Draft |
+| व्याज गुणक | [interest-multiplier-screen](../mockups/daily/interest-multiplier-screen/) — Draft |
+
 ## Superseded Screens (reference only)
 
 | Screen (Marathi) | Screen (English) | Superseded by |

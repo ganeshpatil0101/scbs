@@ -138,6 +138,12 @@ Google Maps Places Autocomplete — same pattern as [New Customer Tab 2](../cust
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/daily/new-daily-account-screen/) — Marathi layout for bank review
+
+---
+
 ## Cross-Links
 
 - [overview.md](overview.md)

@@ -166,6 +166,12 @@ Uses shared component `app-ledger-tab` — same 15-column ledger grid as Savings
 
 ---
 
+## Mockup
+
+- [HTML mockup (Draft)](../mockups/daily/daily-transaction-screen/) — Marathi layout for bank review
+
+---
+
 ## Cross-Links
 
 - [overview.md](overview.md)
