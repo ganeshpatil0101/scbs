@@ -15,13 +15,14 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 - Reference screenshot `screenshots/bachat/डॅशबोर्ड-बचत-नवीन खाते.png` — Tab 1 only.
 - Tabs 2–4 are TODO stubs per spec.
-- Scheme / Status / Category dropdowns show `[TODO]` for uncaptured values.
+- Scheme / Status dropdowns show `[TODO]` for uncaptured values.
+- Removed fields (2026-07-18): Agent Branch, Agent, Account Category, Sales Agent Branch, Sales Agent; customer summary limited to विशेष सूचना only.
 - प्रगत सेटिंग्ज collapsed by default (`<details>`).
 
 ## Review checklist
 
-- [ ] All Tab 1 fields present with correct grouping
-- [ ] Customer summary panel after autocomplete
+- [ ] All Tab 1 fields present with correct grouping (13 spec fields)
+- [ ] Customer summary shows विशेष सूचना only after autocomplete
 - [ ] Marathi labels clear for non-technical bank staff
 - [ ] Required fields marked with *
 - [ ] Advanced Settings placement approved
