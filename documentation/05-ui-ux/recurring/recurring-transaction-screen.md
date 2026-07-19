@@ -1,6 +1,8 @@
 # Screen Spec — Recurring Transaction (रिकरिंग > व्यवहार)
 
-> **Consolidates:** [credit-transaction-screen.md](credit-transaction-screen.md) + debit mode shell (fields `TODO` until screenshots)
+> **Superseded (2026-07-18):** Merged into [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md). Retained for field archaeology.
+
+> **Previously consolidated:** [credit-transaction-screen.md](credit-transaction-screen.md) + debit mode shell (fields `TODO` until screenshots)
 
 ## Purpose
 

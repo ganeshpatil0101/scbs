@@ -14,7 +14,6 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 | :--- | :--- | :--- |
 | नवीन खाते | New Account | [new-daily-account-screen.md](new-daily-account-screen.md) |
 | नवीन एजंट | New Agent | [new-agent-screen.md](new-agent-screen.md) |
-| व्यवहार | Transaction | [daily-transaction-screen.md](daily-transaction-screen.md) |
 | खाते रजिस्टर | Account Register | [account-register-screen.md](account-register-screen.md) |
 | एजंट कलेक्शन व्यवस्थापन | Agent Collection Management | [agent-collection-management-screen.md](agent-collection-management-screen.md) |
 | एजंट कडून एजंट कडे खाते ट्रान्सफर | Agent to Agent Account Transfer | [agent-to-agent-transfer-screen.md](agent-to-agent-transfer-screen.md) |
@@ -26,7 +25,6 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 | :--- | :--- |
 | नवीन खाते | [new-daily-account-screen](../mockups/daily/new-daily-account-screen/) — Draft |
 | नवीन एजंट | [new-agent-screen](../mockups/daily/new-agent-screen/) — Draft |
-| व्यवहार | [daily-transaction-screen](../mockups/daily/daily-transaction-screen/) — Draft |
 | खाते रजिस्टर | [account-register-screen](../mockups/daily/account-register-screen/) — Draft |
 | एजंट कलेक्शन व्यवस्थापन | [agent-collection-management-screen](../mockups/daily/agent-collection-management-screen/) — Draft |
 | एजंट कडून एजंट कडे खाते ट्रान्सफर | [agent-to-agent-transfer-screen](../mockups/daily/agent-to-agent-transfer-screen/) — Draft |
@@ -36,6 +34,7 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 
 | Screen (Marathi) | Screen (English) | Superseded by |
 | :--- | :--- | :--- |
+| व्यवहार | Transaction | [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md) |
 | एजंट कलेक्शन | Agent Collection | [agent-collection-management-screen.md](agent-collection-management-screen.md) — Tab 1 |
 | एजंट कलेक्शन यादी | Agent Collection List | [agent-collection-management-screen.md](agent-collection-management-screen.md) — Tab 2 |
 

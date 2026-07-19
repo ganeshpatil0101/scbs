@@ -1,9 +1,11 @@
 # Mockup — व्यवहार (बचत)
 
+> **Superseded (2026-07-18):** Use unified mockup [deposit-account-transaction-screen](../../accounting/deposit-account-transaction-screen/) instead. Spec: [deposit-account-transaction-screen.md](../../../accounting/deposit-account-transaction-screen.md).
+
 | Property | Value |
 |---|---|
-| Spec | [savings-transaction-screen.md](../../../savings/savings-transaction-screen.md) |
-| Status | **Draft** |
+| Spec | ~~[savings-transaction-screen.md](../../../savings/savings-transaction-screen.md)~~ → [deposit-account-transaction-screen.md](../../../accounting/deposit-account-transaction-screen.md) |
+| Status | **Superseded** |
 | Created | 2026-07-12 |
 | Language | Marathi only (English via ngx-translate in Angular phase) |
 

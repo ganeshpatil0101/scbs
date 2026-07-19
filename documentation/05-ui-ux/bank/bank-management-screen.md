@@ -115,7 +115,7 @@ Visible when Create or Update mode active.
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 16 | व्यवहार प्रकार | Transaction Type | Radio | No | `सर्व`, `जमा`, `नावे` |
 | 17 | शाखा निवडा | Select Branch | Autocomplete | Yes | Enter resolves by ID or name |
-| 18 | बँक निवडा | Select Bank | Dropdown | No | From Bank Master — e.g. `बँक ऑफ इंडिया` |
+| 18 | बँक निवडा | Select Bank | Autocomplete | No | From Bank Master — e.g. `1 — बँक ऑफ इंडिया`. Enter resolves by ID or name; see [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
 | 19 | या दिनांकापासून | From Date | Date | No | — |
 | 20 | या दिनांकापर्यंत | To Date | Date | No | — |
 | 21 | स्थिती | Status | Radio | No | `सर्व`, `वटवलेले`, `न वटवलेले`, `चेक रिटर्न` |

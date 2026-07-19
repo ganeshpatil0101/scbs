@@ -13,7 +13,7 @@ Top-level index of all project documentation. Add a link here whenever a new mod
 - [01-architecture/architecture-overview.md](01-architecture/architecture-overview.md) — Infra architecture (AWS `ap-south-1`), multi-tenancy decision, request flow, cost efficiency
 
 ## 05 — UI/UX — Shared Patterns
-- [05-ui-ux/shared/entity-autocomplete-pattern.md](05-ui-ux/shared/entity-autocomplete-pattern.md) — Branch / GL / Account Holder / Customer Autocomplete standard
+- [05-ui-ux/shared/entity-autocomplete-pattern.md](05-ui-ux/shared/entity-autocomplete-pattern.md) — Branch / GL / Account Holder / Customer / Member / Agent / Bank Autocomplete standard
 - [05-ui-ux/shared/ui-simplification-patterns.md](05-ui-ux/shared/ui-simplification-patterns.md) — UX simplification patterns for non-technical bank staff
 
 ## 05 — UI/UX — Mockups (HTML prototypes for bank review)
@@ -67,8 +67,9 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/mockups/daily/agent-to-agent-transfer-screen/](05-ui-ux/mockups/daily/agent-to-agent-transfer-screen/) — एजंट ते एजंट ट्रान्सफर (Draft)
 - [05-ui-ux/mockups/daily/interest-multiplier-screen/](05-ui-ux/mockups/daily/interest-multiplier-screen/) — व्याज गुणक (Draft)
 
-**Accounting mockups (2026-07-16 — 9 screens):**
+**Accounting mockups (2026-07-16 — 9 screens; 2026-07-18 — +1 unified deposit transaction):**
 
+- [05-ui-ux/mockups/accounting/deposit-account-transaction-screen/](05-ui-ux/mockups/accounting/deposit-account-transaction-screen/) — ठेव खाते व्यवहार (Draft)
 - [05-ui-ux/mockups/accounting/jama-screen/](05-ui-ux/mockups/accounting/jama-screen/) — जमा (Draft)
 - [05-ui-ux/mockups/accounting/nave-screen/](05-ui-ux/mockups/accounting/nave-screen/) — नावे (Draft)
 - [05-ui-ux/mockups/accounting/transfer-screen/](05-ui-ux/mockups/accounting/transfer-screen/) — ट्रान्सफर (Draft)
@@ -118,7 +119,7 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/savings/overview.md](05-ui-ux/savings/overview.md)
 - [05-ui-ux/savings/ux-optimization.md](05-ui-ux/savings/ux-optimization.md) — UX audit (2026-07-12)
 - [05-ui-ux/savings/new-savings-account-screen.md](05-ui-ux/savings/new-savings-account-screen.md) — नवीन खाते (4 tabs)
-- [05-ui-ux/savings/savings-transaction-screen.md](05-ui-ux/savings/savings-transaction-screen.md) — व्यवहार (5 tabs)
+- ~~05-ui-ux/savings/savings-transaction-screen.md~~ → superseded by [deposit-account-transaction-screen.md](05-ui-ux/accounting/deposit-account-transaction-screen.md)
 - [05-ui-ux/savings/account-register-screen.md](05-ui-ux/savings/account-register-screen.md) — खाते रजिस्टर
 - [05-ui-ux/savings/manual-interest-calculation-screen.md](05-ui-ux/savings/manual-interest-calculation-screen.md) — मॅन्युअल व्याज आकारणी
 
@@ -129,7 +130,7 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/fixed-deposit/overview.md](05-ui-ux/fixed-deposit/overview.md) — Index of Fixed Deposit screens (current)
 - [05-ui-ux/fixed-deposit/ux-optimization.md](05-ui-ux/fixed-deposit/ux-optimization.md) — UX audit and action checklist
 - [05-ui-ux/fixed-deposit/new-fd-account-screen.md](05-ui-ux/fixed-deposit/new-fd-account-screen.md) — नवीन खाते (4 tabs)
-- [05-ui-ux/fixed-deposit/fd-transaction-screen.md](05-ui-ux/fixed-deposit/fd-transaction-screen.md) — व्यवहार (5 tabs)
+- ~~05-ui-ux/fixed-deposit/fd-transaction-screen.md~~ → superseded by [deposit-account-transaction-screen.md](05-ui-ux/accounting/deposit-account-transaction-screen.md)
 - [05-ui-ux/fixed-deposit/fd-account-management-screen.md](05-ui-ux/fixed-deposit/fd-account-management-screen.md) — खाते व्यवस्थापन (2 tabs)
 - [05-ui-ux/fixed-deposit/fd-manual-interest-calculation-screen.md](05-ui-ux/fixed-deposit/fd-manual-interest-calculation-screen.md) — मॅन्युअल व्याज आकारणी
 - [05-ui-ux/fixed-deposit/deposit-loan-installment-payment-screen.md](05-ui-ux/fixed-deposit/deposit-loan-installment-payment-screen.md) — ठेव कर्ज हप्ता पेमेंट (from MP4)
@@ -181,7 +182,7 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/daily/ux-optimization.md](05-ui-ux/daily/ux-optimization.md) — UX audit and action checklist
 - [05-ui-ux/daily/new-daily-account-screen.md](05-ui-ux/daily/new-daily-account-screen.md) — नवीन खाते (from MP4)
 - [05-ui-ux/daily/new-agent-screen.md](05-ui-ux/daily/new-agent-screen.md) — नवीन एजंट (from MP4)
-- [05-ui-ux/daily/daily-transaction-screen.md](05-ui-ux/daily/daily-transaction-screen.md) — व्यवहार (6 tabs)
+- ~~05-ui-ux/daily/daily-transaction-screen.md~~ → superseded by [deposit-account-transaction-screen.md](05-ui-ux/accounting/deposit-account-transaction-screen.md)
 - [05-ui-ux/daily/account-register-screen.md](05-ui-ux/daily/account-register-screen.md) — खाते रजिस्टर
 - [05-ui-ux/daily/agent-collection-management-screen.md](05-ui-ux/daily/agent-collection-management-screen.md) — एजंट कलेक्शन व्यवस्थापन (2 tabs)
 - [05-ui-ux/daily/agent-to-agent-transfer-screen.md](05-ui-ux/daily/agent-to-agent-transfer-screen.md) — एजंट ते एजंट ट्रान्सफर
@@ -192,7 +193,7 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/recurring/overview.md](05-ui-ux/recurring/overview.md)
 - [05-ui-ux/recurring/ux-optimization.md](05-ui-ux/recurring/ux-optimization.md) — UX audit (6 → 5 screens)
 - [05-ui-ux/recurring/new-recurring-account-screen.md](05-ui-ux/recurring/new-recurring-account-screen.md) — नवीन खाते
-- [05-ui-ux/recurring/recurring-transaction-screen.md](05-ui-ux/recurring/recurring-transaction-screen.md) — व्यवहार (unified credit/debit)
+- ~~05-ui-ux/recurring/recurring-transaction-screen.md~~ → superseded by [deposit-account-transaction-screen.md](05-ui-ux/accounting/deposit-account-transaction-screen.md)
 - [05-ui-ux/recurring/account-register-screen.md](05-ui-ux/recurring/account-register-screen.md) — खाते रजिस्टर
 - [05-ui-ux/recurring/recurring-interest-management-screen.md](05-ui-ux/recurring/recurring-interest-management-screen.md) — व्याज व्यवस्थापन
 - [05-ui-ux/recurring/interest-multiplier-screen.md](05-ui-ux/recurring/interest-multiplier-screen.md) — व्याज गुणक
@@ -212,6 +213,8 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 
 ## 05 — UI/UX — Accounting (Operational)
 - [05-ui-ux/accounting/overview.md](05-ui-ux/accounting/overview.md)
+- [05-ui-ux/accounting/ux-optimization.md](05-ui-ux/accounting/ux-optimization.md) — Deposit transaction cross-module consolidation (2026-07-18)
+- [05-ui-ux/accounting/deposit-account-transaction-screen.md](05-ui-ux/accounting/deposit-account-transaction-screen.md) — ठेव खाते व्यवहार (unified Savings/FD/Daily/Recurring; 4 tabs)
 - [05-ui-ux/accounting/jama-screen.md](05-ui-ux/accounting/jama-screen.md) — जमा (from MP4)
 - [05-ui-ux/accounting/nave-screen.md](05-ui-ux/accounting/nave-screen.md) — नावे (from MP4)
 - [05-ui-ux/accounting/transfer-screen.md](05-ui-ux/accounting/transfer-screen.md) — ट्रान्सफर (from MP4)
@@ -257,4 +260,4 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/settings/loan/loan-interest-rate-change-screen.md](05-ui-ux/settings/loan/loan-interest-rate-change-screen.md) — व्याज दरात बदल (simplified)
 
 ## Status
-Project Overview is complete: vision.md, business-goals.md, glossary.md, and system-boundaries.md. Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). **Settings module UX-optimized (2026-07-05):** 6 consolidated screens per [05-ui-ux/settings/ux-optimization.md](05-ui-ux/settings/ux-optimization.md). **Customer module UX-optimized (2026-07-09):** 4 → 3 screens per [05-ui-ux/customer/ux-optimization.md](05-ui-ux/customer/ux-optimization.md). **Daily module UX-optimized (2026-07-11):** 8 → 7 screens per [05-ui-ux/daily/ux-optimization.md](05-ui-ux/daily/ux-optimization.md). **Fixed Deposit module UX-optimized (2026-07-11):** 7 → 6 screens per [05-ui-ux/fixed-deposit/ux-optimization.md](05-ui-ux/fixed-deposit/ux-optimization.md). **Loan module UX-optimized (2026-07-12):** 8 → 6 screens per [05-ui-ux/loan/ux-optimization.md](05-ui-ux/loan/ux-optimization.md). **Membership module UX-optimized (2026-07-12):** 6 → 5 screens per [05-ui-ux/membership/ux-optimization.md](05-ui-ux/membership/ux-optimization.md). **Recurring module UX-optimized (2026-07-12):** 6 → 5 screens per [05-ui-ux/recurring/ux-optimization.md](05-ui-ux/recurring/ux-optimization.md). **Savings module UX-optimized (2026-07-12):** 4 → 4 screens (field cleanup) per [05-ui-ux/savings/ux-optimization.md](05-ui-ux/savings/ux-optimization.md). Report specs added from `screenshots/Reports/`. Reusable UX skill: `.cursor/skills/optimize-ui-ux/`. Backend business modules have not been started yet.
+Project Overview is complete: vision.md, business-goals.md, glossary.md, and system-boundaries.md. Architecture documentation exists. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). **Settings module UX-optimized (2026-07-05):** 6 consolidated screens per [05-ui-ux/settings/ux-optimization.md](05-ui-ux/settings/ux-optimization.md). **Customer module UX-optimized (2026-07-09):** 4 → 3 screens per [05-ui-ux/customer/ux-optimization.md](05-ui-ux/customer/ux-optimization.md). **Daily module UX-optimized (2026-07-11):** 8 → 7 screens per [05-ui-ux/daily/ux-optimization.md](05-ui-ux/daily/ux-optimization.md). **Fixed Deposit module UX-optimized (2026-07-11):** 7 → 6 screens per [05-ui-ux/fixed-deposit/ux-optimization.md](05-ui-ux/fixed-deposit/ux-optimization.md). **Loan module UX-optimized (2026-07-12):** 8 → 6 screens per [05-ui-ux/loan/ux-optimization.md](05-ui-ux/loan/ux-optimization.md). **Membership module UX-optimized (2026-07-12):** 6 → 5 screens per [05-ui-ux/membership/ux-optimization.md](05-ui-ux/membership/ux-optimization.md). **Recurring module UX-optimized (2026-07-12):** 6 → 5 screens per [05-ui-ux/recurring/ux-optimization.md](05-ui-ux/recurring/ux-optimization.md). **Savings module UX-optimized (2026-07-12):** 4 → 4 screens (field cleanup) per [05-ui-ux/savings/ux-optimization.md](05-ui-ux/savings/ux-optimization.md). **Accounting deposit transaction consolidated (2026-07-18):** 4 module transaction screens → 1 unified screen per [05-ui-ux/accounting/ux-optimization.md](05-ui-ux/accounting/ux-optimization.md). Report specs added from `screenshots/Reports/`. Reusable UX skill: `.cursor/skills/optimize-ui-ux/`. Backend business modules have not been started yet.

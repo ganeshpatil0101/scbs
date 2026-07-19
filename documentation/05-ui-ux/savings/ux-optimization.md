@@ -106,6 +106,8 @@ None — no screen merges in this optimization pass.
 | Phase 3 — Apply to specs | **Complete (2026-07-12)** |
 | Phase 4 — Mockups | **Draft (2026-07-12)** — see [mockups/savings/](../mockups/savings/) |
 
+**Cross-module consolidation (2026-07-18):** Savings Transaction screen further merged into unified [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md). See [../accounting/ux-optimization.md](../accounting/ux-optimization.md).
+
 ---
 
 ## Related Documents

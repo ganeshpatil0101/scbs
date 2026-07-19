@@ -1,5 +1,7 @@
 # Screen Spec — Daily Transaction (डेली > व्यवहार)
 
+> **Superseded (2026-07-18):** Merged into [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md). Retained for field archaeology.
+
 ## Purpose
 
 UI specification for daily (pigmy) account transactions. Six-tab workflow.

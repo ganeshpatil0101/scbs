@@ -1,5 +1,7 @@
 # Screen Spec — FD Transaction (मुदत ठेव > व्यवहार)
 
+> **Superseded (2026-07-18):** Merged into [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md). Retained for field archaeology.
+
 ## Purpose
 
 UI specification for fixed deposit account transactions. Five-tab workflow (same pattern as savings).

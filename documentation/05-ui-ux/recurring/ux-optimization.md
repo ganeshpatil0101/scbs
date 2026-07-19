@@ -122,6 +122,8 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 | Phase 3 — Apply to specs | **Complete (2026-07-12)** |
 | Phase 4 — Mockups | **Draft (2026-07-12)** — 5 HTML mockups under `mockups/recurring/` |
 
+**Cross-module consolidation (2026-07-18):** Recurring Transaction screen further merged into unified [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md). See [../accounting/ux-optimization.md](../accounting/ux-optimization.md).
+
 ---
 
 ## Related Documents

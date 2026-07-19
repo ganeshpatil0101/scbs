@@ -1,5 +1,7 @@
 # Screen Spec — Savings Transaction (बचत > व्यवहार)
 
+> **Superseded (2026-07-18):** Merged into [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md). Retained for field archaeology.
+
 ## Purpose
 
 UI specification for savings account transactions (cash/transfer, credit/debit). Five-tab workflow.

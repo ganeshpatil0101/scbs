@@ -11,7 +11,6 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 | Screen (Marathi) | Screen (English) | Document |
 | :--- | :--- | :--- |
 | नवीन खाते | New Account | [new-fd-account-screen.md](new-fd-account-screen.md) |
-| व्यवहार | Transaction | [fd-transaction-screen.md](fd-transaction-screen.md) |
 | खाते व्यवस्थापन | Account Management | [fd-account-management-screen.md](fd-account-management-screen.md) |
 | मॅन्युअल व्याज आकारणी | Manual Interest Calculation | [fd-manual-interest-calculation-screen.md](fd-manual-interest-calculation-screen.md) |
 | ठेव कर्ज हप्ता पेमेंट | Deposit Loan Installment Payment | [deposit-loan-installment-payment-screen.md](deposit-loan-installment-payment-screen.md) |
@@ -21,6 +20,7 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 
 | Screen (Marathi) | Superseded by |
 | :--- | :--- |
+| व्यवहार | [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md) |
 | खाते रजिस्टर | [fd-account-management-screen.md](fd-account-management-screen.md) — Tab 1 |
 | खाते नूतनीकरण यादी | [fd-account-management-screen.md](fd-account-management-screen.md) — Tab 2 |
 
@@ -33,7 +33,6 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 | Screen | Mockup |
 | :--- | :--- |
 | नवीन खाते | [new-fd-account-screen](../mockups/fixed-deposit/new-fd-account-screen/) — Draft |
-| व्यवहार | [fd-transaction-screen](../mockups/fixed-deposit/fd-transaction-screen/) — Draft |
 | खाते व्यवस्थापन | [fd-account-management-screen](../mockups/fixed-deposit/fd-account-management-screen/) — Draft |
 | मॅन्युअल व्याज आकारणी | [fd-manual-interest-calculation-screen](../mockups/fixed-deposit/fd-manual-interest-calculation-screen/) — Draft |
 | ठेव कर्ज हप्ता पेमेंट | [deposit-loan-installment-payment-screen](../mockups/fixed-deposit/deposit-loan-installment-payment-screen/) — Draft |

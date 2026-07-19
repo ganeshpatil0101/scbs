@@ -1,12 +1,12 @@
-# Entity Autocomplete Pattern — Branch / GL / Account Holder
+# Entity Autocomplete Pattern — Branch / GL / Account Holder / Bank
 
 ## Purpose
 
-Define the standard UI field type for selecting Branch, GL Head, Account Holder, Customer, Member, and Agent across all CBS screens. Replaces legacy dual/triple fields (ID textbox + search + select dropdown) with a single **Autocomplete** control.
+Define the standard UI field type for selecting Branch, GL Head, Account Holder, Customer, Member, Agent, and **Bank** across all CBS screens. Replaces legacy dual/triple fields (ID textbox + search + select dropdown) with a single **Autocomplete** control.
 
 ## Scope
 
-Applies to every screen spec under `documentation/05-ui-ux/` where the user must look up a branch, GL head, account holder, **customer**, **member**, or **agent** by ID or name.
+Applies to every screen spec under `documentation/05-ui-ux/` where the user must look up a branch, GL head, account holder, **customer**, **member**, **agent**, or **bank** (from Bank Master) by ID or name.
 
 ## Field Type: Autocomplete
 
@@ -41,6 +41,7 @@ Applies to every screen spec under `documentation/05-ui-ux/` where the user must
 | Member | सभासद निवडा | Select Member | `सभासद क्र.`, `सभासद क्रमांक`, `सभासदचे नाव`, `सभासद नाव` (paired ID + name) |
 | Agent | एजंट निवडा | Select Agent | `एजंट क्रमांक`, `शोध एजंट नाव`, `एजंट निवडा`, `प्रतिनिधी क्र.` (paired ID + name / select) |
 | Sales Agent | विक्री एजंट निवडा | Select Sales Agent | `विक्री एजंट क्रमांक`, `विक्री एजंटचे नाव शोधा` (paired with Sales Agent Branch) |
+| Bank | बँक निवडा | Select Bank | `बँक निवडा` dropdown, `बँकेचे नाव` lookup-only select — options from [Bank Management](../bank/bank-management-screen.md) master |
 
 ## Reference Sample Values (documentation and mockups only)
 
@@ -113,6 +114,21 @@ Display: `1 — Agent 1`, `2 — Agent 2`, `3 — Agent 3`
 
 Loaded from registered Daily agents for the selected branch. On Agent-to-Agent Transfer, use two separate Agent Autocomplete fields (From / To).
 
+### Bank
+
+Loaded from society **Bank Master** ([bank-management-screen.md](../bank/bank-management-screen.md) — Tab 1 बँक खाते). Display uses bank account ID + bank name (and optionally branch) so clerks can distinguish same-name banks.
+
+| ID | Name | Branch (sample) |
+| :---: | :--- | :--- |
+| 1 | बँक ऑफ इंडिया | कोतोली |
+| 2 | स्टेट बँक ऑफ इंडिया | कोल्हापूर |
+| 3 | बँक ऑफ महाराष्ट्र | सातारा |
+| 4 | एचडीएफसी बँक | पुणे |
+
+Display: `1 — बँक ऑफ इंडिया`, `2 — स्टेट बँक ऑफ इंडिया`, `3 — बँक ऑफ महाराष्ट्र`, `4 — एचडीएफसी बँक`
+
+Use these samples in instrument/cheque tabs (Deposit Account Transaction, Jama, Nave, Cheque Register filters). Production options come from Bank Master API (`entityType: bank`).
+
 ## Spec Authoring Rules
 
 1. **One row per entity** — never document separate ID, search, and select rows for the same lookup.
@@ -137,10 +153,11 @@ On [new-scheme-screen.md](../settings/schemes/new-scheme-screen.md), field **ज
 ## Implementation Notes (Angular / mockup)
 
 - **Mockup:** `<input type="text" list="…">` with `<datalist>` options; class `.mockup-autocomplete`
-- **Angular:** shared `app-entity-autocomplete` with `entityType`: `branch` | `gl` | `account` | `customer` | `member` | `agent`; Material `mat-autocomplete`; debounced filter; Enter resolves selection
+- **Angular:** shared `app-entity-autocomplete` with `entityType`: `branch` | `gl` | `account` | `customer` | `member` | `agent` | `bank`; Material `mat-autocomplete`; debounced filter; Enter resolves selection
 
 ## Related Documents
 
 - [../../AI_INDEX.md](../../AI_INDEX.md)
 - [../accounting/overview.md](../accounting/overview.md)
+- [../bank/bank-management-screen.md](../bank/bank-management-screen.md)
 - [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)

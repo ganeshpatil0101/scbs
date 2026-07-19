@@ -118,6 +118,8 @@ Do not invent fields until screenshots/MP4 are available in repo.
 | Phase 3 — Apply to specs | **Complete (2026-07-11)** |
 | Phase 4 — Mockups | **Complete (2026-07-16)** |
 
+**Cross-module consolidation (2026-07-18):** FD Transaction screen further merged into unified [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md). See [../accounting/ux-optimization.md](../accounting/ux-optimization.md).
+
 ---
 
 ## Related Documents
