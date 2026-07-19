@@ -6,13 +6,14 @@ Index of operational UI screens under **लेखा (Accounting)**. Distinct fr
 
 Branch, GL, and Account Holder lookups use a single **Autocomplete** field — see [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
 
-**UX optimization (2026-07-18):** Cross-product deposit transaction consolidation. Audit: [ux-optimization.md](ux-optimization.md).
+**UX optimization (2026-07-18):** Cross-product deposit transaction consolidation. **UX optimization (2026-07-19):** Cross-product manual interest consolidation. Audit: [ux-optimization.md](ux-optimization.md).
 
 ## Screens
 
 | Screen (Marathi) | Screen (English) | Document |
 | :--- | :--- | :--- |
 | ठेव खाते व्यवहार | Deposit Account Transaction | [deposit-account-transaction-screen.md](deposit-account-transaction-screen.md) |
+| मॅन्युअल व्याज व्यवस्थापन | Manual Interest Management | [manual-interest-management-screen.md](manual-interest-management-screen.md) |
 | जमा | Credit / Receipt | [jama-screen.md](jama-screen.md) |
 | नावे | Debit / Payment | [nave-screen.md](nave-screen.md) |
 | ट्रान्सफर | Transfer | [transfer-screen.md](transfer-screen.md) |

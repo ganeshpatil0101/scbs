@@ -35,6 +35,7 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 | Screen (Marathi) | Screen (English) | Superseded by |
 | :--- | :--- | :--- |
 | व्यवहार | Transaction | [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md) |
+| मॅन्युअल व्याज आकारणी / तरतूद | Manual Interest Assessment / Provision | [../accounting/manual-interest-management-screen.md](../accounting/manual-interest-management-screen.md) — **मॉड्यूल निवडा** = डेली |
 | एजंट कलेक्शन | Agent Collection | [agent-collection-management-screen.md](agent-collection-management-screen.md) — Tab 1 |
 | एजंट कलेक्शन यादी | Agent Collection List | [agent-collection-management-screen.md](agent-collection-management-screen.md) — Tab 2 |
 

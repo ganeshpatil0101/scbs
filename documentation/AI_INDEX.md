@@ -121,7 +121,7 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/savings/new-savings-account-screen.md](05-ui-ux/savings/new-savings-account-screen.md) — नवीन खाते (4 tabs)
 - ~~05-ui-ux/savings/savings-transaction-screen.md~~ → superseded by [deposit-account-transaction-screen.md](05-ui-ux/accounting/deposit-account-transaction-screen.md)
 - [05-ui-ux/savings/account-register-screen.md](05-ui-ux/savings/account-register-screen.md) — खाते रजिस्टर
-- [05-ui-ux/savings/manual-interest-calculation-screen.md](05-ui-ux/savings/manual-interest-calculation-screen.md) — मॅन्युअल व्याज आकारणी
+- ~~05-ui-ux/savings/manual-interest-calculation-screen.md~~ → superseded by [manual-interest-management-screen.md](05-ui-ux/accounting/manual-interest-management-screen.md)
 
 ## 05 — UI/UX — Fixed Deposit (Operational)
 
@@ -132,7 +132,7 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/fixed-deposit/new-fd-account-screen.md](05-ui-ux/fixed-deposit/new-fd-account-screen.md) — नवीन खाते (4 tabs)
 - ~~05-ui-ux/fixed-deposit/fd-transaction-screen.md~~ → superseded by [deposit-account-transaction-screen.md](05-ui-ux/accounting/deposit-account-transaction-screen.md)
 - [05-ui-ux/fixed-deposit/fd-account-management-screen.md](05-ui-ux/fixed-deposit/fd-account-management-screen.md) — खाते व्यवस्थापन (2 tabs)
-- [05-ui-ux/fixed-deposit/fd-manual-interest-calculation-screen.md](05-ui-ux/fixed-deposit/fd-manual-interest-calculation-screen.md) — मॅन्युअल व्याज आकारणी
+- ~~05-ui-ux/fixed-deposit/fd-manual-interest-calculation-screen.md~~ → superseded by [manual-interest-management-screen.md](05-ui-ux/accounting/manual-interest-management-screen.md)
 - [05-ui-ux/fixed-deposit/deposit-loan-installment-payment-screen.md](05-ui-ux/fixed-deposit/deposit-loan-installment-payment-screen.md) — ठेव कर्ज हप्ता पेमेंट (from MP4)
 - [05-ui-ux/fixed-deposit/fd-interest-multiplier-screen.md](05-ui-ux/fixed-deposit/fd-interest-multiplier-screen.md) — व्याज गुणक (from MP4)
 - ~~fd-account-register-screen.md~~ / ~~account-renewal-list-screen.md~~ → superseded by fd-account-management-screen.md
@@ -195,11 +195,11 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/recurring/new-recurring-account-screen.md](05-ui-ux/recurring/new-recurring-account-screen.md) — नवीन खाते
 - ~~05-ui-ux/recurring/recurring-transaction-screen.md~~ → superseded by [deposit-account-transaction-screen.md](05-ui-ux/accounting/deposit-account-transaction-screen.md)
 - [05-ui-ux/recurring/account-register-screen.md](05-ui-ux/recurring/account-register-screen.md) — खाते रजिस्टर
-- [05-ui-ux/recurring/recurring-interest-management-screen.md](05-ui-ux/recurring/recurring-interest-management-screen.md) — व्याज व्यवस्थापन
+- ~~05-ui-ux/recurring/recurring-interest-management-screen.md~~ → superseded by [manual-interest-management-screen.md](05-ui-ux/accounting/manual-interest-management-screen.md)
 - [05-ui-ux/recurring/interest-multiplier-screen.md](05-ui-ux/recurring/interest-multiplier-screen.md) — व्याज गुणक
 - ~~05-ui-ux/recurring/credit-transaction-screen.md~~ → superseded by recurring-transaction-screen.md
-- ~~05-ui-ux/recurring/manual-interest-assessment-screen.md~~ → superseded by recurring-interest-management-screen.md
-- ~~05-ui-ux/recurring/manual-interest-provision-screen.md~~ → superseded by recurring-interest-management-screen.md
+- ~~05-ui-ux/recurring/manual-interest-assessment-screen.md~~ → superseded by [manual-interest-management-screen.md](05-ui-ux/accounting/manual-interest-management-screen.md)
+- ~~05-ui-ux/recurring/manual-interest-provision-screen.md~~ → superseded by [manual-interest-management-screen.md](05-ui-ux/accounting/manual-interest-management-screen.md)
 
 ## 05 — UI/UX — Reports
 - [05-ui-ux/reports/overview.md](05-ui-ux/reports/overview.md) — Index of daily-use operational and statutory reports
@@ -213,8 +213,10 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 
 ## 05 — UI/UX — Accounting (Operational)
 - [05-ui-ux/accounting/overview.md](05-ui-ux/accounting/overview.md)
-- [05-ui-ux/accounting/ux-optimization.md](05-ui-ux/accounting/ux-optimization.md) — Deposit transaction cross-module consolidation (2026-07-18)
+- [05-ui-ux/accounting/ux-optimization.md](05-ui-ux/accounting/ux-optimization.md) — Deposit transaction + manual interest cross-module consolidation (2026-07-18, 2026-07-19)
 - [05-ui-ux/accounting/deposit-account-transaction-screen.md](05-ui-ux/accounting/deposit-account-transaction-screen.md) — ठेव खाते व्यवहार (unified Savings/FD/Daily/Recurring; 4 tabs)
+- [05-ui-ux/accounting/manual-interest-management-screen.md](05-ui-ux/accounting/manual-interest-management-screen.md) — मॅन्युअल व्याज व्यवस्थापन (unified Savings/FD/Daily/Recurring; provision + assessment)
+- [05-ui-ux/mockups/accounting/manual-interest-management-screen/](05-ui-ux/mockups/accounting/manual-interest-management-screen/) — मॅन्युअल व्याज व्यवस्थापन (Draft)
 - [05-ui-ux/accounting/jama-screen.md](05-ui-ux/accounting/jama-screen.md) — जमा (from MP4)
 - [05-ui-ux/accounting/nave-screen.md](05-ui-ux/accounting/nave-screen.md) — नावे (from MP4)
 - [05-ui-ux/accounting/transfer-screen.md](05-ui-ux/accounting/transfer-screen.md) — ट्रान्सफर (from MP4)

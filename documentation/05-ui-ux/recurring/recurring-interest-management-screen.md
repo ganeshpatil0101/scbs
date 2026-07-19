@@ -1,5 +1,7 @@
 # Screen Spec — Recurring Interest Management (रिकरिंग > व्याज व्यवस्थापन)
 
+> **Superseded (2026-07-19):** Merged into [../accounting/manual-interest-management-screen.md](../accounting/manual-interest-management-screen.md) — **मॉड्यूल निवडा** = रिकरिंग. Retained for field archaeology.
+
 > **Consolidates:** [manual-interest-provision-screen.md](manual-interest-provision-screen.md) + [manual-interest-assessment-screen.md](manual-interest-assessment-screen.md)
 
 ## Purpose

@@ -1,5 +1,7 @@
 # Screen Spec — Manual Interest Calculation (बचत > मॅन्युअल व्याज > आकारणी)
 
+> **Superseded (2026-07-19):** Merged into [../accounting/manual-interest-management-screen.md](../accounting/manual-interest-management-screen.md) — **मॉड्यूल निवडा** = बचत. Retained for field archaeology.
+
 ## Purpose
 
 UI specification for manually calculating and posting savings interest. Single screen for calculate + post (no separate provision screen captured).

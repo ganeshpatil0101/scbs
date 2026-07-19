@@ -12,7 +12,6 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 | :--- | :--- | :--- |
 | नवीन खाते | New Account | [new-fd-account-screen.md](new-fd-account-screen.md) |
 | खाते व्यवस्थापन | Account Management | [fd-account-management-screen.md](fd-account-management-screen.md) |
-| मॅन्युअल व्याज आकारणी | Manual Interest Calculation | [fd-manual-interest-calculation-screen.md](fd-manual-interest-calculation-screen.md) |
 | ठेव कर्ज हप्ता पेमेंट | Deposit Loan Installment Payment | [deposit-loan-installment-payment-screen.md](deposit-loan-installment-payment-screen.md) |
 | व्याज गुणक | Interest Multiplier | [fd-interest-multiplier-screen.md](fd-interest-multiplier-screen.md) |
 
@@ -21,6 +20,7 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 | Screen (Marathi) | Superseded by |
 | :--- | :--- |
 | व्यवहार | [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md) |
+| मॅन्युअल व्याज आकारणी / तरतूद | [../accounting/manual-interest-management-screen.md](../accounting/manual-interest-management-screen.md) — **मॉड्यूल निवडा** = मुदत ठेव |
 | खाते रजिस्टर | [fd-account-management-screen.md](fd-account-management-screen.md) — Tab 1 |
 | खाते नूतनीकरण यादी | [fd-account-management-screen.md](fd-account-management-screen.md) — Tab 2 |
 
@@ -34,9 +34,10 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 | :--- | :--- |
 | नवीन खाते | [new-fd-account-screen](../mockups/fixed-deposit/new-fd-account-screen/) — Draft |
 | खाते व्यवस्थापन | [fd-account-management-screen](../mockups/fixed-deposit/fd-account-management-screen/) — Draft |
-| मॅन्युअल व्याज आकारणी | [fd-manual-interest-calculation-screen](../mockups/fixed-deposit/fd-manual-interest-calculation-screen/) — Draft |
 | ठेव कर्ज हप्ता पेमेंट | [deposit-loan-installment-payment-screen](../mockups/fixed-deposit/deposit-loan-installment-payment-screen/) — Draft |
 | व्याज गुणक | [fd-interest-multiplier-screen](../mockups/fixed-deposit/fd-interest-multiplier-screen/) — Draft |
+
+**Superseded mockup:** [fd-manual-interest-calculation-screen](../mockups/fixed-deposit/fd-manual-interest-calculation-screen/) → [manual-interest-management-screen](../mockups/accounting/manual-interest-management-screen/)
 
 ## Screenshot Location
 

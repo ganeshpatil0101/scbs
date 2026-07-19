@@ -1,5 +1,7 @@
 # Screen Spec — FD Manual Interest Calculation (मुदत ठेव > मॅन्युअल व्याज आकारणी)
 
+> **Superseded (2026-07-19):** Merged into [../accounting/manual-interest-management-screen.md](../accounting/manual-interest-management-screen.md) — **मॉड्यूल निवडा** = मुदत ठेव. Retained for field archaeology.
+
 ## Purpose
 
 UI specification for manually calculating and posting fixed deposit interest.

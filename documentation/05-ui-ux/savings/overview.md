@@ -14,13 +14,13 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 | :--- | :--- | :--- |
 | नवीन खाते | New Account | [new-savings-account-screen.md](new-savings-account-screen.md) |
 | खाते रजिस्टर | Account Register | [account-register-screen.md](account-register-screen.md) |
-| मॅन्युअल व्याज आकारणी | Manual Interest Calculation | [manual-interest-calculation-screen.md](manual-interest-calculation-screen.md) |
 
 ## Superseded Screens
 
 | Screen (Marathi) | Screen (English) | Superseded by |
 | :--- | :--- | :--- |
 | व्यवहार | Transaction | [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md) |
+| मॅन्युअल व्याज आकारणी / तरतूद | Manual Interest Assessment / Provision | [../accounting/manual-interest-management-screen.md](../accounting/manual-interest-management-screen.md) — **मॉड्यूल निवडा** = बचत |
 
 ## Mockups
 
@@ -28,9 +28,10 @@ Branch, GL, Account Holder, Customer, and Agent lookups use a single **Autocompl
 | :--- | :--- |
 | नवीन खाते | [new-savings-account-screen](../mockups/savings/new-savings-account-screen/) — Draft |
 | खाते रजिस्टर | [account-register-screen](../mockups/savings/account-register-screen/) — Draft |
-| मॅन्युअल व्याज आकारणी | [manual-interest-calculation-screen](../mockups/savings/manual-interest-calculation-screen/) — Draft |
 
 **Superseded mockup:** [savings-transaction-screen](../mockups/savings/savings-transaction-screen/) → [deposit-account-transaction-screen](../mockups/accounting/deposit-account-transaction-screen/)
+
+**Superseded mockup:** [manual-interest-calculation-screen](../mockups/savings/manual-interest-calculation-screen/) → [manual-interest-management-screen](../mockups/accounting/manual-interest-management-screen/)
 
 ## Screenshot Location
 

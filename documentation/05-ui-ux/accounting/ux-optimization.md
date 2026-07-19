@@ -92,9 +92,83 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 
 - [overview.md](overview.md)
 - [deposit-account-transaction-screen.md](deposit-account-transaction-screen.md)
+- [manual-interest-management-screen.md](manual-interest-management-screen.md)
 - [changelog.md](changelog.md)
 - [../savings/ux-optimization.md](../savings/ux-optimization.md)
 - [../fixed-deposit/ux-optimization.md](../fixed-deposit/ux-optimization.md)
 - [../daily/ux-optimization.md](../daily/ux-optimization.md)
 - [../recurring/ux-optimization.md](../recurring/ux-optimization.md)
 - [../../AI_INDEX.md](../../AI_INDEX.md)
+
+---
+
+# Manual Interest Management Consolidation
+
+Audit date: 2026-07-19. Applied: 2026-07-19. Cross-domain consolidation under `documentation/05-ui-ux/accounting/`.
+
+Patterns applied: [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md), [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
+
+Reference precedent (tabs): [../recurring/recurring-interest-management-screen.md](../recurring/recurring-interest-management-screen.md), [../loan/loan-interest-management-screen.md](../loan/loan-interest-management-screen.md), [../investment/bank-deposit-interest-management-screen.md](../investment/bank-deposit-interest-management-screen.md).
+
+## Summary
+
+| Metric | Before | After |
+| :--- | :---: | :---: |
+| Manual interest screens (4 modules × 2 actions) | 8 legacy entries | **1** |
+| UI mode for provision vs assessment | Separate menus / tabs (Recurring) | **कार्यवाही निवडा** radio (तरतूद / आकारणी) |
+| Module selection | Per-module menu | **मॉड्यूल निवडा** radio (बचत / मुदत ठेव / डेली / रिकरिंग) |
+| Branch / GL lookup | Legacy dual ID + dropdown pairs | Single Autocomplete per entity |
+
+## Consolidated Screen Map
+
+| New screen | Replaces | Document |
+| :--- | :--- | :--- |
+| मॅन्युअल व्याज व्यवस्थापन (Manual Interest Management) | Savings + FD + Daily + Recurring manual interest provision + assessment | [manual-interest-management-screen.md](manual-interest-management-screen.md) |
+
+## Decisions Applied (2026-07-19)
+
+| # | Decision |
+| :---: | :--- |
+| 1 | Merge 4 module × 2 action screens → one screen with **मॉड्यूल निवडा** + **कार्यवाही निवडा** radio groups (intentional deviation from Loan/Investment/Recurring tab precedent) |
+| 2 | Standardize grid-populate button → **व्याज गणना करा** (legacy डेली/रिकरिंग used `व्याज आकारणी` for same action) |
+| 3 | **Remove** legacy **प्रगत शोध** / Advanced Search link — not required on consolidated screen |
+| 4 | **व्याज दिनांक** read-only auto FY-end on all modules (replaces legacy dropdown on Savings) |
+| 5 | **जी.एल. निवडा** Autocomplete on all modules — default `55 — सेव्हिंग ठेव` for बचत; legacy बचत **खाते क्र.** + **खाते** dropdown removed |
+| 6 | मुदत ठेव-only: **स्थिती** dropdown + **सवलत दर** grid column + **वर्तमान व्याज** label |
+| 7 | डेली / रिकरिंग: pink legend for interest-free-period accounts |
+| 8 | Footer totals identical all modules: एकूण शिल्लक, एकूण तरतूद, एकूण व्याज, एकूण व्याज + एकूण तरतूद |
+| 9 | Primary posting button varies by module × action — documented in footer matrix |
+| 10 | New तरतूद screenshots captured for बचत, मुदत ठेव, डेली (2026-07-19); डेली आकारणी screenshot added same day |
+
+## Action Checklist
+
+### High priority
+
+- [x] Create manual-interest-management-screen.md with dual radio groups
+- [x] Superseded banners on savings, fd, recurring interest specs
+- [x] Update module overview.md files (4 modules)
+- [x] Save new screenshots to `screenshots/bachat/`, `screenshots/मुदत ठेव/`, `screenshots/डेली/`
+- [x] Reference Screenshots table (8 files)
+
+### Low priority / Deferred
+
+- [ ] डेली आकारणी primary posting button label (`TODO` — cropped in both Daily screenshots)
+- [ ] FD Status dropdown values (`TODO`)
+- [ ] HTML mockup (`/generate-ui-mockup manual-interest-management-screen`)
+
+## Deprecated Specs (reference only)
+
+| Superseded spec | New spec |
+| :--- | :--- |
+| [../savings/manual-interest-calculation-screen.md](../savings/manual-interest-calculation-screen.md) | [manual-interest-management-screen.md](manual-interest-management-screen.md) |
+| [../fixed-deposit/fd-manual-interest-calculation-screen.md](../fixed-deposit/fd-manual-interest-calculation-screen.md) | [manual-interest-management-screen.md](manual-interest-management-screen.md) |
+| [../recurring/recurring-interest-management-screen.md](../recurring/recurring-interest-management-screen.md) | [manual-interest-management-screen.md](manual-interest-management-screen.md) |
+
+## Apply Status (Manual Interest)
+
+| Phase | Status |
+| :--- | :--- |
+| Phase 1 — Audit | Complete |
+| Phase 2 — Plan | Complete |
+| Phase 3 — Apply to specs | **Complete (2026-07-19)** |
+| Phase 4 — Mockups | **Draft (2026-07-19)** — [manual-interest-management-screen](../mockups/accounting/manual-interest-management-screen/) |
