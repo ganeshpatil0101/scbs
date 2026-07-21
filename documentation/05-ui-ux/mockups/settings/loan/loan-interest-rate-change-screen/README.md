@@ -17,7 +17,7 @@ Reference screenshot `screenshots/settings/डॅशबोर्ड-सेटि
 
 - [ ] Single-page form (no separate history tab)
 - [ ] Past rate changes in collapsible section (collapsed by default)
-- [ ] Scheme dropdown marked TODO until master data available
+- [ ] Scheme dropdown shows sample loan schemes (dynamic from Settings > नवीन योजना, Scheme Type = कर्ज)
 - [ ] Apply rate radio options with correct default
 - [ ] Export and Save actions in footer
 - [ ] Required fields marked with *

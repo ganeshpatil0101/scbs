@@ -2,6 +2,7 @@
 
 | Version | Date | Changes | Reason | Author |
 | :--- | :--- | :--- | :--- | :--- |
+| 1.3.0 | 2026-07-21 | TODO closure: ठेव प्रकार full enum; स्थिती reuse FD/Savings/Daily; interest-transfer + cheque बँक = society Bank master Autocomplete; निधी removed; व्याज गणना प्रकार = दिवस/महिने. Specs + mockups updated. Account Register deferred. | Bank confirmation of Investment dropdown gaps | AI Agent |
 | 1.0.0 | 2026-07-05 | Bank Deposit module — 6 screen specs | New screenshots in `screenshots/गुंतवणूक/` | AI Agent |
 | 1.1.0 | 2026-07-11 | UX optimization: 6 → 4 screens | Consolidate bank master + interest screens; Autocomplete, Auto-fill, Advanced patterns | AI Agent |
 | 1.2.0 | 2026-07-11 | HTML mockups (Draft) for 4 optimized screens | Bank-user layout review via `@generate-ui-mockup` | AI Agent |

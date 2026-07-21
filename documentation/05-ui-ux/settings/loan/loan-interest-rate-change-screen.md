@@ -26,7 +26,7 @@ UI specification for changing loan scheme interest rates. Single-page form with 
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | योजना | Scheme | Dropdown | Yes | Loan scheme list — populated dynamically |
+| 1 | योजना | Scheme | Dropdown | Yes | Loaded dynamically from Loan schemes (Settings > नवीन योजना, Scheme Type = कर्ज). Sample: `जामीनकी कर्ज`. Full list from scheme master — not a fixed enum. Same pattern as [new-loan-screen.md](../../loan/new-loan-screen.md) |
 | 2 | बदल दिनांक | Change Date | Date | Yes | — |
 | 3 | सर्व खात्यांना नवीन दर लागू करावा | Apply New Rate to All Accounts | Radio | No | Default selected |
 | 4 | फक्त नवीन खात्यांना नवीन दर लागू करावा | Apply New Rate to New Accounts Only | Radio | No | — |

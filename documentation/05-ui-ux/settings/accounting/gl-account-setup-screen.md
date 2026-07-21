@@ -35,7 +35,7 @@ Former **New GL Group** fields.
 | 4 | खर्च | Expense | Radio | No | — |
 | 5 | येणे | Receivable | Radio | No | Visible only when Balance Sheet selected |
 | 6 | देणे | Payable | Radio | No | Visible only when Balance Sheet selected |
-| 7 | गट प्रकार निवडा | Select Group Type | Dropdown | Yes | Default: `इतर` |
+| 7 | गट प्रकार निवडा | Select Group Type | Dropdown (disabled) | Yes | Single value `इतर` (Other) only — control disabled; not editable by staff |
 | 8 | गटाचे नाव | Group Name | Textbox | Yes | — |
 
 ### Section: प्रगत सेटिंग्ज (Advanced Settings) — collapsed by default
@@ -53,7 +53,7 @@ Former **New GL Head** fields (simplified default view).
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 10 | खाते गट | Account Group | Label | — | Read-only: populated from Tab 1 Group Name |
-| 11 | खाते प्रकार | Account Type | Dropdown | Yes | Default: `इतर` |
+| 11 | खाते प्रकार | Account Type | Dropdown (disabled) | Yes | Single value `इतर` (Other) only — control disabled; not editable by staff |
 | 12 | जी. एल. हेड क्र. | GL Head No. | Label | — | Auto-generated (e.g. `163`). Read-only |
 | 13 | जी. एल. हेडचे नाव | GL Head Name | Textbox | Yes | — |
 | 14 | स्थिती | Status | Dropdown | Yes | Default: `चालू`. Values: `चालू`, `बंद`, `स्थगित` |

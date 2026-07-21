@@ -18,7 +18,7 @@ To share with bank reviewers: zip this folder and send via email, or host on sta
 - Single-form screen (no tabs): role name field + scrollable permission matrix.
 - Desktop: full-width permission grid with sticky column headers; bulk-select checkboxes in header row.
 - Mobile: table scrolls horizontally; sticky action bar at bottom.
-- Sample rows show **अकाउंटींग** menu forms from spec; remaining menus/forms marked `[TODO]`.
+- Sample rows show **अकाउंटींग** menu forms from spec; remaining menus/forms load from the app menu registry (not a fixed enum).
 
 ## Review checklist
 
@@ -26,6 +26,7 @@ To share with bank reviewers: zip this folder and send via email, or host on sta
 - [ ] Permission grid columns match spec (अ.क्र., मेनु, फॉर्मचे नाव, सर्व अधिकार, फक्त बघण्यासाठी, अधिकार नाही)
 - [ ] Header checkboxes for bulk column select visible and understandable
 - [ ] Sample Accounting rows match spec (8 forms listed)
+- [ ] Trailing note indicates remaining rows come from app menu registry
 - [ ] Marathi labels clear for non-technical bank staff
 - [ ] Responsive layout approved on mobile and desktop
 - [ ] Sticky action bar (रीसेट, जतन करा) placement approved
@@ -33,7 +34,7 @@ To share with bank reviewers: zip this folder and send via email, or host on sta
 ## Known gaps
 
 - Reference screenshot `screenshots/settings/डॅशबोर्ड-सेटिंग्ज-मास्टर-युजर रोल.png` not in repo — mockup is spec-driven only
-- Full form list per menu is `TODO` in spec — only partial Accounting sample shown; trailing row marks pending master data
+- Full form list is dynamic from app menu registry — mockup shows Accounting sample only
 - Checkbox mutual exclusivity (one permission level per row) not implemented — layout-only mockup
 
 ## Approval

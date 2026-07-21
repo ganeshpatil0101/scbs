@@ -101,11 +101,10 @@ Cross-module (unchanged): [../fixed-deposit/deposit-loan-installment-payment-scr
 
 | Item | Handling |
 | :--- | :--- |
-| Repayment Type, Deduction Type, Bank dropdown values | Keep `TODO` in specs |
-| Loan Information Tab 2 ग्राहक माहिती | Tab shell only — not invented |
-| New Deposit Loan Nominee section | Header only — not invented |
-| Register `अतिरिक्त शोध पर्याय` | Link retained; fields not captured |
-| Loan Renewal List screen | Not in captured set — add when screenshots available |
+| `परतफेड प्रकार`, `कपात प्रकार निवडा` on Loan Transaction | **Keep TODO** — bank will provide later |
+| FD Deposit Loan Installment Tabs 2–6 | Keep TODO under FD (remove later) |
+
+*(Resolved 2026-07-21: Status; Bank Master; Interest FY-end; scheme/slab/months dynamic; Staff Autocomplete; collateral + loan reason enums; SI frequency; omit Loan Info Tab 2; Deposit Loan nominee-as-Customer.)*
 
 ---
 

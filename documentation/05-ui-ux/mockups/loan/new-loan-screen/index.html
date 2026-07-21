@@ -58,11 +58,11 @@
           <div data-spec-field="1">
             <label class="mockup-label" for="scheme">
               योजना निवडा <span class="mockup-required">*</span>
-              <span class="mockup-badge-todo">TODO</span>
             </label>
             <select id="scheme">
-              <option value="">योजना निवडा</option>
-              <option value="" disabled>[TODO] — master data</option>
+              <option value="">निवडा</option>
+              <option value="surety" selected>जामीनकी कर्ज</option>
+              <option value="gold">सोने तारण कर्ज</option>
             </select>
           </div>
           <div data-spec-field="2">
@@ -107,8 +107,8 @@
             </div>
             <div data-spec-field="11"><label class="mockup-label">खाते क्र.</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-500 w-full">— (स्वयं)</span></div>
             <div data-spec-field="12">
-              <label class="mockup-label" for="rate-slab">व्याज दर स्लॅब <span class="mockup-required">*</span> <span class="mockup-badge-todo">TODO</span></label>
-              <select id="rate-slab"><option value="">निवडा</option><option value="" disabled>[TODO]</option></select>
+              <label class="mockup-label" for="rate-slab">व्याज दर स्लॅब <span class="mockup-required">*</span></label>
+              <select id="rate-slab"><option value="">निवडा</option><option value="12-50000-12" selected>12 महिने — 50,000 — 12%</option><option value="24-100000-11">24 महिने — 1,00,000 — 11%</option></select>
             </div>
             <div data-spec-field="13"><label class="mockup-label" for="duration">कालावधी (महिने) <span class="mockup-required">*</span></label><input type="text" id="duration" value="36"></div>
             <div data-spec-field="14"><label class="mockup-label" for="loan-amount">कर्ज रक्कम (रु.) <span class="mockup-required">*</span></label><input type="text" id="loan-amount" value="2,00,000"></div>
@@ -158,8 +158,8 @@
         <h2 class="mockup-section-title" id="section-schedule">कर्ज हप्ता पत्रक</h2>
         <div class="mockup-field-grid mockup-field-grid--2 mb-4">
           <div data-spec-field="t2-1">
-            <label class="mockup-label" for="inst-months">हप्त्याचे महिने निवडा <span class="mockup-required">*</span> <span class="mockup-badge-todo">TODO</span></label>
-            <select id="inst-months"><option value="">निवडा</option><option value="" disabled>[TODO]</option></select>
+            <label class="mockup-label" for="inst-months">हप्त्याचे महिने निवडा <span class="mockup-required">*</span></label>
+            <select id="inst-months"><option value="">निवडा</option><option value="12" selected>12</option><option value="24">24</option><option value="36">36</option></select>
           </div>
           <div data-spec-field="t2-2"><label class="mockup-label" for="first-inst-date">पहिला हप्ता दिनांक <span class="mockup-required">*</span></label><input type="date" id="first-inst-date" value="2026-08-15"></div>
         </div>
@@ -221,11 +221,16 @@
           <div class="mockup-field-grid">
             <div data-spec-field="t4-1">
               <label class="mockup-label" for="status">स्थिती निवडा <span class="mockup-required">*</span></label>
-              <select id="status"><option value="active" selected>चालू</option><option value="" disabled>[TODO]</option></select>
+              <select id="status">
+                <option value="active" selected>चालू</option>
+                <option value="closed">बंद</option>
+                <option value="suspended">स्थगित</option>
+              </select>
             </div>
             <div data-spec-field="t4-4">
-              <label class="mockup-label" for="guardian-emp">पालक कर्मचारी निवडा <span class="mockup-required">*</span> <span class="mockup-badge-todo">TODO</span></label>
-              <select id="guardian-emp"><option value="">निवडा</option><option value="" disabled>[TODO]</option></select>
+              <label class="mockup-label" for="guardian-emp">पालक कर्मचारी निवडा <span class="mockup-required">*</span></label>
+              <input type="text" id="guardian-emp" class="mockup-autocomplete" list="staff-options" placeholder="ID किंवा नाव">
+              <datalist id="staff-options"><option value="1 — कर्मचारी 1"></option><option value="2 — कर्मचारी 2"></option></datalist>
             </div>
             <div data-spec-field="t4-5"><label class="mockup-label" for="approval-officer-no">मंजुरी अधिकारी क्र <span class="mockup-required">*</span></label><input type="text" id="approval-officer-no"></div>
             <div data-spec-field="t4-6"><label class="mockup-label" for="approving-officer">मंजूर अधिकारी/शिफारस संचालक निवडा <span class="mockup-required">*</span></label><input type="text" id="approving-officer"></div>
@@ -240,8 +245,23 @@
           </label>
           <div id="collateral-fields" class="mockup-hidden mockup-field-grid">
             <div data-spec-field="t4-9">
-              <label class="mockup-label" for="collateral-type">तारण प्रकार निवडा <span class="mockup-badge-todo">TODO</span></label>
-              <select id="collateral-type"><option value="">निवडा</option><option value="" disabled>[TODO]</option></select>
+              <label class="mockup-label" for="collateral-type">तारण प्रकार निवडा</label>
+              <select id="collateral-type">
+                <option value="">तारण प्रकार निवडा</option>
+                <option value="1">स्थावर व इतर मालमत्ता</option>
+                <option value="2">यंत्र सामुग्री</option>
+                <option value="3">मालसाठा</option>
+                <option value="4">सोने तारण कर्ज</option>
+                <option value="5">एच.पी. कर्ज</option>
+                <option value="6">घर कर्ज</option>
+                <option value="7">तारणी</option>
+                <option value="8">विनातारणी</option>
+                <option value="9">विमा कर्ज</option>
+                <option value="10">ठेव कर्ज</option>
+                <option value="11">शेती तारण</option>
+                <option value="12">पगार तारण</option>
+                <option value="13">निवृत्ती वेतन</option>
+              </select>
             </div>
             <div data-spec-field="t4-10"><label class="mockup-label" for="valuation">मूल्यांकन (रु.)</label><input type="text" id="valuation"></div>
             <div data-spec-field="t4-11"><label class="mockup-label" for="valuation-date">मूल्यांकन दिनांक</label><input type="date" id="valuation-date"></div>
@@ -260,8 +280,15 @@
           <table class="mockup-table"><thead><tr><th>निवडा</th><th>खाते क्र.</th><th>नाव</th><th>चालू दिनांक</th><th>शिल्लक</th><th>खाते बंद दिनांक</th></tr></thead><tbody><tr><td><input type="checkbox"></td><td>91-101</td><td>राम पाटील</td><td>2024-01-01</td><td>1,00,000.00</td><td>—</td></tr></tbody></table>
         </div>
         <div data-spec-field="t4-16">
-          <label class="mockup-label" for="loan-reason">कर्जाचे कारण निवडा <span class="mockup-required">*</span> <span class="mockup-badge-todo">TODO</span></label>
-          <select id="loan-reason"><option value="">निवडा</option><option value="" disabled>[TODO]</option></select>
+          <label class="mockup-label" for="loan-reason">कर्जाचे कारण निवडा <span class="mockup-required">*</span></label>
+          <select id="loan-reason">
+            <option value="0" selected>निवडा</option>
+            <option value="1">इतर</option>
+            <option value="2">वायवसाय कर्ज</option>
+            <option value="3">वाहन तारण कर्ज</option>
+            <option value="4">सोने तारण</option>
+            <option value="5">स्थावर तारण कर्ज</option>
+          </select>
         </div>
       </section>
       <details class="mockup-section">
@@ -316,8 +343,16 @@
             <datalist id="si-holder-options"><option value="101 — Account Holder 1"></option><option value="102 — Account Holder 2"></option></datalist>
           </div>
           <div data-spec-field="t6-3">
-            <label class="mockup-label" for="frequency">वारंवारता <span class="mockup-badge-todo">TODO</span></label>
-            <select id="frequency"><option value="">निवडा</option><option value="" disabled>[TODO]</option></select>
+            <label class="mockup-label" for="frequency">वारंवारता</label>
+            <select id="frequency">
+              <option value="">निवडा</option>
+              <option value="daily">दैनिक</option>
+              <option value="fortnight">पाक्षिक</option>
+              <option value="monthly" selected>मासिक</option>
+              <option value="quarter">तिमाही</option>
+              <option value="half">सहामाही</option>
+              <option value="year">वार्षिक</option>
+            </select>
           </div>
           <div data-spec-field="t6-4"><label class="mockup-label" for="si-day">दिवस / तारीख निवडा</label><select id="si-day"><option value="31" selected>31</option></select></div>
         </div>

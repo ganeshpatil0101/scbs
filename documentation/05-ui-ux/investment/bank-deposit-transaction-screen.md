@@ -90,7 +90,7 @@ Displayed after account resolve. Replaces individual editable textboxes for calc
 | 4 | चेक दिनांक | Cheque Date | Date | Yes | — |
 | 5 | चेक क्र. | Cheque No. | Textbox | Yes | — |
 | 6 | नाव | Name | Textbox | Yes | — |
-| 7 | बँक निवडा | Select Bank | Autocomplete | Yes | Values: `TODO` — scaffold from master data service |
+| 7 | बँक निवडा | Select Bank | Autocomplete | Yes | From society Bank master — [../bank/bank-management-screen.md](../bank/bank-management-screen.md). Enter resolves by ID or name; e.g. `1 — बँक ऑफ इंडिया`. Same source as New Account interest-transfer bank. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
 | 8 | बँक शाखा | Bank Branch | Textbox | No | External bank branch |
 
 **Removed:** Redundant `ड्रॉन ऑन बँक` / `ड्रॉन ऑन ब्रांच` — covered by Bank Autocomplete + branch textbox.
@@ -150,6 +150,7 @@ Displayed after account resolve. Replaces individual editable textboxes for calc
 - [overview.md](overview.md)
 - [ux-optimization.md](ux-optimization.md)
 - [bank-deposit-new-account-screen.md](bank-deposit-new-account-screen.md)
+- [../bank/bank-management-screen.md](../bank/bank-management-screen.md)
 - [../fixed-deposit/fd-transaction-screen.md](../fixed-deposit/fd-transaction-screen.md)
 - [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)
 - [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

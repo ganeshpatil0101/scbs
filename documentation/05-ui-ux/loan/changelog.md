@@ -2,6 +2,8 @@
 
 | Version | Date | Changes | Reason | Author |
 | :--- | :--- | :--- | :--- | :--- |
+| 2.3.0 | 2026-07-21 | New Loan / Deposit Loan: scheme+slab+months dynamic; Staff Autocomplete; collateral types + loan reasons from bank HTML; SI frequency enum; Deposit Loan nominee-as-Customer; Loan Info omit Tab 2 ग्राहक माहिती; mockups updated. परतफेड/कपात प्रकार still TODO | Bank confirmation Items 5–13 | AI Agent |
+| 2.2.0 | 2026-07-21 | Status = `चालू`/`बंद`/`स्थगित` (New Loan, New Deposit Loan, Register); omit Register अतिरिक्त शोध; Bank Autocomplete from Bank Master on Transaction; Interest Date = read-only last FY-end; mockups updated | Bank confirmation — reuse Savings / deposit / Manual Interest patterns | AI Agent |
 | 1.0.0 | 2025-06-26 | New Loan, New Deposit Loan screen specs | Generated from `screenshots/कर्ज/` MP4s | AI Agent |
 | 1.1.0 | 2026-07-01 | Consolidated Branch/GL/Account lookup fields into single Autocomplete per entity-autocomplete-pattern.md | Legacy dual-field UX replaced | AI Agent |
 | 1.2.0 | 2026-07-04 | Added Loan Information screen spec (3 tabs) from `02_07` PNGs | New screenshots in `screenshots/कर्ज/` | AI Agent |

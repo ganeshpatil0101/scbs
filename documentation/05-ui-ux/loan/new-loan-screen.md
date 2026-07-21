@@ -45,7 +45,7 @@ UI specification for opening a new loan account. Six-tab wizard.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | योजना निवडा | Select Scheme | Dropdown | Yes | Default: `योजना निवडा`. Values: `TODO` |
+| 1 | योजना निवडा | Select Scheme | Dropdown | Yes | Loaded dynamically from Loan schemes (Settings > नवीन योजना, Scheme Type = कर्ज). Sample: `जामीनकी कर्ज`. Full list from scheme master — not a fixed enum |
 | 2 | योजना प्रकार | Scheme Type | Label | No | Auto-fill from selected scheme |
 
 ### Section: ग्राहक माहिती (Customer Information)
@@ -66,7 +66,7 @@ UI specification for opening a new loan account. Six-tab wizard.
 | 9 | एजंट शाखा निवडा | Select Agent Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name |
 | 10 | एजंट निवडा | Select Agent | Autocomplete | No | Replaces Agent Code + Search Agent Name. Enter resolves by ID or name |
 | 11 | खाते क्र. | Account No. | Label | No | Auto-generated |
-| 12 | व्याज दर स्लॅब (कालावधी - रक्कम - व्याज दर) | Interest Rate Slab | Dropdown | Yes | Values: `TODO` |
+| 12 | व्याज दर स्लॅब (कालावधी - रक्कम - व्याज दर) | Interest Rate Slab | Dropdown | Yes | Loaded from selected scheme's rate/duration slab grid (Settings > नवीन योजना). Not a fixed enum |
 | 13 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | — |
 | 14 | कर्ज रक्कम (रु.) | Loan Amount (Rs.) | Textbox | Yes | Primary loan amount field |
 | 15 | व्याज दर (द.सा.द.शे.) | Interest Rate (% p.a.) | Textbox | Yes | Auto-fill from slab; editable override |
@@ -110,7 +110,7 @@ UI specification for opening a new loan account. Six-tab wizard.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | हप्त्याचे महिने निवडा | Select Installment Months | Dropdown | Yes | Values: `TODO` |
+| 1 | हप्त्याचे महिने निवडा | Select Installment Months | Dropdown | Yes | Loaded from selected scheme / duration (e.g. month count options derived from scheme tenure). Not a fixed enum |
 | 2 | पहिला हप्ता दिनांक | First Installment Date | Date | Yes | — |
 
 **Action:** `दाखवा` (Show) — generates schedule grid.
@@ -191,10 +191,10 @@ Co-borrower grid uses same columns as guarantor grid.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | स्थिती निवडा | Select Status | Dropdown | Yes | e.g. `चालू`. Other values: `TODO` |
+| 1 | स्थिती निवडा | Select Status | Dropdown | Yes | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended) — same as deposit account status |
 | 2 | दावा दाखल स्थिती | Claim Filed Status | Dropdown | No | **Visible only when applicable** — not disabled mystery field |
 | 3 | दावा दाखल कायदा | Claim Filed Law | Dropdown | No | **Visible only when applicable** |
-| 4 | पालक कर्मचारी निवडा | Select Guardian Employee | Dropdown | Yes | Values: `TODO` |
+| 4 | पालक कर्मचारी निवडा | Select Guardian Employee | Autocomplete | Yes | From Staff master. Sample: `1 — कर्मचारी 1`. Enter resolves by staff ID or name. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
 | 5 | मंजुरी अधिकारी क्र | Approval Officer No. | Textbox | Yes | — |
 | 6 | मंजूर अधिकारी/शिफारस संचालक निवडा | Select Approving Officer | Textbox | Yes | — |
 | 7 | तपशील | Details | Textbox | No | — |
@@ -204,7 +204,7 @@ Co-borrower grid uses same columns as guarantor grid.
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 8 | तारण | Collateral | Checkbox | No | **Visible only when checked:** fields 9–14 below |
-| 9 | तारण प्रकार निवडा | Select Collateral Type | Dropdown | Yes* | Values: `TODO` |
+| 9 | तारण प्रकार निवडा | Select Collateral Type | Dropdown | Yes* | Values: `स्थावर व इतर मालमत्ता`, `यंत्र सामुग्री`, `मालसाठा`, `सोने तारण कर्ज`, `एच.पी. कर्ज`, `घर कर्ज`, `तारणी`, `विनातारणी`, `विमा कर्ज`, `ठेव कर्ज`, `शेती तारण`, `पगार तारण`, `निवृत्ती वेतन` |
 | 10 | मूल्यांकन (रु.) | Valuation (Rs.) | Textbox | Yes* | — |
 | 11 | मूल्यांकन दिनांक | Valuation Date | Date | Yes* | — |
 | 12 | मूल्यांकनकाराचे नाव | Valuator Name | Textbox | Yes* | — |
@@ -223,7 +223,7 @@ Co-borrower grid uses same columns as guarantor grid.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 16 | कर्जाचे कारण निवडा | Select Loan Reason | Dropdown | Yes | Values: `TODO` |
+| 16 | कर्जाचे कारण निवडा | Select Loan Reason | Dropdown | Yes | Default: `निवडा`. Values: `इतर`, `वायवसाय कर्ज`, `वाहन तारण कर्ज`, `सोने तारण`, `स्थावर तारण कर्ज` |
 
 ### Section: प्रगत सेटिंग्ज (Advanced Settings)
 
@@ -267,7 +267,7 @@ Same columns and actions as above section.
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | जी.एल. निवडा | Select GL | Autocomplete | No | Sample: `42 — Loan`. Enter resolves by ID or name; shows display name |
 | 2 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
-| 3 | वारंवारता | Frequency | Dropdown | No | Values: `TODO` |
+| 3 | वारंवारता | Frequency | Dropdown | No | Values: `दैनिक`, `पाक्षिक`, `मासिक`, `तिमाही`, `सहामाही`, `वार्षिक` — same as Daily scheme compounding options |
 | 4 | दिवस / तारीख निवडा | Select Day / Date | Dropdown | No | e.g. `31` |
 
 **Note:** टीप: महिना अंतिम तारीख (month-end date applies when day exceeds month length).

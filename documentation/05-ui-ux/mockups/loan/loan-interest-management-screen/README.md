@@ -16,12 +16,12 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 - Reference screenshots under `screenshots/कर्ज/` not verified in repo — mockup is spec-driven.
 - Shared filter + results grid across both tabs; primary footer action changes: **तरतूद** (Tab 1) / **पोस्टिंग** (Tab 2).
-- व्याज दिनांक निवडा full list marked TODO per spec.
+- व्याज दिनांक is read-only last FY-end (e.g. `31.03.2026`) — same as accounting Manual Interest.
 - Tab 2 adds matured-loan checkbox and अॅडव्हान्स शोध link.
 
 ## Review checklist
 
-- [ ] Shared filter: Branch/GL Autocomplete, Interest Date (TODO list), Post Date, Account From/To
+- [ ] Shared filter: Branch/GL Autocomplete, Interest Date (FY-end read-only), Post Date, Account From/To
 - [ ] Tab 2 extras: परिपक्व कर्जासाठी checkbox, अॅडव्हान्स शोध link
 - [ ] Grid: all 12 columns; व्याज and दंड व्याज editable
 - [ ] Summary totals: तरतूद, व्याज, दंड तरतूद, दंड व्याज, शिल्लक

@@ -17,7 +17,8 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 - **जमा / नावे** radio on Tab 1 (default: जमा) updates tab labels and mode-specific tabs 3, 6, 7.
 - Credit: हप्ते → … → खातेवही (tab 6) → जामीनदार (tab 7).
 - Debit: पूर्वीची कर्ज कपात → … → परतफेड वेळापत्रक (tab 6) → खातेवही (tab 7).
-- `TODO` dropdowns (परतफेड प्रकार, कपात प्रकार, बँक निवडा) use disabled `[TODO]` options.
+- `TODO` dropdowns remain for परतफेड प्रकार, कपात प्रकार.
+- बँक निवडा = Bank Master Autocomplete (samples from deposit Instrument tab).
 - प्रगत सेटिंग्ज collapsed by default on Tab 1 and Tab 3 (Credit).
 
 ## Review checklist

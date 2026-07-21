@@ -30,7 +30,7 @@ UI specification for searching and listing loan accounts.
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | शाखा निवडा | Select Branch | Autocomplete | No | e.g. `1 — कोतोली मुख्य कार्यालय`. Replaces Branch Code + Branch Name pair |
 | 2 | जी.एल. निवडा | Select G.L. | Autocomplete | No | e.g. `61 — जामिनकी कर्ज` (Surety Loan) |
-| 3 | मिती निवडा | Select Status | Dropdown | No | e.g. `चालू` (Active) |
+| 3 | स्थिती निवडा | Select Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended) — same as [New Loan](new-loan-screen.md) |
 | 4 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | Range filter |
 | 5 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | Range filter |
 | 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Replaces free-text `खातेदाराचे नाव` |
@@ -39,9 +39,9 @@ UI specification for searching and listing loan accounts.
 
 **Removed:** `संघटना` (Organization) — session header.
 
-**Link:** `अतिरिक्त शोध पर्याय` — `TODO — not captured`.
-
 **Action:** `दाखवा`.
+
+> **Out of scope (deferred):** Legacy link `अतिरिक्त शोध पर्याय` exists in the old app but is not required for the current CBS UI — omitted from this spec (no stub, no TODO). Same as [Savings Account Register](../savings/account-register-screen.md).
 
 **Filter checkbox:** `परतीची दिनांक संपून गेलेली खाते` (Accounts whose return date has expired).
 

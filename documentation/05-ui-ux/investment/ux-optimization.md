@@ -72,7 +72,7 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 ### Medium priority
 
 - [x] New Account: पावती क्रमांक, व्याज प्रकार, व्याज गणना प्रकार, निधी → प्रगत सेटिंग्ज
-- [x] Transaction Tab 2: conditional visibility when Transfer; cheque bank as TODO Autocomplete
+- [x] Transaction Tab 2: conditional visibility when Transfer; cheque bank Autocomplete from society Bank master
 - [x] Transaction Tab 4: note shared `app-ledger-tab`
 - [x] Bank Management: cross-link to operational बँक व्यवस्थापन
 - [x] Interest: TDS column display-only; multi-select bank retained
@@ -84,14 +84,22 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 
 ---
 
-## Open Gaps (TODO — not captured)
+## Open Gaps (deferred)
 
 | Item | Handling |
 | :--- | :--- |
-| `निधी`, interest-transfer bank, cheque `बँक निवडा` values | Keep `TODO` in specs |
-| Full `ठेव प्रकार` / `स्थिती` enums beyond samples | Keep examples; note gap |
-| Account Register / inquiry screen | Not in captured set — add when screenshots available |
+| Account Register / inquiry screen | Skip for now — add when screenshots available |
 | Screenshots folder empty in repo | Specs remain source of truth |
+
+### Resolved (2026-07-21)
+
+| Item | Resolution |
+| :--- | :--- |
+| ठेव प्रकार | Full enum: मुदत ठेव … आवर्ती ठेव वार्षिक |
+| स्थिती | Reuse FD/Savings/Daily: `चालू`, `बंद`, `स्थगित` |
+| व्याज हस्तांतरणासाठी बँक / cheque बँक निवडा | Autocomplete from society Bank master (`bank-management-screen`) |
+| निधी | Removed — not required |
+| व्याज गणना प्रकार | `दिवस`, `महिने` |
 
 ---
 

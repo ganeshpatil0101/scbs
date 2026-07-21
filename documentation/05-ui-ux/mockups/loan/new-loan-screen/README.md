@@ -14,7 +14,10 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 ## Notes
 
 - 6-tab wizard: कर्ज माहिती → कर्ज हप्ता पत्रक → जामीनदार → मंजुरी व तारण → कर्ज रेकॉर्ड → एस.आय माहिती.
-- Tab 1: Customer/Agent Autocomplete; योजना निवडा marked `[TODO]`; विमा checkbox shows fields conditionally.
+- Tab 1: Customer/Agent Autocomplete; योजना / स्लॅब / हप्ते महिने dynamic from scheme master.
+- Tab 4: Status `चालू`/`बंद`/`स्थगित`; Staff Autocomplete; collateral + loan reason enums filled.
+- Tab 6: SI Frequency `दैनिक`…`वार्षिक`.
+- विमा checkbox shows fields conditionally.
 - Tab 4: तारण checkbox shows collateral fields conditionally.
 - प्रगत सेटिंग्ज collapsed by default on Tab 1 and Tab 4.
 - Reference video frames under `screenshots/कर्ज/new-loan-frames/` not verified in repo.

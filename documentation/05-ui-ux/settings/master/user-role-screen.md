@@ -35,11 +35,13 @@ Each row maps one form to one of three permission levels. Header checkboxes allo
 | # | Marathi Column | English Column | Type | Values / Notes |
 | :---: | :--- | :--- | :--- | :--- |
 | 1 | अ.क्र. | Sr. No. | Label | — |
-| 2 | मेनु | Menu | Label | Module name (e.g. `अकाउंटींग`) |
-| 3 | फॉर्मचे नाव | Form Name | Label | Screen name |
+| 2 | मेनु | Menu | Label | Module name from app menu registry (e.g. `अकाउंटींग`) — not a fixed enum |
+| 3 | फॉर्मचे नाव | Form Name | Label | Screen name from app menu registry — populated dynamically for all modules |
 | 4 | सर्व अधिकार | All Rights | Checkbox | Full access |
 | 5 | फक्त बघण्यासाठी | View Only | Checkbox | Read-only |
 | 6 | अधिकार नाही | No Rights | Checkbox | Deny access |
+
+**Rows:** Full मेनु + फॉर्म list is loaded dynamically from the application menu registry (all modules). Spec sample below is Accounting only for layout reference; mockups show the same sample plus a note that remaining rows come from the registry.
 
 **Sample rows (Accounting menu — partial; grid scrolls):**
 

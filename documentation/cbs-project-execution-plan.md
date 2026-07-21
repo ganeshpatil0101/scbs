@@ -10,14 +10,14 @@
 | Area | Status |
 |---|---|
 | Vision / Business Goals | ✅ Done (`vision.md`, `business-goals.md`) |
-| Glossary / System Boundaries | ❌ TODO |
+| Glossary / System Boundaries | ✅ Done (`glossary.md`, `system-boundaries.md`) |
 | Architecture overview | 🟡 Draft — **AWS `ap-south-1` (Mumbai) confirmed** (DEC-006); remaining arch docs still TODO |
 | `09-ai-context/` (coding standards, naming, folder structure) | ❌ Does not exist |
 | `02-business-domains/` (business rules, use cases) | ❌ Not started |
 | `03-api-contracts/` | ❌ Empty |
 | `04-database-design/` | ❌ Not started |
-| `05-ui-ux/` screen specs | 🟡 ~40 screens documented; **1.4 priority items mostly done** — scheme dropdowns closed, Shares Transfer Tab 3 + FD Tab 4 + Loan Scheme Category/Fee captured; **remaining:** User Role full form matrix, 25 screen specs with `TODO` tabs/dropdowns (see §1.4) |
-| Interactive mockups | 🟡 New Customer Tab 1–2 built (React), Tab 3 KYC pending |
+| `05-ui-ux/` screen specs | 🟡 **51 active** screen specs (plus superseded archaeology); **1.4 priority items closed** — new-account tabs, Agent Collection, deposit-transaction consolidation done; **residual:** User Role full form matrix + a few uncaptured secondary tabs (see §1.4) |
+| Interactive mockups | ✅ **58 HTML mockups** — **51/51 active specs covered**; New Customer Tab 3 KYC done; pattern set (transaction / scheme / register) validated |
 | Skill files | ✅ `generate-document`, `generate-ui-screen` complete |
 | Backend / Frontend code | ❌ Not started (pre-code stage) |
 
@@ -47,36 +47,40 @@ This plan is sequenced so **nothing gets built on an undocumented assumption** �
 > This unblocks consistent code generation in Phase 2 — currently `generate-ui-screen` skill has no coding-standards doc to point to.
 
 ### 1.4 Complete UI/UX Specs (close TODOs)
-**Status:** 🟡 **Mostly complete** — all three original priority bullets addressed in part; **not ready to close** until User Role matrix and uncaptured tabs below are resolved.
+**Status:** 🟡 **Priority items closed** (re-validated 2026-07-21) — original 1.4 blockers largely resolved via capture + UX consolidation; **residual** User Role matrix + a few secondary tabs remain (not blocking Phase 2 skeleton).
 
-**Original priority items (2026-07 audit):**
+**Original priority items (2026-07 audit) — closed:**
 - [x] Fill dropdown value lists flagged `TODO` across scheme screens (Daily/Savings/FD/Recurring/Loan New Scheme — duration type, status values, month/day pickers) — **done**; unified [new-scheme-screen.md](05-ui-ux/settings/schemes/new-scheme-screen.md) has zero `TODO` markers
 - [x] Complete missing tabs where originally flagged:
   - [x] FD New Account Tab 4 (Other) — captured in [new-fd-account-screen.md](05-ui-ux/fixed-deposit/new-fd-account-screen.md)
-  - [x] Shares Transfer Tab 3 (Transfer) — captured in [shares-transfer-screen.md](05-ui-ux/membership/shares-transfer-screen.md) v1.3.0
-  - [x] New Loan Scheme Category + Fee dropdowns — captured in [loan-new-scheme-screen.md](05-ui-ux/settings/schemes/loan-new-scheme-screen.md)
-  - [ ] FD New Account Tab 3 (Joint Holder) — **deferred v1** (tab shell only; not captured from source app)
-  - [ ] Daily Transaction Tabs 3, 4, 6 (Instrument Details, Transfer, KYC) — [daily-transaction-screen.md](05-ui-ux/daily/daily-transaction-screen.md)
-  - [ ] Deposit Loan Installment Payment Tabs 2–6 — [deposit-loan-installment-payment-screen.md](05-ui-ux/fixed-deposit/deposit-loan-installment-payment-screen.md)
+  - [x] Shares Transfer Tab 3 (Transfer) — captured in [shares-transfer-screen.md](05-ui-ux/membership/shares-transfer-screen.md) / management consolidation
+  - [x] New Loan Scheme Category + Fee dropdowns — captured (superseded into unified scheme screen)
+  - [x] FD New Account Tab 3 (Joint Holder) — **captured** (shared joint-holder pattern; conditional on Tab 1 checkbox)
+  - [x] Daily Transaction Tabs 3, 4, 6 — **superseded** by unified [deposit-account-transaction-screen.md](05-ui-ux/accounting/deposit-account-transaction-screen.md) (Savings/FD/Daily/Recurring deposit Txn)
+  - [x] Savings / Recurring / Daily New Account Nominee + Joint Holder tabs — **captured** (zero `TODO` on those specs)
+  - [x] Daily Agent Collection Tabs 2–3 — **captured** in [agent-collection-management-screen.md](05-ui-ux/daily/agent-collection-management-screen.md) (Brief Details + Transfer + Collection List)
+- [ ] Deposit Loan Installment Payment Tabs 2–6 — still `TODO` in [deposit-loan-installment-payment-screen.md](05-ui-ux/fixed-deposit/deposit-loan-installment-payment-screen.md) (needs source capture)
 - [ ] Capture User Role screen's full form list per menu — [user-role-screen.md](05-ui-ux/settings/master/user-role-screen.md) still shows only 8 Accounting sample rows (partial grid)
 
-**Remaining `TODO` gaps in screen specs (25 files, ~60 markers as of 2026-07-08):**
+**Residual `TODO` gaps (re-audit 2026-07-21 — 21 active specs, ~62 markers; superseded archaeology ignored):**
 
 | Category | Screens still flagged |
 |---|---|
-| Uncaptured tabs | Savings New Account (Tabs 2–4), Recurring New Account (Tabs 3–4), Recurring Credit Transaction (Tabs 2–4), FD Transaction (Tabs 2, 5), Daily Agent Collection (Tabs 2–3), Deposit Loan Installment (Tabs 2–6), Daily Transaction (Tabs 3–4, 6), Membership/Dividend Transaction (KYC tabs), Loan Information (tab), New Deposit Loan (section) |
-| Master-data dropdowns | Bank select, cheque type, scheme/status lists on transaction and new-account screens (dynamic master data — scaffold at build time per `generate-ui-screen` skill) |
-| Deferred / low priority | Transaction Passing advanced filters; interest-date pickers on manual/scheduled assessment screens |
+| Uncaptured tabs / sections | Deposit Loan Installment (Tabs 2–6); Membership/Dividend Transaction (Nominee/KYC shared tabs); Loan Information (one tab); New Deposit Loan (one section header) |
+| Master-data dropdowns | Bank select, cheque type, scheme/status/scroll lists on transaction screens (dynamic master data — scaffold at build time per `generate-ui-screen` skill) |
+| Deferred / low priority | Transaction Passing advanced filters; Loan Account Register / Member Register advanced-search links; deposit-account Ledger detail link; interest-date pickers on assessment screens |
 
-> **Note:** Remaining dropdown `TODO`s are largely **dynamic master data** (scheme lists, bank lists, status enums loaded from APIs) — acceptable to scaffold during Phase 2/3 implementation. Uncaptured **tabs** and the **User Role permission matrix** are the blockers for closing 1.4.
+> **Note:** Remaining dropdown `TODO`s are largely **dynamic master data** — acceptable to scaffold in Phase 2/3. **User Role permission matrix** and **Deposit Loan Installment secondary tabs** are the only meaningful capture leftovers; shared KYC/Nominee tabs can reuse already-captured patterns (`app-kyc-info-tab`, nominee-as-customer).
 
 ### 1.5 Interactive Mockups (Tiered Workflow: Spec → Prototype → Cursor)
-- [ ] Finish **New Customer** screen Tab 3 (KYC Documents) — in progress
-- [ ] Build 2–3 more mockups to validate patterns before scaling to 40+ screens:
-  - One **transaction screen** (e.g., Savings Transaction — 5-tab pattern reused by FD/Daily/Recurring)
-  - One **New Scheme (Settings)** screen (multi-tab wizard with grids — reused pattern)
-  - One **list/register screen** (validates BG-005 interactive reporting: search/filter/export)
-- [ ] Once these 3 patterns are validated, mockups for remaining screens can be lower-effort (pattern reuse, not novel work)
+**Status:** ✅ **Closed** (re-validated 2026-07-21) — **58** HTML mockups; **51/51** active (non-superseded) screen specs have a mockup under `05-ui-ux/mockups/`.
+
+- [x] Finish **New Customer** screen Tab 3 (KYC Documents) — done in [mockups/customer/new-customer-screen/](05-ui-ux/mockups/customer/new-customer-screen/)
+- [x] Build 2–3 more mockups to validate patterns before scaling:
+  - [x] One **transaction screen** — Savings/FD/Daily/Recurring + unified deposit-account transaction mockups
+  - [x] One **New Scheme (Settings)** screen — [mockups/settings/schemes/new-scheme-screen/](05-ui-ux/mockups/settings/schemes/new-scheme-screen/)
+  - [x] One **list/register screen** — Customer List + Account Register mockups across Savings/FD/Daily/Recurring/Loan
+- [x] Once these 3 patterns are validated, mockups for remaining screens — **done** (full active-spec coverage via pattern reuse)
 
 ### 1.6 Component Inventory & Design System
 - [ ] Extract a **shared component list** from mockups so far: tabbed wizard shell, data grid w/ export, dropdown-with-add(`+`), read-only computed field, address block, nominee block, GL/branch/account lookup widget
@@ -190,7 +194,7 @@ Recommended build order (based on dependency graph — Customer/Membership under
 ---
 
 ## Suggested Immediate Next Steps (this week)
-1. Author `glossary.md` (fast, unblocks nothing else but closes a visible TODO)
-2. Finish New Customer Tab 3 mockup, then move to the Savings Transaction mockup (validates the 5-tab transaction pattern reused across 4 modules)
-3. Start `09-ai-context/coding-standards.md` — needed before any Cursor-based screen generation begins
-4. Add remaining `01-architecture/` docs (`domain-driven-design.md`, `security-architecture.md`, `technology-stack.md`) — now unblocked by AWS decision
+1. Start `09-ai-context/coding-standards.md` — needed before any Cursor-based screen generation begins
+2. Add remaining `01-architecture/` docs (`domain-driven-design.md`, `security-architecture.md`, `technology-stack.md`) — now unblocked by AWS decision
+3. (Optional capture) User Role full form matrix + Deposit Loan Installment Tabs 2–6 — only remaining meaningful §1.4 leftovers
+4. Begin §1.7 Customer & Membership business-domain template (docs → API → DB) now that UI specs/mockups are largely closed

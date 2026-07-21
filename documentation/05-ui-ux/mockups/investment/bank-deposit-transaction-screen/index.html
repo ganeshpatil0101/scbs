@@ -224,12 +224,14 @@
           <div data-spec-field="c7">
             <label class="mockup-label" for="cheque-bank">
               बँक निवडा <span class="mockup-required">*</span>
-              <span class="mockup-badge-todo">TODO</span>
             </label>
-            <input type="text" id="cheque-bank" class="mockup-autocomplete" list="cheque-bank-options" placeholder="ID किंवा नाव">
+            <input type="text" id="cheque-bank" class="mockup-autocomplete" list="cheque-bank-options" placeholder="ID किंवा नाव टाइप करा" value="1 — बँक ऑफ इंडिया">
             <datalist id="cheque-bank-options">
-              <option value="" disabled>[TODO] — master data</option>
+              <option value="1 — बँक ऑफ इंडिया"></option>
+              <option value="2 — स्टेट बँक ऑफ इंडिया"></option>
+              <option value="3 — जिल्हा मध्यवर्ती सहकारी बँक"></option>
             </datalist>
+            <p class="mockup-autocomplete-hint">सोसायटी बँक मास्टर (बँक व्यवस्थापन) — Enter दाबल्यास resolve</p>
           </div>
           <div data-spec-field="c8">
             <label class="mockup-label" for="cheque-branch">बँक शाखा</label>

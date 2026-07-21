@@ -15,7 +15,7 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 - Reference screenshots under `screenshots/गुंतवणूक/` not verified in repo — mockup is spec-driven.
 - Tabs **चेक तपशील** and **ट्रान्सफर** appear only when **रोख / ट्रान्सफर** = ट्रान्सफर (layout demo).
-- Cheque **बँक निवडा** marked `[TODO]` — no invented master data.
+- Cheque **बँक निवडा**: Autocomplete from society Bank master (बँक व्यवस्थापन) — same as New Account interest-transfer bank.
 - Tab 4 uses shared `app-ledger-tab` column set.
 
 ## Review checklist
@@ -23,6 +23,7 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 - [ ] Tab 1: Branch / GL / Account Holder Autocomplete
 - [ ] Tab 1: Account Summary Panel (read-only Labels)
 - [ ] Tab 2 & 3 hidden until Transfer selected
+- [ ] Tab 2: Cheque bank Autocomplete from society Bank master
 - [ ] Tab 3: Transfer grid columns match spec
 - [ ] Tab 4: Ledger filter + grid columns match `app-ledger-tab`
 - [ ] Footer: मागे / पुढे / पूर्ण / पूर्ववत per tab

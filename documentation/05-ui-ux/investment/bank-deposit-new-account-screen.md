@@ -28,7 +28,7 @@ UI specification for opening a new bank deposit / investment account (FD-style d
 | 2 | खाते क्रमांक. | Account Number | Label (read-only) | No | Auto-generated on save |
 | 3 | खाते नाव | Account Name | Textbox | Yes | Account title; aligns with interest grid `खाते नाव` |
 | 4 | बँक खाते क्र. | Bank Account No. | Textbox | Yes | External bank's actual account number |
-| 5 | ठेव प्रकार | Deposit Type | Dropdown | Yes | e.g. `मुदत ठेव` (Fixed Deposit). Full enum: `TODO` |
+| 5 | ठेव प्रकार | Deposit Type | Dropdown | Yes | Default: `निवडा`. Values: `0` मुदत ठेव, `1` कॉल ठेव, `2` एमआयएस ठेव, `3` आवर्ती ठेव मासिक, `4` आवर्ती ठेव तिमाही, `5` आवर्ती ठेव सहामाही, `6` आवर्ती ठेव वार्षिक |
 | 6 | चालू दिनांक | Open Date | Date | Yes | Default: system date |
 | 7 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | — |
 | 8 | कालावधी (दिवस) | Duration (Days) | Textbox | Yes | Default: `0` |
@@ -37,9 +37,9 @@ UI specification for opening a new bank deposit / investment account (FD-style d
 | 11 | व्याज सुरु दिनांक | Interest Start Date | Label (read-only) | No | Auto-filled = Open Date; override requires admin role |
 | 12 | परतीची दिनांक | Maturity / Return Date | Label (read-only) | No | Calculated from open date + duration |
 | 13 | परतीची रक्कम (रू.) | Maturity / Return Amount (Rs.) | Label (read-only) | No | Calculated from amount, rate, duration, interest type |
-| 14 | स्थिती | Status | Label (read-only) | No | Default: `चालू` (Active) on create. Editable on update: `चालू`, `बंद`, `स्थगित` — full enum: `TODO` |
+| 14 | स्थिती | Status | Label / Dropdown | — | Create: read-only `चालू` (Active). Update: `चालू`, `बंद`, `स्थगित` — same as FD / Savings / Daily |
 | 15 | तपशील | Details | Textbox | No | Optional notes |
-| 16 | व्याज हस्तांतरणासाठी बँक निवडा | Select Bank for Interest Transfer | Dropdown | No | Default: `निवडा`. Values: `TODO` |
+| 16 | व्याज हस्तांतरणासाठी बँक निवडा | Select Bank for Interest Transfer | Autocomplete | No | From society Bank master — [../bank/bank-management-screen.md](../bank/bank-management-screen.md). Enter resolves by ID or name; e.g. `1 — बँक ऑफ इंडिया`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
 
 ### Section: प्रगत सेटिंग्ज (Advanced Settings)
 
@@ -47,16 +47,17 @@ UI specification for opening a new bank deposit / investment account (FD-style d
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 17 | निधी | Fund | Dropdown | No | Default: `निवडा`. Values: `TODO` |
-| 18 | व्याज प्रकार | Interest Type | Radio | No | `सरळ` (Simple), `चक्रव्याज` (Compound) |
-| 19 | व्याज गणना प्रकार | Interest Calculation Type | Dropdown | Yes | e.g. `महिने` (Months) |
-| 20 | पावती क्रमांक | Receipt Number | Textbox | Yes | Receipt series |
+| 17 | व्याज प्रकार | Interest Type | Radio | No | `सरळ` (Simple), `चक्रव्याज` (Compound) |
+| 18 | व्याज गणना प्रकार | Interest Calculation Type | Dropdown | Yes | Default: `निवडा`. Values: `1` दिवस, `2` महिने |
+| 19 | पावती क्रमांक | Receipt Number | Textbox | Yes | Receipt series |
+
+**Removed:** `निधी` (Fund) — not required for bank deposit new account.
 
 ### Document Upload
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 21 | दस्तऐवज अपलोड करा | Upload Document | File | No | Optional deposit proof |
+| 20 | दस्तऐवज अपलोड करा | Upload Document | File | No | Optional deposit proof |
 
 **Action:** `दस्तऐवज अपडेट करा`.
 
@@ -74,5 +75,6 @@ UI specification for opening a new bank deposit / investment account (FD-style d
 - [ux-optimization.md](ux-optimization.md)
 - [bank-deposit-transaction-screen.md](bank-deposit-transaction-screen.md)
 - [bank-deposit-bank-management-screen.md](bank-deposit-bank-management-screen.md)
+- [../bank/bank-management-screen.md](../bank/bank-management-screen.md)
 - [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)
 - [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

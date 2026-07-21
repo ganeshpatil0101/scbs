@@ -16,6 +16,7 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 - [ ] 2-tab wizard: Account Group → GL Head
 - [ ] P&L vs Balance Sheet toggles correct sub-type radios
+- [ ] **गट प्रकार** and **खाते प्रकार** are disabled dropdowns with only `इतर`
 - [ ] Branch account fields hidden until Branch Account selected
 - [ ] GL Head No. shown read-only (auto-generated)
 - [ ] Account Group read-only on Tab 2 from Tab 1 input

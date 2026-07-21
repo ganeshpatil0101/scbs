@@ -15,7 +15,9 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 - Reference screenshot `screenshots/कर्ज/डॅशबोर्ड-कर्ज-खाते रजिस्टर-1-05-07.png` not verified in repo — mockup is spec-driven.
 - `संस्था` in header only (not in filter bar).
-- `अतिरिक्त शोध पर्याय` marked TODO per spec.
+- Organization shown as session header.
+- Status filter: `चालू` / `बंद` / `स्थगित` (label fixed from legacy `मिती`).
+- Legacy `अतिरिक्त शोध पर्याय` omitted.
 
 ## Review checklist
 

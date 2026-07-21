@@ -39,7 +39,7 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | योजना निवडा | Select Scheme | Dropdown | Yes | Values: `TODO` |
+| 1 | योजना निवडा | Select Scheme | Dropdown | Yes | Loaded dynamically from Loan / Deposit-Loan schemes (Settings > नवीन योजना). Sample: `ठेव कर्ज`. Full list from scheme master — not a fixed enum |
 | 2 | योजना प्रकार | Scheme Type | Label | No | Auto-fill from selected scheme |
 
 ### ग्राहक माहिती (Customer Information)
@@ -93,7 +93,7 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | स्थिती निवडा | Select Status | Dropdown | Yes | e.g. `चालू`. Other values: `TODO` |
+| 1 | स्थिती निवडा | Select Status | Dropdown | Yes | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended) — same as [New Loan](new-loan-screen.md) |
 | 2 | चालू दिनांक | Current Date | Label | Yes | System date |
 | 3 | कर्ज रक्कम (रु.) | Loan Amount (Rs.) | Textbox | Yes | — |
 | 4 | कालावधी (महिने) | Duration (Months) | Textbox | Yes | — |
@@ -103,13 +103,13 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 | 8 | शेवटची दिनांक | Last Date | Date | No | — |
 | 9 | दंड व्याज दर | Penalty Interest Rate | Textbox | Yes | — |
 | 10 | विशेष सूचना | Special Instructions | Textbox | No | — |
-| 11 | कर्ज मागणीचे कारण निवडा | Select Reason for Loan Request | Dropdown | Yes | Values: `TODO` |
+| 11 | कर्ज मागणीचे कारण निवडा | Select Reason for Loan Request | Dropdown | Yes | Default: `निवडा`. Values: `इतर`, `वायवसाय कर्ज`, `वाहन तारण कर्ज`, `सोने तारण`, `स्थावर तारण कर्ज` — same as [New Loan](new-loan-screen.md) `कर्जाचे कारण` |
 
 ### मंजुरी (Approval)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 17 | पालक कर्मचारी निवडा | Select Guardian Employee | Dropdown | No | Values: `TODO` |
+| 17 | पालक कर्मचारी निवडा | Select Guardian Employee | Autocomplete | No | From Staff master. Sample: `1 — कर्मचारी 1`. Enter resolves by staff ID or name. Same as [New Loan](new-loan-screen.md) |
 | 18 | मंजूरी अधिकारी क्र. | Approval Officer No. | Textbox | No | — |
 | 19 | मंजूरी अधिकारी / परिचयकर्ता निवडा | Select Approval Officer / Introducer | Textbox | No | — |
 
@@ -126,7 +126,20 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 
 ### वारसदार (Nominee)
 
-`TODO` — section header visible; fields not captured in video.
+> Optional — shown when `वारसदार जोडा` is checked. Same pattern as deposit New Account nominee tabs. See [quick-add-customer-pattern.md](../shared/quick-add-customer-pattern.md).
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| N0 | वारसदार जोडा | Add Nominee | Checkbox | No | Unchecked by default. When checked, nominee search + details become visible |
+| N1 | ग्राहक निवडा | Select Customer | Autocomplete | Yes* | Nominee lookup. Includes **+ नवीन ग्राहक जोडा** per [quick-add-customer-pattern.md](../shared/quick-add-customer-pattern.md). \*Required when N0 checked |
+| N2 | नाते | Relation | Dropdown | Yes* | Same as [Membership nominee relation](../membership/new-membership-screen.md) |
+| N3 | टक्केवारी | Percentage | Textbox | No | e.g. `100` |
+| N4 | नामांकन दिनांक | Nomination Date | Label (read-only) | No | System date |
+| N5 | नामांकन करताना वय | Age at Nomination | Label (read-only) | No | Auto-calculated from resolved customer's DOB |
+
+**Actions:** `टाका` (Add), `निवड करा`, `काढा`.
+
+**Nominee grid columns:** निवडा, अनु. क्र., ग्राहक क्रमांक, ग्राहकाचे नाव, नाते, टक्केवारी, नामांकन करताना वय, नामांकन दिनांक.
 
 ### Section: प्रगत सेटिंग्ज (Advanced Settings)
 
@@ -148,7 +161,7 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | जी.एल. निवडा | Select GL | Autocomplete | No | Sample: `42 — Loan`. Enter resolves by ID or name; shows display name |
 | 2 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Sample: `101 — Account Holder 1`, `102 — Account Holder 2`, `103 — Account Holder 3`. Enter resolves by ID or name; shows display name |
-| 3 | वारंवारता | Frequency | Dropdown | No | Values: `TODO` |
+| 3 | वारंवारता | Frequency | Dropdown | No | Values: `दैनिक`, `पाक्षिक`, `मासिक`, `तिमाही`, `सहामाही`, `वार्षिक` — same as [New Loan](new-loan-screen.md) S.I. Frequency |
 | 4 | दिवस / तारीख निवडा | Select Day / Date | Dropdown | No | e.g. `31` |
 
 **Note:** टीप: महिना अंतिम तारीख.
@@ -168,4 +181,5 @@ UI specification for opening a new loan against fixed/recurring deposits. Three-
 - [new-loan-screen.md](new-loan-screen.md)
 - [../fixed-deposit/new-fd-account-screen.md](../fixed-deposit/new-fd-account-screen.md)
 - [../fixed-deposit/deposit-loan-installment-payment-screen.md](../fixed-deposit/deposit-loan-installment-payment-screen.md) — installment payment (FD menu)
+- [../shared/quick-add-customer-pattern.md](../shared/quick-add-customer-pattern.md)
 - [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

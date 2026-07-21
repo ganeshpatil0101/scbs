@@ -36,7 +36,7 @@ Single screen for bulk interest provision (accrual) and interest assessment (pos
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | शाखा निवडा | Select Branch | Autocomplete | Yes | e.g. `1 — कोतोली मुख्य कार्यालय`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
 | 2 | जी.एल. निवडा | Select G.L. | Autocomplete | Yes | e.g. `61 — जामीनकी कर्ज` |
-| 3 | व्याज दिनांक निवडा | Select Interest Date | Dropdown | Yes | e.g. `31.03.2026`. Full list: `TODO` |
+| 3 | व्याज दिनांक | Interest Date | Label (read-only) | Yes | Auto-filled: last financial year-end date only (e.g. `31.03.2026`). Same as [manual-interest-management-screen.md](../accounting/manual-interest-management-screen.md). Replaces legacy `व्याज दिनांक निवडा` dropdown |
 | 4 | व्याज पोस्ट दिनांक | Interest Post Date | Date | Yes | — |
 | 5 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | Range filter — not consolidated per entity-autocomplete exclusions |
 | 6 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | Range filter end |

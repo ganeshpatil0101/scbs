@@ -71,10 +71,14 @@
             </label>
             <select id="deposit-type">
               <option value="">निवडा</option>
-              <option value="fd" selected>मुदत ठेव</option>
-              <option value="" disabled>[TODO] — पूर्ण यादी</option>
+              <option value="0" selected>मुदत ठेव</option>
+              <option value="1">कॉल ठेव</option>
+              <option value="2">एमआयएस ठेव</option>
+              <option value="3">आवर्ती ठेव मासिक</option>
+              <option value="4">आवर्ती ठेव तिमाही</option>
+              <option value="5">आवर्ती ठेव सहामाही</option>
+              <option value="6">आवर्ती ठेव वार्षिक</option>
             </select>
-            <span class="mockup-badge-todo">TODO</span>
           </div>
           <div data-spec-field="6">
             <label class="mockup-label" for="open-date">
@@ -135,12 +139,14 @@
           <div class="sm:col-span-2" data-spec-field="16">
             <label class="mockup-label" for="interest-transfer-bank">
               व्याज हस्तांतरणासाठी बँक निवडा
-              <span class="mockup-badge-todo">TODO</span>
             </label>
-            <select id="interest-transfer-bank">
-              <option value="" selected>निवडा</option>
-              <option value="" disabled>[TODO] — master data</option>
-            </select>
+            <input type="text" id="interest-transfer-bank" class="mockup-autocomplete" list="society-bank-options" placeholder="ID किंवा नाव टाइप करा">
+            <datalist id="society-bank-options">
+              <option value="1 — बँक ऑफ इंडिया"></option>
+              <option value="2 — स्टेट बँक ऑफ इंडिया"></option>
+              <option value="3 — जिल्हा मध्यवर्ती सहकारी बँक"></option>
+            </datalist>
+            <p class="mockup-autocomplete-hint">सोसायटी बँक मास्टर (बँक व्यवस्थापन) — Enter दाबल्यास resolve</p>
           </div>
         </div>
       </section>
@@ -150,15 +156,6 @@
       <summary class="mockup-section-title cursor-pointer select-none" style="border-bottom:none;margin-bottom:0">प्रगत सेटिंग्ज</summary>
       <div class="mockup-field-grid mockup-field-grid--2 mt-4 pt-4 border-t border-gray-200">
         <div data-spec-field="17">
-          <label class="mockup-label" for="fund">
-            निधी <span class="mockup-badge-todo">TODO</span>
-          </label>
-          <select id="fund">
-            <option value="" selected>निवडा</option>
-            <option value="" disabled>[TODO] — master data</option>
-          </select>
-        </div>
-        <div data-spec-field="18">
           <fieldset class="border-0 p-0 m-0">
             <legend class="mockup-label">व्याज प्रकार</legend>
             <div class="flex flex-wrap gap-4 mt-1">
@@ -173,16 +170,17 @@
             </div>
           </fieldset>
         </div>
-        <div data-spec-field="19">
+        <div data-spec-field="18">
           <label class="mockup-label" for="interest-calc-type">
             व्याज गणना प्रकार <span class="mockup-required">*</span>
           </label>
           <select id="interest-calc-type">
             <option value="">निवडा</option>
-            <option value="months" selected>महिने</option>
+            <option value="1">दिवस</option>
+            <option value="2" selected>महिने</option>
           </select>
         </div>
-        <div data-spec-field="20">
+        <div data-spec-field="19">
           <label class="mockup-label" for="receipt-no">
             पावती क्रमांक <span class="mockup-required">*</span>
           </label>
@@ -193,7 +191,7 @@
 
     <section class="mockup-section" aria-labelledby="section-docs">
       <h2 class="mockup-section-title" id="section-docs">दस्तऐवज</h2>
-      <div class="mockup-field-grid" data-spec-field="21">
+      <div class="mockup-field-grid" data-spec-field="20">
         <div>
           <label class="mockup-label" for="doc-upload">दस्तऐवज अपलोड करा</label>
           <input type="file" id="doc-upload" class="block w-full text-sm text-gray-600">

@@ -21,15 +21,14 @@ UI specification for viewing loan account details, recovery/arrears summary, and
 | # | Marathi Tab | English Tab |
 | :---: | :--- | :--- |
 | 1 | खाते सारांश | Account Summary |
-| 2 | ग्राहक माहिती | Customer Information |
-| 3 | खातेवही | Ledger |
+| 2 | खातेवही | Ledger |
 
 ## Reference Screenshots
 
 | File | Tab |
 | :--- | :--- |
 | `screenshots/कर्ज/डॅशबोर्ड -कर्ज -कर्ज-माहिती-1-02_07.png` | Tab 1 |
-| `screenshots/कर्ज/डॅशबोर्ड -कर्ज -कर्ज-माहिती-2-02_07.png` | Tab 3 |
+| `screenshots/कर्ज/डॅशबोर्ड -कर्ज -कर्ज-माहिती-2-02_07.png` | Tab 2 (Ledger) |
 
 ---
 
@@ -138,13 +137,7 @@ UI specification for viewing loan account details, recovery/arrears summary, and
 
 ---
 
-## Tab 2: ग्राहक माहिती (Customer Information)
-
-`TODO` — tab referenced in navigation; no dedicated screenshot in `02_07` set.
-
----
-
-## Tab 3: खातेवही (Ledger)
+## Tab 2: खातेवही (Ledger)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |

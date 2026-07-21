@@ -236,7 +236,7 @@ Shared component: `app-cheque-tab`. Visible when Transaction Mode = Cash or Tran
 | 4 | चेक दिनांक | Cheque Date | Date | Yes | — |
 | 5 | चेक क्र. | Cheque No. | Textbox | Yes | — |
 | 6 | नाव | Name | Textbox | Yes | — |
-| 7 | बँक निवडा | Select Bank | Autocomplete | Yes | `TODO` |
+| 7 | बँक निवडा | Select Bank | Autocomplete | Yes | From Bank Master — same as [deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md) Instrument tab. Sample: `1 — बँक ऑफ इंडिया`, `2 — स्टेट बँक ऑफ इंडिया`, `3 — बँक ऑफ महाराष्ट्र`, `4 — एचडीएफसी बँक`. Enter resolves by ID or name; see [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
 | 8 | बँक शाखा | Bank Branch | Textbox | No | — |
 | 9 | ड्रॉन ऑन बँक | Drawn on Bank | Textbox | No | — |
 | 10 | ड्रॉन ऑन ब्रांच | Drawn on Branch | Textbox | No | — |

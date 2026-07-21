@@ -15,7 +15,8 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 - 3-tab wizard: ठेव माहिती → कर्ज माहिती → एस.आय माहिती.
 - Tab 1: Customer/Agent Autocomplete; dual deposit tables; surrender value calculation.
-- Tab 2: Loan fields, approval, co-applicant Autocomplete; वारसदार section is `[TODO]` stub.
+- Tab 2: Loan fields, approval, co-applicant Autocomplete; वारसदार = Customer search + quick-add (checkbox).
+- Scheme / reason / Staff / SI frequency filled per 2026-07-21 bank confirmation.
 - Tab 3: GL / Account Holder Autocomplete.
 - प्रगत सेटिंग्ज collapsed by default on Tab 2.
 - Reference video frames under `screenshots/कर्ज/new-deposit-loan-frames/` not verified in repo.
