@@ -13,13 +13,14 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 ## Notes
 
-- Reference media in `screenshots/डेली/डॅशबोर्ड_डेली _नवीन खाते.mp4`.
-- Tabs 3–4 (परिपक्वता / संयुक्त एसी धारक, मंजूरी) marked `TODO` per spec — tab shell only.
+- Reference media in `screenshots/डेली/डॅशबोर्ड_डेली _नवीन खाते.mp4` and Tab 3 joint holder PNGs.
+- Tab 3 hidden by default; shown when Tab 1's `संयुक्त खातेदार जोडा` checkbox is checked. Introducer section removed per bank review.
 - प्रगत सेटिंग्ज collapsed by default on Tab 1.
 
 ## Review checklist
 
 - [ ] All spec fields present with correct grouping
+- [ ] Joint Holder tab appears only when checkbox checked
 - [ ] Marathi labels clear for non-technical bank staff
 - [ ] Required fields marked with *
 - [ ] Responsive on mobile (single column) and desktop (two columns, centered)

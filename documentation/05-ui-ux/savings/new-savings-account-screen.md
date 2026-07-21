@@ -2,7 +2,7 @@
 
 ## Purpose
 
-UI specification for opening a new savings account. Four-tab wizard.
+UI specification for opening a new savings account. Three-tab wizard (Tab 3 optional — hidden unless enabled on Tab 1).
 
 ## Screen Identification
 
@@ -18,14 +18,15 @@ UI specification for opening a new savings account. Four-tab wizard.
 | :---: | :--- | :--- |
 | 1 | खात्याची माहिती | Account Information |
 | 2 | वारसदार | Nominee |
-| 3 | परिचयकर्ता / संयुक्त खाते धारक | Introducer / Joint Holder |
-| 4 | मंजूरी | Approval |
+| 3 | संयुक्त खाते धारक | Joint Holder |
 
 ## Reference Screenshots
 
 | File | Tab |
 | :--- | :--- |
 | `screenshots/bachat/डॅशबोर्ड-बचत-नवीन खाते.png` | Tab 1 — Account Information |
+| `screenshots/bachat/डॅशबोर्ड-बचत-नवीन खाते-परिचयकर्ता.png` | Tab 3 — Joint Holder (shared pattern across deposit products) |
+| `screenshots/bachat/डॅशबोर्ड-बचत-नवीन खाते-खाते-चालविण्याची-सूचना.png` | Tab 3 — Account Operation Instructions dropdown |
 
 ---
 
@@ -68,6 +69,12 @@ UI specification for opening a new savings account. Four-tab wizard.
 | 12 | बँकेचे नाव | Bank Name | Label (read-only) | No | Auto-filled from IFSC |
 | 13 | बँकेचे बचत खाते क्रमांक | Bank Savings Account No. | Textbox | No | Optional payout account |
 
+### Section: संयुक्त खातेदार पर्याय (Joint Holder Option)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 14 | संयुक्त खातेदार जोडा | Add Joint Holder | Checkbox | No | Unchecked by default. When checked, Tab 3 (Joint Holder) becomes visible in the tab bar; when unchecked, Tab 3 is hidden and skipped during Next/Back navigation. |
+
 **Action:** `पुढे` (Next).
 
 ---
@@ -80,15 +87,34 @@ Uses shared component `app-nominee-form` + `app-nominee-grid` — same field set
 
 ---
 
-## Tab 3: परिचयकर्ता / संयुक्त खाते धारक (Introducer / Joint Holder)
+## Tab 3: संयुक्त खाते धारक (Joint Holder)
 
-`TODO` — entire tab not captured. Capture from legacy app before mockup.
+> Hidden by default — shown only when field 14 (Tab 1) is checked.
 
----
+> **Shared component:** Adapted from [New Membership Tab 2](../membership/new-membership-screen.md#tab-2-परिचयकर्ता--संयुक्त-खातेदार-introducer--joint-holder) joint-holder sections; Introducer section omitted for deposit products per bank review. Uses `app-joint-holder-grid`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
 
-## Tab 4: मंजूरी (Approval)
+### Section: संयुक्त खातेदार (Joint Holder)
 
-`TODO` — entire tab not captured. Capture from legacy app before mockup.
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | पालक | Guardian | Checkbox | No | — |
+| 2 | ग्राहक निवडा | Select Customer | Autocomplete | No | Enter resolves by customer no. or name. Replaces Customer Number + Customer Name input row |
+
+**Action:** `+ जोड` (Add) — validates customer is selected before appending row to grid.
+
+### Joint Holder Grid (`app-joint-holder-grid`)
+
+Columns: निवडा, अ.क्र., ग्राहक क्रमांक, ग्राहकाचे नाव, पालक.
+
+**Grid actions:** `निर्यात` (Export), `काढा` (Remove).
+
+### Section: खाते चालविण्याची सूचना (Account Operation Instructions)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 3 | खाते चालविण्याची सूचना | Account Operation Instructions | Dropdown | Yes | Default: `स्वतः` (Self). `फक्त प्रमुख खातेदार` (Only Primary Holder), `फक्त संयुक्त खातेदार` (Only Joint Holder), `दोन्ही खातेदार आवश्यक` (Both Holders Required), `दोघांपैकी कोणीही` (Either Holder), `स्वतः` (Self) |
+
+**Navigation:** `मागे` (Back). **Footer:** `जतन करा` (Save), `रीसेट` (Reset).
 
 ---
 

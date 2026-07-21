@@ -39,8 +39,7 @@
     <nav class="flex border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="स्क्रीन टॅब">
       <button type="button" class="mockup-tab mockup-tab-active" role="tab" aria-selected="true" data-tab="1" data-panel="tab-panel-1">खात्याची माहिती</button>
       <button type="button" class="mockup-tab" role="tab" aria-selected="false" data-tab="2" data-panel="tab-panel-2">वारसदार</button>
-      <button type="button" class="mockup-tab" role="tab" aria-selected="false" data-tab="3" data-panel="tab-panel-3">परिपक्वता / संयुक्त एसी धारक</button>
-      <button type="button" class="mockup-tab" role="tab" aria-selected="false" data-tab="4" data-panel="tab-panel-4">मंजूरी</button>
+      <button type="button" class="mockup-tab mockup-hidden" role="tab" aria-selected="false" id="tab-3-btn" data-tab="3" data-panel="tab-panel-3">परिपक्वता / संयुक्त एसी धारक</button>
     </nav>
 
     <div id="tab-panel-1" role="tabpanel">
@@ -163,6 +162,16 @@
           <div data-spec-field="27"><label class="mockup-label" for="bank-acct">बँक बचत खाते नं</label><input type="text" id="bank-acct"></div>
         </div>
       </details>
+
+      <section class="mockup-section" aria-labelledby="section-joint-option">
+        <h2 class="mockup-section-title" id="section-joint-option">संयुक्त खातेदार पर्याय</h2>
+        <div data-spec-field="28">
+          <label class="inline-flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" id="has-joint-holder">
+            <span class="text-sm">संयुक्त खातेदार जोडा</span>
+          </label>
+        </div>
+      </section>
     </div>
 
     <div id="tab-panel-2" class="mockup-hidden" role="tabpanel" hidden>
@@ -238,16 +247,70 @@
     </div>
 
     <div id="tab-panel-3" class="mockup-hidden" role="tabpanel" hidden>
-      <section class="mockup-section">
-        <h2 class="mockup-section-title">परिपक्वता / संयुक्त एसी धारक</h2>
-        <p class="text-sm text-gray-600"><span class="mockup-badge-todo">TODO</span> — v1 मध्ये कॅप्चर नाही. टॅब शेल फक्त नेव्हिगेशनसाठी.</p>
+      <section class="mockup-section" aria-labelledby="section-joint-holder">
+        <h2 class="mockup-section-title" id="section-joint-holder">संयुक्त खातेदार</h2>
+        <div class="mockup-field-grid">
+          <div data-spec-field="t3-1">
+            <label class="inline-flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="field-guardian">
+              <span class="text-sm">पालक</span>
+            </label>
+          </div>
+          <div data-spec-field="t3-2">
+            <label class="mockup-label" for="field-joint-customer">ग्राहक निवडा</label>
+            <input type="text" id="field-joint-customer" class="mockup-autocomplete" list="joint-customer-options" placeholder="ग्राहक क्र. किंवा नाव">
+            <datalist id="joint-customer-options">
+              <option value="661 — Customer 1"></option>
+              <option value="662 — Customer 2"></option>
+              <option value="663 — Customer 3"></option>
+            </datalist>
+          </div>
+          <div>
+            <button type="button" class="mockup-btn mockup-btn-add">+ जोड</button>
+          </div>
+        </div>
       </section>
-    </div>
-
-    <div id="tab-panel-4" class="mockup-hidden" role="tabpanel" hidden>
-      <section class="mockup-section">
-        <h2 class="mockup-section-title">मंजूरी</h2>
-        <p class="text-sm text-gray-600"><span class="mockup-badge-todo">TODO</span> — v1 मध्ये कॅप्चर नाही. टॅब शेल फक्त नेव्हिगेशनसाठी.</p>
+      <section class="mockup-section mockup-section-full" aria-labelledby="section-joint-grid">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+          <h2 class="mockup-section-title mb-0 border-0 pb-0" id="section-joint-grid">संयुक्त खातेदार यादी</h2>
+          <div class="flex flex-wrap gap-2">
+            <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">निर्यात</button>
+            <button type="button" class="mockup-btn mockup-btn-secondary text-sm py-1 px-3 min-h-0">काढा</button>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="mockup-table" aria-label="संयुक्त खातेदार यादी">
+            <thead>
+              <tr>
+                <th>निवडा</th>
+                <th>अ.क्र.</th>
+                <th>ग्राहक क्रमांक</th>
+                <th>ग्राहकाचे नाव</th>
+                <th>पालक</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="5" class="text-center text-gray-500 py-4">अद्याप संयुक्त खातेदार जोडलेला नाही</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="mockup-section" aria-labelledby="section-acct-instructions">
+        <h2 class="mockup-section-title" id="section-acct-instructions">खाते चालविण्याची सूचना</h2>
+        <div class="max-w-md" data-spec-field="t3-3">
+          <label class="mockup-label" for="field-acct-instructions">
+            खाते चालविण्याची सूचना <span class="mockup-required">*</span>
+          </label>
+          <select id="field-acct-instructions">
+            <option value="primary">फक्त प्रमुख खातेदार</option>
+            <option value="joint">फक्त संयुक्त खातेदार</option>
+            <option value="both">दोन्ही खातेदार आवश्यक</option>
+            <option value="either">दोघांपैकी कोणीही</option>
+            <option value="self" selected>स्वतः</option>
+          </select>
+        </div>
       </section>
     </div>
   </div>
@@ -264,37 +327,70 @@
   <script>
     (function () {
       var activeTab = 1;
-      var totalTabs = 4;
+      var hasJointHolderCheckbox = document.getElementById('has-joint-holder');
+      var tab3Btn = document.getElementById('tab-3-btn');
+      var hasTab4 = !!document.querySelector('[role="tab"][data-tab="4"]');
       var tabs = document.querySelectorAll('[role="tab"]');
       var panels = {};
       tabs.forEach(function (t) { panels[t.getAttribute('data-tab')] = document.getElementById(t.getAttribute('data-panel')); });
 
+      function getVisibleTabs() {
+        var list = [1, 2];
+        if (hasJointHolderCheckbox && hasJointHolderCheckbox.checked) list.push(3);
+        if (hasTab4) list.push(4);
+        return list;
+      }
+
       function updateFooter() {
-        document.getElementById('btn-back').classList.toggle('mockup-hidden', activeTab === 1);
-        document.getElementById('btn-next').classList.toggle('mockup-hidden', activeTab >= totalTabs);
-        document.getElementById('btn-save').classList.toggle('mockup-hidden', activeTab !== totalTabs);
+        var visible = getVisibleTabs();
+        var lastTab = visible[visible.length - 1];
+        document.getElementById('btn-back').classList.toggle('mockup-hidden', activeTab === visible[0]);
+        document.getElementById('btn-next').classList.toggle('mockup-hidden', activeTab >= lastTab);
+        document.getElementById('btn-save').classList.toggle('mockup-hidden', activeTab !== lastTab);
       }
 
       function switchTab(n) {
+        var visible = getVisibleTabs();
+        if (visible.indexOf(n) === -1) return;
         activeTab = n;
         tabs.forEach(function (tab) {
-          var isActive = Number(tab.getAttribute('data-tab')) === n;
+          var tabNum = Number(tab.getAttribute('data-tab'));
+          var isActive = tabNum === n;
           tab.classList.toggle('mockup-tab-active', isActive);
           tab.setAttribute('aria-selected', isActive);
         });
         Object.keys(panels).forEach(function (k) {
           var show = Number(k) === n;
-          panels[k].classList.toggle('mockup-hidden', !show);
-          panels[k].hidden = !show;
+          if (panels[k]) {
+            panels[k].classList.toggle('mockup-hidden', !show);
+            panels[k].hidden = !show;
+          }
         });
         updateFooter();
+      }
+
+      function syncJointHolderTab() {
+        var show = hasJointHolderCheckbox && hasJointHolderCheckbox.checked;
+        if (tab3Btn) tab3Btn.classList.toggle('mockup-hidden', !show);
+        if (!show && activeTab === 3) switchTab(2);
+        else updateFooter();
       }
 
       tabs.forEach(function (tab) {
         tab.addEventListener('click', function () { switchTab(Number(this.getAttribute('data-tab'))); });
       });
-      document.getElementById('btn-next').addEventListener('click', function () { if (activeTab < totalTabs) switchTab(activeTab + 1); });
-      document.getElementById('btn-back').addEventListener('click', function () { if (activeTab > 1) switchTab(activeTab - 1); });
+      document.getElementById('btn-next').addEventListener('click', function () {
+        var visible = getVisibleTabs();
+        var idx = visible.indexOf(activeTab);
+        if (idx >= 0 && idx < visible.length - 1) switchTab(visible[idx + 1]);
+      });
+      document.getElementById('btn-back').addEventListener('click', function () {
+        var visible = getVisibleTabs();
+        var idx = visible.indexOf(activeTab);
+        if (idx > 0) switchTab(visible[idx - 1]);
+      });
+      if (hasJointHolderCheckbox) hasJointHolderCheckbox.addEventListener('change', syncJointHolderTab);
+      syncJointHolderTab();
       updateFooter();
     })();
   </script>

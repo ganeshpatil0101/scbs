@@ -90,7 +90,6 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 
 | Screen | Missing tabs / sections | Media reference |
 | :--- | :--- | :--- |
-| New FD Account | Tab 3 (परिचयकर्ता / संयुक्त खाते धारक) | `screenshots/मुदत ठेव/डॅशबोर्ड-मुदत ठेव-नवीन खाते.png` |
 | FD Transaction | Tabs 2, 5 (साहित्य तपशील, केवायसी माहिती) | `screenshots/मुदत ठेव/डॅशबोर्ड-मुदत ठेव-व्यवहार*.png` |
 | Deposit Loan Installment | Tabs 2–6 (इतर कपात … केवायसी) | `screenshots/मुदत ठेव/डॅशबोर्ड_ठेव_ठेव कर्ज हप्ता पेमेंट.mp4` |
 | Account Register | `अतिरिक्त शोध पर्याय` | `screenshots/मुदत ठेव/डॅशबोर्ड_मुदत ठेव _खाते रजिस्टर.png` |

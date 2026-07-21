@@ -2,7 +2,7 @@
 
 ## Purpose
 
-UI specification for opening a new daily (pigmy) deposit account. Four-tab wizard.
+UI specification for opening a new daily (pigmy) deposit account. Three-tab wizard (Tab 3 optional — hidden unless enabled on Tab 1).
 
 ## Screen Identification
 
@@ -19,7 +19,6 @@ UI specification for opening a new daily (pigmy) deposit account. Four-tab wizar
 | 1 | खात्याची माहिती | Account Information |
 | 2 | वारसदार | Nominee |
 | 3 | परिपक्वता / संयुक्त एसी धारक | Maturity / Joint AC Holder |
-| 4 | मंजूरी | Approval |
 
 ## Reference Screenshots / Media
 
@@ -28,6 +27,8 @@ UI specification for opening a new daily (pigmy) deposit account. Four-tab wizar
 | `screenshots/डेली/डॅशबोर्ड_डेली _नवीन खाते.mp4` | All tabs (from video) |
 | `screenshots/डेली/new-account-frames/frame_0000.jpg` | Tab 1 |
 | `screenshots/डेली/new-account-frames/frame_0040.jpg` | Tab 2 — Nominee |
+| `screenshots/डेली/डॅशबोर्ड-डेली-नवीन खाते-संयुक्त.png` | Tab 3 — Joint AC Holder (shared pattern across deposit products) |
+| `screenshots/डेली/डॅशबोर्ड-डेली-नवीन खाते-खाते-चालविण्याची-सूचना.png` | Tab 3 — Account Operation Instructions dropdown |
 
 ---
 
@@ -84,9 +85,13 @@ UI specification for opening a new daily (pigmy) deposit account. Four-tab wizar
 | 26 | बँक नाव | Bank Name | Textbox | No | — |
 | 27 | बँक बचत खाते नं | Bank Savings Account No. | Textbox | No | — |
 
-**Action:** `पुढे` (Next).
+### Section: संयुक्त खातेदार पर्याय (Joint Holder Option)
 
-Tabs 3–4: `TODO` — not captured. Deferred until screenshots/MP4 available.
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 28 | संयुक्त खातेदार जोडा | Add Joint Holder | Checkbox | No | Unchecked by default. When checked, Tab 3 (Joint AC Holder) becomes visible in the tab bar; when unchecked, Tab 3 is hidden and skipped during Next/Back navigation. |
+
+**Action:** `पुढे` (Next).
 
 ---
 
@@ -135,6 +140,41 @@ Google Maps Places Autocomplete — same pattern as [New Customer Tab 2](../cust
 **Multiple nominees table columns:** निवडा, अनु. क्र., श्री/सौ, नाव, नामांकन करताना वय, जन्मदिनांक, पत्ता, जिल्हा, तालुका, शहर, ठिकाण, पिन कोड, व्यवसाय, दूरध्वनी, मोबाईल, नाते, टक्केवारी, नामांकन दिनांक.
 
 **Footer:** `पूर्ण`, `पूर्ववत`.
+
+---
+
+## Tab 3: परिपक्वता / संयुक्त एसी धारक (Maturity / Joint AC Holder)
+
+> Hidden by default — shown only when field 28 (Tab 1) is checked.
+
+> **Shared component:** Joint-holder sections adapted from [New Membership Tab 2](../membership/new-membership-screen.md#tab-2-परिचयकर्ता--संयुक्त-खातेदार-introducer--joint-holder); Introducer section omitted for deposit products per bank review. Uses `app-joint-holder-grid`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
+
+### Section: परिपक्वता (Maturity)
+
+`TODO` — Maturity-specific fields not in current screenshots. Extract from `screenshots/डेली/डॅशबोर्ड_डेली _नवीन खाते.mp4` when available.
+
+### Section: संयुक्त खातेदार (Joint Holder)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | पालक | Guardian | Checkbox | No | — |
+| 2 | ग्राहक निवडा | Select Customer | Autocomplete | No | Enter resolves by customer no. or name. Replaces Customer Number + Customer Name input row |
+
+**Action:** `+ जोड` (Add) — validates customer is selected before appending row to grid.
+
+### Joint Holder Grid (`app-joint-holder-grid`)
+
+Columns: निवडा, अ.क्र., ग्राहक क्रमांक, ग्राहकाचे नाव, पालक.
+
+**Grid actions:** `निर्यात` (Export), `काढा` (Remove).
+
+### Section: खाते चालविण्याची सूचना (Account Operation Instructions)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 3 | खाते चालविण्याची सूचना | Account Operation Instructions | Dropdown | Yes | Default: `स्वतः` (Self). `फक्त प्रमुख खातेदार` (Only Primary Holder), `फक्त संयुक्त खातेदार` (Only Joint Holder), `दोन्ही खातेदार आवश्यक` (Both Holders Required), `दोघांपैकी कोणीही` (Either Holder), `स्वतः` (Self) |
+
+**Navigation:** `मागे` (Back). **Footer:** `जतन करा` (Save), `रीसेट` (Reset).
 
 ---
 

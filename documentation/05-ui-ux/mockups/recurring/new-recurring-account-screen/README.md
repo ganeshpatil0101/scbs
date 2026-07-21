@@ -13,8 +13,8 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 ## Notes
 
-- Reference media `screenshots/रिकरिंग/` not in repo — layout is spec-driven.
-- Tabs 3–4 are TODO stubs.
+- Reference screenshots in `screenshots/रिकरिंग/` including Tab 3 `…-सूचक.png` and operating-instructions dropdown.
+- Tab 3 (Joint Holder) hidden by default; shown when Tab 1's `संयुक्त खातेदार जोडा` checkbox is checked. Introducer section removed per bank review.
 - Account Type dropdown marked TODO per spec.
 - प्रगत सेटिंग्ज collapsed by default (`<details>`).
 
@@ -22,10 +22,11 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 - [ ] All Tab 1 fields present with correct grouping
 - [ ] Customer summary panel after autocomplete
+- [ ] Joint Holder tab appears only when checkbox checked
 - [ ] Marathi labels clear for non-technical bank staff
 - [ ] Required fields marked with *
 - [ ] Nominee tab (Tab 2) key fields approved
-- [ ] Advanced Settings placement approved
+- [ ] Tab 3 joint holder fields and operating instructions approved
 
 ## Approval
 

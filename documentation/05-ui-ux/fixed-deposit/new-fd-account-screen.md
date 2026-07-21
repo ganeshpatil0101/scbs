@@ -2,7 +2,7 @@
 
 ## Purpose
 
-UI specification for opening a new fixed deposit account. Four-tab wizard.
+UI specification for opening a new fixed deposit account. Four-tab wizard (Tab 3 optional — hidden unless enabled on Tab 1).
 
 ## Screen Identification
 
@@ -18,7 +18,7 @@ UI specification for opening a new fixed deposit account. Four-tab wizard.
 | :---: | :--- | :--- |
 | 1 | खात्याची माहिती | Account Information |
 | 2 | वारसदार | Nominee |
-| 3 | परिचयकर्ता / संयुक्त खाते धारक | Introducer / Joint Holder |
+| 3 | संयुक्त खाते धारक | Joint Holder |
 | 4 | इतर | Other |
 
 ## Reference Screenshots
@@ -28,6 +28,8 @@ UI specification for opening a new fixed deposit account. Four-tab wizard.
 | `screenshots/मुदत ठेव/डॅशबोर्ड-मुदत ठेव-नवीन खाते.png` | Tab 1 — full form |
 | `screenshots/मुदत ठेव/डॅशबोर्ड-मुदत ठेव-नवीन खाते-1.png` | Tab 1 — Scheme dropdown open |
 | `screenshots/मुदत ठेव/डॅशबोर्ड-मुदत ठेव-नवीन खाते-2.png` | Tab 2 — Nominee |
+| `screenshots/मुदत ठेव/डॅशबोर्ड-मुदत ठेव-नवीन खाते-परिचयकर्ता.png` | Tab 3 — Joint Holder (shared pattern across deposit products) |
+| `screenshots/मुदत ठेव/डॅशबोर्ड-मुदत ठेव-नवीन खाते-खाते-चालविण्याची-सूचना.png` | Tab 3 — Account Operation Instructions dropdown |
 | User screenshot (Tab 4 — इतर) | Tab 4 — Other |
 
 ---
@@ -83,6 +85,12 @@ UI specification for opening a new fixed deposit account. Four-tab wizard.
 | 29 | गुणक | Multiplier | Textbox | No | Default: `1` |
 
 **Action (Multiple FD):** `+ टाका` (Add).
+
+### Section: संयुक्त खातेदार पर्याय (Joint Holder Option)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 30 | संयुक्त खातेदार जोडा | Add Joint Holder | Checkbox | No | Unchecked by default. When checked, Tab 3 (Joint Holder) becomes visible in the tab bar; when unchecked, Tab 3 is hidden and skipped during Next/Back navigation. |
 
 **Action:** `पुढे` (Next).
 
@@ -140,9 +148,34 @@ Columns: निवडा, अनु. क्र., श्री/सौ, नाव,
 
 ---
 
-## Tab 3: परिचयकर्ता / संयुक्त खाते धारक (Introducer / Joint Holder)
+## Tab 3: संयुक्त खाते धारक (Joint Holder)
 
-`TODO` — Deferred; not documented in v1. Tab shell may render as stub until captured.
+> Hidden by default — shown only when field 30 (Tab 1) is checked.
+
+> **Shared component:** Adapted from [New Membership Tab 2](../membership/new-membership-screen.md#tab-2-परिचयकर्ता--संयुक्त-खातेदार-introducer--joint-holder) joint-holder sections; Introducer section omitted for deposit products per bank review. Uses `app-joint-holder-grid`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
+
+### Section: संयुक्त खातेदार (Joint Holder)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | पालक | Guardian | Checkbox | No | — |
+| 2 | ग्राहक निवडा | Select Customer | Autocomplete | No | Enter resolves by customer no. or name. Replaces Customer Number + Customer Name input row |
+
+**Action:** `+ जोड` (Add) — validates customer is selected before appending row to grid.
+
+### Joint Holder Grid (`app-joint-holder-grid`)
+
+Columns: निवडा, अ.क्र., ग्राहक क्रमांक, ग्राहकाचे नाव, पालक.
+
+**Grid actions:** `निर्यात` (Export), `काढा` (Remove).
+
+### Section: खाते चालविण्याची सूचना (Account Operation Instructions)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 3 | खाते चालविण्याची सूचना | Account Operation Instructions | Dropdown | Yes | Default: `स्वतः` (Self). `फक्त प्रमुख खातेदार` (Only Primary Holder), `फक्त संयुक्त खातेदार` (Only Joint Holder), `दोन्ही खातेदार आवश्यक` (Both Holders Required), `दोघांपैकी कोणीही` (Either Holder), `स्वतः` (Self) |
+
+**Navigation:** `मागे` (Back), `पुढे` (Next).
 
 ---
 

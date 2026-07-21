@@ -2,7 +2,7 @@
 
 ## Purpose
 
-UI specification for opening a new recurring deposit account. Four-tab wizard.
+UI specification for opening a new recurring deposit account. Three-tab wizard (Tab 3 optional — hidden unless enabled on Tab 1).
 
 ## Screen Identification
 
@@ -18,8 +18,7 @@ UI specification for opening a new recurring deposit account. Four-tab wizard.
 | :---: | :--- | :--- |
 | 1 | खाते माहिती | Account Information |
 | 2 | वारसदार | Nominee |
-| 3 | सूचक/संयुक्त खातेदार | Introducer / Joint Holder |
-| 4 | मंजुरी | Approval |
+| 3 | संयुक्त खातेदार | Joint Holder |
 
 ## Reference Screenshots / Media
 
@@ -28,6 +27,8 @@ UI specification for opening a new recurring deposit account. Four-tab wizard.
 | `screenshots/रिकरिंग/डॅशबोर्ड_रिकरिंग_नवीन खाते.mp4` | All tabs (from video) |
 | `screenshots/रिकरिंग/new-account-frames/frame_0000.jpg` | Tab 1 |
 | `screenshots/रिकरिंग/new-account-frames/frame_0030.jpg` | Tab 2 — Nominee |
+| `screenshots/रिकरिंग/डॅशबोर्ड-रिकरिंग-नवीन खाते-सूचक.png` | Tab 3 — Joint Holder (shared pattern across deposit products) |
+| `screenshots/रिकरिंग/डॅशबोर्ड-रिकरिंग-नवीन खाते-खाते-चालविण्याची-सूचना.png` | Tab 3 — Account Operation Instructions dropdown |
 
 ---
 
@@ -80,7 +81,13 @@ UI specification for opening a new recurring deposit account. Four-tab wizard.
 | 22 | बँकेचे नाव | Bank Name | Label (read-only) | No | Auto-filled from IFSC |
 | 23 | बँकेचे बचत खाते क्रमांक | Bank Savings Account No. | Textbox | No | Maturity payout optional |
 
-**Action:** `पुढे` (Next). Tabs 3–4: `TODO`.
+### Section: संयुक्त खातेदार पर्याय (Joint Holder Option)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 24 | संयुक्त खातेदार जोडा | Add Joint Holder | Checkbox | No | Unchecked by default. When checked, Tab 3 (Joint Holder) becomes visible in the tab bar; when unchecked, Tab 3 is hidden and skipped during Next/Back navigation. |
+
+**Action:** `पुढे` (Next).
 
 ---
 
@@ -92,15 +99,34 @@ Uses shared component `app-nominee-form` + `app-nominee-grid` — same field set
 
 ---
 
-## Tab 3: सूचक/संयुक्त खातेदार (Introducer / Joint Holder)
+## Tab 3: संयुक्त खातेदार (Joint Holder)
 
-`TODO` — entire tab not captured. Capture from `screenshots/रिकरिंग/डॅशबोर्ड_रिकरिंग_नवीन खाते.mp4` before mockup.
+> Hidden by default — shown only when field 24 (Tab 1) is checked.
 
----
+> **Shared component:** Adapted from [New Membership Tab 2](../membership/new-membership-screen.md#tab-2-परिचयकर्ता--संयुक्त-खातेदार-introducer--joint-holder) joint-holder sections; Introducer section omitted for deposit products per bank review. Uses `app-joint-holder-grid`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
 
-## Tab 4: मंजुरी (Approval)
+### Section: संयुक्त खातेदार (Joint Holder)
 
-`TODO` — entire tab not captured. Capture from `screenshots/रिकरिंग/डॅशबोर्ड_रिकरिंग_नवीन खाते.mp4` before mockup.
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | पालक | Guardian | Checkbox | No | — |
+| 2 | ग्राहक निवडा | Select Customer | Autocomplete | No | Enter resolves by customer no. or name. Replaces Customer Number + Customer Name input row |
+
+**Action:** `+ जोड` (Add) — validates customer is selected before appending row to grid.
+
+### Joint Holder Grid (`app-joint-holder-grid`)
+
+Columns: निवडा, अ.क्र., ग्राहक क्रमांक, ग्राहकाचे नाव, पालक.
+
+**Grid actions:** `निर्यात` (Export), `काढा` (Remove).
+
+### Section: खाते चालविण्याची सूचना (Account Operation Instructions)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 3 | खाते चालविण्याची सूचना | Account Operation Instructions | Dropdown | Yes | Default: `स्वतः` (Self). `फक्त प्रमुख खातेदार` (Only Primary Holder), `फक्त संयुक्त खातेदार` (Only Joint Holder), `दोन्ही खातेदार आवश्यक` (Both Holders Required), `दोघांपैकी कोणीही` (Either Holder), `स्वतः` (Self) |
+
+**Navigation:** `मागे` (Back). **Footer:** `जतन करा` (Save), `रीसेट` (Reset).
 
 ---
 

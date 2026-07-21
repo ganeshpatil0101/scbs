@@ -91,7 +91,6 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 
 | Screen | Missing tabs / sections | Media reference |
 | :--- | :--- | :--- |
-| New Recurring Account | Tab 3 (सूचक/संयुक्त खातेदार), Tab 4 (मंजुरी) | `screenshots/रिकरिंग/डॅशबोर्ड_रिकरिंग_नवीन खाते.mp4` |
 | Recurring Transaction | Tabs 2–4 (बँक तपशील, ट्रान्सफर, खातेवही) | `screenshots/रिकरिंग/डॅशबोर्ड_रिकरिंग_जमा व्यवहार.mp4` |
 | Recurring Transaction | Debit Tab 1 fields (maturity payout / premature closure) | Not captured — mode shell only |
 | Account Register | `अतिरिक्त शोध पर्याय` | `screenshots/रिकरिंग/डॅशबोर्ड_रिकरिंग_खाते रजिस्टर.png` |

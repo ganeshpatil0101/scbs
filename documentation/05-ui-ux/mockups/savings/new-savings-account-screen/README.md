@@ -13,20 +13,22 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 ## Notes
 
-- Reference screenshot `screenshots/bachat/डॅशबोर्ड-बचत-नवीन खाते.png` — Tab 1 only.
-- Tabs 2–4 are TODO stubs per spec.
+- Reference screenshots: Tab 1 `screenshots/bachat/डॅशबोर्ड-बचत-नवीन खाते.png`; Tab 3 `…-परिचयकर्ता.png`, `…-खाते-चालविण्याची-सूचना.png`.
+- Tab 2 (Nominee) is a TODO stub per spec.
+- Tab 3 (Joint Holder) hidden by default; shown when Tab 1's `संयुक्त खातेदार जोडा` checkbox is checked. Introducer section removed per bank review.
 - Scheme / Status dropdowns show `[TODO]` for uncaptured values.
 - Removed fields (2026-07-18): Agent Branch, Agent, Account Category, Sales Agent Branch, Sales Agent; customer summary limited to विशेष सूचना only.
 - प्रगत सेटिंग्ज collapsed by default (`<details>`).
 
 ## Review checklist
 
-- [ ] All Tab 1 fields present with correct grouping (13 spec fields)
+- [ ] All Tab 1 fields present with correct grouping (14 spec fields)
 - [ ] Customer summary shows विशेष सूचना only after autocomplete
+- [ ] Joint Holder tab appears only when checkbox checked
 - [ ] Marathi labels clear for non-technical bank staff
 - [ ] Required fields marked with *
 - [ ] Advanced Settings placement approved
-- [ ] Side-by-side layout on desktop approved
+- [ ] Tab 3 joint holder fields and operating instructions approved
 
 ## Approval
 

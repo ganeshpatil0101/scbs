@@ -89,7 +89,7 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 
 | Screen | Missing tabs / sections | Media reference |
 | :--- | :--- | :--- |
-| New Daily Account | Tabs 3–4 (परिपक्वता / संयुक्त एसी धारक, मंजूरी) | `screenshots/डेली/डॅशबोर्ड_डेली _नवीन खाते.mp4` |
+| New Daily Account | Tab 3 परिपक्वता subsection | `screenshots/डेली/डॅशबोर्ड_डेली _नवीन खाते.mp4`; joint holder in `…-संयुक्त.png` |
 | Daily Transaction | Tabs 3, 4, 6 (साहित्य तपशील, ट्रान्सफर, केवायसी माहिती) | `screenshots/डेली/डॅशबोर्ड_डेली_व्यवहार_*.png` |
 | Agent Collection (legacy wizard) | Tabs 2–3 (संक्षिप्त तपशील, ट्रान्स्फर) — distinct from Agent-to-Agent Transfer | `screenshots/डेली/डॅशबोर्ड_डेली _एजंट_एजंट कलेक्शन.png` |
 
