@@ -155,9 +155,14 @@ On [new-scheme-screen.md](../settings/schemes/new-scheme-screen.md), field **ज
 - **Mockup:** `<input type="text" list="…">` with `<datalist>` options; class `.mockup-autocomplete`
 - **Angular:** shared `app-entity-autocomplete` with `entityType`: `branch` | `gl` | `account` | `customer` | `member` | `agent` | `bank`; Material `mat-autocomplete`; debounced filter; Enter resolves selection
 
+## Quick Add Customer (optional companion button)
+
+When a Customer Autocomplete may need to register a person not yet in master data, add **+ नवीन ग्राहक जोडा** beside the field. See [quick-add-customer-pattern.md](quick-add-customer-pattern.md).
+
 ## Related Documents
 
 - [../../AI_INDEX.md](../../AI_INDEX.md)
+- [quick-add-customer-pattern.md](quick-add-customer-pattern.md)
 - [../accounting/overview.md](../accounting/overview.md)
 - [../bank/bank-management-screen.md](../bank/bank-management-screen.md)
 - [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)

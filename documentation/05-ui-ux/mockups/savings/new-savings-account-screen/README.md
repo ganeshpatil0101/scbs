@@ -14,7 +14,7 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 ## Notes
 
 - Reference screenshots: Tab 1 `screenshots/bachat/डॅशबोर्ड-बचत-नवीन खाते.png`; Tab 3 `…-परिचयकर्ता.png`, `…-खाते-चालविण्याची-सूचना.png`.
-- Tab 2 (Nominee) is a TODO stub per spec.
+- Tab 2 (Nominee) hidden by default; shown when Tab 1's `वारसदार जोडा` checkbox is checked. Nominee = Customer search + **+ नवीन ग्राहक जोडा** quick-add popup per [quick-add-customer-pattern.md](../../../shared/quick-add-customer-pattern.md).
 - Tab 3 (Joint Holder) hidden by default; shown when Tab 1's `संयुक्त खातेदार जोडा` checkbox is checked. Introducer section removed per bank review.
 - Scheme / Status dropdowns show `[TODO]` for uncaptured values.
 - Removed fields (2026-07-18): Agent Branch, Agent, Account Category, Sales Agent Branch, Sales Agent; customer summary limited to विशेष सूचना only.
@@ -22,7 +22,9 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 ## Review checklist
 
-- [ ] All Tab 1 fields present with correct grouping (14 spec fields)
+- [ ] All Tab 1 fields present with correct grouping (15 spec fields)
+- [ ] `वारसदार जोडा` checkbox shows/hides Nominee tab
+- [ ] Nominee tab: customer autocomplete + quick-add popup + simplified grid
 - [ ] Customer summary shows विशेष सूचना only after autocomplete
 - [ ] Joint Holder tab appears only when checkbox checked
 - [ ] Marathi labels clear for non-technical bank staff

@@ -14,6 +14,7 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 ## Notes
 
 - Reference screenshots in `screenshots/रिकरिंग/` including Tab 3 `…-सूचक.png` and operating-instructions dropdown.
+- Tab 2 (Nominee) hidden by default; shown when Tab 1's `वारसदार जोडा` checkbox is checked. Nominee = Customer search + **+ नवीन ग्राहक जोडा** quick-add popup.
 - Tab 3 (Joint Holder) hidden by default; shown when Tab 1's `संयुक्त खातेदार जोडा` checkbox is checked. Introducer section removed per bank review.
 - Account Type dropdown marked TODO per spec.
 - प्रगत सेटिंग्ज collapsed by default (`<details>`).
@@ -25,8 +26,9 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 - [ ] Joint Holder tab appears only when checkbox checked
 - [ ] Marathi labels clear for non-technical bank staff
 - [ ] Required fields marked with *
-- [ ] Nominee tab (Tab 2) key fields approved
-- [ ] Tab 3 joint holder fields and operating instructions approved
+- [ ] `वारसदार जोडा` checkbox shows/hides Nominee tab
+- [ ] Nominee tab: customer autocomplete + quick-add popup + simplified grid
+- [ ] Joint Holder tab appears only when checkbox checked
 
 ## Approval
 

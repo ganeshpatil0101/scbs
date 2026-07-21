@@ -2,7 +2,7 @@
 
 ## Purpose
 
-UI specification for opening a new recurring deposit account. Three-tab wizard (Tab 3 optional — hidden unless enabled on Tab 1).
+UI specification for opening a new recurring deposit account. Three-tab wizard (Tabs 2 and 3 optional — hidden unless enabled on Tab 1).
 
 ## Screen Identification
 
@@ -81,11 +81,17 @@ UI specification for opening a new recurring deposit account. Three-tab wizard (
 | 22 | बँकेचे नाव | Bank Name | Label (read-only) | No | Auto-filled from IFSC |
 | 23 | बँकेचे बचत खाते क्रमांक | Bank Savings Account No. | Textbox | No | Maturity payout optional |
 
+### Section: वारसदार पर्याय (Nominee Option)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 24 | वारसदार जोडा | Add Nominee | Checkbox | No | Unchecked by default. When checked, Tab 2 (Nominee) becomes visible in the tab bar; when unchecked, Tab 2 is hidden and skipped during Next/Back navigation. |
+
 ### Section: संयुक्त खातेदार पर्याय (Joint Holder Option)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 24 | संयुक्त खातेदार जोडा | Add Joint Holder | Checkbox | No | Unchecked by default. When checked, Tab 3 (Joint Holder) becomes visible in the tab bar; when unchecked, Tab 3 is hidden and skipped during Next/Back navigation. |
+| 25 | संयुक्त खातेदार जोडा | Add Joint Holder | Checkbox | No | Unchecked by default. When checked, Tab 3 (Joint Holder) becomes visible in the tab bar; when unchecked, Tab 3 is hidden and skipped during Next/Back navigation. |
 
 **Action:** `पुढे` (Next).
 
@@ -93,15 +99,40 @@ UI specification for opening a new recurring deposit account. Three-tab wizard (
 
 ## Tab 2: वारसदार (Nominee)
 
-Uses shared component `app-nominee-form` + `app-nominee-grid` — same field set and dropdown rules as [Daily New Account Tab 2](../daily/new-daily-account-screen.md#tab-2-वारसदार-nominee) (salutation, occupation, relation, Google Maps address).
+> Hidden by default — shown only when field 24 (Tab 1) is checked.
+
+> **Shared component:** Uses `app-nominee-form` + `app-nominee-grid`. Same field set as [Daily New Account Tab 2](../daily/new-daily-account-screen.md#tab-2-वारसदार-nominee). See [quick-add-customer-pattern.md](../shared/quick-add-customer-pattern.md).
+
+### Section: वारसदार शोधा (Search Nominee)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | ग्राहक निवडा | Select Customer | Autocomplete | Yes | Nominee lookup. Enter resolves by customer no. or name; e.g. `662 — Customer 2`. Includes **+ नवीन ग्राहक जोडा** per [quick-add-customer-pattern.md](../shared/quick-add-customer-pattern.md). See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
+
+### Section: वारसदार तपशील (Nominee Details)
+
+> Visible only after a nominee customer is resolved in field 1.
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 2 | नाते | Relation | Dropdown | Yes | Same as [Membership nominee relation](../membership/new-membership-screen.md) |
+| 3 | टक्केवारी | Percentage | Textbox | No | e.g. `100` |
+| 4 | नामांकन दिनांक | Nomination Date | Label (read-only) | No | System date |
+| 5 | नामांकन करताना वय | Age at Nomination | Label (read-only) | No | Auto-calculated from resolved customer's date of birth |
 
 **Actions:** `टाका`, `पुनर्निर्धारित करा`, `निकाला`.
+
+### Nominee Grid (`app-nominee-grid`)
+
+Columns: निवडा, अनु. क्र., ग्राहक क्रमांक, ग्राहकाचे नाव, नाते, टक्केवारी, नामांकन करताना वय, नामांकन दिनांक.
+
+**Navigation:** `मागे` (Back), `पुढे` (Next).
 
 ---
 
 ## Tab 3: संयुक्त खातेदार (Joint Holder)
 
-> Hidden by default — shown only when field 24 (Tab 1) is checked.
+> Hidden by default — shown only when field 25 (Tab 1) is checked.
 
 > **Shared component:** Adapted from [New Membership Tab 2](../membership/new-membership-screen.md#tab-2-परिचयकर्ता--संयुक्त-खातेदार-introducer--joint-holder) joint-holder sections; Introducer section omitted for deposit products per bank review. Uses `app-joint-holder-grid`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
 
@@ -141,3 +172,4 @@ Columns: निवडा, अ.क्र., ग्राहक क्रमां�
 - [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)
 - [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)
 - [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)
+- [../shared/quick-add-customer-pattern.md](../shared/quick-add-customer-pattern.md)

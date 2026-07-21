@@ -36,6 +36,8 @@ Use these labels in optimization audits and spec changelogs:
 | `app-charges-select` | Charges dropdown + grid (identical values) | All scheme types |
 | `app-benefits-checkboxes` | Senior Citizen / Female / Widow / Disabled / … checkboxes + benefit rate | FD, Recurring (one section per scheme, not two tabs) |
 | `app-entity-autocomplete` | Branch / GL / Account / Customer / Member lookup | Master, Accounting, Membership, Transactions, Customer |
+| `app-quick-add-customer` | Minimal new-customer popup from Customer Autocomplete (+ नवीन ग्राहक जोडा) | Deposit account Nominee tabs; reusable on any Customer lookup |
+| `app-nominee-form` + `app-nominee-grid` | Customer search + Relation/Percentage + nominee grid | Savings, FD, Daily, Recurring new-account Nominee tabs |
 
 When a screen uses a shared component, the spec may reference the component instead of repeating every column — but **required-ness and visibility rules** must still be stated on the screen spec.
 

@@ -377,3 +377,61 @@ a.mockup-module-nav-link:focus-visible {
 .mockup-hidden {
   display: none !important;
 }
+
+/* Autocomplete with adjacent action button */
+.mockup-autocomplete-with-action {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.mockup-autocomplete-with-action .mockup-autocomplete-field {
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+/* Modal / popup (quick-add customer, etc.) */
+.mockup-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(17, 24, 39, 0.5);
+}
+
+.mockup-modal {
+  width: 100%;
+  max-width: 32rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: #fff;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.mockup-modal-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.mockup-modal-body {
+  padding: 1.25rem;
+}
+
+.mockup-modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+  background: #f9fafb;
+}

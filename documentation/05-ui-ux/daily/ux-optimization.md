@@ -117,6 +117,19 @@ Do not invent fields until screenshots/MP4 are available in repo.
 
 **Cross-module consolidation (2026-07-18):** Daily Transaction screen further merged into unified [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md). See [../accounting/ux-optimization.md](../accounting/ux-optimization.md).
 
+**Nominee-as-Customer (2026-07-21):** New Account Tab 2 uses Customer search + quick-add popup; tab hidden by default. See [new-daily-account-screen.md](new-daily-account-screen.md), [../shared/quick-add-customer-pattern.md](../shared/quick-add-customer-pattern.md).
+
+---
+
+## Nominee Tab — UX Enhancement Suggestions (2026-07-21)
+
+| # | Suggestion | Priority |
+| :---: | :--- | :---: |
+| 1 | Show **नवीन ग्राहक** badge on nominee grid rows created via quick-add popup (vs existing customer) | Medium |
+| 2 | Display running **एकूण टक्केवारी** total when multiple nominees are added; warn if not 100% | High |
+| 3 | Non-blocking warning if nominee customer matches primary account holder or a joint holder | Medium |
+| 4 | Disallow **स्वतः** (Self) as नाते when nominee customer record matches primary holder | Medium |
+
 ---
 
 ## Related Documents
@@ -126,5 +139,6 @@ Do not invent fields until screenshots/MP4 are available in repo.
 - [changelog.md](changelog.md)
 - [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)
 - [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)
+- [../shared/quick-add-customer-pattern.md](../shared/quick-add-customer-pattern.md)
 - [../settings/ux-optimization.md](../settings/ux-optimization.md)
 - [../../AI_INDEX.md](../../AI_INDEX.md)

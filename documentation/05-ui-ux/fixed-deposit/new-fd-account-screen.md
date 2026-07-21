@@ -2,7 +2,7 @@
 
 ## Purpose
 
-UI specification for opening a new fixed deposit account. Four-tab wizard (Tab 3 optional — hidden unless enabled on Tab 1).
+UI specification for opening a new fixed deposit account. Four-tab wizard (Tabs 2 and 3 optional — hidden unless enabled on Tab 1).
 
 ## Screen Identification
 
@@ -86,11 +86,17 @@ UI specification for opening a new fixed deposit account. Four-tab wizard (Tab 3
 
 **Action (Multiple FD):** `+ टाका` (Add).
 
+### Section: वारसदार पर्याय (Nominee Option)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 30 | वारसदार जोडा | Add Nominee | Checkbox | No | Unchecked by default. When checked, Tab 2 (Nominee) becomes visible in the tab bar; when unchecked, Tab 2 is hidden and skipped during Next/Back navigation. |
+
 ### Section: संयुक्त खातेदार पर्याय (Joint Holder Option)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 30 | संयुक्त खातेदार जोडा | Add Joint Holder | Checkbox | No | Unchecked by default. When checked, Tab 3 (Joint Holder) becomes visible in the tab bar; when unchecked, Tab 3 is hidden and skipped during Next/Back navigation. |
+| 31 | संयुक्त खातेदार जोडा | Add Joint Holder | Checkbox | No | Unchecked by default. When checked, Tab 3 (Joint Holder) becomes visible in the tab bar; when unchecked, Tab 3 is hidden and skipped during Next/Back navigation. |
 
 **Action:** `पुढे` (Next).
 
@@ -98,59 +104,42 @@ UI specification for opening a new fixed deposit account. Four-tab wizard (Tab 3
 
 ## Tab 2: वारसदार (Nominee)
 
-Uses shared component `app-nominee-form` + `app-nominee-grid` — same field set and dropdown rules as [Daily New Account Tab 2](../daily/new-daily-account-screen.md#tab-2-वारसदार-nominee) (salutation, occupation, relation, Google Maps address).
+> Hidden by default — shown only when field 30 (Tab 1) is checked.
 
-### वारसदाराची माहिती
+> **Shared component:** Uses `app-nominee-form` + `app-nominee-grid`. Same field set as [Daily New Account Tab 2](../daily/new-daily-account-screen.md#tab-2-वारसदार-nominee). See [quick-add-customer-pattern.md](../shared/quick-add-customer-pattern.md).
 
-| # | Marathi Label | English Label | Type | Required | Values / Notes |
-| :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | श्री / सौ | Salutation | Dropdown | Yes | Same as [New Customer salutation](../customer/new-customer-screen.md) |
-| 2 | नाव (आडनाव - पहिले नाव - मधले नाव) | Name | Textbox | Yes | — |
-| 3 | जन्म दिनांक | Date of Birth | Date | No | — |
-| 4 | नामांकन करताना वय | Age at Nomination | Label (read-only) | No | Calculated |
-| 5 | नामांकन दिनांक | Nomination Date | Label (read-only) | No | System date |
-| 6 | व्यवसाय | Occupation | Dropdown | No | Same as [New Customer occupation](../customer/new-customer-screen.md) |
-| 7 | नाते | Relation | Dropdown | Yes | Same as [Membership nominee relation](../membership/new-membership-screen.md) |
-| 8 | टक्केवारी | Percentage | Textbox | No | — |
-
-### संपर्क माहिती
+### Section: वारसदार शोधा (Search Nominee)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 9 | दूरध्वनी क्रमांक | Telephone | Textbox | No | — |
-| 10 | मोबाईल | Mobile | Textbox | No | — |
-| 11 | ई - मेल आय.डी. | E-mail | Textbox | No | — |
+| 1 | ग्राहक निवडा | Select Customer | Autocomplete | Yes | Nominee lookup. Enter resolves by customer no. or name; e.g. `662 — Customer 2`. Includes **+ नवीन ग्राहक जोडा** per [quick-add-customer-pattern.md](../shared/quick-add-customer-pattern.md). See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
 
-### पत्ता माहिती (Address)
+### Section: वारसदार तपशील (Nominee Details)
 
-Google Maps Places Autocomplete — same pattern as [New Customer Tab 2](../customer/new-customer-screen.md#google-maps-address-capture).
+> Visible only after a nominee customer is resolved in field 1.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 12 | पत्ता शोधा | Search Address | Google Maps Autocomplete | Yes | Populates fields 13–20 |
-| 13 | पत्ता / इमारत / फ्लॅट / घर नं. | Address | Textbox | Yes | Auto-populated from Google Maps; editable |
-| 14 | रस्ता | Road | Textbox | No | Auto-populated from Google Maps; editable |
-| 15 | लँडमार्क | Landmark | Textbox | No | Manual entry |
-| 16 | ठिकाण | Location | Textbox | Yes | Auto-populated from Google Maps; editable |
-| 17 | राज्य | State | Textbox | Yes | Auto-populated from Google Maps; editable |
-| 18 | जिल्हा | District | Textbox | No | Auto-populated from Google Maps; editable |
-| 19 | तालुका | Taluka | Textbox | No | Auto-populated from Google Maps; editable |
-| 20 | शहर | City | Textbox | No | Auto-populated from Google Maps; editable |
-| 21 | पिन कोड | Pin Code | Textbox | No | Auto-populated from Google Maps; editable |
+| 2 | नाते | Relation | Dropdown | Yes | Same as [Membership nominee relation](../membership/new-membership-screen.md) |
+| 3 | टक्केवारी | Percentage | Textbox | No | e.g. `100` |
+| 4 | नामांकन दिनांक | Nomination Date | Label (read-only) | No | System date |
+| 5 | नामांकन करताना वय | Age at Nomination | Label (read-only) | No | Auto-calculated from resolved customer's date of birth |
 
 **Action:** `टाका` (Add).
 
-### Nominee Grid
+### Nominee Grid (`app-nominee-grid`)
 
-Columns: निवडा, अनु. क्र., श्री/सौ, नाव, नामांकन करताना वय, जन्मदिनांक, पत्ता, जिल्हा, तालुका, शहर, ठिकाण, पिन कोड, व्यवसाय, दूरध्वनी, मोबाईल, नाते, टक्केवारी, नामांकन दिनांक.
+Columns: निवडा, अनु. क्र., ग्राहक क्रमांक, ग्राहकाचे नाव, नाते, टक्केवारी, नामांकन करताना वय, नामांकन दिनांक.
 
 **Actions:** `निश्चित करा` (Confirm), `रद्द करा` (Cancel).
+
+**Navigation:** `मागे` (Back), `पुढे` (Next).
 
 ---
 
 ## Tab 3: संयुक्त खाते धारक (Joint Holder)
 
-> Hidden by default — shown only when field 30 (Tab 1) is checked.
+> Hidden by default — shown only when field 31 (Tab 1) is checked.
 
 > **Shared component:** Adapted from [New Membership Tab 2](../membership/new-membership-screen.md#tab-2-परिचयकर्ता--संयुक्त-खातेदार-introducer--joint-holder) joint-holder sections; Introducer section omitted for deposit products per bank review. Uses `app-joint-holder-grid`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
 
@@ -246,3 +235,4 @@ Visible when field 15 checked.
 - [fd-account-management-screen.md](fd-account-management-screen.md)
 - [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)
 - [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)
+- [../shared/quick-add-customer-pattern.md](../shared/quick-add-customer-pattern.md)

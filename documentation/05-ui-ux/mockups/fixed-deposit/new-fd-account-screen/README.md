@@ -14,6 +14,7 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 ## Notes
 
 - Reference screenshots in `screenshots/मुदत ठेव/डॅशबोर्ड-मुदत ठेव-नवीन खाते*.png` including Tab 3 joint holder captures.
+- Tab 2 (Nominee) hidden by default; shown when Tab 1's `वारसदार जोडा` checkbox is checked. Nominee = Customer search + **+ नवीन ग्राहक जोडा** quick-add popup.
 - Tab 3 (Joint Holder) hidden by default; shown when Tab 1's `संयुक्त खातेदार जोडा` checkbox is checked. Introducer section removed per bank review.
 - Tab 4 conditional sections (व्याज हस्तांतरण, खाते बंद करतेवेळी) hidden until parent checkbox checked.
 - प्रगत सेटिंग्ज collapsed by default on Tab 1 and Tab 4.
@@ -21,6 +22,8 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 ## Review checklist
 
 - [ ] All spec fields present with correct grouping
+- [ ] `वारसदार जोडा` checkbox shows/hides Nominee tab
+- [ ] Nominee tab: customer autocomplete + quick-add popup + simplified grid
 - [ ] Joint Holder tab appears only when checkbox checked
 - [ ] Marathi labels clear for non-technical bank staff
 - [ ] Required fields marked with *
