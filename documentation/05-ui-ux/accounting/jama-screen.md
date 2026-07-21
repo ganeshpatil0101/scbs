@@ -88,7 +88,7 @@ Enabled only when Tab 1 field 2 = `बँक`. All fields disabled when Tab 1 fi
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 14 | धनादेश प्रकार निवडा | Select Cheque Type | Dropdown | No | `स्लिप` (Slip) |
+| 14 | धनादेश प्रकार निवडा | Select Cheque Type | Dropdown | No | `स्लिप` (Slip), `चेक` (Cheque) |
 | 15 | चेक रक्कम (रु.) | Cheque Amount (Rs.) | Textbox | No | Read-only |
 | 16 | रक्कम अक्षरी | Amount in Words | Textbox | No | Read-only |
 | 17 | चेक दिनांक | Cheque Date | Date | Yes | — |

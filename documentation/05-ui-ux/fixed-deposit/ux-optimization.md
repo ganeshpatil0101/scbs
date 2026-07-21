@@ -88,14 +88,12 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 
 ## Open Gaps (TODO — not captured)
 
-| Screen | Missing tabs / sections | Media reference |
-| :--- | :--- | :--- |
-| FD Transaction | Tabs 2, 5 (साहित्य तपशील, केवायसी माहिती) | `screenshots/मुदत ठेव/डॅशबोर्ड-मुदत ठेव-व्यवहार*.png` |
-| Deposit Loan Installment | Tabs 2–6 (इतर कपात … केवायसी) | `screenshots/मुदत ठेव/डॅशबोर्ड_ठेव_ठेव कर्ज हप्ता पेमेंट.mp4` |
-| Account Register | `अतिरिक्त शोध पर्याय` | `screenshots/मुदत ठेव/डॅशबोर्ड_मुदत ठेव _खाते रजिस्टर.png` |
-| Manual Interest | `अॅडव्हान्स शोध` | `screenshots/मुदत ठेव/डॅशबोर्ड_मुदत ठेव_ मॅन्युअल व्याज_आकारणी.png` |
+| Screen | Missing tabs / sections | Media reference | Disposition |
+| :--- | :--- | :--- | :--- |
+| Deposit Loan Installment | Tabs 2–6 (इतर कपात … केवायसी) | `screenshots/मुदत ठेव/डॅशबोर्ड_ठेव_ठेव कर्ज हप्ता पेमेंट.mp4` | **Keep TODO** — will remove later per bank review (2026-07-21) |
 
-Do not invent fields until screenshots/MP4 are available in repo.
+*(Resolved 2026-07-21: Account Management Status enum + omit अतिरिक्त शोध. Superseded Transaction / Manual Interest gaps tracked under accounting.)*
+
 
 ---
 

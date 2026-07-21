@@ -44,7 +44,7 @@ UI specification for opening a new savings account. Three-tab wizard (Tabs 2 and
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 2 | योजना निवडा | Select Scheme | Dropdown | Yes | Loaded dynamically from Savings schemes (Settings > नवीन योजना, Scheme Type = बचत). Sample: `सेव्हिंग ठेव`. Values: `TODO` — cross-check scheme master |
+| 2 | योजना निवडा | Select Scheme | Dropdown | Yes | Loaded dynamically from Savings schemes (Settings > नवीन योजना, Scheme Type = बचत). Sample: `सेव्हिंग ठेव`. Full list comes from scheme master — not a fixed enum |
 | 3 | खाते क्र. | Account No. | Label (read-only) | No | Auto-generated on save; e.g. `113` |
 
 ### Section: खाते तपशील (Account Details)
@@ -55,7 +55,7 @@ UI specification for opening a new savings account. Three-tab wizard (Tabs 2 and
 | 5 | चालू दिनांक | Current Date | Date | Yes | Default: system date |
 | 6 | विशेष सूचना | Special Instructions | Textbox | No | Account-level note (distinct from customer summary) |
 | 7 | किमान शिल्लक | Minimum Balance | Textbox | Yes | e.g. `0.00`; may default from scheme |
-| 8 | स्थिती निवडा | Select Status | Dropdown | No | Default: `चालू` (Active). Other values: `TODO` |
+| 8 | स्थिती निवडा | Select Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended) — same as [New FD Account](../fixed-deposit/new-fd-account-screen.md) / [New Daily Account](../daily/new-daily-account-screen.md) |
 
 ### Section: प्रगत सेटिंग्ज (Advanced Settings)
 

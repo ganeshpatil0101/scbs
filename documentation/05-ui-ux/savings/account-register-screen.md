@@ -12,13 +12,14 @@ UI specification for searching and listing savings deposit accounts.
 | Breadcrumb | डॅशबोर्ड > बचत > खाते रजिस्टर | Dashboard > Savings > Account Register |
 | Parent Module | बचत | Savings |
 
-**Auto-fill (header):** `संस्था` (Organization) — read-only `Label` from tenant session; not repeated in filter bar.
+**Auto-fill (header):** `संस्था` (Organization) — read-only `Label` from tenant session; not repeated in filter bar. (Legacy UI shows `संघटना` as a filter dropdown — replaced by session header.)
 
 ## Reference Screenshots
 
 | File | Section |
 | :--- | :--- |
-| `screenshots/bachat/डॅशबोर्ड-बचत-खाते रजिस्टर-1-05-07.png` | Full screen |
+| `screenshots/bachat/डॅशबोर्ड-बचत-खाते-रजिस्टर.png` | Full screen (primary search + empty grid) — bank-provided 2026-07-21 |
+| `screenshots/bachat/डॅशबोर्ड-बचत-खाते रजिस्टर-1-05-07.png` | Earlier capture (if present) |
 
 ---
 
@@ -26,18 +27,24 @@ UI specification for searching and listing savings deposit accounts.
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | शाखा निवडा | Select Branch | Autocomplete | No | Replaces `शाखा कोड` + `शाखेचे नाव`. Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
-| 2 | योजना निवडा | Select Scheme | Dropdown | No | Loaded dynamically from Savings schemes (Settings > नवीन योजना). e.g. `सेव्हिंग ठेव` (Saving Deposit) |
-| 3 | स्थिती निवडा | Select Status | Dropdown | No | e.g. `चालू` (Active) |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | No | Replaces legacy `शाखा कोड` + `शाखेचे नाव`. Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
+| 2 | योजना निवडा | Select Scheme | Dropdown | No | Loaded dynamically from Savings schemes (Settings > नवीन योजना). Sample: `सेव्हिंग ठेव` (Saving Deposit) |
+| 3 | स्थिती निवडा | Select Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended) — same as [New Savings Account](new-savings-account-screen.md) |
 | 4 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | Range filter — not consolidated per entity-autocomplete exclusions |
 | 5 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | — |
 | 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Replaces free-text `खाते धारकाचे नाव`. Sample: `101 — Account Holder 1`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
 | 7 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | Range filter |
 | 8 | ग्राहक क्रमांक (पर्यंत) | Customer No. (To) | Textbox | No | — |
 
-**Link:** `अतिरिक्त शोध पर्याय` — `TODO — not captured`.
+**Action:** `दाखवा` (Show).
 
-**Action:** `दाखवा`.
+> **Out of scope (deferred):** Legacy link `अतिरिक्त शोध पर्याय` exists in the old app but is not required for the current CBS UI — omitted from this spec (no stub, no TODO).
+
+### Section: निकाल फिल्टर (Results filter)
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 9 | कर्ज संलग्नीत खाते | Loan-linked accounts | Checkbox | No | Shown above the results grid. When checked, filters (or highlights) accounts that have linked loans — same accounts shown with pink row styling |
 
 **Sidebar `तपशील`:** Opens account detail in context — no separate Account Information screen spec (deferred; see [ux-optimization.md](ux-optimization.md)).
 
@@ -45,7 +52,7 @@ UI specification for searching and listing savings deposit accounts.
 
 ## Results Grid
 
-**Legend:** Pink — कर्ज असलेली खाती (Accounts with loans).
+**Row highlight:** Pink — कर्ज संलग्नीत / कर्ज असलेली खाती (accounts with linked loans). Controlled by field 9 and/or always applied as visual legend when loan-linked.
 
 | # | Marathi Column | English Column |
 | :---: | :--- | :--- |
@@ -71,9 +78,9 @@ UI specification for searching and listing savings deposit accounts.
 
 **Footer:** एकूण नोंदी, pagination (पहिले, मागील, पुढील).
 
-**Sidebar actions:** `तपशील`, `निर्यात करा`, `काढा`, `खाते उतारा`.
+**Sidebar actions:** `तपशील`, `निर्यात करा`, `वगळा`, `खाते उतारा`.
 
-**Bottom actions:** `खाते बंद करा`, `पुनर्वत`.
+**Bottom actions:** `खाते बंद करा`, `पूर्ववत`.
 
 ---
 

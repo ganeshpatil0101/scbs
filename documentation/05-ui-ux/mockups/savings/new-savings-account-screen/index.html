@@ -28,9 +28,7 @@
     <nav class="mockup-module-nav" aria-label="मॉड्यूलमधील स्क्रीन्स">
       <span class="mockup-module-nav-label">या मॉड्यूलमधील स्क्रीन्स:</span>
       <span class="mockup-module-nav-link mockup-module-nav-current" aria-current="page">नवीन खाते</span>
-      <a href="../savings-transaction-screen/index.html" class="mockup-module-nav-link">व्यवहार</a>
       <a href="../account-register-screen/index.html" class="mockup-module-nav-link">खाते रजिस्टर</a>
-      <a href="../manual-interest-calculation-screen/index.html" class="mockup-module-nav-link">मॅन्युअल व्याज आकारणी</a>
     </nav>
 
     <nav class="flex border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="स्क्रीन टॅब">
@@ -63,8 +61,8 @@
             <div data-spec-field="2">
               <label class="mockup-label" for="scheme">योजना निवडा <span class="mockup-required">*</span></label>
               <select id="scheme">
+                <option value="">निवडा</option>
                 <option value="saving" selected>सेव्हिंग ठेव</option>
-                <option disabled>[TODO] — इतर योजना</option>
               </select>
             </div>
             <div data-spec-field="3"><label class="mockup-label">खाते क्र.</label><span class="inline-block px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 w-full">— (जतनानंतर)</span></div>
@@ -90,7 +88,11 @@
           </div>
           <div data-spec-field="8">
             <label class="mockup-label" for="status">स्थिती निवडा</label>
-            <select id="status"><option value="active" selected>चालू</option><option disabled>[TODO] — इतर स्थिती</option></select>
+            <select id="status">
+              <option value="active" selected>चालू</option>
+              <option value="closed">बंद</option>
+              <option value="suspended">स्थगित</option>
+            </select>
           </div>
         </div>
       </section>

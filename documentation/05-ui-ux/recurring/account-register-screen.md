@@ -28,16 +28,16 @@ UI specification for searching and listing recurring deposit accounts.
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 1 | शाखा निवडा | Select Branch | Autocomplete | No | Sample: `1 — Branch 1`, `2 — Branch 2`, `3 — Branch 3`. Enter resolves by ID or name; shows display name |
 | 2 | योजना निवडा | Select Scheme | Dropdown | No | Loaded dynamically from Recurring schemes (Settings > नवीन योजना). Replaces legacy `खाते निवडा`. e.g. `सर्व` |
-| 3 | स्थिती निवडा | Select Status | Dropdown | No | e.g. `चालू` |
+| 3 | स्थिती निवडा | Select Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended) — same as [New Recurring Account](new-recurring-account-screen.md) / [Savings Account Register](../savings/account-register-screen.md) |
 | 4 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | Range filter — not consolidated per entity-autocomplete exclusions |
 | 5 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | — |
 | 6 | खातेधारक निवडा | Select Account Holder | Autocomplete | No | Replaces free-text `खातेधारकाचे नाव`. Sample: `101 — Account Holder 1`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
 | 7 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | Range filter |
 | 8 | ग्राहक क्रमांक (पर्यंत) | Customer No. (To) | Textbox | No | — |
 
-**Link:** `अतिरिक्त शोध पर्याय` — `TODO — not captured`.
-
 **Action:** `दाखवा`.
+
+> **Out of scope (deferred):** Legacy link `अतिरिक्त शोध पर्याय` exists in the old app but is not required for the current CBS UI — omitted from this spec (no stub, no TODO). Same as [Savings Account Register](../savings/account-register-screen.md).
 
 ---
 

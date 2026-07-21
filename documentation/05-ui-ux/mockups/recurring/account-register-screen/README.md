@@ -13,8 +13,8 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 ## Notes
 
-- Reference screenshot `screenshots/रिकरिंग/डॅशबोर्ड_रिकरिंग_खाते रजिस्टर.png` not in repo — layout is spec-driven.
-- `अतिरिक्त शोध पर्याय` shown as TODO link only.
+- Status filter: `चालू` / `बंद` / `स्थगित`.
+- Legacy `अतिरिक्त शोध पर्याय` omitted (deferred — not in current CBS UI).
 
 ## Review checklist
 

@@ -15,7 +15,8 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 - Consolidates superseded Account Register + Renewal List screens (2 tabs).
 - Organization shown as session header (not in filter bar on Tab 1).
-- `अतिरिक्त शोध पर्याय` marked TODO per spec.
+- Status filter: `चालू` / `बंद` / `स्थगित` (reuse Savings / New FD).
+- Legacy `अतिरिक्त शोध पर्याय` omitted (deferred — not in current CBS UI).
 - Pink/blue row legend for loan and matured accounts on Tab 1.
 
 ## Review checklist

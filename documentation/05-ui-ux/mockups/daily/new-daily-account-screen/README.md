@@ -15,7 +15,7 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 - Reference media in `screenshots/डेली/डॅशबोर्ड_डेली _नवीन खाते.mp4` and Tab 3 joint holder PNGs.
 - Tab 2 (Nominee) hidden by default; shown when Tab 1's `वारसदार जोडा` checkbox is checked. Nominee = Customer search + **+ नवीन ग्राहक जोडा** quick-add popup.
-- Tab 3 hidden by default; shown when Tab 1's `संयुक्त खातेदार जोडा` checkbox is checked. Introducer section removed per bank review.
+- Tab 3 hidden by default; shown when Tab 1's `संयुक्त खातेदार जोडा` checkbox is checked. Introducer section removed per bank review. Maturity fields live on Tab 1 (no separate परिपक्वता section).
 - प्रगत सेटिंग्ज collapsed by default on Tab 1.
 
 ## Review checklist

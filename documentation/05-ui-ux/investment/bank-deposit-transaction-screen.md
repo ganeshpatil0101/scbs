@@ -84,7 +84,7 @@ Displayed after account resolve. Replaces individual editable textboxes for calc
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | धनादेश प्रकार निवडा | Select Cheque Type | Dropdown | No | e.g. `स्लिप` (Slip) |
+| 1 | धनादेश प्रकार निवडा | Select Cheque Type | Dropdown | No | `स्लिप` (Slip), `चेक` (Cheque) |
 | 2 | चेक रक्कम (रु.) | Cheque Amount (Rs.) | Textbox | No | — |
 | 3 | रक्कम अक्षरी | Amount in Words | Label (read-only) | No | Auto-filled from cheque amount |
 | 4 | चेक दिनांक | Cheque Date | Date | Yes | — |

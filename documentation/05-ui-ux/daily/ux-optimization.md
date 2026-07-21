@@ -87,13 +87,9 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 
 ## Open Gaps (TODO — not captured)
 
-| Screen | Missing tabs / sections | Media reference |
-| :--- | :--- | :--- |
-| New Daily Account | Tab 3 परिपक्वता subsection | `screenshots/डेली/डॅशबोर्ड_डेली _नवीन खाते.mp4`; joint holder in `…-संयुक्त.png` |
-| Daily Transaction | Tabs 3, 4, 6 (साहित्य तपशील, ट्रान्सफर, केवायसी माहिती) | `screenshots/डेली/डॅशबोर्ड_डेली_व्यवहार_*.png` |
-| Agent Collection (legacy wizard) | Tabs 2–3 (संक्षिप्त तपशील, ट्रान्स्फर) — distinct from Agent-to-Agent Transfer | `screenshots/डेली/डॅशबोर्ड_डेली _एजंट_एजंट कलेक्शन.png` |
+None for current Daily screens.
 
-Do not invent fields until screenshots/MP4 are available in repo.
+*(Resolved 2026-07-21: Register Status + omit अतिरिक्त शोध; New Account Tab 3 परिपक्वता TODO removed; Agent Collection Brief Details + Transfer captured from screenshots. Superseded Transaction gaps tracked under accounting.)*
 
 ---
 

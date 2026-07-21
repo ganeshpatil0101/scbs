@@ -5,6 +5,7 @@
 | Spec | [agent-collection-management-screen.md](../../../daily/agent-collection-management-screen.md) |
 | Status | **Draft** |
 | Created | 2026-07-16 |
+| Updated | 2026-07-21 |
 | Language | Marathi only (English via ngx-translate in Angular phase) |
 
 ## How to open
@@ -13,18 +14,22 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 ## Notes
 
-- Reference screenshots in `screenshots/डेली/डॅशबोर्ड_डेली _एजंट_एजंट कलेक्शन.png` and `...एजंट कलेक्शन यादी.png`.
-- Consolidates superseded Agent Collection + Agent Collection List screens (2 tabs).
-- Collection grid has 24 columns including Day 1–10 columns per spec.
+- **4 tabs:** एजंट संकलन → संक्षिप्त तपशील → ट्रान्स्फर → कलेक्शन यादी.
+- Tab 2 / Tab 3 from bank screenshots `screenshots/डेली/डॅशबोर्ड-डेली-एजंट-कलेक्शन-संक्षिप्त-तपशील.png` and `…-ट्रान्स्फर.png` (2026-07-21).
+- Cheque type: `स्लिप` / `चेक`. Bank = Autocomplete from Bank Master.
+- Transfer: Branch / GL / Account Holder Autocomplete; grid actions `अनियमित करा`, `निटवा`.
+- Distinct from Agent-to-Agent Transfer screen.
+- Module nav lists current Daily screens only (superseded व्यवहार omitted).
 
 ## Review checklist
 
-- [ ] All spec fields present with correct grouping
+- [ ] All 4 tabs present with correct fields
+- [ ] Brief Details required fields marked *
+- [ ] Transfer Autocomplete + grid match screenshot
 - [ ] Marathi labels clear for non-technical bank staff
-- [ ] Required fields marked with *
-- [ ] Responsive on mobile (single column) and desktop (two columns, centered)
-- [ ] Grid columns match spec
-- [ ] Tab structure approved
+- [ ] Wizard Next/Back between tabs 1–3
+- [ ] Collection List tab independent
+- [ ] Responsive on mobile and desktop
 
 ## Approval
 

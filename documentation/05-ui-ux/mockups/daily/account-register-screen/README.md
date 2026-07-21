@@ -15,6 +15,8 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 - Reference screenshot: `screenshots/डेली/डॅशबोर्ड_डेली_खाते रजिस्टर.png`.
 - Organization (`संस्था`) shown as read-only header from tenant session, not in filter bar.
+- Status filter: `चालू` / `बंद` / `स्थगित`.
+- Legacy `अतिरिक्त शोध पर्याय` omitted (deferred — not in current CBS UI).
 
 ## Review checklist
 

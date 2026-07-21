@@ -62,7 +62,7 @@ UI specification for contra (cash/bank offset) transactions — multi-line debit
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | धनादेश प्रकार निवडा | Select Cheque Type | Dropdown | No | e.g. `चेक` (Cheque). Other values: `TODO` |
+| 1 | धनादेश प्रकार निवडा | Select Cheque Type | Dropdown | No | `स्लिप` (Slip), `चेक` (Cheque) |
 | 2 | चेक रक्कम (रु.) | Cheque Amount (Rs.) | Textbox | No | — |
 | 3 | रक्कम अक्षरी | Amount in Words | Textbox | No | Read-only |
 | 4 | चेक दिनांक | Cheque Date | Date | Yes | — |

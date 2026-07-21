@@ -2,6 +2,8 @@
 
 | Version | Date | Changes | Reason | Author |
 | :--- | :--- | :--- | :--- | :--- |
+| 2.1.1 | 2026-07-21 | Deposit Loan Installment Tabs 2–6: retain TODO (remove later); Account Management Status + omit अतिरिक्त शोध done in 2.1.0 | Bank review — defer unused tabs | AI Agent |
+| 2.1.0 | 2026-07-21 | Account Management Tab 1: Status = `चालू`/`बंद`/`स्थगित`; omit legacy `अतिरिक्त शोध पर्याय` (no TODO); mockup updated | Bank confirmation — reuse Savings patterns | AI Agent |
 | 1.0.0 | 2025-06-25 | New FD Account, FD Transaction screen specs | Generated from `screenshots/मुदत ठेव/` | AI Agent |
 | 1.1.0 | 2025-06-26 | Account Register, Manual Interest, Renewal List, Deposit Loan Installment, Interest Multiplier | New assets in `screenshots/मुदत ठेव/` | AI Agent |
 | 1.2.0 | 2026-07-01 | Consolidated Branch/GL/Account lookup fields into single Autocomplete per entity-autocomplete-pattern.md | Legacy dual-field UX replaced | AI Agent |

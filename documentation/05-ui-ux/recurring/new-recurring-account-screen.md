@@ -57,7 +57,7 @@ UI specification for opening a new recurring deposit account. Three-tab wizard (
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 8 | खाते प्रकार | Account Type | Dropdown | Yes | Same as [New Scheme recurring account types](../settings/schemes/new-scheme-screen.md) Tab 2 benefits. Values: `TODO` — cross-check scheme |
+| 8 | खाते प्रकार | Account Type | Dropdown | Yes | Same as [New FD Account](../fixed-deposit/new-fd-account-screen.md) / FD scheme benefits: `सामान्य खाते`, `ज्येष्ठ नागरिक खाते`, `महिला`, `विधवा`, `अपंग`, `दुसरी संस्था`, `नोकर`, `स्वातंत्र्यसैनिक`, `अति ज्येष्ठ नागरिक` |
 | 9 | कालावधी निवडा | Select Duration | Dropdown | Yes | Loaded from selected scheme's duration/rate slab grid (e.g. `0-60`) |
 | 10 | कालावधी(महिने) | Duration (Months) | Label (read-only) | Yes | Auto-filled from duration selection; e.g. `60` |
 | 11 | व्याज दर(% वार्षिक) | Interest Rate (% p.a.) | Label (read-only) | Yes | Auto-filled from slab; e.g. `12.37`. Admin override requires admin role |

@@ -89,16 +89,9 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 
 ## Open Gaps (TODO — not captured)
 
-| Screen | Missing tabs / sections | Media reference |
-| :--- | :--- | :--- |
-| Recurring Transaction | Tabs 2–4 (बँक तपशील, ट्रान्सफर, खातेवही) | `screenshots/रिकरिंग/डॅशबोर्ड_रिकरिंग_जमा व्यवहार.mp4` |
-| Recurring Transaction | Debit Tab 1 fields (maturity payout / premature closure) | Not captured — mode shell only |
-| Account Register | `अतिरिक्त शोध पर्याय` | `screenshots/रिकरिंग/डॅशबोर्ड_रिकरिंग_खाते रजिस्टर.png` |
-| Interest Management | `प्रगत शोध` | `screenshots/रिकरिंग/डॅशबोर्ड_रिकरिंग_मॅन्युअल व्याज_आकारणी.png` |
-| New Account Tab 1 | Account Type dropdown values | Cross-check scheme benefits |
-| Transaction Tab 5 | Address Type dropdown values | KYC frame |
+None for current Recurring screens (नवीन खाते, खाते रजिस्टर, व्याज गुणक).
 
-`screenshots/रिकरिंग/` is empty in repo — cannot verify fields from media. Do not invent fields until screenshots/MP4 are available.
+*(Resolved 2026-07-21: Account Type enum from FD; Register Status enum; omit अतिरिक्त शोध. Superseded Transaction / Interest Management gaps tracked under accounting.)*
 
 ---
 

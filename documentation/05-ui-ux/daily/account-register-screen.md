@@ -34,11 +34,11 @@ UI specification for searching and listing daily deposit accounts.
 | 6 | ग्राहक क्र. (पासून) | Customer No. (From) | Textbox | No | Range filter |
 | 7 | ग्राहक क्र. (पर्यंत) | Customer No. (To) | Textbox | No | — |
 | 8 | खातेधारक | Account Holder | Textbox | No | — |
-| 9 | स्थिती निवडा | Select Status | Dropdown | No | e.g. `चालू` |
-
-**Link:** `अतिरिक्त शोध पर्याय` (Additional Search Options).
+| 9 | स्थिती निवडा | Select Status | Dropdown | No | Default: `चालू` (Active). Values: `चालू`, `बंद` (Closed), `स्थगित` (Suspended) — same as [New Daily Account](new-daily-account-screen.md) / [Savings Account Register](../savings/account-register-screen.md) |
 
 **Action:** `दाखवा` (Show).
+
+> **Out of scope (deferred):** Legacy link `अतिरिक्त शोध पर्याय` exists in the old app but is not required for the current CBS UI — omitted from this spec (no stub, no TODO). Same as [Savings Account Register](../savings/account-register-screen.md).
 
 ---
 

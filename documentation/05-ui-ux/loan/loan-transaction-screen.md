@@ -230,7 +230,7 @@ Shared component: `app-cheque-tab`. Visible when Transaction Mode = Cash or Tran
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | धनादेश प्रकार निवडा | Select Cheque Type | Dropdown | No | e.g. `स्लिप` (Slip) |
+| 1 | धनादेश प्रकार निवडा | Select Cheque Type | Dropdown | No | `स्लिप` (Slip), `चेक` (Cheque) |
 | 2 | चेक रक्कम (रु.) | Cheque Amount (Rs.) | Textbox | No | Read-only on Credit; editable on Debit |
 | 3 | रक्कम अक्षरी | Amount in Words | Label | No | Read-only |
 | 4 | चेक दिनांक | Cheque Date | Date | Yes | — |

@@ -16,7 +16,7 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 - Reference screenshots in `screenshots/रिकरिंग/` including Tab 3 `…-सूचक.png` and operating-instructions dropdown.
 - Tab 2 (Nominee) hidden by default; shown when Tab 1's `वारसदार जोडा` checkbox is checked. Nominee = Customer search + **+ नवीन ग्राहक जोडा** quick-add popup.
 - Tab 3 (Joint Holder) hidden by default; shown when Tab 1's `संयुक्त खातेदार जोडा` checkbox is checked. Introducer section removed per bank review.
-- Account Type dropdown marked TODO per spec.
+- Account Type dropdown: FD scheme list (`सामान्य खाते` … `अति ज्येष्ठ नागरिक`) — confirmed 2026-07-21.
 - प्रगत सेटिंग्ज collapsed by default (`<details>`).
 
 ## Review checklist

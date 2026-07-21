@@ -80,14 +80,9 @@ Screenshots under `screenshots/bachat/` confirm only four operational screens �
 
 ## Open Gaps (TODO — not captured)
 
-| Screen | Missing tabs / sections | Media reference |
-| :--- | :--- | :--- |
-| New Savings Account | Tab 2 (वारसदार) | `screenshots/bachat/डॅशबोर्ड-बचत-नवीन खाते.png` (Tab 1); Tab 3 in `…-परिचयकर्ता.png` |
-| Savings Transaction | Tab 5 (केवायसी माहिती) | `screenshots/bachat/डॅशबोर्ड-बचत-व्यवहार*.png` |
-| Account Register | `अतिरिक्त शोध पर्याय` | `screenshots/bachat/डॅशबोर्ड-बचत-खाते रजिस्टर-1-05-07.png` |
-| Manual Interest | `अॅडव्हान्स शोध` | `screenshots/bachat/डॅशबोर्ड-बचत-मॅन्युअल व्याज-आकारणी.png` |
+None for current Savings screens.
 
-Do not invent fields until screenshots are re-captured or video frames added.
+*(Resolved 2026-07-21: Status enum; Scheme = dynamic master; Register checkbox `कर्ज संलग्नीत खाते`, sidebar `वगळा`, bottom `पूर्ववत`; legacy `अतिरिक्त शोध पर्याय` deferred/omitted — no TODO. Superseded Transaction / Manual Interest gaps tracked under accounting.)*
 
 ---
 
@@ -109,6 +104,8 @@ None — no screen merges in this optimization pass.
 **Cross-module consolidation (2026-07-18):** Savings Transaction screen further merged into unified [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md). See [../accounting/ux-optimization.md](../accounting/ux-optimization.md).
 
 **Nominee-as-Customer (2026-07-21):** New Account Tab 2 uses Customer search + quick-add popup; tab hidden by default. See [new-savings-account-screen.md](new-savings-account-screen.md), [../shared/quick-add-customer-pattern.md](../shared/quick-add-customer-pattern.md).
+
+**Status enum (2026-07-21):** Account Status on New Account + Register = `चालू` / `बंद` / `स्थगित` (reuse FD/Daily/Recurring). Scheme remains dynamic from master.
 
 ---
 

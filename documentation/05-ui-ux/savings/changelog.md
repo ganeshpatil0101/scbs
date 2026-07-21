@@ -2,6 +2,9 @@
 
 | Version | Date | Changes | Reason | Author |
 | :--- | :--- | :--- | :--- | :--- |
+| 2.3.0 | 2026-07-21 | Account Register: omit legacy `अतिरिक्त शोध पर्याय` (deferred, no TODO stub) | Bank confirmation — not needed for current CBS UI | AI Agent |
+| 2.2.0 | 2026-07-21 | Account Register: from bank screenshot — added `कर्ज संलग्नीत खाते` checkbox; sidebar `काढा`→`वगळा`; bottom `पूर्ववत`; mockup + screenshot saved | Bank-provided खाते रजिस्टर screenshot | AI Agent |
+| 2.1.0 | 2026-07-21 | Status dropdown values set to `चालू` / `बंद` / `स्थगित` on New Account + Account Register; mockups updated | Bank confirmation — reuse FD/Daily/Recurring account status enum | AI Agent |
 | 1.0.0 | 2025-06-25 | New Savings Account, Transaction, Manual Interest Calculation screen specs | Generated from `screenshots/bachat/` | AI Agent |
 | 1.1.0 | 2026-07-01 | Consolidated Branch/GL/Account lookup fields into single Autocomplete per entity-autocomplete-pattern.md | Legacy dual-field UX replaced | AI Agent |
 | 1.2.0 | 2026-07-05 | Account Register screen spec | New screenshot `05-07` in `screenshots/bachat/` | AI Agent |

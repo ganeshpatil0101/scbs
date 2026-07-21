@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Single screen for recording new daily agent collections and viewing historical collection records. Tab 1 captures collections against member accounts; Tab 2 lists and exports past collections.
+Single screen for recording daily agent collections (wizard: collection grid → brief instrument details → transfer posting) and viewing historical collection records.
 
 ## Screen Identification
 
@@ -16,21 +16,25 @@ Single screen for recording new daily agent collections and viewing historical c
 
 ## Tabs
 
-| # | Marathi Tab | English Tab | Replaces |
+| # | Marathi Tab | English Tab | Replaces / Notes |
 | :---: | :--- | :--- | :--- |
-| 1 | नवीन कलेक्शन | New Collection | Agent Collection |
-| 2 | कलेक्शन यादी | Collection List | Agent Collection List |
+| 1 | एजंट संकलन | Agent Collection | Agent Collection — capture grid |
+| 2 | संक्षिप्त तपशील | Brief Details | Post-grid instrument / cheque details (not Agent-to-Agent Transfer) |
+| 3 | ट्रान्स्फर | Transfer | Posting transfer lines for the collection |
+| 4 | कलेक्शन यादी | Collection List | Agent Collection List |
 
 ## Reference Screenshots
 
 | File | Tab |
 | :--- | :--- |
 | `screenshots/डेली/डॅशबोर्ड_डेली _एजंट_एजंट कलेक्शन.png` | Tab 1 |
-| `screenshots/डेली/डॅशबोर्ड_डेली_एजंट_एजंट कलेक्शन यादी.png` | Tab 2 |
+| `screenshots/डेली/डॅशबोर्ड-डेली-एजंट-कलेक्शन-संक्षिप्त-तपशील.png` | Tab 2 — bank-provided 2026-07-21 |
+| `screenshots/डेली/डॅशबोर्ड-डेली-एजंट-कलेक्शन-ट्रान्स्फर.png` | Tab 3 — bank-provided 2026-07-21 |
+| `screenshots/डेली/डॅशबोर्ड_डेली_एजंट_एजंट कलेक्शन यादी.png` | Tab 4 |
 
 ---
 
-## Tab 1: नवीन कलेक्शन (New Collection)
+## Tab 1: एजंट संकलन (Agent Collection)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
@@ -75,11 +79,68 @@ Single screen for recording new daily agent collections and viewing historical c
 
 **Footer summary:** एकूण रक्कम, एकूण एजंट कमिशन, एकूण निवडलेल्या नोंदी.
 
-> **Legacy wizard tabs (not captured):** Original Agent Collection screen had Tab 2 `संक्षिप्त तपशील` (Brief Details) and Tab 3 `ट्रान्स्फर` (Transfer) as post-grid steps. These are **not** the same as [Agent to Agent Transfer](agent-to-agent-transfer-screen.md). `TODO — not captured` until screenshots/MP4 available.
+**Navigation:** `पुढे` → Tab 2 (संक्षिप्त तपशील).
 
 ---
 
-## Tab 2: कलेक्शन यादी (Collection List)
+## Tab 2: संक्षिप्त तपशील (Brief Details)
+
+Instrument / cheque details for the collection. Same field set as [deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md) Tab 2 (साहित्य तपशील), with amounts editable on this screen per screenshot.
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | धनादेश प्रकार निवडा | Select Cheque Type | Dropdown | No | Default: `स्लिप` (Slip). Values: `स्लिप`, `चेक` (Cheque) — same as deposit transaction Instrument tab |
+| 2 | चेक रक्कम (रु.) | Cheque Amount (Rs.) | Textbox | No | May default from Tab 1 collection total |
+| 3 | रक्कम अक्षरी | Amount in Words | Textbox | No | May auto-fill from field 2 |
+| 4 | चेक दिनांक | Cheque Date | Date | Yes | Default: system date |
+| 5 | चेक क्र. | Cheque No. | Textbox | Yes | — |
+| 6 | नाव | Name | Textbox | Yes | — |
+| 7 | बँक निवडा | Select Bank | Autocomplete | Yes | From Bank Master. Sample: `1 — बँक ऑफ इंडिया`, `2 — स्टेट बँक ऑफ इंडिया`, `3 — बँक ऑफ महाराष्ट्र`, `4 — एचडीएफसी बँक`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
+| 8 | बँक शाखा | Bank Branch | Textbox | No | — |
+| 9 | ड्रॉन ऑन बँक | Drawn on Bank | Textbox | No | — |
+| 10 | ड्रॉन ऑन ब्रांच | Drawn on Branch | Textbox | No | — |
+
+**Navigation:** `मागे`, `पुढे`. **Footer:** `पूर्ण`, `पूर्वत`.
+
+---
+
+## Tab 3: ट्रान्स्फर (Transfer)
+
+GL / account posting lines for the collection. **Not** the same as [agent-to-agent-transfer-screen.md](agent-to-agent-transfer-screen.md). Pattern aligned with [deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md) Tab 3, fields from bank screenshot 2026-07-21.
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | शाखा निवडा | Select Branch | Autocomplete | Yes | Replaces legacy `शाखा कोड` + `शाखा निवडा`. Sample: `1 — कोतोली मुख्य कार्यालय`. Enter resolves by ID or name |
+| 2 | जी.एल. निवडा | Select GL | Autocomplete | Yes | Replaces legacy `जी. एल. हेड. क्र.` + `जी एल निवडा`. Sample: `38 — पिग्मी ठेव`. Enter resolves by ID or name |
+| 3 | खातेधारक निवडा | Select Account Holder | Autocomplete | Yes | Replaces `खातेधारक शोधा` + `खातेधारक निवडा`. Sample: `101 — लकडे प्रवीण पांडुरंग`. Enter resolves by ID or name |
+| 4 | खाते क्र. | Account No. | Textbox | Yes | May auto-fill when account holder resolves |
+| 5 | शिल्लक (जमा) | Balance (Credit) | Label (read-only) | No | From resolved account; e.g. `52500` |
+| 6 | व्यवहार रक्कम (रु.) | Transaction Amount (Rs.) | Textbox | Yes | — |
+| 7 | एकूण व्यवहार रक्कम (रु.) | Total Transaction Amount (Rs.) | Label (read-only) | No | Sum of grid rows / collection total; e.g. `1000` |
+
+**Action:** `+ टाका` (Add) — appends row to transfer grid.
+
+### Transfer Grid
+
+| # | Marathi Column | English Column |
+| :---: | :--- | :--- |
+| 1 | निवडा | Select |
+| 2 | अनु.क्र. | Sr. No. |
+| 3 | जी. एल. हेड | G.L. Head |
+| 4 | खाते क्र. | Account No. |
+| 5 | नाव | Name |
+| 6 | शिल्लक | Balance |
+| 7 | व्यवहार रक्कम (रु.) | Transaction Amount (Rs.) |
+
+**Grid actions:** `अनियमित करा` (Make Irregular), `निटवा` (Clear / Remove selected).
+
+**Footer summary:** `व्यवहार रक्कम` (transaction amount total).
+
+**Navigation:** `मागे`.
+
+---
+
+## Tab 4: कलेक्शन यादी (Collection List)
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
@@ -121,4 +182,5 @@ Single screen for recording new daily agent collections and viewing historical c
 - [ux-optimization.md](ux-optimization.md)
 - [new-agent-screen.md](new-agent-screen.md)
 - [agent-to-agent-transfer-screen.md](agent-to-agent-transfer-screen.md)
+- [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md) — shared instrument / transfer field patterns
 - [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)

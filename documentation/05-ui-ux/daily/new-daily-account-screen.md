@@ -138,11 +138,9 @@ Columns: निवडा, अनु. क्र., ग्राहक क्रम
 
 > Hidden by default — shown only when field 29 (Tab 1) is checked.
 
+> **Maturity:** Duration and maturity fields (`कालावधी`, `मुदतपूर्ती दिनांक`, `मुदतपूर्ती रक्कम`) are on **Tab 1 — खाते तपशील**. This tab is for joint holder + operating instructions only (legacy tab title retained).
+
 > **Shared component:** Joint-holder sections adapted from [New Membership Tab 2](../membership/new-membership-screen.md#tab-2-परिचयकर्ता--संयुक्त-खातेदार-introducer--joint-holder); Introducer section omitted for deposit products per bank review. Uses `app-joint-holder-grid`. See [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md).
-
-### Section: परिपक्वता (Maturity)
-
-`TODO` — Maturity-specific fields not in current screenshots. Extract from `screenshots/डेली/डॅशबोर्ड_डेली _नवीन खाते.mp4` when available.
 
 ### Section: संयुक्त खातेदार (Joint Holder)
 
