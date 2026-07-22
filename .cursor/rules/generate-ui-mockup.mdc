@@ -166,6 +166,8 @@ Non-negotiable:
 - [generate-ui-screen.mdc](generate-ui-screen.mdc) — Phase 2: approved mockup → Angular + i18n
 - [documentation/05-ui-ux/shared/ui-simplification-patterns.md](../../documentation/05-ui-ux/shared/ui-simplification-patterns.md)
 - [documentation/05-ui-ux/shared/entity-autocomplete-pattern.md](../../documentation/05-ui-ux/shared/entity-autocomplete-pattern.md) — Autocomplete field standard
+- [documentation/09-ai-context/naming-conventions.md](../../documentation/09-ai-context/naming-conventions.md)
+- [documentation/09-ai-context/generation-rules.md](../../documentation/09-ai-context/generation-rules.md)
 - [documentation/AI_INDEX.md](../../documentation/AI_INDEX.md)
 
 ## Notes for Cursor

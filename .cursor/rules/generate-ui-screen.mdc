@@ -2,9 +2,9 @@
 description: Generate, update, and validate Angular UI screens for the Core Banking Software platform from the 05-ui-ux/ screen specifications (Customer, Membership, Savings, Fixed Deposit, Loan, Daily, Recurring, Accounting, Settings). Use this skill whenever the user asks to build, implement, scaffold, or update a screen/component from a screen spec — even if they just say "/generate-ui-screen", "build the new customer screen", "implement the savings transaction tab", or "create the loan scheme wizard". Always use this skill instead of writing a freeform component when the request is implementing a screen for this banking system.
 globs:
   - "documentation/**/05-ui-ux/**"
-  - "src/app/**/*.ts"
-  - "src/app/**/*.html"
-  - "src/app/**/*.scss"
+  - "frontend/src/app/**/*.ts"
+  - "frontend/src/app/**/*.html"
+  - "frontend/src/app/**/*.scss"
 alwaysApply: false
 ---
 
@@ -12,24 +12,18 @@ alwaysApply: false
 
 Turns a `05-ui-ux/**/*.md` screen spec into production-quality, responsive Angular code that reuses existing components/services wherever they exist, and clearly marks anything the spec itself doesn't yet define.
 
-## Standing Architectural Decisions
+## Canonical Standards (read before coding)
 
-These are fixed for this project (confirmed with the user). Do not re-litigate them per screen:
+**Primary source:** [documentation/09-ai-context/coding-standards.md](../../documentation/09-ai-context/coding-standards.md) — Angular conventions, forms, NgRx, i18n, accessibility, TODO scaffold pattern.
 
-| Decision | Value |
-|---|---|
-| Component model | **Standalone components** (Angular, no NgModules) |
-| Forms | **Reactive Forms** (`FormGroup`/`FormBuilder`), never template-driven |
-| Cross-tab / wizard state | **NgRx** — one feature state per wizard screen (see State Pattern below) |
-| Local-only UI state (tab index, expanded panels, loading flags) | Component `signal()`s — do not put trivial UI state in NgRx |
-| UI library | Angular Material |
-| i18n | `ngx-translate` — no hardcoded user-facing strings, ever |
-| Unresolved spec gaps (`TODO` dropdowns/tabs) | **Scaffold, don't block** — see TODO Scaffold Pattern below |
+Also read: [naming-conventions.md](../../documentation/09-ai-context/naming-conventions.md), [folder-structure.md](../../documentation/09-ai-context/folder-structure.md), [technology-stack.md](../../documentation/09-ai-context/technology-stack.md).
+
+Standing decisions (standalone components, Reactive Forms, NgRx per wizard, signals for local UI, Angular Material, ngx-translate) are fixed — see coding-standards.md. Do not re-litigate per screen.
 
 ## Core Principles
 
 - **Spec is the source of truth.** Every field, tab, grid column, and action must trace back to a row in the screen's `.md` file. Don't invent fields, validations, or business logic not in the spec or explicit user instruction.
-- **Reuse before creating.** Before writing any component, search the existing codebase (`src/app/shared/`, `src/app/components/`) for something that already does the job. Only create a new shared component when no existing one fits — and when created, place it under `shared/` so the *next* screen can reuse it too.
+- **Reuse before creating.** Before writing any component, search the existing codebase (`frontend/src/app/shared/`, `frontend/src/app/features/`) for something that already does the job.
 - **Responsive and accessible by default**, not as an afterthought (see Responsive & Accessibility Standards).
 - **No invented master data.** Dropdown options not listed in the spec are master data, not UI decisions — never guess values; scaffold a service call instead.
 - **Bilingual by construction.** Every screen ships both `mr` and `en` translation keys, since every spec field has both labels already.
@@ -40,7 +34,7 @@ These are fixed for this project (confirmed with the user). Do not re-litigate t
 1. **Read `AI_INDEX.md`**, then the target screen's spec file, its `overview.md`, `changelog.md`, and domain `ux-optimization.md` if present. Skip superseded specs — implement the replacement linked in the Superseded banner.
 2. **Read [ui-simplification-patterns.md](../../documentation/05-ui-ux/shared/ui-simplification-patterns.md)** when the spec references shared components (`app-interest-posting-grid`, etc.).
 3. **Check for an approved HTML mockup** (see Approved Mockup → Angular Bridge below). Path: `documentation/05-ui-ux/mockups/<module>/<screen-name>/index.html` with `README.md` Status = **Approved**. If present, use its DOM structure as the template skeleton. If mockup exists but Status is Draft, warn the user and proceed from spec only unless they confirm.
-4. **Check `09-ai-context/`** (coding-standards.md, naming-conventions.md, folder-structure.md). If these don't exist yet for this project, fall back to the conventions in this skill and flag to the user that `09-ai-context/` should eventually be authored via the `generate-document` skill — don't silently invent a second standard.
+4. **Read `09-ai-context/`** — [coding-standards.md](../../documentation/09-ai-context/coding-standards.md), [naming-conventions.md](../../documentation/09-ai-context/naming-conventions.md), [folder-structure.md](../../documentation/09-ai-context/folder-structure.md), [generation-rules.md](../../documentation/09-ai-context/generation-rules.md). These are mandatory — do not use alternate conventions.
 5. **Search for reusable components/services first**: shared data grid, entity autocomplete (branch/GL/account), nominee grid, address block, KYC document grid, permission directive, master-data dropdown service. If found, use them. If not found and the spec implies a pattern that repeats elsewhere (e.g., grid columns "निवडा/अ.क्र./..." pattern, or Branch/GL/Account `Autocomplete` fields), build it once as a shared component — see Reusable Component Catalog.
 6. **Map the spec to an Angular artifact tree** (see Component Breakdown Patterns) before writing code.
 7. **Generate the NgRx slice** for the screen if it's a multi-tab wizard (see State Pattern).
@@ -192,12 +186,15 @@ If any item fails, fix it before reporting the task complete.
 ## Open Items to Flag Back to the User
 
 These are project-level gaps, not per-screen problems — raise them once, don't re-ask per screen:
-- `09-ai-context/` (coding-standards, naming-conventions, folder-structure) doesn't exist yet — this skill's defaults are filling that gap for now.
 - `03-api-contracts/` doesn't exist — all master-data and submit calls are scaffolded against placeholder service methods until real contracts exist.
-- Several screens have entire `TODO` tabs (FD New Account tabs 3–4, Daily New Account tabs 3–4, Shares Transfer tab 3) — these will render as stubs until re-captured from the source app.
+- Several screens still have `TODO` tabs or fields — render as stubs per TODO Scaffold Pattern in coding-standards.md.
 
 ## Related Documents
 
+- [documentation/09-ai-context/coding-standards.md](../../documentation/09-ai-context/coding-standards.md) — canonical Angular/NestJS conventions
+- [documentation/09-ai-context/naming-conventions.md](../../documentation/09-ai-context/naming-conventions.md)
+- [documentation/09-ai-context/folder-structure.md](../../documentation/09-ai-context/folder-structure.md)
+- [documentation/09-ai-context/generation-rules.md](../../documentation/09-ai-context/generation-rules.md)
 - [optimize-ui-ux.mdc](optimize-ui-ux.mdc) — Domain UX review and consolidation
 - [generate-ui-mockup.mdc](generate-ui-mockup.mdc) — Phase 1: spec → HTML/CSS mockup for bank review
 - [generate-document.mdc](generate-document.mdc)
@@ -210,4 +207,4 @@ These are project-level gaps, not per-screen problems — raise them once, don't
 - This rule applies automatically when editing files under `documentation/**/05-ui-ux/` or `src/app/` (see `globs` above). You can also invoke it explicitly with `@generate-ui-screen` in chat.
 - When the user types `/generate-ui-screen <screen-name>`, treat that as an explicit trigger for this full workflow regardless of which file is currently open.
 - Before generating code, always read the target screen spec in `documentation/05-ui-ux/` plus its module `overview.md` and `changelog.md`.
-- Prefer reusing shared components from `src/app/shared/` over creating screen-local duplicates — build shared pieces once when a pattern repeats across specs.
+- Prefer reusing shared components from `frontend/src/app/shared/` over creating screen-local duplicates — build shared pieces once when a pattern repeats across specs.

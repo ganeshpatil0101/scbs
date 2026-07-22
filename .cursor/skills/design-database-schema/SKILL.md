@@ -66,7 +66,9 @@ Turns approved `05-ui-ux/` screen specs and mockups into modular entity document
 11. [documentation/05-ui-ux/shared/ui-simplification-patterns.md](../../documentation/05-ui-ux/shared/ui-simplification-patterns.md)
 12. [documentation/05-ui-ux/reports/overview.md](../../documentation/05-ui-ux/reports/overview.md) + relevant report specs
 13. `documentation/02-business-domains/<domain>/business-rules.md` — if exists
-14. `documentation/09-ai-context/naming-conventions.md` — if exists; else flag gap, use standards doc
+14. [documentation/09-ai-context/naming-conventions.md](../../documentation/09-ai-context/naming-conventions.md)
+15. [documentation/09-ai-context/coding-standards.md](../../documentation/09-ai-context/coding-standards.md) — NestJS/TypeScript conventions when entity docs reference code patterns
+16. [documentation/09-ai-context/generation-rules.md](../../documentation/09-ai-context/generation-rules.md)
 
 **Skip superseded UI specs** — use the replacement linked in the Superseded banner.
 
@@ -269,7 +271,6 @@ If any item fails, fix before reporting done.
 ## Open Project Gaps (flag once per session)
 
 - `02-business-domains/` not started — BR-NNN references will be TODO
-- `09-ai-context/naming-conventions.md` not started — standards doc is fallback
 - `03-api-contracts/` not started — entity docs unblock API design next
 - Fiscal year configuration undefined — blocks comparative Balance Sheet / P&L precision
 - Several UI specs still have `TODO` tabs/fields — entity docs mark matching TODOs
@@ -286,6 +287,8 @@ If any item fails, fix before reporting done.
 - [.cursor/rules/design-database-schema.mdc](../../.cursor/rules/design-database-schema.mdc)
 - [.cursor/rules/generate-document.mdc](../../.cursor/rules/generate-document.mdc)
 - [cbs-project-execution-plan.md](../../documentation/cbs-project-execution-plan.md)
+- [documentation/09-ai-context/naming-conventions.md](../../documentation/09-ai-context/naming-conventions.md)
+- [documentation/09-ai-context/generation-rules.md](../../documentation/09-ai-context/generation-rules.md)
 
 ## Notes for Cursor
 

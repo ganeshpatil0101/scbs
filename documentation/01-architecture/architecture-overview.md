@@ -79,6 +79,19 @@ It does not cover business domain logic (Accounts, Loans, Transactions modules) 
 
 
 
+### DEC-007: Repository layout (monorepo)
+
+- **Context:** Phase 2 requires scaffolding Angular frontend and NestJS backend. A single-repo vs two-repo layout affects CI, PR workflow, and documentation versioning.
+- **Options considered:**
+  1. Monorepo — single git repository with `/frontend`, `/backend`, `/documentation`.
+  2. Two repos — `cbs-frontend` and `cbs-backend` (documentation in one or both).
+- **Decision:** Option 1 — **monorepo** with pnpm workspaces.
+- **Rationale:** Small team; cross-cutting changes (UI spec → Angular → NestJS → API contract) land in one PR; documentation stays versioned with code; shared CI at repo root.
+- **Trade-off accepted:** Larger clone; workspace tooling required. Independent frontend/backend release cadences are not needed at pilot scale.
+- **Detail:** Full folder tree in [../09-ai-context/folder-structure.md](../09-ai-context/folder-structure.md).
+
+
+
 ## 3. System architecture
 
 ```mermaid
@@ -251,3 +264,4 @@ A 1-year Reserved Instance/Savings Plan commitment should only be made after 2�
 
 - [../AI_INDEX.md](../AI_INDEX.md)
 - [../cbs-project-execution-plan.md](../cbs-project-execution-plan.md)
+- [../09-ai-context/folder-structure.md](../09-ai-context/folder-structure.md) — DEC-007 monorepo layout

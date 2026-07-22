@@ -27,10 +27,11 @@ You are generating modular, AI-consumable documentation for a Core Banking Softw
 1. Read `AI_INDEX.md` at the repo root. If missing, create it as a linked index of all modules.
 2. Read `00-project-overview/{vision.md, business-goals.md, glossary.md, system-boundaries.md}`. Create stubs for any that are missing on a new project.
 3. Read `01-architecture/{architecture-overview.md, domain-driven-design.md, security-architecture.md, technology-stack.md}`.
-4. Identify the affected business domain (Customer Management, Accounts, Transactions, Loans, Payments, FD, etc.) from the user's request. Only open files relevant to that domain — don't load unrelated modules into context.
-5. Generate/update the required files for that module (see structure below).
-6. Validate every cross-link resolves to an existing or just-created file.
-7. Append an entry to the module's `changelog.md`.
+4. Read `09-ai-context/{coding-standards.md, naming-conventions.md, folder-structure.md, generation-rules.md, technology-stack.md}`.
+5. Identify the affected business domain (Customer Management, Accounts, Transactions, Loans, Payments, FD, etc.) from the user's request. Only open files relevant to that domain — don't load unrelated modules into context.
+6. Generate/update the required files for that module (see structure below).
+7. Validate every cross-link resolves to an existing or just-created file.
+8. Append an entry to the module's `changelog.md`.
 
 ## Required Module Structure
 

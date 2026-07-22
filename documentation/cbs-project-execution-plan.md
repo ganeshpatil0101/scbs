@@ -12,13 +12,13 @@
 | Vision / Business Goals | ✅ Done (`vision.md`, `business-goals.md`) |
 | Glossary / System Boundaries | ✅ Done (`glossary.md`, `system-boundaries.md`) |
 | Architecture overview | 🟡 Draft — **AWS `ap-south-1` (Mumbai) confirmed** (DEC-006); remaining arch docs still TODO |
-| `09-ai-context/` (coding standards, naming, folder structure) | ❌ Does not exist |
+| `09-ai-context/` (coding standards, naming, folder structure) | ✅ Done — 5 files; skills wired to [Agent Skills](https://agentskills.io) standard |
 | `02-business-domains/` (business rules, use cases) | ❌ Not started |
 | `03-api-contracts/` | ❌ Empty |
-| `04-database-design/` | ❌ Not started |
+| `04-database-design/` | 🟡 Standards + overview done; domain entity files not started |
 | `05-ui-ux/` screen specs | 🟡 **51 active** screen specs (plus superseded archaeology); **1.4 priority items closed** — new-account tabs, Agent Collection, deposit-transaction consolidation done; **residual:** User Role full form matrix + a few uncaptured secondary tabs (see §1.4) |
 | Interactive mockups | ✅ **58 HTML mockups** — **51/51 active specs covered**; New Customer Tab 3 KYC done; pattern set (transaction / scheme / register) validated |
-| Skill files | ✅ `generate-document`, `generate-ui-screen` complete |
+| Skill files | ✅ `generate-document`, `generate-ui-screen`, `generate-ui-mockup`, `design-database-schema`, `optimize-ui-ux`, `coding-standards` |
 | Backend / Frontend code | ❌ Not started (pre-code stage) |
 
 This plan is sequenced so **nothing gets built on an undocumented assumption** — consistent with your "clarify before generating" and "no invention" principles.
@@ -38,13 +38,13 @@ This plan is sequenced so **nothing gets built on an undocumented assumption** �
 - [ ] Confirm DEC-001–DEC-006 decisions in `01-architecture/architecture-overview.md` are still valid at current scope (1 tenant Year 1)
 
 ### 1.3 Establish AI Context (`09-ai-context/`)
-- [ ] `coding-standards.md` — Angular/NestJS conventions, NgRx patterns, Reactive Forms rules
-- [ ] `naming-conventions.md` — file, variable, API, DB naming
-- [ ] `folder-structure.md` — monorepo/module layout
-- [ ] `generation-rules.md` — how Cursor/Claude should scaffold consistently
-- [ ] `technology-stack.md` — pin exact versions (Angular 17+, NestJS, PostgreSQL, etc.)
+- [x] `coding-standards.md` — Angular/NestJS conventions, NgRx patterns, Reactive Forms rules
+- [x] `naming-conventions.md` — file, variable, API, DB naming
+- [x] `folder-structure.md` — monorepo/module layout
+- [x] `generation-rules.md` — how Cursor/Claude should scaffold consistently
+- [x] `technology-stack.md` — pin exact versions (Angular 22, NestJS 11, Node 24 LTS, PostgreSQL 17.10 — baseline 2026-07-22)
 
-> This unblocks consistent code generation in Phase 2 — currently `generate-ui-screen` skill has no coding-standards doc to point to.
+> Unblocks consistent code generation in Phase 2 — `generate-ui-screen` and `coding-standards.mdc` now delegate to `09-ai-context/`.
 
 ### 1.4 Complete UI/UX Specs (close TODOs)
 **Status:** 🟡 **Priority items closed** (re-validated 2026-07-21) — original 1.4 blockers largely resolved via capture + UX consolidation; **residual** User Role matrix + a few secondary tabs remain (not blocking Phase 2 skeleton).
@@ -108,7 +108,7 @@ Pick **Customer & Membership** (most mockup progress already) as the template do
 ## PHASE 2 — Foundation Setup
 **Goal:** A working, authenticated, multi-tenant skeleton — no business features yet.
 
-- [ ] **Cloud & repo setup**: AWS account in `ap-south-1` (Mumbai, per DEC-006), Git repo structure per `folder-structure.md`, CI/CD pipeline (GitHub Actions) skeleton
+- [ ] **Cloud & repo setup**: AWS account in `ap-south-1` (Mumbai, per DEC-006), **monorepo** per [folder-structure.md](09-ai-context/folder-structure.md) (DEC-007), pnpm workspaces, CI/CD pipeline (GitHub Actions) skeleton
 - [ ] **Dev/QA environment** per DEC-005 (RDS `t3.micro`, EC2 free-tier, no NAT/WAF)
 - [ ] **NestJS API skeleton**: control_catalog DB, tenant connection router/pool manager (per architecture Section 3–4), health check endpoint
 - [ ] **Angular app skeleton**: routing shell, Angular Material theme, ngx-translate (Marathi/English) wired, NgRx store scaffold
@@ -194,7 +194,7 @@ Recommended build order (based on dependency graph — Customer/Membership under
 ---
 
 ## Suggested Immediate Next Steps (this week)
-1. Start `09-ai-context/coding-standards.md` — needed before any Cursor-based screen generation begins
+1. ~~Start `09-ai-context/coding-standards.md`~~ — **done** (2026-07-22)
 2. Add remaining `01-architecture/` docs (`domain-driven-design.md`, `security-architecture.md`, `technology-stack.md`) — now unblocked by AWS decision
 3. (Optional capture) User Role full form matrix + Deposit Loan Installment Tabs 2–6 — only remaining meaningful §1.4 leftovers
 4. Begin §1.7 Customer & Membership business-domain template (docs → API → DB) now that UI specs/mockups are largely closed

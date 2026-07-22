@@ -1,0 +1,27 @@
+---
+description: Enforce CBS coding and naming standards from 09-ai-context/ when editing TypeScript, HTML, SCSS, or AI context docs. Use when writing or reviewing frontend/backend code, or when the user asks about project coding conventions.
+globs:
+  - "frontend/**/*.ts"
+  - "frontend/**/*.html"
+  - "frontend/**/*.scss"
+  - "backend/**/*.ts"
+  - "documentation/09-ai-context/**"
+alwaysApply: false
+---
+
+# Coding Standards Rule
+
+Delegates to the canonical AI context documents:
+
+- [documentation/09-ai-context/coding-standards.md](../../documentation/09-ai-context/coding-standards.md) — Angular, NestJS, testing, accessibility
+- [documentation/09-ai-context/naming-conventions.md](../../documentation/09-ai-context/naming-conventions.md) — files, symbols, API, DB IDs
+- [documentation/09-ai-context/folder-structure.md](../../documentation/09-ai-context/folder-structure.md) — module layout
+- [documentation/09-ai-context/technology-stack.md](../../documentation/09-ai-context/technology-stack.md) — pinned versions
+
+When this rule applies, read and follow those documents in full before writing or modifying code.
+
+**Screen-specific workflow:** For Angular screen generation from `05-ui-ux/` specs, also follow [.cursor/rules/generate-ui-screen.mdc](../rules/generate-ui-screen.mdc).
+
+**Database entity docs:** Follow [documentation/04-database-design/database-design-standards.md](../../documentation/04-database-design/database-design-standards.md) via [@design-database-schema](../skills/design-database-schema/SKILL.md).
+
+**Documentation generation:** Follow [.cursor/rules/generate-document.mdc](../rules/generate-document.mdc) and [documentation/09-ai-context/generation-rules.md](../../documentation/09-ai-context/generation-rules.md).

@@ -109,6 +109,8 @@ Use consistently in audit tables and changelogs:
 
 - [ui-simplification-patterns.md](../../documentation/05-ui-ux/shared/ui-simplification-patterns.md)
 - [settings/ux-optimization.md](../../documentation/05-ui-ux/settings/ux-optimization.md)
+- [documentation/09-ai-context/naming-conventions.md](../../documentation/09-ai-context/naming-conventions.md)
+- [documentation/09-ai-context/generation-rules.md](../../documentation/09-ai-context/generation-rules.md)
 - [.cursor/rules/generate-ui-mockup.mdc](../../.cursor/rules/generate-ui-mockup.mdc)
 - [.cursor/rules/generate-ui-screen.mdc](../../.cursor/rules/generate-ui-screen.mdc)
 - [.cursor/rules/generate-document.mdc](../../.cursor/rules/generate-document.mdc)
