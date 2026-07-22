@@ -1,0 +1,19 @@
+---
+description: Design and document CBS database entities from 05-ui-ux screen specs into 04-database-design/. Follows database-design-standards.md, reuses shared master entities, cross-checks report requirements. Use when designing database schema, generating db entity docs, or invoking "/design-database-schema <module>".
+globs:
+  - "documentation/**/04-database-design/**"
+  - "documentation/**/05-ui-ux/**"
+alwaysApply: false
+---
+
+# Design Database Schema Rule
+
+Delegates to the project skill: [.cursor/skills/design-database-schema/SKILL.md](../skills/design-database-schema/SKILL.md)
+
+When this rule applies, read and follow that skill in full.
+
+**Canonical standards:** [documentation/04-database-design/database-design-standards.md](../../documentation/04-database-design/database-design-standards.md)
+
+**Report requirements:** [documentation/04-database-design/reports-traceability.md](../../documentation/04-database-design/reports-traceability.md)
+
+**Master index:** [documentation/04-database-design/overview.md](../../documentation/04-database-design/overview.md)
