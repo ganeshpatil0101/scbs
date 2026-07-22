@@ -11,9 +11,9 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 | Metric | Before | After |
 | :--- | :---: | :---: |
 | Deposit transaction screens (4 modules) | 4 | **1** |
-| Tabs per transaction screen | 5–6 (varied) | **4** (identical all modules) |
+| Tabs per transaction screen | 5–6 (varied) | **5** (identical all modules) |
 | Conditional tabs | 1 (Daily Loan Info) | **0** |
-| Ledger tab on transaction screen | 4 | **0** (deferred) |
+| Ledger tab on transaction screen | 4 | **1** (shared `app-ledger-tab`, added 2026-07-22) |
 | KYC tab on transaction screen | 4 | **0** (replaced by Customer Details) |
 
 ## Consolidated Screen Map
@@ -28,14 +28,14 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 | :---: | :--- |
 | 1 | Merge 4 module transaction screens → one screen with **मॉड्यूल निवडा** radio (बचत / मुदत ठेव / डेली / रिकरिंग) |
 | 2 | Unify Recurring "बँक तपशील" / "चेक तपशील" → **साहित्य तपशील** (confirmed identical fields via user screenshots) |
-| 3 | **Remove खातेवही (Ledger)** tab — detailed per-module ledger deferred (`TODO`) |
-| 4 | **Remove केवायसी माहिती (KYC)** tab — replaced by **ग्राहक तपशील (Customer Details)** |
-| 5 | **Remove कर्ज माहिती (Loan Information)** tab (Daily) — loan rows in Customer Details tab |
-| 6 | Customer Details bound to Tab 1 account holder — no separate customer picker |
-| 7 | Loan recovery action from collection — deferred (`TODO`); display-only for now |
-| 8 | Recurring debit-mode Tab 1 fields — still `TODO` (maturity payout, premature closure, TDS) |
-| 9 | Remove redundant `कर्ज खाते माहिती` link on Tab 1 — staff use Tab 4 |
-| 10 | Standardize **प्रगत सेटिंग्ज** across modules for spot commission, provision, open amount, etc. |
+| 3 | **Remove केवायसी माहिती (KYC)** tab — replaced by **ग्राहक तपशील (Customer Details)** |
+| 4 | **Remove कर्ज माहिती (Loan Information)** tab (Daily) — loan rows in Customer Details tab |
+| 5 | Customer Details bound to Tab 1 account holder — no separate customer picker |
+| 6 | Loan recovery action from collection — deferred (`TODO`); display-only for now |
+| 7 | Recurring debit-mode Tab 1 fields — still `TODO` (maturity payout, premature closure, TDS) |
+| 8 | Remove redundant `कर्ज खाते माहिती` link on Tab 1 — staff use Tab 4 |
+| 9 | Standardize **प्रगत सेटिंग्ज** across modules for spot commission, provision, open amount, etc. |
+| 10 | **Add खातेवही (Ledger)** tab back as Tab 5 — reused shared `app-ledger-tab` from Dividend Transaction / Loan screens (2026-07-22, resolves prior `TODO`) |
 
 ## Tab Structure (all modules — identical)
 
@@ -45,6 +45,7 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 | 2 | साहित्य तपशील | Instrument / Cheque / Bank Details tabs |
 | 3 | ट्रान्सफर | All modules Transfer tab |
 | 4 | ग्राहक तपशील | KYC tab + Daily Loan Info (informational) |
+| 5 | खातेवही | Legacy per-module Ledger tabs — shared `app-ledger-tab` (added 2026-07-22) |
 
 ## Action Checklist (all applied in specs)
 
@@ -65,9 +66,9 @@ Reference implementation: [../settings/ux-optimization.md](../settings/ux-optimi
 
 ### Low priority / Deferred
 
-- [ ] Detailed per-module ledger view (`TODO`)
-- [ ] Loan recovery action in Customer Details (`TODO`)
-- [ ] Recurring debit-mode Tab 1 fields (`TODO`)
+- [x] Detailed per-module ledger view — resolved 2026-07-22, reused shared `app-ledger-tab` as Tab 5
+- [ ] Loan recovery action in Customer Details (`TODO`) — kept deferred per bank confirmation (2026-07-22)
+- [ ] Recurring debit-mode Tab 1 fields (`TODO`) — kept deferred, awaiting screenshot (2026-07-22)
 - [ ] Bank reviewer sign-off: आंतर शाखेचा शुल्क → Advanced? (flagged in spec)
 
 ## Deprecated Specs (reference only)
@@ -152,8 +153,9 @@ Reference precedent (tabs): [../recurring/recurring-interest-management-screen.m
 
 ### Low priority / Deferred
 
-- [ ] डेली आकारणी primary posting button label (`TODO` — cropped in both Daily screenshots)
-- [ ] FD Status dropdown values (`TODO`)
+- [x] डेली आकारणी primary posting button label — resolved 2026-07-22: `पोस्टिंग` (reused FD label), bank confirmation
+- [x] FD Status dropdown values — resolved 2026-07-22: `सर्व`, `चालू`, `बंद`, `स्थगित` (reused FD account-status enum)
+- [x] FD grid `उल्लेख करा` side action — removed 2026-07-22, not carried into consolidated UI
 - [ ] HTML mockup (`/generate-ui-mockup manual-interest-management-screen`)
 
 ## Deprecated Specs (reference only)

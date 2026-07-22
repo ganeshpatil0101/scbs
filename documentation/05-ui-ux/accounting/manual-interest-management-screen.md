@@ -54,7 +54,7 @@ Single screen for bulk interest **provision** (accrual) and **assessment** (post
 | 6 | व्याज पोस्ट दिनांक | Interest Post Date | Date | No | All | Label on legacy screens also appears as `व्याज पोस्टिंग दिनांक` (Daily/Recurring) — unified here |
 | 7 | खाते क्र. (पासून) | Account No. (From) | Textbox | No | All | Range filter start |
 | 8 | खाते क्र. (पर्यंत) | Account No. (To) | Textbox | No | All | Range filter end |
-| 9 | स्थिती | Status | Dropdown | No | मुदत ठेव | `TODO` — full value list not captured. e.g. `सर्व` (All) |
+| 9 | स्थिती | Status | Dropdown | No | मुदत ठेव | Default: `सर्व` (All). Values: `सर्व` (All), `चालू` (Active), `बंद` (Closed), `स्थगित` (Suspended) — reuses standard FD account-status enum, same as [fd-account-register-screen.md](../fixed-deposit/fd-account-register-screen.md) |
 
 **Action:** `व्याज गणना करा` (Calculate Interest) — populates results grid. Legacy डेली/रिकरिंग screenshots label this button `व्याज आकारणी`; standardized per [ui-simplification-patterns.md](../shared/ui-simplification-patterns.md).
 
@@ -89,7 +89,7 @@ Single screen for bulk interest **provision** (accrual) and **assessment** (post
 
 **Info note (बचत):** provision message when account duration is below scheme minimum — shown when applicable.
 
-**Grid side action (मुदत ठेव):** `उल्लेख करा` (Process) — legacy; `TODO` whether retained in consolidated UI.
+**Removed:** legacy मुदत ठेव grid side action `उल्लेख करा` (Process) — not carried into the consolidated UI (2026-07-22).
 
 ---
 
@@ -112,20 +112,20 @@ Primary posting button driven by **कार्यवाही निवडा**
 | :--- | :--- | :--- | :--- | :--- |
 | बचत | `तरतूद` | `पूर्ववत` | `पोस्ट` | `पूर्ववत` |
 | मुदत ठेव | `तरतूद` | `पुनर्रचना करा` | `पोस्टिंग` | `पुनर्रचना करा` |
-| डेली | `तरतूद` | `पूर्ववत` | `TODO — button cropped out of both screenshots` | `पूर्ववत` (inferred from तरतूद mode) |
+| डेली | `तरतूद` | `पूर्ववत` | `पोस्टिंग` | `पूर्ववत` (inferred from तरतूद mode) |
 | रिकरिंग | `तरतूद` | `पूर्ववत` | `निश्चित` | `प्रोसीडिंग`, `पूर्ववत` |
 
 **Workflow:** Staff typically runs **तरतूद** (provision/accrual) at period-end, then **आकारणी** (assessment/posting) to finalize interest to accounts.
 
 ---
 
-## Deferred Items (TODO — out of scope for this spec pass)
+## Resolved Items (2026-07-22)
 
-| Item | Notes |
+| Item | Resolution |
 | :--- | :--- |
-| डेली आकारणी primary posting button | Both Daily screenshots cropped before footer action bar |
-| FD Status dropdown values | Only `सर्व` observed |
-| FD grid `उल्लेख करा` side action | Legacy only; confirm with bank reviewer |
+| डेली आकारणी primary posting button | Set to `पोस्टिंग` (reused FD label) — bank confirmation |
+| FD Status dropdown values | Reused standard FD account-status enum: `सर्व`, `चालू`, `बंद`, `स्थगित` |
+| FD grid `उल्लेख करा` side action | Removed — not carried into consolidated UI |
 
 ---
 

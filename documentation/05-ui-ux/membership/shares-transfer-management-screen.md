@@ -76,8 +76,9 @@ Columns: निवडा, अ.क्र., सर्टिफिकेट क्�
 | :---: | :--- | :--- | :--- | :---: | :--- |
 | 12 | एकूण शेअर रक्कम | Total Share Amount | Label | No | Read-only; from grid |
 | 13 | रोख / ट्रान्सफर | Cash / Transfer | Radio | No | Payment mode for fee |
-| 14 | स्क्रोल निवडा | Select Scroll | Dropdown | Yes | Default: `निवडा`. Values: `TODO` |
-| 15 | ट्रान्सफर फी (रू.) | Transfer Fee (Rs.) | Textbox | No | — |
+| 14 | ट्रान्सफर फी (रू.) | Transfer Fee (Rs.) | Textbox | No | — |
+
+**Removed (2026-07-22):** `स्क्रोल निवडा` (Select Scroll) — not required.
 
 **Navigation:** `पुढे`. **Footer:** `पूर्ण`, `पूर्ववत`.
 
@@ -95,7 +96,7 @@ Columns: निवडा, अ.क्र., सर्टिफिकेट क्�
 | 4 | चेक दिनांक | Cheque Date | Date | Yes | — |
 | 5 | चेक क्र. | Cheque No. | Textbox | Yes | — |
 | 6 | नाव | Name | Textbox | Yes | — |
-| 7 | बँक निवडा | Select Bank | Dropdown | Yes | Default: `निवडा`. Values: `TODO` |
+| 7 | बँक निवडा | Select Bank | Autocomplete | Yes | From Bank Master. Sample: `1 — बँक ऑफ इंडिया`, `2 — स्टेट बँक ऑफ इंडिया`, `3 — बँक ऑफ महाराष्ट्र`, `4 — एचडीएफसी बँक`. Enter resolves by ID or name; resolved 2026-07-22 — see [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
 | 8 | बँक शाखा | Bank Branch | Textbox | No | — |
 | 9 | ड्रॉन ऑन बँक | Drawn on Bank | Label | No | Read-only; derived from bank |
 | 10 | ड्रॉन ऑन ब्रांच | Drawn on Branch | Label | No | Read-only; derived from bank |

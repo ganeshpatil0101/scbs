@@ -17,9 +17,9 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 - [ ] Marathi labels clear for non-technical bank staff
 - [ ] Required fields marked with *
 - [ ] Responsive on mobile (single column) and desktop (two columns, centered)
-- [ ] Filter fields match Tab 1 spec
+- [ ] Filter fields match spec
 - [ ] Results grid columns match spec (20 columns)
-- [ ] Tab 2 Advanced Search shown as TODO stub
+- [ ] Advanced Search tab removed (2026-07-22) — single filter section only
 
 ## Approval
 

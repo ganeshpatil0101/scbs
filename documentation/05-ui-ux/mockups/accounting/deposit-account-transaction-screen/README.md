@@ -14,8 +14,9 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 ## Review checklist
 
 - [ ] मॉड्यूल निवडा radio switches visible fields correctly (बचत / मुदत ठेव / डेली / रिकरिंग)
-- [ ] All 4 tabs present: खात्याची माहिती, साहित्य तपशील, ट्रान्सफर, ग्राहक तपशील
-- [ ] Ledger and KYC tabs removed (no खातेवही, no केवायसी माहिती)
+- [ ] All 5 tabs present: खात्याची माहिती, साहित्य तपशील, ट्रान्सफर, ग्राहक तपशील, खातेवही
+- [ ] Tab 5 खातेवही (Ledger) reuses shared grid — matches Dividend Transaction / Loan Ledger tabs
+- [ ] KYC tab removed (no केवायसी माहिती — replaced by ग्राहक तपशील)
 - [ ] Daily Loan Information tab removed — loan rows in Customer Details tab
 - [ ] Customer Details: बचत/डेली as separate cards; रिकरिंग/मुदत ठेव/कर्ज as separate grids
 - [ ] No फोटो / सही दाखवा link on Tab 1

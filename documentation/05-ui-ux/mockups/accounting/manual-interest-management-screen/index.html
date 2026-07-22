@@ -111,7 +111,9 @@
             <label class="mockup-label" for="status">स्थिती</label>
             <select id="status">
               <option value="all" selected>सर्व</option>
-              <option value="todo" disabled>इतर — [TODO]</option>
+              <option value="active">चालू</option>
+              <option value="closed">बंद</option>
+              <option value="suspended">स्थगित</option>
             </select>
           </div>
           <div class="flex items-end">
@@ -257,7 +259,7 @@
       var footerLabels = {
         savings: { provision: { primary: 'तरतूद', reset: 'पूर्ववत' }, assessment: { primary: 'पोस्ट', reset: 'पूर्ववत' } },
         fd: { provision: { primary: 'तरतूद', reset: 'पुनर्रचना करा' }, assessment: { primary: 'पोस्टिंग', reset: 'पुनर्रचना करा' } },
-        daily: { provision: { primary: 'तरतूद', reset: 'पूर्ववत' }, assessment: { primary: '[TODO]', reset: 'पूर्ववत' } },
+        daily: { provision: { primary: 'तरतूद', reset: 'पूर्ववत' }, assessment: { primary: 'पोस्टिंग', reset: 'पूर्ववत' } },
         recurring: { provision: { primary: 'तरतूद', reset: 'पूर्ववत' }, assessment: { primary: 'निश्चित', reset: 'पूर्ववत', secondary: 'प्रोसीडिंग' } }
       };
 

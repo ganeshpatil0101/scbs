@@ -23,7 +23,7 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 ## Notes
 
-- `अॅडव्हान्स शोध` marked TODO — fields not captured in spec.
+- **Removed (2026-07-22):** `अॅडव्हान्स शोध` link — no fields were ever captured; primary search filters are sufficient.
 - `तपशील` opens no screen yet (Member Information deferred).
 
 ## Approval

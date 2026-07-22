@@ -16,12 +16,13 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 - [ ] मॉड्यूल निवडा radio switches filter fields (बचत / मुदत ठेव / डेली / रिकरिंग)
 - [ ] कार्यवाही निवडा radio switches footer primary button (तरतूद / आकारणी)
 - [ ] जी.एल. निवडा Autocomplete visible for all modules (default `55 — सेव्हिंग ठेव` for बचत)
-- [ ] मुदत ठेव: स्थिती dropdown + सवलत दर column
+- [ ] मुदत ठेव: स्थिती dropdown (सर्व/चालू/बंद/स्थगित) + सवलत दर column
 - [ ] व्याज दिनांक read-only; grid populate button = व्याज गणना करा
 - [ ] डेली / रिकरिंग: pink legend for interest-free period
 - [ ] Footer totals: एकूण शिल्लक, एकूण तरतूद, एकूण व्याज, एकूण व्याज + एकूण तरतूद
 - [ ] Footer buttons match module × action matrix in spec
-- [ ] डेली आकारणी primary button marked [TODO]
+- [ ] डेली आकारणी primary button = पोस्टिंग (resolved 2026-07-22, reused FD label)
+- [ ] मुदत ठेव legacy `उल्लेख करा` grid action removed
 - [ ] Marathi labels clear for non-technical bank staff
 - [ ] Required fields marked with *
 - [ ] Responsive on mobile and desktop

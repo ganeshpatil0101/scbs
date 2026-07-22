@@ -35,9 +35,7 @@ UI specification for searching and listing membership (share capital) accounts.
 | 5 | ग्राहक निवडा | Select Customer | Autocomplete | No | Enter resolves by customer no. or name. Replaces free-text Customer Name search |
 | 6 | स्थिती निवडा | Select Status | Dropdown | No | e.g. `चालू` (Active) |
 
-**Removed:** `संस्था` (Organization) — session header.
-
-**Link:** `अॅडव्हान्स शोध` (Advanced Search) — `TODO — fields not captured`.
+**Removed:** `संस्था` (Organization) — session header. **Removed (2026-07-22):** `अॅडव्हान्स शोध` (Advanced Search) link — no fields were ever captured; the primary search filters above are sufficient.
 
 **Action:** `दाखवा` (Show).
 

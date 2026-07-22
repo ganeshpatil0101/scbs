@@ -200,16 +200,6 @@
               </fieldset>
             </div>
             <div data-spec-field="14">
-              <label class="mockup-label" for="scroll-select">
-                स्क्रोल निवडा <span class="mockup-required">*</span>
-                <span class="mockup-badge-todo">TODO</span>
-              </label>
-              <select id="scroll-select">
-                <option value="" selected>निवडा</option>
-                <option value="" disabled>[TODO] — master data</option>
-              </select>
-            </div>
-            <div data-spec-field="15">
               <label class="mockup-label" for="transfer-fee">ट्रान्सफर फी (रू.)</label>
               <input type="text" id="transfer-fee" value="50.00">
             </div>
@@ -226,7 +216,7 @@
               <label class="mockup-label" for="cheque-type">धनादेश प्रकार निवडा</label>
               <select id="cheque-type">
                 <option value="slip" selected>स्लिप</option>
-                <option value="" disabled>[TODO] — master data</option>
+                <option value="cheque">चेक</option>
               </select>
             </div>
             <div data-spec-field="t2-2">
@@ -250,14 +240,14 @@
               <input type="text" id="cheque-name">
             </div>
             <div data-spec-field="t2-7">
-              <label class="mockup-label" for="cheque-bank">
-                बँक निवडा <span class="mockup-required">*</span>
-                <span class="mockup-badge-todo">TODO</span>
-              </label>
-              <select id="cheque-bank">
-                <option value="" selected>निवडा</option>
-                <option value="" disabled>[TODO] — master data</option>
-              </select>
+              <label class="mockup-label" for="cheque-bank">बँक निवडा <span class="mockup-required">*</span></label>
+              <input type="text" id="cheque-bank" class="mockup-autocomplete" list="bank-options" placeholder="ID किंवा नाव">
+              <datalist id="bank-options">
+                <option value="1 — बँक ऑफ इंडिया">
+                <option value="2 — स्टेट बँक ऑफ इंडिया">
+                <option value="3 — बँक ऑफ महाराष्ट्र">
+                <option value="4 — एचडीएफसी बँक">
+              </datalist>
             </div>
             <div data-spec-field="t2-8">
               <label class="mockup-label" for="bank-branch">बँक शाखा</label>

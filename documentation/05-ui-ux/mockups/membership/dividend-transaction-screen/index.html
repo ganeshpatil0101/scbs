@@ -40,7 +40,6 @@
       <button type="button" id="tab-3" class="mockup-tab" role="tab" aria-selected="false" aria-controls="tab-panel-3" data-tab="3">चेक तपशील</button>
       <button type="button" id="tab-4" class="mockup-tab" role="tab" aria-selected="false" aria-controls="tab-panel-4" data-tab="4">ट्रान्सफर</button>
       <button type="button" id="tab-5" class="mockup-tab" role="tab" aria-selected="false" aria-controls="tab-panel-5" data-tab="5">खातेवही</button>
-      <button type="button" id="tab-6" class="mockup-tab" role="tab" aria-selected="false" aria-controls="tab-panel-6" data-tab="6">केवायसी माहिती</button>
     </nav>
 
     <!-- Tab 1: खात्याची माहिती -->
@@ -273,13 +272,10 @@
         <h2 class="mockup-section-title" id="section-cheque">चेक तपशील</h2>
         <div class="mockup-field-grid mockup-field-grid--2">
           <div data-spec-field="1">
-            <label class="mockup-label" for="cheque-type">
-              धनादेश प्रकार निवडा
-              <span class="mockup-badge-todo">TODO</span>
-            </label>
+            <label class="mockup-label" for="cheque-type">धनादेश प्रकार निवडा</label>
             <select id="cheque-type">
+              <option value="slip">स्लिप</option>
               <option value="cheque" selected>चेक</option>
-              <option value="" disabled>[TODO] — master data</option>
             </select>
           </div>
           <div data-spec-field="2">
@@ -309,14 +305,14 @@
             <input type="text" id="cheque-name">
           </div>
           <div data-spec-field="7">
-            <label class="mockup-label" for="cheque-bank">
-              बँक निवडा <span class="mockup-required">*</span>
-              <span class="mockup-badge-todo">TODO</span>
-            </label>
-            <select id="cheque-bank">
-              <option value="">निवडा</option>
-              <option value="" disabled>[TODO] — master data</option>
-            </select>
+            <label class="mockup-label" for="cheque-bank">बँक निवडा <span class="mockup-required">*</span></label>
+            <input type="text" id="cheque-bank" class="mockup-autocomplete" list="bank-options" placeholder="ID किंवा नाव">
+            <datalist id="bank-options">
+              <option value="1 — बँक ऑफ इंडिया">
+              <option value="2 — स्टेट बँक ऑफ इंडिया">
+              <option value="3 — बँक ऑफ महाराष्ट्र">
+              <option value="4 — एचडीएफसी बँक">
+            </datalist>
           </div>
           <div data-spec-field="8">
             <label class="mockup-label" for="cheque-branch">बँक शाखा</label>
@@ -531,16 +527,6 @@
       </section>
     </div>
 
-    <!-- Tab 6: केवायसी माहिती (TODO stub) -->
-    <div id="tab-panel-6" class="mockup-hidden" role="tabpanel" aria-labelledby="tab-6" hidden>
-      <section class="mockup-section" aria-labelledby="section-kyc-todo">
-        <h2 class="mockup-section-title" id="section-kyc-todo">केवायसी माहिती</h2>
-        <div class="mockup-info-note">
-          हा टॅब स्पेकमध्ये <span class="mockup-badge-todo">TODO</span> म्हणून चिन्हांकित आहे — स्क्रीनशॉट कॅप्चर नंतर पूर्ण केला जाईल.
-        </div>
-      </section>
-    </div>
-
   </div>
 
   <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
@@ -555,11 +541,11 @@
   <script>
     (function () {
       var currentTab = 1;
-      var totalTabs = 6;
-      var tabs = [1, 2, 3, 4, 5, 6].map(function (n) {
+      var totalTabs = 5;
+      var tabs = [1, 2, 3, 4, 5].map(function (n) {
         return document.getElementById('tab-' + n);
       });
-      var panels = [1, 2, 3, 4, 5, 6].map(function (n) {
+      var panels = [1, 2, 3, 4, 5].map(function (n) {
         return document.getElementById('tab-panel-' + n);
       });
       var btnBack = document.getElementById('btn-back');

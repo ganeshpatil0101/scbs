@@ -25,8 +25,8 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 ## Notes
 
-- `स्थिती`, `संचालक`, `वार्षिक अहवाल`, `स्थान`, `जिल्हा`, `तालुका`, `शहर` marked TODO per spec.
-- Tab 3 uses geographic dropdowns (not Google Maps) per membership spec; differs from FD/Savings nominee pattern.
+- **Resolved (2026-07-22):** `स्थिती` → चालू/बंद/स्थगित; `संचालक` → Checkbox (was Dropdown); `वार्षिक अहवाल` → पोस्ट/कुरीअर; `स्थान`/`जिल्हा`/`तालुका`/`शहर` → Textbox (was Dropdown+TODO), consistent with New Customer address block; `नाते` finalized (13-value canonical list).
+- `राज्य` (State) remains a Dropdown with a partial Indian-states list — separate, lower-priority gap, not part of this closure pass.
 - Reference screenshots: `screenshots/sabhsadatv/डॅशबोर्ड-सभासदत्व-नवीन सभासदत्व-*.png`
 
 ## Approval

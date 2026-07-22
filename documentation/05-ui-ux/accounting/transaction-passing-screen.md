@@ -2,7 +2,9 @@
 
 ## Purpose
 
-UI specification for reviewing and passing (authorizing) pending transactions. Supports today's transactions and advanced search.
+UI specification for reviewing and passing (authorizing) pending transactions.
+
+**Removed (2026-07-22):** **अॅडव्हान्स शोध (Advanced Search)** tab/link — no fields were ever captured for it; the single filter section below already covers branch, GL, account, user, challan, amount, scroll, and transaction-type filters, so a second search surface was not required.
 
 ## Screen Identification
 
@@ -12,22 +14,15 @@ UI specification for reviewing and passing (authorizing) pending transactions. S
 | Breadcrumb | डॅशबोर्ड > लेखा > व्यवहार पासिंग | Dashboard > Accounting > Transaction Passing |
 | Parent Module | लेखा | Accounting |
 
-## Tabs
-
-| # | Marathi Tab | English Tab |
-| :---: | :--- | :--- |
-| 1 | आजचे व्यवहार | Today's Transactions |
-| 2 | अॅडव्हान्स शोध | Advanced Search |
-
 ## Reference Screenshots
 
-| File | Tab / Section |
+| File | Section |
 | :--- | :--- |
-| `screenshots/lekha/डॅशबोर्ड -लेखा- व्यवहार पासिंग-05-07.png` | Tab 1 — filter + grid |
+| `screenshots/lekha/डॅशबोर्ड -लेखा- व्यवहार पासिंग-05-07.png` | Filter + grid |
 
 ---
 
-## Filter Section (Tab 1)
+## Filter Section
 
 | # | Marathi Label | English Label | Type | Required | Values / Notes |
 | :---: | :--- | :--- | :--- | :---: | :--- |
@@ -82,12 +77,6 @@ UI specification for reviewing and passing (authorizing) pending transactions. S
 **Summary:** `एकूण नावे`, `एकूण जमा`.
 
 **Actions:** `रिपोर्ट करा`, `पूर्ण`, `पूर्ववत`.
-
----
-
-## Tab 2: अॅडव्हान्स शोध (Advanced Search)
-
-`TODO` — additional filter fields not captured in today's screenshot.
 
 ---
 

@@ -13,7 +13,7 @@
 <body class="bg-gray-100 text-gray-900 min-h-screen pb-24">
 
   <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
-    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी. सर्व ७ टॅब दृश्यमान (लेआउट पुनरावलोकन).
+    हा केवळ लेआउट पूर्वावलोकन आहे — बँक वापरकर्त्यांच्या मंजुरीसाठी. सर्व ६ टॅब दृश्यमान (लेआउट पुनरावलोकन).
   </div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -58,10 +58,6 @@
       <button type="button" id="tab-6" class="mockup-tab shrink-0" role="tab" aria-selected="false" aria-controls="tab-panel-6" data-tab="6">
         <span class="block">शेअर्सची माहिती</span>
         <span class="block text-xs font-normal text-gray-500 mt-0.5">(नेहमी)</span>
-      </button>
-      <button type="button" id="tab-7" class="mockup-tab shrink-0" role="tab" aria-selected="false" aria-controls="tab-panel-7" data-tab="7">
-        <span class="block">के.वाय.सी. माहिती</span>
-        <span class="block text-xs font-normal text-gray-500 mt-0.5">(TODO)</span>
       </button>
     </nav>
 
@@ -266,13 +262,10 @@
         <p class="text-sm text-amber-700 mb-4">दृश्यमान: टॅब १ वर `ट्रान्सफर` निवडल्यावर</p>
         <div class="mockup-field-grid mockup-field-grid--2">
           <div data-spec-field="2-1">
-            <label class="mockup-label" for="cheque-type">
-              धनादेश प्रकार निवडा
-              <span class="mockup-badge-todo">TODO</span>
-            </label>
+            <label class="mockup-label" for="cheque-type">धनादेश प्रकार निवडा</label>
             <select id="cheque-type">
               <option value="slip" selected>स्लिप</option>
-              <option value="" disabled>[TODO] — master data</option>
+              <option value="cheque">चेक</option>
             </select>
           </div>
           <div data-spec-field="2-2">
@@ -296,14 +289,14 @@
             <input type="text" id="cheque-name">
           </div>
           <div data-spec-field="2-7">
-            <label class="mockup-label" for="cheque-bank">
-              बँक निवडा <span class="mockup-required">*</span>
-              <span class="mockup-badge-todo">TODO</span>
-            </label>
-            <select id="cheque-bank">
-              <option value="" selected>निवडा</option>
-              <option value="" disabled>[TODO] — master data</option>
-            </select>
+            <label class="mockup-label" for="cheque-bank">बँक निवडा <span class="mockup-required">*</span></label>
+            <input type="text" id="cheque-bank" class="mockup-autocomplete" list="bank-options" placeholder="ID किंवा नाव">
+            <datalist id="bank-options">
+              <option value="1 — बँक ऑफ इंडिया">
+              <option value="2 — स्टेट बँक ऑफ इंडिया">
+              <option value="3 — बँक ऑफ महाराष्ट्र">
+              <option value="4 — एचडीएफसी बँक">
+            </datalist>
           </div>
           <div data-spec-field="2-8">
             <label class="mockup-label" for="cheque-branch">बँक शाखा</label>
@@ -426,13 +419,11 @@
             <input type="date" id="issue-date" value="2026-07-12">
           </div>
           <div data-spec-field="4-2">
-            <label class="mockup-label" for="share-series">
-              शेअर्स सिरीज
-              <span class="mockup-badge-todo">TODO</span>
-            </label>
+            <label class="mockup-label" for="share-series">शेअर्स सिरीज</label>
             <select id="share-series">
               <option value="" selected>निवडा</option>
-              <option value="" disabled>[TODO] — master data</option>
+              <option value="a">अ वर्ग</option>
+              <option value="b">ब वर्ग</option>
             </select>
           </div>
           <div data-spec-field="4-3">
@@ -582,16 +573,6 @@
       </section>
     </div>
 
-    <!-- Tab 7: के.वाय.सी. माहिती (TODO stub) -->
-    <div id="tab-panel-7" class="mockup-hidden" role="tabpanel" aria-labelledby="tab-7" hidden>
-      <section class="mockup-section" aria-labelledby="section-kyc-todo">
-        <h2 class="mockup-section-title" id="section-kyc-todo">के.वाय.सी. माहिती</h2>
-        <div class="mockup-info-note">
-          हा टॅब स्पेकमध्ये <span class="mockup-badge-todo">TODO</span> म्हणून चिन्हांकित आहे — `app-kyc-info-tab` साठी [savings-transaction-screen.md](../../../savings/savings-transaction-screen.md) KYC टॅब पॅटर्न पहा. स्क्रीनशॉट कॅप्चर नंतर पूर्ण केला जाईल.
-        </div>
-      </section>
-    </div>
-
   </div>
 
   <footer class="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 shadow-[0_-2px_8px_rgba(0,0,0,0.06)] z-50" aria-label="स्क्रीन कृती">
@@ -607,7 +588,7 @@
   <script>
     (function () {
       var currentTab = 1;
-      var totalTabs = 7;
+      var totalTabs = 6;
       var tabs = [];
       for (var i = 1; i <= totalTabs; i++) {
         tabs.push(document.getElementById('tab-' + i));

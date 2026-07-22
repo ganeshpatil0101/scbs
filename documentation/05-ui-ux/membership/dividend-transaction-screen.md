@@ -2,7 +2,7 @@
 
 ## Purpose
 
-UI specification for posting dividend payment transactions against member dividend warrants. Six-tab workflow (cash/transfer, debit/credit).
+UI specification for posting dividend payment transactions against member dividend warrants. Five-tab workflow (cash/transfer, debit/credit).
 
 ## Screen Identification
 
@@ -21,7 +21,8 @@ UI specification for posting dividend payment transactions against member divide
 | 3 | चेक तपशील | Cheque Details | **Transfer mode only** |
 | 4 | ट्रान्सफर | Transfer | **Transfer mode only** |
 | 5 | खातेवही | Ledger | Both |
-| 6 | केवायसी माहिती | KYC Information | Both (scaffold) |
+
+**Removed (2026-07-22):** **केवायसी माहिती (KYC Information)** tab — was a scaffold-only stub referencing the now-superseded Savings KYC pattern; not carried forward.
 
 **Mode selector (Tab 2):** Radio `नावे / जमा` (Debit / Credit) and `रोख / ट्रान्सफर` (Cash / Transfer) — required. Tab 3 and Tab 4 visible when mode = `ट्रान्सफर`.
 
@@ -117,7 +118,7 @@ UI specification for posting dividend payment transactions against member divide
 | 4 | चेक दिनांक | Cheque Date | Date | Yes | — |
 | 5 | चेक क्र. | Cheque No. | Textbox | Yes | — |
 | 6 | नाव | Name | Textbox | Yes | — |
-| 7 | बँक निवडा | Select Bank | Dropdown | Yes | Default: `निवडा`. Values: `TODO` |
+| 7 | बँक निवडा | Select Bank | Autocomplete | Yes | From Bank Master. Sample: `1 — बँक ऑफ इंडिया`, `2 — स्टेट बँक ऑफ इंडिया`, `3 — बँक ऑफ महाराष्ट्र`, `4 — एचडीएफसी बँक`. Enter resolves by ID or name; resolved 2026-07-22 — see [entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md) |
 | 8 | बँक शाखा | Bank Branch | Textbox | No | — |
 | 9 | ड्रॉन ऑन बँक | Drawn on Bank | Label | No | Read-only |
 | 10 | ड्रॉन ऑन ब्रांच | Drawn on Branch | Label | No | Read-only |
@@ -165,13 +166,7 @@ UI specification for posting dividend payment transactions against member divide
 
 **Footer:** `एकूण नावे`, `एकूण जमा`, `चलन प्रिंट`, `ड्राफ्ट प्रिंट`, `निर्यात करा`.
 
-**Navigation:** `मागे`, `पुढे`.
-
----
-
-## Tab 6: केवायसी माहिती (KYC Information)
-
-> **Shared component:** `app-kyc-info-tab`. `TODO` — tab referenced in navigation; no dedicated screenshot in `02_07` set. Follow [../savings/savings-transaction-screen.md](../savings/savings-transaction-screen.md) KYC tab pattern.
+**Navigation:** `मागे`, `पूर्ण`, `पूर्ववत`.
 
 ---
 
@@ -193,6 +188,6 @@ Open `index.html` in a browser for layout review before Angular implementation.
 - [ux-optimization.md](ux-optimization.md)
 - [member-register-screen.md](member-register-screen.md)
 - [../settings/membership/membership-configuration-screen.md](../settings/membership/membership-configuration-screen.md)
-- [../savings/savings-transaction-screen.md](../savings/savings-transaction-screen.md)
+- [../accounting/deposit-account-transaction-screen.md](../accounting/deposit-account-transaction-screen.md) — shared Ledger tab pattern
 - [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)
 - [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)

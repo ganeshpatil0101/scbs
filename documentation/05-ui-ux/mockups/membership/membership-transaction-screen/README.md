@@ -22,7 +22,7 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 - [ ] Debit withdrawal section hidden by default (जमा mode); visible when नावे selected
 - [ ] प्रगत सेटिंग्ज collapsed by default
 - [ ] KYC preview placeholder toggles on Tab 1
-- [ ] TODO tabs (5, 7) show scaffold note only
+- [ ] Tab 5 (Nominee) shows scaffold note only
 
 ## Tab visibility (production)
 
@@ -32,17 +32,16 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 | 2 साहित्य तपशील | Transfer mode |
 | 3 ट्रान्सफर | Transfer mode |
 | 4 शेअर्स वाटप | Credit (जमा) mode |
-| 5 वारसदाराची माहिती | Always (TODO scaffold) |
+| 5 वारसदाराची माहिती | Always (scaffold) |
 | 6 शेअर्सची माहिती | Always |
-| 7 के.वाय.सी. माहिती | Always (TODO scaffold) |
 
-**Mockup note:** All 7 tabs are shown in the tab bar for layout review; amber sublabels indicate conditional visibility.
+**Mockup note:** All 6 tabs are shown in the tab bar for layout review; amber sublabels indicate conditional visibility.
 
 ## Notes
 
 - Tab 5 defers to `app-nominee-form` per [new-membership-screen.md](../../../membership/new-membership-screen.md) Tab 3.
-- Tab 7 defers to `app-kyc-info-tab` per savings transaction KYC pattern.
-- Dropdowns marked `TODO` in spec render disabled placeholder options only.
+- **Removed (2026-07-22):** Tab 7 (KYC Information) — was a scaffold referencing the now-superseded Savings KYC pattern.
+- **Resolved (2026-07-22):** `बँक निवडा` → Autocomplete from Bank Master; `शेअर्स सिरीज` → अ वर्ग / ब वर्ग (reused Share Class enum).
 
 ## Approval
 

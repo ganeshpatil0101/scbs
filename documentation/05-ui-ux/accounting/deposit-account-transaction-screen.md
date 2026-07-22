@@ -4,10 +4,9 @@
 
 ## Purpose
 
-Single transaction screen for deposit products: Savings, Fixed Deposit, Daily (Pigmy), and Recurring. **मॉड्यूल निवडा** (Select Module) radio at the top drives GL defaults and show/hide of module-specific fields. All four modules share the same **4-tab** workflow.
+Single transaction screen for deposit products: Savings, Fixed Deposit, Daily (Pigmy), and Recurring. **मॉड्यूल निवडा** (Select Module) radio at the top drives GL defaults and show/hide of module-specific fields. All four modules share the same **5-tab** workflow.
 
 **Removed from legacy per-module screens (by design):**
-- **खातेवही (Ledger)** tab — deferred; detailed ledger per module to be provided separately (`TODO`).
 - **केवायसी माहिती (KYC Information)** tab — replaced by **ग्राहक तपशील (Customer Details)** tab.
 - **कर्ज माहिती (Loan Information)** tab (Daily only) — loan account summary absorbed into Customer Details tab; recovery action deferred (`TODO`).
 
@@ -27,6 +26,7 @@ Single transaction screen for deposit products: Savings, Fixed Deposit, Daily (P
 | 2 | साहित्य तपशील | Instrument Details | Common cheque/instrument fields (all modules) |
 | 3 | ट्रान्सफर | Transfer | Common transfer grid (all modules) |
 | 4 | ग्राहक तपशील | Customer Details | Cross-product customer + account summary (replaces KYC + Daily Loan Info) |
+| 5 | खातेवही | Ledger | Shared `app-ledger-tab` — same 15-column grid as Dividend Transaction / Loan screens |
 
 ## Reference Screenshots / Media
 
@@ -226,8 +226,6 @@ One **paper-style card** per account. Compact fields only.
 
 **Loan rows:** Display outstanding balance and overdue amount. **`TODO`:** "recover from this collection" action (replaces Daily कर्ज माहिती recovery workflow) — deferred.
 
-**`TODO`:** Per-module detailed ledger link/action — deferred (legacy Ledger tab removed).
-
 ### Section: पूर्ण केवायसी (Full KYC) — collapsible
 
 > Collapsed by default. Read-only **address list** for the resolved customer — same grid columns as [new-customer-screen.md](../customer/new-customer-screen.md) Tab 2 Address Grid. No editable address form on this screen.
@@ -253,11 +251,29 @@ One **paper-style card** per account. Compact fields only.
 
 ---
 
+## Tab 5: खातेवही (Ledger)
+
+> **Shared component:** `app-ledger-tab`. Same 15-column grid as [dividend-transaction-screen.md](../membership/dividend-transaction-screen.md) Tab 5 and Loan transaction screens. Reused here — resolved from `TODO` (2026-07-22).
+
+| # | Marathi Label | English Label | Type | Required | Values / Notes |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | या दिनांकापासून | From Date | Date | Yes | — |
+| 2 | या दिनांकापर्यंत | To Date | Date | Yes | — |
+
+**Actions:** `दाखवा`, `स्टेटमेंट प्रिंट`, `पासबुक`. **Display:** `ओपनिंग बॅलन्स`.
+
+**Grid columns:** निवडा, अनु. क्र., दिनांक, चलन क्र., सूचना प्रकार, सूचना क्र., नावे, जमा, शिल्लक, तपशील, व्यवहार, वापरकर्ता, वेळ, सत्र, पासिंग यूजर.
+
+**Footer:** `एकूण नावे`, `एकूण जमा`, `चलन प्रिंट`, `ड्राफ्ट प्रिंट`, `निर्यात करा`.
+
+**Navigation:** `मागे`, `पूर्ण`, `पूर्ववत`.
+
+---
+
 ## Deferred Items (TODO — out of scope for this spec pass)
 
 | Item | Notes |
 | :--- | :--- |
-| Detailed per-module ledger | Legacy खातेवही tab removed; follow-up screen/link per product |
 | Loan recovery from collection | Daily pigmy loan recovery action; display-only in Customer Details for now |
 | Recurring debit-mode Tab 1 fields | Maturity payout, premature closure, TDS, payout mode — not captured in screenshots |
 
@@ -281,3 +297,4 @@ One **paper-style card** per account. Compact fields only.
 - [../fixed-deposit/fd-transaction-screen.md](../fixed-deposit/fd-transaction-screen.md)
 - [../daily/daily-transaction-screen.md](../daily/daily-transaction-screen.md)
 - [../recurring/recurring-transaction-screen.md](../recurring/recurring-transaction-screen.md)
+- [../membership/dividend-transaction-screen.md](../membership/dividend-transaction-screen.md) — Ledger tab pattern source

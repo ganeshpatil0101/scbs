@@ -17,8 +17,8 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 - Tab 1: सभासद निवडा Autocomplete replaces legacy Member Number + Customer Name fields.
 - Tab 2: नावे / जमा and रोख / ट्रान्सफर mode radios (layout only; tab 3–4 always visible in mockup).
 - Tab 3–4: चेक तपशील and ट्रान्सफर — spec marks transfer-mode-only; shown for layout review.
-- Tab 6 (केवायसी माहिती): TODO stub per spec — follows loan-information customer tab pattern.
-- `TODO` dropdowns (धनादेश प्रकार, बँक निवडा) use disabled `[TODO]` options.
+- **Removed (2026-07-22):** Tab 6 (केवायसी माहिती) — was a scaffold referencing the now-superseded Savings KYC pattern.
+- **Resolved (2026-07-22):** `बँक निवडा` → Autocomplete from Bank Master, same as accounting/loan screens.
 
 ## Review checklist
 
@@ -28,7 +28,6 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 - [ ] Tab 3: Cheque fields with required markers; NEFT/RTGS checkbox
 - [ ] Tab 4: Transfer form, grid, नियमित करा / हटवा actions
 - [ ] Tab 5: Ledger 15-column grid matches `app-ledger-tab` (savings variant)
-- [ ] Tab 6: TODO stub visible
 - [ ] Footer: मागे / पुढे / पूर्ण / पूर्ववत
 - [ ] Marathi labels; required markers; `data-spec-field` traceability
 - [ ] Responsive + sticky footer

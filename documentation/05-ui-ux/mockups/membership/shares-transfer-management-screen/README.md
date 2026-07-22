@@ -25,7 +25,8 @@ Open `index.html` in any web browser. Requires internet for Tailwind CDN and Goo
 
 ## Notes
 
-- `स्क्रोल निवडा` and `बँक निवडा` marked **TODO** — master data not captured in spec.
+- **Removed (2026-07-22):** `स्क्रोल निवडा` field — not required.
+- **Resolved (2026-07-22):** `बँक निवडा` → Autocomplete from Bank Master, same as accounting/loan screens.
 - Consolidates former Shares Transfer + Shares Transfer List screens per UX optimization.
 - Tab 2 list filters use range textboxes for member no. (not Autocomplete) per entity-autocomplete-pattern exclusions.
 
