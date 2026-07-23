@@ -1,0 +1,23 @@
+---
+description: >-
+  Derive business rules, use cases, workflows, and acceptance tests from
+  05-ui-ux screen specs into 02-business-domains/. Delegates to
+  generate-business-domain skill. Invoke with @generate-business-domain.
+globs:
+  - documentation/02-business-domains/**
+alwaysApply: false
+---
+
+# Generate Business Domain Rule
+
+Delegates to the project skill: [.cursor/skills/generate-business-domain/SKILL.md](../skills/generate-business-domain/SKILL.md)
+
+When this rule applies, read and follow that skill in full.
+
+**Canonical standards:** [documentation/Software-Documentation-Standard.md](../../documentation/Software-Documentation-Standard.md)
+
+**Documentation workflow:** [.cursor/rules/generate-document.mdc](../rules/generate-document.mdc)
+
+**Glossary (term definitions):** [documentation/00-project-overview/glossary.md](../../documentation/00-project-overview/glossary.md)
+
+**Downstream:** After business rules exist, use [@design-database-schema](../skills/design-database-schema/SKILL.md) and `03-api-contracts/` per domain.

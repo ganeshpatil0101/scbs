@@ -22,5 +22,7 @@ Index of **मास्टर (Master)** settings screens under **सेटि�
 
 - [changelog.md](changelog.md)
 - [../ux-optimization.md](../ux-optimization.md)
+- [../../../00-project-overview/tenant-setup.md](../../../00-project-overview/tenant-setup.md) — New tenant bootstrap (seed Roles + first admin)
+- [../../../02-business-domains/settings/master/overview.md](../../../02-business-domains/settings/master/overview.md) — Business rules, use cases, workflows
 - [../../shared/entity-autocomplete-pattern.md](../../shared/entity-autocomplete-pattern.md)
 - [../../../AI_INDEX.md](../../../AI_INDEX.md)

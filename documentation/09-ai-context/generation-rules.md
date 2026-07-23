@@ -72,6 +72,7 @@ For database design, also read [database-design-standards.md](../04-database-des
 | HTML layout mockup from screen spec | `@generate-ui-mockup` | [.cursor/rules/generate-ui-mockup.mdc](../../.cursor/rules/generate-ui-mockup.mdc) |
 | Angular screen from approved spec/mockup | `@generate-ui-screen` | [.cursor/rules/generate-ui-screen.mdc](../../.cursor/rules/generate-ui-screen.mdc) |
 | Database entity docs from UI specs | `@design-database-schema` | [.cursor/skills/design-database-schema/SKILL.md](../../.cursor/skills/design-database-schema/SKILL.md) |
+| Business rules, use cases, workflows from UI specs | `@generate-business-domain` | [.cursor/skills/generate-business-domain/SKILL.md](../../.cursor/skills/generate-business-domain/SKILL.md) |
 | UX simplification / screen consolidation | `@optimize-ui-ux` | [.cursor/skills/optimize-ui-ux/SKILL.md](../../.cursor/skills/optimize-ui-ux/SKILL.md) |
 | Any TypeScript/HTML/SCSS edit (standards enforcement) | Auto via glob | [.cursor/rules/coding-standards.mdc](../../.cursor/rules/coding-standards.mdc) |
 | NestJS module from API contract | `@generate-nestjs-module` | **Not yet created** — Phase 2; use template below |

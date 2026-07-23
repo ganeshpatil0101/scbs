@@ -41,5 +41,6 @@ screenshots/settings/
 ## Related Documents
 
 - [ux-optimization.md](ux-optimization.md)
-- [../../AI_INDEX.md](../../AI_INDEX.md)
 - [changelog.md](changelog.md)
+- [../../02-business-domains/settings/overview.md](../../02-business-domains/settings/overview.md) — Business domain docs
+- [../../AI_INDEX.md](../../AI_INDEX.md)
