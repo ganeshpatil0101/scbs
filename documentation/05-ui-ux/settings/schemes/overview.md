@@ -35,6 +35,7 @@ See [../../shared/ui-simplification-patterns.md](../../shared/ui-simplification-
 
 ## Related Documents
 
+- [../../../02-business-domains/settings/schemes/overview.md](../../../02-business-domains/settings/schemes/overview.md) — Business rules, use cases, workflows, acceptance tests
 - [../ux-optimization.md](../ux-optimization.md)
 - [../overview.md](../overview.md)
 - [changelog.md](changelog.md)

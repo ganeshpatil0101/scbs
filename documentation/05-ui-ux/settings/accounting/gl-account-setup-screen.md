@@ -116,6 +116,7 @@ Former **New GL Head** fields (simplified default view).
 ## Related Documents
 
 - [overview.md](overview.md)
+- [../../../02-business-domains/settings/accounting/overview.md](../../../02-business-domains/settings/accounting/overview.md) — Business domain (BR/UC/WF/AT)
 - [ux-optimization.md](../ux-optimization.md)
 - [../../shared/ui-simplification-patterns.md](../../shared/ui-simplification-patterns.md)
 - [../../shared/entity-autocomplete-pattern.md](../../shared/entity-autocomplete-pattern.md)

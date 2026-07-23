@@ -177,6 +177,7 @@ Collapsed by default. Fields moved from default view per [ux-optimization.md](..
 ## Related Documents
 
 - [overview.md](overview.md)
+- [../../../02-business-domains/settings/schemes/overview.md](../../../02-business-domains/settings/schemes/overview.md) — Business domain (BR/UC/WF/AT)
 - [ux-optimization.md](../ux-optimization.md)
 - [../../shared/ui-simplification-patterns.md](../../shared/ui-simplification-patterns.md)
 - [changelog.md](changelog.md)

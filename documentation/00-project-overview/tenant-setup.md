@@ -48,10 +48,10 @@ Complete via Settings UI (or seed scripts once contracts exist). Order below is 
 
 | # | Step | UI / domain | Doc status |
 | :---: | :--- | :--- | :---: |
-| C1 | **GL Account Setup** (chart of accounts / GL groups & heads) | Settings → Accounting | UI done; business domain TODO |
-| C2 | **Product schemes** (Savings, FD, Daily, Recurring, Loan as needed) | Settings → Schemes → New Scheme | UI done; business domain TODO |
-| C3 | **Membership configuration** + share rules | Settings → Membership | UI done; business domain TODO |
-| C4 | **Loan interest rate** baseline (if loans in scope for go-live) | Settings → Loan → Interest Rate Change | UI done; business domain TODO |
+| C1 | **GL Account Setup** (chart of accounts / GL groups & heads) | Settings → Accounting | UI done; [business domain](../02-business-domains/settings/accounting/overview.md) done 2026-07-23 |
+| C2 | **Product schemes** (Savings, FD, Daily, Recurring, Loan as needed) | Settings → Schemes → New Scheme | UI done; [business domain](../02-business-domains/settings/schemes/overview.md) done 2026-07-23 |
+| C3 | **Membership configuration** + share rules | Settings → Membership | UI done; [business domain](../02-business-domains/settings/membership/overview.md) done 2026-07-23 |
+| C4 | **Loan interest rate** baseline (if loans in scope for go-live) | Settings → Loan → Interest Rate Change | UI done; [business domain](../02-business-domains/settings/loan/overview.md) done 2026-07-23 |
 | C5 | Optional: Bank master rows for cheque/investment flows | Bank module | UI done |
 
 ---

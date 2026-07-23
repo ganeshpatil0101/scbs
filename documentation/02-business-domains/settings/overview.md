@@ -9,10 +9,10 @@ Business rules, use cases, and workflows for **सेटिंग्ज (Setting
 | Sub-area | UI path | Business domain path | Status |
 | :--- | :--- | :--- | :---: |
 | Master | [05-ui-ux/settings/master/](../05-ui-ux/settings/master/overview.md) | [master/](master/overview.md) | Done |
-| Accounting | [05-ui-ux/settings/accounting/](../05-ui-ux/settings/accounting/overview.md) | `accounting/` | Not started |
-| Schemes | [05-ui-ux/settings/schemes/](../05-ui-ux/settings/schemes/overview.md) | `schemes/` | Not started |
-| Membership | [05-ui-ux/settings/membership/](../05-ui-ux/settings/membership/overview.md) | `membership/` | Not started |
-| Loan | [05-ui-ux/settings/loan/](../05-ui-ux/settings/loan/overview.md) | `loan/` | Not started |
+| Accounting | [05-ui-ux/settings/accounting/](../05-ui-ux/settings/accounting/overview.md) | [accounting/](accounting/overview.md) | Done |
+| Schemes | [05-ui-ux/settings/schemes/](../05-ui-ux/settings/schemes/overview.md) | [schemes/](schemes/overview.md) | Done |
+| Membership | [05-ui-ux/settings/membership/](../05-ui-ux/settings/membership/overview.md) | [membership/](membership/overview.md) | Done |
+| Loan | [05-ui-ux/settings/loan/](../05-ui-ux/settings/loan/overview.md) | [loan/](loan/overview.md) | Done |
 
 ## Dependencies
 
@@ -24,6 +24,10 @@ Business rules, use cases, and workflows for **सेटिंग्ज (Setting
 
 - [../overview.md](../overview.md)
 - [master/overview.md](master/overview.md)
+- [accounting/overview.md](accounting/overview.md)
+- [schemes/overview.md](schemes/overview.md)
+- [membership/overview.md](membership/overview.md)
+- [loan/overview.md](loan/overview.md)
 - [master/default-role-templates.md](master/default-role-templates.md) — Tenant seed Roles (Clerk / Cashier / Manager)
 - [../00-project-overview/tenant-setup.md](../00-project-overview/tenant-setup.md) — New tenant bootstrap checklist
 - [../05-ui-ux/settings/overview.md](../05-ui-ux/settings/overview.md)

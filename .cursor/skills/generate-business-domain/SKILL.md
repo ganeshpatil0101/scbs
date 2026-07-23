@@ -55,6 +55,21 @@ Turns approved `05-ui-ux/` screen specs into modular business-domain documentati
 | Self-lockout permission warning | Soft warning when setting No Rights on Staff Access / User Role for own Role; Save still allowed | 2026-07-23 |
 | Unregistered form permission | Missing registry / role_permission → No Rights (fail closed); do not block app startup in Year 1 | 2026-07-23 |
 | Employee requires Customer | Staff registration selects existing Customer via Autocomplete (Tab 1 #1) — employee identity comes from Customer record | 2026-07-23 |
+| Schemes type-specific fields | Unified `new-scheme-screen.md` is primary; superseded product specs used as field-reference only (Approach B) | 2026-07-23 |
+| Scheme name uniqueness | Unique within Scheme Type (tenant-scoped); same name allowed across different types | 2026-07-23 |
+| Scheme ↔ GL Head cardinality | Each scheme binds to exactly one GL Head; many schemes may share one GL Head | 2026-07-23 |
+| Scheme wizard save (create) | Persist only on final Complete/Save after all visible tabs valid; Next/Back do not write partial records | 2026-07-23 |
+| GL setup create flow | Always new GL Group + new GL Head in one wizard; Year 1 has no select-existing Group on this screen | 2026-07-23 |
+| GL setup wizard save | Persist Group + Head together only on final Complete; Next/Back do not write partial records | 2026-07-23 |
+| GL Group Name uniqueness | Unique within tenant | 2026-07-23 |
+| GL Head Name uniqueness | Unique within tenant | 2026-07-23 |
+| Branch Account org/branch | When Account Category = Branch Account, Organization and Branch are required | 2026-07-23 |
+| Share Series uniqueness | Unique within Member class (Member vs Nominal), tenant-wide | 2026-07-23 |
+| Share Rules Save | Persists a grid row (multiple series allowed per class) | 2026-07-23 |
+| Dividend Calculate | Preview only — no posting / no payment obligation from Settings screen | 2026-07-23 |
+| Loan rate change — new rates | New Interest Rate required; New Penalty Rate optional | 2026-07-23 |
+| Loan rate change — template | Scheme template always updated on Save | 2026-07-23 |
+| Loan rate change — apply scope | All Accounts updates existing+future; New Accounts Only keeps existing rates | 2026-07-23 |
 
 > **Skill maintenance:** When the user confirms a TODO decision, move it from TODO to a confirmed row above and append the decision to the domain `changelog.md`.
 
@@ -143,10 +158,10 @@ Turns approved `05-ui-ux/` screen specs into modular business-domain documentati
 | User says | Business domain path | Primary UI path | Status |
 | :--- | :--- | :--- | :--- |
 | `settings/master` | `02-business-domains/settings/master/` | `05-ui-ux/settings/master/` | **Template (Phase 1.7)** |
-| `settings/accounting` | `02-business-domains/settings/accounting/` | `05-ui-ux/settings/accounting/` | Pending |
-| `settings/schemes` | `02-business-domains/settings/schemes/` | `05-ui-ux/settings/schemes/` | Pending |
-| `settings/membership` | `02-business-domains/settings/membership/` | `05-ui-ux/settings/membership/` | Pending |
-| `settings/loan` | `02-business-domains/settings/loan/` | `05-ui-ux/settings/loan/` | Pending |
+| `settings/accounting` | `02-business-domains/settings/accounting/` | `05-ui-ux/settings/accounting/` | **Done (2026-07-23)** |
+| `settings/schemes` | `02-business-domains/settings/schemes/` | `05-ui-ux/settings/schemes/` | **Done (2026-07-23)** |
+| `settings/membership` | `02-business-domains/settings/membership/` | `05-ui-ux/settings/membership/` | **Done (2026-07-23)** |
+| `settings/loan` | `02-business-domains/settings/loan/` | `05-ui-ux/settings/loan/` | **Done (2026-07-23)** |
 | `customer` | `02-business-domains/customer/` | `05-ui-ux/customer/` | Next after Settings |
 | `membership` | `02-business-domains/membership/` | `05-ui-ux/membership/` | Phase 3 |
 | `savings` | `02-business-domains/savings/` | `05-ui-ux/savings/` | Phase 3 |
@@ -268,6 +283,9 @@ If any item fails, fix before reporting done.
 
 - Optional: bank may tweak Clerk/Cashier/Manager cells in default-role-templates.md
 - Settings/Master Standing Decisions BR-010–BR-023 confirmed 2026-07-23
+- Settings/Schemes Standing Decisions (name uniqueness, GL sharing, atomic save, Approach B) confirmed 2026-07-23; open: BR-033 status→account-open, BR-034 min grid rows, DP formula
+- Settings/Accounting Standing Decisions (atomic Group+Head, always new Group, name uniqueness, Branch Account Org+Branch) confirmed 2026-07-23; open: BR-020 Balance Type required?, BR-021 status eligibility, BR-022 number algorithm
+- Settings/Membership + Loan Standing Decisions confirmed 2026-07-23 — **Settings Phase 1.7 complete**; next domain: `customer/`
 - `03-api-contracts/` not started — UC flows unblock API design next
 - `04-database-design/shared/` entity files not started — BR references entity names provisionally
 - `01-architecture/security-architecture.md` not yet authored — JWT/RBAC BRs reference UI spec + glossary only

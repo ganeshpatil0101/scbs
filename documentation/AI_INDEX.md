@@ -30,7 +30,43 @@ Business rules, use cases, workflows, and acceptance tests derived from `05-ui-u
 - [02-business-domains/settings/master/default-role-templates.md](02-business-domains/settings/master/default-role-templates.md) — Seed Clerk / Cashier / Manager × 51 forms
 - [02-business-domains/settings/master/changelog.md](02-business-domains/settings/master/changelog.md)
 
-**Pending Settings sub-areas:** `accounting/`, `schemes/`, `membership/`, `loan/` — not started.
+### Settings (Accounting — chart of accounts)
+
+- [02-business-domains/settings/accounting/overview.md](02-business-domains/settings/accounting/overview.md) — GL Account Setup
+- [02-business-domains/settings/accounting/business-rules.md](02-business-domains/settings/accounting/business-rules.md) — BR-001…
+- [02-business-domains/settings/accounting/use-cases.md](02-business-domains/settings/accounting/use-cases.md) — UC-001…
+- [02-business-domains/settings/accounting/workflows.md](02-business-domains/settings/accounting/workflows.md)
+- [02-business-domains/settings/accounting/acceptance-tests.md](02-business-domains/settings/accounting/acceptance-tests.md) — AT-001…
+- [02-business-domains/settings/accounting/changelog.md](02-business-domains/settings/accounting/changelog.md)
+
+### Settings (Schemes — product configuration)
+
+- [02-business-domains/settings/schemes/overview.md](02-business-domains/settings/schemes/overview.md) — New Scheme (unified)
+- [02-business-domains/settings/schemes/business-rules.md](02-business-domains/settings/schemes/business-rules.md) — BR-001…
+- [02-business-domains/settings/schemes/use-cases.md](02-business-domains/settings/schemes/use-cases.md) — UC-001…
+- [02-business-domains/settings/schemes/workflows.md](02-business-domains/settings/schemes/workflows.md)
+- [02-business-domains/settings/schemes/acceptance-tests.md](02-business-domains/settings/schemes/acceptance-tests.md) — AT-001…
+- [02-business-domains/settings/schemes/changelog.md](02-business-domains/settings/schemes/changelog.md)
+
+### Settings (Membership — share rules & dividend preview)
+
+- [02-business-domains/settings/membership/overview.md](02-business-domains/settings/membership/overview.md) — Membership Configuration
+- [02-business-domains/settings/membership/business-rules.md](02-business-domains/settings/membership/business-rules.md) — BR-001…
+- [02-business-domains/settings/membership/use-cases.md](02-business-domains/settings/membership/use-cases.md) — UC-001…
+- [02-business-domains/settings/membership/workflows.md](02-business-domains/settings/membership/workflows.md)
+- [02-business-domains/settings/membership/acceptance-tests.md](02-business-domains/settings/membership/acceptance-tests.md) — AT-001…
+- [02-business-domains/settings/membership/changelog.md](02-business-domains/settings/membership/changelog.md)
+
+### Settings (Loan — interest rate change)
+
+- [02-business-domains/settings/loan/overview.md](02-business-domains/settings/loan/overview.md) — Interest Rate Change
+- [02-business-domains/settings/loan/business-rules.md](02-business-domains/settings/loan/business-rules.md) — BR-001…
+- [02-business-domains/settings/loan/use-cases.md](02-business-domains/settings/loan/use-cases.md) — UC-001…
+- [02-business-domains/settings/loan/workflows.md](02-business-domains/settings/loan/workflows.md)
+- [02-business-domains/settings/loan/acceptance-tests.md](02-business-domains/settings/loan/acceptance-tests.md) — AT-001…
+- [02-business-domains/settings/loan/changelog.md](02-business-domains/settings/loan/changelog.md)
+
+**Pending Settings sub-areas:** none — Settings Phase 1.7 complete.
 
 **Next domain after Settings:** `customer/` (Phase 1.7 follow-on).
 
@@ -309,4 +345,4 @@ Layout-only HTML mockups generated from `*-screen.md` specs via `@generate-ui-mo
 - [05-ui-ux/settings/loan/loan-interest-rate-change-screen.md](05-ui-ux/settings/loan/loan-interest-rate-change-screen.md) — व्याज दरात बदल (simplified)
 
 ## Status
-Project Overview is complete: vision.md, business-goals.md, glossary.md, and system-boundaries.md. Architecture documentation exists. **AI Context (2026-07-22):** [09-ai-context/](09-ai-context/) established — coding-standards, naming-conventions, **monorepo folder-structure (DEC-007)**, generation-rules, technology-stack; wired into `.cursor/rules/` and `.cursor/skills/` per [Agent Skills open standard](https://agentskills.io). **Business domains (2026-07-23):** `@generate-business-domain` skill; [02-business-domains/settings/master/](02-business-domains/settings/master/overview.md) template complete (18 BR, 3 UC, 3 WF, 18 AT); remaining Settings sub-areas and Customer pending. **Database design foundation (2026-07-22):** standards, overview, reports-traceability, and `@design-database-schema` skill under [04-database-design/](04-database-design/) — domain entity files not started yet. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). **Settings module UX-optimized (2026-07-05):** 6 consolidated screens per [05-ui-ux/settings/ux-optimization.md](05-ui-ux/settings/ux-optimization.md). **Customer module UX-optimized (2026-07-09):** 4 → 3 screens per [05-ui-ux/customer/ux-optimization.md](05-ui-ux/customer/ux-optimization.md). **Daily module UX-optimized (2026-07-11):** 8 → 7 screens per [05-ui-ux/daily/ux-optimization.md](05-ui-ux/daily/ux-optimization.md). **Fixed Deposit module UX-optimized (2026-07-11):** 7 → 6 screens per [05-ui-ux/fixed-deposit/ux-optimization.md](05-ui-ux/fixed-deposit/ux-optimization.md). **Loan module UX-optimized (2026-07-12):** 8 → 6 screens per [05-ui-ux/loan/ux-optimization.md](05-ui-ux/loan/ux-optimization.md). **Membership module UX-optimized (2026-07-12):** 6 → 5 screens per [05-ui-ux/membership/ux-optimization.md](05-ui-ux/membership/ux-optimization.md). **Recurring module UX-optimized (2026-07-12):** 6 → 5 screens per [05-ui-ux/recurring/ux-optimization.md](05-ui-ux/recurring/ux-optimization.md). **Savings module UX-optimized (2026-07-12):** 4 → 4 screens (field cleanup) per [05-ui-ux/savings/ux-optimization.md](05-ui-ux/savings/ux-optimization.md). **Accounting deposit transaction consolidated (2026-07-18):** 4 module transaction screens → 1 unified screen per [05-ui-ux/accounting/ux-optimization.md](05-ui-ux/accounting/ux-optimization.md). Report specs added from `screenshots/Reports/`. Reusable skills: `.cursor/skills/optimize-ui-ux/`, `.cursor/skills/design-database-schema/`, `.cursor/skills/generate-business-domain/`; rules: `generate-document`, `generate-business-domain`, `generate-ui-screen`, `generate-ui-mockup`, `coding-standards`. Backend business modules have not been started yet.
+Project Overview is complete: vision.md, business-goals.md, glossary.md, and system-boundaries.md. Architecture documentation exists. **AI Context (2026-07-22):** [09-ai-context/](09-ai-context/) established — coding-standards, naming-conventions, **monorepo folder-structure (DEC-007)**, generation-rules, technology-stack; wired into `.cursor/rules/` and `.cursor/skills/` per [Agent Skills open standard](https://agentskills.io). **Business domains (2026-07-23):** `@generate-business-domain` skill; **all Settings sub-areas complete** (Master, Accounting, Schemes, Membership, Loan). **Next:** `customer/`. **Database design foundation (2026-07-22):** standards, overview, reports-traceability, and `@design-database-schema` skill under [04-database-design/](04-database-design/) — domain entity files not started yet. UI screen specs added from `screenshots/` (customer, membership, savings, fixed deposit, loan, daily, recurring, accounting, settings). **Settings module UX-optimized (2026-07-05):** 6 consolidated screens per [05-ui-ux/settings/ux-optimization.md](05-ui-ux/settings/ux-optimization.md). **Customer module UX-optimized (2026-07-09):** 4 → 3 screens per [05-ui-ux/customer/ux-optimization.md](05-ui-ux/customer/ux-optimization.md). **Daily module UX-optimized (2026-07-11):** 8 → 7 screens per [05-ui-ux/daily/ux-optimization.md](05-ui-ux/daily/ux-optimization.md). **Fixed Deposit module UX-optimized (2026-07-11):** 7 → 6 screens per [05-ui-ux/fixed-deposit/ux-optimization.md](05-ui-ux/fixed-deposit/ux-optimization.md). **Loan module UX-optimized (2026-07-12):** 8 → 6 screens per [05-ui-ux/loan/ux-optimization.md](05-ui-ux/loan/ux-optimization.md). **Membership module UX-optimized (2026-07-12):** 6 → 5 screens per [05-ui-ux/membership/ux-optimization.md](05-ui-ux/membership/ux-optimization.md). **Recurring module UX-optimized (2026-07-12):** 6 → 5 screens per [05-ui-ux/recurring/ux-optimization.md](05-ui-ux/recurring/ux-optimization.md). **Savings module UX-optimized (2026-07-12):** 4 → 4 screens (field cleanup) per [05-ui-ux/savings/ux-optimization.md](05-ui-ux/savings/ux-optimization.md). **Accounting deposit transaction consolidated (2026-07-18):** 4 module transaction screens → 1 unified screen per [05-ui-ux/accounting/ux-optimization.md](05-ui-ux/accounting/ux-optimization.md). Report specs added from `screenshots/Reports/`. Reusable skills: `.cursor/skills/optimize-ui-ux/`, `.cursor/skills/design-database-schema/`, `.cursor/skills/generate-business-domain/`; rules: `generate-document`, `generate-business-domain`, `generate-ui-screen`, `generate-ui-mockup`, `coding-standards`. Backend business modules have not been started yet.

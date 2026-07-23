@@ -12,6 +12,7 @@ Index of **कर्ज (Loan)** settings screens (scheme creation is under [sch
 
 ## Related Documents
 
+- [../../../02-business-domains/settings/loan/overview.md](../../../02-business-domains/settings/loan/overview.md) — Business rules, use cases, workflows, acceptance tests
 - [changelog.md](changelog.md)
 - [../ux-optimization.md](../ux-optimization.md)
 - [../schemes/new-scheme-screen.md](../schemes/new-scheme-screen.md)

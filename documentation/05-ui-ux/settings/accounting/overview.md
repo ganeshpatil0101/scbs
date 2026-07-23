@@ -19,6 +19,7 @@ Index of **लेखा (Accounting)** settings screens.
 
 ## Related Documents
 
+- [../../../02-business-domains/settings/accounting/overview.md](../../../02-business-domains/settings/accounting/overview.md) — Business rules, use cases, workflows, acceptance tests
 - [changelog.md](changelog.md)
 - [../ux-optimization.md](../ux-optimization.md)
 - [../../shared/entity-autocomplete-pattern.md](../../shared/entity-autocomplete-pattern.md)

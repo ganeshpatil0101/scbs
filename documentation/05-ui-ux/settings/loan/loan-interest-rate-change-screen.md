@@ -30,8 +30,12 @@ UI specification for changing loan scheme interest rates. Single-page form with 
 | 2 | बदल दिनांक | Change Date | Date | Yes | — |
 | 3 | सर्व खात्यांना नवीन दर लागू करावा | Apply New Rate to All Accounts | Radio | No | Default selected |
 | 4 | फक्त नवीन खात्यांना नवीन दर लागू करावा | Apply New Rate to New Accounts Only | Radio | No | — |
+| 5 | नवीन व्याज दर (द.सा.द.शे.) | New Interest Rate (p.a. %) | Textbox | Yes | Confirmed 2026-07-23 (Standing Decision). Required non-negative %. |
+| 6 | नवीन दंड व्याज दर (द.सा.द.शे.) | New Penalty Rate (p.a. %) | Textbox | No | Confirmed 2026-07-23. Optional; blank leaves existing penalty unchanged. |
 
 **Actions:** `निर्यात` (Export), `जतन करा` (Save).
+
+**Save semantics:** Loan scheme template rate is always updated; apply radios control existing-account application — [settings/loan business domain](../../../02-business-domains/settings/loan/overview.md).
 
 ---
 
@@ -67,6 +71,7 @@ Collapsible history log. Former Tab 2 content.
 ## Related Documents
 
 - [overview.md](overview.md)
+- [../../../02-business-domains/settings/loan/overview.md](../../../02-business-domains/settings/loan/overview.md) — Business domain (BR/UC/WF/AT)
 - [ux-optimization.md](../ux-optimization.md)
 - [../schemes/new-scheme-screen.md](../schemes/new-scheme-screen.md)
 - [../../shared/ui-simplification-patterns.md](../../shared/ui-simplification-patterns.md)

@@ -102,13 +102,17 @@ Secondary party on an account or membership, recorded on New Membership Tab 2 an
 
 ### GL Group (जी.एल. ग्रुप)
 
-A grouping level in the chart of accounts hierarchy, above GL Heads. Created via Settings > Accounting > New GL Group.
+A grouping level in the chart of accounts hierarchy, above GL Heads. Created via Settings > Accounting > [GL Account Setup](../05-ui-ux/settings/accounting/gl-account-setup-screen.md) (Tab 1).
+
+**Business rules:** [02-business-domains/settings/accounting/](../02-business-domains/settings/accounting/overview.md).
 
 ### GL Head (जी. एल. हेड / जीएल हेड)
 
-A General Ledger account head — the atomic unit in the chart of accounts. Each GL Head has a number (जी. एल. हेड क्र.), name, account group, balance type (credit/debit/other), and category (general, branch, member-like, contra). Product **schemes** are linked to a GL Head number at creation time.
+A General Ledger account head — the atomic unit in the chart of accounts. Each GL Head has a number (जी. एल. हेड क्र.), name, account group, balance type (credit/debit), and category (general, branch, member-like, contra). Product **schemes** are linked to a GL Head number at creation time.
 
-**UI reference:** [new-gl-head-screen.md](../05-ui-ux/settings/accounting/new-gl-head-screen.md).
+**UI reference:** [gl-account-setup-screen.md](../05-ui-ux/settings/accounting/gl-account-setup-screen.md) (Tab 2).
+
+**Business rules:** [02-business-domains/settings/accounting/](../02-business-domains/settings/accounting/overview.md).
 
 ### Jama (जमा)
 
@@ -142,7 +146,7 @@ Cash denomination exchange transaction (no net cash in/out of the bank — e.g.,
 
 ### Member-like Account (सभासदाप्रमाणे खाते)
 
-A GL Head category flag indicating the account behaves like a member-level sub-ledger (per-member balances under one GL Head). Selected on New GL Head screen.
+A GL Head category flag indicating the account behaves like a member-level sub-ledger (per-member balances under one GL Head). Selected on GL Account Setup Advanced Settings.
 
 ### Contra (कॉन्ट्रा)
 
@@ -160,11 +164,13 @@ A **product configuration template** defined under Settings for a deposit or loa
 
 | Marathi | English | Settings Screen |
 | :--- | :--- | :--- |
-| डेली | Daily (Pigmy) | [daily-new-scheme-screen.md](../05-ui-ux/settings/schemes/daily-new-scheme-screen.md) |
-| बचत | Savings | [savings-new-scheme-screen.md](../05-ui-ux/settings/schemes/savings-new-scheme-screen.md) |
-| मुदत ठेव | Fixed Deposit | [fixed-deposit-new-scheme-screen.md](../05-ui-ux/settings/schemes/fixed-deposit-new-scheme-screen.md) |
-| रिकरिंग | Recurring | [recurring-new-scheme-screen.md](../05-ui-ux/settings/schemes/recurring-new-scheme-screen.md) |
-| कर्ज | Loan | [loan-new-scheme-screen.md](../05-ui-ux/settings/schemes/loan-new-scheme-screen.md) |
+| डेली | Daily (Pigmy) | [new-scheme-screen.md](../05-ui-ux/settings/schemes/new-scheme-screen.md) (Scheme Type = डेली) |
+| बचत | Savings | [new-scheme-screen.md](../05-ui-ux/settings/schemes/new-scheme-screen.md) (Scheme Type = बचत) |
+| मुदत ठेव | Fixed Deposit | [new-scheme-screen.md](../05-ui-ux/settings/schemes/new-scheme-screen.md) (Scheme Type = मुदत ठेव) |
+| रिकरिंग | Recurring | [new-scheme-screen.md](../05-ui-ux/settings/schemes/new-scheme-screen.md) (Scheme Type = रिकरिंग) |
+| कर्ज | Loan | [new-scheme-screen.md](../05-ui-ux/settings/schemes/new-scheme-screen.md) (Scheme Type = कर्ज) |
+
+**Business rules:** [02-business-domains/settings/schemes/](../02-business-domains/settings/schemes/overview.md).
 
 **Note:** GL Head number validation differs by product (e.g., Daily schemes require GL Head No. ≤ 99 per screen spec validation message).
 

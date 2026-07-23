@@ -19,6 +19,7 @@ Index of **सभासदत्व (Membership)** configuration screens under *
 
 ## Related Documents
 
+- [../../../02-business-domains/settings/membership/overview.md](../../../02-business-domains/settings/membership/overview.md) — Business rules, use cases, workflows, acceptance tests
 - [changelog.md](changelog.md)
 - [../ux-optimization.md](../ux-optimization.md)
 - [../../membership/overview.md](../../membership/overview.md)
