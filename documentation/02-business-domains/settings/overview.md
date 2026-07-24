@@ -18,7 +18,7 @@ Business rules, use cases, and workflows for **सेटिंग्ज (Setting
 
 - [glossary.md](../00-project-overview/glossary.md) — User, Role, Employee, Branch, Organization terms
 - [system-boundaries.md](../00-project-overview/system-boundaries.md) — JWT auth, RBAC in scope for v1
-- Customer domain (for Staff & System Access — employee linked to Customer record)
+- [Customer domain](../customer/overview.md) — for Staff & System Access, employee linked to Customer record
 
 ## Related Documents
 

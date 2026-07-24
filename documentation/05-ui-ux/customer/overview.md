@@ -57,4 +57,5 @@ screenshots/grahak_khatedar/
 - [changelog.md](changelog.md)
 - [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)
 - [../membership/overview.md](../membership/overview.md)
+- [../../02-business-domains/customer/overview.md](../../02-business-domains/customer/overview.md) — Business rules, use cases, workflows, acceptance tests
 - [../../AI_INDEX.md](../../AI_INDEX.md)

@@ -37,7 +37,7 @@ Covers two UI screens (consolidated from four legacy screens):
 
 | Dependency | Domain / doc | Why |
 | :--- | :--- | :--- |
-| Customer record | Customer (not yet documented) | Tab 1 requires Customer Autocomplete |
+| Customer record | [Customer domain](../../customer/overview.md) | Tab 1 requires Customer Autocomplete |
 | Branch master | Shared / Settings | Branch rights grid |
 | Organization | Shared | Branch rights — society context |
 | Application menu registry | Platform (Phase 2) | Permission grid row source |

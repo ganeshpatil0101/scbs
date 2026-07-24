@@ -51,4 +51,5 @@ screenshots/मुदत ठेव/
 - [changelog.md](changelog.md)
 - [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)
 - [../loan/new-deposit-loan-screen.md](../loan/new-deposit-loan-screen.md)
+- [../../02-business-domains/fixed-deposit/overview.md](../../02-business-domains/fixed-deposit/overview.md) — Business rules, use cases, workflows, acceptance tests
 - [../../AI_INDEX.md](../../AI_INDEX.md)

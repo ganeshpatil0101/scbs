@@ -70,6 +70,9 @@ Turns approved `05-ui-ux/` screen specs into modular business-domain documentati
 | Loan rate change — new rates | New Interest Rate required; New Penalty Rate optional | 2026-07-23 |
 | Loan rate change — template | Scheme template always updated on Save | 2026-07-23 |
 | Loan rate change — apply scope | All Accounts updates existing+future; New Accounts Only keeps existing rates | 2026-07-23 |
+| FD Maturity Amount derivation | System-computed from scheme interest formula (Interest Type/Compounding, rate, duration, FD amount); scheme grid Maturity Amount is a reference for double-money (दामदुप्पट/कॅश सर्टिफिकेट) schemes only | 2026-07-24 |
+| FD wizard save (create) | Persist Account + Nominee(s) + Joint Holder(s) only on final पूर्ण (Complete) after all visible tabs valid; Next/Back do not write partial records | 2026-07-24 |
+| FD काढा (Remove) semantics | Deletes the account registration row (not hide) — same as Savings वगळा | 2026-07-24 |
 
 > **Skill maintenance:** When the user confirms a TODO decision, move it from TODO to a confirmed row above and append the decision to the domain `changelog.md`.
 
@@ -165,7 +168,7 @@ Turns approved `05-ui-ux/` screen specs into modular business-domain documentati
 | `customer` | `02-business-domains/customer/` | `05-ui-ux/customer/` | Next after Settings |
 | `membership` | `02-business-domains/membership/` | `05-ui-ux/membership/` | Phase 3 |
 | `savings` | `02-business-domains/savings/` | `05-ui-ux/savings/` | Phase 3 |
-| `fixed-deposit`, `fd` | `02-business-domains/fixed-deposit/` | `05-ui-ux/fixed-deposit/` | Phase 3 |
+| `fixed-deposit`, `fd` | `02-business-domains/fixed-deposit/` | `05-ui-ux/fixed-deposit/` | **Done (2026-07-24)** |
 | `daily`, `pigmy` | `02-business-domains/daily/` | `05-ui-ux/daily/` | Phase 3 |
 | `recurring` | `02-business-domains/recurring/` | `05-ui-ux/recurring/` | Phase 3 |
 | `loan` | `02-business-domains/loan/` | `05-ui-ux/loan/` | Phase 3 |

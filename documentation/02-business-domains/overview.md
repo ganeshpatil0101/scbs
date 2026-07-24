@@ -17,9 +17,11 @@ Covers operational and configuration domains for the CBS SaaS platform. Does not
 | Settings — Schemes | [settings/schemes/](settings/schemes/overview.md) | Done (2026-07-23) | Unified New Scheme (34 BR, 2 UC, 2 WF, 35 AT) |
 | Settings — Membership | [settings/membership/](settings/membership/overview.md) | Done (2026-07-23) | Membership Configuration (15 BR, 2 UC, 2 WF, 15 AT) |
 | Settings — Loan | [settings/loan/](settings/loan/overview.md) | Done (2026-07-23) | Interest Rate Change (14 BR, 1 UC, 1 WF, 14 AT) |
-| Customer | `customer/` | Not started | Next full domain after Settings |
+| Customer | [customer/](customer/overview.md) | Done (2026-07-24) | Customer List, New Customer, Other Account Management (33 BR, 4 UC, 4 WF, 33 AT) |
+| Savings | [savings/](savings/overview.md) | Done (2026-07-24) | New Account, Account Register (26 BR, 2 UC, 2 WF, 26 AT); superseded Transaction/Manual Interest excluded (deferred to Accounting) |
+| Fixed Deposit | [fixed-deposit/](fixed-deposit/overview.md) | Done (2026-07-24) | New Account, Account Management, Deposit Loan Installment, Interest Multiplier (43 BR, 4 UC, 4 WF, 43 AT); superseded Transaction/Manual Interest/Register/Renewal excluded |
 | Membership (operational) | `membership/` | Not started | Phase 3 |
-| Savings, FD, Daily, Recurring, Loan, Accounting | respective folders | Not started | Phase 3 |
+| Daily, Recurring, Loan, Accounting | respective folders | Not started | Phase 3 |
 
 ## Standard File Set (per leaf domain)
 
@@ -41,10 +43,10 @@ changelog.md
 3. Settings/Accounting — **done**
 4. Settings/Membership — **done**
 5. Settings/Loan — **done**
-6. Customer (next)
-7. Phase 3 operational domains per [cbs-project-execution-plan.md](../cbs-project-execution-plan.md)
-3. Customer
-4. Phase 3 operational domains per [cbs-project-execution-plan.md](../cbs-project-execution-plan.md)
+6. Customer — **done**
+7. Savings — **done**
+8. Fixed Deposit — **done**
+9. Phase 3 operational domains (Membership, Daily, Recurring, Loan, Accounting) per [cbs-project-execution-plan.md](../cbs-project-execution-plan.md)
 
 ## Related Documents
 

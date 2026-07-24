@@ -46,4 +46,5 @@ screenshots/bachat/
 - [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)
 - [../shared/entity-autocomplete-pattern.md](../shared/entity-autocomplete-pattern.md)
 - [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)
+- [../../02-business-domains/savings/overview.md](../../02-business-domains/savings/overview.md) — Business rules, use cases, workflows, acceptance tests
 - [../../AI_INDEX.md](../../AI_INDEX.md)
