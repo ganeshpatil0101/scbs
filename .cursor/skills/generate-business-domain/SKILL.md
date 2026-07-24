@@ -73,6 +73,15 @@ Turns approved `05-ui-ux/` screen specs into modular business-domain documentati
 | FD Maturity Amount derivation | System-computed from scheme interest formula (Interest Type/Compounding, rate, duration, FD amount); scheme grid Maturity Amount is a reference for double-money (दामदुप्पट/कॅश सर्टिफिकेट) schemes only | 2026-07-24 |
 | FD wizard save (create) | Persist Account + Nominee(s) + Joint Holder(s) only on final पूर्ण (Complete) after all visible tabs valid; Next/Back do not write partial records | 2026-07-24 |
 | FD काढा (Remove) semantics | Deletes the account registration row (not hide) — same as Savings वगळा | 2026-07-24 |
+| Daily agent-collection posting | Agent Collection Management is the posting point: final action atomically posts member-account credits + agent commission + balancing GL transfer voucher under one Challan | 2026-07-24 |
+| Daily Agent-to-Agent Transfer | Selecting accounts + confirming reassigns (persists) accounts' collecting-agent binding From→To; blocked when From = To; balances/entries unchanged | 2026-07-24 |
+| Daily agent identity | Agent identity drawn from an existing Customer selected on New Agent Tab 1 (same pattern as Employee requires Customer) | 2026-07-24 |
+| New Daily Account wizard save (create) | Persist Account + Nominee(s) + Joint Holder(s) only on final जतन करा after all visible tabs valid; Next/Back do not write partial records | 2026-07-24 |
+| New Agent wizard save (create) | Persist Agent + commission grid rows only on final पूर्ण after all visible tabs valid; Next/Back do not write partial records | 2026-07-24 |
+| Daily काढा (Remove) semantics | Daily Account Register काढा deletes the registration row (not hide); no Close Account action on the Daily register | 2026-07-24 |
+| RD Maturity Amount derivation | System-computed from scheme interest formula (Interest Type/Compounding, rate, duration, installment amount, deposit-type frequency); scheme-grid Maturity Amount is a reference for fixed double-money schemes only — same approach as FD | 2026-07-24 |
+| New Recurring Account wizard save (create) | Persist Account + Nominee(s) + Joint Holder(s) only on final जतन करा after all visible tabs valid; Next/Back do not write partial records | 2026-07-24 |
+| Recurring काढा (Remove) semantics | Recurring Account Register काढा deletes the registration row (not hide); no Close Account action on the Recurring register | 2026-07-24 |
 
 > **Skill maintenance:** When the user confirms a TODO decision, move it from TODO to a confirmed row above and append the decision to the domain `changelog.md`.
 
@@ -169,8 +178,8 @@ Turns approved `05-ui-ux/` screen specs into modular business-domain documentati
 | `membership` | `02-business-domains/membership/` | `05-ui-ux/membership/` | Phase 3 |
 | `savings` | `02-business-domains/savings/` | `05-ui-ux/savings/` | Phase 3 |
 | `fixed-deposit`, `fd` | `02-business-domains/fixed-deposit/` | `05-ui-ux/fixed-deposit/` | **Done (2026-07-24)** |
-| `daily`, `pigmy` | `02-business-domains/daily/` | `05-ui-ux/daily/` | Phase 3 |
-| `recurring` | `02-business-domains/recurring/` | `05-ui-ux/recurring/` | Phase 3 |
+| `daily`, `pigmy` | `02-business-domains/daily/` | `05-ui-ux/daily/` | **Done (2026-07-24)** |
+| `recurring` | `02-business-domains/recurring/` | `05-ui-ux/recurring/` | **Done (2026-07-24)** |
 | `loan` | `02-business-domains/loan/` | `05-ui-ux/loan/` | Phase 3 |
 | `accounting` | `02-business-domains/accounting/` | `05-ui-ux/accounting/` | Phase 3 |
 
@@ -289,6 +298,8 @@ If any item fails, fix before reporting done.
 - Settings/Schemes Standing Decisions (name uniqueness, GL sharing, atomic save, Approach B) confirmed 2026-07-23; open: BR-033 status→account-open, BR-034 min grid rows, DP formula
 - Settings/Accounting Standing Decisions (atomic Group+Head, always new Group, name uniqueness, Branch Account Org+Branch) confirmed 2026-07-23; open: BR-020 Balance Type required?, BR-021 status eligibility, BR-022 number algorithm
 - Settings/Membership + Loan Standing Decisions confirmed 2026-07-23 — **Settings Phase 1.7 complete**; next domain: `customer/`
+- Daily (Pigmy) Standing Decisions confirmed 2026-07-24 (collection posting owned by Daily, Agent-to-Agent reassignment persists, agent identity from Customer, atomic wizard saves, काढा=Remove) — **Daily domain complete**; open TODOs: BR-006 commission default, BR-008 maturity derivation, BR-010 pigmy-for-loan linkage, BR-022 agent selectability, BR-036 RD penalty/discount formula, BR-039 transfer balancing, BR-031 loan-linked highlight, BR-033 detail/statement specs
+- Recurring Standing Decisions confirmed 2026-07-24 (RD Maturity Amount system-computed like FD, atomic wizard save, काढा=Remove) — **Recurring domain complete** (34 BR, 3 UC, 3 WF, 34 AT; superseded Transaction/Credit/Manual Interest excluded → Accounting); open TODOs: BR-008/BR-015 admin-role, BR-012 deposit-type frequency enum, BR-013/BR-034 RD interest formula, BR-005 account-no algorithm, BR-028 loan-linked highlight, BR-029 remove confirmation, BR-031 detail/statement specs, BR-027 branch-scoping, BR-023 operation-instructions default
 - `03-api-contracts/` not started — UC flows unblock API design next
 - `04-database-design/shared/` entity files not started — BR references entity names provisionally
 - `01-architecture/security-architecture.md` not yet authored — JWT/RBAC BRs reference UI spec + glossary only

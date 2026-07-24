@@ -47,4 +47,5 @@ screenshots/रिकरिंग/
 - [changelog.md](changelog.md)
 - [ux-optimization.md](ux-optimization.md)
 - [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)
+- [../../02-business-domains/recurring/overview.md](../../02-business-domains/recurring/overview.md) — Business rules, use cases, workflows, acceptance tests
 - [../../AI_INDEX.md](../../AI_INDEX.md)

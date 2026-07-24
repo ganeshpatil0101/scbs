@@ -20,8 +20,10 @@ Covers operational and configuration domains for the CBS SaaS platform. Does not
 | Customer | [customer/](customer/overview.md) | Done (2026-07-24) | Customer List, New Customer, Other Account Management (33 BR, 4 UC, 4 WF, 33 AT) |
 | Savings | [savings/](savings/overview.md) | Done (2026-07-24) | New Account, Account Register (26 BR, 2 UC, 2 WF, 26 AT); superseded Transaction/Manual Interest excluded (deferred to Accounting) |
 | Fixed Deposit | [fixed-deposit/](fixed-deposit/overview.md) | Done (2026-07-24) | New Account, Account Management, Deposit Loan Installment, Interest Multiplier (43 BR, 4 UC, 4 WF, 43 AT); superseded Transaction/Manual Interest/Register/Renewal excluded |
+| Daily (Pigmy) | [daily/](daily/overview.md) | Done (2026-07-24) | New Account, New Agent, Account Register, Agent Collection Management, Agent-to-Agent Transfer, Interest Multiplier (45 BR, 6 UC, 7 WF, 45 AT); superseded Transaction/Manual Interest/old Agent Collection excluded |
+| Recurring | [recurring/](recurring/overview.md) | Done (2026-07-24) | New Account, Account Register, Interest Multiplier (34 BR, 3 UC, 3 WF, 34 AT); superseded Transaction/Credit/Manual Interest excluded (deferred to Accounting) |
 | Membership (operational) | `membership/` | Not started | Phase 3 |
-| Daily, Recurring, Loan, Accounting | respective folders | Not started | Phase 3 |
+| Loan, Accounting | respective folders | Not started | Phase 3 |
 
 ## Standard File Set (per leaf domain)
 
@@ -46,7 +48,9 @@ changelog.md
 6. Customer — **done**
 7. Savings — **done**
 8. Fixed Deposit — **done**
-9. Phase 3 operational domains (Membership, Daily, Recurring, Loan, Accounting) per [cbs-project-execution-plan.md](../cbs-project-execution-plan.md)
+9. Daily (Pigmy) — **done**
+10. Recurring — **done**
+11. Phase 3 operational domains (Membership, Loan, Accounting) per [cbs-project-execution-plan.md](../cbs-project-execution-plan.md)
 
 ## Related Documents
 

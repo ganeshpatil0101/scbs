@@ -51,4 +51,5 @@ screenshots/डेली/
 - [changelog.md](changelog.md)
 - [../settings/schemes/new-scheme-screen.md](../settings/schemes/new-scheme-screen.md)
 - [../shared/ui-simplification-patterns.md](../shared/ui-simplification-patterns.md)
+- [Business Domain — Daily (02-business-domains/daily/)](../../02-business-domains/daily/overview.md) — business rules, use cases, workflows, acceptance tests derived from these specs
 - [../../AI_INDEX.md](../../AI_INDEX.md)
